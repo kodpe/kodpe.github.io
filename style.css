@@ -1,5 +1,5 @@
 body {
-  background-color: #000000;
+  background-color: #0d1117;
 }
 
 .styled-table {
@@ -12,7 +12,7 @@ body {
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #0d1117;
     color: #ffffff;
     text-align: left;
 }
@@ -43,11 +43,11 @@ body {
     background-color: #1c87c9;
     border: none;
     color: white;
-    padding: 8px 16px;
+    padding: 6px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-	font-size: 20px;
-    margin: 4px 2px;
+	font-size: 10px;
+    margin: 2px 1px;
     cursor: pointer;
 }
