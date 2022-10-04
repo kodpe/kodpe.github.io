@@ -1,3 +1,5 @@
+/** CAT **/
+/*
 .cat {
 	position: relative;
 	height: 170px;
@@ -169,7 +171,7 @@
 	transform: translateX(-50%);
 	border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
 }
-/* General page styling */
+
 html {
 	height: 100%;
 	display: flex;
@@ -177,6 +179,7 @@ html {
 	justify-content: center;
 	background: #161616;
 }
+*/
 
 /* **** background stars **** */
 .full-wh {
