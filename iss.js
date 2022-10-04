@@ -2,7 +2,7 @@
 // VARIABLES
 // =================
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWJ1cnJpZGdlIiwiYSI6ImNrMDhlbW1vbzBraDgzaG1jYm1zYnZ6b3AifQ.8TKLtyl81kHBOPhnqOx-dQ'
+mapboxgl.accessToken = 'pk.eyJ1Ijoia29kcGUiLCJhIjoiY2w4dXNuYmdkMDc0ZjQybzFiMHN6YmNieCJ9.Q5nbpWQl_hnvVI4o1TZOKA'
 // NOTE: If forking please get your own mapbox token from https://www.mapbox.com/
 
 // Strings for the date
