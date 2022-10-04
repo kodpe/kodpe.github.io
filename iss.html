@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="img/icon.png">
+	<title>Kodpe</title>
+	<link href="iss.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="iss.js"></script>
+</head>
+<body>
+<div class="container">
+
+	<div class="header">
+
+		<div id="iss-image-outer" class="panel iss-image-outer">
+			<div id="iss-image" class="iss-image"></div>
+		</div>
+
+		<div class="header-inner">
+			<div id="iss-info" class="panel">
+				<div class="panel-header">
+					<div class="header-cell"><span class="header-icon">🛰</span>ISS</div>
+					<div class="header-cell locate tooltip" onclick="centreOnISS()">
+						<i class="fas fa-location-arrow"></i>
+						<span class="tooltiptext">Centre map on ISS</span>
+					</div>
+				</div>
+				<div class="row panel-row">
+					<div class="panel-cell panel-name">Longitude</div>
+					<div id="iss-long" class="panel-cell panel-value panel-value-sm"></div>
+					<div class="panel-cell panel-cell-sm panel-name">Altitude</div>
+					<div id="iss-alt" class="panel-cell panel-value"></div>
+				</div>
+				<div class="row panel-row">
+					<div class="panel-cell panel-name">Latitude</div>
+					<div id="iss-lat" class="panel-cell panel-value panel-value-sm"></div>
+					<div class="panel-cell panel-cell-sm panel-name">Velocity</div>
+					<div id="iss-vel" class="panel-cell panel-value"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="clock" class="panel clock">
+			<div id="time" class="time"></div>
+			<div id="date" class="date"></div>
+		</div>
+
+	</div>
+
+	<div id="map-container" class="map-container">
+		<div class="fetching">
+			<svg width="60" height="60" viewBox="0 0 24 24" fill="#60AFCB">
+				<path
+					d="M19,8L15,12H18A6,6 0 0,1 12,18C11,18 10.03,17.75 9.2,17.3L7.74,18.76C8.97,19.54 10.43,20 12,20A8,8 0 0,0 20,12H23M6,12A6,6 0 0,1 12,6C13,6 13.97,6.25 14.8,6.7L16.26,5.24C15.03,4.46 13.57,4 12,4A8,8 0 0,0 4,12H1L5,16L9,12" />
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="360" to="0"
+					dur="1.5s" repeatCount="indefinite" />
+			</svg>
+			<br>
+			Fetching ISS location data...
+		</div>
+	</div>
+
+	<div class="footer">
+		<div>ISS location info by <a href="https://wheretheiss.at/w/developer" target="_blank">Where the ISS is at</a>
+		</div>
+		<div><a href="https://en.wikipedia.org/wiki/International_Space_Station" target="_blank">Learn more about the
+				ISS</a></div>
+		<div><a href="https://spotthestation.nasa.gov/" target="_blank">Spot the ISS</a></div>
+	</div>
+
+</div>
+
+
+
+
+<!-- ---------------------- -->
+
+<div class="small-screen">
+	<div class="small-screen-content">
+		<p>Sorry my friend, but you're going to need a bigger display.</p>
+		<p class="read-more-link"><a href="https://www.samsung.com/uk/monitors/monitor-c49j89-lc49j890dkuxen/"
+				target="_blank">More info...</a></p>
+	</div>
+</div>
+
+
+</body>
+
+</html>

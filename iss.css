@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.975em;
+}
+body {
+	background: #16212a;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 24px;
+	background: #121216;
+	color: #e8e8e8;
+	border-bottom: 1px solid;
+	font-size: 0.9em;
+	background: radial-gradient(circle, rgba(8,18,31,1) 0%, rgba(3,6,11,1) 100%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.panel {
+	border: 1px solid;
+	width: fit-content;
+	color: #e8e8e8;
+	background: #121216;
+	margin-right: 24px;
+}
+.panel:last-child {
+	margin-right: 0;
+}
+.map-container {
+	display: flex;
+	color: white;
+}
+.fetching {
+	margin: auto;
+	text-align: center;
+}
+.iss-image-outer {
+	min-width: 160px;
+	height: 92px;
+	overflow: hidden;
+}
+.iss-image {
+	height: 100%;
+	width: 100%;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/ff/ISS-56_International_Space_Station_fly-around_%2805%29.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: transform 0.6666s ease;
+}
+.iss-image:hover {
+	transform: scale(1.25);
+}
+.header-inner {
+	display: flex;
+}
+.panel-header {
+	background: darkred;
+	font-weight: bold;
+	font-size: 1.1em;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #888;
+}
+.header-cell {
+	font-size: 1.2em;
+	padding: 2px 8px;
+}
+.header-icon {
+	margin-right: 4px;
+}
+.locate {
+	font-size: 0.9em;
+	padding: 9px 9px 4px;
+	line-height: 1em;
+	border: none;
+	transition: background 0.5s;
+}
+.locate:hover {
+	cursor: pointer;
+	background: #d11;
+}
+.panel-row {
+	display: flex;
+	border-bottom: 1px solid #888;
+}
+.panel-row:last-child {
+	border-bottom: none;
+}
+.panel-cell {
+	padding: 4px 8px;
+	line-height: 1.2em;
+}
+.panel-cell.panel-cell-sm {
+	width: 66px;
+	border-left: 1px solid #888;
+}
+.panel-name {
+	font-weight: bold;
+	background: #333;
+	width: 74px;
+	font-size: 0.96em;
+	text-align: center;
+}
+.panel-value {
+	width: 104px;
+}
+.panel-value-sm {
+	width: 90px;
+}
+.dms {
+	font-size: 0.7em;
+	color: #aaa;
+}
+.clock {
+	padding: 8px 12px;
+	margin-left: 24px;
+}
+.time {
+	font-size: 2.4em;
+	line-height: 1em;
+	font-weight: 300;
+}
+.seconds {
+	font-size: 0.75em;
+}
+.date {
+	font-size: 1.075em;
+	text-align: center;
+	color: #aaa;
+}
+.map-container {
+	width: 100%;
+	flex-grow: 1;
+}
+.footer {
+	display: flex;
+	padding: 12px 24px;
+	justify-content: space-between;
+	color: #e8e8e8;
+	background: #121216;
+	font-size: 0.8em;
+	border-top: 1px solid;
+}
+a {
+	color: lightblue;
+	text-decoration: none;
+}
+
+
+.marker {
+	width: 88px;
+	height: 24px;
+	padding: 1px 8px;
+	font-weight: bold;
+	font-size: 1.15em;
+	text-align: left;
+	color: #eee;
+	background: #60AFCB;
+	border-radius: 6px;
+	position: relative;
+	top: 18px;
+}
+.iss-loc {
+	position: relative;
+}
+.iss-loc:before {
+    font-family: "Font Awesome 5 Free"; 
+	font-weight: 900; 
+	content: "🛰";
+	font-size: 1.4em;
+	margin-right: 5px;
+}
+.iss-loc:after{
+	content: "ISS"
+}
+.iss-vis {
+	width: 26px;
+	height: 24px;
+	background: #686868;
+	position: absolute;
+	padding: 2px 0 0 3px;
+	top: 0;
+	right: 0;
+	text-align: center;
+	border-radius: 0 6px 6px 0;
+}
+.iss-vis:before {
+	content: "☀️";
+	font-size: 1.3em;
+}
+.iss-vis-eclipsed:before {
+	content: "🌒";
+	font-size: 1.2em;
+}
+
+
+/* TOOLTIP */
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 132px;
+	background-color: #60AFCB;
+	color: #eee;
+	text-align: center;
+	padding: 6px 8px;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 4px;
+	left: 120%;
+	margin-left: 0;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 32%;
+	right: 100%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #60AFCB transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+/*==============================*/
+.small-screen {
+    display: none;
+    background-color: #070D16;
+    height: 100vh;
+    color: #a2a2a2;
+	font-size: 1.2em;
+}
+.small-screen-content {
+	width: 70%;
+    max-width: 250px;
+    margin: auto;
+}
+.small-screen-content p {
+	margin-bottom: 0.6em;
+}
+@media only screen and (max-width: 767px) {
+    .container {
+        display: none;
+    }
+    .small-screen {
+        display: flex;
+    }
+}
