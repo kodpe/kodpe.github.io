@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="img/icon.png">
+	<title>Kodpe</title>
+	<link href="index.css" rel="stylesheet" type="text/css">
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body>
+
+	<div class="bg-animation">
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
+		<div id="stars4"></div>
+	</div>
+
+	<nav role="navigation">
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="menu">
+				<a href="https://kodpe.github.io/" target="_self">
+					<li>Home</li>
+				</a>
+			</ul>
+		</div>
+	</nav>
+
+	<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoia29kcGUiLCJhIjoiY2w4dXNuYmdkMDc0ZjQybzFiMHN6YmNieCJ9.Q5nbpWQl_hnvVI4o1TZOKA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/kodpe/cl8usu8s3001214o461d83yye'
+	// center: [-74.5, 40], // starting position [lng, lat]
+    // zoom: 9 // starting zoom
+  });
+</script>
+
+
+</body>
+
+</html>
