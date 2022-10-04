@@ -174,8 +174,8 @@
 html {
 	height: 100%;
 	display: flex;
-	/* align-items: center; */
-	/* justify-content: center; */
+	align-items: center;
+	justify-content: center;
 	background: #161616;
 }
 
@@ -326,24 +326,13 @@ html {
 }
 
 /** MENU **/
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
-
  body
  {
-   margin: 0;
-   padding: 0;
+   /* margin: 0; */
+   /* padding: 0; */
    
    /* make it look decent enough */
-   background: #232323;
+   /* background: #232323; */
    color: #cdcdcd;
    font-family: "Avenir Next", "Avenir", sans-serif;
  }
@@ -351,7 +340,7 @@ html {
  #menuToggle
  {
    display: block;
-   position: relative;
+   position: absolute;
    top: 50px;
    left: 50px;
    
