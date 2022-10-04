@@ -1,5 +1,4 @@
 /** CAT **/
-/*
 .cat {
 	position: relative;
 	height: 170px;
@@ -175,11 +174,10 @@
 html {
 	height: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	/* align-items: center; */
+	/* justify-content: center; */
 	background: #161616;
 }
-*/
 
 /* **** background stars **** */
 .full-wh {
