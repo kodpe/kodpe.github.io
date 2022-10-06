@@ -20,7 +20,7 @@ html {
 	width: 25%;
 	background: #fff;
 }
-.ear::before, .ear::after {
+/* .ear::before, .ear::after {
 	content: '';
 	position: absolute;
 	bottom: 24%;
@@ -28,32 +28,32 @@ html {
 	width: 5%;
 	border-radius: 50%;
 	background: #161616;
-}
-.ear::after {
+} */
+/* .ear::after {
 	transform-origin: 50% 100%;
-}
+} */
 .ear--left {
 	left: -7%;
 	border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(-15deg);
 }
-.ear--left::before, .ear--left::after {
+/* .ear--left::before, .ear--left::after {
 	right: 10%;
-}
-.ear--left::after {
+} */
+/* .ear--left::after {
 	transform: rotate(-45deg);
-}
+} */
 .ear--right {
 	right: -7%;
 	border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(15deg);
 }
-.ear--right::before, .ear--right::after {
+/* .ear--right::before, .ear--right::after {
 	left: 10%;
-}
-.ear--right::after {
+} */
+/* .ear--right::after {
 	transform: rotate(45deg);
-}
+} */
 .face {
 	position: absolute;
 	height: 100%;
@@ -100,7 +100,7 @@ html {
 		height: 0;
    }
 }
-.eye::before {
+/* .eye::before {
 	content: '';
 	position: absolute;
 	top: 60%;
@@ -108,19 +108,19 @@ html {
 	width: 15%;
 	background: #fff;
 	border-radius: 50%;
-}
+} */
 .eye--left {
 	left: 0;
 }
-.eye--left::before {
+/* .eye--left::before {
 	right: -5%;
-}
+} */
 .eye--right {
 	right: 0;
 }
-.eye--right::before {
+/* .eye--right::before {
 	left: -5%;
-}
+} */
 .eye-pupil {
 	position: absolute;
 	top: 25%;
@@ -187,15 +187,15 @@ html {
 	top: 0px;
 	left: 0px;
 	bottom: 0px;
-	width: 200%;
+	width: 100%;
 }
 
 .bg-animation {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 200%;
-	height: 200%;
+	width: 100%;
+	height: 100%;
 }
 
 #stars {
