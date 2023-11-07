@@ -258,8 +258,8 @@ html {
  #menu
  {
    position: absolute;
-   width: 150px;
-   margin: -100px 0 0 -50px;
+   width: 120px;
+   margin: -80px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
    
@@ -276,8 +276,8 @@ html {
  
  #menu li
  {
-   padding: 10px 0;
-   font-size: 18px;
+   padding: 8px 0;
+   font-size: 16px;
  }
  
  /*
