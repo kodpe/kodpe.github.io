@@ -9,6 +9,7 @@ html {
 
 
 /* **** background stars **** */
+/*
 .full-wh {
 	position: absolute;
 	top: 0px;
@@ -144,6 +145,8 @@ html {
 		transform: translateY(-2000px);
 	}
 }
+
+*/
 
 /** MENU **/
  #menuToggle

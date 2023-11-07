@@ -130,7 +130,7 @@
 	width: 20%;
 	background: #161616;
 	border-radius: 50%;
-	animation: look-around 4s infinite;
+	animation: look-around 8s infinite;
 }
 @keyframes look-around {
 	0% {
