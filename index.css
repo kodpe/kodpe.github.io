@@ -8,7 +8,6 @@ html {
 }
 
 
-
 /* **** background stars **** */
 .full-wh {
 	position: absolute;
@@ -259,7 +258,7 @@ html {
  #menu
  {
    position: absolute;
-   width: 300px;
+   width: 150px;
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
@@ -278,7 +277,7 @@ html {
  #menu li
  {
    padding: 10px 0;
-   font-size: 22px;
+   font-size: 18px;
  }
  
  /*

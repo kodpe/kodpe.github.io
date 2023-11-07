@@ -4,6 +4,8 @@
 	height: 170px;
 	width: 192.1px;
 }
+
+/*
 .ear {
 	position: absolute;
 	top: -30%;
@@ -11,6 +13,7 @@
 	width: 25%;
 	background: #fff;
 }
+*/
 /* .ear::before, .ear::after {
 	content: '';
 	position: absolute;
@@ -23,22 +26,30 @@
 /* .ear::after {
 	transform-origin: 50% 100%;
 } */
+
+/*
 .ear--left {
 	left: -7%;
 	border-radius: 60% 40% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(-15deg);
 }
+*/
+
 /* .ear--left::before, .ear--left::after {
 	right: 10%;
 } */
 /* .ear--left::after {
 	transform: rotate(-45deg);
 } */
+
+/*
 .ear--right {
 	right: -7%;
 	border-radius: 40% 60% 0% 0% / 100% 100% 0% 0%;
 	transform: rotate(15deg);
 }
+*/
+
 /* .ear--right::before, .ear--right::after {
 	left: 10%;
 } */
@@ -160,6 +171,8 @@
 	border-radius: 50%;
 	background: #fff;
 }
+
+/*
 .muzzle {
 	position: absolute;
 	top: 60%;
@@ -170,3 +183,5 @@
 	transform: translateX(-50%);
 	border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
 }
+
+*/
