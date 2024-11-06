@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    padding: 100px;
+    padding: 10px;
     background: rgb(27, 26, 26);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -18,21 +18,21 @@ body {
 
 .question {
     color: white;
-    font-size: 16px;
-    margin-top: 80px;
+    font-size: 18px;
+    margin-top: 40px;
 }
 
 h1, h2 {
     text-align: center;
     color: white;
     font-size: 24px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .answer-btn-true {
     display: block;
     width: 100%;
-    padding: 50px;
+    padding: 40px;
     margin: 20px 0;
     border: none;
     border-radius: 5px;
@@ -45,7 +45,7 @@ h1, h2 {
 .answer-btn-false {
     display: block;
     width: 100%;
-    padding: 50px;
+    padding: 40px;
     margin: 20px 0;
     border: none;
     border-radius: 5px;
