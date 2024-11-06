@@ -1,52 +1,202 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "L'osmose est le déplacement de l'eau à travers une membrane semi-perméable vers un milieu à haute concentration de solutés.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules animales contiennent des chloroplastes.",
+    "answer": false,
+    "explanation": "seules les cellules végétales en contiennent"
+  },
+  {
+    "question": "Les acides aminés sont les monomères qui composent les protéines.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le réticulum endoplasmique lisse est impliqué dans la synthèse des protéines.",
+    "answer": false,
+    "explanation": "c'est le réticulum endoplasmique rugueux qui est impliqué dans la synthèse des protéines"
+  },
+  {
+    "question": "La diffusion facilitée requiert une source d’énergie comme l'ATP.",
+    "answer": false,
+    "explanation": "elle est passive et ne nécessite pas d’énergie"
+  },
+  {
+    "question": "Les microtubules sont des éléments du cytosquelette impliqués dans la motilité cellulaire et la division cellulaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les lysosomes sont des organelles responsables de la dégradation des déchets cellulaires.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les artères transportent toujours du sang oxygéné.",
+    "answer": false,
+    "explanation": "les artères pulmonaires transportent du sang désoxygéné vers les poumons"
+  },
+  {
+    "question": "La filtration glomérulaire dans le rein dépend principalement de la pression sanguine dans le glomérule.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La sécrétion d’insuline augmente lors d’une hypoglycémie.",
+    "answer": false,
+    "explanation": "l’insuline est sécrétée en cas d’hyperglycémie"
+  },
+  {
+    "question": "La bile est produite par la vésicule biliaire.",
+    "answer": false,
+    "explanation": "la bile est produite par le foie et stockée dans la vésicule biliaire"
+  },
+  {
+    "question": "La phase de diastole correspond à la contraction du cœur.",
+    "answer": false,
+    "explanation": "la diastole correspond à la relaxation du cœur"
+  },
+  {
+    "question": "L’acide chlorhydrique est sécrété par les cellules pariétales de l'estomac.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’augmentation de la concentration en CO₂ dans le sang entraîne une baisse du pH sanguin.",
+    "answer": true,
+    "explanation": "le CO₂ augmente l’acidité du sang"
+  },
+  {
+    "question": "Le glucagon est une hormone hyperglycémiante.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La vitamine K est essentielle à la coagulation sanguine.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'hormone antidiurétique (ADH) augmente la réabsorption d'eau dans le tube distal du néphron.",
+    "answer": false,
+    "explanation": "Elle agit surtout sur le tube collecteur."
+  },
+  {
+    "question": "La thyroxine (T4) est produite par la glande thyroïde et influence le métabolisme basal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’albumine est une protéine plasmatique jouant un rôle important dans la pression oncotique du sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les glandes surrénales sécrètent de l’adrénaline en réponse à un stress aigu.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les artérioles sont les principaux vaisseaux responsables de la régulation de la pression sanguine.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’angiotensine II est un puissant vasodilatateur qui diminue la pression artérielle.",
+    "answer": false,
+    "explanation": "L’angiotensine II est un vasoconstricteur, augmentant la pression artérielle."
+  },
+  {
+    "question": "La myéline augmente la vitesse de conduction de l’influx nerveux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’hormone parathyroïdienne (PTH) diminue la concentration de calcium dans le sang.",
+    "answer": false,
+    "explanation": "La PTH augmente la concentration de calcium dans le sang."
+  },
+  {
+    "question": "Le système lymphatique joue un rôle dans la régulation de la pression artérielle.",
+    "answer": false,
+    "explanation": "Le système lymphatique est principalement impliqué dans l’immunité et le drainage des liquides."
+  },
+  {
+    "question": "La vitamine D est essentielle pour l’absorption du calcium dans l'intestin.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les acides gras sont transportés dans le sang sous forme de lipoprotéines.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La vasopressine est également appelée hormone antidiurétique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le système rénine-angiotensine-aldostérone joue un rôle crucial dans la régulation de la pression artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules de Leydig produisent la testostérone dans les testicules.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La perforine est une protéine cytolytique sécrétée par les lymphocytes NK.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Dans le processus de lipolyse, les acides gras à nombre pair d'atomes de carbone produisent de la propionyl-coenzyme A.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "La membrane cellulaire est constituée d'une bicouche lipidique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La salive est un simple ultrafiltrat du plasma.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Les protéines transmembranaires traversent la membrane cellulaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les ribosomes sont les sites de la synthèse des lipides dans la cellule.",
+    "answer": false,
+    "explanation": "ils synthétisent les protéines"
+  },
+  {
+    "question": "Le système P450 bactérien, est un système de cytochromes dans lequel les électrons sont transférés grâce à l'adrénodoxine.",
+    "answer": false,
+    "explanation": "férrédoxine"
+  },
+  {
+    "question": "La production du liquide cérébrospinal est de l'ordre de 400 à 500 ml/jour.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les mitochondries sont les seules organelles capables de produire de l'ATP dans la cellule.",
+    "answer": false,
+    "explanation": "le cytosol peut aussi produire de l'ATP via la glycolyse"
+  },
+  {
+    "question": "L'adénosine diphosphate ribose est un des inhibiteurs de la succinate déshydrogénase (SDH).",
+    "answer": false,
+    "explanation": ""
+  }
 ]

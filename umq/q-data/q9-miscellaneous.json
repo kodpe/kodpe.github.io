@@ -1,52 +1,52 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "La fermentation est un processus de production d'ATP en présence d'oxygène.",
+    "answer": false,
+    "explanation": "elle se produit en absence d’oxygène"
+  },
+  {
+    "question": "L'azote est le principal gaz responsable de la respiration humaine.",
+    "answer": false,
+    "explanation": "C'est l'oxygène qui est essentiel pour la respiration."
+  },
+  {
+    "question": "La pression artérielle systolique est toujours plus élevée que la pression diastolique.",
+    "answer": true,
+    "explanation": "La pression systolique représente la pression lors de la contraction du cœur, alors que la diastolique représente la pression lorsque le cœur est au repos."
+  },
+  {
+    "question": "L'appareil de Golgi est un lieu majeur pour le transfert en autres des clathrines RER.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Une claudication ne peut être intermittente.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Les enzymes sont des protéines qui augmentent l'énergie d'activation d'une réaction chimique.",
+    "answer": false,
+    "explanation": "elles abaissent l'énergie d'activation"
+  },
+  {
+    "question": "Les cellules procaryotes possèdent un noyau.",
+    "answer": false,
+    "explanation": "elles n'ont pas de noyau"
+  },
+  {
+    "question": "Est signe d'une gazométrie anormale une pression partielle de CO2 dissout dans le sang artériel de 37 mmHg millimètre de mercure sur un homme de 22 ans atteint d'un Piébaldisme à une altitude de 3212 mètres.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "La pyrothérapie est une méthode de traitement qui consiste à augmenter ou maintenir une température corporelle généralement à 41°C à l'aide d'un appareil à fièvre.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le signe d'Oppenheim est un réflexe cutané consistant en la dorsiflexion du gros orteil.",
+    "answer": true,
+    "explanation": ""
+  }
 ]

@@ -1,52 +1,22 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "Les anticoagulants sont utilisés pour traiter les thromboses veineuses et non les embolies.",
+    "answer": false,
+    "explanation": "Les anticoagulants peuvent traiter les deux."
+  },
+  {
+    "question": "10 mg d'Athyldipropyl par voie orale ne peut pas provoquer d'effet secondaire.",
+    "answer": true,
+    "explanation": "n existe pas"
+  },
+  {
+    "question": "La minacycline n'est pas un antibiotique à large spectre.",
+    "answer": true,
+    "explanation": "n existe pas"
+  },
+  {
+    "question": "Le tramadol a une masse molaire plus importante que le peroxyde d'hydrogène.",
+    "answer": true,
+    "explanation": ""
+  }
 ]

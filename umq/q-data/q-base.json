@@ -1,0 +1,557 @@
+[
+
+  {
+    "question": "Le traitement de la maladie de Graves peut inclure l'ablation chirurgicale de la thyroïde.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les opiacés peuvent provoquer à la fois une dépression du système nerveux central et une dépendance.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La leucémie est une forme de cancer qui affecte principalement le foie.",
+    "answer": false,
+    "explanation": "Elle affecte les cellules sanguines et la moelle osseuse."
+  },
+  {
+    "question": "L’IRM (imagerie par résonance magnétique) utilise des rayonnements ionisants.",
+    "answer": false,
+    "explanation": "Elle utilise des champs magnétiques et des ondes radio."
+  },
+  {
+    "question": "La sclérose latérale amyotrophique (SLA) est une maladie auto-immune.",
+    "answer": false,
+    "explanation": "C'est une maladie neurodégénérative."
+  },
+  {
+    "question": "La sérotonine est un neurotransmetteur principalement associé à la régulation de l'humeur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Une hypoglycémie peut entraîner des symptômes tels que la confusion, la fatigue et même des pertes de connaissance.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La prééclampsie se caractérise uniquement par l'hypertension artérielle.",
+    "answer": false,
+    "explanation": "Elle se caractérise également par des signes de dommages à d'autres organes, comme des protéines dans les urines."
+  },
+  {
+    "question": "L'hypertension artérielle est définie comme une pression supérieure à 140/90 mmHg.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les médicaments antipsychotiques peuvent être utilisés pour traiter les troubles de l'humeur.",
+    "answer": true,
+    "explanation": "Ils peuvent être prescrits dans certains cas, bien que ce ne soit pas leur indication principale."
+  },
+  {
+    "question": "La déshydratation sévère peut entraîner une hypernatrémie, qui est une concentration élevée de sodium dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le scanner (CT scan) utilise des ultrasons pour produire des images de l'intérieur du corps.",
+    "answer": false,
+    "explanation": "Il utilise des rayons X."
+  },
+  {
+    "question": "Le stress oxydatif est causé par un excès d'antioxydants dans le corps.",
+    "answer": false,
+    "explanation": "Il est causé par un déséquilibre entre les radicaux libres et les antioxydants."
+  },
+  {
+    "question": "L'anémie ferriprive est causée par une carence en fer dans l'alimentation.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les neurones sont les seules cellules responsables de la transmission des signaux nerveux.",
+    "answer": false,
+    "explanation": "Les cellules gliales jouent également un rôle dans la transmission et le soutien des neurones."
+  },
+  {
+    "question": "Les maladies auto-immunes résultent d'une réponse immunitaire inappropriée contre des antigènes étrangers.",
+    "answer": false,
+    "explanation": "Elles résultent d'une réponse inappropriée contre les propres tissus de l'organisme."
+  },
+  {
+    "question": "Le traitement de la tuberculose nécessite un régime strict sans produits laitiers.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "La mélatonine est une hormone sécrétée par l’épiphyse (glande pinéale) et régule le rythme veille-sommeil.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La barrière hémato-encéphalique empêche le passage de certaines substances du sang vers le système nerveux central.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’hémoglobine est une protéine contenant du cuivre qui transporte l’oxygène dans le sang.",
+    "answer": false,
+    "explanation": "L’hémoglobine contient du fer, pas du cuivre."
+  },
+  {
+    "question": "L’appendice joue un rôle important dans la digestion des lipides.",
+    "answer": false,
+    "explanation": "L'appendice n’a pas de rôle significatif dans la digestion."
+  },
+  {
+    "question": "Les plaques de Peyer sont des structures lymphoïdes présentes dans l’intestin grêle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules de Schwann produisent la myéline dans le système nerveux central.",
+    "answer": false,
+    "explanation": "Elles produisent la myéline dans le système nerveux périphérique."
+  },
+  {
+    "question": "La peau est l’organe le plus grand du corps humain.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le cortisol est une hormone qui augmente le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les bronches se divisent en bronchioles qui mènent aux alvéoles où se fait l'échange gazeux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’acétylcholine est un neurotransmetteur impliqué dans la contraction musculaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La rate est un organe du système digestif qui produit de l'insuline.",
+    "answer": false,
+    "explanation": "La rate est un organe lymphatique, tandis que le pancréas produit l’insuline."
+  },
+  {
+    "question": "Les cellules endothéliales forment la paroi interne des vaisseaux sanguins.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La thrombopoïétine est une hormone qui stimule la production de globules rouges.",
+    "answer": false,
+    "explanation": "Elle stimule la production de plaquettes."
+  },
+  {
+    "question": "Le rein produit de l’érythropoïétine, qui stimule la production de globules rouges.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les os longs se développent par ossification endochondrale.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les glandes parathyroïdes jouent un rôle dans la régulation du calcium sanguin.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le lobe occipital du cerveau est principalement impliqué dans le traitement des informations auditives.",
+    "answer": false,
+    "explanation": "Le lobe temporal est impliqué dans l’audition ; le lobe occipital traite la vision."
+  },
+  {
+    "question": "La vasodilatation entraîne une augmentation du débit sanguin vers un organe.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les lipides sont stockés dans le foie sous forme de glycogène.",
+    "answer": false,
+    "explanation": "Les lipides sont stockés dans le tissu adipeux ; le foie stocke du glycogène."
+  },
+  {
+    "question": "La tachycardie est définie comme une fréquence cardiaque anormalement basse.",
+    "answer": false,
+    "explanation": "La tachycardie est une fréquence cardiaque élevée."
+  },
+  {
+    "question": "Les hormones thyroïdiennes (T3 et T4) augmentent le métabolisme basal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’ostéoblastes sont les cellules responsables de la résorption osseuse.",
+    "answer": false,
+    "explanation": "Les ostéoclastes sont responsables de la résorption osseuse ; les ostéoblastes construisent l'os."
+  },
+  {
+    "question": "La phagocytose est un processus par lequel les cellules ingèrent et détruisent les agents pathogènes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le nerf optique est responsable de la transmission des informations visuelles de l’œil au cerveau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules musculaires cardiaques sont capables de se régénérer efficacement après une lésion.",
+    "answer": false,
+    "explanation": "Les cellules cardiaques ont une capacité de régénération limitée."
+  },
+  {
+    "question": "La maladie de Parkinson est causée par une dégénérescence des neurones dopaminergiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La vasopressine augmente la perméabilité des tubes collecteurs du néphron à l'eau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules cancéreuses ont souvent une division cellulaire non contrôlée.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les disques intervertébraux sont constitués de cartilage hyalin.",
+    "answer": false,
+    "explanation": "Ils sont constitués de cartilage fibreux."
+  },
+  {
+    "question": "Les fibres nerveuses de type A sont les plus rapides pour la transmission de l’influx nerveux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’anévrisme est une dilatation anormale d'un vaisseau sanguin due à un affaiblissement de sa paroi.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La moelle osseuse rouge est responsable de la production des cellules sanguines.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les valves cardiaques empêchent le reflux du sang dans le cœur.",
+    "answer": true,
+    "explanation": ""
+  },
+
+
+
+  /////////////////////
+  {
+    "question": "Le système nerveux autonome est composé des systèmes sympathique et parasympathique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La clairance rénale mesure l’efficacité des reins à éliminer une substance du plasma.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La substance P est un neurotransmetteur impliqué dans la transmission de la douleur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le foie est responsable de la production de l'urine.",
+    "answer": false,
+    "explanation": "C'est le rein qui produit l'urine."
+  },
+  {
+    "question": "Les lymphocytes T sont responsables de la production d'anticorps.",
+    "answer": false,
+    "explanation": "C'est le rôle des lymphocytes B."
+  },
+  {
+    "question": "Le principal agent pathogène responsable de la tuberculose est un virus.",
+    "answer": false,
+    "explanation": "C'est une bactérie, Mycobacterium tuberculosis."
+  },
+  {
+    "question": "L'insuline est une hormone qui régule le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le tissu musculaire lisse est responsable des mouvements volontaires du corps.",
+    "answer": false,
+    "explanation": "Le tissu musculaire strié est responsable des mouvements volontaires."
+  },
+  {
+    "question": "La plèvre est la membrane qui enveloppe les poumons.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les plaquettes sanguines jouent un rôle important dans la défense immunitaire.",
+    "answer": false,
+    "explanation": "Elles sont impliquées dans la coagulation du sang."
+  },
+  {
+    "question": "L'hépatite est une inflammation du pancréas.",
+    "answer": false,
+    "explanation": "C'est une inflammation du foie."
+  },
+  {
+    "question": "L'hypertension artérielle est un facteur de risque modifiable pour les maladies cardiovasculaires.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'hématopoïèse se déroule principalement dans le foie.",
+    "answer": false,
+    "explanation": "Elle se déroule principalement dans la moelle osseuse."
+  },
+  {
+    "question": "Le système endocrinien régule les réactions hormonales par des boucles de rétroaction.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La vitamine K est essentielle pour la vision.",
+    "answer": false,
+    "explanation": "Elle est essentielle pour la coagulation sanguine."
+  },
+  {
+    "question": "Les uretères relient les reins à la vessie.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les glucides sont principalement utilisés par le corps comme source de protéines.",
+    "answer": false,
+    "explanation": "Ils sont utilisés principalement comme source d'énergie."
+  },
+  {
+    "question": "Le VIH attaque les lymphocytes T CD4+.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La grippe se transmet principalement par voie sanguine.",
+    "answer": false,
+    "explanation": "Elle se transmet principalement par les voies respiratoires."
+  },
+  {
+    "question": "Le système lymphatique aide à maintenir l'équilibre des fluides dans le corps.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'œdème est une augmentation du volume des tissus due à un excès de sang.",
+    "answer": false,
+    "explanation": "C'est dû à un excès de liquide."
+  },
+  {
+    "question": "La thyroxine est une hormone produite par la glande thyroïde qui régule le métabolisme.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les globules rouges sont responsables du transport de l'oxygène dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'adrénaline est produite par le pancréas.",
+    "answer": false,
+    "explanation": "Elle est produite par les glandes surrénales."
+  },
+  {
+    "question": "Le diaphragme est un muscle qui joue un rôle clé dans la respiration.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les acides gras essentiels ne peuvent pas être synthétisés par le corps humain.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La moelle épinière est protégée par le crâne.",
+    "answer": false,
+    "explanation": "Elle est protégée par la colonne vertébrale."
+  },
+  {
+    "question": "La déshydratation peut entraîner une augmentation de la pression artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le cholestérol est toujours mauvais pour la santé.",
+    "answer": false,
+    "explanation": "Il existe des types de cholestérol, certains sont nécessaires au corps."
+  },
+  {
+    "question": "L'aspirine est un anti-inflammatoire non stéroïdien (AINS).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les reins sont responsables de la régulation de la température corporelle.",
+    "answer": false,
+    "explanation": "C'est le rôle de la peau et des mécanismes de thermorégulation."
+  },
+  {
+    "question": "L'hyperglycémie désigne une diminution du taux de glucose dans le sang.",
+    "answer": false,
+    "explanation": "Elle désigne une augmentation du taux de glucose."
+  },
+  {
+    "question": "L'insuffisance cardiaque gauche peut provoquer un œdème pulmonaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La maladie de Crohn est une pathologie inflammatoire chronique touchant l’ensemble du tube digestif.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les bêta-bloquants sont des médicaments principalement utilisés pour traiter l'hypertension artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'aspirine est un inhibiteur de la COX-1 et COX-2, ce qui en fait un anti-inflammatoire et un anticoagulant.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La cirrhose hépatique est toujours causée par une consommation excessive d'alcool.",
+    "answer": false,
+    "explanation": "Elle peut être causée par des hépatites virales, des maladies métaboliques, etc."
+  },
+  {
+    "question": "La sclérose en plaques est une maladie auto-immune qui touche le système nerveux périphérique.",
+    "answer": false,
+    "explanation": "Elle touche le système nerveux central."
+  },
+  {
+    "question": "Le diabète de type 1 est causé par une résistance à l’insuline au niveau des tissus périphériques.",
+    "answer": false,
+    "explanation": "Il est causé par une destruction des cellules bêta du pancréas, entraînant une carence en insuline."
+  },
+  {
+    "question": "La tuberculose est une infection virale touchant principalement les poumons.",
+    "answer": false,
+    "explanation": "C'est une infection bactérienne causée par *Mycobacterium tuberculosis*."
+  },
+  {
+    "question": "La maladie de Huntington est une maladie neurodégénérative autosomique récessive.",
+    "answer": false,
+    "explanation": "Elle est autosomique dominante."
+  },
+  {
+    "question": "La metformine est un médicament qui diminue la glycémie en stimulant la sécrétion d’insuline.",
+    "answer": false,
+    "explanation": "Elle diminue la production de glucose hépatique et augmente la sensibilité à l'insuline."
+  },
+  {
+    "question": "Les inhibiteurs de l'enzyme de conversion (IEC) sont contre-indiqués en cas d'insuffisance cardiaque.",
+    "answer": false,
+    "explanation": "Les IEC sont souvent utilisés dans le traitement de l'insuffisance cardiaque."
+  },
+  {
+    "question": "La maladie de Wilson est due à une accumulation de fer dans les tissus.",
+    "answer": false,
+    "explanation": "Elle est due à une accumulation de cuivre."
+  },
+  {
+    "question": "La polyarthrite rhumatoïde est une maladie inflammatoire chronique qui touche principalement les grosses articulations.",
+    "answer": false,
+    "explanation": "Elle touche surtout les petites articulations, comme celles des mains et des pieds."
+  },
+  {
+    "question": "L’arythmie est un rythme cardiaque irrégulier, souvent bénin et sans conséquences graves.",
+    "answer": false,
+    "explanation": "Certaines arythmies peuvent être graves et nécessiter un traitement."
+  },
+  {
+    "question": "Le syndrome néphrotique est caractérisé par une hématurie massive.",
+    "answer": false,
+    "explanation": "Il est caractérisé par une protéinurie massive."
+  },
+  {
+    "question": "Le test de Mantoux est utilisé pour diagnostiquer une infection active de la tuberculose.",
+    "answer": false,
+    "explanation": "Il détecte une infection, mais ne distingue pas entre une infection active et une infection latente."
+  },
+  {
+    "question": "La phénylcétonurie est une maladie génétique due à un défaut de métabolisme de la tyrosine.",
+    "answer": false,
+    "explanation": "Elle est due à un défaut de métabolisme de la phénylalanine."
+  },
+  {
+    "question": "Les bactéries Gram-négatives ont une paroi cellulaire plus épaisse que les Gram-positives.",
+    "answer": false,
+    "explanation": "Elles ont une paroi plus fine, mais une membrane externe supplémentaire."
+  },
+  {
+    "question": "Les trois gènes  MGC4607, PDCD10 et Krit1 pourraient être impliqués dans l'apparition de la forme familiale de l'angiome caverneux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le cavernome portal n'est jamais accompagné d’une hypertension portale.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "la structure de la protéine Janus kinase 2 contient 1131 acides aminés (JAK 2).",
+    "answer": false,
+    "explanation": "Elle contient 1132 acides aminés."
+  },
+  {
+    "question": "La Cirrhose peut-être causé par la maladie de Winbledon.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "L'hyperoxalurie type 1 est le résultat d'un déficit enzymatique hépatique péroxysomal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Il y 243 018 229 paires de bases sur le chromosome 2 humain",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Dans un train de quatre, apres ou avant l'opération d'un patient, un enchaînement de quatre stimulations de 0,2 ms en deux secondes séparées chacune de 0,5 s, suffisent pour mettre en évidence le phénomène d’épuisement en présence d’un curare non dépolarisant.",
+    "answer": false,
+    "explanation": "C'est des stimulations de 2 ms."
+  },
+  {
+    "question": "Dans le cadre d'une lithotritie extracorporelle il est possible dr produire une onde de choc grâce à un cristal piézoélectrique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'Abasie tremblante est causée par un tremblement incontrôlable des jambes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le réflexe rolien est un réflexe ostéotendineux.",
+    "answer": false,
+    "explanation": "C'est le réflexe rotulien."
+  }
+]

@@ -1,52 +1,17 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "En épidémiologie, la prévalence est le rapport de l'ensemble de la population exposée à une date donnée sur l'ensemble des cas présents ou passés d'un évènement ou d'une maladie.",
+    "answer": false,
+    "explanation": "inversé"
+  },
+  {
+    "question": "Une analyse discriminante descriptive repose sur une hypothèse probabiliste.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Une étude de cohorte est mieux adaptée pour les maladies rares qu'une étude cas-témoins.",
+    "answer": false,
+    "explanation": ""
+  }
 ]

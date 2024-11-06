@@ -1,62 +1,57 @@
 [
-    {
-        "question": "Les trois gènes  MGC4607, PDCD10 et Krit1 pourraient être impliqués dans l'apparition de la forme familiale de l'angiome caverneux.",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "Le cavernome portal n'est jamais accompagné d’une hypertension portale.",
-        "answer": false,
-        "explanation": "todo"
-    },
-    {
-        "question": "la structure de la protéine Janus kinase 2 contient 1131 acides aminés (JAK 2).",
-        "answer": false,
-        "explanation": "Elle contient 1132 acides aminés."
-    },
-    {
-        "question": "La Cirrhose peut-être causé par la maladie de Winbledon.",
-        "answer": false,
-        "explanation": "todo"
-    },
-    {
-        "question": "L'hyperoxalurie type 1 est le résultat d'un déficit enzymatique hépatique péroxysomal.",
-        "answer": true,
-        "explanation" : "todo"
-    },
-    {
-        "question": "Il y 243 018 229 paires de bases sur le chromosome 2 humain",
-        "answer": true,
-        "explanation" : "todo"
-    },
-    {
-        "question": "Dans un train de quatre, apres ou avant l'opération d'un patient, un enchaînement de quatre stimulations de 0,2 ms en deux secondes séparées chacune de 0,5 s, suffisent pour mettre en évidence le phénomène d’épuisement en présence d’un curare non dépolarisant.",
-        "answer": false,
-        "explanation" : "C'est des stimulations de 2 ms."
-    },
-    {
-        "question": "Dans le cadre d'une lithotritie extracorporelle il est possible dr produire une onde de choc grâce à un cristal piézoélectrique.",
-        "answer": true,
-        "explanation" : "todo"
-    },
-    {
-        "question": "L'Abasie tremblante est causée par un tremblement incontrôlable des jambes.",
-        "answer": true,
-        "explanation" : "todo"
-    },
-    {
-        "question": "Le réflexe rolien est un réflexe ostéotendineux.",
-        "answer": false,
-        "explanation" : "C'est le réflexe rotulien."
-    },
-    {
-        "question": "",
-        "answer": true,
-        "explanation" : "todo"
-    },
-    {
-        "question": "",
-        "answer": true,
-        "explanation" : "todo"
-    }
+  {
+    "question": "Les plasmides sont des petits fragments d’ADN qui peuvent être transférés entre bactéries.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les introns sont des segments d'ADN codants qui sont traduits en protéines.",
+    "answer": false,
+    "explanation": "les introns sont des segments non-codants, ils sont éliminés avant la traduction"
+  },
+  {
+    "question": "La mitose est un processus de division cellulaire qui produit deux cellules génétiquement identiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les deux parties du ribosome tendent à se séparer lorsque l'on abaisse la concentration en ions Mg2+.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’ADN se trouve uniquement dans le noyau des cellules eucaryotes.",
+    "answer": false,
+    "explanation": "il est aussi présent dans les mitochondries et les chloroplastes"
+  },
+  {
+    "question": "L'ARN messager est synthétisé lors de la transcription de l'ADN.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La phase S du cycle cellulaire est la phase où l’ADN est répliqué.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le ligand du CD27 est le CD70.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le gène de la protéine de type CD 109 est situé au Locus 6q23.3.",
+    "answer": false,
+    "explanation": "CD119"
+  },
+  {
+    "question": "Les deux enzymes codées par les gènes 16p11.2 et 22p11.2 acquièrent respectivement un poids moléculaire de 43 kDa (kilodalton) et 41 kDa (kilodalton) lorsqu'elles sont phosphorylées.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Une mutation délétère retrouvée sur les deux allèles du gène BLM est pathognomonique.",
+    "answer": true,
+    "explanation": ""
+  }
 ]

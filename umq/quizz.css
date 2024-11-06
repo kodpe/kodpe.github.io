@@ -8,6 +8,10 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur des éléments */
     max-width: 600px;
     margin: auto;
     padding: 5px;
@@ -30,16 +34,18 @@ h1, h2 {
 }
 
 .std-btn {
-    display: block;
-    width: 100%;
-    padding: 50px;
-    margin: 20px 0;
+    width: 70%;
+    height: 80px;
+    padding: 10px;
+    margin: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #dde0e6;
     color: rgb(0, 0, 0);
     font-size: 16px;
     cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .std-btn:disabled {

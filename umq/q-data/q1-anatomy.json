@@ -1,12 +1,62 @@
 [
-    {
-        "question": "Le cœur humain possède quatre cavités.",
-        "answer": true,
-        "explanation": "Il y a deux oreillettes et deux ventricules dans le cœur humain."
-    },
-    {
-        "question": "Les globules rouges sont produits dans le foie.",
-        "answer": false,
-        "explanation": "Les globules rouges sont produits dans la moelle osseuse."
-    }
+  {
+    "question": "Les cellules endothéliales tapissent l'intérieur des vaisseaux sanguins.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les bronchioles sont les plus petites voies respiratoires avant les alvéoles pulmonaires.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le nerf vague (X) joue un rôle dans la régulation de la fréquence cardiaque.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La moelle épinière se termine au niveau des vertèbres lombaires L1-L2 chez l’adulte.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le pancréas est la seule glande dans le corps à avoir à la fois des fonctions endocrines et exocrines.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les 12 papilles circumvallées forment le V lingual qui délimite le 1/3 antérieur du 2/3 postérieur de la langue.",
+    "answer": false,
+    "explanation": "inverse 2/3 1/3"
+  },
+  {
+    "question": "Le muscle Styloglosse n'est pas fixé sur l'os hyoïde.",
+    "answer": true,
+    "explanation": "apophyse styloïde"
+  },
+  {
+    "question": "L'infundibulum du cerveau est situé en arrière du chiasma optique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le nerf optique mesure approximativement 20 mm de long pour 2 mm de diamètre.",
+    "answer": false,
+    "explanation": "40 mm pour 4 mm"
+  },
+  {
+    "question": "L'éminence intercondylaire est un massif osseux irrégulier et triangulaire situé dans la partie moyenne de la surface intercondylaire du tibia.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Les cartilages tropoformes sont situés en avant et en dehors des cartilages aryténoïdes et des cartilages corniculés.",
+    "answer": false,
+    "explanation": "cunéiformes"
+  },
+  {
+    "question": "L'artère de Neubauer peut vasculariser dans certains cas la thyroïde.",
+    "answer": true,
+    "explanation": ""
+  }
 ]

@@ -1,52 +1,42 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "Les macrophages sont des cellules impliquées dans la phagocytose et l’élimination des pathogènes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le foie est un organe qui ne peut pas se régénérer après une lésion partielle.",
+    "answer": false,
+    "explanation": "le foie a une grande capacité de régénération"
+  },
+  {
+    "question": "Le syndrome de l'oreille rouge pourrait faire partie du groupe des céphalées trigémino-autonomiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'insomnie fatale familiale (IFF) est une encéphalopathie spongiforme transmissible (EST) humaine à transmission autosomique dominante liée à une anomalie du gène PRNP.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La crise clonique représente la forme la plus spectaculaire de crise d'épilepsie.",
+    "answer": false,
+    "explanation": "tonico-clonique"
+  },
+  {
+    "question": "L'artériosclérose est la première cause de neuropathie optique ischémique antérieure.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le myxédème peut se caractériser par une macroglossie.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La période d'incubation de l'Anisakiase pourrait se compter en décennies.",
+    "answer": false,
+    "explanation": "quelques heures"
+  }
 ]

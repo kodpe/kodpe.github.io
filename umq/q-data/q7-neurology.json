@@ -1,52 +1,52 @@
 [
-    {
-        "question": "q1",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q2",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q3",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q4",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q5",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q6",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q7",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q8",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q9",
-        "answer": true,
-        "explanation": "todo"
-    },
-    {
-        "question": "q10",
-        "answer": true,
-        "explanation": "todo"
-    }
+  {
+    "question": "Le cortisol est une hormone du stress sécrétée par le cortex surrénalien.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules gliales ont un rôle dans la transmission des signaux électriques dans le cerveau.",
+    "answer": false,
+    "explanation": "Elles soutiennent les neurones mais ne transmettent pas les signaux."
+  },
+  {
+    "question": "Le système nerveux parasympathique est responsable de la réponse “combat ou fuite”.",
+    "answer": false,
+    "explanation": "C’est le système nerveux sympathique qui est impliqué dans cette réponse."
+  },
+  {
+    "question": "Les neurones moteurs transmettent des signaux du cerveau aux muscles.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La synapse est une jonction entre deux neurones permettant la transmission du signal électrique.",
+    "answer": false,
+    "explanation": "La transmission entre deux neurones se fait par un signal chimique."
+  },
+  {
+    "question": "La sérotonine est un neurotransmetteur souvent associé à la régulation de l'humeur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La protéine Fgf17 est une protéine synthétisée dans le cerveau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'apraxie optique, l'ataxie optique, et la simultagnosie peuvent survenir en même temps.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La protéine MAP7 est présente à la fois dans les dendrites et les axones.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les granulations arachnoïdiennes de Pacchioni forment des évaginations villeuses ou des prolongements pédiculés et fongiformes de la seconde fine couche des méninges qui couvre le cerveau.",
+    "answer": true,
+    "explanation": ""
+  }
 ]
