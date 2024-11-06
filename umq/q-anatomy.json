@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Le cœur humain possède quatre cavités.",
+        "answer": true,
+        "explanation": "Il y a deux oreillettes et deux ventricules dans le cœur humain."
+    },
+    {
+        "question": "Les globules rouges sont produits dans le foie.",
+        "answer": false,
+        "explanation": "Les globules rouges sont produits dans la moelle osseuse."
+    }
+]

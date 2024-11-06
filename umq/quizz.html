@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Medicine Quiz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="quizz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ultimate Medicine Quiz</h1>
+
+        <!-- Section de sélection des pools de questions -->
+        <div id="pool-selection" class="hidden">
+            <h2>Sélectionnez les pools de questions :</h2>
+            <button class="std-btn" id="start-quiz-btn" disabled>Démarrer le Quiz</button>
+        </div>
+
+        <!-- Score en temps réel pendant le quiz -->
+        <h3 id="score-tracker" class="score-tracker hidden">Score : <span id="current-score">0</span></h3>
+
+        <!-- Conteneur de score final (apparaît à la fin du quiz) -->
+        <div id="score-container" class="hidden">
+            <h3>Votre score final : <span id="final-score"></span></h3>
+            <button id="restart-btn">Recommencer</button>
+        </div>
+
+        <!-- Feedback de la réponse à chaque question -->
+        <div id="feedback"></div>
+
+        <!-- Conteneur des questions (visible uniquement pendant le quiz) -->
+        <div id="question-container" class="hidden">
+            <p class="question" id="question"></p>
+            <button class="answer-btn-true" id="true-btn">VRAI</button>
+            <button class="answer-btn-false" id="false-btn">FAUX</button>
+            <button class="std-btn" id="next-btn">Question Suivante</button>
+        </div>
+    </div>
+
+    <script src="quizz.js"></script>
+</body>
+</html>

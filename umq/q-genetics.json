@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Les trois gènes  MGC4607, PDCD10 et Krit1 pourraient être impliqués dans l'apparition de la forme familiale de l'angiome caverneux.",
+        "answer": true,
+        "explanation": "todo"
+    },
+    {
+        "question": "Le cavernome portal n'est jamais accompagné d’une hypertension portale.",
+        "answer": false,
+        "explanation": "todo"
+    },
+    {
+        "question": "la structure de la protéine Janus kinase 2 contient 1131 acides aminés (JAK 2).",
+        "answer": false,
+        "explanation": "Elle contient 1132 acides aminés."
+    },
+    {
+        "question": "La Cirrhose peut-être causé par la maladie de Winbledon.",
+        "answer": false,
+        "explanation": "todo"
+    },
+    {
+        "question": "L'hyperoxalurie type 1 est le résultat d'un déficit enzymatique hépatique péroxysomal.",
+        "answer": true,
+        "explanation" : "todo"
+    },
+    {
+        "question": "Il y 243 018 229 paires de bases sur le chromosome 2 humain",
+        "answer": true,
+        "explanation" : "todo"
+    },
+    {
+        "question": "Dans un train de quatre, apres ou avant l'opération d'un patient, un enchaînement de quatre stimulations de 0,2 ms en deux secondes séparées chacune de 0,5 s, suffisent pour mettre en évidence le phénomène d’épuisement en présence d’un curare non dépolarisant.",
+        "answer": false,
+        "explanation" : "C'est des stimulations de 2 ms."
+    },
+    {
+        "question": "Dans le cadre d'une lithotritie extracorporelle il est possible dr produire une onde de choc grâce à un cristal piézoélectrique.",
+        "answer": true,
+        "explanation" : "todo"
+    },
+    {
+        "question": "L'Abasie tremblante est causée par un tremblement incontrôlable des jambes.",
+        "answer": true,
+        "explanation" : "todo"
+    },
+    {
+        "question": "Le réflexe rolien est un réflexe ostéotendineux.",
+        "answer": false,
+        "explanation" : "C'est le réflexe rotulien."
+    },
+    {
+        "question": "",
+        "answer": true,
+        "explanation" : "todo"
+    },
+    {
+        "question": "",
+        "answer": true,
+        "explanation" : "todo"
+    }
+]

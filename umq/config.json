@@ -1,0 +1,8 @@
+{
+    "numQuestions": 10,
+    "pools": [
+        { "name": "Anatomie", "file": "q-anatomy.json" },
+        { "name": "Génétique", "file": "q-genetics.json" }
+    ],
+    "mode": "Standard"
+}
