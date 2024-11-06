@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Vrai/Faux</title>
+    <link rel="stylesheet" href="quizz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Vrai/Faux</h1>
+        <div id="question-container">
+            <h2 id="question"></h2>
+            <button class="answer-btn" id="true-btn">Vrai</button>
+            <button class="answer-btn" id="false-btn">Faux</button>
+        </div>
+        <div id="feedback"></div>
+        <div id="score-container" class="hidden">
+            <h3>Votre score final : <span id="final-score"></span></h3>
+            <button id="restart-btn">Recommencer</button>
+        </div>
+    </div>
+
+    <script src="quizz.js"></script>
+</body>
+</html>
