@@ -3,9 +3,12 @@ let selectedPools = [];
 let config = {};
 let currentQuestionIndex = 0;
 let score = 0;
+let quizMode = '';  // 'classic' ou 'marathon'
+
 
 const poolContainer = document.getElementById('pool-selection');
-const startQuizButton = document.getElementById('start-quiz-btn');
+const startClassic = document.getElementById('start-classic');
+const startMarathon = document.getElementById('start-marathon');
 const questionElement = document.getElementById('question');
 const trueButton = document.getElementById('true-btn');
 const falseButton = document.getElementById('false-btn');
@@ -28,7 +31,7 @@ async function loadConfig() {
     } catch (error) {
         console.error('Erreur de chargement de la configuration :', error);
     }
-    document.getElementById('pool-selection').classList.remove('hidden');
+    //document.getElementById('pool-selection').classList.remove('hidden');
 }
 
 // Générer dynamiquement les cartes de sélection des pools
@@ -39,7 +42,8 @@ function generatePoolCards() {
         card.dataset.pool = pool.file;
         card.innerText = pool.name;
         card.addEventListener('click', () => togglePoolSelection(card, pool.file));
-        poolContainer.insertBefore(card, startQuizButton);
+        poolContainer.insertBefore(card, startClassic);
+        poolContainer.insertBefore(startClassic, startMarathon);
     });
 }
 
@@ -52,7 +56,8 @@ function togglePoolSelection(card, poolFile) {
         selectedPools.push(poolFile);
         card.classList.add('selected');
     }
-    startQuizButton.disabled = selectedPools.length === 0;
+    startClassic.disabled = selectedPools.length === 0;
+    startMarathon.disabled = selectedPools.length === 0;
 }
 
 // Fonction pour mélanger les questions
@@ -193,7 +198,8 @@ function restartQuiz() {
     });
 
     // Réactiver le bouton de démarrage du quiz si au moins un pool est sélectionné
-    startQuizButton.disabled = selectedPools.length === 0;
+    startClassic.disabled = selectedPools.length === 0;
+    startMarathon.disabled = selectedPools.length === 0;
 
     // Réinitialiser le score affiché
     currentScoreElement.innerText = score;
@@ -204,7 +210,10 @@ falseButton.addEventListener('click', () => checkAnswer(false));
 nextButton.addEventListener('click', nextQuestion);
 restartButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
-startQuizButton.addEventListener('click', loadQuestions);
+startClassic.addEventListener('click', loadQuestions);
+startMarathon.addEventListener('click', loadQuestions);
+
 
 // Charger la configuration initiale
 loadConfig();
+restartQuiz();

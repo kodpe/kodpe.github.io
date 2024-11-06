@@ -1,8 +1,14 @@
 {
     "numQuestions": 10,
     "pools": [
-        { "name": "Anatomie", "file": "q-anatomy.json" },
-        { "name": "Génétique", "file": "q-genetics.json" }
-    ],
-    "mode": "Standard"
+        { "name": "Anatomy", "file": "q-data/q1-anatomy.json" },
+        { "name": "Physiology", "file": "q-data/q2-physiology.json" },
+        { "name": "Pathology", "file": "q-data/q3-pathology.json" },
+        { "name": "Surgery", "file": "q-data/q4-surgery.json" },
+        { "name": "Pharmacology", "file": "q-data/q5-pharmacology.json" },
+        { "name": "Genetics", "file": "q-data/q6-genetics.json" },
+        { "name": "Neurology", "file": "q-data/q7-neurology.json" },
+        { "name": "Epidemiology", "file": "q-data/q8-epidemiology.json" },
+        { "name": "Miscellaneous", "file": "q-data/q9-miscellaneous.json" }
+    ]
 }
