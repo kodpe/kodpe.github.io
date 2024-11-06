@@ -28,6 +28,7 @@ body {
     text-align: center;
 }
 
+
 h1, h2 {
     text-align: center;
     color: white;
@@ -36,8 +37,9 @@ h1, h2 {
 }
 
 .std-btn {
-    width: 70%;
-    height: 80px;
+    min-width: 200px;
+    /* width: 70%; */
+    height: 100px;
     padding: 10px;
     margin: 20px;
     border: none;
@@ -75,12 +77,6 @@ h1, h2 {
     display: none;
 }
 
-#feedback {
-    text-align: center;
-    font-size: 18px;
-    margin: auto;
-    height: 100px;
-}
 
 #score-tracker {
     color: white;
@@ -120,14 +116,34 @@ h1, h2 {
     margin-top: 20px;
 }
 
+#feedback {
+    color: white;
+    margin: auto;
+    height: 160px;
+    font-size: 18px;
+    text-align: center;
+}
+
 .correct {
     color: rgb(24, 209, 24);
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 20px;
 }
 
 .incorrect {
     color: red;
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.correct-mark {
+    color: rgb(24, 209, 24);
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.incorrect-mark {
+    color: red;
+    font-weight: normal;
+    font-size: 18px;
 }

@@ -144,13 +144,14 @@ function checkAnswer(isTrue) {
     const isCorrect = currentQuestion.answer === isTrue;
     if (isCorrect) {
         score++;
-        historyResult += `<span class='correct'>✔</span>`;
-        feedbackElement.innerHTML = "<span class='correct'>GOOD!</span><br><br> " + currentQuestion.explanation;
+        historyResult += `<span class='correct-mark'>o</span>`;
+        feedbackElement.innerHTML = "<span class='correct'>GOOD</span><br><br> " + currentQuestion.explanation;
     } else {
-        historyResult += `<span class='incorrect'>✘</span>`;
-        feedbackElement.innerHTML = "<span class='incorrect'>WRONG!</span><br><br> " + currentQuestion.explanation;
+        historyResult += `<span class='incorrect-mark'>x</span>`;
+        feedbackElement.innerHTML = "<span class='incorrect'>WRONG</span><br><br> " + currentQuestion.explanation;
     }
     currentScoreElement.innerText = score;
+    questionElement.innerText = '';
     trueButton.classList.add('hidden');
     falseButton.classList.add('hidden');
     nextButton.classList.remove('hidden');
