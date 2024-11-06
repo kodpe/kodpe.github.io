@@ -3,7 +3,9 @@ let selectedPools = [];
 let config = {};
 let currentQuestionIndex = 0;
 let score = 0;
-let quizMode = '';  // 'classic' ou 'marathon'
+let quizMode = '';
+let numQuestions = 0;
+let historyResult = '';
 
 
 const poolContainer = document.getElementById('pool-selection');
@@ -13,13 +15,15 @@ const questionElement = document.getElementById('question');
 const trueButton = document.getElementById('true-btn');
 const falseButton = document.getElementById('false-btn');
 const feedbackElement = document.getElementById('feedback');
-const scoreContainer = document.getElementById('score-container');
-const finalScoreElement = document.getElementById('final-score');
 const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
-const currentScoreElement = document.getElementById('current-score');
+const marathonSizeSpan = document.getElementById('marathon-size');
 
-// Charger la configuration des pools depuis config.json
+const scoreContainer = document.getElementById('score-container');
+const scoreTitleElement = document.getElementById('score-title');
+const currentScoreElement = document.getElementById('current-score');
+const nbQuestionsElement = document.getElementById('nb-questions');
+
 async function loadConfig() {
     try {
         const configResponse = await fetch('config.json');
@@ -31,7 +35,6 @@ async function loadConfig() {
     } catch (error) {
         console.error('Erreur de chargement de la configuration :', error);
     }
-    //document.getElementById('pool-selection').classList.remove('hidden');
 }
 
 // Générer dynamiquement les cartes de sélection des pools
@@ -70,12 +73,11 @@ function shuffleQuestions(questionsArray) {
 
 // Charger les questions en fonction des pools sélectionnés
 async function loadQuestions() {
-    questions = []; // Réinitialiser les questions
+    questions = []; // Reset questions
     if (selectedPools.length === 0) {
         console.log('Aucun pool sélectionné');
         return;
     }
-
     try {
         for (const poolFile of selectedPools) {
             const response = await fetch(poolFile);
@@ -85,11 +87,12 @@ async function loadQuestions() {
             const poolQuestions = await response.json();
             questions = questions.concat(poolQuestions);
         }
-
-        // Mélanger les questions
+        numQuestions = questions.length;
+        if (quizMode === 'classic' && questions.length > 10) {
+            numQuestions = 10;
+        }
         shuffleQuestions(questions);
-
-        // Démarrer le quiz après le chargement et le mélange des questions
+        questions = questions.slice(0, numQuestions);
         startQuiz();
     } catch (error) {
         console.error('Erreur lors du chargement des questions:', error);
@@ -101,108 +104,112 @@ function startQuiz() {
         console.log('Aucune question chargée.');
         return;
     }
-
-    // Masquer la section de sélection des pools
-    document.getElementById('pool-selection').classList.add('hidden');
-
-    // Afficher le score tracker
-    document.getElementById('score-tracker').classList.remove('hidden');
-
     currentQuestionIndex = 0;
     score = 0;
+    historyResult = '';
 
-    // Afficher le conteneur de questions
+    document.getElementById('pool-selection').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
 
-    // Masquer le score et les boutons au début
-    scoreContainer.classList.add('hidden');
+    scoreTitleElement.innerText = 'SCORE ';
+    currentScoreElement.innerText = score;
+    nbQuestionsElement.innerText = numQuestions;
     feedbackElement.innerText = '';
-    currentScoreElement.innerText = score; // Initialiser le score affiché à 0
+    scoreContainer.classList.remove('hidden');
 
     trueButton.classList.remove('hidden');
     falseButton.classList.remove('hidden');
     nextButton.classList.add('hidden');
+    restartButton.classList.add('hidden');
 
-    showQuestion();  // Afficher la première question
+    showQuestion();
 }
 
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
-    feedbackElement.innerText = ''; // Réinitialiser le feedback
+    feedbackElement.innerText = '';
     trueButton.classList.remove('hidden');
     falseButton.classList.remove('hidden');
-    nextButton.classList.add('hidden'); // Masquer le bouton "Question Suivante"
+    if (currentQuestionIndex === numQuestions - 1) {
+        nextButton.innerText = 'END';
+    } else {
+        nextButton.innerText = 'NEXT';
+    }
+    nextButton.classList.add('hidden');
 }
 
 function checkAnswer(isTrue) {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = currentQuestion.answer === isTrue;
-
-    // Afficher le résultat et l'explication
     if (isCorrect) {
         score++;
-        feedbackElement.innerText = "Bonne réponse ! " + currentQuestion.explanation;
+        historyResult += `<span class='correct'>✔</span>`;
+        feedbackElement.innerHTML = "<span class='correct'>GOOD!</span><br><br> " + currentQuestion.explanation;
     } else {
-        feedbackElement.innerText = "Mauvaise réponse ! " + currentQuestion.explanation;
+        historyResult += `<span class='incorrect'>✘</span>`;
+        feedbackElement.innerHTML = "<span class='incorrect'>WRONG!</span><br><br> " + currentQuestion.explanation;
     }
-
-    // Mettre à jour l'affichage du score
     currentScoreElement.innerText = score;
-
-    // Masquer les boutons "Vrai" et "Faux" et afficher "Question Suivante"
     trueButton.classList.add('hidden');
     falseButton.classList.add('hidden');
     nextButton.classList.remove('hidden');
 }
 
-function showScore() {
+function calculateScorePercentage(score, totalQuestions) {
+    if (totalQuestions === 0) return 0;
+    return (score / totalQuestions) * 100;
+}
+
+function showFinalScore() {
     questionElement.innerText = '';
+    feedbackElement.innerText = '';
     trueButton.classList.add('hidden');
     falseButton.classList.add('hidden');
     nextButton.classList.add('hidden');
-    feedbackElement.innerText = '';
-
-    finalScoreElement.innerText = `${score} sur ${Math.min(config.numQuestions, questions.length)}`;
-    scoreContainer.classList.remove('hidden');
+    restartButton.classList.remove('hidden');
+    const percentage = Math.round(calculateScorePercentage(score, numQuestions));
+    if (score === numQuestions) {
+        scoreTitleElement.innerHTML = "🥳🎉✨<br><br>" + historyResult + "<br><br> " + percentage + "%<br><br>";
+    }
+    else {
+        scoreTitleElement.innerHTML = historyResult + "<br><br> " + percentage + "%<br><br>";
+    }
 }
 
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < Math.min(config.numQuestions, questions.length)) {
+    if (currentQuestionIndex % 10 === 0) {
+        if (currentQuestionIndex % 20 === 0) {
+            historyResult += '<br>';
+        }
+        else {
+            historyResult += ' ';
+        }
+    }
+    if (currentQuestionIndex < numQuestions) {
         showQuestion();
     } else {
-        showScore();
+        showFinalScore();
     }
 }
 
 function restartQuiz() {
-    // Réinitialiser les variables
     selectedPools = [];
     questions = [];
     currentQuestionIndex = 0;
     score = 0;
-
-    // Cacher les sections du quiz et du score
+    historyResult = '';
+    scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
-    document.getElementById('score-container').classList.add('hidden');
     document.getElementById('feedback').innerText = '';
-
-    // Afficher la sélection des pools
     document.getElementById('pool-selection').classList.remove('hidden');
-
-    // Réinitialiser les boutons de la sélection des pools (enlever la classe 'selected' des cartes)
     const poolCards = document.querySelectorAll('.pool-card');
     poolCards.forEach(card => {
         card.classList.remove('selected');
     });
-
-    // Réactiver le bouton de démarrage du quiz si au moins un pool est sélectionné
     startClassic.disabled = selectedPools.length === 0;
     startMarathon.disabled = selectedPools.length === 0;
-
-    // Réinitialiser le score affiché
-    currentScoreElement.innerText = score;
 }
 
 trueButton.addEventListener('click', () => checkAnswer(true));
@@ -210,10 +217,14 @@ falseButton.addEventListener('click', () => checkAnswer(false));
 nextButton.addEventListener('click', nextQuestion);
 restartButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
-startClassic.addEventListener('click', loadQuestions);
-startMarathon.addEventListener('click', loadQuestions);
+startClassic.addEventListener('click', () => {
+    quizMode = 'classic';
+    loadQuestions();
+});
+startMarathon.addEventListener('click', () => {
+    quizMode = 'marathon';
+    loadQuestions();
+});
 
-
-// Charger la configuration initiale
 loadConfig();
 restartQuiz();

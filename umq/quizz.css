@@ -22,8 +22,10 @@ body {
 
 .question {
     color: white;
+    margin: auto;
+    height: 160px;
     font-size: 18px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 h1, h2 {
@@ -75,13 +77,13 @@ h1, h2 {
 
 #feedback {
     text-align: center;
-    font-size: 16px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    margin: auto;
+    height: 100px;
 }
 
-.score-tracker {
-    color: rgb(236, 213, 0);
+#score-tracker {
+    color: white;
     font-size: 16px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -116,4 +118,16 @@ h1, h2 {
 #duration-selection {
     text-align: center;
     margin-top: 20px;
+}
+
+.correct {
+    color: rgb(24, 209, 24);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
 }

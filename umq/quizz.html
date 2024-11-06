@@ -8,36 +8,32 @@
     <link rel="stylesheet" href="quizz.css">
 </head>
 <body>
-    <h1>Ultimate Medicine Quiz</h1>
+    <h1>ULTIMATE MEDICINE QUIZ</h1>
     <div class="container">
 
         <div id="pool-selection" class="hidden">
-            <button id="start-classic" class="std-btn">Classic</button>
-            <button id="start-marathon" class="std-btn">Marathon</button>
+                <button id="start-classic" class="std-btn">Classic</button>
+                <button id="start-marathon" class="std-btn">Marathon</button>
+                <h5>CLASSIC : 10 QUESTIONS</h5>
+                <h5>MARATHON : ALL</h5>
         </div>
 
-        <!-- Score en temps réel pendant le quiz -->
-        <h3 id="score-tracker" class="score-tracker hidden">Score : <span id="current-score">0</span></h3>
-
-        <!-- Conteneur de score final (apparaît à la fin du quiz) -->
         <div id="score-container" class="hidden">
-            <h3>Votre score final : <span id="final-score"></span></h3>
-            <button class="std-btn" id="restart-btn">Recommencer</button>
+            <h3 id="score-tracker"><span id="score-title"></span><span id="current-score"></span>/<span id="nb-questions"></span></h3>
+            <button class="std-btn hidden" id="restart-btn">CONTINUE</button>
         </div>
 
-        <!-- Feedback de la réponse à chaque question -->
         <div id="feedback"></div>
 
-        <!-- Conteneur des questions (visible uniquement pendant le quiz) -->
         <div id="question-container" class="hidden">
             <p class="question" id="question"></p>
             <button class="std-btn true-btn" id="true-btn">VRAI</button>
             <button class="std-btn false-btn" id="false-btn">FAUX</button>
-            <button class="std-btn" id="next-btn">Question Suivante</button>
+            <button class="std-btn" id="next-btn">NEXT</button>
         </div>
     </div>
 
     <script src="quizz.js"></script>
-    <h5>UMQ v0.1.6</h5>
+    <h5>UMQ v0.3</h5>
 </body>
 </html>
