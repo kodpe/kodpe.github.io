@@ -185,7 +185,7 @@ function startQuiz() {
     document.getElementById('pool-selection').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
 
-    scoreTitleElement.innerHTML = 'SCORE &nbsp&nbsp&nbsp';
+    scoreTitleElement.innerHTML = 'SCORE' + blankLine;
     currentScoreElement.innerText = score;
     nbQuestionsElement.innerText = numQuestions;
     feedbackElement.innerText = '';
@@ -204,7 +204,7 @@ function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
     feedbackElement.innerText = '';
-    qidElement.innerHTML = blankLine + blankLine + blankLine + "ID " + currentQuestion.id;
+    qidElement.innerHTML = blankLine + blankLine + blankLine + "ID" + blankLine + currentQuestion.id;
     trueButton.classList.remove('hidden');
     falseButton.classList.remove('hidden');
     feedbackElement.classList.add('hidden');
