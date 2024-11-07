@@ -21,7 +21,7 @@ body {
 
 .question {
     color: white;
-    margin: auto;
+    margin: 10px;
     height: 180px;
     font-size: 18px;
     text-align: center;
@@ -80,6 +80,10 @@ h5, h6 {
 
 .hidden {
     display: none;
+}
+
+#score-container {
+    margin: 10px;
 }
 
 #score-tracker {
