@@ -118,5 +118,65 @@
     "question": "La thyroxine est une hormone produite par la glande thyroïde qui régule le métabolisme.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "EN120",
+    "question": "La progestérone joue un rôle clé dans la régulation de la croissance de l’endomètre lors du cycle menstruel.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN121",
+    "question": "Les cellules alpha des îlots de Langerhans dans le pancréas sécrètent de l’insuline.",
+    "answer": false,
+    "explanation": "Les cellules alpha sécrètent du glucagon, tandis que les cellules beta sécrètent de l'insuline."
+  },
+  {
+    "id": "EN122",
+    "question": "L'ACTH (hormone corticotrope) stimule la production de cortisol par les glandes surrénales.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN123",
+    "question": "La calcitonine sécrétée par la glande thyroïde augmente la concentration de calcium dans le sang.",
+    "answer": false,
+    "explanation": "La calcitonine réduit la concentration de calcium dans le sang en inhibant la résorption osseuse."
+  },
+  {
+    "id": "EN124",
+    "question": "L’hormone antidiurétique (ADH) agit principalement sur le tubule proximal pour la réabsorption d’eau.",
+    "answer": false,
+    "explanation": "L'ADH agit principalement sur le tube collecteur des néphrons pour augmenter la réabsorption d'eau."
+  },
+  {
+    "id": "EN125",
+    "question": "Le déficit en iode peut entraîner une hypothyroïdie primaire avec une augmentation de la sécrétion de TSH.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN126",
+    "question": "La résistance à l’insuline dans le diabète de type 2 est liée à une dégradation excessive de la protéine p53.",
+    "answer": false,
+    "explanation": "La résistance à l'insuline dans le diabète de type 2 est surtout liée à des anomalies dans la signalisation de l'insuline et la fonction des récepteurs d'insuline."
+  },
+  {
+    "id": "EN127",
+    "question": "Le syndrome de Cushing est caractérisé par une production excessive de cortisol, souvent liée à une hyperplasie des glandes surrénales.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN128",
+    "question": "Le facteur de croissance insuline-like (IGF-1) est produit principalement dans le foie en réponse à la stimulation par l'hormone de croissance (GH).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN129",
+    "question": "Les œstrogènes exercent un effet inhibiteur sur la sécrétion de la prolactine par l'hypophyse.",
+    "answer": true,
+    "explanation": ""
   }
 ]

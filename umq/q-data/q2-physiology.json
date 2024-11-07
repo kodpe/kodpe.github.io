@@ -280,5 +280,83 @@
     "question": "L'adénosine diphosphate ribose est un des inhibiteurs de la succinate déshydrogénase (SDH).",
     "answer": false,
     "explanation": ""
+  },
+  {
+    "id": "PS147",
+    "question": "L’arythmie est un rythme cardiaque régulier specifique qui peut avoir conséquences graves.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "PS148",
+    "question": "Le réflexe rotulien est un réflexe ostéotendineux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PS149",
+    "question": "L'œdème est une diminution du volume des tissus due à une perte de liquide.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "PS150",
+    "question": "Les globules blancs sont responsables du transport de l'oxygène dans le sang.",
+    "answer": false,
+    "explanation": "ce sont les globules rouges"
+  },
+  {
+    "id": "PS151",
+    "question": "Les acides gras essentiels peuvent être synthétisés par le corps humain.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "PS152",
+    "question": "La déshydratation entraîne systematiquement une augmentation de la pression artérielle.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "PS153",
+    "question": "Les reins ne sont pas responsables de la température corporelle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PS154",
+    "question": "L'hyperglycémie désigne une augmentation du taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PS155",
+    "question": "L'insuffisance cardiaque gauche ne peut pas provoquer un œdème pulmonaire.",
+    "answer": false,
+    "explanation": "bah si elle peut tkt"
+  },
+  {
+    "id": "PS156",
+    "question": "Le plasma est composé à 90% d'eau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PS157",
+    "question": "Le plasma est composé à 9% d'eau.",
+    "answer": false,
+    "explanation": "90%"
+  },
+  {
+    "id": "PS158",
+    "question": "La salive sous-mandibulaire humaine diminue l'infectivité du virus de l'immunodéficience humaine de type 1.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PS159",
+    "question": "L'amylase est une enzyme digestive classée comme lactobacillales",
+    "answer": false,
+    "explanation": "saccharidase"
   }
 ]

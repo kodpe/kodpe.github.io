@@ -1,17 +1,17 @@
 | Domain | Current Pool Size | Sub Domain Candidate | Sub Domain Size |
 | --- | --- | --- | --- |
-| **Anatomie** | 29 |
-| **Physiologie** | 47 |
-| **Pathologie** | 43 |
-| **Chirurgie** | 10 | 
-| **Pharmacologie** | 11 |
-| **Genetique** | 14 |
-| **Neurologie** |16 |
-| **Epidemiologie** | 15 |
-| **Endocrinologie** |20 |
-| **Divers** | 23 |
-| **Lastest** | 0 | 
-| **Total** | 228 |
+| **Anatomie** | 40 |
+| **Physiologie** | 60 |
+| **Pathologie** | 50 |
+| **Chirurgie** | 30 | 
+| **Pharmacologie** | 30 |
+| **Genetique** | 40 |
+| **Neurologie** |40 |
+| **Epidemiologie** | 30 |
+| **Endocrinologie** |30 |
+| **Divers** | 40 |
+| **Lastest** | 110 | 
+| **Total** | 500 |
 
 #### MEDECINE
 - Radiologie

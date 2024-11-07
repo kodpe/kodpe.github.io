@@ -82,5 +82,161 @@
     "question": "Une mutation délétère retrouvée sur les deux allèles du gène BLM est pathognomonique.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "GN114",
+    "question": "Les trois gènes  GGC4604, CDPK12 et YAK102 pourraient être impliqués dans l'apparition de l'angiome caverneux.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "GN115",
+    "question": "la structure de la protéine Janus kinase 2 contient 1132 acides aminés (JAK 2).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN116",
+    "question": "Il y 243 018 219 paires de bases sur le chromosome 2 humain",
+    "answer": false,
+    "explanation": "243 018 229"
+  },
+  {
+    "id": "GN117",
+    "question": "Les plasmides sont des petits fragments d’ADN qui ne peuvent pas être transférés entre bactéries.",
+    "answer": false,
+    "explanation": "quelle erreur"
+  },
+  {
+    "id": "GN118",
+    "question": "Les introns sont des segments d'ADN non-codants.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN119",
+    "question": "La mitose est un processus de division cellulaire qui produit trois cellules génétiquement identiques.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "GN120",
+    "question": "Le gène HBB, impliqué dans la bêta-thalassémie, est situé sur le chromosome 16.",
+    "answer": false,
+    "explanation": "Le gène HBB est situé sur le chromosome 11."
+  },
+  {
+    "id": "GN121",
+    "question": "La protéine codée par le gène TP53 est une phosphatase.",
+    "answer": false,
+    "explanation": "La protéine p53 est un facteur de transcription et non une phosphatase."
+  },
+  {
+    "id": "GN122",
+    "question": "Le gène CFTR, associé à la mucoviscidose, code pour un canal chlorure.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN123",
+    "question": "Une mutation ponctuelle dans le gène SOD1 est couramment associée à la sclérose latérale amyotrophique (SLA).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN124",
+    "question": "Le gène APOE est situé sur le chromosome 19 et est associé au risque de maladie d’Alzheimer.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN125",
+    "question": "Le gène BRCA1, impliqué dans le cancer du sein, est situé sur le chromosome 13.",
+    "answer": false,
+    "explanation": "BRCA1 est situé sur le chromosome 17, tandis que BRCA2 est sur le chromosome 13."
+  },
+  {
+    "id": "GN126",
+    "question": "La protéine codée par le gène MYC est un oncogène qui régule la prolifération cellulaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN127",
+    "question": "La perte de fonction du gène PTEN entraîne une régulation à la baisse de la voie de signalisation PI3K/AKT.",
+    "answer": false,
+    "explanation": "La perte de PTEN entraîne une activation de la voie PI3K/AKT, favorisant la croissance cellulaire."
+  },
+  {
+    "id": "GN128",
+    "question": "Les gènes HOX codent pour des protéines essentielles dans la détermination de la morphologie le long de l’axe antéro-postérieur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN129",
+    "question": "La mutation F508del dans le gène CFTR est la mutation la plus courante dans la mucoviscidose.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN130",
+    "question": "La protéine produite par le gène BCL2 favorise l’apoptose.",
+    "answer": false,
+    "explanation": "BCL2 inhibe l'apoptose, ce qui favorise la survie cellulaire."
+  },
+  {
+    "id": "GN131",
+    "question": "Le gène RB1, situé sur le chromosome 13, est associé au rétinoblastome.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN132",
+    "question": "Les mutations sur le gène KRAS sont couramment associées à une résistance aux thérapies ciblant le récepteur de l’EGFR dans les cancers colorectaux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN133",
+    "question": "Le gène MECP2, impliqué dans le syndrome de Rett, est situé sur le chromosome Y.",
+    "answer": false,
+    "explanation": "MECP2 est situé sur le chromosome X."
+  },
+  {
+    "id": "GN134",
+    "question": "Les gènes de la famille des cytochromes P450 sont principalement impliqués dans le métabolisme des substances exogènes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN135",
+    "question": "Le gène WT1, associé au néphroblastome (tumeur de Wilms), est situé sur le chromosome 11.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN136",
+    "question": "Les mutations du gène EGFR sont fréquentes dans le cancer du poumon non à petites cellules (NSCLC).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN137",
+    "question": "Le gène FMR1 est associé au syndrome de l’X fragile et présente des répétitions CGG dans sa région codante.",
+    "answer": false,
+    "explanation": "Les répétitions CGG sont situées dans la région 5' UTR du gène FMR1."
+  },
+  {
+    "id": "GN138",
+    "question": "Le gène RB1 code pour une protéine suppresseur de tumeur et joue un rôle dans le contrôle du cycle cellulaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "GN139",
+    "question": "La protéine codée par le gène HER2/neu est une tyrosine kinase impliquée dans les cancers du sein.",
+    "answer": true,
+    "explanation": ""
   }
 ]

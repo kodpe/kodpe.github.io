@@ -58,5 +58,125 @@
     "question": "La classification de Bismuth est utilisée pour les tumeurs des voies biliaires intra-hépatiques.",
     "answer": false,
     "explanation": "La classification de Bismuth est utilisée pour les tumeurs des voies biliaires hilaires."
+  },
+  {
+    "id": "SG110",
+    "question": "La classification de Hinchey est utilisée pour évaluer la gravité des cancers colorectaux.",
+    "answer": false,
+    "explanation": "La classification de Hinchey est utilisée pour classer les complications de la diverticulite, en particulier les abcès et les perforations."
+  },
+  {
+    "id": "SG111",
+    "question": "La technique de Seldinger consiste en une ponction vasculaire suivie de l'insertion d'un guide pour faciliter la pose de cathéters ou sondes.",
+    "answer": true,
+    "explanation": "Cette technique est couramment utilisée pour les accès vasculaires en radiologie interventionnelle et en anesthésie."
+  },
+  {
+    "id": "SG112",
+    "question": "Lors d'une intervention chirurgicale pour anévrisme de l'aorte abdominale, la ligature des artères lombaires est toujours réalisée pour éviter les saignements.",
+    "answer": false,
+    "explanation": "La ligature des artères lombaires n'est pas toujours nécessaire et dépend de l'anatomie de l'anévrisme et de l'étendue de l'intervention."
+  },
+  {
+    "id": "SG113",
+    "question": "La technique de Miles est indiquée dans les cancers rectaux bas situés et consiste en une ablation complète du rectum et de l'anus avec une colostomie terminale.",
+    "answer": true,
+    "explanation": "La procédure de Miles est une amputation abdominopérinéale, souvent nécessaire dans les cancers rectaux très bas."
+  },
+  {
+    "id": "SG114",
+    "question": "La classification de Clavien-Dindo est utilisée pour évaluer le pronostic post-opératoire des patients atteints de cancer du foie.",
+    "answer": false,
+    "explanation": "La classification de Clavien-Dindo est utilisée pour classer les complications postopératoires, quelle que soit la pathologie opérée."
+  },
+  {
+    "id": "SG115",
+    "question": "La procédure de Nissen est utilisée pour le traitement de l'achalasie œsophagienne.",
+    "answer": false,
+    "explanation": "La fundoplicature de Nissen est utilisée pour traiter le reflux gastro-œsophagien, pas l'achalasie."
+  },
+  {
+    "id": "SG116",
+    "question": "La technique de Kocher permet une meilleure mobilisation du duodénum et de la tête du pancréas pour les interventions chirurgicales dans cette région.",
+    "answer": true,
+    "explanation": "La manœuvre de Kocher est utilisée pour exposer le duodénum et la tête du pancréas."
+  },
+  {
+    "id": "SG117",
+    "question": "La technique de Ladd est utilisée pour traiter la torsion d'un segment d'intestin chez les enfants présentant une malrotation congénitale.",
+    "answer": true,
+    "explanation": "La procédure de Ladd est réalisée pour corriger les malrotations intestinales et prévenir la volvulus."
+  },
+  {
+    "id": "SG118",
+    "question": "En chirurgie bariatrique, la technique du bypass gastrique en Y de Roux est particulièrement efficace pour traiter le reflux gastro-œsophagien en plus de l'obésité.",
+    "answer": true,
+    "explanation": "Le bypass gastrique en Y de Roux réduit souvent les symptômes de reflux, en plus d’aider à la perte de poids."
+  },
+  {
+    "id": "SG119",
+    "question": "La technique de Patey est utilisée pour les patients souffrant de cancer thyroïdien avancé nécessitant une résection totale de la glande thyroïde et des ganglions lymphatiques régionaux.",
+    "answer": false,
+    "explanation": "La technique de Patey est une mastectomie radicale modifiée pour le cancer du sein et n'est pas utilisée pour la chirurgie thyroïdienne."
+  },
+  {
+    "id": "SG120",
+    "question": "La chirurgie est indiquée chez tous les patients atteints d'appendicite aiguë, même ceux présentant une perforation généralisée.",
+    "answer": false,
+    "explanation": "Dans les cas d'appendicite perforée généralisée, une chirurgie est souvent nécessaire, mais le traitement initial peut inclure des antibiotiques pour stabiliser le patient avant l'opération."
+  },
+  {
+    "id": "SG121",
+    "question": "La chirurgie de la hernie inguinale est indiquée uniquement en cas de symptômes, même en l'absence de complications.",
+    "answer": true,
+    "explanation": "Bien que certaines hernies inguinales asymptomatiques puissent être surveillées, la chirurgie est généralement recommandée pour éviter les risques de complications telles que l'incarcération."
+  },
+  {
+    "id": "SG122",
+    "question": "La chirurgie n'est pas indiquée pour le traitement des diverticulites non compliquées, même en cas de douleurs persistantes.",
+    "answer": true,
+    "explanation": "Les diverticulites non compliquées sont généralement traitées médicalement par antibiotiques et modifications du régime alimentaire. La chirurgie est réservée aux cas compliqués."
+  },
+  {
+    "id": "SG123",
+    "question": "Dans les cas de tumeur bénigne du foie de petite taille, la chirurgie est systématiquement recommandée, même si la tumeur est asymptomatique.",
+    "answer": false,
+    "explanation": "Les tumeurs bénignes du foie de petite taille sont souvent surveillées sans intervention chirurgicale, à moins qu'il y ait des signes de croissance ou des symptômes."
+  },
+  {
+    "id": "SG124",
+    "question": "La chirurgie de la hernie hiatale par voie laparoscopique est recommandée dans les cas de reflux gastro-œsophagien réfractaire aux traitements médicaux.",
+    "answer": true,
+    "explanation": "La chirurgie laparoscopique de la hernie hiatale, notamment la fundoplicature, peut être indiquée chez les patients souffrant de reflux gastro-œsophagien sévère et réfractaire au traitement médical."
+  },
+  {
+    "id": "SG125",
+    "question": "Les patients âgés présentant un cancer colorectal localisé sont généralement candidats à la chirurgie, même en présence de comorbidités sévères.",
+    "answer": false,
+    "explanation": "Chez les patients âgés avec des comorbidités sévères, la chirurgie peut être contre-indiquée en raison des risques opératoires élevés. Une approche plus conservatrice peut être envisagée."
+  },
+  {
+    "id": "SG126",
+    "question": "Une chirurgie de la prostate est indiquée chez tous les patients atteints de prostatite chronique bactérienne réfractaire au traitement médical.",
+    "answer": false,
+    "explanation": "La prostatite chronique bactérienne réfractaire est généralement traitée par des antibiotiques à long terme, et la chirurgie est rarement indiquée sauf en cas de complications graves."
+  },
+  {
+    "id": "SG127",
+    "question": "La chirurgie de la sténose aortique est indiquée uniquement lorsqu'une insuffisance cardiaque congestive est présente.",
+    "answer": false,
+    "explanation": "La chirurgie pour sténose aortique est généralement indiquée lorsque les symptômes (douleur thoracique, syncope, dyspnée) apparaissent, indépendamment de l'insuffisance cardiaque congestive."
+  },
+  {
+    "id": "SG128",
+    "question": "La chirurgie de l'épanchement pleural en cas de cancer est systématiquement contre-indiquée en raison des risques de complications post-opératoires.",
+    "answer": false,
+    "explanation": "La chirurgie pour traiter un épanchement pleural dans le cancer (comme une pleurodèse) peut être indiquée pour améliorer la qualité de vie et traiter les symptômes, en particulier dans les cas réfractaires aux traitements conservateurs."
+  },
+  {
+    "id": "SG129",
+    "question": "Une laparotomie exploratrice est indiquée chez tous les patients présentant une douleur abdominale aiguë inexpliquée, même en l'absence de signes de péritonite.",
+    "answer": false,
+    "explanation": "Une laparotomie exploratrice est généralement réservée aux cas où des signes de péritonite ou une autre urgence chirurgicale sont présents. Sinon, d'autres examens diagnostiques sont effectués en priorité."
   }
 ]

@@ -88,5 +88,95 @@
     "question": "L'intervalle de crédibilité est couramment utilisé dans les méthodes statistiques bayésiennes en épidémiologie.",
     "answer": true,
     "explanation": "L'intervalle de crédibilité est utilisé dans les méthodes bayésiennes pour indiquer la probabilité de contenir la vraie valeur de la population."
+  },
+  {
+    "id": "EP115",
+    "question": "Dans une étude de cohortes, la période de latence de la maladie est un facteur clé pour déterminer si un biais de sélection pourrait être présent.",
+    "answer": true,
+    "explanation": "La période de latence peut influencer le biais de sélection en affectant la durée pendant laquelle les sujets peuvent développer la maladie après exposition."
+  },
+  {
+    "id": "EP116",
+    "question": "La méthode de Monte Carlo est utilisée en épidémiologie principalement pour estimer les paramètres de modèles complexes lorsque les solutions analytiques sont difficiles ou impossibles.",
+    "answer": true,
+    "explanation": "La méthode de Monte Carlo permet d'estimer des solutions dans des modèles complexes par simulation aléatoire."
+  },
+  {
+    "id": "EP117",
+    "question": "Les modèles de régression logistique peuvent être utilisés pour estimer un taux d'incidence dans une étude épidémiologique.",
+    "answer": false,
+    "explanation": "Les modèles de régression logistique estiment plutôt des cotes (odds), et non des taux d'incidence qui nécessitent des modèles de régression de Poisson ou autres."
+  },
+  {
+    "id": "EP118",
+    "question": "L'approximation de la probabilité d'un événement dans une étude d'épidémiologie peut être réalisée en utilisant des techniques d'échantillonnage stratifié.",
+    "answer": true,
+    "explanation": "L'échantillonnage stratifié est une méthode qui permet d'estimer les probabilités d'événements en assurant que chaque sous-groupe de la population est correctement représenté."
+  },
+  {
+    "id": "EP119",
+    "question": "Dans les études de cohortes, le biais de confusion est mieux contrôlé par la randomisation.",
+    "answer": true,
+    "explanation": "La randomisation permet de distribuer de manière aléatoire les facteurs de confusion potentiels, réduisant ainsi leur impact sur les résultats."
+  },
+  {
+    "id": "EP120",
+    "question": "Le test de log-rank est utilisé pour comparer les courbes de survie entre plusieurs groupes dans les études de cohorte.",
+    "answer": true,
+    "explanation": "Le test de log-rank compare les différences entre les courbes de survie dans les groupes en fonction du temps, en ajustant pour les censures."
+  },
+  {
+    "id": "EP121",
+    "question": "L'attrition des participants dans une étude longitudinale n'affecte pas l'estimation de l'incidence cumulée.",
+    "answer": false,
+    "explanation": "L'attrition, qui fait perdre des participants au fil du temps, peut biaiser les estimations de l'incidence cumulée si les pertes ne sont pas aléatoires."
+  },
+  {
+    "id": "EP122",
+    "question": "Les modèles de Cox permettent d'estimer le risque relatif dans les études de survie sans nécessiter d'hypothèse de forme pour la fonction de risque.",
+    "answer": true,
+    "explanation": "Les modèles de Cox, ou modèles de régression proportionnelle des risques, ne nécessitent pas de spécifier une forme pour la fonction de risque, ce qui les rend flexibles."
+  },
+  {
+    "id": "EP123",
+    "question": "La validation croisée est une méthode utilisée pour ajuster les paramètres d'un modèle épidémiologique en utilisant des sous-échantillons de données.",
+    "answer": true,
+    "explanation": "La validation croisée permet d'évaluer la performance d'un modèle en le testant sur des sous-échantillons distincts des données, réduisant ainsi le risque de surapprentissage."
+  },
+  {
+    "id": "EP124",
+    "question": "Dans une étude de cas-témoins, le rapport de cotes (odds ratio) peut être utilisé pour estimer le risque relatif si les événements sont rares.",
+    "answer": true,
+    "explanation": "Lorsque les événements sont rares, le rapport de cotes dans une étude cas-témoins peut approximativement estimer le risque relatif."
+  },
+  {
+    "id": "EP125",
+    "question": "Les erreurs de mesure dans les variables indépendantes peuvent entraîner un biais de non-différenciation dans une analyse de régression.",
+    "answer": false,
+    "explanation": "Les erreurs de mesure dans les variables indépendantes conduisent généralement à un biais de non-différenciation, mais affectent aussi la précision des estimations du modèle."
+  },
+  {
+    "id": "EP126",
+    "question": "Une étude transversale permet de calculer des taux d'incidence en mesurant l'exposition et la maladie à un seul point dans le temps.",
+    "answer": false,
+    "explanation": "Une étude transversale mesure la prévalence, pas l'incidence, car elle n'observe qu'un instant donné."
+  },
+  {
+    "id": "EP127",
+    "question": "Les effets de la dilution de l'exposition dans les études épidémiologiques sont généralement réduits par l'ajustement pour des variables de confusion.",
+    "answer": true,
+    "explanation": "L'ajustement pour les variables de confusion permet de limiter l'effet de dilution, qui survient lorsque les groupes d'exposition sont mal définis ou mélangés."
+  },
+  {
+    "id": "EP128",
+    "question": "Une analyse de survie Kaplan-Meier peut être utilisée pour analyser des données de survie, mais elle ne peut pas gérer les données censurées.",
+    "answer": false,
+    "explanation": "La méthode Kaplan-Meier est spécifiquement conçue pour gérer les données censurées, ce qui la rend très utile pour les analyses de survie."
+  },
+  {
+    "id": "EP129",
+    "question": "L'intervalle de confiance autour d'un taux d'incidence donne une idée de la précision de l'estimation et permet de tester l'hypothèse nulle.",
+    "answer": true,
+    "explanation": "L'intervalle de confiance autour d'un taux d'incidence indique l'incertitude de l'estimation et permet de tester si un effet est statistiquement significatif."
   }
 ]

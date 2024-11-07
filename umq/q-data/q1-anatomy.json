@@ -172,5 +172,71 @@
     "question": "L'artère de Neubauer peut vasculariser dans certains cas la thyroïde.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "AN129",
+    "question": "Le nerf vague (X) ne joue pas de rôle dans la régulation de la fréquence cardiaque.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "AN130",
+    "question": "La moelle épinière se termine au niveau des vertèbres lombaires L3-L4 chez l’adulte.",
+    "answer": false,
+    "explanation": "L1-L2"
+  },
+  {
+    "id": "AN131",
+    "question": "Le pancréas a seulement des fonctions exocrines.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "AN132",
+    "question": "Les cartilages cunéiformes sont situés en avant et en dehors des cartilages aryténoïdes et des cartilages corniculés.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "AN133",
+    "question": "L'infundibulum du cerveau est situé en avant au dessus du chiasma optique.",
+    "answer": false,
+    "explanation": "en arriere"
+  },
+  {
+    "id": "AN134",
+    "question": "Le nerf optique mesure approximativement 40 mm de long pour 4 mm de diamètre.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "AN135",
+    "question": "Le pancréas est un organe qui produit de l'insuline.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "AN136",
+    "question": "Le pancréas est un organe qui ne peut pas produire de l'insuline.",
+    "answer": false,
+    "explanation": "bah si il peut tkt ca va aller"
+  },
+  {
+    "id": "AN137",
+    "question": "Les 12 papilles circumvallées forment le V lingual qui délimite le 2/3 antérieur du 1/3 postérieur de la langue.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "AN138",
+    "question": "Le muscle Styloglosse est fixé sur l'os hyoïde.",
+    "answer": false,
+    "explanation": "apophyse styloïde"
+  },
+  {
+    "id": "AN139",
+    "question": "Les disques intervertébraux sont constitués de cartilage fibreux.",
+    "answer": true,
+    "explanation": ""
   }
 ]

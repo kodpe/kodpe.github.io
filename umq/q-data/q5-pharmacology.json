@@ -64,5 +64,119 @@
     "question": "Le tramadol a une masse molaire plus importante que le peroxyde d'hydrogène.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "PM111",
+    "question": "La biodisponibilité absolue d'un médicament administré par voie intraveineuse est toujours de 100%.",
+    "answer": true,
+    "explanation": "La biodisponibilité d'une administration intraveineuse est de 100% car elle est directement injectée dans le sang."
+  },
+  {
+    "id": "PM112",
+    "question": "Le cytochrome P450 3A4 est responsable de la majorité du métabolisme hépatique des médicaments.",
+    "answer": true,
+    "explanation": "CYP3A4 est l'isoenzyme la plus impliquée dans le métabolisme des médicaments."
+  },
+  {
+    "id": "PM113",
+    "question": "La clairance d'un médicament dépend uniquement de sa demi-vie et ne varie pas selon la fonction rénale.",
+    "answer": false,
+    "explanation": "La clairance dépend de la demi-vie mais est influencée par la fonction rénale, hépatique et d'autres facteurs."
+  },
+  {
+    "id": "PM114",
+    "question": "La warfarine est un anticoagulant qui agit en inhibant la vitamine K époxyde réductase.",
+    "answer": true,
+    "explanation": "La warfarine bloque la régénération de la vitamine K, nécessaire pour activer certains facteurs de coagulation."
+  },
+  {
+    "id": "PM115",
+    "question": "Le lithium est principalement éliminé par le foie, nécessitant une surveillance des enzymes hépatiques.",
+    "answer": false,
+    "explanation": "Le lithium est éliminé par les reins, et non par le foie."
+  },
+  {
+    "id": "PM116",
+    "question": "L'aminophylline est utilisée pour traiter les intoxications au paracétamol en raison de ses propriétés hépatoprotectrices.",
+    "answer": false,
+    "explanation": "L'aminophylline est un bronchodilatateur et n'est pas utilisée pour les intoxications au paracétamol."
+  },
+  {
+    "id": "PM117",
+    "question": "L'acide acétylsalicylique est transformé en salicylate dans le foie avant d'exercer son action pharmacologique.",
+    "answer": true,
+    "explanation": "L'aspirine (acide acétylsalicylique) est métabolisée en salicylate, qui est son métabolite actif."
+  },
+  {
+    "id": "PM118",
+    "question": "Les benzodiazépines agissent en augmentant l'affinité du GABA pour son récepteur, augmentant ainsi l'inhibition neuronale.",
+    "answer": true,
+    "explanation": "Les benzodiazépines renforcent l'effet inhibiteur du GABA en se liant à ses récepteurs."
+  },
+  {
+    "id": "PM119",
+    "question": "Le phénobarbital est un inducteur enzymatique qui peut réduire l'effet d'autres médicaments.",
+    "answer": true,
+    "explanation": "Le phénobarbital induit les enzymes du CYP450, réduisant la concentration de certains médicaments."
+  },
+  {
+    "id": "PM120",
+    "question": "La digoxine a une marge thérapeutique étroite, ce qui signifie que de petites variations de dose peuvent entraîner une toxicité.",
+    "answer": true,
+    "explanation": "La digoxine a une marge thérapeutique étroite, nécessitant une surveillance stricte."
+  },
+  {
+    "id": "PM121",
+    "question": "Le cisplatine est un agent alkylant utilisé en chimiothérapie et peut provoquer une néphrotoxicité sévère.",
+    "answer": true,
+    "explanation": "Le cisplatine est un agent anticancéreux qui peut endommager les reins."
+  },
+  {
+    "id": "PM122",
+    "question": "Les inhibiteurs de la pompe à protons (IPP) augmentent le pH gastrique en bloquant l'histamine H2.",
+    "answer": false,
+    "explanation": "Les IPP bloquent la pompe H+/K+ ATPase, pas les récepteurs H2."
+  },
+  {
+    "id": "PM123",
+    "question": "L'insuline peut être administrée par voie orale pour traiter le diabète de type 1.",
+    "answer": false,
+    "explanation": "L'insuline est administrée par injection, car elle est dégradée dans le tube digestif."
+  },
+  {
+    "id": "PM124",
+    "question": "La toxicité de l’acétaminophène est due à l'accumulation d'un métabolite hépatotoxique appelé NAPQI.",
+    "answer": true,
+    "explanation": "NAPQI est un métabolite toxique formé lorsque les voies de conjugaison sont saturées."
+  },
+  {
+    "id": "PM125",
+    "question": "Les effets des antidépresseurs tricycliques sont liés à leur inhibition de la recapture de la sérotonine et de la noradrénaline.",
+    "answer": true,
+    "explanation": "Les antidépresseurs tricycliques augmentent la disponibilité de la sérotonine et de la noradrénaline."
+  },
+  {
+    "id": "PM126",
+    "question": "Le méthotrexate agit en inhibant la dihydrofolate réductase, une enzyme nécessaire à la synthèse de l'ADN.",
+    "answer": true,
+    "explanation": "Le méthotrexate inhibe la synthèse de l'ADN en bloquant la dihydrofolate réductase."
+  },
+  {
+    "id": "PM127",
+    "question": "L'ibuprofène, en raison de sa faible toxicité, peut être prescrit pour de longues périodes sans surveillance.",
+    "answer": false,
+    "explanation": "L'ibuprofène peut causer des effets indésirables gastro-intestinaux et rénaux, nécessitant une surveillance."
+  },
+  {
+    "id": "PM128",
+    "question": "Les corticostéroïdes peuvent provoquer une atrophie musculaire et une ostéoporose lorsqu'ils sont utilisés à long terme.",
+    "answer": true,
+    "explanation": "Les corticostéroïdes entraînent une résorption osseuse accrue et une dégradation musculaire avec une utilisation prolongée."
+  },
+  {
+    "id": "PM129",
+    "question": "La lidocaïne est utilisée pour traiter les arythmies cardiaques en bloquant les canaux calciques dans le myocarde.",
+    "answer": false,
+    "explanation": "La lidocaïne est un antiarythmique qui agit principalement en bloquant les canaux sodiques, pas calciques."
   }
 ]

@@ -136,5 +136,107 @@
     "question": "Le signe d'Oppenheim est un réflexe cutané consistant en la dorsiflexion du gros orteil.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "MS123",
+    "question": "Les tumeurs stromales gastro-intestinales (GIST) sont principalement associées à des mutations du gène KRAS.",
+    "answer": false,
+    "explanation": "Les GIST sont souvent associés à des mutations des gènes KIT ou PDGFRA, et non KRAS."
+  },
+  {
+    "id": "MS124",
+    "question": "La délétion du gène p53 est associée à un pronostic favorable dans les cancers du sein.",
+    "answer": false,
+    "explanation": "La délétion ou mutation de p53 est généralement associée à un pronostic défavorable dans plusieurs types de cancers, y compris le cancer du sein."
+  },
+  {
+    "id": "MS125",
+    "question": "Le cancer du poumon à petites cellules est plus fréquemment associé à des mutations EGFR que le cancer non à petites cellules.",
+    "answer": false,
+    "explanation": "Le cancer non à petites cellules (NSCLC) est plus fréquemment associé à des mutations EGFR, tandis que le cancer à petites cellules ne l'est pas."
+  },
+  {
+    "id": "MS126",
+    "question": "Les inhibiteurs de checkpoint immunitaire, tels que les anti-PD-1, sont efficaces dans le traitement de tous les types de cancer.",
+    "answer": false,
+    "explanation": "Bien que efficaces dans certains cancers comme le mélanome, le cancer du poumon et le cancer de la vessie, leur efficacité varie en fonction du type de cancer."
+  },
+  {
+    "id": "MS127",
+    "question": "Le test BRCA1/BRCA2 est utilisé principalement pour déterminer le risque de cancer du pancréas.",
+    "answer": false,
+    "explanation": "Les tests BRCA1/BRCA2 sont principalement utilisés pour évaluer le risque de cancers du sein et de l'ovaire, bien qu'ils puissent également être liés au cancer du pancréas."
+  },
+  {
+    "id": "MS128",
+    "question": "La chimiothérapie à base de cisplatine est contre-indiquée chez les patients présentant des mutations du gène TP53.",
+    "answer": false,
+    "explanation": "La chimiothérapie à base de cisplatine est couramment utilisée, même chez les patients avec des mutations TP53, bien que des effets secondaires tels que la neurotoxicité et la néphrotoxicité soient plus fréquents."
+  },
+  {
+    "id": "MS129",
+    "question": "Les mutations de l'oncogène HER2 sont principalement observées dans les cancers de l'ovaire.",
+    "answer": false,
+    "explanation": "Les mutations de l'oncogène HER2 sont principalement associées au cancer du sein, bien que des cas rares apparaissent dans d'autres cancers."
+  },
+  {
+    "id": "MS130",
+    "question": "Le traitement par immunothérapie anti-CTLA-4 est plus efficace dans les cancers du colon que dans les mélanomes.",
+    "answer": false,
+    "explanation": "L'immunothérapie anti-CTLA-4, comme l'ipilimumab, a montré une efficacité particulièrement élevée dans le mélanome et moins dans les cancers du colon."
+  },
+  {
+    "id": "MS131",
+    "question": "Les tumeurs de type lobulaire dans le cancer du sein ont tendance à présenter des récepteurs hormonaux plus fréquents que les tumeurs de type canalaire.",
+    "answer": true,
+    "explanation": "Les cancers du sein de type lobulaire sont souvent récepteurs hormonaux positifs, ce qui peut influencer le traitement."
+  },
+  {
+    "id": "MS132",
+    "question": "Les tumeurs neuroendocrines bien différenciées peuvent être traitées efficacement avec des thérapies ciblées telles que les inhibiteurs de mTOR.",
+    "answer": true,
+    "explanation": "Les tumeurs neuroendocrines bien différenciées répondent souvent aux inhibiteurs de mTOR comme le temsirolimus."
+  },
+  {
+    "id": "MS133",
+    "question": "Les métastases cérébrales dans le cancer du poumon sont plus fréquemment observées dans les formes à petites cellules que dans les formes non à petites cellules.",
+    "answer": true,
+    "explanation": "Les formes de cancer du poumon à petites cellules ont une plus grande propension à provoquer des métastases cérébrales."
+  },
+  {
+    "id": "MS134",
+    "question": "Le test de dépistage du cancer colorectal repose principalement sur la détection du gène APC muté.",
+    "answer": false,
+    "explanation": "Le dépistage du cancer colorectal repose principalement sur la détection des hémorragies occultes dans les selles et les tests génétiques pour détecter les mutations du gène APC peuvent être utilisés dans des syndromes spécifiques comme la polypose adénomateuse familiale."
+  },
+  {
+    "id": "MS135",
+    "question": "Les cancers héréditaires représentent environ 50 % de tous les cancers diagnostiqués chaque année.",
+    "answer": false,
+    "explanation": "Les cancers héréditaires représentent environ 5 à 10 % de tous les cancers diagnostiqués, le reste étant principalement lié à des facteurs environnementaux et au vieillissement."
+  },
+  {
+    "id": "MS136",
+    "question": "La mutation du gène RAS est souvent présente dans les cancers colorectaux et est un facteur pronostique défavorable.",
+    "answer": true,
+    "explanation": "Les mutations du gène RAS sont fréquentes dans les cancers colorectaux et sont associées à un pronostic défavorable, en particulier en cas de résistance aux thérapies ciblées."
+  },
+  {
+    "id": "MS137",
+    "question": "Les inhibiteurs de PARP sont une thérapie efficace dans les cancers des ovaires uniquement pour les patientes porteuses de mutations BRCA1 ou BRCA2.",
+    "answer": true,
+    "explanation": "Les inhibiteurs de PARP, tels que l'olaparib, sont particulièrement efficaces dans les cancers des ovaires chez les patientes porteuses de mutations BRCA1 ou BRCA2."
+  },
+  {
+    "id": "MS138",
+    "question": "Les cellules tumorales avec une instabilité des microsatellites (MSI) répondent mieux aux inhibiteurs de point de contrôle immunitaire, comme les anti-PD-1.",
+    "answer": true,
+    "explanation": "Les cancers présentant une instabilité des microsatellites (MSI) ont tendance à être plus sensibles aux inhibiteurs de point de contrôle immunitaire."
+  },
+  {
+    "id": "MS139",
+    "question": "Le carcinome hépatocellulaire (CHC) est souvent associé à des mutations du gène TP53, mais rarement aux mutations du gène CTNNB1.",
+    "answer": false,
+    "explanation": "Le carcinome hépatocellulaire est souvent associé à des mutations du gène CTNNB1 (qui code pour la bêta-caténine), ainsi qu'à des mutations TP53."
   }
 ]

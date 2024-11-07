@@ -94,5 +94,149 @@
     "question": "Les granulations arachnoïdiennes de Pacchioni forment des évaginations villeuses ou des prolongements pédiculés et fongiformes de la seconde fine couche des méninges qui couvre le cerveau.",
     "answer": true,
     "explanation": ""
+  },
+  {
+    "id": "NR116",
+    "question": "La protéine Fgf24 est une protéine synthétisée dans le cerveau.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "NR117",
+    "question": "L'apraxie optique, l'ataxie optique, et la simultagnosie ne peuvent pas survenir en même temps.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "NR118",
+    "question": "La protéine MAP7 n'est pas présente dans les axones.",
+    "answer": false,
+    "explanation": "bah si"
+  },
+  {
+    "id": "NR119",
+    "question": "Les granulations arachnoïdiennes de Paco forment des prolongements pédiculés et fongiformes de la premiere fine couche des méninges qui couvre le cerveau.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "id": "NR120",
+    "question": "La dopamine est produite dans la substance noire et dans l’aire tegmentale ventrale du cerveau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR121",
+    "question": "Les microglies du cerveau dérivent des cellules neurales pendant le développement embryonnaire.",
+    "answer": false,
+    "explanation": "Les microglies proviennent de cellules hématopoïétiques et non de cellules neurales."
+  },
+  {
+    "id": "NR122",
+    "question": "Les cellules de Purkinje sont des neurones présents dans le cortex cérébral.",
+    "answer": false,
+    "explanation": "Les cellules de Purkinje se trouvent dans le cortex cérébelleux."
+  },
+  {
+    "id": "NR123",
+    "question": "Le glutamate est le principal neurotransmetteur inhibiteur du système nerveux central.",
+    "answer": false,
+    "explanation": "Le glutamate est le principal neurotransmetteur excitateur du système nerveux central."
+  },
+  {
+    "id": "NR124",
+    "question": "La barrière hémato-encéphalique est principalement formée par les cellules endothéliales des capillaires cérébraux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR125",
+    "question": "La gliotransmission désigne la libération de neurotransmetteurs par les cellules gliales.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR126",
+    "question": "Les astrocytes sont capables de métaboliser le glutamate en glutamine, qui est ensuite libérée et captée par les neurones.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR127",
+    "question": "Les corps de Lewy sont des inclusions intra-cellulaires principalement composées de la protéine bêta-amyloïde.",
+    "answer": false,
+    "explanation": "Les corps de Lewy sont composés principalement d'alpha-synucléine."
+  },
+  {
+    "id": "NR128",
+    "question": "La dégénérescence des neurones dopaminergiques de la substance noire est une caractéristique de la maladie de Parkinson.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR129",
+    "question": "L'activation des récepteurs NMDA nécessite la liaison simultanée du glutamate et de la glycine.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR130",
+    "question": "Les canaux ioniques des neurones sont exclusivement activés par des signaux chimiques.",
+    "answer": false,
+    "explanation": "Les canaux ioniques peuvent être activés par des signaux chimiques, électriques ou mécaniques."
+  },
+  {
+    "id": "NR131",
+    "question": "Les synapses électriques permettent une transmission plus rapide que les synapses chimiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR132",
+    "question": "La phosphorylation de la protéine tau est impliquée dans le développement de la maladie d'Alzheimer.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR133",
+    "question": "La conduction saltatoire est un phénomène observé dans les axones non myélinisés.",
+    "answer": false,
+    "explanation": "La conduction saltatoire se produit dans les axones myélinisés."
+  },
+  {
+    "id": "NR134",
+    "question": "La substance grise est principalement composée des axones myélinisés.",
+    "answer": false,
+    "explanation": "La substance grise est constituée principalement des corps cellulaires neuronaux et de dendrites."
+  },
+  {
+    "id": "NR135",
+    "question": "Les récepteurs GABA_B sont des récepteurs ionotropes impliqués dans la transmission rapide des signaux inhibiteurs.",
+    "answer": false,
+    "explanation": "Les récepteurs GABA_B sont des récepteurs métabotropes et induisent une inhibition lente."
+  },
+  {
+    "id": "NR136",
+    "question": "Les dendrites possèdent des épines dendritiques qui augmentent la surface de contact pour les synapses.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR137",
+    "question": "Les oligodendrocytes peuvent former des gaines de myéline autour des axones dans le système nerveux périphérique.",
+    "answer": false,
+    "explanation": "Les oligodendrocytes forment la myéline dans le système nerveux central."
+  },
+  {
+    "id": "NR138",
+    "question": "Le neurotransmetteur GABA est dérivé du glutamate par une réaction catalysée par la glutamate décarboxylase.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "NR139",
+    "question": "La plasticité synaptique est la capacité des synapses à renforcer ou affaiblir leur réponse en fonction de l'activité.",
+    "answer": true,
+    "explanation": ""
   }
 ]

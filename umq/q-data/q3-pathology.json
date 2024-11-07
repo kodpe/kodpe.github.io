@@ -256,5 +256,47 @@
     "question": "La période d'incubation de l'Anisakiase pourrait se compter en décennies.",
     "answer": false,
     "explanation": "quelques heures"
+  },
+  {
+    "id": "PT143",
+    "question": "La maladie de Huntington est une maladie neurodégénérative autosomique dominante.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PT144",
+    "question": "La maladie de Wilson est due à une accumulation de cuivre dans les tissus.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PT145",
+    "question": "La polyarthrite rhumatoïde est une maladie inflammatoire chronique qui touche principalement les petites articulations.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PT146",
+    "question": "Le syndrome néphrotique est caractérisé par une protéinurie massive.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PT147",
+    "question": "Le test de Barn est utilisé pour diagnostiquer la tuberculose.",
+    "answer": false,
+    "explanation": "le test de Barn n'existe pas"
+  },
+  {
+    "id": "PT148",
+    "question": "La phénylpalytolicétonarie est une maladie génétique due à un défaut de métabolisme.",
+    "answer": false,
+    "explanation": "n'existe pas"
+  },
+  {
+    "id": "PT149",
+    "question": "L'insomnie peut-être causé par la maladie de Nison.",
+    "answer": false,
+    "explanation": "n'esite pas"
   }
 ]
