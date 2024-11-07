@@ -1,55 +1,66 @@
 [
   {
+    "id": "PM100",
     "question": "La metformine est un médicament qui diminue la glycémie en stimulant la sécrétion d’insuline.",
     "answer": false,
     "explanation": "Elle diminue la production de glucose hépatique et augmente la sensibilité à l'insuline."
   },
   {
+    "id": "PM101",
     "question": "Les inhibiteurs de l'enzyme de conversion (IEC) sont contre-indiqués en cas d'insuffisance cardiaque.",
     "answer": false,
     "explanation": "Les IEC sont souvent utilisés dans le traitement de l'insuffisance cardiaque."
   },
   {
+    "id": "PM102",
     "question": "Les bêta-bloquants sont des médicaments principalement utilisés pour traiter l'hypertension artérielle.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PM103",
     "question": "L'aspirine est un inhibiteur de la COX-1 et COX-2, ce qui en fait un anti-inflammatoire et un anticoagulant.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PM104",
     "question": "L'aspirine est un anti-inflammatoire non stéroïdien (AINS).",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PM105",
     "question": "Les opiacés peuvent provoquer à la fois une dépression du système nerveux central et une dépendance.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PM106",
     "question": "Les médicaments antipsychotiques peuvent être utilisés pour traiter les troubles de l'humeur.",
     "answer": true,
     "explanation": "Ils peuvent être prescrits dans certains cas, bien que ce ne soit pas leur indication principale."
   },
   {
+    "id": "PM107",
     "question": "Les anticoagulants sont utilisés pour traiter les thromboses veineuses et non les embolies.",
     "answer": false,
     "explanation": "Les anticoagulants peuvent traiter les deux."
   },
   {
+    "id": "PM108",
     "question": "10 mg d'Athyldipropyl par voie orale ne peut pas provoquer d'effet secondaire.",
     "answer": true,
     "explanation": "n existe pas"
   },
   {
+    "id": "PM109",
     "question": "La minacycline n'est pas un antibiotique à large spectre.",
     "answer": true,
     "explanation": "n existe pas"
   },
   {
+    "id": "PM110",
     "question": "Le tramadol a une masse molaire plus importante que le peroxyde d'hydrogène.",
     "answer": true,
     "explanation": ""

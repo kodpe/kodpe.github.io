@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMQ</title>
+    <title id="page-title">UMQ</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="quizz.css">
 </head>
 <body>
     <div class="container">
-        <h1>ULTIMATE MEDICINE QUIZ</h1>
+        <h1 id="title">ULTIMATE MEDICINE QUIZ</h1>
 
         <div id="pool-selection" class="hidden">
+                <div id="select-all-cards" class="pool-card">All</div>
                 <button id="start-classic" class="std-btn">Classic</button>
                 <button id="start-marathon" class="std-btn">Marathon</button>
                 <h5>CLASSIC : 10 QUESTIONS</h5>
@@ -19,7 +20,12 @@
         </div>
 
         <div id="score-container" class="hidden">
-            <h3 id="score-tracker"><span id="score-title"></span><span id="current-score"></span>/<span id="nb-questions"></span></h3>
+            <h3 id="score-tracker">
+                <span id="score-title"></span>
+                <span id="current-score"></span>/
+                <span id="nb-questions"></span>
+                <span id="qid"></span>
+            </h3>
             <button class="std-btn hidden" id="restart-btn">CONTINUE</button>
         </div>
 
@@ -31,7 +37,6 @@
             <button class="std-btn false-btn" id="false-btn">FAUX</button>
             <button class="std-btn" id="next-btn">NEXT</button>
         </div>
-        <h5>UMQ 0.6</h5>
     </div>
     <script src="quizz.js"></script>
 </body>

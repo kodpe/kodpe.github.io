@@ -22,7 +22,7 @@ body {
 .question {
     color: white;
     margin: auto;
-    height: 200px;
+    height: 180px;
     font-size: 18px;
     text-align: center;
 }
@@ -36,10 +36,10 @@ h1, h2 {
 }
 
 .std-btn {
-    min-width: 200px;
+    min-width: 240px;
     height: 100px;
-    padding: 10px;
-    margin: 20px;
+    padding: 8px;
+    margin: 8px;
     border: none;
     border-radius: 8px;
     background-color: #dde0e6;
@@ -74,7 +74,6 @@ h1, h2 {
 .hidden {
     display: none;
 }
-
 
 #score-tracker {
     color: white;

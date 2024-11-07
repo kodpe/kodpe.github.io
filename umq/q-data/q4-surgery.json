@@ -1,17 +1,62 @@
 [
   {
+    "id": "SG100",
     "question": "Dans un train de quatre, apres ou avant l'opération d'un patient, un enchaînement de quatre stimulations de 0,2 ms en deux secondes séparées chacune de 0,5 s, suffisent pour mettre en évidence le phénomène d’épuisement en présence d’un curare non dépolarisant.",
     "answer": false,
     "explanation": "C'est des stimulations de 2 ms."
   },
   {
-    "question": "Dans le cadre d'une lithotritie extracorporelle il est possible dr produire une onde de choc grâce à un cristal piézoélectrique.",
+    "id": "SG101",
+    "question": "Dans le cadre d'une lithotritie extracorporelle il est possible de produire une onde de choc grâce à un cristal piézoélectrique.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "SG102",
     "question": "La première transplantation totale d'un visage a eu lieu en 2024.",
     "answer": false,
     "explanation": "2010"
+  },
+  {
+    "id": "SG103",
+    "question": "La technique de Whipple est utilisée pour le traitement des cancers de l'œsophage.",
+    "answer": false,
+    "explanation": "La technique de Whipple est principalement utilisée pour les cancers du pancréas."
+  },
+  {
+    "id": "SG104",
+    "question": "Le score de Child-Pugh est un critère de sélection pour la transplantation hépatique.",
+    "answer": true,
+    "explanation": "Il évalue la sévérité de la maladie hépatique et aide à déterminer l'éligibilité à la greffe."
+  },
+  {
+    "id": "SG105",
+    "question": "La technique de Hartmann consiste en une colectomie partielle avec création d'une stomie temporaire.",
+    "answer": true,
+    "explanation": "Cette procédure est souvent utilisée en urgence pour des conditions telles que la diverticulite compliquée."
+  },
+  {
+    "id": "SG106",
+    "question": "L'index de Boey permet de prédire la mortalité opératoire dans les cas d'ulcère perforé.",
+    "answer": true,
+    "explanation": "L'index de Boey est basé sur trois critères cliniques pour évaluer la mortalité."
+  },
+  {
+    "id": "SG107",
+    "question": "L'utilisation de la solution de Hartmann est contre-indiquée chez les patients ayant une insuffisance rénale sévère.",
+    "answer": true,
+    "explanation": "La solution de Hartmann contient du potassium, qui peut aggraver une hyperkaliémie chez ces patients."
+  },
+  {
+    "id": "SG108",
+    "question": "En cas de rupture d'anévrisme de l'aorte abdominale, la survie sans intervention chirurgicale immédiate dépasse généralement 50%.",
+    "answer": false,
+    "explanation": "La mortalité est extrêmement élevée sans intervention chirurgicale rapide."
+  },
+  {
+    "id": "SG109",
+    "question": "La classification de Bismuth est utilisée pour les tumeurs des voies biliaires intra-hépatiques.",
+    "answer": false,
+    "explanation": "La classification de Bismuth est utilisée pour les tumeurs des voies biliaires hilaires."
   }
 ]

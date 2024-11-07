@@ -1,215 +1,258 @@
 [
   {
+    "id": "PT100",
     "question": "La maladie de Huntington est une maladie neurodégénérative autosomique récessive.",
     "answer": false,
     "explanation": "Elle est autosomique dominante."
   },
   {
+    "id": "PT101",
     "question": "La maladie de Wilson est due à une accumulation de fer dans les tissus.",
     "answer": false,
     "explanation": "Elle est due à une accumulation de cuivre."
   },
   {
+    "id": "PT102",
     "question": "La polyarthrite rhumatoïde est une maladie inflammatoire chronique qui touche principalement les grosses articulations.",
     "answer": false,
     "explanation": "Elle touche surtout les petites articulations, comme celles des mains et des pieds."
   },
   {
+    "id": "PT103",
     "question": "Le syndrome néphrotique est caractérisé par une hématurie massive.",
     "answer": false,
     "explanation": "Il est caractérisé par une protéinurie massive."
   },
   {
+    "id": "PT104",
     "question": "Le test de Mantoux est utilisé pour diagnostiquer une infection active de la tuberculose.",
     "answer": false,
     "explanation": "Il détecte une infection, mais ne distingue pas entre une infection active et une infection latente."
   },
   {
+    "id": "PT105",
     "question": "La phénylcétonurie est une maladie génétique due à un défaut de métabolisme de la tyrosine.",
     "answer": false,
     "explanation": "Elle est due à un défaut de métabolisme de la phénylalanine."
   },
   {
+    "id": "PT106",
     "question": "La Cirrhose peut-être causé par la maladie de Winbledon.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "PT107",
     "question": "L'hyperoxalurie type 1 est le résultat d'un déficit enzymatique hépatique péroxysomal.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT108",
     "question": "L'Abasie tremblante est causée par un tremblement incontrôlable des jambes.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT109",
     "question": "La maladie de Crohn est une pathologie inflammatoire chronique touchant l’ensemble du tube digestif.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT110",
     "question": "La cirrhose hépatique est toujours causée par une consommation excessive d'alcool.",
     "answer": false,
     "explanation": "Elle peut être causée par des hépatites virales, des maladies métaboliques, etc."
   },
   {
+    "id": "PT111",
     "question": "La sclérose en plaques est une maladie auto-immune qui touche le système nerveux périphérique.",
     "answer": false,
     "explanation": "Elle touche le système nerveux central."
   },
   {
+    "id": "PT112",
     "question": "Le diabète de type 1 est causé par une résistance à l’insuline au niveau des tissus périphériques.",
     "answer": false,
     "explanation": "Il est causé par une destruction des cellules bêta du pancréas, entraînant une carence en insuline."
   },
   {
+    "id": "PT113",
     "question": "La tuberculose est une infection virale touchant principalement les poumons.",
     "answer": false,
     "explanation": "C'est une infection bactérienne causée par *Mycobacterium tuberculosis*."
   },
   {
+    "id": "PT114",
     "question": "Les plaquettes sanguines jouent un rôle important dans la défense immunitaire.",
     "answer": false,
     "explanation": "Elles sont impliquées dans la coagulation du sang."
   },
   {
+    "id": "PT115",
     "question": "Les lymphocytes T sont responsables de la production d'anticorps.",
     "answer": false,
     "explanation": "C'est le rôle des lymphocytes B."
   },
   {
+    "id": "PT116",
     "question": "Le principal agent pathogène responsable de la tuberculose est un virus.",
     "answer": false,
     "explanation": "C'est une bactérie, Mycobacterium tuberculosis."
   },
   {
+    "id": "PT117",
     "question": "L'hépatite est une inflammation du pancréas.",
     "answer": false,
     "explanation": "C'est une inflammation du foie."
   },
   {
+    "id": "PT118",
     "question": "L'hypertension artérielle est un facteur de risque modifiable pour les maladies cardiovasculaires.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT119",
     "question": "Le VIH attaque les lymphocytes T CD4+.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT120",
     "question": "La grippe se transmet principalement par voie sanguine.",
     "answer": false,
     "explanation": "Elle se transmet principalement par les voies respiratoires."
   },
   {
+    "id": "PT121",
     "question": "La maladie de Parkinson est causée par une dégénérescence des neurones dopaminergiques.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT122",
     "question": "Les cellules cancéreuses ont souvent une division cellulaire non contrôlée.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT123",
     "question": "L’anévrisme est une dilatation anormale d'un vaisseau sanguin due à un affaiblissement de sa paroi.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT124",
     "question": "La phagocytose est un processus par lequel les cellules ingèrent et détruisent les agents pathogènes.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT125",
     "question": "La leucémie est une forme de cancer qui affecte principalement le foie.",
     "answer": false,
     "explanation": "Elle affecte les cellules sanguines et la moelle osseuse."
   },
   {
+    "id": "PT126",
     "question": "La sclérose latérale amyotrophique (SLA) est une maladie auto-immune.",
     "answer": false,
     "explanation": "C'est une maladie neurodégénérative."
   },
   {
+    "id": "PT127",
     "question": "Une hypoglycémie peut entraîner des symptômes tels que la confusion, la fatigue et même des pertes de connaissance.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT128",
     "question": "La prééclampsie se caractérise uniquement par l'hypertension artérielle.",
     "answer": false,
     "explanation": "Elle se caractérise également par des signes de dommages à d'autres organes, comme des protéines dans les urines."
   },
   {
+    "id": "PT129",
     "question": "L'hypertension artérielle est définie comme une pression supérieure à 140/90 mmHg.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT130",
     "question": "La déshydratation sévère peut entraîner une hypernatrémie, qui est une concentration élevée de sodium dans le sang.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT131",
     "question": "L'anémie ferriprive est causée par une carence en fer dans l'alimentation.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT132",
     "question": "Les maladies auto-immunes résultent d'une réponse immunitaire inappropriée contre des antigènes étrangers.",
     "answer": false,
     "explanation": "Elles résultent d'une réponse inappropriée contre les propres tissus de l'organisme."
   },
   {
+    "id": "PT133",
     "question": "Le traitement de la tuberculose nécessite un régime strict sans produits laitiers.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "PT134",
     "question": "Le traitement de la maladie de Graves peut inclure l'ablation chirurgicale de la thyroïde.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT135",
     "question": "Les macrophages sont des cellules impliquées dans la phagocytose et l’élimination des pathogènes.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT136",
     "question": "Le foie est un organe qui ne peut pas se régénérer après une lésion partielle.",
     "answer": false,
     "explanation": "le foie a une grande capacité de régénération"
   },
   {
+    "id": "PT137",
     "question": "Le syndrome de l'oreille rouge pourrait faire partie du groupe des céphalées trigémino-autonomiques.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT138",
     "question": "L'insomnie fatale familiale (IFF) est une encéphalopathie spongiforme transmissible (EST) humaine à transmission autosomique dominante liée à une anomalie du gène PRNP.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT139",
     "question": "La crise clonique représente la forme la plus spectaculaire de crise d'épilepsie.",
     "answer": false,
     "explanation": "tonico-clonique"
   },
   {
+    "id": "PT140",
     "question": "L'artériosclérose est la première cause de neuropathie optique ischémique antérieure.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT141",
     "question": "Le myxédème peut se caractériser par une macroglossie.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "PT142",
     "question": "La période d'incubation de l'Anisakiase pourrait se compter en décennies.",
     "answer": false,
     "explanation": "quelques heures"

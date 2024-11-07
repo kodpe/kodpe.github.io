@@ -1,5 +1,4 @@
 {
-    "numQuestions": 10,
     "pools": [
         { "name": "Anatomy", "file": "q-data/q1-anatomy.json" },
         { "name": "Physiology", "file": "q-data/q2-physiology.json" },
@@ -9,6 +8,8 @@
         { "name": "Genetics", "file": "q-data/q6-genetics.json" },
         { "name": "Neurology", "file": "q-data/q7-neurology.json" },
         { "name": "Epidemiology", "file": "q-data/q8-epidemiology.json" },
-        { "name": "Miscellaneous", "file": "q-data/q9-miscellaneous.json" }
+        { "name": "Endocrinology", "file": "q-data/q9-endocrinology.json" },
+        { "name": "Miscellaneous", "file": "q-data/q10-miscellaneous.json" },
+        { "name": "Lastest", "file": "q-data/q11-lastest.json" }
     ]
 }

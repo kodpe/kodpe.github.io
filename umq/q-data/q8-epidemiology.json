@@ -1,17 +1,92 @@
 [
   {
+    "id": "EP100",
     "question": "En épidémiologie, la prévalence est le rapport de l'ensemble de la population exposée à une date donnée sur l'ensemble des cas présents ou passés d'un évènement ou d'une maladie.",
     "answer": false,
     "explanation": "inversé"
   },
   {
+    "id": "EP101",
     "question": "Une analyse discriminante descriptive repose sur une hypothèse probabiliste.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "EP102",
     "question": "Une étude de cohorte est mieux adaptée pour les maladies rares qu'une étude cas-témoins.",
     "answer": false,
     "explanation": ""
+  },
+  {
+    "id": "EP103",
+    "question": "Le biais de rappel est plus fréquent dans les études cas-témoins que dans les études de cohorte.",
+    "answer": true,
+    "explanation": "Les participants des études cas-témoins sont souvent amenés à se souvenir d'expositions passées, ce qui peut introduire un biais de rappel."
+  },
+  {
+    "id": "EP104",
+    "question": "Dans les études épidémiologiques, un odds ratio proche de 1 indique une forte association entre exposition et maladie.",
+    "answer": false,
+    "explanation": "Un odds ratio proche de 1 indique peu ou pas d'association entre l'exposition et la maladie."
+  },
+  {
+    "id": "EP105",
+    "question": "L'incidence cumulée d'une maladie est une mesure de la vitesse à laquelle de nouveaux cas apparaissent dans une population au cours d'une période donnée.",
+    "answer": true,
+    "explanation": "L'incidence cumulée représente le risque de développement de la maladie au fil du temps."
+  },
+  {
+    "id": "EP106",
+    "question": "Un biais de classement différentiel affecte également les groupes étudiés dans une recherche épidémiologique.",
+    "answer": false,
+    "explanation": "Un biais de classement différentiel n'affecte pas les groupes de manière égale et peut conduire à des erreurs dans les résultats."
+  },
+  {
+    "id": "EP107",
+    "question": "Le paradoxe de Simpson décrit une situation où une tendance apparente dans des groupes distincts disparaît ou s'inverse lorsqu'on combine ces groupes.",
+    "answer": true,
+    "explanation": "C'est un effet statistique observé dans certains cas d'analyses de données."
+  },
+  {
+    "id": "EP108",
+    "question": "La sensibilité d'un test correspond à sa capacité à détecter les vrais positifs parmi tous les cas de maladie.",
+    "answer": true,
+    "explanation": "La sensibilité est la probabilité qu'un test identifie correctement les personnes malades."
+  },
+  {
+    "id": "EP109",
+    "question": "Dans les études cas-témoins, l’incidence peut être directement calculée.",
+    "answer": false,
+    "explanation": "L’incidence ne peut pas être directement calculée dans les études cas-témoins car elles ne mesurent pas le risque dans la population générale."
+  },
+  {
+    "id": "EP110",
+    "question": "L'intervalle de confiance à 95% d'une estimation signifie que l'on a 95% de chances que cet intervalle contienne la vraie valeur de la population.",
+    "answer": true,
+    "explanation": "Un intervalle de confiance à 95% indique la probabilité que la vraie valeur se situe dans cet intervalle."
+  },
+  {
+    "id": "EP111",
+    "question": "Le risque relatif est calculé dans les études de cohortes mais pas dans les études cas-témoins.",
+    "answer": true,
+    "explanation": "Dans les études cas-témoins, on utilise plutôt l'odds ratio que le risque relatif."
+  },
+  {
+    "id": "EP112",
+    "question": "Le biais de sélection survient principalement lorsque l'échantillon étudié ne représente pas la population cible.",
+    "answer": true,
+    "explanation": "Un biais de sélection apparaît lorsque la méthode de sélection des participants entraîne un échantillon non représentatif."
+  },
+  {
+    "id": "EP113",
+    "question": "Le paradoxe de Simpson se produit lorsque les tendances observées dans différents groupes disparaissent ou s'inversent lorsqu'elles sont combinées.",
+    "answer": true,
+    "explanation": "Ce phénomène statistique montre comment une association apparente peut disparaître ou s'inverser dans l'analyse de données agrégées."
+  },
+  {
+    "id": "EP114",
+    "question": "L'intervalle de crédibilité est couramment utilisé dans les méthodes statistiques bayésiennes en épidémiologie.",
+    "answer": true,
+    "explanation": "L'intervalle de crédibilité est utilisé dans les méthodes bayésiennes pour indiquer la probabilité de contenir la vraie valeur de la population."
   }
 ]

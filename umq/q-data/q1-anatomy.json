@@ -1,145 +1,174 @@
 [
   {
+    "id": "AN100",
     "question": "Le diaphragme est un muscle qui joue un rôle clé dans la respiration.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN101",
     "question": "La moelle épinière est protégée par le crâne.",
     "answer": false,
     "explanation": "Elle est protégée par la colonne vertébrale."
   },
   {
+    "id": "AN102",
     "question": "Le système nerveux autonome est composé des systèmes sympathique et parasympathique.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN103",
     "question": "Le foie est responsable de la production de l'urine.",
     "answer": false,
     "explanation": "C'est le rein qui produit l'urine."
   },
   {
+    "id": "AN104",
     "question": "Le tissu musculaire lisse est responsable des mouvements volontaires du corps.",
     "answer": false,
     "explanation": "Le tissu musculaire strié est responsable des mouvements volontaires."
   },
   {
+    "id": "AN105",
     "question": "La plèvre est la membrane qui enveloppe les poumons.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN106",
     "question": "Les uretères relient les reins à la vessie.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN107",
     "question": "Le système lymphatique aide à maintenir l'équilibre des fluides dans le corps.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN108",
     "question": "Les bronches se divisent en bronchioles qui mènent aux alvéoles où se fait l'échange gazeux.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN109",
     "question": "La rate est un organe du système digestif qui produit de l'insuline.",
     "answer": false,
     "explanation": "La rate est un organe lymphatique, tandis que le pancréas produit l’insuline."
   },
   {
+    "id": "AN110",
     "question": "Les cellules endothéliales forment la paroi interne des vaisseaux sanguins.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN111",
     "question": "Les os longs se développent par ossification endochondrale.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN112",
     "question": "Le lobe occipital du cerveau est principalement impliqué dans le traitement des informations auditives.",
     "answer": false,
     "explanation": "Le lobe temporal est impliqué dans l’audition ; le lobe occipital traite la vision."
   },
   {
+    "id": "AN113",
     "question": "Les disques intervertébraux sont constitués de cartilage hyalin.",
     "answer": false,
     "explanation": "Ils sont constitués de cartilage fibreux."
   },
   {
+    "id": "AN114",
     "question": "Les valves cardiaques empêchent le reflux du sang dans le cœur.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN115",
     "question": "Les plaques de Peyer sont des structures lymphoïdes présentes dans l’intestin grêle.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN116",
     "question": "La peau est l’organe le plus grand du corps humain.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN117",
     "question": "Les cellules endothéliales tapissent l'intérieur des vaisseaux sanguins.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN118",
     "question": "Les bronchioles sont les plus petites voies respiratoires avant les alvéoles pulmonaires.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN119",
     "question": "Le nerf vague (X) joue un rôle dans la régulation de la fréquence cardiaque.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN120",
     "question": "La moelle épinière se termine au niveau des vertèbres lombaires L1-L2 chez l’adulte.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN121",
     "question": "Le pancréas est la seule glande dans le corps à avoir à la fois des fonctions endocrines et exocrines.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN122",
     "question": "Les 12 papilles circumvallées forment le V lingual qui délimite le 1/3 antérieur du 2/3 postérieur de la langue.",
     "answer": false,
     "explanation": "inverse 2/3 1/3"
   },
   {
+    "id": "AN123",
     "question": "Le muscle Styloglosse n'est pas fixé sur l'os hyoïde.",
     "answer": true,
     "explanation": "apophyse styloïde"
   },
   {
+    "id": "AN124",
     "question": "L'infundibulum du cerveau est situé en arrière du chiasma optique.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "AN125",
     "question": "Le nerf optique mesure approximativement 20 mm de long pour 2 mm de diamètre.",
     "answer": false,
     "explanation": "40 mm pour 4 mm"
   },
   {
+    "id": "AN126",
     "question": "L'éminence intercondylaire est un massif osseux irrégulier et triangulaire situé dans la partie moyenne de la surface intercondylaire du tibia.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "AN127",
     "question": "Les cartilages tropoformes sont situés en avant et en dehors des cartilages aryténoïdes et des cartilages corniculés.",
     "answer": false,
     "explanation": "cunéiformes"
   },
   {
+    "id": "AN128",
     "question": "L'artère de Neubauer peut vasculariser dans certains cas la thyroïde.",
     "answer": true,
     "explanation": ""

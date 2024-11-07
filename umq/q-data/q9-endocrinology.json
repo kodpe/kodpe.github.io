@@ -1,0 +1,122 @@
+[
+  {
+    "id": "EN100",
+    "question": "La vasopressine est également appelée hormone antidiurétique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN101",
+    "question": "Le système rénine-angiotensine-aldostérone joue un rôle crucial dans la régulation de la pression artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN102",
+    "question": "Les cellules de Leydig produisent la testostérone dans les testicules.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN103",
+    "question": "La vitamine D est essentielle pour l’absorption du calcium dans l'intestin.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN104",
+    "question": "L’hormone parathyroïdienne (PTH) diminue la concentration de calcium dans le sang.",
+    "answer": false,
+    "explanation": "La PTH augmente la concentration de calcium dans le sang."
+  },
+  {
+    "id": "EN105",
+    "question": "L’angiotensine II est un puissant vasodilatateur qui diminue la pression artérielle.",
+    "answer": false,
+    "explanation": "L’angiotensine II est un vasoconstricteur, augmentant la pression artérielle."
+  },
+  {
+    "id": "EN106",
+    "question": "Les glandes surrénales sécrètent de l’adrénaline en réponse à un stress aigu.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN107",
+    "question": "L'hormone antidiurétique (ADH) augmente la réabsorption d'eau dans le tube distal du néphron.",
+    "answer": false,
+    "explanation": "Elle agit surtout sur le tube collecteur."
+  },
+  {
+    "id": "EN108",
+    "question": "La thyroxine (T4) est produite par la glande thyroïde et influence le métabolisme basal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN109",
+    "question": "Le glucagon est une hormone hyperglycémiante.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN110",
+    "question": "La sécrétion d’insuline augmente lors d’une hypoglycémie.",
+    "answer": false,
+    "explanation": "l’insuline est sécrétée en cas d’hyperglycémie"
+  },
+  {
+    "id": "EN111",
+    "question": "Le cortisol est une hormone qui augmente le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN112",
+    "question": "La mélatonine est une hormone sécrétée par l’épiphyse (glande pinéale) et régule le rythme veille-sommeil.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN113",
+    "question": "Les hormones thyroïdiennes (T3 et T4) augmentent le métabolisme basal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN114",
+    "question": "La thrombopoïétine est une hormone qui stimule la production de globules rouges.",
+    "answer": false,
+    "explanation": "Elle stimule la production de plaquettes."
+  },
+  {
+    "id": "EN115",
+    "question": "Le rein produit de l’érythropoïétine, qui stimule la production de globules rouges.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN116",
+    "question": "Les glandes parathyroïdes jouent un rôle dans la régulation du calcium sanguin.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN117",
+    "question": "Le système endocrinien régule les réactions hormonales par des boucles de rétroaction.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN118",
+    "question": "L'insuline est une hormone qui régule le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "EN119",
+    "question": "La thyroxine est une hormone produite par la glande thyroïde qui régule le métabolisme.",
+    "answer": true,
+    "explanation": ""
+  }
+]

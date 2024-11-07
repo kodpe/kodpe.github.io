@@ -1,115 +1,138 @@
 [
   {
+    "id": "MS100",
     "question": "Les bactéries Gram-négatives ont une paroi cellulaire plus épaisse que les Gram-positives.",
     "answer": false,
     "explanation": "Elles ont une paroi plus fine, mais une membrane externe supplémentaire."
   },
   {
+    "id": "MS101",
     "question": "Le cavernome portal n'est jamais accompagné d’une hypertension portale.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "MS102",
     "question": "L'adrénaline est produite par le pancréas.",
     "answer": false,
     "explanation": "Elle est produite par les glandes surrénales."
   },
   {
+    "id": "MS103",
     "question": "Le cholestérol est toujours mauvais pour la santé.",
     "answer": false,
     "explanation": "Il existe des types de cholestérol, certains sont nécessaires au corps."
   },
   {
+    "id": "MS104",
     "question": "L'hématopoïèse se déroule principalement dans le foie.",
     "answer": false,
     "explanation": "Elle se déroule principalement dans la moelle osseuse."
   },
   {
+    "id": "MS105",
     "question": "La vitamine K est essentielle pour la vision.",
     "answer": false,
     "explanation": "Elle est essentielle pour la coagulation sanguine."
   },
   {
+    "id": "MS106",
     "question": "La tachycardie est définie comme une fréquence cardiaque anormalement basse.",
     "answer": false,
     "explanation": "La tachycardie est une fréquence cardiaque élevée."
   },
   {
+    "id": "MS107",
     "question": "L’ostéoblastes sont les cellules responsables de la résorption osseuse.",
     "answer": false,
     "explanation": "Les ostéoclastes sont responsables de la résorption osseuse ; les ostéoblastes construisent l'os."
   },
   {
+    "id": "MS108",
     "question": "La moelle osseuse rouge est responsable de la production des cellules sanguines.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "MS109",
     "question": "L’IRM (imagerie par résonance magnétique) utilise des rayonnements ionisants.",
     "answer": false,
     "explanation": "Elle utilise des champs magnétiques et des ondes radio."
   },
   {
+    "id": "MS110",
     "question": "Le scanner (CT scan) utilise des ultrasons pour produire des images de l'intérieur du corps.",
     "answer": false,
     "explanation": "Il utilise des rayons X."
   },
   {
+    "id": "MS111",
     "question": "Le stress oxydatif est causé par un excès d'antioxydants dans le corps.",
     "answer": false,
     "explanation": "Il est causé par un déséquilibre entre les radicaux libres et les antioxydants."
   },
   {
+    "id": "MS112",
     "question": "L’appendice joue un rôle important dans la digestion des lipides.",
     "answer": false,
     "explanation": "L'appendice n’a pas de rôle significatif dans la digestion."
   },
   {
+    "id": "MS113",
     "question": "La fermentation est un processus de production d'ATP en présence d'oxygène.",
     "answer": false,
     "explanation": "elle se produit en absence d’oxygène"
   },
   {
+    "id": "MS114",
     "question": "L'azote est le principal gaz responsable de la respiration humaine.",
     "answer": false,
     "explanation": "C'est l'oxygène qui est essentiel pour la respiration."
   },
   {
+    "id": "MS115",
     "question": "La pression artérielle systolique est toujours plus élevée que la pression diastolique.",
     "answer": true,
     "explanation": "La pression systolique représente la pression lors de la contraction du cœur, alors que la diastolique représente la pression lorsque le cœur est au repos."
   },
   {
+    "id": "MS116",
     "question": "L'appareil de Golgi est un lieu majeur pour le transfert en autres des clathrines RER.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "MS117",
     "question": "Une claudication ne peut être intermittente.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "MS118",
     "question": "Les enzymes sont des protéines qui augmentent l'énergie d'activation d'une réaction chimique.",
     "answer": false,
     "explanation": "elles abaissent l'énergie d'activation"
   },
   {
+    "id": "MS119",
     "question": "Les cellules procaryotes possèdent un noyau.",
     "answer": false,
     "explanation": "elles n'ont pas de noyau"
   },
   {
+    "id": "MS120",
     "question": "Est signe d'une gazométrie anormale une pression partielle de CO2 dissout dans le sang artériel de 37 mmHg millimètre de mercure sur un homme de 22 ans atteint d'un Piébaldisme à une altitude de 3212 mètres.",
     "answer": false,
     "explanation": ""
   },
   {
+    "id": "MS121",
     "question": "La pyrothérapie est une méthode de traitement qui consiste à augmenter ou maintenir une température corporelle généralement à 41°C à l'aide d'un appareil à fièvre.",
     "answer": true,
     "explanation": ""
   },
   {
+    "id": "MS122",
     "question": "Le signe d'Oppenheim est un réflexe cutané consistant en la dorsiflexion du gros orteil.",
     "answer": true,
     "explanation": ""

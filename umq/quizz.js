@@ -1,3 +1,4 @@
+const version = '0.7';
 let questions = [];
 let selectedPools = [];
 let config = {};
@@ -6,9 +7,13 @@ let score = 0;
 let quizMode = '';
 let numQuestions = 0;
 let historyResult = '';
+let selectAllCardsBool = false;
+
+const blankLine = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp';
 
 
 const poolContainer = document.getElementById('pool-selection');
+const selectAllCardsElement = document.getElementById('select-all-cards');
 const startClassic = document.getElementById('start-classic');
 const startMarathon = document.getElementById('start-marathon');
 const questionElement = document.getElementById('question');
@@ -23,6 +28,15 @@ const scoreContainer = document.getElementById('score-container');
 const scoreTitleElement = document.getElementById('score-title');
 const currentScoreElement = document.getElementById('current-score');
 const nbQuestionsElement = document.getElementById('nb-questions');
+const qidElement = document.getElementById('qid');
+
+function SetTitleVersion() {
+    const pageTitleElement = document.getElementById('page-title');
+    const titleElement = document.getElementById('title');
+    pageTitleElement.innerText += ' ' + version;
+    titleElement.innerText += ' ' + version;
+}
+SetTitleVersion();
 
 async function loadConfig() {
     try {
@@ -45,7 +59,8 @@ function generatePoolCards() {
         card.dataset.pool = pool.file;
         card.innerText = pool.name;
         card.addEventListener('click', () => togglePoolSelection(card, pool.file));
-        poolContainer.insertBefore(card, startClassic);
+        poolContainer.insertBefore(card, selectAllCardsElement);
+        poolContainer.insertBefore(selectAllCardsElement, startClassic);
         poolContainer.insertBefore(startClassic, startMarathon);
     });
 }
@@ -59,8 +74,35 @@ function togglePoolSelection(card, poolFile) {
         selectedPools.push(poolFile);
         card.classList.add('selected');
     }
+    updateStartButtons();
+}
+
+function updateStartButtons() {
     startClassic.disabled = selectedPools.length === 0;
     startMarathon.disabled = selectedPools.length === 0;
+}
+
+function toggleSelectAllCards() {
+    selectAllCardsBool = !selectAllCardsBool;
+
+    if (selectAllCardsBool) {
+        config.pools.forEach(pool => {
+            if (!selectedPools.includes(pool.file)) {
+                selectedPools.push(pool.file);
+            }
+            const card = document.querySelector(`.pool-card[data-pool="${pool.file}"]`);
+            if (card) card.classList.add('selected');
+        });
+        selectAllCardsElement.classList.add('selected');
+    } else {
+        selectedPools = [];
+        document.querySelectorAll('.pool-card').forEach(card => {
+            card.classList.remove('selected');
+        });
+        selectAllCardsElement.classList.remove('selected');
+    }
+
+    updateStartButtons();
 }
 
 // Fonction pour mélanger les questions
@@ -107,11 +149,12 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     historyResult = '';
+    qidElement.innerText = '';
 
     document.getElementById('pool-selection').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
 
-    scoreTitleElement.innerText = 'SCORE ';
+    scoreTitleElement.innerHTML = 'SCORE &nbsp&nbsp&nbsp';
     currentScoreElement.innerText = score;
     nbQuestionsElement.innerText = numQuestions;
     feedbackElement.innerText = '';
@@ -129,6 +172,7 @@ function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
     feedbackElement.innerText = '';
+    qidElement.innerHTML = blankLine + blankLine + blankLine + "ID " + currentQuestion.id;
     trueButton.classList.remove('hidden');
     falseButton.classList.remove('hidden');
     feedbackElement.classList.add('hidden');
@@ -169,6 +213,7 @@ function calculateScorePercentage(score, totalQuestions) {
 function showFinalScore() {
     questionElement.innerText = '';
     feedbackElement.innerText = '';
+    qidElement.innerHTML = '';
     trueButton.classList.add('hidden');
     falseButton.classList.add('hidden');
     nextButton.classList.add('hidden');
@@ -205,6 +250,7 @@ function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     historyResult = '';
+    qidElement.innerHTML = '';
     scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('feedback').innerText = '';
@@ -230,6 +276,8 @@ startMarathon.addEventListener('click', () => {
     quizMode = 'marathon';
     loadQuestions();
 });
+document.getElementById('title').addEventListener('click', restartQuiz);
+selectAllCardsElement.addEventListener('click', toggleSelectAllCards);
 
 loadConfig();
 restartQuiz();
