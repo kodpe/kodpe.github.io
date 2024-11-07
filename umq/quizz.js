@@ -1,4 +1,4 @@
-const version = '0.7';
+const version = '0.8';
 let questions = [];
 let selectedPools = [];
 let config = {};
@@ -106,11 +106,10 @@ function togglePoolSelection(card, poolFile) {
 function updateStartButtons() {
     if (selectedPools.length === 0) {
         Array.from(noopElements).forEach(element => element.classList.add('hidden'));
-        lvlContainer.classList.add('hidden');
+        difficultySelection('hard');
     } else {
         Array.from(noopElements).forEach(element => element.classList.remove('hidden'));
         difficultySelection('hard');
-        lvlContainer.classList.remove('hidden');
     }
 }
 
@@ -198,7 +197,6 @@ function startQuiz() {
     restartButton.classList.add('hidden');
 
     lvlContainer.classList.add('hidden');
-
     showQuestion();
 }
 
@@ -285,6 +283,7 @@ function restartQuiz() {
     score = 0;
     historyResult = '';
     qidElement.innerHTML = '';
+    lvlContainer.classList.remove('hidden');
     difficultySelection('hard');
     scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
