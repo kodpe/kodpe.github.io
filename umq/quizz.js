@@ -1,4 +1,4 @@
-const version = '0.8';
+const version = '0.8'; // depr
 let questions = [];
 let selectedPools = [];
 let config = {};
@@ -43,7 +43,7 @@ function SetTitleVersion() {
     pageTitleElement.innerText += ' ' + version;
     titleElement.innerText += ' ' + version;
 }
-SetTitleVersion();
+//SetTitleVersion();
 
 async function loadConfig() {
     try {
