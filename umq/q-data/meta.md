@@ -116,7 +116,7 @@ Reproduction
 - Addictologie : CANDIDATE
 - Alcoologie
 - Allergologie
-- Cancérologie : CANDIDATE
+- Oncologie : CANDIDATE
 - Diabétologie
 - Infectiologie
 - Psychiatrie

@@ -1,62 +1,266 @@
 [
   {
-    "id": "",
-    "question": "",
-    "answer": false,
+    "id": "ON200",
+    "question": "La suspicion de cancer repose sur plusieurs éléments : les symptômes, les examens biologiques, et l'imagerie.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PA200",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de vaseline",
     "answer": false,
+    "explanation": "blocs de paraffine"
+  },
+  {
+    "id": "PA201",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de paraffine.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PA202",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de biafine.",
     "answer": false,
+    "explanation": "blocs de paraffine"
+  },
+  {
+    "id": "PU200",
+    "question": "La putréfaction provoque la transformation de l’hémoglobine en sulfhémoglobine verte.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
-    "answer": false,
+    "id": "PU201",
+    "question": "La décomposition est à la base de la constitution de l'humus et de certains réseaux trophiques.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PU202",
+    "question": "La décomposition est à la base de la constitution de l'houmous.",
     "answer": false,
+    "explanation": "de l'humus"
+  },
+  {
+    "id": "PU203",
+    "question": "La putréfaction débute par l’apparition d'une tache verte abdominale, au niveau de la fosse iliaque droite.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PU204",
+    "question": "La putréfaction débute par l’apparition d'une tache verte abdominale, au niveau de la fosse iliaque gauche.",
     "answer": false,
+    "explanation": "fosse iliaque droite"
+  },
+  {
+    "id": "PU205",
+    "question": "La putréfaction débute par l’apparition d'une tache verte au niveau de la cage thoracique.",
+    "answer": false,
+    "explanation": "tache verte abdominale"
+  },
+  {
+    "id": "PU206",
+    "question": "La putréfaction débute 48 heures après la mort.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PU207",
+    "question": "La putréfaction débute 18 heures après la mort.",
     "answer": false,
+    "explanation": "48 heures"
+  },
+  {
+    "id": "PU208",
+    "question": "Lors d'un décès, la concentration cytoplasmique du Ca2+ augmente.",
+    "answer": true,
     "explanation": ""
   },
   {
-    "id": "",
-    "question": "",
+    "id": "PU209",
+    "question": "Lors d'un décès, la concentration cytoplasmique du Ca2+ diminue.",
     "answer": false,
-    "explanation": ""
+    "explanation": "Elle augmente"
   },
   {
-    "id": "",
-    "question": "",
+    "id": "MT200",
+    "question": "Les niveaux élevés d'alpha-fœtoprotéine (AFP) sont spécifiques au cancer du foie.",
     "answer": false,
-    "explanation": ""
+    "explanation": "L'AFP est élevée dans d'autres conditions comme les tumeurs germinales et certains hépatites chroniques."
   },
   {
-    "id": "",
-    "question": "",
+    "id": "MT201",
+    "question": "L'antigène carcino-embryonnaire (ACE) est un marqueur utile pour le dépistage du cancer colorectal.",
     "answer": false,
-    "explanation": ""
+    "explanation": "L'ACE est plus utilisé pour le suivi de la maladie, car il n'est pas assez spécifique pour le dépistage."
+  },
+  {
+    "id": "MT202",
+    "question": "Le CA 19-9 est spécifique aux cancers pancréatiques.",
+    "answer": false,
+    "explanation": "Bien qu'il soit associé au cancer du pancréas, il peut aussi être élevé dans les cholangiocarcinomes et d'autres maladies digestives bénignes."
+  },
+  {
+    "id": "MT203",
+    "question": "Le taux de CA 125 est souvent augmenté dans le cancer de l'ovaire, mais il peut aussi être élevé dans l'endométriose et les menstruations.",
+    "answer": true,
+    "explanation": "Le CA 125 peut être augmenté dans des états non cancéreux."
+  },
+  {
+    "id": "MT204",
+    "question": "La bêta-hCG est un marqueur tumoral utilisé principalement pour le suivi des cancers de la prostate.",
+    "answer": false,
+    "explanation": "La bêta-hCG est surtout utilisée pour les tumeurs germinales testiculaires."
+  },
+  {
+    "id": "MT205",
+    "question": "L'antigène prostatique spécifique (PSA) est un marqueur de diagnostic précoce fiable pour le cancer de la prostate.",
+    "answer": false,
+    "explanation": "Bien qu’il soit utile pour la détection, le PSA manque de spécificité et peut être élevé dans des hypertrophies bénignes."
+  },
+  {
+    "id": "MT206",
+    "question": "La chromogranine A (CgA) est un marqueur tumoral utile dans la détection des tumeurs neuroendocrines.",
+    "answer": true,
+    "explanation": "La CgA est souvent utilisée pour le diagnostic et le suivi des tumeurs neuroendocrines."
+  },
+  {
+    "id": "MT207",
+    "question": "L’ACE est un marqueur efficace pour évaluer la réponse au traitement dans les cancers colorectaux.",
+    "answer": true,
+    "explanation": "Une baisse de l'ACE est souvent observée en cas de réponse positive au traitement."
+  },
+  {
+    "id": "MT208",
+    "question": "Les niveaux d'ALP (phosphatase alcaline) peuvent être un indicateur de métastases osseuses dans certains cancers.",
+    "answer": true,
+    "explanation": "Une élévation de l’ALP peut suggérer des métastases osseuses, notamment dans les cancers de la prostate et du sein."
+  },
+  {
+    "id": "MT209",
+    "question": "L’élévation de la calcitonine est spécifique au carcinome médullaire de la thyroïde.",
+    "answer": true,
+    "explanation": "Des niveaux élevés de calcitonine sont typiquement associés au carcinome médullaire de la thyroïde."
+  },
+  {
+    "id": "TP530",
+    "question": "La mutation du gène TP53 est l'une des mutations les plus courantes retrouvées dans les cancers humains.",
+    "answer": true,
+    "explanation": "La mutation de TP53 est effectivement l'une des mutations les plus fréquemment observées dans divers types de cancers."
+  },
+  {
+    "id": "TP531",
+    "question": "p53 fonctionne exclusivement en tant que facteur de transcription activant les gènes impliqués dans l'apoptose.",
+    "answer": false,
+    "explanation": "En plus de l'apoptose, p53 régule également des gènes liés à l'arrêt du cycle cellulaire, la réparation de l'ADN et la sénescence cellulaire."
+  },
+  {
+    "id": "TP532",
+    "question": "La p53 agit principalement au niveau de la phase G1 du cycle cellulaire pour arrêter la prolifération en réponse aux dommages à l'ADN.",
+    "answer": true,
+    "explanation": "p53 intervient surtout dans la phase G1 pour permettre la réparation de l'ADN avant la réplication."
+  },
+  {
+    "id": "TP533",
+    "question": "Lorsque le gène TP53 est muté, la protéine p53 est souvent complètement inactivée, ce qui empêche toute réponse cellulaire aux dommages à l'ADN.",
+    "answer": false,
+    "explanation": "Certaines mutations de TP53 produisent une protéine p53 mutante qui peut encore exercer certaines fonctions, ou même avoir des effets pro-tumoraux."
+  },
+  {
+    "id": "TP534",
+    "question": "La p53 est directement impliquée dans la réparation de l'ADN en tant qu'enzyme réparatrice.",
+    "answer": false,
+    "explanation": "p53 n'est pas une enzyme réparatrice, mais elle active des gènes qui codent pour des enzymes de réparation de l'ADN."
+  },
+  {
+    "id": "TP535",
+    "question": "La dégradation de la p53 est régulée par la protéine MDM2, qui l'ubiquitine pour la diriger vers le protéasome.",
+    "answer": true,
+    "explanation": "MDM2 est un régulateur majeur qui cible p53 pour la dégradation protéasomale."
+  },
+  {
+    "id": "TP536",
+    "question": "La p53 mutée peut parfois agir en tant qu'oncogène, favorisant le développement du cancer au lieu de l'empêcher.",
+    "answer": true,
+    "explanation": "Certaines mutations de p53 confèrent un gain de fonction, ce qui peut effectivement favoriser l'oncogenèse."
+  },
+  {
+    "id": "TP537",
+    "question": "La surexpression de p53 dans une cellule signifie automatiquement qu’elle est en état de stress et qu’elle active une réponse antitumorale.",
+    "answer": false,
+    "explanation": "La surexpression de p53 peut résulter d'une mutation, ce qui n'indique pas nécessairement une réponse antitumorale mais parfois une perte de fonction ou un effet oncogène."
+  },
+  {
+    "id": "TP538",
+    "question": "Dans des conditions physiologiques normales, p53 a une demi-vie très courte et n'est donc pas détectable en grande quantité dans les cellules saines.",
+    "answer": true,
+    "explanation": "p53 a une demi-vie courte dans les cellules normales et n'est stabilisée qu'en réponse au stress cellulaire."
+  },
+  {
+    "id": "TP539",
+    "question": "Une perte de fonction complète du gène TP53 est toujours létale pour la cellule en raison de son incapacité à détecter les dommages à l'ADN.",
+    "answer": false,
+    "explanation": "Bien que la perte de TP53 soit dangereuse, elle n'est pas toujours immédiatement létale ; certaines cellules continuent de survivre et de se diviser, ce qui peut contribuer au développement tumoral."
+  },
+  {
+    "id": "CV650",
+    "question": "Dans la CIVD, les niveaux de fibrinogène sont souvent élevés en raison de la surproduction de fibrine dans le sang.",
+    "answer": false,
+    "explanation": "les niveaux de fibrinogène sont généralement bas car il est consommé en excès dans la formation de caillots."
+  },
+  {
+    "id": "CV651",
+    "question": "La CIVD est toujours associée à des niveaux élevés de D-dimères.",
+    "answer": true,
+    "explanation": "les D-dimères sont élevés car ils sont des produits de dégradation de la fibrine, largement formés dans la CIVD."
+  },
+  {
+    "id": "CV652",
+    "question": "Le traitement de la CIVD repose principalement sur la transfusion de plaquettes et de facteurs de coagulation pour compenser leur consommation excessive.",
+    "answer": false,
+    "explanation": "bien que cela puisse être nécessaire, le traitement vise surtout à traiter la cause sous-jacente de la CIVD."
+  },
+  {
+    "id": "CV653",
+    "question": "La CIVD se produit uniquement dans le cadre de pathologies infectieuses graves, comme le sepsis.",
+    "answer": false,
+    "explanation": "elle peut aussi être déclenchée par des traumatismes, des cancers, des complications obstétricales, etc."
+  },
+  {
+    "id": "CV654",
+    "question": "Dans la CIVD, le temps de prothrombine (TP) et le temps de thromboplastine partielle activée (TTPA) sont souvent allongés.",
+    "answer": true,
+    "explanation": "ces temps sont allongés en raison de la consommation de facteurs de coagulation."
+  },
+  {
+    "id": "CV655",
+    "question": "La CIVD peut causer à la fois des thromboses et des hémorragies en raison de la consommation excessive de plaquettes et de facteurs de coagulation.",
+    "answer": true,
+    "explanation": "les deux phénomènes se produisent simultanément, caractérisant la CIVD."
+  },
+  {
+    "id": "CV656",
+    "question": "Une hypofibrinogénémie sévère dans la CIVD nécessite une administration systématique de concentré de fibrinogène pour éviter les complications.",
+    "answer": false,
+    "explanation": "l’administration de fibrinogène est réservée aux cas avec saignement actif ou risque hémorragique, et il faut contrôler la cause sous-jacente en priorité."
+  },
+  {
+    "id": "CV657",
+    "question": "L’hypercoagulabilité dans la CIVD résulte uniquement de l’activation de la voie extrinsèque de la coagulation.",
+    "answer": false,
+    "explanation": "les deux voies (extrinsèque et intrinsèque) peuvent être activées selon les causes de la CIVD."
+  },
+  {
+    "id": "CV658",
+    "question": "L’antithrombine III, un inhibiteur naturel de la coagulation, est généralement élevée dans la CIVD en raison de la contre-réaction à l’hypercoagulation.",
+    "answer": false,
+    "explanation": "l’antithrombine III est souvent diminuée, car elle est consommée dans la réponse à la coagulation excessive."
+  },
+  {
+    "id": "CV659",
+    "question": "Le diagnostic de la CIVD repose sur un score intégrant le nombre de plaquettes, les D-dimères, le fibrinogène et les temps de coagulation.",
+    "answer": true,
+    "explanation": "le score diagnostique de la CIVD (tel que le score de l’International Society on Thrombosis and Haemostasis) inclut ces paramètres pour évaluer la gravité."
   }
 ]
