@@ -10,13 +10,18 @@
 <body>
     <div class="container">
         <h1 id="title">ULTIMATE MEDICINE QUIZ</h1>
-
         <div id="pool-selection" class="hidden">
+                <h6>THEMES</h6>
                 <div id="select-all-cards" class="pool-card">All</div>
-                <button id="start-classic" class="std-btn">Classic</button>
-                <button id="start-marathon" class="std-btn">Marathon</button>
-                <h5>CLASSIC : 10 QUESTIONS</h5>
-                <h5>MARATHON : ALL</h5>
+                <button id="start-classic" class="std-btn hidden noop">Classic</button>
+                <button id="start-marathon" class="std-btn hidden noop">Marathon</button>
+                <h5 class="hidden noop">CLASSIC : 10 RANDOM QUESTIONS | MARATHON : ALL</h5>
+        </div>
+        <div id="difficulty-container" class="hidden noop">
+            <h6>DIFFICULTY</h6>
+            <div id="lvl-hard" class="pool-card">hard</div>
+            <div id="lvl-nightmare" class="pool-card">nightmare</div>
+            <div id="lvl-madness" class="pool-card">madness</div>
         </div>
 
         <div id="score-container" class="hidden">

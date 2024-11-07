@@ -11,6 +11,7 @@ let selectAllCardsBool = false;
 
 const blankLine = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp';
 
+const noopElements = document.getElementsByClassName('noop');
 
 const poolContainer = document.getElementById('pool-selection');
 const selectAllCardsElement = document.getElementById('select-all-cards');
@@ -29,6 +30,12 @@ const scoreTitleElement = document.getElementById('score-title');
 const currentScoreElement = document.getElementById('current-score');
 const nbQuestionsElement = document.getElementById('nb-questions');
 const qidElement = document.getElementById('qid');
+
+const lvlContainer = document.getElementById('difficulty-container');
+const lvlHardElement = document.getElementById('lvl-hard');
+const lvlNightElement = document.getElementById('lvl-nightmare');
+const lvlMadElement = document.getElementById('lvl-madness');
+
 
 function SetTitleVersion() {
     const pageTitleElement = document.getElementById('page-title');
@@ -65,6 +72,25 @@ function generatePoolCards() {
     });
 }
 
+
+function difficultySelection(lvl) {
+    if (lvl === 'hard') {
+        lvlHardElement.classList.add('selected');
+        lvlNightElement.classList.remove('selected');
+        lvlMadElement.classList.remove('selected');
+    }
+    else if (lvl === 'night') {
+        lvlNightElement.classList.add('selected');
+        lvlHardElement.classList.remove('selected');
+        lvlMadElement.classList.remove('selected');
+    }
+    else if (lvl === 'mad') {
+        lvlMadElement.classList.add('selected');
+        lvlHardElement.classList.remove('selected');
+        lvlNightElement.classList.remove('selected');
+    }
+}
+
 // Gestion de la sélection des pools
 function togglePoolSelection(card, poolFile) {
     if (selectedPools.includes(poolFile)) {
@@ -78,8 +104,14 @@ function togglePoolSelection(card, poolFile) {
 }
 
 function updateStartButtons() {
-    startClassic.disabled = selectedPools.length === 0;
-    startMarathon.disabled = selectedPools.length === 0;
+    if (selectedPools.length === 0) {
+        Array.from(noopElements).forEach(element => element.classList.add('hidden'));
+        lvlContainer.classList.add('hidden');
+    } else {
+        Array.from(noopElements).forEach(element => element.classList.remove('hidden'));
+        difficultySelection('hard');
+        lvlContainer.classList.remove('hidden');
+    }
 }
 
 function toggleSelectAllCards() {
@@ -164,6 +196,8 @@ function startQuiz() {
     falseButton.classList.remove('hidden');
     nextButton.classList.add('hidden');
     restartButton.classList.add('hidden');
+
+    lvlContainer.classList.add('hidden');
 
     showQuestion();
 }
@@ -251,6 +285,7 @@ function restartQuiz() {
     score = 0;
     historyResult = '';
     qidElement.innerHTML = '';
+    difficultySelection('hard');
     scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('feedback').innerText = '';
@@ -259,8 +294,6 @@ function restartQuiz() {
     poolCards.forEach(card => {
         card.classList.remove('selected');
     });
-    startClassic.disabled = selectedPools.length === 0;
-    startMarathon.disabled = selectedPools.length === 0;
 }
 
 trueButton.addEventListener('click', () => checkAnswer(true));
@@ -278,6 +311,10 @@ startMarathon.addEventListener('click', () => {
 });
 document.getElementById('title').addEventListener('click', restartQuiz);
 selectAllCardsElement.addEventListener('click', toggleSelectAllCards);
+
+lvlHardElement.addEventListener('click', () => difficultySelection('hard'));
+lvlNightElement.addEventListener('click', () => difficultySelection('night'));
+lvlMadElement.addEventListener('click', () => difficultySelection('mad'));
 
 loadConfig();
 restartQuiz();
