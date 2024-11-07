@@ -1,5 +1,40 @@
 [
   {
+    "question": "La metformine est un médicament qui diminue la glycémie en stimulant la sécrétion d’insuline.",
+    "answer": false,
+    "explanation": "Elle diminue la production de glucose hépatique et augmente la sensibilité à l'insuline."
+  },
+  {
+    "question": "Les inhibiteurs de l'enzyme de conversion (IEC) sont contre-indiqués en cas d'insuffisance cardiaque.",
+    "answer": false,
+    "explanation": "Les IEC sont souvent utilisés dans le traitement de l'insuffisance cardiaque."
+  },
+  {
+    "question": "Les bêta-bloquants sont des médicaments principalement utilisés pour traiter l'hypertension artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'aspirine est un inhibiteur de la COX-1 et COX-2, ce qui en fait un anti-inflammatoire et un anticoagulant.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'aspirine est un anti-inflammatoire non stéroïdien (AINS).",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les opiacés peuvent provoquer à la fois une dépression du système nerveux central et une dépendance.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les médicaments antipsychotiques peuvent être utilisés pour traiter les troubles de l'humeur.",
+    "answer": true,
+    "explanation": "Ils peuvent être prescrits dans certains cas, bien que ce ne soit pas leur indication principale."
+  },
+  {
     "question": "Les anticoagulants sont utilisés pour traiter les thromboses veineuses et non les embolies.",
     "answer": false,
     "explanation": "Les anticoagulants peuvent traiter les deux."

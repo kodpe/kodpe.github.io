@@ -1,5 +1,15 @@
 [
   {
+    "question": "Dans un train de quatre, apres ou avant l'opération d'un patient, un enchaînement de quatre stimulations de 0,2 ms en deux secondes séparées chacune de 0,5 s, suffisent pour mettre en évidence le phénomène d’épuisement en présence d’un curare non dépolarisant.",
+    "answer": false,
+    "explanation": "C'est des stimulations de 2 ms."
+  },
+  {
+    "question": "Dans le cadre d'une lithotritie extracorporelle il est possible dr produire une onde de choc grâce à un cristal piézoélectrique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "La première transplantation totale d'un visage a eu lieu en 2024.",
     "answer": false,
     "explanation": "2010"

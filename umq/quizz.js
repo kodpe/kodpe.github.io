@@ -131,6 +131,8 @@ function showQuestion() {
     feedbackElement.innerText = '';
     trueButton.classList.remove('hidden');
     falseButton.classList.remove('hidden');
+    feedbackElement.classList.add('hidden');
+    questionElement.classList.remove('hidden');
     if (currentQuestionIndex === numQuestions - 1) {
         nextButton.innerText = 'END';
     } else {
@@ -152,6 +154,8 @@ function checkAnswer(isTrue) {
     }
     currentScoreElement.innerText = score;
     questionElement.innerText = '';
+    feedbackElement.classList.remove('hidden');
+    questionElement.classList.add('hidden');
     trueButton.classList.add('hidden');
     falseButton.classList.add('hidden');
     nextButton.classList.remove('hidden');

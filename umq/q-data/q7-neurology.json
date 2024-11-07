@@ -1,5 +1,35 @@
 [
   {
+    "question": "La substance P est un neurotransmetteur impliqué dans la transmission de la douleur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’acétylcholine est un neurotransmetteur impliqué dans la contraction musculaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le nerf optique est responsable de la transmission des informations visuelles de l’œil au cerveau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules de Schwann produisent la myéline dans le système nerveux central.",
+    "answer": false,
+    "explanation": "Elles produisent la myéline dans le système nerveux périphérique."
+  },
+  {
+    "question": "Les neurones sont les seules cellules responsables de la transmission des signaux nerveux.",
+    "answer": false,
+    "explanation": "Les cellules gliales jouent également un rôle dans la transmission et le soutien des neurones."
+  },
+  {
+    "question": "La sérotonine est un neurotransmetteur principalement associé à la régulation de l'humeur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "Le cortisol est une hormone du stress sécrétée par le cortex surrénalien.",
     "answer": true,
     "explanation": ""

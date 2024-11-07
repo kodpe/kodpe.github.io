@@ -1,5 +1,140 @@
 [
   {
+    "question": "L’arythmie est un rythme cardiaque irrégulier, souvent bénin et sans conséquences graves.",
+    "answer": false,
+    "explanation": "Certaines arythmies peuvent être graves et nécessiter un traitement."
+  },
+  {
+    "question": "Le réflexe rolien est un réflexe ostéotendineux.",
+    "answer": false,
+    "explanation": "C'est le réflexe rotulien."
+  },
+  {
+    "question": "L'œdème est une augmentation du volume des tissus due à un excès de sang.",
+    "answer": false,
+    "explanation": "C'est dû à un excès de liquide."
+  },
+  {
+    "question": "La thyroxine est une hormone produite par la glande thyroïde qui régule le métabolisme.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les globules rouges sont responsables du transport de l'oxygène dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les acides gras essentiels ne peuvent pas être synthétisés par le corps humain.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La déshydratation peut entraîner une augmentation de la pression artérielle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les reins sont responsables de la régulation de la température corporelle.",
+    "answer": false,
+    "explanation": "C'est le rôle de la peau et des mécanismes de thermorégulation."
+  },
+  {
+    "question": "L'hyperglycémie désigne une diminution du taux de glucose dans le sang.",
+    "answer": false,
+    "explanation": "Elle désigne une augmentation du taux de glucose."
+  },
+  {
+    "question": "L'insuffisance cardiaque gauche peut provoquer un œdème pulmonaire.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La clairance rénale mesure l’efficacité des reins à éliminer une substance du plasma.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'insuline est une hormone qui régule le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le système endocrinien régule les réactions hormonales par des boucles de rétroaction.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les glucides sont principalement utilisés par le corps comme source de protéines.",
+    "answer": false,
+    "explanation": "Ils sont utilisés principalement comme source d'énergie."
+  },
+  {
+    "question": "La thrombopoïétine est une hormone qui stimule la production de globules rouges.",
+    "answer": false,
+    "explanation": "Elle stimule la production de plaquettes."
+  },
+  {
+    "question": "Le rein produit de l’érythropoïétine, qui stimule la production de globules rouges.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les glandes parathyroïdes jouent un rôle dans la régulation du calcium sanguin.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La vasodilatation entraîne une augmentation du débit sanguin vers un organe.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les lipides sont stockés dans le foie sous forme de glycogène.",
+    "answer": false,
+    "explanation": "Les lipides sont stockés dans le tissu adipeux ; le foie stocke du glycogène."
+  },
+  {
+    "question": "Les hormones thyroïdiennes (T3 et T4) augmentent le métabolisme basal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules musculaires cardiaques sont capables de se régénérer efficacement après une lésion.",
+    "answer": false,
+    "explanation": "Les cellules cardiaques ont une capacité de régénération limitée."
+  },
+  {
+    "question": "La vasopressine augmente la perméabilité des tubes collecteurs du néphron à l'eau.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les fibres nerveuses de type A sont les plus rapides pour la transmission de l’influx nerveux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La mélatonine est une hormone sécrétée par l’épiphyse (glande pinéale) et régule le rythme veille-sommeil.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La barrière hémato-encéphalique empêche le passage de certaines substances du sang vers le système nerveux central.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’hémoglobine est une protéine contenant du cuivre qui transporte l’oxygène dans le sang.",
+    "answer": false,
+    "explanation": "L’hémoglobine contient du fer, pas du cuivre."
+  },
+  {
+    "question": "Le cortisol est une hormone qui augmente le taux de glucose dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "L'osmose est le déplacement de l'eau à travers une membrane semi-perméable vers un milieu à haute concentration de solutés.",
     "answer": true,
     "explanation": ""

@@ -1,5 +1,70 @@
 [
   {
+    "question": "Les bactéries Gram-négatives ont une paroi cellulaire plus épaisse que les Gram-positives.",
+    "answer": false,
+    "explanation": "Elles ont une paroi plus fine, mais une membrane externe supplémentaire."
+  },
+  {
+    "question": "Le cavernome portal n'est jamais accompagné d’une hypertension portale.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "L'adrénaline est produite par le pancréas.",
+    "answer": false,
+    "explanation": "Elle est produite par les glandes surrénales."
+  },
+  {
+    "question": "Le cholestérol est toujours mauvais pour la santé.",
+    "answer": false,
+    "explanation": "Il existe des types de cholestérol, certains sont nécessaires au corps."
+  },
+  {
+    "question": "L'hématopoïèse se déroule principalement dans le foie.",
+    "answer": false,
+    "explanation": "Elle se déroule principalement dans la moelle osseuse."
+  },
+  {
+    "question": "La vitamine K est essentielle pour la vision.",
+    "answer": false,
+    "explanation": "Elle est essentielle pour la coagulation sanguine."
+  },
+  {
+    "question": "La tachycardie est définie comme une fréquence cardiaque anormalement basse.",
+    "answer": false,
+    "explanation": "La tachycardie est une fréquence cardiaque élevée."
+  },
+  {
+    "question": "L’ostéoblastes sont les cellules responsables de la résorption osseuse.",
+    "answer": false,
+    "explanation": "Les ostéoclastes sont responsables de la résorption osseuse ; les ostéoblastes construisent l'os."
+  },
+  {
+    "question": "La moelle osseuse rouge est responsable de la production des cellules sanguines.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’IRM (imagerie par résonance magnétique) utilise des rayonnements ionisants.",
+    "answer": false,
+    "explanation": "Elle utilise des champs magnétiques et des ondes radio."
+  },
+  {
+    "question": "Le scanner (CT scan) utilise des ultrasons pour produire des images de l'intérieur du corps.",
+    "answer": false,
+    "explanation": "Il utilise des rayons X."
+  },
+  {
+    "question": "Le stress oxydatif est causé par un excès d'antioxydants dans le corps.",
+    "answer": false,
+    "explanation": "Il est causé par un déséquilibre entre les radicaux libres et les antioxydants."
+  },
+  {
+    "question": "L’appendice joue un rôle important dans la digestion des lipides.",
+    "answer": false,
+    "explanation": "L'appendice n’a pas de rôle significatif dans la digestion."
+  },
+  {
     "question": "La fermentation est un processus de production d'ATP en présence d'oxygène.",
     "answer": false,
     "explanation": "elle se produit en absence d’oxygène"

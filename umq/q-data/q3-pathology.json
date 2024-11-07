@@ -1,5 +1,180 @@
 [
   {
+    "question": "La maladie de Huntington est une maladie neurodégénérative autosomique récessive.",
+    "answer": false,
+    "explanation": "Elle est autosomique dominante."
+  },
+  {
+    "question": "La maladie de Wilson est due à une accumulation de fer dans les tissus.",
+    "answer": false,
+    "explanation": "Elle est due à une accumulation de cuivre."
+  },
+  {
+    "question": "La polyarthrite rhumatoïde est une maladie inflammatoire chronique qui touche principalement les grosses articulations.",
+    "answer": false,
+    "explanation": "Elle touche surtout les petites articulations, comme celles des mains et des pieds."
+  },
+  {
+    "question": "Le syndrome néphrotique est caractérisé par une hématurie massive.",
+    "answer": false,
+    "explanation": "Il est caractérisé par une protéinurie massive."
+  },
+  {
+    "question": "Le test de Mantoux est utilisé pour diagnostiquer une infection active de la tuberculose.",
+    "answer": false,
+    "explanation": "Il détecte une infection, mais ne distingue pas entre une infection active et une infection latente."
+  },
+  {
+    "question": "La phénylcétonurie est une maladie génétique due à un défaut de métabolisme de la tyrosine.",
+    "answer": false,
+    "explanation": "Elle est due à un défaut de métabolisme de la phénylalanine."
+  },
+  {
+    "question": "La Cirrhose peut-être causé par la maladie de Winbledon.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "L'hyperoxalurie type 1 est le résultat d'un déficit enzymatique hépatique péroxysomal.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'Abasie tremblante est causée par un tremblement incontrôlable des jambes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La maladie de Crohn est une pathologie inflammatoire chronique touchant l’ensemble du tube digestif.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La cirrhose hépatique est toujours causée par une consommation excessive d'alcool.",
+    "answer": false,
+    "explanation": "Elle peut être causée par des hépatites virales, des maladies métaboliques, etc."
+  },
+  {
+    "question": "La sclérose en plaques est une maladie auto-immune qui touche le système nerveux périphérique.",
+    "answer": false,
+    "explanation": "Elle touche le système nerveux central."
+  },
+  {
+    "question": "Le diabète de type 1 est causé par une résistance à l’insuline au niveau des tissus périphériques.",
+    "answer": false,
+    "explanation": "Il est causé par une destruction des cellules bêta du pancréas, entraînant une carence en insuline."
+  },
+  {
+    "question": "La tuberculose est une infection virale touchant principalement les poumons.",
+    "answer": false,
+    "explanation": "C'est une infection bactérienne causée par *Mycobacterium tuberculosis*."
+  },
+  {
+    "question": "Les plaquettes sanguines jouent un rôle important dans la défense immunitaire.",
+    "answer": false,
+    "explanation": "Elles sont impliquées dans la coagulation du sang."
+  },
+  {
+    "question": "Les lymphocytes T sont responsables de la production d'anticorps.",
+    "answer": false,
+    "explanation": "C'est le rôle des lymphocytes B."
+  },
+  {
+    "question": "Le principal agent pathogène responsable de la tuberculose est un virus.",
+    "answer": false,
+    "explanation": "C'est une bactérie, Mycobacterium tuberculosis."
+  },
+  {
+    "question": "L'hépatite est une inflammation du pancréas.",
+    "answer": false,
+    "explanation": "C'est une inflammation du foie."
+  },
+  {
+    "question": "L'hypertension artérielle est un facteur de risque modifiable pour les maladies cardiovasculaires.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le VIH attaque les lymphocytes T CD4+.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La grippe se transmet principalement par voie sanguine.",
+    "answer": false,
+    "explanation": "Elle se transmet principalement par les voies respiratoires."
+  },
+  {
+    "question": "La maladie de Parkinson est causée par une dégénérescence des neurones dopaminergiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les cellules cancéreuses ont souvent une division cellulaire non contrôlée.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L’anévrisme est une dilatation anormale d'un vaisseau sanguin due à un affaiblissement de sa paroi.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La phagocytose est un processus par lequel les cellules ingèrent et détruisent les agents pathogènes.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La leucémie est une forme de cancer qui affecte principalement le foie.",
+    "answer": false,
+    "explanation": "Elle affecte les cellules sanguines et la moelle osseuse."
+  },
+  {
+    "question": "La sclérose latérale amyotrophique (SLA) est une maladie auto-immune.",
+    "answer": false,
+    "explanation": "C'est une maladie neurodégénérative."
+  },
+  {
+    "question": "Une hypoglycémie peut entraîner des symptômes tels que la confusion, la fatigue et même des pertes de connaissance.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La prééclampsie se caractérise uniquement par l'hypertension artérielle.",
+    "answer": false,
+    "explanation": "Elle se caractérise également par des signes de dommages à d'autres organes, comme des protéines dans les urines."
+  },
+  {
+    "question": "L'hypertension artérielle est définie comme une pression supérieure à 140/90 mmHg.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La déshydratation sévère peut entraîner une hypernatrémie, qui est une concentration élevée de sodium dans le sang.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "L'anémie ferriprive est causée par une carence en fer dans l'alimentation.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les maladies auto-immunes résultent d'une réponse immunitaire inappropriée contre des antigènes étrangers.",
+    "answer": false,
+    "explanation": "Elles résultent d'une réponse inappropriée contre les propres tissus de l'organisme."
+  },
+  {
+    "question": "Le traitement de la tuberculose nécessite un régime strict sans produits laitiers.",
+    "answer": false,
+    "explanation": ""
+  },
+  {
+    "question": "Le traitement de la maladie de Graves peut inclure l'ablation chirurgicale de la thyroïde.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "Les macrophages sont des cellules impliquées dans la phagocytose et l’élimination des pathogènes.",
     "answer": true,
     "explanation": ""

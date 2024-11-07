@@ -22,7 +22,7 @@ body {
 .question {
     color: white;
     margin: auto;
-    height: 150px;
+    height: 200px;
     font-size: 18px;
     text-align: center;
 }
@@ -117,7 +117,7 @@ h1, h2 {
 #feedback {
     color: white;
     margin: auto;
-    height: 150px;
+    height: 200px;
     font-size: 18px;
     text-align: center;
 }

@@ -1,5 +1,20 @@
 [
   {
+    "question": "Les trois gènes  MGC4607, PDCD10 et Krit1 pourraient être impliqués dans l'apparition de la forme familiale de l'angiome caverneux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "la structure de la protéine Janus kinase 2 contient 1131 acides aminés (JAK 2).",
+    "answer": false,
+    "explanation": "Elle contient 1132 acides aminés."
+  },
+  {
+    "question": "Il y 243 018 229 paires de bases sur le chromosome 2 humain",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "Les plasmides sont des petits fragments d’ADN qui peuvent être transférés entre bactéries.",
     "answer": true,
     "explanation": ""

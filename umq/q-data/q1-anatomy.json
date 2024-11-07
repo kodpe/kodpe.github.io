@@ -1,5 +1,90 @@
 [
   {
+    "question": "Le diaphragme est un muscle qui joue un rôle clé dans la respiration.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La moelle épinière est protégée par le crâne.",
+    "answer": false,
+    "explanation": "Elle est protégée par la colonne vertébrale."
+  },
+  {
+    "question": "Le système nerveux autonome est composé des systèmes sympathique et parasympathique.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le foie est responsable de la production de l'urine.",
+    "answer": false,
+    "explanation": "C'est le rein qui produit l'urine."
+  },
+  {
+    "question": "Le tissu musculaire lisse est responsable des mouvements volontaires du corps.",
+    "answer": false,
+    "explanation": "Le tissu musculaire strié est responsable des mouvements volontaires."
+  },
+  {
+    "question": "La plèvre est la membrane qui enveloppe les poumons.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les uretères relient les reins à la vessie.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le système lymphatique aide à maintenir l'équilibre des fluides dans le corps.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les bronches se divisent en bronchioles qui mènent aux alvéoles où se fait l'échange gazeux.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La rate est un organe du système digestif qui produit de l'insuline.",
+    "answer": false,
+    "explanation": "La rate est un organe lymphatique, tandis que le pancréas produit l’insuline."
+  },
+  {
+    "question": "Les cellules endothéliales forment la paroi interne des vaisseaux sanguins.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les os longs se développent par ossification endochondrale.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Le lobe occipital du cerveau est principalement impliqué dans le traitement des informations auditives.",
+    "answer": false,
+    "explanation": "Le lobe temporal est impliqué dans l’audition ; le lobe occipital traite la vision."
+  },
+  {
+    "question": "Les disques intervertébraux sont constitués de cartilage hyalin.",
+    "answer": false,
+    "explanation": "Ils sont constitués de cartilage fibreux."
+  },
+  {
+    "question": "Les valves cardiaques empêchent le reflux du sang dans le cœur.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "Les plaques de Peyer sont des structures lymphoïdes présentes dans l’intestin grêle.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "question": "La peau est l’organe le plus grand du corps humain.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
     "question": "Les cellules endothéliales tapissent l'intérieur des vaisseaux sanguins.",
     "answer": true,
     "explanation": ""
