@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte du Monde Cliquable</title>
+  <title>THE WALLED WORLD</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-  <h1>Carte du Monde Cliquable</h1>
+  <h1>THE WALLED WORLD</h1>
   <div id="map"></div>
+
+  <div id="sidePanel" class="side-panel">
+    <div class="panel-header">
+      <button id="togglePanelBtn">≡</button>
+      <h2>Légende</h2>
+    </div>
+    <div class="panel-content">
+      <ul>
+        <li><strong>Couleur des pays :</strong> Bleu clair</li>
+        <li><strong>Superficie :</strong> La taille des pays est visible sur la carte</li>
+        <li><strong>Zoom :</strong> Ajustez le zoom pour voir plus de détails</li>
+      </ul>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
