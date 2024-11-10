@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background-color: #181818;
+    background-color: #0a1128;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     margin: 0;
@@ -40,7 +40,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: #0a202f;
+    background-color: #181818;
     padding: 1rem;
     width: 100%;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
@@ -178,4 +178,19 @@ Moka est un des derniers oiseaux primitifs. Elle est con
     src: url('fonts/SpiegelSans-7Bold_TRIAL.otf') format('ttf');
     font-weight: normal;
     font-style: normal;
+}
+
+
+.centered-container {
+    display: flex;             /* Utilisation de Flexbox */
+    justify-content: center;   /* Centrer horizontalement */
+    align-items: center;       /* Centrer verticalement */
+    height: 100vh;             /* Utilise 100% de la hauteur de la fenêtre */
+}
+
+.centered-image {
+    max-width: 100%;            /* Pour que l'image soit responsive */
+    max-height: 100%;           /* Pour que l'image s'adapte à l'écran */
+    object-fit: contain;       /* Pour que l'image conserve ses proportions */
+    transform: scale(0.2);
 }
