@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tink : The Glass Kid Le gamin de verre</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="mdstyle.css" />
+</head>
+
+<body class="stackedit">
+    <script src="navbar.js"></script>
+    <div id="navbar-container"></div>
+
+  <div class="stackedit__html"><h3 id="tink-the-glass-kid--le-gamin-de-verre"><strong>Tink: The Glass Kid / Le Gamin de Verre</strong></h3>
+<p><em>Note: Je voulais me lancer dans la création d’un adc, j’ai d’abord cherché un thème pas encore utilisé pour un champion : <strong>le verre</strong>. Puis j’ai passé en revue tous les adc du jeu, actuellement ils sont un peu plus souvent féminins que masculins, plus grands que petit, et semblent plus souvent expérimentés que novice. Je suis donc parti sur un petit gars qui a encore beaucoup à apprendre de la vie. La mécanique principale originale que j’ai voulu explorer ce sont des <strong>attaques de base</strong> qui <strong>rebondissent</strong> sur les <strong>terrains</strong> au lieu de les franchir. Cela change beaucoup de choses, car le champion est incapable d’attaquer à travers un mur. Les implications sont en fait énormes et offrent des mécaniques et réflexions inédites sur le jeu. Bonne découverte !</em></p>
+<hr>
+<h2>TINK</h2>
+<h3 id="the-glass-kid--le-gamin-de-verre"><strong>The Glass Kid / Le Gamin de Verre</strong></h3>
+<p><img src="https://i.ibb.co/4j09sHm/6b3c8eaa-a5c6-47e8-8887-b3d091dc1f96.webp" alt=""></p>
+<p>Tink est un enfant de Piltover. Lors d’une chute accidentelle depuis un échafaudage, il a traversé un plafond de verre, ce qui lui a laissé des fragments dans son corps. Depuis, il manipule ces morceaux de verre brisés comme des armes de jet redoutables. Brutal et désordonné, le jeune guerrier porte des vêtements déchiquetés incrustés de bris de verre. Aveugle d’un oeil, cicatrices sur le visage, bandages aux poignets, cheveux en bataille. Dans ses mains, des pointes de verres, dans son dos, un grand miroir ovale.</p>
+<p><strong>Location : Piltover</strong><br>
+<strong>Relations : Ezreal, Camille, Orianna, Caitlyn, Ekko</strong></p>
+<p><strong>Role : Marksman / Slayer / Support</strong><br>
+<strong>Range Type : Very Long Range</strong><br>
+<strong>Damage Type : 100% physical</strong><br>
+<strong>Mana: yes</strong><br>
+<strong>Has CC:  0</strong><br>
+<strong>Has Dash/TP: 1</strong><br>
+<strong>Difficulty : Hard</strong><br>
+<strong>Current balance estimation : Probably OP</strong><br>
+<strong>Last Edited Date: 27/10/24</strong></p>
+<hr>
+<h3 id="aa--glass-splinters--pointes-de-verres">AA : Glass Splinters / Pointes de verres</h3>
+<p><img src="https://i.ibb.co/6FxRbDV/20241027-035917.jpg" alt=""></p>
+<p>Les attaques de base de Tink sont <strong>trois pointes de verres</strong> qu’il porte sur lui. Ce sont des attaques skill shot qui se déplacent en ligne droite, qui peuvent donc manquer leur cible. Tink ne peut jamais en avoir plus que trois. Les pointes de verre ont une <strong>portée immense</strong> pour des attaques de base, mais Tink ne peut plus lancer d’attaque tant que les pointes n’ont pas été <strong>brisées</strong> ou <strong>récupérées</strong>. Les attaques de base de Tink sont trop <strong>fragiles</strong> et incapables d’endommager les bâtiments ou de traverser n’importe quelle paroi de la map. Les pointes de verre sont considérées comme des projectiles dits <strong>vitrifiés</strong>. Tous les sorts de Tink peuvent interagir avec les <strong>projectiles vitrifiés</strong>, la totalité des dégâts de Tink dépendent de ces projectiles.</p>
+<pre><code>Portée : 3000 (Caitlyn R, Kai'Sa Z)  
+</code></pre>
+<p>Les pointes de verre peuvent <strong>rebondir</strong> une seule fois au contact d’un sbire, d’un monstre, d’un champion ennemi, d’un mur, ou d’un bâtiment. Tink peut <strong>récupérer</strong> les pointes avec son corps au contact de celles-ci. (cf Draven)<br>
+Le rebond inflige les dégâts de l’attaque de base si il touche une cible.</p>
+<p>Une pointe se <strong>brise</strong> lors d’un 2e contact. La pointe devient <strong>3 fragments</strong> qui partent chacun dans une direction dans un cône sur une courte distance avant de disparaître. (cf Lissandra) Tink sort alors une nouvelle pointe de son corps après un délai.</p>
+<pre><code>Délai pour relancer une pointe récupérée : 0 sec.  
+Délai pour sortir une nouvelle pointe : 2 sec.
+Vitesse d'une pointe : ~500/sec.
+Distance parcourue par fragment : 200
+Dégâts d'un fragment : 20% les dégâts d'une pointe  
+</code></pre>
+<hr>
+<h3 id="passive--back-end-mirror--miroir-dorsal">Passive : Back end mirror / Miroir dorsal</h3>
+<p><img src="https://i.ibb.co/3vkTXfm/20241027-022722.jpg" alt=""></p>
+<p>Tink porte un grand miroir ovale sur son dos, Tink peut se positionner correctement pour <strong>renvoyer</strong> n’importe quel projectile ennemi <strong>contre</strong> ses adversaires. Ce qui brise le miroir. Tink peut réparer son miroir dorsal s’il récupère une quantité suffisante de pointes ou l’équivalent en fragments de verre. Le projectile renvoyé devient un <strong>projectile vitrifié</strong>.</p>
+<pre><code>Nombre d'attaques de base à récupérer pour réparer le miroir : 21 pointes (or eq 63 fragments)  
+</code></pre>
+<hr>
+<h2 id="spells">Spells</h2>
+<h3 id="a--crack--fissure">A : Crack / Fissure</h3>
+<p><img src="https://i.ibb.co/0fRLQJS/20241027-023116.jpg" alt=""></p>
+<p>Tink <strong>brise</strong> lui-même ses pointes de verre en frappant le sol.<br>
+L’onde de choc inflige des dégâts physiques dans un petit rayon autour de chaque pointe de verre. Elle peut blesser n’importe quelle cible et endommager les bâtiments. Les dégâts se cumulent si par exemple plusieurs pointes sont assez proches ou au même endroit. Les pointes qui n’ont pas été lancées se brisent aussi.</p>
+<pre><code>Portée : 700  
+Récup : 0 sec.  
+Coût : 20 | 30 | 40 | 50 | 60 mana  
+Rayon d'impact autour d'une pointe : 90  
+Dégâts : 30 | 50 | 70 | 90 | 110  
+Dégâts d'un fragment : 20% les dégâts d'une pointe  
+</code></pre>
+<hr>
+<h3 id="z--anchoring--ancrage">Z : Anchoring / Ancrage</h3>
+<p><img src="https://i.ibb.co/X47cK0c/20241027-023134.jpg" alt=""></p>
+<p>Les pointes de verre <strong>s’immobilisent</strong> en l’air. Tink peut réactiver la compétence pour remettre en mouvement les pointes dans une <strong>nouvelle direction</strong> selon l’orientation de son corps. Une pointe immobile se brisera si quelque chose rentre en contact avec elle.</p>
+<pre><code>Portée : 3000  
+Récup: 1.5 | 1.2 | 0.9 | 0.6 | 0.3 sec.  
+Coût : gratuit  
+Dégâts d'un fragment : 20% les dégâts d'une pointe  
+</code></pre>
+<hr>
+<h3 id="e--bouncing-mirror--miroir-à-rebonds">E : Bouncing Mirror / Miroir à Rebonds</h3>
+<p><img src="https://i.ibb.co/xgdGxLh/20241027-022120.jpg" alt=""></p>
+<p>Tink peut construire jusqu’à 3 petites briques qui durent quelques secondes. Les pointes de verre peuvent <strong>rebondir</strong> sur les briques sans limitations. Chaque rebond renforce les dégâts des pointes. Une brique de Tink est un obstacle pour tous les champions.</p>
+<pre><code>Portée : 3000  
+Coût : 3 x 60 mana  
+Nombre de brique possibles :  
+1 | 2 | 3 | 3 | 3  
+Durée d'une brique :  
+2 | 3 | 4 | 5 | 6 sec.  
+Délai de récupération d'une brique :  
+21 | 18 | 15 | 12 | 9 sec.  
+Dimensions d'une brique : 90x30 (~1/5 yasuo wall)
+Augmentation des dégâts par rebond : +3%  
+</code></pre>
+<hr>
+<h3 id="r--vitrification-portal--portail-vitrifiant">R : Vitrification Portal / Portail Vitrifiant</h3>
+<p><img src="https://i.ibb.co/7z4DWHJ/20241027-022009.jpg" alt=""></p>
+<p>Tink peut créer deux portails en appuyant deux fois. Un portail seul n’a aucun effet. Un portail est une petite zone circulaire au sol.</p>
+<p>Tout projectile traversant un portail ressort par l’autre dans un état de <strong>vitrification</strong>. Il devient alors tout comme une pointe de verre sensible au <strong>A</strong> Crack, au <strong>Z</strong> Anchoring, et au <strong>E</strong> Boucing mirror de Tink. Selon le projectile et les actions de Tink, le projectile appliquera l’effet de son sort d’origine, et/ou pourra être <strong>brisé</strong> en fragments comme une pointe de verre.</p>
+<p>Tink peut traverser un portail une fois pour sortir par l’autre. Cette action <strong>détruit</strong> prématurément les deux portails, <strong>brise</strong> toutes les pointes de verre ou projectiles <strong>vitrifiés</strong> et redonne à Tink trois nouvelles pointes immédiatement. Tink est le seul à pouvoir traverser ses portails.</p>
+<pre><code>Portée : 1000  
+Récup : 60 sec.  
+Coût : 2 x 60 mana  
+Durée d'un portail : 6 sec.
+Distance minimale entre les deux portails : 400  
+Largeur d'un portail : 300  
+Dégâts d'un fragment : 20% les dégâts d'une pointe  
+</code></pre>
+<p><img src="https://i.ibb.co/mhN3r4J/20241027-023205.jpg" alt=""></p>
+<hr>
+</div>
+  <script src="footer.js"></script>
+</body>
+
+</html>

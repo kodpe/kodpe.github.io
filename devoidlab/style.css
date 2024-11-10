@@ -1,0 +1,173 @@
+/* Styles de base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #181818;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: -100px;
+    transition: bottom 0.1s ease;
+    background-color: #181818;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #0a202f;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+/*
+#121212 max dark
+#181818 dark
+#0a202f dark dark blue
+#302d6a blue
+#871c3e dark red
+#d32836 red
+*/
+
+/* Style du bouton */
+.angled-button {
+    background: linear-gradient(135deg, #871c38, #302d6a);
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    transform: skewX(-10deg);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    min-width: 120px;
+}
+
+/* Effets de survol et de clic */
+.angled-button:hover {
+    background: linear-gradient(135deg, #d32836, #871c38);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.7);
+    transform: skewX(-10deg) scale(1.1);
+}
+Moka est un des derniers oiseaux primitifs. Elle est con
+.angled-button:active {
+    transform: skewX(-10deg) scale(0.98);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Adaptation responsive pour les smartphones */
+@media (max-width: 768px) {
+    .navbar {
+        gap: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    .angled-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        padding-top: 240px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .angled-button {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        /* Boutons prennent toute la largeur */
+        text-align: center;
+    }
+}
+
+@font-face {
+    font-family: 'B-Bold';
+    src: url('fonts/BeaufortforLOL-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-BoldItalic';
+    src: url('fonts/BeaufortforLOL-BoldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-Medium';
+    src: url('fonts/BeaufortforLOL-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-MediumItalic';
+    src: url('fonts/BeaufortforLOL-MediumItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-Regular';
+    src: url('fonts/SpiegelSans-5Regular_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-RegularItalic';
+    src: url('fonts/SpiegelSans-5RegularItalic_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-Bold';
+    src: url('fonts/SpiegelSans-7Bold_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
