@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'B-Bold';
+    src: url('fonts/BeaufortforLOL-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-BoldItalic';
+    src: url('fonts/BeaufortforLOL-BoldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-Medium';
+    src: url('fonts/BeaufortforLOL-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B-MediumItalic';
+    src: url('fonts/BeaufortforLOL-MediumItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-Regular';
+    src: url('fonts/SpiegelSans-5Regular_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-RegularItalic';
+    src: url('fonts/SpiegelSans-5RegularItalic_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-Bold';
+    src: url('fonts/SpiegelSans-7Bold_TRIAL.otf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+

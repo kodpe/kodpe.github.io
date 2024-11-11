@@ -25,6 +25,6 @@ document.addEventListener("scroll", function() {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         footer.style.bottom = '0'; // Afficher le footer en bas
     } else {
-        footer.style.bottom = '-100px'; // Cacher le footer si on n'est pas en bas
+        footer.style.bottom = '-150px'; // Cacher le footer si on n'est pas en bas
     }
 });

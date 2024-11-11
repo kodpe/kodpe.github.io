@@ -1,0 +1,160 @@
+.gold {
+    color: #c8aa6e;
+}
+
+.champion-container {
+    width: 1000px;
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champion-caption {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 32px;
+    color: #c8aa6e;
+}
+
+.champion-name {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 72px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.champion-header {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 16px;
+}
+
+.square-box {
+    display: flex;
+    width: min-content;
+    min-width: 120px;
+    min-height: 120px;
+    background-color: #0a1428;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    border-radius: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c8aa6e;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); */
+
+    flex-direction: column;
+}
+
+.img-box {
+    border-width: 1px;
+    margin: 16px;
+}
+
+.fixed-image {
+    width: 800px;
+    height: 800px;
+    object-fit: cover; /* Assure que l'image remplit la boîte sans se déformer */
+}
+
+.fixed-image-med {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: fill; /* Assure que l'image remplit la boîte sans se déformer */
+}
+
+.fixed-image-small {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: fill; /* Assure que l'image remplit la boîte sans se déformer */
+}
+
+.svg-role {
+    aspect-ratio: 1 / 1;
+    height: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img-region {
+    aspect-ratio: 1 / 1;
+    height: 32px;
+    filter: brightness(1.4);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.role-icon-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
+.meta-description {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.long-txt {
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin: 16px;
+    padding: 16px;
+    min-width: 90%;
+    /* min-width: fit-content; */
+}
+
+.champion-title-1 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 72px;
+    color: white;
+    margin: 16px;
+    padding: 16px;
+}
+
+.champion-title-24 {
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 24px;
+    color: white;
+    margin: 16px;
+    padding: 16px;
+}
+
+.champion-tech {
+    color: rgb(47, 143, 23);
+    color: #c8aa6e;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    margin: 16px;
+}

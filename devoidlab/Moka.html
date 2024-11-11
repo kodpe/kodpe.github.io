@@ -5,152 +5,364 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moka</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <link rel="stylesheet" href="mdstyle.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/champion.css">
+  <link rel="stylesheet" href="css/fonts.css">
 </head>
 
-<body class="stackedit">
-    <script src="navbar.js"></script>
-    <div id="navbar-container"></div>
-    
-    <div class="stackedit__html">
-      <h1>MOKA</h1>
-      <h3>The Stone Beak / Le Bec de Pierre</h3>
-        <img src="images/Mokav1.webp" alt="moka area">
-      <p>Moka est un des derniers oiseaux primitifs. Elle est connue dans tout Runeterra pour son territorialisme légendaire
+<body>
+  <div id="navbar-container"></div>
+
+  <div class="champion-container">
+    <div class="champion-caption">The Stone Beak</div>
+    <div class="champion-name">MOKA</div>
+
+    <div class="champion-header">
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/roleTank.svg" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Role</p>
+          <p class="gold">Tank</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/difficultyLow.svg" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Difficulty</p>
+          <p class="gold">Low</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-position-top.png" class="svg-role" alt="svg"></span>
+          <span><img src="images/icons/icon-position-utility.png" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Position</p>
+          <p class="gold">Top / Support</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="square-box img-box"> <img src="images/Mokav1.webp" alt="moka" class="fixed-image"> </div>
+
+    <div class="champion-header">
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Melee_role.webp" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Range</p>
+          <p class="gold">Melee - 125</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Mana_resource.webp" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Resource</p>
+          <p class="gold">Mana</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Attack_damage_icon.webp" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Damage</p>
+          <p class="gold">Physical</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Movement_speed_icon.webp" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Dash / Tp</p>
+          <p class="gold">1</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Acquisition_range.webp" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Crowd Control</p>
+          <p class="gold">2</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/balance-svgrepo-com.svg" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Balance</p>
+          <p class="gold">S</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="square-box long-txt">
+      <p>Moka est un des derniers oiseaux primitifs. Elle est connue dans tout Runeterra pour son territorialisme
+        légendaire
         et sa prodigieuse résilience qui lui ont permis de survivre dans la terrible jungle de Kumungu alors qu’elle est
-        inapte au vol. Son esprit de combativité est à toute épreuve. Moka n’abandonne jamais et protège inexorablement les
+        inapte au vol. Son esprit de combativité est à toute épreuve. Moka n’abandonne jamais et protège inexorablement
+        les
         siens.</p>
-      <p><strong>Role : Tank</strong></p>
-      <p><strong>Range type : Melee</strong></p>
-      <p><strong>Difficulty : High</strong></p>
-      <p><strong>Related champions : Rengar, Neeko, Qiyana</strong></p>
-      <p>####<strong>Location</strong></p>
-      <blockquote>
-        <p>Shuriman Continent, Ixtal (Perilous eastern jungles), between Kumungu and Serpentine River<br>
-          <img src="https://i.ibb.co/D4zTNJn/moka-area.png" alt="moka area">
-        </p>
-      </blockquote>
-      <p>####<strong>À quoi ressemble Moka ?</strong></p>
-      <p>Il n’existe actuellement aucune description claire de Moka, son milieu de vie rend son observation très difficile
-        et son comportement n’arrange pas les choses. Toutes les personnes qui ont voulu rencontrer cette créature mythique
-        n’ont jamais été retrouvées. Toutefois, il existe quelques rares témoignages peu fiables de chercheurs de trésors
+    </div>
+
+
+    <div class="champion-header">
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/regions/ixtal_crest_icon.png" class="img-region" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Region</p>
+          <p class="gold">Ixtal</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/champions/107.png" class="img-region" alt="svg"></span>
+          <span><img src="images/icons/champions/246.png" class="img-region" alt="svg"></span>
+          <span><img src="images/icons/champions/518.png" class="img-region" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Relations</p>
+          <p class="gold">Rengar / Qiyana / Neeko</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-prize.png" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Born / Age</p>
+          <p class="gold">1087 BN / 1910 Y</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-add.png" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Creation Date</p>
+          <p class="gold">10/10/2021</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-edit.png" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Revision Date</p>
+          <p class="gold">11/11/2024</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-gear-over.png" class="svg-role" alt="svg"></span>
+        </div>
+        <div class="meta-description">
+          <p class="title">Completion</p>
+          <p class="gold">~ 80 %</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="square-box img-box"> <img src="https://i.ibb.co/D4zTNJn/moka-area.png" alt="area" class="fixed-image"> </div>
+
+    <div class="square-box long-txt">
+      <br>À quoi ressemble Moka ?</br>
+      <p>Il n’existe actuellement aucune description claire de Moka, son milieu de vie rend son observation très
+        difficile
+        et son comportement n’arrange pas les choses. Toutes les personnes qui ont voulu rencontrer cette créature
+        mythique
+        n’ont jamais été retrouvées. Toutefois, il existe quelques rares témoignages peu fiables de chercheurs de
+        trésors
         qui auraient croisé Moka par hasard.</p>
-      <blockquote>
-        <p>“Moka est une grosse poule agressive et furtive, qui prend une sacrée place”</p>
-      </blockquote>
-      <blockquote>
-        <p>“C’est un croisement entre une harpie féroce, un dodo, une autruche et un caillou”</p>
-      </blockquote>
-      <p><strong>Représentation artistique d’une créature beaucoup trop ridicule pour être la véritable Moka.</strong></p>
-      <p><em>Moka outside view</em><br>
-        <img
-          src="https://64.media.tumblr.com/c6245041b1b363005ea395cff6e73ceb/60aea74b7fc8b6dd-a9/s2048x3072/2954e64154f3deefd7c0ee82ccee428887ae9ee7.jpg"
-          alt="moka ext">
+      <br>
+      <p>“Moka est une grosse poule agressive et furtive, qui prend une sacrée place”</p>
+      <p>“C’est un croisement entre une harpie féroce, un dodo, une autruche et un caillou”</p>
+      <br>
+      <p><strong>Représentation artistique d’une créature beaucoup trop ridicule pour être la véritable Moka. #DEPRECATED</strong>
       </p>
-      <p><em>Moka inside view</em></p>
-      <p><img src="https://i.ibb.co/nPCRZnt/Sylviornis.jpg" alt="moka in"></p>
-      <blockquote>
-        <p>Constatez avec quelle efficacité redoutable Moka arrive à planquer son boule dans la jungle.</p>
-      </blockquote>
-      <p><img src="https://i.ibb.co/1T3rJ01/thumb-1920-269huhiojiojoiu00.jpg" alt="moka jgl"></p>
-      <p>##Spells</p>
-      <p>###Passive 1<br>
-        #####Offspring / Progéniture</p>
-      <p>Moka pond un œuf périodiquement. Après un délai, celui-ci peut éclore si un ennemi ou un monstre marche dessus ou
-        si l’œuf est attaqué. L’œuf éclos également si une autre créature de Moka, elle-même, ou un allié est attaqué dans
+      <br><br>
+
+      <img
+        src="https://64.media.tumblr.com/c6245041b1b363005ea395cff6e73ceb/60aea74b7fc8b6dd-a9/s2048x3072/2954e64154f3deefd7c0ee82ccee428887ae9ee7.jpg"
+        alt="moka ext" class="square-box img-box fixed-image-med">
+      <em>Moka outside view #DEPRECATED</em>
+      <br><br>
+      <p><img src="https://i.ibb.co/nPCRZnt/Sylviornis.jpg" alt="moka in" class="square-box img-box fixed-image-med">
+      </p>
+      <em>Moka inside view #DEPRECATED</em>
+      <br><br>
+      <p><img src="https://i.ibb.co/1T3rJ01/thumb-1920-269huhiojiojoiu00.jpg" alt="moka jgl"
+          class="square-box img-box fixed-image-med"></p>
+      <em>Constatez avec quelle efficacité redoutable Moka arrive à planquer son boule dans la jungle. #DEPRECATED</em>
+      <br><br>
+    </div>
+
+    <p class="champion-title-1">ABILITIES</p>
+
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Passive 1 : Offspring
+      <p>
+      <p>Moka pond un œuf périodiquement. Après un délai, celui-ci peut éclore si un ennemi ou un monstre marche dessus
+        ou
+        si l’œuf est attaqué. L’œuf éclos également si une autre créature de Moka, elle-même, ou un allié est attaqué
+        dans
         un rayon de 1500 unités.</p>
-      <p>Le petit moka qui en sort est la principale source de dégâts de Moka, il attaque au corps-à-corps. Si un petit se
+      <br>
+      <p>Le petit moka qui en sort est la principale source de dégâts de Moka, il attaque au corps-à-corps. Si un petit
+        se
         retrouve trop loin de Moka, il devient autonome et attaque tout ennemi ou monstre rencontré dans un temps limité
-        avant de disparaître. Autrement, si le petit est dans la zone d’influence de Moka, il reste en vie tant qu’il a des
+        avant de disparaître. Autrement, si le petit est dans la zone d’influence de Moka, il reste en vie tant qu’il a
+        des
         pv.</p>
-      <p>Un œuf qui n’a pas éclos après un délai plus long disparaît. Moka peut avoir au maximum 3 petits autour d’elle, les
-        petits légitimes dévoreront les suivants pour regagner 40% de leurs pv manquants. Moka peut aussi manger ses œufs
+      <br>
+      <p>Un œuf qui n’a pas éclos après un délai plus long disparaît. Moka peut avoir au maximum 3 petits autour d’elle,
+        les
+        petits légitimes dévoreront les suivants pour regagner 40% de leurs pv manquants. Moka peut aussi manger ses
+        œufs
         pour regagner 8% de ses pv manquants.</p>
+      <br>
       <p>Un œuf est invisible dans un buisson ou dans la rivière, mais révélé sous une pink / trinket. Les œufs et les
-        petits de Moka peuvent être tués par les ennemis, ils n’ont pas beaucoup de pv et aucune régénération de base.</p>
-      <pre><code>Ponte : 20 sec.  
-        Délai minimum avant l'éclosion : 20 sec.  
-        Expiration d'un oeuf : 60 sec.  
-        Durée de vie d'un petit isolé : 20 sec.  
-        Rayon d'influence de Moka : 1500  
-        </code></pre>
-      <p>###Passive 2<br>
-        ######Runic Transfer / Transfert Runique<br>
-        <strong>Lorsque Moka n’a plus de pv, si un de ses petits est encore en vie, l’esprit de Moka est transféré dans
-          celui-ci et Moka a survécue.</strong>
+        petits de Moka peuvent être tués par les ennemis, ils n’ont pas beaucoup de pv et aucune régénération de base.
       </p>
-      <p>###Passive 3<br>
-        #####Mimicry / Mimétisme<br>
-        Si Moka pond ou si un œuf éclot sur un ennemi mort, les caractéristiques du petit seront décuplées en fonction des
+      <pre class="champion-tech">
+Ponte : 20 sec.
+Délai minimum avant l'éclosion : 20 sec.
+Expiration d'un oeuf : 60 sec.
+Durée de vie d'un petit isolé : 20 sec.
+Rayon d'influence de Moka : 1500
+</pre>
+    </div>
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Passive 2 : Runic Transfer
+      <p> </p>
+      <p>Lorsque Moka n’a plus de pv, si un de ses petits est encore en vie, l’esprit de Moka est transféré dans
+        celui-ci et Moka a survécue.</p>
+    </div>
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Passive 3 : Mimicry
+      <p>
+      <p>
+      <p> Moka pond ou si un œuf éclot sur un ennemi mort, les caractéristiques du petit seront décuplées en fonction
+        des
         caractéristiques du cadavre. ( Buff selon la nature du champion, +AD ou +AP, Gel, brûlure, poison, etc… )</p>
-      <blockquote>
-        <p>L’œuf de Moka devrait être une pierre brute avec une forte empreinte de magie élémentaire.</p>
-      </blockquote>
+    </div>
+
+    <div class="square-box long-txt">
       <p><img src="https://cdn.shopify.com/s/files/1/0909/7850/products/3655-Seres_Collection-_IMG_E4588.jpg"
-          alt="moka egg"></p>
-      <blockquote>
-        <p>“If you see a Moka Egg, it means you did not take the right path, you are on his territory, this is bad news for
-          you, you are probably dead.”</p>
-      </blockquote>
-      <p><img src="https://i.ibb.co/SxWCctD/thumb-1920-269huhu00.jpg" alt="jungle"></p>
-      <hr>
-      <p>###A : Playing Death / Thanatose</p>
-      <pre><code>Portée : -  
-        Récup : 20|18|16|14|12 sec.  
-        Coût : gratuit  
-        </code></pre>
-      <p>Moka s’immobilise et prend l’apparence parfaite d’un œuf aux yeux des ennemis. Elle gagne un bonus d’armure et de
-        résistance magique. Moka ne peut pas se déplacer, auto-attaquer ou utiliser d’autres compétences dans cette posture.
+          alt="moka egg" class="square-box img-box fixed-image-med"></p>
+      <em>L’œuf de Moka devrait être une pierre brute avec une forte empreinte de magie élémentaire.</em>
+
+      <p><img src="https://i.ibb.co/SxWCctD/thumb-1920-269huhu00.jpg" alt="jungle"
+          class="square-box img-box fixed-image-med"></p>
+      <em>“If you see a Moka Egg, it means you did not take the right path, you are on his territory, this is bad news
+        for
+        you, you are probably dead.”</em>
+
+    </div>
+
+
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Q : Thanatose
+      <p>
+      <p>Moka s’immobilise et prend l’apparence parfaite d’un œuf aux yeux des ennemis. Elle gagne un bonus d’armure et
+        de
+        résistance magique. Moka ne peut pas se déplacer, auto-attaquer ou utiliser d’autres compétences dans cette
+        posture.
         Réactiver la compétence ou prendre des dégâts libèrent Moka.</p>
-      <pre><code>Armure + Résistance Magique :  
-        4|8|12|16|20 (+5%)  
-        </code></pre>
-      <hr>
-      <p>###Z : Feast Frenzy / Frénésie du Festin</p>
-      <pre><code>Portée : 500  
-        Récup : 16|14|12|10|8 sec.  
-        Coût : gratuit  
-        </code></pre>
+      <pre class="champion-tech">
+                Portée : -
+                Récup : 20|18|16|14|12 sec.
+                Coût : gratuit
+                Armure + Résistance Magique : 4|8|12|16|20 (+5%)
+                </pre>
+      </pre>
+    </div>
+    
+    <div class="square-box long-txt">
+      <p class="champion-title-24">W : Feast Frenzy
+      <p>
       <p>Moka se saisit des œufs présents dans une petite zone autour d’elle et les emporte avec elle. Sa vitesse de
         déplacement est augmentée. Réactiver la compétence permet de déposer un œuf. Moka ne peut pas auto-attaquer ou
         utiliser d’autres compétences tant qu’elle porte des œufs.</p>
-      <pre><code>Move speed : +3%|+4%|+5%|+6%|+7%  
-        </code></pre>
-      <hr>
-      <p>###E : Jolt / Soubresaut</p>
-      <pre><code>Portée : 600  
-        Récup : 22|19|16|13|10 sec.  
-        Coût : 80 Mana  
-        </code></pre>
-      <p>Moka et ses petits bondissent vers une zone ciblée, infligeant des dégâts magiques à tous les ennemis dans la zone
-        et les étourdissant pendant 1 seconde. Le bond permet la traversée de murs.</p>
-      <pre><code>Rayon d'impact : 250  
-        Dégâts AP : 30|60|90|120|150 (+70%)  
-        </code></pre>
-      <hr>
-      <p>###R : The big Nest / Le Grand Nid</p>
-      <pre><code>Portée : 520  
-        Récup : 180|150|120 sec.  
-        Coût : 140|160|180 Mana  
-        </code></pre>
-      <p>Moka fabrique un nid autour d’elle. Le nid ralentit tout ennemi à l’intérieur et encaisse une partie des dégâts
-        subits par tout champion, créatures et bâtiments alliés. Aussi, le nid de Moka rend invisibles ses occupants hors
-        combat. La durée du nid se réduit significativement lorsqu’il encaisse des dégâts.</p>
-      <pre><code>Durée min: 4|5|6 sec.  
-        Durée max: 8|15|24 sec.  
-        Ralentissement : 15%|20%|25%  
-        Réduction de dégâts : 6%|8%|10%  
-        </code></pre>
-      <p><img src="https://i.ibb.co/K0sSzmW/Land-Art.jpg" alt="nid"></p>
-      <blockquote>
-        <p>“My best place to devour you…”</p>
-      </blockquote>
-      <hr>
-      <p>@Debarbouyette - 10/10/2021</p>
+      <pre class="champion-tech">
+            Portée : 500
+            Récup : 16|14|12|10|8 sec.
+            Coût : gratuit
+            Move speed : +3%|+4%|+5%|+6%|+7%
+            </pre>
     </div>
-    <script src="footer.js"></script>
+    
+    <div class="square-box long-txt">
+      <p class="champion-title-24">E : Jolt
+      <p>
+      <p>Moka et ses petits bondissent vers une zone ciblée, infligeant des dégâts magiques à tous les ennemis dans la
+        zone
+        et les étourdissant pendant 1 seconde. Le bond permet la traversée de murs.</p>
+      <pre class="champion-tech">
+            Portée : 600
+            Récup : 22|19|16|13|10 sec.
+            Coût : 80 Mana
+            Rayon d'impact : 250
+            Dégâts AP : 30|60|90|120|150 (+70%)
+            </pre>
+    </div>
+    
+    
+    <div class="square-box long-txt">
+      <p class="champion-title-24">R : The Big Nest
+      <p>
+      <p>Moka fabrique un nid autour d’elle. Le nid ralentit tout ennemi à l’intérieur et encaisse une partie des dégâts
+        subits par tout champion, créatures et bâtiments alliés. Aussi, le nid de Moka rend invisibles ses occupants
+        hors
+        combat. La durée du nid se réduit significativement lorsqu’il encaisse des dégâts.</p>
+      <pre class="champion-tech">
+    Portée : 520  
+    Récup : 180|150|120 sec.  
+    Coût : 140|160|180 Mana  
+    Durée min: 4|5|6 sec.  
+    Durée max: 8|15|24 sec.  
+    Ralentissement : 15%|20%|25%  
+    Réduction de dégâts : 6%|8%|10%  
+    </pre>
+      <p><img src="https://i.ibb.co/K0sSzmW/Land-Art.jpg" alt="nid" class="square-box img-box fixed-image-med"></p>
+      <em>“My best place to devour you…”</em>
+    </div>
+    </div>
+    
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
     </body>
     
     </html>
