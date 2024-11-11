@@ -9,29 +9,26 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     background-color: #0a1128;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     margin: 0;
-    padding-top: 80px;
-    padding-bottom: 10px;
+    padding-top: 100px;
 }
 
-footer {
+#mentions {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    bottom: -150px;
-    transition: bottom 0.1s ease;
-    background-color: #181818;
-    color: white;
+    background-color: #0a1128;
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
     padding: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Barre de navigation */
