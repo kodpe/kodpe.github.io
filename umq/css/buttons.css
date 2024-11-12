@@ -3,6 +3,7 @@
       margin: auto;
       width: 64px;
       padding: 10px;
+      outline: none;
   }
 
   .image-button img {
@@ -14,8 +15,16 @@
   }
 
   .absolute-bot {
-    background-color: #121212;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+      background-color: #121212;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+  }
+
+  .no-outline {
+      outline: none;
+  }
+
+  .no-outline:focus {
+      outline: none;
   }
