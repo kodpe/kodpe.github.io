@@ -7,6 +7,10 @@ body {
     max-height: 900px;
     margin-top: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .avg-expertise-txt {

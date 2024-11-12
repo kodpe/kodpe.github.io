@@ -20,11 +20,3 @@
       position: fixed;
       bottom: 0;
   }
-
-  .no-outline {
-      outline: none;
-  }
-
-  .no-outline:focus {
-      outline: none;
-  }

@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #111111;
     color: white;
-    margin: 0;
+    margin: auto;
     padding: 0;
     text-align: center;
 }
@@ -156,24 +156,3 @@ h5, h6 {
     font-weight: normal;
     font-size: 18px;
 }
-
-.title-part {
-    display: flex;
-    text-decoration: none;
-}
-
-#title {
-    padding-top: 18px;
-    padding-left: 16px;
-    padding-right: 16px;
-    color: #00ceff;
-    text-decoration: none;
-}
-
-#title:hover {
-    transform: scale(1.2);
-}
-
- .no-underline {
-     text-decoration: none;
- }
