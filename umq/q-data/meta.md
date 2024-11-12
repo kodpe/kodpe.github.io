@@ -131,3 +131,17 @@ Reproduction
 - Pédopsychiatrie
 - Médecine physique et de réadaptation
 - Santé publique
+
+
+
+#### Achievements Gamification System
+- Achievement Name
+- Achievement Description
+- Achievement Progression Bar
+- Achievement Level
+
+
+| Achievement | Description | Nb Lvl | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NbGames | "Jouer N parties" | 8 lvl | 5 | 10 | 20 | 50 | 100 | 200 | 500 | 1000 |
+| PerfectCat | "Faire aucune erreur en <domaine> dans une partie <mode>" | 1 lvl | -

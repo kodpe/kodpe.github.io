@@ -1,0 +1,21 @@
+  .image-button {
+      display: flex;
+      margin: auto;
+      width: 64px;
+      padding: 10px;
+  }
+
+  .image-button img {
+      width: 64px;
+  }
+
+  .image-button:hover img {
+      transform: scale(1.2);
+  }
+
+  .absolute-bot {
+    background-color: #121212;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }

@@ -1,0 +1,101 @@
+body {
+    background-color: #121212;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: auto;
+    max-width: 600px;
+    max-height: 900px;
+    margin-top: 10px;
+}
+
+.ach-line {
+    border: none;
+    border-top: 2px solid;
+    width: 100%;
+    margin: 8px auto;
+    opacity: 0.1;
+}
+
+.ach-container {
+    display: flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.ach-icon {
+    width: 84px;
+    padding-top: 16px;
+    text-align: center;
+}
+
+.lvl-star {
+    font-size: 20px;
+    position: relative;
+    padding-top: 48px;
+}
+
+.hexagon {
+    position: absolute;
+    width: 64px;
+    aspect-ratio: 1 / 0.90;
+    background-color: #00ff00;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.hexagon-bottom {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.hexagon-top {
+    background-color: #00ff00;
+    background-image: url(/devoidlab/images/icons/champions/25.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.ach-bar {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.ach-name {
+    margin: 6px;
+    font-size: clamp(18px, 2vw, 24px);
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.ach-description {
+    margin: 6px;
+    font-size: clamp(12px, 2vw, 14px);
+    overflow: hidden;
+    overflow-wrap: break-word;
+    height: 32px;
+}
+
+.ach-value {
+    margin: 6px;
+    font-size: clamp(12px, 2vw, 14px);
+    text-align: right;
+}
+
+.ach-progress-bar {
+    margin: 6px;
+    background-color: #282828;
+    height: 8px;
+    border: #ffffff solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.ach-progress-bar-value {
+    width: 40%;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}

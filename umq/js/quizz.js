@@ -47,7 +47,7 @@ function SetTitleVersion() {
 
 async function loadConfig() {
     try {
-        const configResponse = await fetch('config.json');
+        const configResponse = await fetch('../q-data/config.json');
         if (!configResponse.ok) {
             throw new Error('Erreur lors du chargement de config.json');
         }

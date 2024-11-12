@@ -18,3 +18,10 @@ Tireur : Un tireur sacrifie sa capacité défensive au profit de dégâts import
 ```
 
 https://www.reddit.com/r/leagueoflegends/comments/ds4h3i/lore_the_official_ages_of_most_champions_and/?tl=fr
+
+https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/
+https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/buttons/
+https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perk-images/statmods/
+https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/fonts/texticons/lol/statsicon/
+https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/fonts/texticons/lol/gameplay/
+https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/

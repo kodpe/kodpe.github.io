@@ -84,7 +84,7 @@ body, html {
   /* ========== Style pour le popup ============== */
 .leaflet-popup {
   background-color: #333; /* Fond sombre */
-  color: white;            /* Texte en blanc */
+  color: rgb(253, 0, 0);            /* Texte en blanc */
   border-radius: 0px;      /* Coins arrondis */
   padding: 15px;           /* Espacement à l'intérieur du popup */
   font-size: 14px;         /* Taille de la police */
@@ -125,4 +125,16 @@ body, html {
 /* Ajouter un effet de survol du popup (change la bordure quand on survole le popup) */
 .leaflet-popup:hover {
   border: 2px solid #00ff00; /* Bordure jaune clair */
+}
+
+/* ==================== */
+
+/* Sélectionne toutes les tuiles Leaflet */
+.leaflet-tile {
+  background-color: #38ee00;
+}
+
+#map {
+  background-color: #333333;
+  /* Remplace #333333 par la couleur de fond souhaitée */
 }
