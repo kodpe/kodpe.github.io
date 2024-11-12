@@ -14,7 +14,8 @@ body {
 }
 
 .avg-expertise-txt {
-    font-size: 12px;
-    color: #00ffff;
-    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(200, 40, 200);
+    margin-top: -20px;
 }

@@ -1,4 +1,4 @@
-const version = '0.8'; // depr
+const version = '0'; // depr
 let questions = [];
 let selectedPools = [];
 let config = {};
@@ -12,11 +12,14 @@ let selectAllCardsBool = false;
 const blankLine = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp';
 
 const noopElements = document.getElementsByClassName('noop');
+const notingameElements = document.getElementsByClassName('notingame');
 
 const poolContainer = document.getElementById('pool-selection');
 const selectAllCardsElement = document.getElementById('select-all-cards');
 const startClassic = document.getElementById('start-classic');
 const startMarathon = document.getElementById('start-marathon');
+const startDaily = document.getElementById('start-daily');
+const startDevotion = document.getElementById('start-devotion');
 const questionElement = document.getElementById('question');
 const trueButton = document.getElementById('true-btn');
 const falseButton = document.getElementById('false-btn');
@@ -67,8 +70,8 @@ function generatePoolCards() {
         card.innerText = pool.name;
         card.addEventListener('click', () => togglePoolSelection(card, pool.file));
         poolContainer.insertBefore(card, selectAllCardsElement);
-        poolContainer.insertBefore(selectAllCardsElement, startClassic);
-        poolContainer.insertBefore(startClassic, startMarathon);
+        // poolContainer.insertBefore(selectAllCardsElement, startClassic);
+        // poolContainer.insertBefore(startClassic, startMarathon);
     });
 }
 
@@ -161,15 +164,62 @@ async function loadQuestions() {
             questions = questions.concat(poolQuestions);
         }
         numQuestions = questions.length;
-        if (quizMode === 'classic' && questions.length > 10) {
+        if (quizMode === 'classic') {
             numQuestions = 10;
+            if (questions.length < 10) {
+                questions = questions.concat(questions);
+            }
+            shuffleQuestions(questions);
         }
-        shuffleQuestions(questions);
+        else if (quizMode === 'marathon') {
+            numQuestions = 42;
+            if (questions.length < 42) {
+                questions = questions.concat(questions);
+            }
+            shuffleQuestions(questions);
+        }
+        else if (quizMode === 'daily') {
+            numQuestions = 20;
+            if (questions.length < 20) {
+                questions = questions.concat(questions);
+            }
+            shuffleArray(questions, getDateSeed());
+        }
+        else if (quizMode === 'devotion') {
+            numQuestions = questions.length;
+            shuffleQuestions(questions);
+        }
+        
         questions = questions.slice(0, numQuestions);
         startQuiz();
     } catch (error) {
         console.error('Erreur lors du chargement des questions:', error);
     }
+}
+
+
+function getDateSeed() {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth() + 1; // Mois commence à 0, donc ajoutez 1
+    const year = currentDate.getFullYear();
+    const seed = parseInt(`${year}${month.toString().padStart(2, '0')}${day.toString().padStart(2, '0')}`, 10);
+    return seed;
+}
+
+function seededRandom(seed) {
+    let x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
+
+function shuffleArray(array, seed) {
+    let shuffledArray = array.slice(); // Crée une copie pour ne pas modifier l'original
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(seededRandom(seed) * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Échange
+        seed++; // Incrémente la graine pour avoir une variation à chaque itération
+    }
+    return shuffledArray;
 }
 
 function startQuiz() {
@@ -197,6 +247,7 @@ function startQuiz() {
     restartButton.classList.add('hidden');
 
     lvlContainer.classList.add('hidden');
+    Array.from(notingameElements).forEach(element => element.classList.add('hidden'));
     showQuestion();
 }
 
@@ -285,10 +336,12 @@ function restartQuiz() {
     qidElement.innerHTML = '';
     lvlContainer.classList.remove('hidden');
     difficultySelection('hard');
+    updateStartButtons();
     scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('feedback').innerText = '';
     document.getElementById('pool-selection').classList.remove('hidden');
+    Array.from(notingameElements).forEach(element => element.classList.remove('hidden'));
     const poolCards = document.querySelectorAll('.pool-card');
     poolCards.forEach(card => {
         card.classList.remove('selected');
@@ -298,7 +351,6 @@ function restartQuiz() {
 trueButton.addEventListener('click', () => checkAnswer(true));
 falseButton.addEventListener('click', () => checkAnswer(false));
 nextButton.addEventListener('click', nextQuestion);
-restartButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
 startClassic.addEventListener('click', () => {
     quizMode = 'classic';
@@ -306,6 +358,14 @@ startClassic.addEventListener('click', () => {
 });
 startMarathon.addEventListener('click', () => {
     quizMode = 'marathon';
+    loadQuestions();
+});
+startDaily.addEventListener('click', () => {
+    quizMode = 'daily';
+    loadQuestions();
+});
+startDevotion.addEventListener('click', () => {
+    quizMode = 'devotion';
     loadQuestions();
 });
 document.getElementById('title').addEventListener('click', restartQuiz);
