@@ -298,5 +298,23 @@
     "question": "L'insomnie peut-être causé par la maladie de Nison.",
     "answer": false,
     "explanation": "n'esite pas"
+  },
+  {
+    "id": "PT150",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de vaseline",
+    "answer": false,
+    "explanation": "blocs de paraffine"
+  },
+  {
+    "id": "PT151",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de paraffine.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PT152",
+    "question": "Les prélèvements en pathologie sont préservés dans des petits blocs de biafine.",
+    "answer": false,
+    "explanation": "blocs de paraffine"
   }
 ]

@@ -47,7 +47,7 @@
 - Médecine vasculaire
 - Néphrologie
 - **Neurologie**
-- Oncologie
+- **Oncologie**
 - Pédiatrie
 - Pneumologie
 - Psychiatrie
@@ -79,7 +79,7 @@ Reproduction
 - Chirurgie maxillo-faciale
 - Chirurgie orale
 - Orthopédie
-- Traumatologique
+- Traumatologie
 - Chirurgie pédiatrique
 - Chirurgie reconstructrice
 - Chirurgie esthétique
@@ -95,7 +95,7 @@ Reproduction
 
 #### ORGANE
 - Angiologie
-- Cardiologie : CANDIDATE
+- **Cardiologie**
 - Dermatologie : CANDIDATE
 - **Endocrinologie**
 - Hématologie
@@ -116,7 +116,7 @@ Reproduction
 - Addictologie : CANDIDATE
 - Alcoologie
 - Allergologie
-- Oncologie : CANDIDATE
+- **Oncologie**
 - Diabétologie
 - Infectiologie
 - Psychiatrie

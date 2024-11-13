@@ -178,5 +178,113 @@
     "question": "La lidocaïne est utilisée pour traiter les arythmies cardiaques en bloquant les canaux calciques dans le myocarde.",
     "answer": false,
     "explanation": "La lidocaïne est un antiarythmique qui agit principalement en bloquant les canaux sodiques, pas calciques."
+  },
+  {
+    "id": "MS166",
+    "question": "Les antidotes des empoisonnements par les métaux lourds, comme le plomb ou le mercure, sont toujours administrés par voie orale.",
+    "answer": false,
+    "explanation": "Les antidotes pour les métaux lourds, tels que l'EDTA (éthylènediaminetétraacétique) ou la dimercaprol, sont souvent administrés par voie intraveineuse ou intramusculaire, et non par voie orale."
+  },
+  {
+    "id": "MS167",
+    "question": "L'activation du charbon actif est recommandée dans tous les cas d'empoisonnement aigu par des médicaments.",
+    "answer": false,
+    "explanation": "Le charbon actif n'est pas toujours indiqué dans tous les cas d'empoisonnement médicamenteux. Il est principalement utilisé dans les cas d'ingestion de substances organiques et non d'ions métalliques ou de corrosifs."
+  },
+  {
+    "id": "MS168",
+    "question": "Les cyanures peuvent être neutralisés par l'administration de thiosulfate de sodium, un antidote qui forme un composé non toxique avec le cyanure.",
+    "answer": true,
+    "explanation": "Le thiosulfate de sodium réagit avec le cyanure pour former un composé non toxique, le thiocyanate, qui peut ensuite être éliminé par les reins."
+  },
+  {
+    "id": "MS169",
+    "question": "Les antidotes des antivitamines K, comme la vitamine K1, sont efficaces contre les hémorragies dues à un empoisonnement aigu par le warfarin.",
+    "answer": true,
+    "explanation": "La vitamine K1 est l'antidote spécifique pour inverser les effets du warfarin (antivitamine K), en stimulant la production des facteurs de coagulation dépendants de la vitamine K."
+  },
+  {
+    "id": "MS170",
+    "question": "L'alcool méthylique (méthanol) est métabolisé en formaldéhyde, un composé non toxique pour l'organisme.",
+    "answer": false,
+    "explanation": "Le méthanol est métabolisé en formaldéhyde, qui est très toxique pour l'organisme, et peut entraîner des lésions oculaires et des troubles neurologiques graves."
+  },
+  {
+    "id": "MS171",
+    "question": "Les benzodiazépines sont toujours sans danger en cas de surdosage et ne causent aucune toxicité cardiaque.",
+    "answer": false,
+    "explanation": "En cas de surdosage, les benzodiazépines peuvent entraîner des effets respiratoires et cardiaques graves, notamment une dépression respiratoire, des troubles cardiovasculaires, et un coma."
+  },
+  {
+    "id": "MS172",
+    "question": "Le métabolisme des barbituriques est accéléré par la consommation d'alcool.",
+    "answer": false,
+    "explanation": "L'alcool inhibe le métabolisme des barbituriques, augmentant ainsi leur toxicité. Les deux substances agissent sur le système nerveux central de manière synergique."
+  },
+  {
+    "id": "MS173",
+    "question": "Les hydrocarbures aliphatiques, comme le pétrole, peuvent être absorbés par la peau et provoquer une toxicité systémique.",
+    "answer": true,
+    "explanation": "Les hydrocarbures aliphatiques peuvent être absorbés par la peau et sont toxiques lorsqu'ils sont inhalés ou ingérés, entraînant des effets neurologiques et cardiovasculaires graves."
+  },
+  {
+    "id": "MS174",
+    "question": "Les organophosphorés, tels que les insecticides, agissent en inhibant l'enzyme cholinestérase et peuvent provoquer une paralysie musculaire irréversible.",
+    "answer": true,
+    "explanation": "Les organophosphorés inhibent la cholinestérase, ce qui entraîne une accumulation d'acétylcholine et une stimulation excessive des récepteurs cholinergiques, conduisant à une paralysie musculaire et potentiellement à la mort."
+  },
+  {
+    "id": "MS175",
+    "question": "La toxicité du dioxyde de carbone est principalement due à son effet direct sur le système nerveux central.",
+    "answer": false,
+    "explanation": "La toxicité du dioxyde de carbone est principalement due à son effet sur l'oxygénation du sang, car il remplace l'oxygène dans les globules rouges, provoquant une hypoxie tissulaire et des troubles respiratoires."
+  },
+  {
+    "id": "MS176",
+    "question": "Le tétraéthylplomb (ou plomb tétraéthyle) est une substance qui est principalement utilisée comme additif dans les carburants et peut provoquer des effets neurotoxiques graves.",
+    "answer": true,
+    "explanation": "Le tétraéthylplomb est un additif utilisé dans les carburants, mais il est très toxique, notamment pour le système nerveux central, et a été largement retiré des carburants à cause de ses effets nocifs."
+  },
+  {
+    "id": "MS177",
+    "question": "L'intoxication aiguë par le paracétamol (acétaminophène) peut entraîner une nécrose hépatique, même en l'absence de signes cliniques dans les premières heures.",
+    "answer": true,
+    "explanation": "L'intoxication par le paracétamol peut entraîner une hépatotoxicité aiguë, avec une nécrose hépatique, qui peut ne pas être évidente dans les premières heures mais qui se manifeste avec des lésions graves après quelques jours."
+  },
+  {
+    "id": "MS178",
+    "question": "Les intoxications par les opioïdes, comme la morphine ou l'héroïne, provoquent une dépression respiratoire qui peut être inversée par l'administration de naloxone.",
+    "answer": true,
+    "explanation": "La naloxone est un antagoniste des récepteurs opioïdes, et elle peut inverser les effets de dépression respiratoire causée par l'overdose d'opioïdes."
+  },
+  {
+    "id": "MS179",
+    "question": "Les poisons de type neurotoxiques comme les toxines botuliques provoquent une paralysie musculaire en bloquant la libération d'acétylcholine.",
+    "answer": true,
+    "explanation": "Les toxines botuliques agissent en inhibant la libération d'acétylcholine au niveau de la jonction neuromusculaire, ce qui conduit à une paralysie musculaire."
+  },
+  {
+    "id": "MS180",
+    "question": "Les composés perfluorés (PFC) comme le PFOS et le PFOA sont des substances à faible toxicité pour l'organisme humain et ne sont pas bioaccumulables.",
+    "answer": false,
+    "explanation": "Les composés perfluorés, tels que le PFOS et le PFOA, sont hautement toxiques, persistent dans l'environnement et peuvent s'accumuler dans l'organisme, affectant divers systèmes organiques, y compris le foie et le système immunitaire."
+  },
+  {
+    "id": "MS181",
+    "question": "Les toxines des champignons (comme l'ammanite phalloïde) peuvent causer des lésions hépatiques irréversibles, même après une prise thérapeutique de charbon actif.",
+    "answer": true,
+    "explanation": "Les toxines de l'amanite phalloïde provoquent des lésions hépatiques graves et irréversibles. Bien que le charbon actif puisse limiter l'absorption, la toxicité reste souvent sévère et nécessite une transplantation hépatique."
+  },
+  {
+    "id": "MS182",
+    "question": "La toxicité des insecticides organochlorés est principalement liée à leur effet sur le système nerveux périphérique.",
+    "answer": false,
+    "explanation": "Les insecticides organochlorés, tels que le DDT, agissent principalement sur le système nerveux central en inhibant les canaux ioniques, perturbant ainsi la transmission nerveuse."
+  },
+  {
+    "id": "MS183",
+    "question": "L'intoxication par le dioxyde de soufre (SO2) est fréquente dans les régions industrielles et provoque principalement des irritations respiratoires, mais rarement des effets systémiques graves.",
+    "answer": true,
+    "explanation": "Le dioxyde de soufre provoque des irritations des voies respiratoires, notamment une toux et des difficultés respiratoires, mais les effets systémiques graves sont relativement rares sauf en cas d'exposition prolongée à des concentrations élevées."
   }
 ]

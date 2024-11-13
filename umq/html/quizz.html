@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Testez vos connaissances en médecine avec le QUIZ DE MÉDECINE ULTIME : C'est ULTIMATE MEDICINE QUIZ ! Des questions variées dans tous les domaines médicaux. Améliorez votre expertise médicale dès aujourd'hui avec nos tests à réponses vraies ou fausses.">
     <title id="page-title">ULTIMATE MEDICINE QUIZ</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="../css/quizz.css">
@@ -32,21 +33,27 @@
             </div>
         </div>
 
-        <div id="difficulty-container" class="hidden">
+        <!-- <div id="difficulty-container" class="hidden">
             <h6>DIFFICULTY</h6>
             <div id="lvl-hard" class="pool-card">hard</div>
             <div id="lvl-nightmare" class="pool-card">nightmare</div>
             <div id="lvl-madness" class="pool-card">madness</div>
-        </div>
+        </div> -->
 
         <div id="pool-selection" class="hidden">
-            <h6>THEMES</h6>
             <div id="select-all-cards" class="pool-card">All</div>
-            <button id="start-classic" class="std-btn hidden noop">Classic<br><br>10</button>
-            <button id="start-marathon" class="std-btn hidden noop">Marathon<br><br>42</button>
-            <button id="start-daily" class="std-btn hidden noop">Quizz of the day<br><br>20</button>
-            <button id="start-devotion" class="std-btn hidden noop">Devotion<br><br>ALL</button>
-            <h4 class="hidden noop">version 0.8.6 </h4>
+        </div>
+
+        <div>
+            <button id="start-classic" class="std-btn noop notingame">Classic<br><br>10</button>
+            <button id="start-daily" class="std-btn noop notingame">Daily Quizz<br><br>20</button>
+        </div>
+        <div>
+            <button id="start-marathon" class="std-btn noop notingame">Marathon<br><br>42</button>
+            <button id="start-devotion" class="std-btn noop notingame">Devotion<br><br>ALL</button>
+        </div>
+        <div>
+            <h5 class="hidden noop notingame">version 0.9.1</h5>
         </div>
 
         <div id="score-container" class="hidden">
@@ -60,7 +67,6 @@
         </div>
 
         <div id="feedback"></div>
-
         <div id="question-container" class="hidden">
             <p class="question" id="question"></p>
             <button class="std-btn true-btn" id="true-btn">VRAI</button>
@@ -69,8 +75,7 @@
         </div>
     </div>
 
-    <div class="hexagon"></div>
-
+    <script src="../js/myindexDB.js"></script>
     <script src="../js/quizz.js"></script>
 </body>
 

@@ -10,6 +10,7 @@
         { "name": "Epidemiology", "file": "../q-data/q8-epidemiology.json" },
         { "name": "Endocrinology", "file": "../q-data/q9-endocrinology.json" },
         { "name": "Miscellaneous", "file": "../q-data/q10-miscellaneous.json" },
-        { "name": "Lastest", "file": "../q-data/q11-lastest.json" }
+        { "name": "Oncology", "file": "../q-data/q11-oncology.json" },
+        { "name": "Cardiology", "file": "../q-data/q12-cardiology.json" }
     ]
 }

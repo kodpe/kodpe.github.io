@@ -1,0 +1,92 @@
+[
+  {
+    "id": "MS140",
+    "question": "Les sténoses coronaires peuvent toujours être détectées par un électrocardiogramme (ECG).",
+    "answer": false,
+    "explanation": "Les sténoses coronaires ne sont pas toujours détectables par ECG, qui peut être normal même en présence d'une ischémie. D'autres examens comme l'angio-scanner ou l'IRM cardiaque sont nécessaires."
+  },
+  {
+    "id": "MS141",
+    "question": "Le syndrome de Brugada est principalement associé à une dépolarisation anormale des cellules myocardiques ventriculaires.",
+    "answer": true,
+    "explanation": "Le syndrome de Brugada est une arythmie cardiaque génétique qui affecte la dépolarisation des cellules myocardiques ventriculaires, causant des troubles du rythme."
+  },
+  {
+    "id": "MS142",
+    "question": "Le traitement par anticoagulants oraux directs (AOD) est contre-indiqué chez les patients présentant une insuffisance rénale sévère.",
+    "answer": true,
+    "explanation": "Les AOD, comme le rivaroxaban, le dabigatran et l'apixaban, sont contre-indiqués en cas d'insuffisance rénale sévère en raison du risque accru d'accumulation et de saignement."
+  },
+  {
+    "id": "MS143",
+    "question": "Une fraction d'éjection réduite dans l'insuffisance cardiaque systolique est un indicateur d'un mauvais pronostic, quelle que soit la cause sous-jacente.",
+    "answer": false,
+    "explanation": "La fraction d'éjection réduite est un facteur pronostique défavorable, mais le pronostic dépend aussi de la cause sous-jacente de l'insuffisance cardiaque (ex: insuffisance cardiaque ischémique vs. non-ischémique)."
+  },
+  {
+    "id": "MS144",
+    "question": "Les agents bêta-bloquants sont contre-indiqués dans le traitement de l'hypertension en cas de bradycardie sévère.",
+    "answer": true,
+    "explanation": "Les bêta-bloquants peuvent aggraver la bradycardie, et leur utilisation est contre-indiquée en cas de bradycardie sévère."
+  },
+  {
+    "id": "MS145",
+    "question": "La sténose de la valve aortique est un facteur de risque important pour l'embolisme paradoxal.",
+    "answer": true,
+    "explanation": "Une sténose aortique sévère peut augmenter le risque d'embolisme paradoxal en favorisant la formation de thrombus dans l'oreillette droite qui traverse le septum auriculaire droit-gauche."
+  },
+  {
+    "id": "MS146",
+    "question": "Le phénomène de Raynaud est toujours associé à une pathologie cardiaque sous-jacente.",
+    "answer": false,
+    "explanation": "Le phénomène de Raynaud est un trouble vasculaire périphérique, souvent idiopathique, et n'est pas nécessairement lié à une pathologie cardiaque."
+  },
+  {
+    "id": "MS147",
+    "question": "Les bloqueurs des canaux calciques, comme le vérapamil, sont utilisés pour traiter l'hypertension mais peuvent aggraver l'insuffisance cardiaque dans certaines conditions.",
+    "answer": true,
+    "explanation": "Le vérapamil et d'autres bloqueurs des canaux calciques non-dihydropyridines peuvent aggraver l'insuffisance cardiaque en réduisant la contractilité cardiaque."
+  },
+  {
+    "id": "MS148",
+    "question": "L'athérosclérose peut être due à une accumulation de cholestérol dans les artères sans aucune réaction inflammatoire.",
+    "answer": false,
+    "explanation": "L'athérosclérose est un processus inflammatoire dans lequel l'accumulation de cholestérol et de lipides dans les parois artérielles déclenche une réponse inflammatoire."
+  },
+  {
+    "id": "MS149",
+    "question": "Les stents coronaires bioabsorbables se dissolvent dans l'organisme après quelques mois et offrent un avantage en termes de réduction des complications à long terme par rapport aux stents métalliques permanents.",
+    "answer": true,
+    "explanation": "Les stents bioabsorbables sont conçus pour se dissoudre après avoir soutenu la paroi artérielle pendant un certain temps, offrant un risque réduit de complications à long terme comme l'athéromatose intracoronaire."
+  },
+  {
+    "id": "MS150",
+    "question": "Le syndrome de tachycardie orthostatique posturale (POTS) est causé principalement par une hypotension orthostatique sévère.",
+    "answer": false,
+    "explanation": "Le syndrome de POTS est caractérisé par une tachycardie excessive en réponse à un changement de position, mais il n'est pas nécessairement associé à une hypotension orthostatique sévère."
+  },
+  {
+    "id": "MS151",
+    "question": "L'échocardiographie de stress est utilisée pour évaluer la fonction cardiaque en cas de suspicion de cardiopathie ischémique.",
+    "answer": true,
+    "explanation": "L'échocardiographie de stress permet d'évaluer la fonction cardiaque en réponse à un stress physique ou pharmacologique, utile pour détecter les zones du cœur ayant une perfusion insuffisante dans les cas de cardiopathie ischémique."
+  },
+  {
+    "id": "MS152",
+    "question": "Les prostacyclines sont utilisées dans le traitement de l'hypertension pulmonaire, mais ne sont jamais administrées par voie orale en raison de leur métabolisme rapide.",
+    "answer": true,
+    "explanation": "Les prostacyclines, utilisées dans l'hypertension pulmonaire, sont souvent administrées par voie intraveineuse ou inhalée en raison de leur métabolisme rapide et de leur courte demi-vie."
+  },
+  {
+    "id": "MS153",
+    "question": "Les signes cliniques de l'insuffisance cardiaque gauche peuvent inclure une distension jugulaire, un œdème périphérique et un souffle systolique.",
+    "answer": false,
+    "explanation": "Les signes cliniques de l'insuffisance cardiaque gauche comprennent la dyspnée, les crépitants pulmonaires, et l'œdème pulmonaire, mais pas la distension jugulaire ou un œdème périphérique (caractéristique de l'insuffisance cardiaque droite)."
+  },
+  {
+    "id": "MS154",
+    "question": "Les tachycardies supraventriculaires peuvent être traitées avec des médicaments antiarythmiques de classe 1, mais ces traitements peuvent parfois provoquer des torsades de pointes.",
+    "answer": true,
+    "explanation": "Les médicaments antiarythmiques de classe 1, comme la quinidine, peuvent être efficaces pour traiter certaines tachycardies supraventriculaires, mais leur utilisation est associée à un risque accru de torsades de pointes."
+  }
+]

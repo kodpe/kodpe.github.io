@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Testez vos connaissances en médecine avec le QUIZ DE MÉDECINE ULTIME : C'est ULTIMATE MEDICINE QUIZ ! Des questions variées dans tous les domaines médicaux. Améliorez votre expertise médicale dès aujourd'hui avec nos tests à réponses vraies ou fausses.">
     <title>Graphique Radar Médical</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../css/radar.css">
@@ -36,106 +37,18 @@
         </div>
 
     <canvas id="myChart"></canvas>
-
-    <script>
-        const data = {
-            labels: [
-                'Anatomy',
-                'Physiology',
-                'Pathologie',
-                'Surgery',
-                'Pharmacology',
-                'Genetics',
-                'Neurology',
-                'Epidemilogy',
-                'Endocrinology',
-                'Miscellaneous',
-                'Lastest',
-            ],
-            datasets: [{
-                label: 'Expertise',
-                data: [80, 65, 90, 70, 75, 64, 50, 29, 70, 83, 54],
-                backgroundColor: 'rgba(80, 20, 180, 0.3)',
-                borderColor: 'rgba(180, 20, 180, 1)',
-                borderWidth: 1,
-                pointBackgroundColor: 'rgba(0, 255, 255, 1)',
-            }]
-        };
-
-        // Configuration du graphique radar
-        const config = {
-            type: 'radar',
-            data: data,
-            options: {
-                responsive: true,
-                animations: {
-                    tension: {
-                        duration: 5000,
-                        easing: 'linear',
-                        from: 0.4,
-                        to: -0.2,
-                        loop: true
-                    },
-                },
-                scales: {
-                    r: {
-                        min: 0,
-                        max: 100,
-                        ticks: {
-                            display: false,
-                            stepSize: 20,
-                        },
-                        grid: {
-                            color: 'rgba(80, 255, 180, 0.4)',
-                        },
-                        angleLines: {
-                            color: 'rgba(80, 255, 180, 0.1)',
-                        },
-                        pointLabels: {
-                            color: 'rgba(25, 255, 255, 1)',
-                            font: {
-                                size: 12,
-                            }
-                        }
-                    },
-                },
-                elements: {
-                    line: {
-                        tension: 0,
-                    },
-                    point: {
-                        radius: 3,
-                        hoverRadius: 6,
-                        hitRadius: 18,
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false,
-                        labels: {
-                            color: 'rgba(255, 255, 255, 1)',
-                        }
-                    },
-                    title: {
-                        display: false,
-                        text: 'SKILLS',
-                        color: 'rgba(25, 255, 255, 1)',
-                    },
-                }
-            }
-        };
-
-        const myChart = new Chart(document.getElementById('myChart'), config);
-    </script>
     <div class="avg-expertise-txt">AVERAGE EXPERTISE</p><span id="expertise-value">100<span><span> %</span></p>
     </div>
 
-    <div>
+    <div class="absolute-bot">
         <a href="../html/quizz.html" class="image-button" target="_self">
             <img src="../images/back-arrow.png" alt="Icone">
         </a>
     </div>
 
+    <script src="../js/myindexDB.js"></script>
+    <script src="../js/expertise.js"></script>
+    <script src="../js/radar.js"></script>
 </body>
 
 </html>

@@ -238,5 +238,131 @@
     "question": "Le carcinome hépatocellulaire (CHC) est souvent associé à des mutations du gène TP53, mais rarement aux mutations du gène CTNNB1.",
     "answer": false,
     "explanation": "Le carcinome hépatocellulaire est souvent associé à des mutations du gène CTNNB1 (qui code pour la bêta-caténine), ainsi qu'à des mutations TP53."
+  },
+  {
+    "id": "PU200",
+    "question": "La putréfaction provoque la transformation de l’hémoglobine en sulfhémoglobine verte.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PU201",
+    "question": "La décomposition est à la base de la constitution de l'humus et de certains réseaux trophiques.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PU202",
+    "question": "La décomposition est à la base de la constitution de l'houmous.",
+    "answer": false,
+    "explanation": "de l'humus"
+  },
+  {
+    "id": "PU203",
+    "question": "La putréfaction débute par l’apparition d'une tache verte abdominale, au niveau de la fosse iliaque droite.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PU204",
+    "question": "La putréfaction débute par l’apparition d'une tache verte abdominale, au niveau de la fosse iliaque gauche.",
+    "answer": false,
+    "explanation": "fosse iliaque droite"
+  },
+  {
+    "id": "PU205",
+    "question": "La putréfaction débute par l’apparition d'une tache verte au niveau de la cage thoracique.",
+    "answer": false,
+    "explanation": "tache verte abdominale"
+  },
+  {
+    "id": "PU206",
+    "question": "La putréfaction débute 48 heures après la mort.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PU207",
+    "question": "La putréfaction débute 18 heures après la mort.",
+    "answer": false,
+    "explanation": "48 heures"
+  },
+  {
+    "id": "PU208",
+    "question": "Lors d'un décès, la concentration cytoplasmique du Ca2+ augmente.",
+    "answer": true,
+    "explanation": ""
+  },
+  {
+    "id": "PU209",
+    "question": "Lors d'un décès, la concentration cytoplasmique du Ca2+ diminue.",
+    "answer": false,
+    "explanation": "Elle augmente"
+  },
+  {
+    "id": "MS155",
+    "question": "Le test de la fonction pulmonaire permet de diagnostiquer directement une pneumonie bactérienne.",
+    "answer": false,
+    "explanation": "Le test de la fonction pulmonaire évalue la capacité respiratoire, mais ne permet pas de diagnostiquer directement une pneumonie, qui est généralement confirmée par la radiographie thoracique et l'examen microbiologique."
+  },
+  {
+    "id": "MS156",
+    "question": "Les corticostéroïdes inhalés sont le traitement de première intention dans l'asthme sévère contrôlé.",
+    "answer": true,
+    "explanation": "Les corticostéroïdes inhalés sont recommandés pour contrôler l'inflammation bronchique dans l'asthme sévère, et sont le traitement de première intention en cas d'asthme contrôlé mais sévère."
+  },
+  {
+    "id": "MS157",
+    "question": "Le lavage bronchoalvéolaire est une méthode diagnostique principalement utilisée pour identifier les infections virales des voies respiratoires supérieures.",
+    "answer": false,
+    "explanation": "Le lavage bronchoalvéolaire est surtout utilisé pour diagnostiquer des infections pulmonaires profondes, telles que la pneumonie à bactéries ou à champignons, mais il n'est pas utilisé pour les infections virales des voies respiratoires supérieures."
+  },
+  {
+    "id": "MS158",
+    "question": "La spirométrie est un test très utile pour diagnostiquer l'emphysème, mais ne peut pas distinguer entre l'emphysème et la bronchite chronique.",
+    "answer": true,
+    "explanation": "La spirométrie est utile pour évaluer la fonction pulmonaire et confirmer la présence d'une obstruction, mais elle ne peut pas distinguer entre l'emphysème et la bronchite chronique, qui font partie de la BPCO."
+  },
+  {
+    "id": "MS159",
+    "question": "Une hypercapnie aiguë peut survenir uniquement en cas de défaillance respiratoire due à une maladie pulmonaire obstructive chronique (BPCO).",
+    "answer": false,
+    "explanation": "L'hypercapnie aiguë peut également survenir dans des situations comme l'asthme aigu grave, l'œdème pulmonaire aigu, ou l'apnée du sommeil, et n'est pas limitée à la BPCO."
+  },
+  {
+    "id": "MS160",
+    "question": "Le cancer du poumon à petites cellules est associé à une évolution plus lente et à un meilleur pronostic que les cancers pulmonaires non à petites cellules.",
+    "answer": false,
+    "explanation": "Le cancer du poumon à petites cellules est très agressif et a un pronostic bien plus défavorable que les cancers pulmonaires non à petites cellules (adénocarcinome, épidermoïde)."
+  },
+  {
+    "id": "MS161",
+    "question": "L'asthme professionnel est lié à l'exposition à des allergènes dans l'environnement de travail, et peut être déclenché par des irritants comme les vapeurs chimiques et la poussière.",
+    "answer": true,
+    "explanation": "L'asthme professionnel peut être causé par des allergènes ou des irritants dans l'environnement de travail, tels que des produits chimiques, des poussières, ou des vapeurs, entraînant des crises d'asthme chez les travailleurs exposés."
+  },
+  {
+    "id": "MS162",
+    "question": "Le syndrome de détresse respiratoire aiguë (SDRA) est toujours causé par une infection pulmonaire, généralement d'origine bactérienne.",
+    "answer": false,
+    "explanation": "Le SDRA peut être causé par diverses conditions, y compris des infections pulmonaires (bactériennes, virales), mais aussi des traumatismes, des aspirations, des brûlures ou des facteurs non infectieux comme la réanimation excessive."
+  },
+  {
+    "id": "MS163",
+    "question": "Le traitement de la fibrose pulmonaire idiopathique repose principalement sur les corticostéroïdes pour réduire l'inflammation.",
+    "answer": false,
+    "explanation": "Les corticostéroïdes ne sont pas le traitement principal de la fibrose pulmonaire idiopathique. Les traitements de première ligne incluent les antifibrotiques comme le pirfénidone et le nintedanib."
+  },
+  {
+    "id": "MS164",
+    "question": "Le test de la diffusion du monoxyde de carbone (DLCO) évalue la capacité des poumons à transférer les gaz dans la circulation sanguine, mais ne peut pas être affecté par des maladies des voies respiratoires supérieures.",
+    "answer": true,
+    "explanation": "Le DLCO mesure l'efficacité des échanges gazeux entre les alvéoles et le sang, et il est principalement affecté par des maladies pulmonaires interstitielles ou des maladies vasculaires, mais pas directement par des maladies des voies respiratoires supérieures."
+  },
+  {
+    "id": "MS165",
+    "question": "Les embolies pulmonaires massives peuvent parfois ne pas provoquer de symptômes visibles, même si elles peuvent entraîner une mort subite.",
+    "answer": true,
+    "explanation": "Les embolies pulmonaires massives peuvent être asymptomatiques au début ou présenter des symptômes non spécifiques, mais elles peuvent aussi entraîner une défaillance circulatoire aiguë et la mort subite si elles obstruent une grande partie de l'artère pulmonaire."
   }
 ]

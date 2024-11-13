@@ -34,10 +34,10 @@ const currentScoreElement = document.getElementById('current-score');
 const nbQuestionsElement = document.getElementById('nb-questions');
 const qidElement = document.getElementById('qid');
 
-const lvlContainer = document.getElementById('difficulty-container');
-const lvlHardElement = document.getElementById('lvl-hard');
-const lvlNightElement = document.getElementById('lvl-nightmare');
-const lvlMadElement = document.getElementById('lvl-madness');
+// const lvlContainer = document.getElementById('difficulty-container');
+// const lvlHardElement = document.getElementById('lvl-hard');
+// const lvlNightElement = document.getElementById('lvl-nightmare');
+// const lvlMadElement = document.getElementById('lvl-madness');
 
 
 function SetTitleVersion() {
@@ -76,23 +76,25 @@ function generatePoolCards() {
 }
 
 
-function difficultySelection(lvl) {
-    if (lvl === 'hard') {
-        lvlHardElement.classList.add('selected');
-        lvlNightElement.classList.remove('selected');
-        lvlMadElement.classList.remove('selected');
-    }
-    else if (lvl === 'night') {
-        lvlNightElement.classList.add('selected');
-        lvlHardElement.classList.remove('selected');
-        lvlMadElement.classList.remove('selected');
-    }
-    else if (lvl === 'mad') {
-        lvlMadElement.classList.add('selected');
-        lvlHardElement.classList.remove('selected');
-        lvlNightElement.classList.remove('selected');
-    }
-}
+/* */
+// function difficultySelection(lvl) {
+//     if (lvl === 'hard') {
+//         lvlHardElement.classList.add('selected');
+//         lvlNightElement.classList.remove('selected');
+//         lvlMadElement.classList.remove('selected');
+//     }
+//     else if (lvl === 'night') {
+//         lvlNightElement.classList.add('selected');
+//         lvlHardElement.classList.remove('selected');
+//         lvlMadElement.classList.remove('selected');
+//     }
+//     else if (lvl === 'mad') {
+//         lvlMadElement.classList.add('selected');
+//         lvlHardElement.classList.remove('selected');
+//         lvlNightElement.classList.remove('selected');
+//     }
+// }
+/**/
 
 // Gestion de la sélection des pools
 function togglePoolSelection(card, poolFile) {
@@ -109,10 +111,10 @@ function togglePoolSelection(card, poolFile) {
 function updateStartButtons() {
     if (selectedPools.length === 0) {
         Array.from(noopElements).forEach(element => element.classList.add('hidden'));
-        difficultySelection('hard');
+        // difficultySelection('hard');
     } else {
         Array.from(noopElements).forEach(element => element.classList.remove('hidden'));
-        difficultySelection('hard');
+        // difficultySelection('hard');
     }
 }
 
@@ -246,7 +248,7 @@ function startQuiz() {
     nextButton.classList.add('hidden');
     restartButton.classList.add('hidden');
 
-    lvlContainer.classList.add('hidden');
+    // lvlContainer.classList.add('hidden');
     Array.from(notingameElements).forEach(element => element.classList.add('hidden'));
     showQuestion();
 }
@@ -271,6 +273,9 @@ function showQuestion() {
 function checkAnswer(isTrue) {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = currentQuestion.answer === isTrue;
+    console.log(currentQuestion);
+    console.log(isCorrect);
+    addAnswerDB(db, domainName, isCorrect); // TODO
     if (isCorrect) {
         score++;
         historyResult += `<span class='correct-mark'>o</span>`;
@@ -334,8 +339,8 @@ function restartQuiz() {
     score = 0;
     historyResult = '';
     qidElement.innerHTML = '';
-    lvlContainer.classList.remove('hidden');
-    difficultySelection('hard');
+    // lvlContainer.classList.remove('hidden');
+    // difficultySelection('hard');
     updateStartButtons();
     scoreContainer.classList.add('hidden');
     document.getElementById('question-container').classList.add('hidden');
@@ -371,9 +376,9 @@ startDevotion.addEventListener('click', () => {
 document.getElementById('title').addEventListener('click', restartQuiz);
 selectAllCardsElement.addEventListener('click', toggleSelectAllCards);
 
-lvlHardElement.addEventListener('click', () => difficultySelection('hard'));
-lvlNightElement.addEventListener('click', () => difficultySelection('night'));
-lvlMadElement.addEventListener('click', () => difficultySelection('mad'));
+// lvlHardElement.addEventListener('click', () => difficultySelection('hard'));
+// lvlNightElement.addEventListener('click', () => difficultySelection('night'));
+// lvlMadElement.addEventListener('click', () => difficultySelection('mad'));
 
 loadConfig();
 restartQuiz();
