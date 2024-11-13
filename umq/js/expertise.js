@@ -10,11 +10,16 @@ function getExpScore(totalQuestions, answeredQuestions, correctAnswers) {
     const proportionAnswered = answeredQuestions / totalQuestions;
     let expertiseScore = (winrate * weightCorrect) + (proportionAnswered * weightAnswered);
     expertiseScore *= 100;
+    if (Number.isNaN(expertiseScore))
+        expertiseScore = 0;
     return expertiseScore;
 }
 
 function getScoreSigmoide(score) {
-    return 100 * (1 - 1 / (1 + Math.pow(score / 100, sigmoideCurveControl)));
+    let sigval = 100 * (1 - 1 / (1 + Math.pow(score / 100, sigmoideCurveControl)));
+    if (Number.isNaN(sigval))
+        sigval = 0;
+    return sigval;
 }
 
 function getExpertiseForDomain(domainName, questionsCounts) {
