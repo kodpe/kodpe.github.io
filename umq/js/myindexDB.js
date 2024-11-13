@@ -87,6 +87,42 @@ function __setNbMarathonGames(domObj, nbMarathonGames) {
     domObj.nbMarathonGames = nbMarathonGames;
 }
 
+function addGameDB(db, domainName, winrate, isTen) {
+    const transaction = db.transaction("domains", "readwrite");
+    const store = transaction.objectStore("domains");
+
+    // Mettre à jour le domaine spécifique
+    const domainRequest = store.get(domainName);  // Clé primaire 'domainName'
+    domainRequest.onsuccess = (event) => {
+        const domainObj = event.target.result;
+        if (domainObj) {
+            if (isTen) {
+                __setNbClassicGames(domainObj, domainObj.nbClassicGames + 1);
+            }
+            else {
+                __setNbMarathonGames(domainObj, domainObj.nbMarathonGames + 1);
+            }
+            if (domainObj.gameWinrateRecord < winrate) {
+                __setWinrateRecord(domainObj, winrate);
+            }
+            console.log(domainObj);
+            store.put(domainObj);
+        } else {
+            console.error(`Domaine ${domainName} non trouvé.`);
+        }
+    };
+    domainRequest.onerror = (event) => {
+        console.error("Erreur lors de la récupération du domaine : ", event.target.error);
+    };
+    transaction.oncomplete = () => {
+        console.log("Transaction réussie : Réponses mises à jour.");
+    };
+
+    transaction.onerror = (event) => {
+        console.error("Erreur sur la transaction : ", event.target.error);
+    };
+}
+
 function addAnswerDB(db, domainName, isCorrectAnswer) {
     const transaction = db.transaction("domains", "readwrite");
     const store = transaction.objectStore("domains");
@@ -105,7 +141,7 @@ function addAnswerDB(db, domainName, isCorrectAnswer) {
             __setIsLastAnswerCorrect(obj, false);
             __setCurrentRow(obj, 0);  // Réinitialisation de la ligne en cas de mauvaise réponse
         }
-        console.log(obj);
+        // console.log(obj);
         store.put(obj);
     };
 

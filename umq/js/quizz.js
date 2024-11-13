@@ -8,6 +8,8 @@ let quizMode = '';
 let numQuestions = 0;
 let historyResult = '';
 let selectAllCardsBool = false;
+let isUniqDomainQuiz = false;
+let domainName = '';
 
 const blankLine = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp';
 
@@ -160,7 +162,7 @@ async function loadQuestions() {
         // console.log(selectedPools);
         for (const poolFile of selectedPools) {
             const fileName = poolFile.split('-').pop().replace('.json', '');
-            const domainName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+            domainName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
             // console.log(domainName);
             const response = await fetch(poolFile);
             if (!response.ok) {
@@ -189,8 +191,8 @@ async function loadQuestions() {
             shuffleQuestions(questions);
         }
         else if (quizMode === 'daily') {
-            numQuestions = 20;
-            if (questions.length < 20) {
+            numQuestions = 10;
+            if (questions.length < 10) {
                 questions = questions.concat(questions);
             }
             shuffleArray(questions, getDateSeed());
@@ -241,6 +243,10 @@ function startQuiz() {
     score = 0;
     historyResult = '';
     qidElement.innerText = '';
+    isUniqDomainQuiz = false;
+    if (selectedPools.length === 1) {
+        isUniqDomainQuiz = true;
+    }
 
     document.getElementById('pool-selection').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
@@ -283,7 +289,7 @@ function checkAnswer(isTrue) {
     const isCorrect = currentQuestion.answer === isTrue;
     // console.log(currentQuestion);
     // console.log(isCorrect);
-    addAnswerDB(db, currentQuestion.domainName, isCorrect); // TODO
+    addAnswerDB(db, currentQuestion.domainName, isCorrect);
     if (isCorrect) {
         score++;
         historyResult += `<span class='correct-mark'>o</span>`;
@@ -316,10 +322,17 @@ function showFinalScore() {
     restartButton.classList.remove('hidden');
     const percentage = Math.round(calculateScorePercentage(score, numQuestions));
     if (score === numQuestions) {
-        scoreTitleElement.innerHTML = "🥳🎉✨<br><br>" + historyResult + "<br><br> " + percentage + "%<br><br>";
+        scoreTitleElement.innerHTML = "<h2>🥳🎉✨<br><br>PERFECT</h2><br><br>" + historyResult + "<br><br> " + percentage + "%<br><br>";
     }
     else {
         scoreTitleElement.innerHTML = historyResult + "<br><br> " + percentage + "%<br><br>";
+    }
+    let isTen = false;
+    if (quizMode === 'classic' || quizMode === 'daily')
+            isTen = true;
+    addGameDB(db, 'TOTAL', percentage, isTen);
+    if (isUniqDomainQuiz) {
+        addGameDB(db, domainName, percentage, isTen);
     }
 }
 
@@ -347,6 +360,7 @@ function restartQuiz() {
     score = 0;
     historyResult = '';
     qidElement.innerHTML = '';
+    domainName = '';
     // lvlContainer.classList.remove('hidden');
     // difficultySelection('hard');
     updateStartButtons();
