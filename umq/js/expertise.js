@@ -36,7 +36,8 @@ function getExpertiseForDomain(domainName, questionsCounts) {
 
                 if (data) {
                     const totalQuestions = questionsCounts[domainName];
-                    const expertiseScore = getScoreSigmoide(getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers));
+                    // const expertiseScore = getScoreSigmoide(getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers));
+                    const expertiseScore = getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers);
                     if (Number.isNaN(expertiseScore))
                         expertiseScore = 0;
                     resolve({ domainName, expertiseScore }); // Résoudre avec le résultat
