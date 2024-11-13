@@ -19,3 +19,9 @@ body {
     color: rgb(200, 40, 200);
     margin-top: -20px;
 }
+
+#myChart {
+    margin-right: 24px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}

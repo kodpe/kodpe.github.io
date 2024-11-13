@@ -1,5 +1,7 @@
 let labelsNames = []; // Tableau pour stocker les noms des pools
 
+const globalExpertiseElement = document.getElementById('expertise-value');
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -23,12 +25,19 @@ async function loadLabels() {
     fillData();
 }
 
-function fillData() {
+async function fillData() {
+    const scores = await getExpertises();
+    const scoresArray = Object.values(scores);
+    const average = scoresArray.reduce((sum, value) => sum + value, 0) / scoresArray.length;
+    // const roundedAverage = Math.round(average);
+    globalExpertiseElement.innerText = average.toFixed(2);
+    // console.log(scoresArray);
     const data = {
         labels: labelsNames,
         datasets: [{
             label: 'Expertise',
-            data: generateRandomArray(labelsNames.length, 1, 99),
+            data: scoresArray,
+            // data: generateRandomArray(labelsNames.length, 1, 99),
             backgroundColor: 'rgba(80, 20, 180, 0.3)',
             borderColor: 'rgba(180, 20, 180, 1)',
             borderWidth: 1,

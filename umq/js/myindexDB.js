@@ -1,48 +1,59 @@
-// Ouvrir (ou créer) une base de données
-const request = indexedDB.open("ulmedDB", 1);
 let db = {};
 
-// Créer l'object store si la base de données est créée ou mise à jour
-request.onupgradeneeded = (event) => {
-    const db = event.target.result;
-    // Créer un object store avec une clé primaire (ici "name")
-    let objectStore = {};
-    try {
-        objectStore = db.createObjectStore("domains", { keyPath: "name" });
-    } catch (e) {
-        console.warn("indexedDB: ", e);
-    }
-    try {
-        objectStore.transaction.oncomplete = () => {
-            const store = db.transaction("domains", "readwrite").objectStore("domains");
-            store.add({ name: "Anatomy", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Physiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Pathology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Surgery", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Pharmacology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Genetics", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Neurology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Epidemiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Endocrinology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Miscellaneous", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Oncology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "Cardiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-            store.add({ name: "TOTAL", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-        };
-    } catch (e) {
-        console.warn("indexedDB: ", e);
-    }
-};
-
-request.onsuccess = function (event) {
-    db = event.target.result;
-    console.log("Base de données ouverte avec succès.");
-    console.log(db);
+async function openDATABASE() {
+    db = await openDB();
 }
 
-request.onerror = (event) => {
-    console.error("Erreur lors de l'ouverture de la base de données :", event.target.errorCode);
-};
+openDATABASE();
+
+async function openDB() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open("ulmedDB", 1);
+
+        // Si la base de données est créée ou mise à jour, cette fonction est appelée
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            // Créer un object store avec une clé primaire (ici "name")
+            let objectStore = {};
+            try {
+                objectStore = db.createObjectStore("domains", { keyPath: "name" });
+            } catch (e) {
+                console.warn("indexedDB: ", e);
+            }
+            try {
+                objectStore.transaction.oncomplete = () => {
+                    const store = db.transaction("domains", "readwrite").objectStore("domains");
+                    store.add({ name: "Anatomy", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Physiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Pathology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Surgery", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Pharmacology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Genetics", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Neurology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Epidemiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Endocrinology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Miscellaneous", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Oncology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "Cardiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                    store.add({ name: "TOTAL", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
+                };
+            } catch (e) {
+                console.warn("indexedDB: ", e);
+            }
+        };
+
+        request.onsuccess = (event) => {
+            const db = event.target.result;
+            console.log("Base de données ouverte avec succès.");
+            // console.log(db);
+            resolve(db);  // Résoudre avec l'objet `db` ouvert
+        };
+
+        request.onerror = (event) => {
+            console.error("Erreur lors de l'ouverture de la base de données :", event.target.errorCode);
+        };
+    });
+}
 
 function __setNbAnswered(domObj, nbAnswered) {
     domObj.nbAnswered = nbAnswered;
@@ -94,6 +105,7 @@ function addAnswerDB(db, domainName, isCorrectAnswer) {
             __setIsLastAnswerCorrect(obj, false);
             __setCurrentRow(obj, 0);  // Réinitialisation de la ligne en cas de mauvaise réponse
         }
+        console.log(obj);
         store.put(obj);
     };
 

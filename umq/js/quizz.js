@@ -157,12 +157,20 @@ async function loadQuestions() {
         return;
     }
     try {
+        // console.log(selectedPools);
         for (const poolFile of selectedPools) {
+            const fileName = poolFile.split('-').pop().replace('.json', '');
+            const domainName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+            // console.log(domainName);
             const response = await fetch(poolFile);
             if (!response.ok) {
                 throw new Error(`Erreur de chargement des questions depuis ${poolFile}`);
             }
             const poolQuestions = await response.json();
+            poolQuestions.forEach(question => {
+                question.domainName = domainName;
+            });
+            // console.log(poolQuestions);
             questions = questions.concat(poolQuestions);
         }
         numQuestions = questions.length;
@@ -273,9 +281,9 @@ function showQuestion() {
 function checkAnswer(isTrue) {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = currentQuestion.answer === isTrue;
-    console.log(currentQuestion);
-    console.log(isCorrect);
-    addAnswerDB(db, domainName, isCorrect); // TODO
+    // console.log(currentQuestion);
+    // console.log(isCorrect);
+    addAnswerDB(db, currentQuestion.domainName, isCorrect); // TODO
     if (isCorrect) {
         score++;
         historyResult += `<span class='correct-mark'>o</span>`;
@@ -382,3 +390,4 @@ selectAllCardsElement.addEventListener('click', toggleSelectAllCards);
 
 loadConfig();
 restartQuiz();
+updateStartButtons();
