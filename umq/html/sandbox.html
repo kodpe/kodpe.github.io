@@ -4,47 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ULTIMATE MEDICINE QUIZ : Testez vos connaissances en médecine avec le quiz ultime de médecine! Des questions pointues dans tous les domaines médicaux.">
     <title id="page-title">SANDBOX</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="../css/achievements.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <link rel="stylesheet" href="../css/litepicker.css" />
+    <link rel="stylesheet" href="../css/monthTracker.css" />
 </head>
 
 <body>
 
-    <div class="ach-container">
-        <div class="ach-icon">
-            <div class="hexagon hexagon-bottom"></div>
-            <div class="hexagon hexagon-top"></div>
-            <p class="lvl-star">★★★</p>
-        </div>
-        <div class="ach-bar">
-            <div class="ach-name">name</div>
-            <div class="ach-description">description</div>
-            <div class="ach-value">100 / 500</div>
-            <div class="ach-progress-bar">
-                <div class="ach-progress-bar-value"></div>
-            </div>
-        </div>
+    <div class="tracker-container">
+        <div id="previous-month" class="no-interaction my-calendar"></div>
+        <div id="current-month" class="no-interaction my-calendar"></div>
     </div>
-    <hr class="ach-line">
 
-    <div class="ach-container">
-        <div class="ach-icon">
-            <div class="hexagon hexagon-bottom"></div>
-            <div class="hexagon hexagon-top"></div>
-            <p class="lvl-star">★★★</p>
-        </div>
-        <div class="ach-bar">
-            <div class="ach-name">name</div>
-            <div class="ach-description">description</div>
-            <div class="ach-value">100 / 500</div>
-            <div class="ach-progress-bar">
-                <div class="ach-progress-bar-value"></div>
-            </div>
-        </div>
-    </div>
-    <hr class="ach-line">
-
+    <script src="../js/monthTracker.js"></script>
 </body>
-
 </html>

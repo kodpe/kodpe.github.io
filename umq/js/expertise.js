@@ -15,12 +15,12 @@ function getExpScore(totalQuestions, answeredQuestions, correctAnswers) {
     return expertiseScore;
 }
 
-function getScoreSigmoide(score) {
-    let sigval = 100 * (1 - 1 / (1 + Math.pow(score / 100, sigmoideCurveControl)));
-    if (Number.isNaN(sigval))
-        sigval = 0;
-    return sigval;
-}
+// function getScoreSigmoide(score) {
+//     let sigval = 100 * (1 - 1 / (1 + Math.pow(score / 100, sigmoideCurveControl)));
+//     if (Number.isNaN(sigval))
+//         sigval = 0;
+//     return sigval;
+// } // DEPR
 
 function getExpertiseForDomain(domainName, questionsCounts) {
     return new Promise((resolve, reject) => {

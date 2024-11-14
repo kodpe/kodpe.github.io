@@ -1,0 +1,61 @@
+.selected-day {
+    background-color: rgb(211, 24, 195);
+}
+
+.no-interaction {
+    pointer-events: none;
+}
+
+:root {
+    --litepicker-container-months-color-bg: #121212;
+    --litepicker-container-months-box-shadow-color: #080808;
+    /* --litepicker-day-color: #04c424; */
+}
+
+.litepicker .container__months .month-item-header {
+    display: none;
+}
+
+.litepicker .container__months .month-item-header .button-previous-month,
+.litepicker .container__months .month-item-header .button-next-month {
+    display: none;
+}
+
+.litepicker .container__months .month-item-weekdays-row {
+    display: none;
+}
+
+.litepicker {
+    transform: scale(0.4);
+}
+
+.litepicker .container__main {
+    transform: scale(1);
+}
+
+.litepicker .container__months {
+    transform: scale(1);
+}
+
+.litepicker .container__days .day-item {
+    border: #242424 solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+    /* border-width: 1px; */
+    /* background-color: #8b129b; */
+    margin: 3px;
+    font-size: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.tracker-container {
+    display: flex;
+    gap: 10px;
+}
+
+.my-calendar {
+    width: 111px;
+    height: 80px;
+}
