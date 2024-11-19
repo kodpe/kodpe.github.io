@@ -104,8 +104,8 @@
   {
     "id": "MS117",
     "question": "Une claudication ne peut être intermittente.",
-    "answer": false,
-    "explanation": ""
+    "answer": true,
+    "explanation": "bah si elle peut"
   },
   {
     "id": "MS118",

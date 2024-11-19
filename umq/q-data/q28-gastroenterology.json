@@ -74,7 +74,7 @@
   {
     "id": "GE112",
     "question": "La biopsie hépatique est la méthode la plus fiable pour diagnostiquer une hépatite alcoolique.",
-    "answer": false,
+    "answer": true,
     "explanation": "La biopsie hépatique n'est pas systématiquement nécessaire pour diagnostiquer une hépatite alcoolique, le diagnostic étant souvent clinique et biologique."
   },
   {

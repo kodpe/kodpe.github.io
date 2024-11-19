@@ -1,0 +1,510 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/home/kodp/kodpe.github.io/umq",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2024-11-19 14:59:26",
+            "filesum": 75,
+            "codesum": 8853,
+            "commentsum": 733,
+            "blanksum": 643,
+            "statistics": {
+                ".html": {
+                    "code": 351,
+                    "comment": 148,
+                    "blank": 57
+                },
+                ".json": {
+                    "code": 4756,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".md": {
+                    "code": 44,
+                    "comment": 0,
+                    "blank": 1
+                },
+                ".css": {
+                    "code": 1448,
+                    "comment": 170,
+                    "blank": 228
+                },
+                ".js": {
+                    "code": 2254,
+                    "comment": 415,
+                    "blank": 357
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 12,
+                    "code": 84,
+                    "comment": 0,
+                    "filename": "css/achievements.css"
+                },
+                {
+                    "blank": 20,
+                    "code": 127,
+                    "comment": 17,
+                    "filename": "css/buttons.css"
+                },
+                {
+                    "blank": 31,
+                    "code": 199,
+                    "comment": 54,
+                    "filename": "css/container.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 1,
+                    "filename": "css/default.css"
+                },
+                {
+                    "blank": 4,
+                    "code": 42,
+                    "comment": 13,
+                    "filename": "css/gamemode-slider.css"
+                },
+                {
+                    "blank": 38,
+                    "code": 237,
+                    "comment": 36,
+                    "filename": "css/ig-style.css"
+                },
+                {
+                    "blank": 60,
+                    "code": 365,
+                    "comment": 11,
+                    "filename": "css/litepicker.css"
+                },
+                {
+                    "blank": 27,
+                    "code": 155,
+                    "comment": 16,
+                    "filename": "css/monthTracker.css"
+                },
+                {
+                    "blank": 23,
+                    "code": 151,
+                    "comment": 6,
+                    "filename": "css/quizz.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 17,
+                    "comment": 11,
+                    "filename": "css/radar.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 43,
+                    "comment": 0,
+                    "filename": "css/search.css"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 5,
+                    "filename": "css/title-part.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 39,
+                    "comment": 31,
+                    "filename": "html/badges.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "html/gamemode-slider.html"
+                },
+                {
+                    "blank": 25,
+                    "code": 158,
+                    "comment": 5,
+                    "filename": "html/quizz.html"
+                },
+                {
+                    "blank": 11,
+                    "code": 70,
+                    "comment": 107,
+                    "filename": "html/radar.html"
+                },
+                {
+                    "blank": 11,
+                    "code": 60,
+                    "comment": 4,
+                    "filename": "html/sandbox.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "html/search.html"
+                },
+                {
+                    "filename": "images/back-arrow.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/bookmark.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/calendar.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/favoris.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/flag.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/home.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/medal.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/molecule.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/profil.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/radar.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/science.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/settings.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/share.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/star.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/Star_of_life3.svg.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "images/success.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 33,
+                    "code": 391,
+                    "comment": 41,
+                    "filename": "js/container.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 14,
+                    "filename": "js/DB_gameFilters.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 25,
+                    "comment": 16,
+                    "filename": "js/DB_gameMode.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 97,
+                    "comment": 23,
+                    "filename": "js/expertise.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 34,
+                    "comment": 5,
+                    "filename": "js/gamemode-slider.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 21,
+                    "comment": 70,
+                    "filename": "js/geometry.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 102,
+                    "comment": 0,
+                    "filename": "js/lvl-titles.js"
+                },
+                {
+                    "blank": 23,
+                    "code": 85,
+                    "comment": 13,
+                    "filename": "js/managerUI.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 127,
+                    "comment": 20,
+                    "filename": "js/monthTracker.js"
+                },
+                {
+                    "blank": 78,
+                    "code": 452,
+                    "comment": 94,
+                    "filename": "js/myindexDB.js"
+                },
+                {
+                    "blank": 63,
+                    "code": 387,
+                    "comment": 60,
+                    "filename": "js/quizz.js"
+                },
+                {
+                    "blank": 14,
+                    "code": 128,
+                    "comment": 9,
+                    "filename": "js/radar.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 2,
+                    "filename": "js/sbrev.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 29,
+                    "comment": 7,
+                    "filename": "js/search.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "js/tabs.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 43,
+                    "comment": 6,
+                    "filename": "js/updateOldKeys.js"
+                },
+                {
+                    "blank": 64,
+                    "code": 284,
+                    "comment": 35,
+                    "filename": "js/users-stats.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "q-data/config.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "q-data/meta.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 242,
+                    "comment": 0,
+                    "filename": "q-data/q1-anatomy.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 368,
+                    "comment": 0,
+                    "filename": "q-data/q10-various.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 320,
+                    "comment": 0,
+                    "filename": "q-data/q11-oncology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 92,
+                    "comment": 0,
+                    "filename": "q-data/q12-cardiology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 362,
+                    "comment": 0,
+                    "filename": "q-data/q2-physiology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q20-hematology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q21-dermatology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q22-histology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q23-cell_biology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q24-immunology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 602,
+                    "comment": 0,
+                    "filename": "q-data/q25-orl_hns.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q26-nutrition.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q27-rheumatology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 128,
+                    "comment": 0,
+                    "filename": "q-data/q28-gastroenterology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 122,
+                    "comment": 0,
+                    "filename": "q-data/q29-pneumology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 320,
+                    "comment": 0,
+                    "filename": "q-data/q3-pathology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 182,
+                    "comment": 0,
+                    "filename": "q-data/q4-surgery.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 290,
+                    "comment": 0,
+                    "filename": "q-data/q5-pharmacology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 242,
+                    "comment": 0,
+                    "filename": "q-data/q6-genetics.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 242,
+                    "comment": 0,
+                    "filename": "q-data/q7-neurology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 182,
+                    "comment": 0,
+                    "filename": "q-data/q8-epidemiology.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 182,
+                    "comment": 0,
+                    "filename": "q-data/q9-endocrinology.json"
+                }
+            ]
+        }
+    ]
+}

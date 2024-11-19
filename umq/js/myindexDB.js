@@ -174,7 +174,7 @@ async function openDB() {
 
         request.onsuccess = (event) => {
             const db = event.target.result;
-            console.log("IndexedDB: real [" + DB_NAME + "] version: " + db.version + " : SUCCESS OPEN");
+            // console.log("IndexedDB: real [" + DB_NAME + "] version: " + db.version + " : SUCCESS OPEN");
             resolve(db); // ok is async promise return
         };
 
