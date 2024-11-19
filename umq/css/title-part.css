@@ -2,18 +2,20 @@
 .title-part {
     display: flex;
     text-decoration: none;
+    justify-content: center;
 }
 
 #title {
-    padding-top: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-top: 12px; */
+    /* padding-left: 16px;
+    padding-right: 16px; */
     color: #00ceff;
     text-decoration: none;
 }
 
 #title:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    transform: scale(1);
 }
 
  .no-underline {
@@ -24,5 +26,5 @@ h1, h2 {
     text-align: center;
     color: white;
     font-size: 20px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }

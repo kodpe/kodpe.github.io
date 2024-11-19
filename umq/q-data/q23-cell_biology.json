@@ -1,0 +1,122 @@
+[
+  {
+    "id": "BC600",
+    "question": "Les ribosomes libres dans le cytoplasme synthétisent principalement des protéines destinées à être sécrétées.",
+    "answer": false,
+    "explanation": "Les ribosomes libres synthétisent des protéines destinées à rester dans le cytoplasme, la mitochondrie ou le noyau. Les protéines sécrétées sont synthétisées sur les ribosomes liés au réticulum endoplasmique."
+  },
+  {
+    "id": "BC601",
+    "question": "Les peroxysomes jouent un rôle essentiel dans la production d'ATP.",
+    "answer": false,
+    "explanation": "Les peroxysomes participent à la dégradation des acides gras à très longue chaîne et à la neutralisation des radicaux libres, mais pas directement à la production d'ATP."
+  },
+  {
+    "id": "BC602",
+    "question": "Les microtubules sont composés de dimères de tubuline α et β.",
+    "answer": true,
+    "explanation": "Les microtubules sont des polymères constitués de dimères de tubuline α et β, qui s'assemblent en structures dynamiques."
+  },
+  {
+    "id": "BC603",
+    "question": "L'ADN mitochondrial est principalement hérité du père.",
+    "answer": false,
+    "explanation": "L'ADN mitochondrial est hérité quasi exclusivement de la mère."
+  },
+  {
+    "id": "BC604",
+    "question": "Les phospholipides membranaires se déplacent librement d'une monocouche à l'autre sans l'aide d'enzymes.",
+    "answer": false,
+    "explanation": "Les phospholipides nécessitent des flippases, floppases ou scramblases pour traverser la bicouche lipidique."
+  },
+  {
+    "id": "BC605",
+    "question": "L'appareil de Golgi est responsable de la modification post-traductionnelle des protéines.",
+    "answer": true,
+    "explanation": "L'appareil de Golgi modifie les protéines via des processus tels que la glycosylation et la sulfatation avant leur tri et leur expédition."
+  },
+  {
+    "id": "BC606",
+    "question": "Les mitochondries contiennent des ribosomes de type eucaryote.",
+    "answer": false,
+    "explanation": "Les mitochondries possèdent des ribosomes de type procaryote (70S), reflétant leur origine endosymbiotique."
+  },
+  {
+    "id": "BC607",
+    "question": "Le cytosquelette d'actine est essentiel pour le transport intracellulaire des organites.",
+    "answer": true,
+    "explanation": "Le cytosquelette d'actine, associé à des moteurs moléculaires comme la myosine, participe au transport intracellulaire, en complément des microtubules."
+  },
+  {
+    "id": "BC608",
+    "question": "Les jonctions serrées permettent un échange rapide d'ions entre deux cellules adjacentes.",
+    "answer": false,
+    "explanation": "Les jonctions serrées empêchent la diffusion de molécules entre les cellules adjacentes. Les jonctions communicantes assurent le transfert d'ions et de petites molécules."
+  },
+  {
+    "id": "BC609",
+    "question": "Les lysosomes maintiennent un pH alcalin pour optimiser leurs enzymes digestives.",
+    "answer": false,
+    "explanation": "Les lysosomes maintiennent un pH acide (environ 4,5-5) pour que leurs hydrolases fonctionnent efficacement."
+  },
+  {
+    "id": "BC610",
+    "question": "La chromatine euchromatique est plus compacte que l'hétérochromatine.",
+    "answer": false,
+    "explanation": "La chromatine euchromatique est moins compacte, facilitant la transcription, tandis que l'hétérochromatine est dense et transcriptionnellement inactive."
+  },
+  {
+    "id": "BC611",
+    "question": "Les protéines membranaires transmembranaires traversent la bicouche lipidique uniquement sous forme de feuillets β.",
+    "answer": false,
+    "explanation": "Les protéines transmembranaires traversent souvent la membrane sous forme d'hélices α, bien que certaines utilisent des feuillets β (ex: porines)."
+  },
+  {
+    "id": "BC612",
+    "question": "Les protéines chaperonnes assistent au repliement des protéines en empêchant les interactions incorrectes entre les chaînes polypeptidiques.",
+    "answer": true,
+    "explanation": "Les protéines chaperonnes comme la HSP70 facilitent le repliement correct des protéines et préviennent leur agrégation."
+  },
+  {
+    "id": "BC613",
+    "question": "Le cycle cellulaire est contrôlé par des protéines appelées kinases dépendantes des cyclines (CDK).",
+    "answer": true,
+    "explanation": "Les CDK, en association avec des cyclines spécifiques, régulent les transitions entre les phases du cycle cellulaire."
+  },
+  {
+    "id": "BC614",
+    "question": "La pompe Na+/K+ ATPase transporte deux ions sodium vers l'intérieur de la cellule et trois ions potassium vers l'extérieur.",
+    "answer": false,
+    "explanation": "La pompe Na+/K+ ATPase transporte trois ions sodium hors de la cellule et deux ions potassium à l'intérieur."
+  },
+  {
+    "id": "BC615",
+    "question": "L'ARN messager (ARNm) peut être directement traduit dans le noyau avant d'être exporté vers le cytoplasme.",
+    "answer": false,
+    "explanation": "La traduction de l'ARNm a lieu uniquement dans le cytoplasme après exportation à partir du noyau."
+  },
+  {
+    "id": "BC616",
+    "question": "Les microfilaments d'actine sont polarisés, avec une extrémité appelée 'plus' qui se polymérise plus rapidement.",
+    "answer": true,
+    "explanation": "Les microfilaments d'actine ont une polarité, l'extrémité 'plus' (barbée) se polymérisant plus rapidement que l'extrémité 'moins' (pointue)."
+  },
+  {
+    "id": "BC617",
+    "question": "Les centrosomes sont composés de deux centrioles entourés d'une matrice protéique.",
+    "answer": true,
+    "explanation": "Les centrosomes, qui organisent les microtubules, contiennent deux centrioles entourés de matériel péricentriolaire."
+  },
+  {
+    "id": "BC618",
+    "question": "La phagocytose est un processus spécifique qui implique des récepteurs spécifiques pour chaque pathogène.",
+    "answer": false,
+    "explanation": "La phagocytose est non spécifique et englobe divers pathogènes ou débris, bien qu'elle puisse être facilitée par des récepteurs comme ceux des opsonines."
+  },
+  {
+    "id": "BC619",
+    "question": "Les lipides membranaires, tels que les sphingolipides, peuvent être impliqués dans la signalisation cellulaire.",
+    "answer": true,
+    "explanation": "Les sphingolipides et autres lipides membranaires jouent un rôle important dans la signalisation cellulaire et la régulation des interactions membranaires."
+  }
+]

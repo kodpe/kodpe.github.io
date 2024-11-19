@@ -1,6 +1,6 @@
 let labelsNames = []; // Tableau pour stocker les noms des pools
 
-const globalExpertiseElement = document.getElementById('expertise-value');
+// const globalExpertiseElement = document.getElementById('expertise-value');
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -16,22 +16,55 @@ function generateRandomArray(size, min, max) {
     return randomArray;
 }
 
+function upperFirstChar(str) {
+    if (!str) return ''; // Vérifie si la chaîne est vide ou null
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 async function loadLabels() {
     const configResponse = await fetch('../q-data/config.json');
     let cfg = await configResponse.json();
     cfg.pools.forEach(pool => {
-        labelsNames.push(pool.name);
+        // labelsNames.push(upperFirstChar(pool.name));
     });
+
+    labelsNames.push("Anatomy");
+    labelsNames.push("Hematology");
+    labelsNames.push("Dermatology");
+    labelsNames.push("Histology");
+    labelsNames.push("Cell biology");
+    labelsNames.push("Immuno.");
+
+    labelsNames.push("Genetics");
+    labelsNames.push("Oncology");
+    labelsNames.push("Pathology");
+    labelsNames.push("Traumatology");
+    labelsNames.push("Epidemiology");
+    labelsNames.push("Various");
+
+    labelsNames.push("Psychiatry");
+    labelsNames.push("Toxicology");
+    labelsNames.push("Neurology");
+    labelsNames.push("Endocrinology");
+    labelsNames.push("Nephrology");
+    labelsNames.push("Gastro.");
+
+    labelsNames.push("Nutrition");
+    labelsNames.push("ORL");
+    labelsNames.push("Pneumo.");
+    labelsNames.push("Cardiology");
+    labelsNames.push("Rheumatology");
+    labelsNames.push("Physiology");
     fillData();
 }
 
 async function fillData() {
     const scores = await getExpertises();
     const scoresArray = Object.values(scores);
-    const average = scoresArray.reduce((sum, value) => sum + value, 0) / scoresArray.length;
+    // const average = scoresArray.reduce((sum, value) => sum + value, 0) / scoresArray.length;
     // const roundedAverage = Math.round(average);
-    globalExpertiseElement.innerText = average.toFixed(2);
-    // console.log(scoresArray);
+    // globalExpertiseElement.innerText = average.toFixed(2);
+    console.log(scoresArray);
     const data = {
         labels: labelsNames,
         datasets: [{
@@ -53,7 +86,7 @@ async function fillData() {
             responsive: true,
             animations: {
                 tension: {
-                    duration: 5000,
+                    duration: 3000,
                     easing: 'linear',
                     from: 0.4,
                     to: -0.2,
@@ -66,7 +99,7 @@ async function fillData() {
                     max: 100,
                     ticks: {
                         display: false,
-                        stepSize: 20,
+                        stepSize: 25,
                     },
                     grid: {
                         color: 'rgba(80, 255, 180, 0.4)',
@@ -77,7 +110,7 @@ async function fillData() {
                     pointLabels: {
                         color: 'rgba(25, 255, 255, 1)',
                         font: {
-                            size: 12,
+                            size: 13,
                         }
                     }
                 },
@@ -88,8 +121,8 @@ async function fillData() {
                 },
                 point: {
                     radius: 3,
-                    hoverRadius: 6,
-                    hitRadius: 18,
+                    hoverRadius: 8,
+                    hitRadius: 12,
                 }
             },
             plugins: {

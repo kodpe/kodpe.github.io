@@ -8,19 +8,68 @@
         content="ULTIMATE MEDICINE QUIZ : Testez vos connaissances en médecine avec le quiz ultime de médecine! Des questions pointues dans tous les domaines médicaux.">
     <title id="page-title">SANDBOX</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="../css/default.css">
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
-    <link rel="stylesheet" href="../css/litepicker.css" />
-    <link rel="stylesheet" href="../css/monthTracker.css" />
+    <!-- <link rel="stylesheet" href="../css/default.css"> -->
+    <!-- <link rel="stylesheet" href="../css/sandbox.css"> -->
+    <link rel="stylesheet" href="../css/container.css">
+    <link rel="stylesheet" href="../css/buttons.css">
 </head>
 
 <body>
-
-    <div class="tracker-container">
-        <div id="previous-month" class="no-interaction my-calendar"></div>
-        <div id="current-month" class="no-interaction my-calendar"></div>
+    <!-- <div>SANDBOX</div> -->
+    <div id="topbar">
+        <div class="tabs">
+            <div class="back" onclick="buttonBackFilter()"><div id="icon-but-back"></div></div>
+            <div class="tab active" onclick="showTab(0)"><div id="icon-tab-0"></div></div>
+            <div class="tab" onclick="showTab(1)"><div id="icon-tab-1"></div></div>
+            <div class="tab" onclick="showTab(2)"><div id="icon-tab-2"></div></div>
+        </div>
     </div>
 
-    <script src="../js/monthTracker.js"></script>
+
+    <div class="tab-content active">
+        <div id="container-main" class="container">
+        </div>
+        <div><br><br><br><br><br><br></div>
+    </div>
+
+    <div class="tab-content">
+        <div id="container-cross" class="container">
+        </div>
+        <div><br><br><br><br><br><br></div>
+    </div>
+
+    <div class="tab-content">
+        <div id="container-niches" class="container">
+        </div>
+        <div><br><br><br><br><br><br></div>
+    </div>
+
+
+    <div class="absolute-bot">
+        <div>
+            <a href="../html/quizz.html" class="image-button" target="_self">
+                <img src="../images/home.png" alt="Icone"></a>
+        </div>
+        <div>
+            <a href="../html/radar.html" class="image-button" target="_self">
+                <img src="../images/molecule.png" alt="Icone"></a>
+        </div>
+        <div>
+            <a href="" class="image-button" target="_self">
+                <img src="../images/bookmark.png" alt="Icone" class="img-off"></a>
+        </div>
+        <div>
+            <a href="" class="image-button" target="_self">
+                <img src="../images/settings.png" alt="Icone" class="img-off"></a>
+        </div>
+    </div>
+
+
+    <script src="../js/myindexDB.js"></script>
+    <script src="../js/DB_gameFilters.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/container.js"></script>
+    <!-- <script src="../js/sandbox.js"></script> -->
 </body>
+
 </html>

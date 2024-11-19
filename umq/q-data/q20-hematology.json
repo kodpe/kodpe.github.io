@@ -1,0 +1,122 @@
+[
+  {
+    "id": "HE200",
+    "question": "La drépanocytose est causée par une mutation ponctuelle sur le gène de la globine bêta située sur le chromosome 16.",
+    "answer": false,
+    "explanation": "La drépanocytose est causée par une mutation du gène de la globine bêta, mais ce gène est situé sur le chromosome 11, et non le 16."
+  },
+  {
+    "id": "HE201",
+    "question": "Un test de Coombs direct positif indique la présence d'auto-anticorps dirigés contre les globules rouges du patient.",
+    "answer": true,
+    "explanation": "Le test de Coombs direct détecte les anticorps ou les protéines du complément directement fixés à la surface des globules rouges."
+  },
+  {
+    "id": "HE202",
+    "question": "Dans le lymphome de Burkitt, la translocation t(14;18) est un événement clé.",
+    "answer": false,
+    "explanation": "Le lymphome de Burkitt est associé à la translocation t(8;14), impliquant le gène MYC. La translocation t(14;18) est typique du lymphome folliculaire."
+  },
+  {
+    "id": "HE203",
+    "question": "Le déficit en G6PD peut entraîner une anémie hémolytique aiguë suite à l'ingestion de fèves.",
+    "answer": true,
+    "explanation": "Les fèves contiennent des substances oxydantes qui peuvent déclencher une hémolyse chez les patients déficients en G6PD."
+  },
+  {
+    "id": "HE204",
+    "question": "La polyglobulie vraie est toujours secondaire à une hypoxie chronique.",
+    "answer": false,
+    "explanation": "La polyglobulie vraie est une maladie myéloproliférative primaire causée par une mutation de JAK2 et n'est pas nécessairement liée à une hypoxie."
+  },
+  {
+    "id": "HE205",
+    "question": "Une augmentation de la ferritine sérique est toujours indicative d'une surcharge en fer.",
+    "answer": false,
+    "explanation": "La ferritine peut être augmentée dans les états inflammatoires, les infections ou les syndromes métaboliques sans qu'il y ait nécessairement une surcharge en fer."
+  },
+  {
+    "id": "HE206",
+    "question": "Le purpura thrombopénique idiopathique (PTI) est généralement causé par une production insuffisante de plaquettes par la moelle osseuse.",
+    "answer": false,
+    "explanation": "Le PTI est causé par une destruction accrue des plaquettes médiée par des auto-anticorps, alors que la production médullaire est généralement normale."
+  },
+  {
+    "id": "HE207",
+    "question": "L'hémophilie A est plus fréquente que l'hémophilie B.",
+    "answer": true,
+    "explanation": "L'hémophilie A, causée par un déficit en facteur VIII, est plus fréquente que l'hémophilie B, causée par un déficit en facteur IX."
+  },
+  {
+    "id": "HE208",
+    "question": "La maladie de von Willebrand affecte uniquement les plaquettes.",
+    "answer": false,
+    "explanation": "La maladie de von Willebrand affecte à la fois la fonction plaquettaire et la coagulation en diminuant les niveaux de facteur VIII."
+  },
+  {
+    "id": "HE209",
+    "question": "Le myélome multiple peut provoquer une hypercalcémie par libération de PTHrP (parathyroid hormone-related protein).",
+    "answer": false,
+    "explanation": "L'hypercalcémie dans le myélome multiple est causée par la résorption osseuse due à l'activité des ostéoclastes et non par la production de PTHrP."
+  },
+  {
+    "id": "HE210",
+    "question": "Une hémoglobine de type HbA2 augmentée est un indicateur d'une bêta-thalassémie.",
+    "answer": true,
+    "explanation": "Une augmentation de HbA2 est typique dans la bêta-thalassémie mineure."
+  },
+  {
+    "id": "HE211",
+    "question": "La leucémie aiguë lymphoblastique (LAL) est plus fréquente chez les adultes que chez les enfants.",
+    "answer": false,
+    "explanation": "La LAL est plus fréquente chez les enfants, bien qu'elle puisse survenir à tout âge."
+  },
+  {
+    "id": "HE212",
+    "question": "Les schistocytes dans un frottis sanguin sont caractéristiques de la leucémie myéloïde chronique (LMC).",
+    "answer": false,
+    "explanation": "Les schistocytes sont caractéristiques de la microangiopathie thrombotique et non de la LMC."
+  },
+  {
+    "id": "HE213",
+    "question": "Un temps de thrombine prolongé indique une anomalie au niveau du fibrinogène.",
+    "answer": true,
+    "explanation": "Le temps de thrombine mesure la conversion du fibrinogène en fibrine, et un allongement peut indiquer un déficit en fibrinogène ou sa dysfonction."
+  },
+  {
+    "id": "HE214",
+    "question": "La leucémie myéloïde chronique (LMC) est associée à une mutation du gène BCR-ABL due à une translocation entre les chromosomes 9 et 22.",
+    "answer": true,
+    "explanation": "La LMC est caractérisée par le chromosome de Philadelphie, résultant de la translocation t(9;22) créant le gène de fusion BCR-ABL."
+  },
+  {
+    "id": "HE215",
+    "question": "Le facteur V Leiden est associé à un risque accru de saignement.",
+    "answer": false,
+    "explanation": "Le facteur V Leiden est une mutation prothrombotique qui augmente le risque de thrombose, pas de saignement."
+  },
+  {
+    "id": "HE216",
+    "question": "Une aplasie médullaire entraîne une pancytopénie et peut être causée par une exposition aux radiations.",
+    "answer": true,
+    "explanation": "L'aplasie médullaire provoque une diminution de toutes les lignées sanguines et peut être secondaire à une exposition aux radiations ionisantes."
+  },
+  {
+    "id": "HE217",
+    "question": "La macrocytose peut être un signe d'alcoolisme chronique.",
+    "answer": true,
+    "explanation": "L'alcoolisme chronique peut provoquer une macrocytose même en l'absence d'anémie, en raison de l'effet toxique de l'alcool sur la moelle osseuse."
+  },
+  {
+    "id": "HE218",
+    "question": "Une hyperéosinophilie peut être le signe d'une infection parasitaire ou d'un syndrome myéloprolifératif.",
+    "answer": true,
+    "explanation": "Une hyperéosinophilie est fréquemment observée dans les infections parasitaires et certaines maladies myéloprolifératives, comme le syndrome hyperéosinophilique."
+  },
+  {
+    "id": "HE219",
+    "question": "La maladie de Castleman est une maladie auto-immune systémique.",
+    "answer": false,
+    "explanation": "La maladie de Castleman est une prolifération lymphoïde bénigne qui peut être unicentrique ou multicentrique, mais ce n'est pas une maladie auto-immune."
+  }
+]

@@ -4,75 +4,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ULTIMATE MEDICINE QUIZ : Testez vos connaissances en médecine avec le quiz ultime de médecine! Des questions pointues dans tous les domaines médicaux.">
-    <title id="page-title">ULTIMATE MEDICINE QUIZ</title>
+    <meta name="description"
+        content="ULTIMATE MEDICINE QUIZ : Testez vos connaissances en médecine avec le quiz ultime de médecine! Des questions pointues dans tous les domaines médicaux.">
+    <title>ULTIMATE MEDICINE QUIZ</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="../css/quizz.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/title-part.css">
+    <link rel="stylesheet" href="../css/gamemode-slider.css">
+    <link rel="stylesheet" href="../css/container.css">
+    <link rel="stylesheet" href="../css/ig-style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div id="global-none" class="global-off">
 
-        <div class="title-part">
-            <div class="notingame">
-                <a href="radar.html" class="image-button" target="_self">
-                    <img src="../images/radar.png" alt="Icone">
-                </a>
-            </div>
-            <div>
+        <div id="gm-top-title">
+            <div id="title-part" class="title-part">
                 <a href="quizz.html" class="no-underline" target="_self">
                     <h1 id="title">ULTIMATE MEDICINE QUIZ</h1>
                 </a>
             </div>
-            <div class="notingame">
-                <a href="badges.html" class="image-button" target="_self">
-                    <img src="../images/medal.png" alt="Icone">
-                </a>
+
+        </div>
+
+        <div id="topbar">
+            <div class="tabs">
+                <div class="back" onclick="buttonBackFilter()">
+                    <div id="icon-but-back"></div>
+                </div>
+                <div class="tab active" onclick="showTab(0)">
+                    <div id="icon-tab-0"></div>
+                </div>
+                <div class="tab" onclick="showTab(1)">
+                    <div id="icon-tab-1"></div>
+                </div>
+                <div class="tab" onclick="showTab(2)">
+                    <div id="icon-tab-2"></div>
+                </div>
             </div>
         </div>
 
-        <div id="pool-selection" class="hidden">
-            <div id="select-all-cards" class="pool-card">All</div>
+
+        <div id="cnt1" class="tab-content active">
+            <div id="container-main" class="container">
+            </div>
+            <div><br><br><br><br><br><br></div>
         </div>
 
-        <div class="hidden noop"> <!-- notingame buttons flash bug -->
+        <div id="cnt2" class="tab-content">
+            <div id="container-cross" class="container">
+            </div>
+            <div><br><br><br><br><br><br></div>
+        </div>
+
+        <div id="cnt3" class="tab-content">
+            <div id="container-niches" class="container">
+            </div>
+            <div><br><br><br><br><br><br></div>
+        </div>
+
+
+        <!-- // in-game elements ig- -->
+        <div id="ig-global">
+            <div id="ig-scorebar">
+                <div id="ig-winrate">ig-winrate</div>
+                <div id="ig-combo">ig-combo</div>
+                <div id="ig-xp">ig-xp</div>
+            </div>
+
+            <div id="ig-answer-score">
+                <div id="ig-answer-title">ig-answer-title</div>
+                <!-- <div id="ig-answer-xp">ig-answer-xp</div> -->
+            </div>
+            <div id="ig-final-score">
+                <div id="ig-final-title"></div>
+                <div id="ig-final-ratio">ig-final-ratio</div>
+            </div>
+
+            <div id="ig-question-card" class="ig-card">
+                <div class="ig-question">ig-question</div>
+                <div class="ig-progress">ig-progress</div>
+                <div class="ig-title-card">ig-title-card</div>
+            </div>
+
+            <div id="ig-answer-card" class="ig-card">
+                <div id="ig-answer">ig-answer</div>
+                <div id="ig-question-to-flip" class="ig-question put-to-back">ig-question</div>
+                <div id="ig-favorite">ig-favorite</div>
+                <div id="ig-report">ig-report</div>
+                <div id="ig-swipe">ig-swipe</div>
+                <div class="ig-progress">ig-progress</div>
+                <div class="ig-title-card">ig-title-card</div>
+            </div>
+
+            <div id="ig-history-card" class="ig-card">
+                <div id="ig-history-grid"></div>
+            </div>
+
+            <div id="ig-final-stats">
+                <div id="ig-fstats-left">
+                    <div id="ig-fstats-winrate"   style="white-space: pre-wrap;">winrate  :</div>
+                    <div id="ig-fstats-bestcombo" style="white-space: pre-wrap;">bestcombo:</div>
+                    <div id="ig-fstats-time"      style="white-space: pre-wrap;">time     :</div>
+                </div>
+                <div id="ig-fstats-right">
+                    <div id="ig-fstats-xp-day">day</div>
+                    <div id="ig-fstats-xp-marathon">marathon</div>
+                    <div id="ig-fstats-xp-pelerinage">pelerinage</div>
+                    <div id="ig-fstats-xp-perfect">perfect</div>
+                    <div id="ig-fstats-xp-total" style="white-space: pre-wrap;">total</div>
+                </div>
+            </div>
+
+            <div id="ig-action-area">
+                <div id="ig-true-btn" class="modern-button">TRUE</div>
+                <div id="ig-false-btn" class="modern-button">FALSE</div>
+                <div id="ig-next-btn" class="modern-button">NEXT</div>
+                <div id="ig-end-btn" class="modern-button">END</div>
+            </div>
+        </div>
+        <!--  -->
+
+        <div id="gm-menu">
+            <div class="modern-row">
+                <div id="go-daily" class="modern-button modern-card">daily<br>quiz</div>
+                <div id="go-mistakes" class="bro modern-button modern-card">replay<br>mistakes</div>
+            </div>
+            <div class="modern-button-container">
+                <div id="go-categories" class="modern-button">categories</div>
+                <div id="filters-infos">...</div>
+
+                <div class="slider-container">
+                    <input type="range" id="slider" min="0" max="2" step="1">
+                    <div class="values">
+                        <span id="value-display">10</span>
+                    </div>
+                </div>
+                <div id="go-play" class="modern-button">play</div>
+            </div>
+        </div>
+
+        <!-- </div> -->
+
+        <div id="info-version" class="notingame">0.9.50-r</div>
+
+        <div id="absolute-bot" class="absolute-bot">
             <div>
-                <button id="start-classic" class="std-btn hidden noop notingame">Classic<br><br>10</button>
-                <button id="start-daily" class="std-btn hidden noop notingame">Daily Quizz<br><br>10</button>
+                <img id="fixhomebut" onclick="buttonBackFilter()" class="image-button" src="../images/home.png"
+                    alt="Icone">
             </div>
             <div>
-                <button id="start-marathon" class="std-btn hidden noop notingame">Marathon<br><br>42</button>
-                <button id="start-devotion" class="std-btn hidden noop notingame">Devotion<br><br>ALL</button>
+                <a href="../html/radar.html" class="image-button" target="_self">
+                    <img src="../images/profil.png" alt="Icone"></a>
             </div>
             <div>
-                <h5 class="notingame">version 0.9.45</h5>
+                <a href="" class="image-button" target="_self">
+                    <img src="../images/favoris.png" alt="Icone" class="img-off"></a>
             </div>
-
+            <div>
+                <a href="" class="image-button" target="_self">
+                    <img src="../images/settings.png" alt="Icone" class="img-off"></a>
+            </div>
         </div>
 
-        <div id="score-container" class="hidden">
-            <h3 id="score-tracker">
-                <span id="score-title"></span>
-                <span id="current-score"></span>/
-                <span id="nb-questions"></span>
-                <span id="qid"></span>
-            </h3>
-            <button class="std-btn hidden" id="restart-btn">CONTINUE</button>
-        </div>
-
-        <div id="feedback"></div>
-        <div id="question-container" class="hidden">
-            <p class="question" id="question"></p>
-            <button class="std-btn true-btn" id="true-btn">VRAI</button>
-            <button class="std-btn false-btn" id="false-btn">FAUX</button>
-            <button class="std-btn" id="next-btn">NEXT</button>
-        </div>
     </div>
 
+    <script src="../js/managerUI.js"></script>
     <script src="../js/myindexDB.js"></script>
+    <script src="../js/updateOldKeys.js"></script>
+    <script src="../js/users-stats.js"></script>
+    <script src="../js/DB_gameMode.js"></script>
+    <script src="../js/gamemode-slider.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/DB_gameFilters.js"></script>
+    <script src="../js/container.js"></script>
+    <script src="../js/sbrev.js"></script>
     <script src="../js/quizz.js"></script>
+    <!-- <script src="../js/geometry.js"></script> -->
 </body>
 
 </html>

@@ -5,45 +5,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ULTIMATE MEDICINE QUIZ : Testez vos connaissances en médecine avec le quiz ultime de médecine! Des questions pointues dans tous les domaines médicaux.">
-    <title>Graphique Radar Médical</title>
+    <title>ULTIMATE MEDICINE QUIZ</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap">
     <link rel="stylesheet" href="../css/radar.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/title-part.css">
+    <link rel="stylesheet" href="../css/monthTracker.css" />
+    <link rel="stylesheet" href="../css/achievements.css" />
 </head>
 
 <body>
-        <div class="title-part">
+
+    <div class="dashboard">
+        <!-- <div class="title-part">
             <div>
-                <a href="radar.html" class="image-button" target="_self">
-                    <img src="../images/radar.png" alt="Icone">
-                </a>
+                <h1 id="title">ULTIMATE MEDICINE QUIZ</h1>
             </div>
-            <div>
-                <a href="quizz.html" class="no-underline" target="_self">
-                    <h1 id="title">ULTIMATE MEDICINE QUIZ</h1>
-                </a>
-            </div>
-            <div>
-                <a href="badges.html" class="image-button" target="_self">
-                    <img src="../images/medal.png" alt="Icone">
-                </a>
+        </div> -->
+        <div class="shadowBox">
+
+        <div class="levelcircle">
+            <svg>
+                <circle class="bg" cx="57" cy="57" r="52" />
+                <circle class="meter-1" cx="57" cy="57" r="52" />
+                <!-- <circle class="meter-1" cx="57" cy="57" r="69" /> -->
+            </svg>
+            <div class="inner"><span id="user-lvl">182</span><div id="xptxt"><span id="user-xp"></span> XP</div>
             </div>
         </div>
 
-        <canvas id="myChart"></canvas>
-    <div class="avg-expertise-txt">AVERAGE EXPERTISE<p><span id="expertise-value">undef</span><span> %</span></p>
+        <div class="user-stats">
+            <div id="user-title">Title</div>
+            <div id="user-badges">Badges : nan</div>
+            <div id="user-games">Nb games : nan</div>
+            <div id="user-winrate">winrate : nan</div>
+        </div>
+        </div>
     </div>
+
+    <div class="tracker-container">
+        <div id="prepre-month" class="no-interaction my-calendar"></div>
+        <div id="previous-month" class="no-interaction my-calendar"></div>
+        <div id="current-month" class="no-interaction my-calendar"></div>
+    </div>
+
+        <canvas id="myChart"></canvas>
+    <!-- <div class="avg-expertise-txt hidden">AVERAGE EXPERTISE<p><span id="expertise-value">undef</span><span> %</span></p> -->
+    </div>
+
+<!--
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ach-container">
+        <div class="ach-icon">
+            <div class="hexagon hexagon-bottom"></div>
+            <div class="hexagon hexagon-top"></div>
+            <p class="lvl-star">★★★</p>
+        </div>
+        <div class="ach-bar">
+            <div class="ach-name">name</div>
+            <div class="ach-description">description</div>
+            <div class="ach-value">100 / 500</div>
+            <div class="ach-progress-bar">
+                <div class="ach-progress-bar-value"></div>
+            </div>
+        </div>
+    </div>
+
+-->
 
     <div class="absolute-bot">
-        <a href="../html/quizz.html" class="image-button" target="_self">
-            <img src="../images/back-arrow.png" alt="Icone">
-        </a>
+        <div>
+            <a href="../html/quizz.html" class="image-button" target="_self">
+                <img src="../images/home.png" alt="Icone"></a>
+        </div>
+        <div>
+            <a href="../html/radar.html" class="image-button" target="_self">
+                <img src="../images/profil.png" alt="Icone"></a>
+        </div>
+        <div>
+            <a href="" class="image-button" target="_self">
+                <img src="../images/favoris.png" alt="Icone" class="img-off"></a>
+        </div>
+        <div>
+            <a href="" class="image-button" target="_self">
+                <img src="../images/settings.png" alt="Icone" class="img-off"></a>
+        </div>
     </div>
 
+    <script src="../js/lvl-titles.js"></script>
     <script src="../js/myindexDB.js"></script>
     <script src="../js/expertise.js"></script>
     <script src="../js/radar.js"></script>
+    <script src="../js/monthTracker.js"></script>
+    <script src="../js/users-stats.js"></script>
+    <!-- <script src="../js/sbrev.js"></script> -->
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 const weightCorrect = 0.7;
 const weightAnswered = 0.3;
-const sigmoideCurveControl = 4;
 
 function getExpScore(totalQuestions, answeredQuestions, correctAnswers) {
     const winrate = correctAnswers / answeredQuestions;
@@ -15,31 +14,28 @@ function getExpScore(totalQuestions, answeredQuestions, correctAnswers) {
     return expertiseScore;
 }
 
-// function getScoreSigmoide(score) {
-//     let sigval = 100 * (1 - 1 / (1 + Math.pow(score / 100, sigmoideCurveControl)));
-//     if (Number.isNaN(sigval))
-//         sigval = 0;
-//     return sigval;
-// } // DEPR
-
-function getExpertiseForDomain(domainName, questionsCounts) {
+function getExpertiseForDomain(domainName) {
     return new Promise((resolve, reject) => {
         // Supposons que db est déjà ouvert
         openDB().then((db) => {
-            const transaction = db.transaction("domains", "readonly");
-            const store = transaction.objectStore("domains");
+            const transaction = db.transaction(DB_STORE_USER_DOMAINS, "readonly");
+            const store = transaction.objectStore(DB_STORE_USER_DOMAINS);
 
             const request = store.get(domainName);
             request.onsuccess = (event) => {
                 const data = event.target.result;
-                console.log(data);
 
                 if (data) {
-                    const totalQuestions = questionsCounts[domainName];
-                    // const expertiseScore = getScoreSigmoide(getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers));
-                    const expertiseScore = getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers);
+                    // console.log("DBG BEGIN " + data);
+                    // console.log("DBG domainName [" + domainName +"]");
+                    const totalQuestions = DB_NB_QUESTIONS_QUIZ[domainName];
+                    // console.log("DBG nb " + totalQuestions);
+
+                    let expertiseScore = getExpScore(totalQuestions, data.nbAnswered, data.nbCorrectAnswers);
                     if (Number.isNaN(expertiseScore))
                         expertiseScore = 0;
+                    // if (expertiseScore == 0)
+                        // expertiseScore = 70;
                     resolve({ domainName, expertiseScore }); // Résoudre avec le résultat
                 } else {
                     reject(`Données non trouvées pour ${domainName}`);
@@ -53,31 +49,21 @@ function getExpertiseForDomain(domainName, questionsCounts) {
     });
 }
 
-function getAllExpertisesScores(questionsCounts) {
-    const domains = [
-        "Anatomy",
-        "Physiology",
-        "Pathology",
-        "Surgery",
-        "Pharmacology",
-        "Genetics",
-        "Neurology",
-        "Epidemiology",
-        "Endocrinology",
-        "Miscellaneous",
-        "Oncology",
-        "Cardiology"
-    ];
+function getAllExpertisesScores() {
+    const domains = DB_STORE_USER_DOMAINS_RECORDS;
+    const removedElement = domains.pop(); // REMOVE TOTAL BUG
     const scores = {};  // Objet pour stocker les scores
 
     // Créer un tableau de Promises pour récupérer les scores pour chaque domaine
     const promises = domains.map(domainName => {
-        return getExpertiseForDomain(domainName, questionsCounts)
+        return getExpertiseForDomain(domainName)
             .then(result => {
-                scores[result.domainName] = result.expertiseScore;  // Ajouter le score à l'objet scores
+                // console.log("DBG END " + result.expertiseScore);
+                scores[result.domainName] = result.expertiseScore;
             })
             .catch(error => {
-                console.error(error);  // Gérer les erreurs si le domaine n'a pas pu être récupéré
+                scores[domainName] = 0;
+                console.error(error);
             });
     });
 
@@ -141,9 +127,6 @@ async function countQuestionsInPools() {
 }
 
 async function getExpertises() {
-    const nbQuestions = await countQuestionsInPools(); // Attendez que les données soient prêtes
-    let scores = await getAllExpertisesScores(nbQuestions); // Utilisez nbQuestions une fois qu'il est défini
+    let scores = await getAllExpertisesScores();
     return scores;
 }
-
-// let scores = getExpertises();

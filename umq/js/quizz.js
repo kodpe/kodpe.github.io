@@ -1,4 +1,3 @@
-const version = '0'; // depr
 let questions = [];
 let selectedPools = [];
 let config = {};
@@ -10,45 +9,68 @@ let historyResult = '';
 let selectAllCardsBool = false;
 let isUniqDomainQuiz = false;
 let domainName = '';
+let xp = 0;
+let comboModifier = 0;
+let bestcombo = 0;
+let bonusPercent = 0;
+let fliped = false;
+let currentQID = "";
+let gameStartTime = new Date();
+let endStartTime = new Date();
 
-const blankLine = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp';
+// <!-- // in-game elements ig- -->
+const winrateElem = document.getElementById('ig-winrate');
+const comboElem = document.getElementById('ig-combo');
+const xpElem = document.getElementById('ig-xp');
 
-const noopElements = document.getElementsByClassName('noop');
-const notingameElements = document.getElementsByClassName('notingame');
+const answerTitleElem = document.getElementById('ig-answer-title');
+// const answerXpElem = document.getElementById('ig-answer-xp');
 
-const poolContainer = document.getElementById('pool-selection');
-const selectAllCardsElement = document.getElementById('select-all-cards');
-const startClassic = document.getElementById('start-classic');
-const startMarathon = document.getElementById('start-marathon');
-const startDaily = document.getElementById('start-daily');
-const startDevotion = document.getElementById('start-devotion');
-const questionElement = document.getElementById('question');
-const trueButton = document.getElementById('true-btn');
-const falseButton = document.getElementById('false-btn');
-const feedbackElement = document.getElementById('feedback');
-const restartButton = document.getElementById('restart-btn');
-const nextButton = document.getElementById('next-btn');
-const marathonSizeSpan = document.getElementById('marathon-size');
+const finalTitleElem = document.getElementById('ig-final-title');
+const finalRatioElem = document.getElementById('ig-final-ratio');
 
-const scoreContainer = document.getElementById('score-container');
-const scoreTitleElement = document.getElementById('score-title');
-const currentScoreElement = document.getElementById('current-score');
-const nbQuestionsElement = document.getElementById('nb-questions');
-const qidElement = document.getElementById('qid');
+const questionElemS = document.getElementsByClassName('ig-question');
+const progressElemS = document.getElementsByClassName('ig-progress');
+const titleCardElemS = document.getElementsByClassName('ig-title-card');
 
-// const lvlContainer = document.getElementById('difficulty-container');
-// const lvlHardElement = document.getElementById('lvl-hard');
-// const lvlNightElement = document.getElementById('lvl-nightmare');
-// const lvlMadElement = document.getElementById('lvl-madness');
+const answerCardElem = document.getElementById('ig-answer-card');
+const questionToFlipElem = document.getElementById('ig-question-to-flip');
 
+const answerElem = document.getElementById('ig-answer');
+const favoriteElem = document.getElementById('ig-favorite');
+favoriteElem.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m480-121-41-37q-105.77-97.12-174.88-167.56Q195-396 154-451.5T96.5-552Q80-597 80-643q0-90.15 60.5-150.58Q201-854 290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.42Q880-733.15 880-643q0 46-16.5 91T806-451.5Q765-396 695.88-325.56 626.77-255.12 521-158l-41 37Zm0-79q101.24-93 166.62-159.5Q712-426 750.5-476t54-89.14q15.5-39.13 15.5-77.72 0-66.14-42-108.64T670.22-794q-51.52 0-95.37 31.5T504-674h-49q-26-56-69.85-88-43.85-32-95.37-32Q224-794 182-751.5t-42 108.82q0 38.68 15.5 78.18 15.5 39.5 54 90T314-358q66 66 166 158Zm0-297Z"/></svg>`;
+const reportElem = document.getElementById('ig-report');
+reportElem.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M480-281q14 0 24.5-10.5T515-316q0-14-10.5-24.5T480-351q-14 0-24.5 10.5T445-316q0 14 10.5 24.5T480-281Zm-30-144h60v-263h-60v263ZM330-120 120-330v-300l210-210h300l210 210v300L630-120H330Zm25-60h250l175-175v-250L605-780H355L180-605v250l175 175Zm125-300Z"/></svg>`;
+const swipeElem = document.getElementById('ig-swipe');
+swipeElem.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M470-80q-21.88 0-41.94-8T392-112L184-320l15-22q11-16 28.5-22.5T264-366l96 26v-340q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v420l-124-33 139.18 139.18Q442-147 451.13-143.5q9.13 3.5 18.87 3.5h170q42 0 71-29t29-71v-180q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v180q0 66-47 113T640-80H470Zm17-290v-170q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v170h-60Zm126 0v-130q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v130h-60Zm-46 105Zm313-435H700v-40h133q-75-65-164.5-102.5T480-880q-99 0-188.5 37.5T127-740h133v40H80v-180h40v93q78-62 169-97.5T480-920q100 0 191 35.5T840-787v-93h40v180Z"/></svg>`;
 
-function SetTitleVersion() {
-    const pageTitleElement = document.getElementById('page-title');
-    const titleElement = document.getElementById('title');
-    pageTitleElement.innerText += ' ' + version;
-    titleElement.innerText += ' ' + version;
-}
-//SetTitleVersion();
+const historyCardElem = document.getElementById('ig-history-card');
+const historyGridElem = document.getElementById('ig-history-grid');
+
+const finalStatsElem = document.getElementById('ig-final-stats');
+const fstatsWinrate = document.getElementById('ig-fstats-winrate');
+const fstatsBestCombo = document.getElementById('ig-fstats-bestcombo');
+const fstatsTime = document.getElementById('ig-fstats-time');
+
+const fstatsXpDay = document.getElementById('ig-fstats-xp-day');
+fstatsXpDay.innerHTML = "☀️ +100%";
+const fstatsXpMarathon = document.getElementById('ig-fstats-xp-marathon');
+fstatsXpMarathon.innerHTML = "🏃 +20%";
+const fstatsXpPelerinage = document.getElementById('ig-fstats-xp-pelerinage');
+fstatsXpPelerinage.innerHTML = "🗿 +50%";
+const fstatsXpPerfect = document.getElementById('ig-fstats-xp-perfect');
+fstatsXpPerfect.innerHTML = "🏆 +10%";
+const fstatsXpTotal = document.getElementById('ig-fstats-xp-total');
+fstatsXpTotal.innerHTML = " +9999 XP";
+
+const trueButton = document.getElementById('ig-true-btn');
+const falseButton = document.getElementById('ig-false-btn');
+const nextButton = document.getElementById('ig-next-btn');
+const endButton = document.getElementById('ig-end-btn');
+
+const validMarkIcon =`<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m419-321 289-289-43-43-246 246-119-119-43 43 162 162ZM180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h600q24 0 42 18t18 42v600q0 24-18 42t-42 18H180Zm0-60h600v-600H180v600Zm0-600v600-600Z" /></svg>`;
+const missMarkIcon =`<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m336-294 144-144 144 144 42-42-144-144 144-144-42-42-144 144-144-144-42 42 144 144-144 144 42 42ZM180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h600q24 0 42 18t18 42v600q0 24-18 42t-42 18H180Zm0-60h600v-600H180v600Zm0-600v600-600Z"/></svg>`;
+// <!--  -->
 
 async function loadConfig() {
     try {
@@ -57,93 +79,11 @@ async function loadConfig() {
             throw new Error('Erreur lors du chargement de config.json');
         }
         config = await configResponse.json();
-        generatePoolCards();
     } catch (error) {
         console.error('Erreur de chargement de la configuration :', error);
     }
 }
 
-// Générer dynamiquement les cartes de sélection des pools
-function generatePoolCards() {
-    config.pools.forEach(pool => {
-        const card = document.createElement('div');
-        card.className = 'pool-card';
-        card.dataset.pool = pool.file;
-        card.innerText = pool.name;
-        card.addEventListener('click', () => togglePoolSelection(card, pool.file));
-        poolContainer.insertBefore(card, selectAllCardsElement);
-        // poolContainer.insertBefore(selectAllCardsElement, startClassic);
-        // poolContainer.insertBefore(startClassic, startMarathon);
-    });
-}
-
-
-/* */
-// function difficultySelection(lvl) {
-//     if (lvl === 'hard') {
-//         lvlHardElement.classList.add('selected');
-//         lvlNightElement.classList.remove('selected');
-//         lvlMadElement.classList.remove('selected');
-//     }
-//     else if (lvl === 'night') {
-//         lvlNightElement.classList.add('selected');
-//         lvlHardElement.classList.remove('selected');
-//         lvlMadElement.classList.remove('selected');
-//     }
-//     else if (lvl === 'mad') {
-//         lvlMadElement.classList.add('selected');
-//         lvlHardElement.classList.remove('selected');
-//         lvlNightElement.classList.remove('selected');
-//     }
-// }
-/**/
-
-// Gestion de la sélection des pools
-function togglePoolSelection(card, poolFile) {
-    if (selectedPools.includes(poolFile)) {
-        selectedPools = selectedPools.filter(p => p !== poolFile);
-        card.classList.remove('selected');
-    } else {
-        selectedPools.push(poolFile);
-        card.classList.add('selected');
-    }
-    updateStartButtons();
-}
-
-function updateStartButtons() {
-    if (selectedPools.length === 0) {
-        Array.from(noopElements).forEach(element => element.classList.add('hidden'));
-        // difficultySelection('hard');
-    } else {
-        Array.from(noopElements).forEach(element => element.classList.remove('hidden'));
-        // difficultySelection('hard');
-    }
-}
-
-function toggleSelectAllCards() {
-    selectAllCardsBool = !selectAllCardsBool;
-
-    if (selectAllCardsBool) {
-        config.pools.forEach(pool => {
-            if (!selectedPools.includes(pool.file)) {
-                selectedPools.push(pool.file);
-            }
-            const card = document.querySelector(`.pool-card[data-pool="${pool.file}"]`);
-            if (card) card.classList.add('selected');
-        });
-        selectAllCardsElement.classList.add('selected');
-    } else {
-        selectedPools = [];
-        document.querySelectorAll('.pool-card').forEach(card => {
-            card.classList.remove('selected');
-        });
-        selectAllCardsElement.classList.remove('selected');
-    }
-
-    updateStartButtons();
-}
-
-// Fonction pour mélanger les questions
 function shuffleQuestions(questionsArray) {
     for (let i = questionsArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1)); // Index aléatoire
@@ -153,28 +93,51 @@ function shuffleQuestions(questionsArray) {
 
 // Charger les questions en fonction des pools sélectionnés
 async function loadQuestions() {
+
+    // console.log("filters:", gameFilters);
+    const cats = Object.entries(gameFilters)
+        .filter(([key, value]) => value === true)  // Filtre les clés avec la valeur true
+        .map(([key, value]) => key);
+    console.log("cats:", cats);
+
+    console.log(selectedPools);
+    console.log(config.pools);
+
+    // Étape 2 : Ajouter à selectedPools les pools correspondants
+    config.pools.forEach(pool => {
+        if (cats.includes(pool.name)) {  // Vérifie si le pool.name est dans cats
+            selectedPools.push(pool);   // Ajoute le pool à selectedPools
+        }
+    });
+
     questions = []; // Reset questions
+    if (selectedPools.length === 0 || quizMode === 'daily') {
+        console.log('Aucun pool sélectionné OR daily mode => ALL');
+        selectedPools = [];
+        config.pools.forEach(pool => {
+            selectedPools.push(pool);
+        });
+    }
     if (selectedPools.length === 0) {
-        console.log('Aucun pool sélectionné');
+        console.error('Aucun pool sélectionné');
         return;
     }
     try {
         // console.log(selectedPools);
-        for (const poolFile of selectedPools) {
-            const fileName = poolFile.split('-').pop().replace('.json', '');
-            domainName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-            // console.log(domainName);
-            const response = await fetch(poolFile);
+        for (const pool of selectedPools) {
+            // console.log(pool.name);
+            const response = await fetch(pool.file);
             if (!response.ok) {
-                throw new Error(`Erreur de chargement des questions depuis ${poolFile}`);
+                throw new Error(`Erreur de chargement des questions depuis ${pool.file}`);
             }
             const poolQuestions = await response.json();
             poolQuestions.forEach(question => {
-                question.domainName = domainName;
+                question.domainName = pool.name;
             });
             // console.log(poolQuestions);
             questions = questions.concat(poolQuestions);
         }
+        // console.log(questions);
         numQuestions = questions.length;
         if (quizMode === 'classic') {
             numQuestions = 10;
@@ -185,7 +148,14 @@ async function loadQuestions() {
         }
         else if (quizMode === 'marathon') {
             numQuestions = 42;
-            if (questions.length < 42) {
+            while (questions.length < 42) {
+                questions = questions.concat(questions);
+            }
+            shuffleQuestions(questions);
+        }
+        else if (quizMode === 'pelerinage') {
+            numQuestions = 100;
+            while (questions.length < 100) {
                 questions = questions.concat(questions);
             }
             shuffleQuestions(questions);
@@ -196,10 +166,6 @@ async function loadQuestions() {
                 questions = questions.concat(questions);
             }
             shuffleArray(questions, getDateSeed());
-        }
-        else if (quizMode === 'devotion') {
-            numQuestions = questions.length;
-            shuffleQuestions(questions);
         }
         
         questions = questions.slice(0, numQuestions);
@@ -241,48 +207,65 @@ function startQuiz() {
     }
     currentQuestionIndex = 0;
     score = 0;
+    xp = 0;
+    xpElem.innerHTML = xp +" xp";
+    winrateElem.innerHTML = "0%";
+    comboModifier = 0;
+    bestcombo = 0;
+    bonusPercent = 0;
+    comboElem.innerHTML = '';
     historyResult = '';
-    qidElement.innerText = '';
+    domainName = '';
+
     isUniqDomainQuiz = false;
     if (selectedPools.length === 1) {
         isUniqDomainQuiz = true;
     }
 
-    document.getElementById('pool-selection').classList.add('hidden');
-    document.getElementById('question-container').classList.remove('hidden');
+    fstatsXpDay.classList.add('put-to-back');
+    fstatsXpPelerinage.classList.add('put-to-back');
+    fstatsXpMarathon.classList.add('put-to-back');
+    fstatsXpPerfect.classList.add('put-to-back');
 
-    scoreTitleElement.innerHTML = 'SCORE' + blankLine;
-    currentScoreElement.innerText = score;
-    nbQuestionsElement.innerText = numQuestions;
-    feedbackElement.innerText = '';
-    scoreContainer.classList.remove('hidden');
-
-    trueButton.classList.remove('hidden');
-    falseButton.classList.remove('hidden');
-    nextButton.classList.add('hidden');
-    restartButton.classList.add('hidden');
-
-    // lvlContainer.classList.add('hidden');
-    Array.from(notingameElements).forEach(element => element.classList.add('hidden'));
-    showQuestion();
-}
-
-function showQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.innerText = currentQuestion.question;
-    feedbackElement.innerText = '';
-    qidElement.innerHTML = blankLine + blankLine + blankLine + "ID" + blankLine + currentQuestion.id;
-    trueButton.classList.remove('hidden');
-    falseButton.classList.remove('hidden');
-    feedbackElement.classList.add('hidden');
-    questionElement.classList.remove('hidden');
-    if (currentQuestionIndex === numQuestions - 1) {
-        nextButton.innerText = 'END';
-    } else {
-        nextButton.innerText = 'NEXT';
+    if (quizMode === 'marathon') {
+        fstatsXpMarathon.classList.remove('put-to-back');
+        bonusPercent += 20;
     }
-    nextButton.classList.add('hidden');
+    else if (quizMode === 'pelerinage') {
+        fstatsXpPelerinage.classList.remove('put-to-back');
+        bonusPercent += 50;
+    }
+
+    isTodayInDB().then(todayExists => {
+        if (!todayExists) {
+            addPlayDayToday(); console.log('addPlayDayToday()');
+            fstatsXpDay.classList.remove('put-to-back');
+            bonusPercent += 100;
+        }
+    }).catch(error => {
+        console.error("isTodayInDB: ", error);
+    })
+    .finally(() => {
+        gameStartTime = new Date();
+        setQuestion();
+    });
 }
+
+function setQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    currentQID = currentQuestion.id;
+    for (const elem of questionElemS) {
+        elem.innerHTML = currentQuestion.question;
+    }
+    for (const elem of titleCardElemS) {
+        elem.innerHTML = "question";
+    }
+    for (const elem of progressElemS) {
+        elem.innerHTML = (currentQuestionIndex + 1) + " / " + questions.length;
+    }
+    showQuestionUI();
+}
+
 
 function checkAnswer(isTrue) {
     const currentQuestion = questions[currentQuestionIndex];
@@ -290,21 +273,43 @@ function checkAnswer(isTrue) {
     // console.log(currentQuestion);
     // console.log(isCorrect);
     addAnswerDB(db, currentQuestion.domainName, isCorrect);
+    domainName = currentQuestion.domainName;
+
     if (isCorrect) {
         score++;
-        historyResult += `<span class='correct-mark'>o</span>`;
-        feedbackElement.innerHTML = "<span class='correct'>GOOD</span><br><br> " + currentQuestion.explanation;
+        comboModifier += 1;
+        if (comboModifier > bestcombo)
+            bestcombo = comboModifier;
+        let addXp = GAME_XP_FOR_WIN;
+        if (comboModifier > 1) {
+            addXp += comboModifier;
+            comboElem.innerHTML = 'COMBO +'+comboModifier;
+        }
+        xp += addXp;
+        historyResult += "<span class='ig-icon-valid'>"+validMarkIcon+"</span>";
+        answerTitleElem.innerHTML = "<span class='correct'>GOOD</span>";
+        // answerXpElem.innerHTML = "+"+addXp+" xp";
     } else {
-        historyResult += `<span class='incorrect-mark'>x</span>`;
-        feedbackElement.innerHTML = "<span class='incorrect'>WRONG</span><br><br> " + currentQuestion.explanation;
+        comboModifier = 0;
+        comboElem.innerHTML = '';
+        xp += GAME_XP_FOR_FAIL;
+        historyResult += "<span class='ig-icon-miss'>"+missMarkIcon+"</span>";
+        answerTitleElem.innerHTML = "<span class='incorrect'>WRONG</span>";
+        // answerXpElem.innerHTML = "+1 xp";
     }
-    currentScoreElement.innerText = score;
-    questionElement.innerText = '';
-    feedbackElement.classList.remove('hidden');
-    questionElement.classList.add('hidden');
-    trueButton.classList.add('hidden');
-    falseButton.classList.add('hidden');
-    nextButton.classList.remove('hidden');
+    xpElem.innerHTML = xp +" xp";
+    const percentage = Math.round(calculateScorePercentage(score, currentQuestionIndex + 1));
+    winrateElem.innerHTML = percentage +"%";
+    answerElem.innerHTML = currentQuestion.explanation;
+    favoriteElem.classList.remove("favorite-action");
+    reportElem.classList.remove("report-action");
+    fliped = false;
+    answerElem.classList.remove('put-to-back');
+    questionToFlipElem.classList.add('put-to-back');
+    for (const elem of titleCardElemS) {
+        elem.innerHTML = "answer";
+    }
+    showAnswerUI();
 }
 
 function calculateScorePercentage(score, totalQuestions) {
@@ -312,21 +317,47 @@ function calculateScorePercentage(score, totalQuestions) {
     return (score / totalQuestions) * 100;
 }
 
+function fromPercent(value, percentage) {
+    return (value * percentage) / 100;
+}
+
+function formatElapsedTime(start, end) {
+    const elapsedTime = Math.floor((end - start) / 1000); // Différence en secondes
+
+    const hours = Math.floor(elapsedTime / 3600);
+    const minutes = Math.floor((elapsedTime % 3600) / 60);
+    const seconds = elapsedTime % 60;
+
+    // Formater les résultats avec des zéros en tête si nécessaire
+    const formattedHours = hours > 0 ? `${String(hours).padStart(2, '0')}:` : '';
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+
+    return `${formattedHours}${formattedMinutes}:${formattedSeconds}`;
+}
+
 function showFinalScore() {
-    questionElement.innerText = '';
-    feedbackElement.innerText = '';
-    qidElement.innerHTML = '';
-    trueButton.classList.add('hidden');
-    falseButton.classList.add('hidden');
-    nextButton.classList.add('hidden');
-    restartButton.classList.remove('hidden');
+    endStartTime = new Date();
+    const elapsedTimeFormatted = formatElapsedTime(gameStartTime, endStartTime);
+    fstatsTime.innerHTML = "time        " + elapsedTimeFormatted;
+
+    fstatsBestCombo.innerHTML = "best combo +" + bestcombo;
+
     const percentage = Math.round(calculateScorePercentage(score, numQuestions));
+    fstatsWinrate.innerHTML = "winrate     " + percentage + "%";
+
     if (score === numQuestions) {
-        scoreTitleElement.innerHTML = "<h2>🥳🎉✨<br><br>PERFECT</h2><br><br>" + historyResult + "<br><br> " + percentage + "%<br><br>";
+        finalTitleElem.innerHTML = "🥳 PERFECT ✨"; 
+        fstatsXpPerfect.classList.remove('put-to-back');
+        bonusPercent += 10;
     }
-    else {
-        scoreTitleElement.innerHTML = historyResult + "<br><br> " + percentage + "%<br><br>";
-    }
+    xp += Math.round(fromPercent(xp, bonusPercent));
+    addUserXP(xp); console.log('showFinalScore: addUserXP('+xp+')');
+    fstatsXpTotal.innerHTML = " +"+xp+" XP";
+
+    finalRatioElem.innerHTML = score +" / "+numQuestions;
+    historyGridElem.innerHTML = historyResult;
+
     let isTen = false;
     if (quizMode === 'classic' || quizMode === 'daily')
             isTen = true;
@@ -334,74 +365,131 @@ function showFinalScore() {
     if (isUniqDomainQuiz) {
         addGameDB(db, domainName, percentage, isTen);
     }
+    showSummaryUI();
 }
 
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex % 10 === 0) {
-        if (currentQuestionIndex % 20 === 0) {
-            historyResult += '<br>';
-        }
-        else {
-            historyResult += ' ';
-        }
-    }
+    // if (currentQuestionIndex % 10 === 0) {
+    //     if (currentQuestionIndex % 20 === 0) {
+    //         historyResult += '<br>';
+    //     }
+    //     else {
+    //         historyResult += ' ';
+    //     }
+    // }
     if (currentQuestionIndex < numQuestions) {
-        showQuestion();
+        setQuestion();
     } else {
         showFinalScore();
     }
 }
 
 function restartQuiz() {
+    showMenuUI();
     selectedPools = [];
     questions = [];
     currentQuestionIndex = 0;
     score = 0;
     historyResult = '';
-    qidElement.innerHTML = '';
     domainName = '';
-    // lvlContainer.classList.remove('hidden');
-    // difficultySelection('hard');
-    updateStartButtons();
-    scoreContainer.classList.add('hidden');
-    document.getElementById('question-container').classList.add('hidden');
-    document.getElementById('feedback').innerText = '';
-    document.getElementById('pool-selection').classList.remove('hidden');
-    Array.from(notingameElements).forEach(element => element.classList.remove('hidden'));
-    const poolCards = document.querySelectorAll('.pool-card');
-    poolCards.forEach(card => {
-        card.classList.remove('selected');
-    });
+    winrateElem.innerHTML = '';
 }
+
+/* ADD EVENTS LISTERNERS */
 
 trueButton.addEventListener('click', () => checkAnswer(true));
 falseButton.addEventListener('click', () => checkAnswer(false));
 nextButton.addEventListener('click', nextQuestion);
-restartButton.addEventListener('click', restartQuiz);
-startClassic.addEventListener('click', () => {
-    quizMode = 'classic';
-    loadQuestions();
+endButton.addEventListener('click', restartQuiz); // endQuizz
+
+favoriteElem.addEventListener('click', () => {
+    favoriteElem.classList.add("favorite-action");
+    answerCardElem.click(); // global click bug fixe
+    console.log("FAVORITE ACTION"); // TODO
 });
-startMarathon.addEventListener('click', () => {
-    quizMode = 'marathon';
-    loadQuestions();
+
+reportElem.addEventListener('click', () => {
+    reportElem.classList.add("report-action");
+    answerCardElem.click(); // global click bug fixe
+    console.log("REPORT QID " + currentQID);
+    sendMail("The cow jumped over the moon. QID: " + currentQID);
 });
+
+answerCardElem.addEventListener('click', () => {
+    if (fliped) {
+        fliped = false;
+        answerElem.classList.remove('put-to-back');
+        questionToFlipElem.classList.add('put-to-back');
+        for (const elem of titleCardElemS) {
+            elem.innerHTML = "answer";
+        }
+    }
+    else {
+        fliped = true;
+        answerElem.classList.add('put-to-back');
+        questionToFlipElem.classList.remove('put-to-back');
+        for (const elem of titleCardElemS) {
+            elem.innerHTML = "question";
+        }
+    }
+    
+});
+
+// TODO quizMode = 'mistakes';
+
+const startDaily = document.getElementById('go-daily');
 startDaily.addEventListener('click', () => {
     quizMode = 'daily';
     loadQuestions();
 });
-startDevotion.addEventListener('click', () => {
-    quizMode = 'devotion';
+
+const startWithPlayButton = document.getElementById('go-play');
+startWithPlayButton.addEventListener('click', () => {
+    // console.log('start quiz : ', currentGameMode);
+    quizMode = currentGameMode;
     loadQuestions();
 });
-document.getElementById('title').addEventListener('click', restartQuiz);
-selectAllCardsElement.addEventListener('click', toggleSelectAllCards);
 
-// lvlHardElement.addEventListener('click', () => difficultySelection('hard'));
-// lvlNightElement.addEventListener('click', () => difficultySelection('night'));
-// lvlMadElement.addEventListener('click', () => difficultySelection('mad'));
+document.getElementById('title').addEventListener('click', restartQuiz);
+
+const editCategoriesButton = document.getElementById('go-categories');
+editCategoriesButton.addEventListener('click', () => {
+    showCategoriesUI();
+});
+
+/* EXECUTION */
 
 loadConfig();
 restartQuiz();
-updateStartButtons();
+addClassSetupGM();
+showMenuUI();
+
+setTimeout(() => {
+    const globalElement = document.getElementById('global-none');
+    globalElement.classList.remove('global-off');
+}, 100);
+
+setTimeout(() => {
+    updateNbSelectedElement();
+}, 200);
+
+
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Anatomy", "anatomy");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Physiology", "physiology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Pathology", "pathology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Surgery", "surgery");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Pharmacology", "pharmacology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Genetics", "genetics");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Neurology", "neurology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Epidemiology", "epidemiology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Endocrinology", "endocrinology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Miscellaneous", "various");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Oncology", "oncology");
+// updateOldKeys(DB_STORE_USER_DOMAINS, "Cardiology", "cardiology");
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE
+// DEPRECATED BAD BEHAVIOUR DONT USE IT PLEASE

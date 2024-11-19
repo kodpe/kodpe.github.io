@@ -1,56 +1,362 @@
-let db = {};
+const DB_VERSION = 12;
+const DB_NAME = 'ulmedDB';
 
+/* ------ ------ ----- -----
+    STORE DES USERS DATA SUR LES DOMAINES MEDICAUX
+*/
+const DB_STORE_USER_DOMAINS = 'domains';
+
+const DB_STORE_USER_DOMAINS_RECORDS = [
+    "anatomy",
+    "hematology",
+    "dermatology",
+    "histology",
+    "cell_biology",
+    "immunology",
+    //
+    "genetics",
+    "oncology",
+    "pathology",
+    "traumatology",
+    "epidemiology",
+    "various",
+    //
+    "psychiatry",
+    "toxicology",
+    "neurology",
+    "endocrinology",
+    "nephrology",
+    "gastroenterology",
+    //
+    "nutrition",
+    "orl_hns",
+    "pneumology",
+    "cardiology",
+    "rheumatology",
+    "physiology",
+    //
+    // "surgery",
+    // "pharmacology",
+    "TOTAL",
+];
+
+const DB_NB_QUESTIONS_QUIZ = {
+    anatomy: 40,
+    hematology: 20,
+    dermatology: 20,
+    histology: 20,
+    cell_biology: 20,
+    immunology: 20,
+    //
+    genetics: 40,
+    oncology: 53,
+    pathology: 53,
+    traumatology: 0,
+    epidemiology: 30,
+    various: 61,
+    //
+    psychiatry: 0,
+    toxicology: 0,
+    neurology: 40,
+    endocrinology: 30,
+    nephrology: 0,
+    gastroenterology: 21,
+    //
+    nutrition: 20,
+    orl_hns: 100,
+    pneumology: 20,
+    cardiology: 15,
+    rheumatology: 20,
+    physiology: 60,
+
+    // surgery: 30,
+    // pharmacology: 48,
+};
+
+
+const DB_STORE_USER_DOMAINS_DATA = {
+    nbAnswered: 0,
+    nbCorrectAnswers: 0,
+    rowRecord: 0,
+    currentRow: 0,
+    islastAnswerCorrect: false,
+    gameWinrateRecord: 0,
+    nbClassicGames: 0,
+    nbMarathonGames: 0,
+    nbPelerinageGames: 0,
+};
+
+/* ------ ------ ----- -----
+    STORE DES USERS DATA PRINCIPALES
+*/
+const DB_STORE_USER = 'user';
+
+const DB_STORE_USER_RECORDS = [
+    "xp",               // amount: 0
+    "badges",           // amount: 0
+    "gameMode",         // value: classic, marathon, pelerinage
+];
+
+/* ------ ------ ----- -----
+    STORE DES USERS PLAYED DAYS
+*/
+const DB_STORE_USER_DAYS = 'days';
+
+/* ------ ------ ----- -----
+    STORE DES GAME FILTERS ON/OFF
+*/
+const DB_STORE_GAME_FILTERS = 'filters';
+
+const DB_STORE_GAME_FILTERS_RECORDS = [
+    "data",             // object with all filters data true/false
+];
+
+const DB_STORE_GAME_FILTERS_DATA = {
+    anatomy: false,
+    hematology: false,
+    dermatology: false,
+    histology: false,
+    cell_biology: false,
+    immunology: false,
+    genetics: false,
+    oncology: false,
+    pathology: false,
+    traumatology: false,
+    epidemiology: false,
+    various: false,
+    psychiatry: false,
+    toxicology: false,
+    neurology: false,
+    endocrinology: false,
+    nephrology: false,
+    gastroenterology: false,
+    nutrition: false,
+    orl_hns: false,
+    pneumology: false,
+    cardiology: false,
+    rheumatology: false,
+    physiology: false,
+    //
+    etiology: false,
+    diagnosis: false,
+    treatment: false,
+    research: false,
+    surgery: false,
+    emergency: false,
+    imagery: false,
+    pharmacology: false,
+    obstetrics: false,
+    pediatrics: false,
+    geriatrics: false,
+    autopsy: false,
+    //
+    tp53: false,
+    apr_246: false,
+    civd: false,
+    vih: false,
+};
+
+/* ------ ------ ----- -----
+    IndexedDB MAIN OPEN AND UPDATE ROUTINE
+*/
+let db = {};
 async function openDATABASE() {
     db = await openDB();
 }
-
 openDATABASE();
 
 async function openDB() {
-    return new Promise((resolve, reject) => {
-        const request = indexedDB.open("ulmedDB", 1);
 
-        // Si la base de données est créée ou mise à jour, cette fonction est appelée
-        request.onupgradeneeded = (event) => {
-            const db = event.target.result;
-            // Créer un object store avec une clé primaire (ici "name")
-            let objectStore = {};
-            try {
-                objectStore = db.createObjectStore("domains", { keyPath: "name" });
-            } catch (e) {
-                console.warn("indexedDB: ", e);
-            }
-            try {
-                objectStore.transaction.oncomplete = () => {
-                    const store = db.transaction("domains", "readwrite").objectStore("domains");
-                    store.add({ name: "Anatomy", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Physiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Pathology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Surgery", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Pharmacology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Genetics", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Neurology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Epidemiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Endocrinology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Miscellaneous", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Oncology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "Cardiology", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                    store.add({ name: "TOTAL", nbAnswered: 0, nbCorrectAnswers: 0, rowRecord: 0, currentRow: 0, islastAnswerCorrect: false, gameWinrateRecord: 0, nbClassicGames: 0, nbMarathonGames: 0 });
-                };
-            } catch (e) {
-                console.warn("indexedDB: ", e);
-            }
-        };
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+        // console.log("IndexedDB: > myindexDB.js version: " + DB_VERSION + " PLEASE OPEN");
 
         request.onsuccess = (event) => {
             const db = event.target.result;
-            console.log("Base de données ouverte avec succès.");
-            // console.log(db);
-            resolve(db);  // Résoudre avec l'objet `db` ouvert
+            console.log("IndexedDB: real [" + DB_NAME + "] version: " + db.version + " : SUCCESS OPEN");
+            resolve(db); // ok is async promise return
         };
 
         request.onerror = (event) => {
-            console.error("Erreur lors de l'ouverture de la base de données :", event.target.errorCode);
+            console.error("IndexedDB: FAIL OPEN : ", event.target.errorCode);
+            reject(event.target.error); // what is that shit please
+        };
+
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            console.warn("IndexedDB: real " + DB_NAME + " version: " + db.version + " : PLEASE UPGRADE");
+
+            /* ------ ------ ----- -----
+                STORE DES USERS DATA SUR LES DOMAINES MEDICAUX
+            */
+            try {
+                const storeName = DB_STORE_USER_DOMAINS;
+                console.warn("IndexedDB: store [" + storeName + "] PLEASE UPGRADE");
+
+                if (!db.objectStoreNames.contains(storeName)) {
+                    db.createObjectStore(storeName, { keyPath: "name" });
+                    console.warn("IndexedDB: store [" + storeName + "] CREATED");
+                }
+
+                const objectStore = event.target.transaction.objectStore(storeName);
+
+                // Récupérez toutes les clés existantes
+                const existingKeysRequest = objectStore.getAllKeys();
+                existingKeysRequest.onsuccess = () => {
+                    const existingKeys = existingKeysRequest.result;
+
+                    // Supprimez les clés obsolètes
+                    for (const key of existingKeys) {
+                        if (!DB_STORE_USER_DOMAINS_RECORDS.includes(key)) {
+                            objectStore.delete(key);
+                            console.warn("IndexedDB: store [" + storeName + "] record [" + key + "] DELETED");
+                        }
+                    }
+
+                    // Ajoutez ou mettez à jour les enregistrements actuels
+                    for (const name of DB_STORE_USER_DOMAINS_RECORDS) {
+                        const getRequest = objectStore.get(name);
+                        getRequest.onsuccess = () => {
+                            if (!getRequest.result) {
+                                objectStore.add({ name, ...DB_STORE_USER_DOMAINS_DATA }).onerror = (e) => {
+                                    console.error("IndexedDB: store [" + storeName + "] record [" + name + "] ERROR CANT ADD ", e.target.error);
+                                };
+                                console.warn("IndexedDB: store [" + storeName + "] record [" + name + "] ADDED");
+                            }
+                        };
+                    }
+                }
+            } catch (e) {
+                console.error("IndexedDB: store [" + storeName + "] UPGRADE ERROR: " + e);
+            }
+
+            /* ------ ------ ----- -----
+                STORE DES USERS DATA PRINCIPALES
+            */
+            try {
+                const storeName = DB_STORE_USER;
+                console.warn("IndexedDB: store [" + storeName + "] PLEASE UPGRADE");
+
+                if (!db.objectStoreNames.contains(storeName)) {
+                    db.createObjectStore(storeName, { keyPath: "id" });
+                    console.warn("IndexedDB: store [" + storeName + "] CREATED");
+                }
+
+                const objectStore = event.target.transaction.objectStore(storeName);
+
+                // Récupérez toutes les clés existantes
+                const existingKeysRequest = objectStore.getAllKeys();
+                existingKeysRequest.onsuccess = () => {
+                    const existingKeys = existingKeysRequest.result;
+
+                    // Supprimez les clés obsolètes
+                    for (const key of existingKeys) {
+                        if (!DB_STORE_USER_RECORDS.includes(key)) {
+                            objectStore.delete(key);
+                            console.warn("IndexedDB: store [" + storeName + "] record [" + key + "] DELETED");
+                        }
+                    }
+
+                    // Ajoutez ou mettez à jour les enregistrements actuels
+                    {
+                        const name = DB_STORE_USER_RECORDS[0]; // xp
+                        const getRequest = objectStore.get(name);
+                        getRequest.onsuccess = () => {
+                            if (!getRequest.result) {
+                                objectStore.add({ id: name, amount: 0 });
+                                console.warn("IndexedDB: store [" + storeName + "] record [" + name + "] ADDED");
+                            }
+                        };
+                    }
+                    {
+                        const name = DB_STORE_USER_RECORDS[1]; // badges
+                        const getRequest = objectStore.get(name);
+                        getRequest.onsuccess = () => {
+                            if (!getRequest.result) {
+                                objectStore.add({ id: name, amount: 0 });
+                                console.warn("IndexedDB: store [" + storeName + "] record [" + name + "] ADDED");
+                            }
+                        };
+                    }
+                    {
+                        const name = DB_STORE_USER_RECORDS[2]; // gameMode : classic, marathon, pelerinage
+                        const getRequest = objectStore.get(name);
+                        getRequest.onsuccess = () => {
+                            if (!getRequest.result) {
+                                objectStore.add({ id: name, value: "classic" });
+                                console.warn("IndexedDB: store [" + storeName + "] record [" + name + "] ADDED");
+                            }
+                        };
+                    }
+                };
+            } catch (e) {
+                console.error("IndexedDB: store [" + storeName + "] UPGRADE ERROR: " + e);
+            }
+
+            /* ------ ------ ----- -----
+                STORE DES USERS PLAYED DAYS
+            */
+            try {
+                const storeName = DB_STORE_USER_DAYS;
+                console.warn("IndexedDB: store [" + storeName + "] PLEASE UPGRADE");
+
+                if (!db.objectStoreNames.contains(storeName)) {
+                    db.createObjectStore(storeName, { keyPath: "date" });
+                    console.warn("IndexedDB: store [" + storeName + "] CREATED");
+
+                    const objectStore = event.target.transaction.objectStore(storeName);
+                    objectStore.createIndex("date", "date", { unique: true });
+                    console.warn("IndexedDB: store [" + storeName + "] INDEX [date] CREATED");
+                }
+            } catch (e) {
+                console.error("IndexedDB: store [" + storeName + "] UPGRADE ERROR: " + e);
+            }
+
+            /* ------ ------ ----- -----
+                STORE DES GAME FILTERS ON/OFF
+            */
+            try {
+                const storeName = DB_STORE_GAME_FILTERS;
+                console.warn("IndexedDB: store [" + storeName + "] PLEASE UPGRADE");
+
+                if (!db.objectStoreNames.contains(storeName)) {
+                    db.createObjectStore(storeName, { keyPath: "id" });
+                    console.warn("IndexedDB: store [" + storeName + "] CREATED");
+                }
+
+                const objectStore = event.target.transaction.objectStore(storeName);
+
+                // Récupérez toutes les clés existantes
+                const existingKeysRequest = objectStore.getAllKeys();
+                existingKeysRequest.onsuccess = () => {
+                    const existingKeys = existingKeysRequest.result;
+
+                    // Supprimez les clés obsolètes
+                    for (const key of existingKeys) {
+                        if (!DB_STORE_GAME_FILTERS_RECORDS.includes(key)) {
+                            objectStore.delete(key);
+                            console.warn("IndexedDB: store [" + storeName + "] record [" + key + "] DELETED");
+                        }
+                    }
+
+                    // Ajoutez ou mettez à jour les enregistrements actuels
+                    for (const name of DB_STORE_GAME_FILTERS_RECORDS) {
+                        const getRequest = objectStore.get(name);
+                        getRequest.onsuccess = () => {
+                            if (!getRequest.result) {
+                                objectStore.add({ id: name, ...DB_STORE_GAME_FILTERS_DATA }).onerror = (e) => {
+                                    console.error("IndexedDB: store [" + storeName + "] record [" + name + "] ERROR CANT ADD ", e.target.error);
+                                };
+                                console.warn("IndexedDB: store [" + storeName + "] record [" + name + "] ADDED");
+                            }
+                        };
+                    }
+                }
+            } catch (e) {
+                console.error("IndexedDB: store [" + storeName + "] UPGRADE ERROR: " + e);
+            }
+            console.warn("IndexedDB: real " + DB_NAME + " version: " + db.version + " : UPGRADE DONE");
         };
     });
 }
@@ -108,7 +414,7 @@ function addGameDB(db, domainName, winrate, isTen) {
             console.log(domainObj);
             store.put(domainObj);
         } else {
-            console.error(`Domaine ${domainName} non trouvé.`);
+            console.error(`Domaine [${domainName}] non trouvé.`);
         }
     };
     domainRequest.onerror = (event) => {
@@ -182,3 +488,116 @@ function addAnswerDB(db, domainName, isCorrectAnswer) {
         console.error("Erreur sur la transaction : ", event.target.error);
     };
 }
+
+
+/* DATES PLAY HISTORY FUNCTIONS */
+
+function addPlayDayToday() {
+    const today = new Date().toISOString().split("T")[0];  // Format YYYY-MM-DD
+    addPlayDay(today);  // Ajouter le jour actuel comme jour joué
+}
+
+function addPlayDay(date) {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+    request.onsuccess = function (event) {
+        const db = event.target.result;
+        const transaction = db.transaction("days", "readwrite");
+        const objectStore = transaction.objectStore("days");
+
+        // Ajouter un nouvel enregistrement avec la date actuelle
+        const playRecord = { date: date };
+
+        const addRequest = objectStore.add(playRecord);
+        addRequest.onsuccess = function () {
+            console.log("Play day added:", date);
+        };
+
+        addRequest.onerror = function (event) {
+            console.log("Error adding play day:", event.target.error);
+        };
+    };
+}
+
+async function isTodayInDB() {
+    try {
+        const isInDB = await isDayInDB(new Date());
+        if (isInDB) {
+            // console.log("TODAY EXISTS");
+            return true;
+        } else {
+            // console.log("TODAY DOES NOT EXIST");
+            return false;
+        }
+    } catch (error) {
+        console.error("An error occurred while checking the database:", error);
+        return false;
+    }
+}
+
+function isDayInDB(date) {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+        request.onsuccess = function (event) {
+            const db = event.target.result;
+            const transaction = db.transaction("days", "readonly");
+            const objectStore = transaction.objectStore("days");
+
+            // Recherche de l'entrée avec la date spécifiée
+            const dateKey = date.toISOString().split("T")[0];  // Format YYYY-MM-DD pour la clé
+            const getRequest = objectStore.get(dateKey);  // Utilise la date comme clé
+
+            getRequest.onsuccess = function () {
+                if (getRequest.result) {
+                    // Si un enregistrement existe pour cette date, renvoie 'true'
+                    resolve(true);
+                } else {
+                    // Si aucun enregistrement n'est trouvé, renvoie 'false'
+                    resolve(false);
+                }
+            };
+
+            getRequest.onerror = function (event) {
+                reject(event.target.error);  // Rejeter la promesse en cas d'erreur
+            };
+        };
+
+        request.onerror = function (event) {
+            reject(event.target.error);  // Rejeter la promesse en cas d'erreur d'ouverture de la DB
+        };
+    });
+}
+
+function getPlayDays() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+        request.onsuccess = function (event) {
+            const db = event.target.result;
+            const transaction = db.transaction("days", "readonly");
+            const objectStore = transaction.objectStore("days");
+
+            const allRecords = objectStore.getAll();
+
+            allRecords.onsuccess = function () {
+                resolve(allRecords.result);  // Résoudre la promesse avec les dates récupérées
+            };
+
+            allRecords.onerror = function (event) {
+                reject(event.target.error);  // Rejeter la promesse en cas d'erreur
+            };
+        };
+    });
+}
+
+// const dateToCheck = new Date('2024-11-09');
+// isDayInDB(dateToCheck).then(isInDB => {
+//     if (isInDB) {
+//         console.log(`Le jour ${dateToCheck.toISOString().split("T")[0]} existe déjà dans la base de données.`);
+//     } else {
+//         console.log(`Le jour ${dateToCheck.toISOString().split("T")[0]} n'existe pas dans la base de données.`);
+//     }
+// }).catch(error => {
+//     console.error("Erreur lors de la vérification de la date:", error);
+// });

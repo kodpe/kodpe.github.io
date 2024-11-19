@@ -1,0 +1,128 @@
+[
+  {
+    "id": "GE100",
+    "question": "La maladie de Crohn peut affecter tout le tractus gastro-intestinal, mais la localisation la plus fréquente est le côlon droit.",
+    "answer": false,
+    "explanation": "La localisation la plus fréquente de la maladie de Crohn est l'iléon terminal, et non le côlon droit."
+  },
+  {
+    "id": "GE101",
+    "question": "Dans le cadre du reflux gastro-œsophagien (RGO), l'endoscopie est toujours nécessaire pour poser le diagnostic.",
+    "answer": false,
+    "explanation": "Le diagnostic de RGO est clinique et ne nécessite pas toujours une endoscopie, sauf en cas de complications ou symptômes alarmants."
+  },
+  {
+    "id": "GE102",
+    "question": "Le test de l'haleine à l'urée (test au 13C-urée) est utilisé pour diagnostiquer une infection à Helicobacter pylori.",
+    "answer": true,
+    "explanation": "Le test à l'urée est un test non invasif pour diagnostiquer l'infection à Helicobacter pylori."
+  },
+  {
+    "id": "GE103",
+    "question": "La cirrhose biliaire primitive est une maladie auto-immune qui affecte principalement les voies biliaires intra-hépatiques.",
+    "answer": true,
+    "explanation": "La cirrhose biliaire primitive est une maladie auto-immune qui attaque principalement les canaux biliaires intra-hépatiques."
+  },
+  {
+    "id": "GE104",
+    "question": "L'hépatite C chronique peut être guérie avec un traitement antiviral à base de ribavirine et de peg-interféron.",
+    "answer": false,
+    "explanation": "Les nouveaux traitements antiviraux directs (DAA) ont permis de guérir l'hépatite C chronique, avec des traitements plus efficaces que la ribavirine et le peg-interféron."
+  },
+  {
+    "id": "GE105",
+    "question": "Le syndrome de l'intestin irritable (SII) est diagnostiqué uniquement après avoir éliminé toutes les autres pathologies digestives.",
+    "answer": true,
+    "explanation": "Le diagnostic du SII repose sur la règle des 'criteres de Rome', après avoir éliminé d'autres causes organiques."
+  },
+  {
+    "id": "GE106",
+    "question": "La coloscopie est recommandée dans le cadre d'un dépistage de cancer colorectal chez les patients de moins de 50 ans, sans antécédents familiaux.",
+    "answer": false,
+    "explanation": "Le dépistage par coloscopie est recommandé à partir de 50 ans, sauf en cas d'antécédents familiaux ou de symptômes."
+  },
+  {
+    "id": "GE107",
+    "question": "Le traitement de la colite ulcéreuse repose principalement sur l'utilisation d'antibiotiques à large spectre.",
+    "answer": false,
+    "explanation": "La colite ulcéreuse est principalement traitée par des anti-inflammatoires et des immunosuppresseurs, et non des antibiotiques."
+  },
+  {
+    "id": "GE108",
+    "question": "Les selles graisseuses et malodorantes sont caractéristiques d'une malabsorption des graisses, comme celle observée dans la maladie coeliaque.",
+    "answer": true,
+    "explanation": "Les selles graisseuses (stéatorrhée) sont caractéristiques de la malabsorption des graisses, comme c'est le cas dans la maladie cœliaque."
+  },
+  {
+    "id": "GE109",
+    "question": "L'ulcère du duodénum est souvent associé à un excès de production d'acide gastrique.",
+    "answer": true,
+    "explanation": "Les ulcères du duodénum sont souvent liés à un excès de production d'acide gastrique, souvent en lien avec une infection à Helicobacter pylori."
+  },
+  {
+    "id": "GE110",
+    "question": "Le traitement de la gastroparésie inclut généralement des inhibiteurs de la pompe à protons (IPP).",
+    "answer": false,
+    "explanation": "Le traitement de la gastroparésie repose sur des prokinétiques et des modifications alimentaires, mais pas sur des IPP."
+  },
+  {
+    "id": "GE111",
+    "question": "Les patients atteints de la maladie de Whipple peuvent présenter une malabsorption due à une infection bactérienne.",
+    "answer": true,
+    "explanation": "La maladie de Whipple est une infection bactérienne rare qui affecte l'intestin grêle et peut provoquer une malabsorption."
+  },
+  {
+    "id": "GE112",
+    "question": "La biopsie hépatique est la méthode la plus fiable pour diagnostiquer une hépatite alcoolique.",
+    "answer": false,
+    "explanation": "La biopsie hépatique n'est pas systématiquement nécessaire pour diagnostiquer une hépatite alcoolique, le diagnostic étant souvent clinique et biologique."
+  },
+  {
+    "id": "GE113",
+    "question": "Les médicaments antispasmodiques sont largement utilisés dans le traitement de la colite ulcéreuse pour réduire les symptômes.",
+    "answer": false,
+    "explanation": "Les médicaments antispasmodiques ne sont pas recommandés dans la colite ulcéreuse, car ils peuvent aggraver les symptômes inflammatoires."
+  },
+  {
+    "id": "GE114",
+    "question": "L'hépatite auto-immune est souvent associée à d'autres maladies auto-immunes, comme la thyroïdite de Hashimoto.",
+    "answer": true,
+    "explanation": "L'hépatite auto-immune peut être associée à d'autres maladies auto-immunes, dont la thyroïdite de Hashimoto."
+  },
+  {
+    "id": "GE115",
+    "question": "La maladie de Gilbert est une cause fréquente de jaunisse due à une déficience de la glucuronyltransférase.",
+    "answer": true,
+    "explanation": "La maladie de Gilbert est caractérisée par une déficience de la glucuronyltransférase, ce qui entraîne une hyperbilirubinémie non pathologique."
+  },
+  {
+    "id": "GE116",
+    "question": "La maladie cœliaque peut être diagnostiquée définitivement grâce à un test de dépistage génétique, sans nécessité de biopsie.",
+    "answer": false,
+    "explanation": "Le diagnostic de la maladie cœliaque repose sur un ensemble de tests, dont la biopsie du duodénum, même si un test génétique peut être utile."
+  },
+  {
+    "id": "GE117",
+    "question": "L'ulcère gastro-duodénal est lié à une diminution du flux sanguin dans la muqueuse digestive, ce qui favorise les lésions ulcéreuses.",
+    "answer": true,
+    "explanation": "L'ulcère gastro-duodénal est souvent lié à une altération de l'irrigation sanguine de la muqueuse, entraînant une susceptibilité accrue aux lésions ulcéreuses."
+  },
+  {
+    "id": "GE118",
+    "question": "Les troubles du microbiote intestinal sont souvent associés à des maladies inflammatoires chroniques de l'intestin, comme la maladie de Crohn et la colite ulcéreuse.",
+    "answer": true,
+    "explanation": "Les perturbations du microbiote intestinal jouent un rôle dans la physiopathologie des maladies inflammatoires chroniques de l'intestin."
+  },
+  {
+    "id": "GE119",
+    "question": "Le traitement de l'oesophagite à eosinophiles repose uniquement sur des inhibiteurs de la pompe à protons (IPP).",
+    "answer": false,
+    "explanation": "Le traitement de l'oesophagite à eosinophiles inclut des inhibiteurs de la pompe à protons (IPP), mais également des corticoïdes et des modifications alimentaires."
+  },
+  {
+    "id": "GE120",
+    "question": "Les colites microscopiques sont difficiles à diagnostiquer, car les anomalies ne sont visibles qu'à la biopsie.",
+    "answer": true,
+    "explanation": "Les colites microscopiques sont diagnostiquées sur la base de biopsies intestinales, car les anomalies sont subtiles et ne sont pas visibles à l'endoscopie."
+  }
+]

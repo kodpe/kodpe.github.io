@@ -1,16 +1,26 @@
 {
     "pools": [
-        { "name": "Anatomy", "file": "../q-data/q1-anatomy.json" },
-        { "name": "Physiology", "file": "../q-data/q2-physiology.json" },
-        { "name": "Pathology", "file": "../q-data/q3-pathology.json" },
-        { "name": "Surgery", "file": "../q-data/q4-surgery.json" },
-        { "name": "Pharmacology", "file": "../q-data/q5-pharmacology.json" },
-        { "name": "Genetics", "file": "../q-data/q6-genetics.json" },
-        { "name": "Neurology", "file": "../q-data/q7-neurology.json" },
-        { "name": "Epidemiology", "file": "../q-data/q8-epidemiology.json" },
-        { "name": "Endocrinology", "file": "../q-data/q9-endocrinology.json" },
-        { "name": "Miscellaneous", "file": "../q-data/q10-miscellaneous.json" },
-        { "name": "Oncology", "file": "../q-data/q11-oncology.json" },
-        { "name": "Cardiology", "file": "../q-data/q12-cardiology.json" }
+        { "name": "anatomy", "file": "../q-data/q1-anatomy.json" },
+        { "name": "physiology", "file": "../q-data/q2-physiology.json" },
+        { "name": "pathology", "file": "../q-data/q3-pathology.json" },
+        { "name": "surgery", "file": "../q-data/q4-surgery.json" },
+        { "name": "pharmacology", "file": "../q-data/q5-pharmacology.json" },
+        { "name": "genetics", "file": "../q-data/q6-genetics.json" },
+        { "name": "neurology", "file": "../q-data/q7-neurology.json" },
+        { "name": "epidemiology", "file": "../q-data/q8-epidemiology.json" },
+        { "name": "endocrinology", "file": "../q-data/q9-endocrinology.json" },
+        { "name": "various", "file": "../q-data/q10-various.json" },
+        { "name": "oncology", "file": "../q-data/q11-oncology.json" },
+        { "name": "cardiology", "file": "../q-data/q12-cardiology.json" },
+        { "name": "hematology", "file": "../q-data/q20-hematology.json" },
+        { "name": "dermatology", "file": "../q-data/q21-dermatology.json" },
+        { "name": "histology", "file": "../q-data/q22-histology.json" },
+        { "name": "cell_biology", "file": "../q-data/q23-cell_biology.json" },
+        { "name": "immunology", "file": "../q-data/q24-immunology.json" },
+        { "name": "orl_hns", "file": "../q-data/q25-orl_hns.json" },
+        { "name": "nutrition", "file": "../q-data/q26-nutrition.json" },
+        { "name": "rheumatology", "file": "../q-data/q27-rheumatology.json" },
+        { "name": "gastroenterology", "file": "../q-data/q28-gastroenterology.json" },
+        { "name": "pneumology", "file": "../q-data/q29-pneumology.json" }
     ]
 }

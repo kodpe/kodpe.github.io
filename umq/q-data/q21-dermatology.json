@@ -1,0 +1,122 @@
+[
+  {
+    "id": "DE300",
+    "question": "Le psoriasis est une maladie purement cutanée sans atteinte systémique associée.",
+    "answer": false,
+    "explanation": "Le psoriasis peut être associé à des manifestations systémiques comme l'arthrite psoriasique, des maladies inflammatoires de l'intestin ou des comorbidités métaboliques."
+  },
+  {
+    "id": "DE301",
+    "question": "La dermatite atopique est exclusivement causée par une réaction allergique aux allergènes environnementaux.",
+    "answer": false,
+    "explanation": "La dermatite atopique est une maladie multifactorielle impliquant des altérations de la barrière cutanée, des anomalies immunologiques et des facteurs environnementaux."
+  },
+  {
+    "id": "DE302",
+    "question": "La sclérodermie localisée (morphée) peut évoluer vers une atteinte systémique.",
+    "answer": false,
+    "explanation": "La sclérodermie localisée reste limitée à la peau et n'évolue pas vers une sclérodermie systémique, qui est une entité distincte."
+  },
+  {
+    "id": "DE303",
+    "question": "L'acanthosis nigricans est toujours un signe de diabète de type 2.",
+    "answer": false,
+    "explanation": "Bien que l'acanthosis nigricans soit souvent associé au diabète de type 2, il peut également être lié à des troubles endocriniens, des syndromes génétiques ou des cancers."
+  },
+  {
+    "id": "DE304",
+    "question": "La pemphigoïde bulleuse est une maladie auto-immune touchant principalement les jeunes adultes.",
+    "answer": false,
+    "explanation": "La pemphigoïde bulleuse affecte principalement les personnes âgées, contrairement au pemphigus vulgaire qui peut toucher des adultes jeunes."
+  },
+  {
+    "id": "DE305",
+    "question": "L'herpès zoster suit généralement une distribution métamérique.",
+    "answer": true,
+    "explanation": "L'herpès zoster affecte un ou plusieurs dermatomes en raison de la réactivation du virus varicelle-zona dans les ganglions nerveux."
+  },
+  {
+    "id": "DE306",
+    "question": "La lumière UVB est principalement responsable du vieillissement cutané.",
+    "answer": false,
+    "explanation": "La lumière UVA, qui pénètre plus profondément dans la peau, est la principale responsable du photovieillissement, tandis que les UVB causent principalement des brûlures."
+  },
+  {
+    "id": "DE307",
+    "question": "Le carcinome basocellulaire est le cancer de la peau le plus agressif et le plus mortel.",
+    "answer": false,
+    "explanation": "Le carcinome basocellulaire est le cancer de la peau le plus fréquent, mais il est rarement mortel et beaucoup moins agressif que le mélanome malin."
+  },
+  {
+    "id": "DE308",
+    "question": "Les kératoses actiniques sont considérées comme des lésions précancéreuses.",
+    "answer": true,
+    "explanation": "Les kératoses actiniques peuvent évoluer en carcinomes épidermoïdes si elles ne sont pas traitées."
+  },
+  {
+    "id": "DE309",
+    "question": "La dermatite herpétiforme est associée à une intolérance au lactose.",
+    "answer": false,
+    "explanation": "La dermatite herpétiforme est associée à une maladie cœliaque et non à une intolérance au lactose."
+  },
+  {
+    "id": "DE310",
+    "question": "Un érythème migrant est pathognomonique de la maladie de Lyme.",
+    "answer": true,
+    "explanation": "L'érythème migrant est un signe typique de la maladie de Lyme au stade précoce, causée par une infection à Borrelia burgdorferi."
+  },
+  {
+    "id": "DE311",
+    "question": "Les grains de beauté (naevus) ne présentent jamais de risque de transformation maligne.",
+    "answer": false,
+    "explanation": "Certains naevus, notamment les naevus atypiques, peuvent évoluer en mélanome malin, bien que ce risque soit faible."
+  },
+  {
+    "id": "DE312",
+    "question": "La rosacée est souvent associée à une infection par Helicobacter pylori.",
+    "answer": true,
+    "explanation": "Des études ont montré une association possible entre la rosacée et Helicobacter pylori, bien que la causalité reste débattue."
+  },
+  {
+    "id": "DE313",
+    "question": "Les verrues vulgaires sont causées par une infection par le virus de l'herpès simplex.",
+    "answer": false,
+    "explanation": "Les verrues vulgaires sont causées par le papillomavirus humain (HPV), et non par le virus de l'herpès."
+  },
+  {
+    "id": "DE314",
+    "question": "La dermatomyosite peut être un signe paranéoplasique.",
+    "answer": true,
+    "explanation": "La dermatomyosite est parfois associée à des cancers sous-jacents, ce qui en fait un syndrome paranéoplasique."
+  },
+  {
+    "id": "DE315",
+    "question": "La gale est causée par un parasite visible à l'œil nu.",
+    "answer": false,
+    "explanation": "La gale est causée par l'acarien Sarcoptes scabiei, qui est microscopique et non visible à l'œil nu."
+  },
+  {
+    "id": "DE316",
+    "question": "Le lichen plan est fréquemment associé à une infection chronique par le virus de l'hépatite C.",
+    "answer": true,
+    "explanation": "Le lichen plan a été associé à une infection chronique par le VHC dans de nombreux cas."
+  },
+  {
+    "id": "DE317",
+    "question": "Les mélanomes amélanotiques sont plus difficiles à diagnostiquer que les mélanomes pigmentés.",
+    "answer": true,
+    "explanation": "Les mélanomes amélanotiques manquent de pigmentation, ce qui peut retarder leur diagnostic."
+  },
+  {
+    "id": "DE318",
+    "question": "Les ulcères veineux sont souvent indolores, contrairement aux ulcères artériels.",
+    "answer": true,
+    "explanation": "Les ulcères veineux sont généralement indolores, tandis que les ulcères artériels sont souvent très douloureux."
+  },
+  {
+    "id": "DE319",
+    "question": "La pustulose palmoplantaire est systématiquement liée au psoriasis.",
+    "answer": false,
+    "explanation": "Bien que la pustulose palmoplantaire soit parfois associée au psoriasis, elle peut aussi exister de manière isolée ou dans d'autres contextes."
+  }
+]

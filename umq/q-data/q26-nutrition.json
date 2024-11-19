@@ -1,0 +1,122 @@
+[
+  {
+    "id": "NU800",
+    "question": "La vitamine D est principalement absorbée dans l'intestin grêle à partir de sa forme active, la vitamine D3.",
+    "answer": false,
+    "explanation": "La vitamine D3 (cholécalciférol) est d'abord convertie dans le foie en calcidiol, puis dans les reins en calcitriol, la forme active de la vitamine D."
+  },
+  {
+    "id": "NU801",
+    "question": "Les acides gras trans naturellement présents dans les produits d'origine animale sont moins dangereux pour la santé cardiovasculaire que les acides gras trans industriels.",
+    "answer": false,
+    "explanation": "Les acides gras trans, qu'ils soient d'origine naturelle ou industrielle, ont des effets négatifs sur la santé cardiovasculaire. Les acides gras trans industriels sont cependant associés à un plus grand risque de maladies cardiaques."
+  },
+  {
+    "id": "NU802",
+    "question": "Les phytostérols présents dans les plantes peuvent réduire l'absorption du cholestérol alimentaire, ce qui aide à réduire le taux de cholestérol sanguin.",
+    "answer": true,
+    "explanation": "Les phytostérols, présents dans les huiles végétales et les graines, inhibent l'absorption du cholestérol alimentaire dans l'intestin, contribuant ainsi à la réduction du cholestérol sanguin."
+  },
+  {
+    "id": "NU803",
+    "question": "Les probiotiques et prébiotiques ont les mêmes effets bénéfiques sur la santé intestinale.",
+    "answer": false,
+    "explanation": "Les probiotiques sont des micro-organismes vivants qui apportent des bénéfices pour la santé, tandis que les prébiotiques sont des substances alimentaires qui favorisent la croissance des micro-organismes bénéfiques déjà présents dans l'intestin."
+  },
+  {
+    "id": "NU804",
+    "question": "Les régimes riches en glucides simples, comme les sucreries, sont plus susceptibles de favoriser la prise de poids que les régimes riches en glucides complexes.",
+    "answer": true,
+    "explanation": "Les glucides simples sont rapidement digérés et peuvent entraîner des pics de glucose sanguin, augmentant ainsi la faim et la prise alimentaire, ce qui favorise la prise de poids."
+  },
+  {
+    "id": "NU805",
+    "question": "Les graisses saturées provenant des noix et des graines peuvent être bénéfiques pour la santé cardiovasculaire.",
+    "answer": true,
+    "explanation": "Bien que les noix et graines contiennent des graisses saturées, elles contiennent également des acides gras insaturés et des antioxydants qui sont bénéfiques pour la santé cardiovasculaire."
+  },
+  {
+    "id": "NU806",
+    "question": "L'index glycémique d'un aliment est toujours plus bas lorsqu'il est consommé cuit plutôt que cru.",
+    "answer": false,
+    "explanation": "La cuisson peut augmenter ou diminuer l'index glycémique, selon le type d'aliment. Par exemple, les pâtes cuites ont un index glycémique plus bas que lorsqu'elles sont consommées crues."
+  },
+  {
+    "id": "NU807",
+    "question": "Le calcium d'origine végétale est toujours moins bien absorbé que le calcium d'origine animale.",
+    "answer": false,
+    "explanation": "Bien que le calcium d'origine végétale (présent dans les légumes à feuilles vertes) soit souvent moins bien absorbé, certains aliments comme le tofu et les produits enrichis sont des sources végétales de calcium hautement biodisponibles."
+  },
+  {
+    "id": "NU808",
+    "question": "Les acides gras oméga-3, tels que ceux présents dans les poissons gras, peuvent réduire l'inflammation dans le corps.",
+    "answer": true,
+    "explanation": "Les acides gras oméga-3 ont des effets anti-inflammatoires prouvés et peuvent aider à réduire le risque de maladies inflammatoires chroniques."
+  },
+  {
+    "id": "NU809",
+    "question": "Les régimes végétariens sont toujours carencés en vitamine B12.",
+    "answer": false,
+    "explanation": "Les régimes végétariens peuvent être équilibrés avec des sources alternatives de vitamine B12, comme les produits enrichis ou les suppléments. Cependant, sans supplémentation, il existe un risque de carence."
+  },
+  {
+    "id": "NU810",
+    "question": "Les fibres alimentaires solubles aident principalement à réguler les niveaux de sucre dans le sang.",
+    "answer": true,
+    "explanation": "Les fibres solubles forment un gel dans l'intestin et ralentissent l'absorption des glucides, ce qui aide à réguler les niveaux de sucre dans le sang."
+  },
+  {
+    "id": "NU811",
+    "question": "Le fer non hémique, présent dans les légumes, est mieux absorbé lorsqu'il est consommé avec des aliments riches en vitamine C.",
+    "answer": true,
+    "explanation": "La vitamine C favorise l'absorption du fer non hémique, ce qui est particulièrement important pour les personnes suivant un régime végétarien ou végétalien."
+  },
+  {
+    "id": "NU812",
+    "question": "Les protéines de soja ont un profil d'acides aminés inférieur à celui des protéines animales.",
+    "answer": false,
+    "explanation": "Les protéines de soja sont considérées comme des protéines complètes, car elles contiennent tous les acides aminés essentiels nécessaires à l'organisme."
+  },
+  {
+    "id": "NU813",
+    "question": "Les sucres ajoutés dans les boissons sucrées n'ont pas d'impact significatif sur le risque de maladies métaboliques.",
+    "answer": false,
+    "explanation": "Les sucres ajoutés dans les boissons sucrées augmentent le risque de maladies métaboliques, telles que l'obésité, le diabète de type 2 et les maladies cardiovasculaires."
+  },
+  {
+    "id": "NU814",
+    "question": "L'acide folique est essentiel pour la formation de l'ADN et joue un rôle crucial dans la prévention des malformations du tube neural chez les femmes enceintes.",
+    "answer": true,
+    "explanation": "L'acide folique est essentiel pour la synthèse de l'ADN et sa supplémentation est recommandée chez les femmes enceintes pour prévenir les malformations du tube neural."
+  },
+  {
+    "id": "NU815",
+    "question": "Le lait d'amande est une source significative de protéines.",
+    "answer": false,
+    "explanation": "Le lait d'amande est pauvre en protéines par rapport à d'autres boissons végétales comme le lait de soja ou le lait de pois."
+  },
+  {
+    "id": "NU816",
+    "question": "Les polyphénols présents dans les fruits et légumes ont des effets antioxydants et peuvent jouer un rôle dans la prévention du cancer.",
+    "answer": true,
+    "explanation": "Les polyphénols ont des propriétés antioxydantes et sont associés à une réduction du risque de cancer, notamment en neutralisant les radicaux libres."
+  },
+  {
+    "id": "NU817",
+    "question": "La consommation excessive de sodium est l'une des principales causes de l'hypertension artérielle.",
+    "answer": true,
+    "explanation": "L'excès de sodium dans l'alimentation augmente la rétention d'eau, ce qui peut entraîner une élévation de la pression artérielle."
+  },
+  {
+    "id": "NU818",
+    "question": "Les acides gras omega-6 sont toujours plus bénéfiques que les omega-3 pour la santé cardiovasculaire.",
+    "answer": false,
+    "explanation": "Les acides gras omega-3 sont généralement plus bénéfiques pour la santé cardiovasculaire en raison de leurs propriétés anti-inflammatoires et de leur capacité à réduire les triglycérides sanguins."
+  },
+  {
+    "id": "NU819",
+    "question": "Les régimes alimentaires riches en potassium sont associés à une diminution du risque d'hypertension.",
+    "answer": true,
+    "explanation": "Le potassium aide à contrebalancer les effets du sodium sur la pression artérielle et peut contribuer à la prévention de l'hypertension."
+  }
+]

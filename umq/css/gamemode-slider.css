@@ -1,0 +1,59 @@
+/* Styling for the slider container */
+.slider-container {
+    /* padding: 10px; */
+    border-radius: 8px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
+    text-align: center;
+    width: 220px;
+    height: 60px;
+    /* background-color: #181818; */
+    margin: 10px;
+    /* padding-left: 26px; */
+}
+
+/* Slider Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    border-radius: 50px;
+    /* background: linear-gradient(to right, #5ec9fa, #0274d1); */
+    background: #2f2f2f;
+    outline: none;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider Thumb Styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background: #ffffff; */
+    background: #00ceff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    /* border: 2px solid #ffffff; */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for slider thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+    /* background-color: #ffffff; */
+    background: #00ceff;
+    transform: scale(1.4);
+}
+
+/* Displaying the value of the slider */
+.values {
+    margin-top: 12px;
+    color: #00ceff;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-size: 14px;
+}

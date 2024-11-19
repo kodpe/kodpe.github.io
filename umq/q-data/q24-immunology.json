@@ -1,0 +1,122 @@
+[
+  {
+    "id": "IM500",
+    "question": "Les cellules NK (Natural Killer) nécessitent une sensibilisation préalable aux antigènes pour détruire une cellule cible.",
+    "answer": false,
+    "explanation": "Les cellules NK ne nécessitent pas de sensibilisation préalable. Elles détruisent directement les cellules cibles grâce à des récepteurs activateurs et inhibiteurs."
+  },
+  {
+    "id": "IM501",
+    "question": "Les plasmocytes dérivent des lymphocytes T activés.",
+    "answer": false,
+    "explanation": "Les plasmocytes dérivent des lymphocytes B activés, pas des lymphocytes T."
+  },
+  {
+    "id": "IM502",
+    "question": "La voie classique du complément est activée indépendamment de la présence d'anticorps.",
+    "answer": false,
+    "explanation": "La voie classique est activée par des complexes antigène-anticorps. Les voies alterne et lectine sont indépendantes des anticorps."
+  },
+  {
+    "id": "IM503",
+    "question": "Les macrophages tissulaires peuvent présenter des antigènes via le CMH de classe II.",
+    "answer": true,
+    "explanation": "Les macrophages font partie des cellules présentatrices d'antigènes et utilisent le CMH II pour activer les lymphocytes T auxiliaires."
+  },
+  {
+    "id": "IM504",
+    "question": "Les IgA sécrétoires jouent un rôle majeur dans l'immunité humorale au niveau des muqueuses.",
+    "answer": true,
+    "explanation": "Les IgA sécrétoires neutralisent les pathogènes au niveau des muqueuses sans provoquer d'inflammation."
+  },
+  {
+    "id": "IM505",
+    "question": "La tolérance centrale survient uniquement dans le thymus.",
+    "answer": false,
+    "explanation": "La tolérance centrale survient dans les organes lymphoïdes primaires, comme le thymus pour les lymphocytes T et la moelle osseuse pour les lymphocytes B."
+  },
+  {
+    "id": "IM506",
+    "question": "Le CMH de classe I est exprimé sur toutes les cellules nucléées de l'organisme.",
+    "answer": true,
+    "explanation": "Le CMH de classe I est présent sur toutes les cellules nucléées, contrairement au CMH de classe II qui est limité aux cellules présentatrices d'antigènes."
+  },
+  {
+    "id": "IM507",
+    "question": "Une réaction d'hypersensibilité de type III est médiée exclusivement par les lymphocytes T.",
+    "answer": false,
+    "explanation": "La réaction de type III est médiée par des complexes immuns (anticorps-antigène), pas par les lymphocytes T."
+  },
+  {
+    "id": "IM508",
+    "question": "Les cytokines pro-inflammatoires incluent l'IL-10 et le TGF-β.",
+    "answer": false,
+    "explanation": "L'IL-10 et le TGF-β sont des cytokines anti-inflammatoires. Les cytokines pro-inflammatoires incluent l'IL-1, l'IL-6 et le TNF-α."
+  },
+  {
+    "id": "IM509",
+    "question": "Les cellules dendritiques activées migrent vers les ganglions lymphatiques pour activer les lymphocytes T naïfs.",
+    "answer": true,
+    "explanation": "Les cellules dendritiques présentent les antigènes aux lymphocytes T dans les ganglions lymphatiques après activation."
+  },
+  {
+    "id": "IM510",
+    "question": "Les lymphocytes B ne nécessitent jamais l'aide des lymphocytes T pour produire des anticorps.",
+    "answer": false,
+    "explanation": "Pour la majorité des antigènes (dépendants du thymus), les lymphocytes B nécessitent l'aide des lymphocytes T auxiliaires."
+  },
+  {
+    "id": "IM511",
+    "question": "Les anticorps de type IgE sont principalement impliqués dans les réactions allergiques.",
+    "answer": true,
+    "explanation": "Les IgE se lient aux récepteurs des mastocytes et déclenchent des réactions allergiques lorsqu'ils rencontrent un allergène."
+  },
+  {
+    "id": "IM512",
+    "question": "Les lymphocytes T régulateurs (Tregs) suppriment l'activité des lymphocytes autoréactifs.",
+    "answer": true,
+    "explanation": "Les Tregs jouent un rôle clé dans la tolérance périphérique en supprimant les réponses auto-immunes."
+  },
+  {
+    "id": "IM513",
+    "question": "Les granulocytes neutrophiles sont les premiers leucocytes recrutés lors de l'inflammation aiguë.",
+    "answer": true,
+    "explanation": "Les neutrophiles arrivent rapidement sur le site de l'inflammation grâce à leur chimiotaxie."
+  },
+  {
+    "id": "IM514",
+    "question": "Le test de Mantoux est utilisé pour détecter les anticorps anti-Mycobacterium tuberculosis.",
+    "answer": false,
+    "explanation": "Le test de Mantoux détecte une réponse immunitaire cellulaire (hypersensibilité de type IV), et non des anticorps."
+  },
+  {
+    "id": "IM515",
+    "question": "La recombinaison V(D)J dans les lymphocytes T et B se produit uniquement après leur activation.",
+    "answer": false,
+    "explanation": "La recombinaison V(D)J a lieu lors de la maturation des lymphocytes dans les organes lymphoïdes primaires, avant leur activation."
+  },
+  {
+    "id": "IM516",
+    "question": "Le complément peut être activé directement par des surfaces microbiennes via la voie alterne.",
+    "answer": true,
+    "explanation": "La voie alterne du complément est activée spontanément par des surfaces microbiennes sans besoin d'anticorps."
+  },
+  {
+    "id": "IM517",
+    "question": "La prolifération clonale des lymphocytes T est médiée par l'IL-2.",
+    "answer": true,
+    "explanation": "L'IL-2 est une cytokine clé dans la prolifération et l'expansion clonale des lymphocytes T activés."
+  },
+  {
+    "id": "IM518",
+    "question": "Les mastocytes et les basophiles libèrent de l'histamine en réponse à une liaison IgG.",
+    "answer": false,
+    "explanation": "Les mastocytes et basophiles libèrent de l'histamine en réponse à la liaison des IgE, pas des IgG."
+  },
+  {
+    "id": "IM519",
+    "question": "Les cellules T cytotoxiques CD8+ induisent l'apoptose via les voies Fas-FasL et granzyme-perforine.",
+    "answer": true,
+    "explanation": "Les cellules T CD8+ utilisent ces deux mécanismes pour induire la mort cellulaire programmée des cellules cibles."
+  }
+]

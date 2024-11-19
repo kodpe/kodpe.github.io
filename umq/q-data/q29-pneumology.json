@@ -1,0 +1,122 @@
+[
+  {
+    "id": "PN100",
+    "question": "L'hyperréactivité bronchique est un des critères diagnostiques majeurs de l'asthme, mais peut aussi être observée dans d'autres pathologies, comme la BPCO.",
+    "answer": true,
+    "explanation": "L'hyperréactivité bronchique est un des critères diagnostiques de l'asthme, mais elle peut aussi être présente dans d'autres maladies respiratoires, y compris la bronchopneumopathie chronique obstructive (BPCO)."
+  },
+  {
+    "id": "PN101",
+    "question": "Le traitement par stéroïdes inhalés est toujours recommandé dans la prise en charge initiale de la BPCO.",
+    "answer": false,
+    "explanation": "Les stéroïdes inhalés ne sont pas systématiquement recommandés pour la BPCO en l'absence d'exacerbations fréquentes ou de phénotypes inflammatoires spécifiques."
+  },
+  {
+    "id": "PN102",
+    "question": "Le test de réversibilité à la bronchodilatation est positif dans la majorité des cas d'asthme et dans environ 50 % des cas de BPCO.",
+    "answer": true,
+    "explanation": "Le test de réversibilité à la bronchodilatation est un indicateur clé de l'asthme, où il est fréquemment positif, et peut être également observé dans la BPCO, mais dans une moindre proportion."
+  },
+  {
+    "id": "PN103",
+    "question": "Les insuffisances respiratoires aiguës liées à des infections virales sont souvent mieux traitées avec des antibiotiques à large spectre.",
+    "answer": false,
+    "explanation": "Les infections virales responsables d'insuffisance respiratoire aiguë ne nécessitent pas d'antibiotiques, sauf en cas de surinfection bactérienne."
+  },
+  {
+    "id": "PN104",
+    "question": "La fibrose pulmonaire idiopathique est une maladie progressive avec un mauvais pronostic et ne bénéficie pas de traitements spécifiques efficaces.",
+    "answer": true,
+    "explanation": "La fibrose pulmonaire idiopathique est une maladie progressive souvent d'origine inconnue, pour laquelle les traitements restent limités en termes d'efficacité."
+  },
+  {
+    "id": "PN105",
+    "question": "Le syndrome de détresse respiratoire aiguë (SDRA) est caractérisé par un œdème pulmonaire non cardiogénique avec une hypoxémie sévère, mais peut être réversible dans certains cas.",
+    "answer": true,
+    "explanation": "Le SDRA est une affection aiguë grave associée à un œdème pulmonaire non cardiogénique et à une hypoxémie sévère. Bien que son pronostic soit souvent défavorable, la réversibilité est possible selon l'étiologie et la prise en charge."
+  },
+  {
+    "id": "PN106",
+    "question": "Les embolies pulmonaires massives sont toujours visibles sur un scanner thoracique à l'angio-scanner.",
+    "answer": false,
+    "explanation": "Les embolies pulmonaires massives ne sont pas toujours visibles à l'angio-scanner, en particulier dans les formes subcliniques ou peu volumineuses."
+  },
+  {
+    "id": "PN107",
+    "question": "La spirométrie est l'examen de référence pour diagnostiquer la BPCO et évaluer sa sévérité.",
+    "answer": true,
+    "explanation": "La spirométrie est essentielle pour diagnostiquer la BPCO et pour évaluer la sévérité de l'obstruction bronchique."
+  },
+  {
+    "id": "PN108",
+    "question": "Les corticostéroïdes inhalés sont recommandés en traitement de fond dans la gestion des exacerbations de la BPCO.",
+    "answer": true,
+    "explanation": "Les corticostéroïdes inhalés sont utilisés pour réduire les exacerbations dans la BPCO, notamment chez les patients ayant des antécédents d'exacerbations fréquentes."
+  },
+  {
+    "id": "PN109",
+    "question": "Les bronchodilatateurs à longue durée d'action sont toujours préférés par rapport aux bronchodilatateurs à courte durée d'action dans la gestion de la BPCO.",
+    "answer": false,
+    "explanation": "Les bronchodilatateurs à courte durée d'action (SABA, SAMA) sont utilisés en cas de besoin pour soulager les symptômes aigus, tandis que les bronchodilatateurs à longue durée d'action sont utilisés en traitement de fond."
+  },
+  {
+    "id": "PN110",
+    "question": "La tomodensitométrie (TDM) thoracique est l'examen de choix pour diagnostiquer une pneumonie communautaire.",
+    "answer": false,
+    "explanation": "Le diagnostic de pneumonie communautaire repose principalement sur les signes cliniques et les radiographies thoraciques. La TDM est utilisée en cas de complications ou de doute diagnostique."
+  },
+  {
+    "id": "PN111",
+    "question": "La pneumonie à pneumocoque peut être traitée par des antibiotiques à large spectre, mais nécessite toujours un traitement par amoxicilline.",
+    "answer": false,
+    "explanation": "La pneumonie à pneumocoque peut être traitée par des antibiotiques ciblant spécifiquement les pneumocoques, mais l'amoxicilline n'est pas toujours nécessaire, en fonction de la résistance."
+  },
+  {
+    "id": "PN112",
+    "question": "Les infections respiratoires chroniques obstructives sont souvent liées à l'exposition à des agents irritants tels que la pollution et la fumée de tabac.",
+    "answer": true,
+    "explanation": "L'exposition à des agents irritants, comme la fumée de tabac et la pollution, est la principale cause de la BPCO et d'autres maladies respiratoires obstructives chroniques."
+  },
+  {
+    "id": "PN113",
+    "question": "Les nodules pulmonaires sont généralement bénins et ne nécessitent pas de suivi.",
+    "answer": false,
+    "explanation": "Les nodules pulmonaires peuvent être bénins, mais leur caractère malin doit être systématiquement évalué, avec des examens complémentaires comme la TDM, voire la biopsie."
+  },
+  {
+    "id": "PN114",
+    "question": "Le traitement de l'asthme sévère peut inclure des biologiques comme les anticorps anti-IL5 et anti-IgE.",
+    "answer": true,
+    "explanation": "Le traitement de l'asthme sévère peut inclure des traitements biologiques ciblant l'interleukine-5 (IL5) ou l'immunoglobuline E (IgE) pour mieux contrôler l'inflammation bronchique."
+  },
+  {
+    "id": "PN115",
+    "question": "Le pneumothorax spontané primaire est plus fréquent chez les personnes âgées de plus de 60 ans.",
+    "answer": false,
+    "explanation": "Le pneumothorax spontané primaire est plus fréquent chez les jeunes adultes, particulièrement chez les hommes jeunes et les fumeurs."
+  },
+  {
+    "id": "PN116",
+    "question": "Le traitement par N-acétylcystéine est utilisé principalement pour traiter les exacerbations d'asthme.",
+    "answer": false,
+    "explanation": "La N-acétylcystéine est utilisée pour liquéfier les sécrétions dans des pathologies comme la mucoviscidose, mais elle n'est pas utilisée dans les exacerbations d'asthme."
+  },
+  {
+    "id": "PN117",
+    "question": "Le diagnostic de la tuberculose pulmonaire repose uniquement sur la culture de Mycobacterium tuberculosis.",
+    "answer": false,
+    "explanation": "Le diagnostic de la tuberculose pulmonaire repose sur une combinaison d'examens : culture, test tuberculinique, examen bactériologique des expectorations et radiographie thoracique."
+  },
+  {
+    "id": "PN118",
+    "question": "Le syndrome de l'apnée du sommeil obstructive est souvent lié à des facteurs mécaniques, comme la taille des amygdales et des végétations.",
+    "answer": true,
+    "explanation": "Le syndrome de l'apnée du sommeil est fréquemment associé à des anomalies anatomiques, comme des amygdales hypertrophiées ou des végétations adénoïdes chez l'enfant."
+  },
+  {
+    "id": "PN119",
+    "question": "La ventilation non invasive (VNI) est indiquée en première intention dans la gestion de l'insuffisance respiratoire aiguë chez les patients atteints de pneumonie communautaire.",
+    "answer": false,
+    "explanation": "La ventilation non invasive est indiquée dans certaines formes d'insuffisance respiratoire aiguë, mais pas en première intention dans les pneumonies communautaires, sauf en cas de défaillance respiratoire aiguë."
+  }
+]

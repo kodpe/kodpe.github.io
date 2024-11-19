@@ -1,0 +1,122 @@
+[
+  {
+    "id": "RH900",
+    "question": "La polyarthrite rhumatoïde est toujours associée à la présence d'auto-anticorps spécifiques tels que l'anticorps anti-CCP.",
+    "answer": false,
+    "explanation": "Bien que les anticorps anti-CCP soient spécifiques à la polyarthrite rhumatoïde et aident au diagnostic, certains patients peuvent être séro-négatifs, c'est-à-dire sans anticorps anti-CCP, tout en ayant une polyarthrite rhumatoïde."
+  },
+  {
+    "id": "RH901",
+    "question": "Le syndrome de Sjögren est principalement caractérisé par des symptômes de sécheresse oculaire et buccale, mais peut également inclure des manifestations extraglandulaires comme des atteintes rénales.",
+    "answer": true,
+    "explanation": "Le syndrome de Sjögren affecte principalement les glandes exocrines, causant sécheresse oculaire et buccale, mais peut également entraîner des atteintes rénales, pulmonaires, et même un risque accru de lymphome."
+  },
+  {
+    "id": "RH902",
+    "question": "La goutte est causée uniquement par une hyperuricémie, indépendamment d'autres facteurs de risque.",
+    "answer": false,
+    "explanation": "La goutte est effectivement associée à une hyperuricémie, mais d'autres facteurs, tels que l'alimentation, l'obésité, la génétique et certains médicaments, jouent également un rôle important dans son développement."
+  },
+  {
+    "id": "RH903",
+    "question": "L'ostéoporose est plus fréquente chez les hommes que chez les femmes, particulièrement après la ménopause.",
+    "answer": false,
+    "explanation": "L'ostéoporose est en fait beaucoup plus fréquente chez les femmes, en particulier après la ménopause, en raison de la baisse des niveaux d'œstrogènes, qui protège normalement les os."
+  },
+  {
+    "id": "RH904",
+    "question": "La spondylarthrite ankylosante est caractérisée par une fusion progressive des vertèbres, mais elle épargne généralement les articulations périphériques.",
+    "answer": true,
+    "explanation": "La spondylarthrite ankylosante est une forme de spondylarthropathie inflammatoire qui touche principalement la colonne vertébrale, provoquant une fusion des vertèbres, et affecte rarement les articulations périphériques."
+  },
+  {
+    "id": "RH905",
+    "question": "Les médicaments biologiques sont utilisés principalement dans le traitement des arthrites inflammatoires, mais ils sont contre-indiqués chez les patients présentant des antécédents de cancer.",
+    "answer": false,
+    "explanation": "Les médicaments biologiques sont couramment utilisés pour traiter des maladies inflammatoires comme la polyarthrite rhumatoïde, mais leur utilisation n'est pas systématiquement contre-indiquée chez les patients ayant des antécédents de cancer, bien que des précautions soient prises."
+  },
+  {
+    "id": "RH906",
+    "question": "L'arthrose est une maladie inflammatoire des articulations, principalement causée par l'inflammation des synoviales.",
+    "answer": false,
+    "explanation": "L'arthrose est une maladie dégénérative des articulations, résultant de l'usure du cartilage articulaire. Elle n'est pas causée principalement par l'inflammation des synoviales, contrairement à la polyarthrite rhumatoïde."
+  },
+  {
+    "id": "RH907",
+    "question": "Le lupus érythémateux disséminé (LED) peut provoquer des lésions cutanées, des atteintes articulaires et rénales, et est souvent accompagné de symptômes neurologiques.",
+    "answer": true,
+    "explanation": "Le lupus érythémateux disséminé (LED) est une maladie auto-immune qui peut affecter de multiples organes, dont la peau, les articulations, les reins et le système nerveux central."
+  },
+  {
+    "id": "RH908",
+    "question": "Les cristaux de pyrophosphate de calcium dihydraté (PPDC) sont la cause principale de la pseudogoutte.",
+    "answer": true,
+    "explanation": "La pseudogoutte est causée par le dépôt de cristaux de pyrophosphate de calcium dihydraté (PPDC) dans les articulations, entraînant des douleurs et des inflammations similaires à celles de la goutte."
+  },
+  {
+    "id": "RH909",
+    "question": "La prise prolongée de corticostéroïdes peut provoquer une ostéoporose secondaire.",
+    "answer": true,
+    "explanation": "Les corticostéroïdes, utilisés à long terme, augmentent le risque d'ostéoporose en inhibant la formation osseuse et en augmentant la résorption osseuse."
+  },
+  {
+    "id": "RH910",
+    "question": "Les anti-TNF alpha sont efficaces dans le traitement de la polyarthrite rhumatoïde, mais peuvent augmenter le risque d'infections graves.",
+    "answer": true,
+    "explanation": "Les inhibiteurs de TNF alpha (comme l'infliximab et l'étanercept) sont efficaces pour traiter la polyarthrite rhumatoïde, mais leur utilisation augmente le risque d'infections graves en raison de l'immunosuppression."
+  },
+  {
+    "id": "RH911",
+    "question": "Le diagnostic de la sclérodermie systémique repose exclusivement sur les tests de la fonction pulmonaire.",
+    "answer": false,
+    "explanation": "Le diagnostic de la sclérodermie systémique repose sur des critères cliniques, biologiques et parfois histologiques, avec une attention particulière aux manifestations cutanées et aux atteintes vasculaires, et non uniquement sur les tests de la fonction pulmonaire."
+  },
+  {
+    "id": "RH912",
+    "question": "La myosite à inclusions (IBM) est une forme de myopathie inflammatoire chronique qui touche principalement les membres supérieurs et est souvent réfractaire aux traitements immunosuppresseurs.",
+    "answer": true,
+    "explanation": "La myosite à inclusions (IBM) est une forme de myopathie inflammatoire qui se manifeste par une faiblesse musculaire, souvent dans les membres supérieurs, et qui est résistante aux traitements immunosuppresseurs."
+  },
+  {
+    "id": "RH913",
+    "question": "La prise en charge de la goutte implique systématiquement un traitement prophylactique de l'hyperuricémie après un premier épisode.",
+    "answer": true,
+    "explanation": "Après un premier épisode de goutte, un traitement prophylactique de l'hyperuricémie est généralement recommandé pour prévenir de futures crises et complications."
+  },
+  {
+    "id": "RH914",
+    "question": "Le traitement de la spondylarthrite ankylosante repose uniquement sur des anti-inflammatoires non stéroïdiens (AINS).",
+    "answer": false,
+    "explanation": "Bien que les AINS soient utilisés pour soulager la douleur dans la spondylarthrite ankylosante, des traitements de fond comme les anti-TNF alpha ou les inhibiteurs de l'IL-17 peuvent être nécessaires pour contrôler l'inflammation."
+  },
+  {
+    "id": "RH915",
+    "question": "Le traitement du rhumatisme psoriasique repose principalement sur des traitements topiques de la peau.",
+    "answer": false,
+    "explanation": "Le traitement du rhumatisme psoriasique inclut des médicaments systémiques comme les anti-TNF alpha, les inhibiteurs de l'IL-17, et parfois des médicaments antirhumatismaux modificateurs de la maladie (DMARDs), bien que des traitements topiques pour le psoriasis cutané puissent être utilisés."
+  },
+  {
+    "id": "RH916",
+    "question": "La calcitonine est utilisée pour traiter l'ostéoporose en inhibant la résorption osseuse.",
+    "answer": true,
+    "explanation": "La calcitonine, une hormone peptidique, est utilisée dans le traitement de l'ostéoporose en inhibant la résorption osseuse, bien que son utilisation soit moins fréquente de nos jours en raison des alternatives plus efficaces."
+  },
+  {
+    "id": "RH917",
+    "question": "La fibromyalgie est considérée comme une maladie inflammatoire des muscles et des articulations.",
+    "answer": false,
+    "explanation": "La fibromyalgie est une maladie caractérisée par des douleurs musculaires et squelettiques généralisées, mais elle n'est pas considérée comme une maladie inflammatoire."
+  },
+  {
+    "id": "RH918",
+    "question": "La polychondrite récidivante est une maladie rare caractérisée par une inflammation des cartilages, notamment des oreilles, du nez et des articulations.",
+    "answer": true,
+    "explanation": "La polychondrite récidivante est une maladie inflammatoire rare qui affecte les cartilages, entraînant des déformations, notamment au niveau des oreilles et du nez, et peut aussi toucher d'autres parties du corps."
+  },
+  {
+    "id": "RH919",
+    "question": "Les inhibiteurs de JAK (Janus kinase) sont utilisés dans le traitement de la polyarthrite rhumatoïde, mais leur utilisation est contre-indiquée chez les patients ayant des antécédents de thrombose veineuse profonde.",
+    "answer": true,
+    "explanation": "Les inhibiteurs de JAK, tels que le tofacitinib, sont utilisés dans le traitement de la polyarthrite rhumatoïde, mais leur utilisation peut augmenter le risque de thrombose veineuse profonde et est donc contre-indiquée chez les patients ayant des antécédents de ce type de complication."
+  }
+]

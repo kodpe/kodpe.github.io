@@ -1,0 +1,122 @@
+[
+  {
+    "id": "HI400",
+    "question": "Les cellules caliciformes de l'intestin grêle produisent uniquement du mucus neutre.",
+    "answer": false,
+    "explanation": "Les cellules caliciformes produisent principalement du mucus acide riche en glycoprotéines, et non uniquement du mucus neutre."
+  },
+  {
+    "id": "HI401",
+    "question": "Les canalicules biliaires sont bordés par des cellules épithéliales cubiques simples.",
+    "answer": false,
+    "explanation": "Les canalicules biliaires sont bordés par les membranes apicales des hépatocytes, sans épithélium spécifique."
+  },
+  {
+    "id": "HI402",
+    "question": "Les stries scalariformes des cardiomyocytes contiennent des desmosomes, des jonctions serrées et des gap junctions.",
+    "answer": false,
+    "explanation": "Les stries scalariformes contiennent des desmosomes et des gap junctions, mais pas de jonctions serrées."
+  },
+  {
+    "id": "HI403",
+    "question": "Les cellules de Kupffer dans le foie sont des macrophages résidents dérivés des monocytes sanguins.",
+    "answer": true,
+    "explanation": "Les cellules de Kupffer sont des macrophages spécialisés résidents du foie, dérivés des monocytes."
+  },
+  {
+    "id": "HI404",
+    "question": "Les ostéoblastes sont uniquement situés à l'intérieur des lacunes osseuses.",
+    "answer": false,
+    "explanation": "Les ostéoblastes sont situés à la surface des os en formation, tandis que les ostéocytes se trouvent dans les lacunes."
+  },
+  {
+    "id": "HI405",
+    "question": "Les glandes sudoripares eccrines possèdent un canal excréteur bordé par un épithélium pavimenteux stratifié.",
+    "answer": false,
+    "explanation": "Les canaux excréteurs des glandes sudoripares eccrines sont bordés par un épithélium cubique stratifié."
+  },
+  {
+    "id": "HI406",
+    "question": "La substance blanche du système nerveux central contient principalement des corps cellulaires neuronaux.",
+    "answer": false,
+    "explanation": "La substance blanche contient principalement des axones myélinisés et non des corps cellulaires, qui sont localisés dans la substance grise."
+  },
+  {
+    "id": "HI407",
+    "question": "Les cellules interstitielles de Leydig sécrètent de la testostérone en réponse à la stimulation de la FSH.",
+    "answer": false,
+    "explanation": "Les cellules de Leydig sont stimulées par la LH, et non par la FSH."
+  },
+  {
+    "id": "HI408",
+    "question": "Le cartilage hyalin est avasculaire et reçoit ses nutriments par diffusion à partir du périchondre.",
+    "answer": true,
+    "explanation": "Le cartilage hyalin est avasculaire, et les nutriments diffusent à partir du périchondre environnant."
+  },
+  {
+    "id": "HI409",
+    "question": "Dans le cortex rénal, les glomérules sont exclusivement situés dans les pyramides de Malpighi.",
+    "answer": false,
+    "explanation": "Les glomérules sont situés dans le cortex rénal, mais pas dans les pyramides de Malpighi, qui sont dans la médulla."
+  },
+  {
+    "id": "HI410",
+    "question": "Les cellules de Schwann myélinisent les axones du système nerveux central.",
+    "answer": false,
+    "explanation": "Les cellules de Schwann myélinisent les axones dans le système nerveux périphérique, tandis que les oligodendrocytes le font dans le système nerveux central."
+  },
+  {
+    "id": "HI411",
+    "question": "Les cellules de Paneth dans l'intestin grêle sécrètent des enzymes antimicrobiennes telles que les défensines.",
+    "answer": true,
+    "explanation": "Les cellules de Paneth, localisées dans les cryptes intestinales, sécrètent des défensines et d'autres substances antimicrobiennes."
+  },
+  {
+    "id": "HI412",
+    "question": "Le tissu adipeux brun est principalement composé de cellules multivacuolaires riches en mitochondries.",
+    "answer": true,
+    "explanation": "Le tissu adipeux brun est constitué de cellules multivacuolaires qui produisent de la chaleur via la thermogenèse."
+  },
+  {
+    "id": "HI413",
+    "question": "Les capillaires continus sont caractérisés par la présence de larges fenestrations dans leur endothélium.",
+    "answer": false,
+    "explanation": "Les capillaires continus n'ont pas de fenestrations, contrairement aux capillaires fenestrés ou discontinus."
+  },
+  {
+    "id": "HI414",
+    "question": "Les glandes salivaires majeures sécrètent toutes un mucus acide.",
+    "answer": false,
+    "explanation": "Les glandes parotides sécrètent principalement de la salive séreuse, et non du mucus acide."
+  },
+  {
+    "id": "HI415",
+    "question": "Les microvillosités de l'épithélium intestinal augmentent la surface d'échange grâce à leur squelette d'actine.",
+    "answer": true,
+    "explanation": "Les microvillosités contiennent des filaments d'actine qui soutiennent leur structure et augmentent la surface d'échange."
+  },
+  {
+    "id": "HI416",
+    "question": "Les cellules myoépithéliales des glandes exocrines sont dérivées des fibroblastes.",
+    "answer": false,
+    "explanation": "Les cellules myoépithéliales dérivent des cellules épithéliales, et non des fibroblastes."
+  },
+  {
+    "id": "HI417",
+    "question": "La lamina propria de la muqueuse intestinale est composée uniquement de fibres de collagène.",
+    "answer": false,
+    "explanation": "La lamina propria contient des fibres de collagène, mais aussi des cellules immunitaires, des vaisseaux sanguins et des fibres élastiques."
+  },
+  {
+    "id": "HI418",
+    "question": "Les glandes sébacées produisent leur sécrétion par holocrinie.",
+    "answer": true,
+    "explanation": "Les glandes sébacées utilisent le mode de sécrétion holocrine, où les cellules se désintègrent pour libérer leur contenu."
+  },
+  {
+    "id": "HI419",
+    "question": "Les éosinophiles sont les leucocytes les plus abondants dans le sang humain.",
+    "answer": false,
+    "explanation": "Les neutrophiles sont les leucocytes les plus abondants dans le sang humain, et non les éosinophiles."
+  }
+]

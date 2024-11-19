@@ -1,0 +1,602 @@
+[
+  {
+    "id": "ORL700",
+    "question": "La maladie de Ménière est systématiquement associée à une perte auditive bilatérale.",
+    "answer": false,
+    "explanation": "La maladie de Ménière cause typiquement une perte auditive unilatérale fluctuante."
+  },
+  {
+    "id": "ORL701",
+    "question": "L'otite moyenne aiguë est principalement causée par des infections virales.",
+    "answer": false,
+    "explanation": "Bien que des virus soient parfois impliqués, l'otite moyenne aiguë est généralement causée par des bactéries comme Streptococcus pneumoniae et Haemophilus influenzae."
+  },
+  {
+    "id": "ORL702",
+    "question": "Le nerf crânien responsable de l'innervation motrice des cordes vocales est le nerf glossopharyngien.",
+    "answer": false,
+    "explanation": "C'est le nerf laryngé inférieur, une branche du nerf vague (nerf crânien X), qui assure cette fonction."
+  },
+  {
+    "id": "ORL703",
+    "question": "Le test de Weber latéralisé du côté de l'oreille atteinte indique une surdité de transmission.",
+    "answer": true,
+    "explanation": "Dans une surdité de transmission, le son est mieux entendu du côté atteint en raison de la conduction osseuse augmentée."
+  },
+  {
+    "id": "ORL704",
+    "question": "Le syndrome de Ramsay Hunt est causé par une réactivation du virus d'Epstein-Barr.",
+    "answer": false,
+    "explanation": "Le syndrome de Ramsay Hunt est causé par une réactivation du virus varicelle-zona, affectant le ganglion géniculé."
+  },
+  {
+    "id": "ORL705",
+    "question": "La sinusite maxillaire peut entraîner une douleur dentaire référée.",
+    "answer": true,
+    "explanation": "Les sinus maxillaires partagent des nerfs avec les dents supérieures, causant parfois des douleurs dentaires référées."
+  },
+  {
+    "id": "ORL706",
+    "question": "Une épistaxis postérieure est plus fréquente chez les enfants que chez les adultes.",
+    "answer": false,
+    "explanation": "Les épistaxis postérieures sont plus fréquentes chez les adultes, souvent associées à l'hypertension ou à l'athérosclérose."
+  },
+  {
+    "id": "ORL707",
+    "question": "La paralysie faciale périphérique respecte le territoire du muscle frontal.",
+    "answer": false,
+    "explanation": "Une paralysie faciale périphérique affecte tout l'hémiface, y compris le muscle frontal."
+  },
+  {
+    "id": "ORL708",
+    "question": "La déviation septale entraîne systématiquement une obstruction nasale bilatérale.",
+    "answer": false,
+    "explanation": "Une déviation septale entraîne généralement une obstruction nasale unilatérale."
+  },
+  {
+    "id": "ORL709",
+    "question": "La presbyacousie affecte préférentiellement les fréquences basses.",
+    "answer": false,
+    "explanation": "La presbyacousie affecte les hautes fréquences en premier, en raison de l'usure des cellules ciliées de la base de la cochlée."
+  },
+  {
+    "id": "ORL710",
+    "question": "L'otospongiose est une cause fréquente de surdité de perception.",
+    "answer": false,
+    "explanation": "L'otospongiose est une cause de surdité de transmission, liée à une fixation anormale de l'étrier."
+  },
+  {
+    "id": "ORL711",
+    "question": "Un carcinome épidermoïde est le cancer le plus fréquent des voies aéro-digestives supérieures.",
+    "answer": true,
+    "explanation": "Le carcinome épidermoïde est le type histologique le plus fréquent des cancers des voies aéro-digestives supérieures."
+  },
+  {
+    "id": "ORL712",
+    "question": "Un test de Rinne négatif indique une surdité de perception.",
+    "answer": false,
+    "explanation": "Un test de Rinne négatif indique une surdité de transmission, où la conduction osseuse est meilleure que la conduction aérienne."
+  },
+  {
+    "id": "ORL713",
+    "question": "La thyroïdectomie totale n'a aucun impact sur la fonction vocale.",
+    "answer": false,
+    "explanation": "La thyroïdectomie totale peut affecter la voix si les nerfs laryngés récurrents ou supérieurs sont endommagés."
+  },
+  {
+    "id": "ORL714",
+    "question": "Le test de Dix-Hallpike est utilisé pour diagnostiquer une labyrinthite.",
+    "answer": false,
+    "explanation": "Le test de Dix-Hallpike est utilisé pour diagnostiquer un vertige positionnel paroxystique bénin (VPPB), pas une labyrinthite."
+  },
+  {
+    "id": "ORL715",
+    "question": "Le nerf facial traverse l'oreille moyenne sans y avoir de rôle fonctionnel.",
+    "answer": false,
+    "explanation": "Le nerf facial traverse l'oreille moyenne et innerve le muscle stapédien, qui contrôle les vibrations de l'étrier."
+  },
+  {
+    "id": "ORL716",
+    "question": "La mastoïdite est une complication possible de l'otite externe.",
+    "answer": false,
+    "explanation": "La mastoïdite est une complication de l'otite moyenne aiguë, pas de l'otite externe."
+  },
+  {
+    "id": "ORL717",
+    "question": "Les cellules ciliées de l'oreille interne se régénèrent après des lésions modérées.",
+    "answer": false,
+    "explanation": "Les cellules ciliées de l'oreille interne ne se régénèrent pas chez les mammifères, ce qui explique les pertes auditives irréversibles."
+  },
+  {
+    "id": "ORL718",
+    "question": "L'angine de Ludwig est une infection bénigne qui guérit spontanément.",
+    "answer": false,
+    "explanation": "L'angine de Ludwig est une infection grave des tissus sous-maxillaires nécessitant une intervention médicale urgente."
+  },
+  {
+    "id": "ORL719",
+    "question": "La tumeur de Warthin est une tumeur maligne fréquente des glandes salivaires.",
+    "answer": false,
+    "explanation": "La tumeur de Warthin est une tumeur bénigne fréquente des glandes salivaires, particulièrement la glande parotide."
+  },
+  {
+    "id": "ORL720",
+    "question": "L'angine érythémato-pultacée est toujours causée par Streptococcus pyogenes.",
+    "answer": false,
+    "explanation": "Bien que Streptococcus pyogenes soit une cause fréquente, d'autres bactéries ou virus peuvent provoquer ce type d'angine."
+  },
+  {
+    "id": "ORL721",
+    "question": "Une angine de Vincent est souvent associée à un contexte de mauvaise hygiène bucco-dentaire.",
+    "answer": true,
+    "explanation": "L'angine de Vincent est causée par des bactéries anaérobies dans un contexte de mauvaise hygiène bucco-dentaire."
+  },
+  {
+    "id": "ORL722",
+    "question": "La classification de Centor permet d'identifier une angine d'origine bactérienne avec une sensibilité supérieure à 95%.",
+    "answer": false,
+    "explanation": "La classification de Centor est un outil clinique utile, mais sa sensibilité est inférieure à 95%."
+  },
+  {
+    "id": "ORL723",
+    "question": "Une angine ulcéro-nécrotique est toujours un signe de leucémie aiguë.",
+    "answer": false,
+    "explanation": "Bien qu'elle puisse survenir dans un contexte de leucémie, une angine ulcéro-nécrotique peut aussi être due à une angine de Vincent ou d'autres causes infectieuses."
+  },
+  {
+    "id": "ORL724",
+    "question": "Le streptocoque du groupe C peut causer une angine bactérienne.",
+    "answer": true,
+    "explanation": "Le streptocoque du groupe C, bien que moins fréquent que le groupe A, peut causer des angines bactériennes."
+  },
+  {
+    "id": "ORL725",
+    "question": "Un test rapide de détection antigénique (TDR) négatif exclut définitivement une infection streptococcique.",
+    "answer": false,
+    "explanation": "Un TDR négatif n'exclut pas une infection streptococcique; un examen de confirmation comme une culture peut être nécessaire."
+  },
+  {
+    "id": "ORL726",
+    "question": "L'angine herpétique est causée par le virus Epstein-Barr.",
+    "answer": false,
+    "explanation": "L'angine herpétique est causée par le virus de l'herpès simplex (HSV), pas par le virus Epstein-Barr."
+  },
+  {
+    "id": "ORL727",
+    "question": "L'amygdalite chronique hypertrophique est une indication absolue pour une amygdalectomie.",
+    "answer": false,
+    "explanation": "L'indication dépend de la gravité des symptômes, de la fréquence des infections et des complications associées."
+  },
+  {
+    "id": "ORL728",
+    "question": "La fièvre rhumatismale est une complication potentielle des angines virales.",
+    "answer": false,
+    "explanation": "La fièvre rhumatismale est une complication des angines streptococciques, pas des angines virales."
+  },
+  {
+    "id": "ORL729",
+    "question": "L'angine de Ludwig peut entraîner une obstruction des voies respiratoires si elle n'est pas traitée rapidement.",
+    "answer": true,
+    "explanation": "L'angine de Ludwig est une infection grave des espaces sous-maxillaires pouvant causer une obstruction aiguë des voies respiratoires."
+  },
+  {
+    "id": "ORL730",
+    "question": "Une mononucléose infectieuse peut présenter des symptômes d'angine érythémateuse sans pultacée.",
+    "answer": true,
+    "explanation": "La mononucléose infectieuse peut provoquer une angine érythémateuse ou érythémato-pultacée."
+  },
+  {
+    "id": "ORL731",
+    "question": "L'angine diphtérique est devenue extrêmement rare grâce à la vaccination généralisée.",
+    "answer": true,
+    "explanation": "La vaccination contre la diphtérie a considérablement réduit l'incidence de cette maladie."
+  },
+  {
+    "id": "ORL732",
+    "question": "Une angine fuso-spirillaire est une forme bénigne d'angine ne nécessitant pas de traitement antibiotique.",
+    "answer": false,
+    "explanation": "L'angine fuso-spirillaire nécessite un traitement antibiotique ciblant les bactéries anaérobies impliquées."
+  },
+  {
+    "id": "ORL733",
+    "question": "L'angine de Vincent peut entraîner une perforation du palais si elle n'est pas traitée.",
+    "answer": true,
+    "explanation": "Dans les cas sévères non traités, l'angine de Vincent peut provoquer une destruction tissulaire importante, y compris une perforation du palais."
+  },
+  {
+    "id": "ORL734",
+    "question": "L'angine de Plaut-Vincent est une autre appellation pour l'angine diphtérique.",
+    "answer": false,
+    "explanation": "L'angine de Plaut-Vincent est synonyme de l'angine ulcéro-nécrotique, pas de l'angine diphtérique."
+  },
+  {
+    "id": "ORL735",
+    "question": "Une angine virale peut parfois entraîner un abcès péri-amygdalien.",
+    "answer": false,
+    "explanation": "Les abcès péri-amygdaliens sont généralement des complications d'infections bactériennes, pas virales."
+  },
+  {
+    "id": "ORL736",
+    "question": "Le traitement de l'angine streptococcique est indispensable pour prévenir le syndrome de Gougerot-Sjögren.",
+    "answer": false,
+    "explanation": "Le traitement de l'angine streptococcique vise à prévenir des complications comme la fièvre rhumatismale, pas le syndrome de Gougerot-Sjögren."
+  },
+  {
+    "id": "ORL737",
+    "question": "Une angine pultacée ne répondant pas aux antibiotiques doit faire suspecter une infection par Fusobacterium necrophorum.",
+    "answer": true,
+    "explanation": "Fusobacterium necrophorum est une cause rare mais importante d'angines compliquées, souvent résistantes aux antibiotiques standards."
+  },
+  {
+    "id": "ORL738",
+    "question": "Le diagnostic d'une angine bactérienne repose exclusivement sur l'apparence clinique des amygdales.",
+    "answer": false,
+    "explanation": "L'apparence clinique seule ne permet pas de distinguer une angine bactérienne d'une angine virale. Des tests comme le TDR sont nécessaires."
+  },
+  {
+    "id": "ORL739",
+    "question": "Une angine streptococcique non traitée peut causer une glomérulonéphrite aiguë.",
+    "answer": true,
+    "explanation": "La glomérulonéphrite aiguë est une complication post-infectieuse possible des infections streptococciques non traitées."
+  },
+  {
+    "id": "ORL740",
+    "question": "L'otite moyenne aiguë bactérienne est le plus souvent causée par Staphylococcus aureus.",
+    "answer": false,
+    "explanation": "L'otite moyenne aiguë bactérienne est principalement causée par Streptococcus pneumoniae, Haemophilus influenzae ou Moraxella catarrhalis, et non par Staphylococcus aureus."
+  },
+  {
+    "id": "ORL741",
+    "question": "Une otite moyenne chronique cholestéatomateuse peut entraîner une paralysie faciale si elle n'est pas traitée.",
+    "answer": true,
+    "explanation": "Le cholestéatome peut éroder l'os et endommager le nerf facial, provoquant une paralysie faciale."
+  },
+  {
+    "id": "ORL742",
+    "question": "Une otite externe maligne est principalement causée par Pseudomonas aeruginosa.",
+    "answer": true,
+    "explanation": "Pseudomonas aeruginosa est le principal agent responsable de l'otite externe maligne, une infection grave qui touche généralement les patients immunodéprimés."
+  },
+  {
+    "id": "ORL743",
+    "question": "Les antibiotiques par voie orale sont toujours nécessaires dans le traitement d'une otite externe diffuse.",
+    "answer": false,
+    "explanation": "Le traitement de l'otite externe diffuse repose principalement sur des antibiotiques locaux, sauf en cas de complications ou de facteurs de risque systémiques."
+  },
+  {
+    "id": "ORL744",
+    "question": "L'otite moyenne aiguë chez l'adulte est généralement plus sévère que chez l'enfant en raison de la taille de la trompe d'Eustache.",
+    "answer": false,
+    "explanation": "Chez l'adulte, la trompe d'Eustache est plus longue et mieux fonctionnelle, ce qui réduit la gravité des infections comparé aux enfants."
+  },
+  {
+    "id": "ORL745",
+    "question": "Une otite moyenne séreuse est principalement causée par une obstruction de la trompe d'Eustache.",
+    "answer": true,
+    "explanation": "L'obstruction de la trompe d'Eustache entraîne une accumulation de liquide dans l'oreille moyenne, causant une otite séreuse."
+  },
+  {
+    "id": "ORL746",
+    "question": "Le signe de Battle est un indicateur fiable pour diagnostiquer une otite moyenne aiguë sévère.",
+    "answer": false,
+    "explanation": "Le signe de Battle indique une fracture de la base du crâne et n'est pas lié à une otite moyenne."
+  },
+  {
+    "id": "ORL747",
+    "question": "L'otite moyenne aiguë peut être compliquée par un abcès sous-périosté au niveau du processus mastoïde.",
+    "answer": true,
+    "explanation": "Un abcès sous-périosté peut survenir en cas de mastoïdite, une complication grave de l'otite moyenne aiguë."
+  },
+  {
+    "id": "ORL748",
+    "question": "La présence d'un nystagmus chez un patient souffrant d'otite peut être un signe de labyrinthite.",
+    "answer": true,
+    "explanation": "Une labyrinthite, complication de l'otite moyenne, peut entraîner des symptômes vestibulaires tels qu'un nystagmus."
+  },
+  {
+    "id": "ORL749",
+    "question": "L'otite moyenne avec effusion est toujours associée à des douleurs aiguës.",
+    "answer": false,
+    "explanation": "L'otite moyenne avec effusion se manifeste par une perte auditive et une sensation de plénitude, mais pas forcément par une douleur aiguë."
+  },
+  {
+    "id": "ORL750",
+    "question": "Le diagnostic d'une otite barotraumatique repose principalement sur une otoscopie montrant des bulles dans le tympan.",
+    "answer": false,
+    "explanation": "L'otite barotraumatique est diagnostiquée par des signes de barotraumatisme, tels qu'un tympan hyperémié ou perforé, mais pas spécifiquement par des bulles."
+  },
+  {
+    "id": "ORL751",
+    "question": "La vaccination contre Haemophilus influenzae de type b a réduit l'incidence des otites moyennes aiguës bactériennes.",
+    "answer": true,
+    "explanation": "La vaccination a significativement réduit les infections à Haemophilus influenzae de type b, une cause fréquente d'otites moyennes aiguës."
+  },
+  {
+    "id": "ORL752",
+    "question": "Une otite moyenne aiguë récidivante chez l'enfant nécessite toujours une pose d'aérateurs transtympaniques (diabolos).",
+    "answer": false,
+    "explanation": "La pose de diabolos est envisagée en cas d'otites récidivantes fréquentes avec des symptômes persistants malgré les traitements."
+  },
+  {
+    "id": "ORL753",
+    "question": "Un liquide purulent dans le conduit auditif externe est un signe pathognomonique d'une otite moyenne aiguë.",
+    "answer": false,
+    "explanation": "Un écoulement purulent peut aussi indiquer une otite externe ou une perforation tympanique chronique."
+  },
+  {
+    "id": "ORL754",
+    "question": "Une otite externe chronique peut être due à une dermatite atopique sous-jacente.",
+    "answer": true,
+    "explanation": "Une dermatite atopique peut provoquer une otite externe chronique par irritation et inflammation persistantes."
+  },
+  {
+    "id": "ORL755",
+    "question": "La tuberculose peut provoquer une otite moyenne chronique avec perforation tympanique.",
+    "answer": true,
+    "explanation": "La tuberculose peut entraîner une otite chronique granulomateuse avec perforation tympanique persistante."
+  },
+  {
+    "id": "ORL756",
+    "question": "Une otite moyenne aiguë bilatérale chez un adulte est souvent secondaire à une infection bactérienne localisée.",
+    "answer": false,
+    "explanation": "Une otite bilatérale chez l'adulte est souvent d'origine virale ou associée à un trouble de la trompe d'Eustache."
+  },
+  {
+    "id": "ORL757",
+    "question": "Une otite moyenne aiguë purulente peut être compliquée par une thrombose du sinus sigmoïde.",
+    "answer": true,
+    "explanation": "Une thrombose du sinus sigmoïde est une complication grave mais rare d'une otite moyenne aiguë purulente non traitée."
+  },
+  {
+    "id": "ORL758",
+    "question": "Un tympanogramme de type B est toujours associé à une otite moyenne aiguë bactérienne.",
+    "answer": false,
+    "explanation": "Un tympanogramme de type B indique une accumulation de liquide dans l'oreille moyenne, qui peut être due à une otite séreuse ou chronique, pas nécessairement bactérienne."
+  },
+  {
+    "id": "ORL759",
+    "question": "Une otite externe fongique (otomycose) est plus fréquente chez les patients vivant dans des climats humides.",
+    "answer": true,
+    "explanation": "Les climats humides favorisent la prolifération des champignons responsables de l'otomycose."
+  },
+  {
+    "id": "ORL760",
+    "question": "Une paralysie laryngée unilatérale touche plus fréquemment le nerf laryngé supérieur que le nerf récurrent.",
+    "answer": false,
+    "explanation": "Le nerf laryngé récurrent est bien plus fréquemment affecté que le nerf laryngé supérieur dans les paralysies laryngées."
+  },
+  {
+    "id": "ORL761",
+    "question": "La cause la plus fréquente d'une paralysie laryngée bilatérale est une tumeur thyroïdienne invasive.",
+    "answer": false,
+    "explanation": "La cause principale est une chirurgie thyroïdienne compliquée, suivie par des causes neurologiques comme une neuropathie."
+  },
+  {
+    "id": "ORL762",
+    "question": "Dans une paralysie laryngée unilatérale, la corde vocale touchée reste toujours en position médiane.",
+    "answer": false,
+    "explanation": "La position de la corde vocale dépend de l'étendue des dommages au nerf récurrent, variant de la position paramédiane à une position latérale."
+  },
+  {
+    "id": "ORL763",
+    "question": "Le nerf laryngé récurrent gauche est plus susceptible d'être affecté que le droit en raison de son trajet anatomique plus long.",
+    "answer": true,
+    "explanation": "Le trajet du nerf récurrent gauche, qui descend dans le thorax avant de remonter, l'expose à plus de risques de lésions."
+  },
+  {
+    "id": "ORL764",
+    "question": "Une paralysie laryngée bilatérale est plus souvent associée à des symptômes vocaux qu'à des symptômes respiratoires.",
+    "answer": false,
+    "explanation": "La paralysie bilatérale entraîne souvent des symptômes respiratoires sévères, avec un risque d'obstruction des voies aériennes."
+  },
+  {
+    "id": "ORL765",
+    "question": "L'électromyographie du larynx permet de distinguer une neuropathie récurrentielle d'une lésion mécanique des cordes vocales.",
+    "answer": true,
+    "explanation": "L'EMG peut évaluer l'activité musculaire et déterminer si la paralysie est due à une neuropathie ou à un traumatisme mécanique."
+  },
+  {
+    "id": "ORL766",
+    "question": "Un carcinome bronchique peut causer une paralysie laryngée unilatérale droite par compression extrinsèque du nerf laryngé récurrent.",
+    "answer": false,
+    "explanation": "Un carcinome bronchique affecte plus souvent le nerf récurrent gauche en raison de son trajet à travers le médiastin."
+  },
+  {
+    "id": "ORL767",
+    "question": "Une paralysie du nerf laryngé supérieur peut entraîner une perte de la modulation vocale et une fatigue vocale rapide.",
+    "answer": true,
+    "explanation": "Le nerf laryngé supérieur contrôle le muscle cricothyroïdien, essentiel pour la modulation et la tension des cordes vocales."
+  },
+  {
+    "id": "ORL768",
+    "question": "Le syndrome d'Ortner associe une paralysie laryngée à une anévrisme aortique.",
+    "answer": true,
+    "explanation": "Le syndrome d'Ortner est causé par une compression du nerf récurrent gauche par une dilatation de l'arc aortique."
+  },
+  {
+    "id": "ORL769",
+    "question": "Une paralysie laryngée unilatérale congénitale est généralement due à une anomalie de développement du nerf laryngé supérieur.",
+    "answer": false,
+    "explanation": "La paralysie laryngée unilatérale congénitale est souvent liée à des troubles neurologiques centraux ou à des malformations du nerf récurrent."
+  },
+  {
+    "id": "ORL770",
+    "question": "Les paralysies laryngées post-virales sont réversibles dans la majorité des cas.",
+    "answer": true,
+    "explanation": "Les paralysies post-virales, bien que transitoires, peuvent durer plusieurs mois mais présentent un bon taux de récupération spontanée."
+  },
+  {
+    "id": "ORL771",
+    "question": "Le nerf vague est le seul responsable des paralysies laryngées bilatérales.",
+    "answer": false,
+    "explanation": "Bien que le nerf vague soit impliqué, d'autres causes incluent des lésions cérébrales ou des neuropathies périphériques."
+  },
+  {
+    "id": "ORL772",
+    "question": "La réinnervation laryngée est une option thérapeutique viable pour les paralysies laryngées unilatérales avec récupération partielle.",
+    "answer": true,
+    "explanation": "La réinnervation vise à restaurer partiellement la fonction musculaire, améliorant la voix et la déglutition."
+  },
+  {
+    "id": "ORL773",
+    "question": "L'immobilité des cordes vocales à l'otoscopie est suffisante pour diagnostiquer une paralysie laryngée.",
+    "answer": false,
+    "explanation": "Un diagnostic précis nécessite une laryngoscopie et parfois une électromyographie pour exclure d'autres causes d'immobilité."
+  },
+  {
+    "id": "ORL774",
+    "question": "Les paralysies laryngées liées à la maladie de Parkinson affectent préférentiellement le nerf laryngé supérieur.",
+    "answer": false,
+    "explanation": "La maladie de Parkinson entraîne une rigidité musculaire généralisée, affectant principalement les mouvements coordonnés des cordes vocales."
+  },
+  {
+    "id": "ORL775",
+    "question": "Une paralysie laryngée traumatique peut survenir après une intubation prolongée.",
+    "answer": true,
+    "explanation": "Une intubation prolongée peut endommager les nerfs récurrents ou provoquer une parésie musculaire des cordes vocales."
+  },
+  {
+    "id": "ORL776",
+    "question": "Les injections de toxine botulique sont une option de traitement dans les paralysies laryngées spastiques.",
+    "answer": true,
+    "explanation": "La toxine botulique réduit les spasmes des muscles laryngés, améliorant les symptômes vocaux et respiratoires."
+  },
+  {
+    "id": "ORL777",
+    "question": "Un scanner cervical est inutile dans le bilan d'une paralysie laryngée unilatérale idiopathique.",
+    "answer": false,
+    "explanation": "Un scanner cervical est essentiel pour exclure une compression nerveuse par une tumeur ou une autre lésion anatomique."
+  },
+  {
+    "id": "ORL778",
+    "question": "Une paralysie laryngée unilatérale peut entraîner des troubles de la déglutition.",
+    "answer": true,
+    "explanation": "La paralysie unilatérale peut provoquer une fermeture incomplète des cordes vocales, entraînant des fausses routes."
+  },
+  {
+    "id": "ORL779",
+    "question": "La thyroplastie de type I est indiquée pour corriger une paralysie laryngée bilatérale.",
+    "answer": false,
+    "explanation": "La thyroplastie de type I est utilisée pour les paralysies unilatérales afin de médialiser la corde vocale paralysée."
+  },
+  {
+    "id": "ORL780",
+    "question": "Le nerf facial traverse la caisse du tympan sans donner de branches.",
+    "answer": false,
+    "explanation": "Le nerf facial donne la corde du tympan dans la caisse, une branche importante qui participe à l'innervation gustative de la langue."
+  },
+  {
+    "id": "ORL781",
+    "question": "La trompe d'Eustache est composée uniquement de cartilage.",
+    "answer": false,
+    "explanation": "La trompe d'Eustache a une partie osseuse (proche de l'oreille moyenne) et une partie cartilagineuse (proche du pharynx)."
+  },
+  {
+    "id": "ORL782",
+    "question": "Le muscle tenseur du tympan est innervé par une branche du nerf trijumeau (V).",
+    "answer": true,
+    "explanation": "Le muscle tenseur du tympan est innervé par le nerf mandibulaire, une branche du trijumeau (V3)."
+  },
+  {
+    "id": "ORL783",
+    "question": "Le sinus sphénoïdal draine son contenu directement dans le méat nasal moyen.",
+    "answer": false,
+    "explanation": "Le sinus sphénoïdal se draine dans le récessus sphéno-ethmoïdal, situé en arrière du méat nasal supérieur."
+  },
+  {
+    "id": "ORL784",
+    "question": "Le cartilage cricoïde est le seul anneau complet du larynx.",
+    "answer": true,
+    "explanation": "Le cartilage cricoïde forme un anneau complet, contrairement aux autres cartilages du larynx qui sont ouverts."
+  },
+  {
+    "id": "ORL785",
+    "question": "Le nerf glossopharyngien participe à l'innervation sensitive du pharynx et de la partie postérieure de la langue.",
+    "answer": true,
+    "explanation": "Le nerf glossopharyngien (IX) fournit l'innervation sensitive du pharynx et du tiers postérieur de la langue."
+  },
+  {
+    "id": "ORL786",
+    "question": "Le conduit auditif externe est intégralement constitué de cartilage.",
+    "answer": false,
+    "explanation": "Le conduit auditif externe a une partie cartilagineuse (latérale) et une partie osseuse (médiale)."
+  },
+  {
+    "id": "ORL787",
+    "question": "Le nerf laryngé supérieur est responsable de l'innervation motrice de tous les muscles intrinsèques du larynx.",
+    "answer": false,
+    "explanation": "Le nerf laryngé supérieur n'innerve que le muscle cricothyroïdien. Les autres muscles intrinsèques sont innervés par le nerf laryngé récurrent."
+  },
+  {
+    "id": "ORL788",
+    "question": "Le sinus maxillaire est le plus grand des sinus paranasaux.",
+    "answer": true,
+    "explanation": "Le sinus maxillaire est le plus grand et occupe une grande partie de l'os maxillaire."
+  },
+  {
+    "id": "ORL789",
+    "question": "Le muscle stapédien est le plus petit muscle squelettique du corps humain.",
+    "answer": true,
+    "explanation": "Le muscle stapédien, situé dans l'oreille moyenne, est le plus petit muscle squelettique."
+  },
+  {
+    "id": "ORL790",
+    "question": "La membrane quadrangulaire du larynx forme la base des fausses cordes vocales.",
+    "answer": true,
+    "explanation": "La membrane quadrangulaire s'étend du cartilage épiglottique au cartilage aryténoïde, formant la base des plis vestibulaires (fausses cordes vocales)."
+  },
+  {
+    "id": "ORL791",
+    "question": "Les cellules ethmoïdales antérieures drainent leur contenu dans le méat nasal supérieur.",
+    "answer": false,
+    "explanation": "Les cellules ethmoïdales antérieures se drainent dans le méat nasal moyen, tandis que les cellules postérieures se drainent dans le méat supérieur."
+  },
+  {
+    "id": "ORL792",
+    "question": "Le nerf hypoglosse (XII) est responsable de l'innervation motrice des muscles intrinsèques et extrinsèques de la langue, sauf le muscle palatoglosse.",
+    "answer": true,
+    "explanation": "Le nerf hypoglosse n'innerve pas le muscle palatoglosse, qui est innervé par le nerf vague (X)."
+  },
+  {
+    "id": "ORL793",
+    "question": "La région de Kiesselbach est une zone riche en vaisseaux sanguins dans le nasopharynx.",
+    "answer": false,
+    "explanation": "La région de Kiesselbach est une zone vasculaire riche située dans la cloison nasale antérieure, dans la cavité nasale."
+  },
+  {
+    "id": "ORL794",
+    "question": "La fosse piriforme est située de chaque côté de l'épiglotte et constitue une voie de drainage pour les liquides pharyngés.",
+    "answer": true,
+    "explanation": "La fosse piriforme est une structure anatomique importante dans la déglutition, permettant le passage des liquides autour de l'épiglotte."
+  },
+  {
+    "id": "ORL795",
+    "question": "Les ganglions lymphatiques jugulaires profonds drainent directement les amygdales palatines.",
+    "answer": true,
+    "explanation": "Les ganglions jugulaires profonds reçoivent la lymphe des amygdales palatines et d'autres structures oropharyngées."
+  },
+  {
+    "id": "ORL796",
+    "question": "Le nerf vague (X) innerve tous les muscles du palais mou.",
+    "answer": false,
+    "explanation": "Le nerf vague innerve presque tous les muscles du palais mou, sauf le muscle tenseur du voile du palais, qui est innervé par le nerf mandibulaire (V3)."
+  },
+  {
+    "id": "ORL797",
+    "question": "Le ligament vocal s'attache aux cartilages thyroïde et aryténoïdes.",
+    "answer": true,
+    "explanation": "Le ligament vocal s'étend entre l'angle intérieur du cartilage thyroïde et le processus vocal des cartilages aryténoïdes."
+  },
+  {
+    "id": "ORL798",
+    "question": "La cloison nasale est composée uniquement de cartilage.",
+    "answer": false,
+    "explanation": "La cloison nasale est formée par le cartilage septal, le vomer et la lame perpendiculaire de l'os ethmoïde."
+  },
+  {
+    "id": "ORL799",
+    "question": "Les cornets inférieurs sont des structures indépendantes des os du crâne.",
+    "answer": true,
+    "explanation": "Contrairement aux cornets moyen et supérieur, qui font partie de l'os ethmoïde, les cornets inférieurs sont des os indépendants."
+  }
+]
