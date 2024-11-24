@@ -12,11 +12,34 @@
         canvas {
             display: block;
         }
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../js/8k_milky.jpg');
+            background-size: cover;      /* L'image couvre tout l'écran */
+            background-position: center; /* L'image est centrée */
+            background-repeat: no-repeat; /* Pas de répétition de l'image */
+            z-index: 0;
+        }
+        #webgl-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;  /* La scène Three.js sera affichée au-dessus du div */
+        }
     </style>
     <!-- Lien vers la bibliothèque Three.js -->
 </head>
 <body>
-    <!-- Le rendu sera inséré ici -->
+
+    <div id="background"></div>
+    <div id="webgl-canvas"></div>
+
     <script type="module" src="../js/planetcell.js"></script>
 </body>
 </html>

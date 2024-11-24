@@ -4,11 +4,52 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.m
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
 // Configuration de la caméra
-camera.position.z = 5;
+const minZoom = 5;
+camera.position.z = minZoom;
+
+// Variable pour contrôler la vitesse du zoom
+const zoomSpeed = 1; // Ajuster la vitesse du zoom selon vos besoins
+
+// Écouter l'événement de la molette de la souris
+window.addEventListener('wheel', (event) => {
+    // Empêcher le comportement par défaut (défilement de la page)
+    event.preventDefault();
+
+    // Calculer le changement de position de la caméra
+    const delta = event.deltaY > 0 ? 1 : -1; // Direction de la molette : vers le bas ou vers le haut
+    camera.position.z += delta * zoomSpeed;
+
+    // Limiter le zoom pour éviter de trop rapprocher ou éloigner la caméra
+    camera.position.z = Math.max(minZoom, Math.min(40, camera.position.z)); // Plage entre 2 et 10 (ajustez si nécessaire)
+});
+
+
+
+// Fonction de gestion du redimensionnement de la fenêtre
+function onWindowResize() {
+    // Mettre à jour les dimensions du rendu
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Mettre à jour le rapport d'aspect de la caméra pour qu'il corresponde à la nouvelle taille de la fenêtre
+    camera.aspect = window.innerWidth / window.innerHeight;
+    
+    // Recalculer la matrice de projection de la caméra après modification du rapport d'aspect
+    camera.updateProjectionMatrix();
+}
+
+// Écouter l'événement 'resize' de la fenêtre
+window.addEventListener('resize', onWindowResize);
+
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+// Définir le fond de la scène comme transparent
+renderer.setClearColor(0x000000, 0);  // 0x000000 , 0 alpha
+  // Placer le renderer dans le div #webgl-canvas
+const canvasContainer = document.getElementById('webgl-canvas');
+canvasContainer.appendChild(renderer.domElement);
+// document.body.appendChild(renderer.domElement);
+
 
 // Création de la sphère avec une géométrie de UV Sphere
 const radius = 1;
@@ -243,15 +284,40 @@ function onKeyUp(event) {
 window.addEventListener('keydown', onKeyDown);
 window.addEventListener('keyup', onKeyUp);
 
-// Charger la texture de la planète
+
+//// PLANET
+
+// Chargement des textures : normal map et bump map
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('../js/red.jpg');
+const normalMap = textureLoader.load('../js/MarsNormal.png');
+const bumpMap = textureLoader.load('../js/MarsBump.png');
+
+// Charger la texture de la planète
+const textureLoader2 = new THREE.TextureLoader();
+const texture = textureLoader2.load('../js/red.jpg');
 
 // Création de la planète
-const geometry = new THREE.SphereGeometry(radius - 0.05, 64, 64);
-const mat2 = new THREE.MeshBasicMaterial({ map: texture });
+const geometry = new THREE.SphereGeometry(radius, 64, 64);
+// const mat2 = new THREE.MeshBasicMaterial({ map: texture });
+// Matériau avec normal map et bump map
+const mat2 = new THREE.MeshStandardMaterial({
+    color: 0xffffff,    // Couleur de base
+    map: texture,
+    normalMap: normalMap,  // Appliquer la normal map
+    // bumpMap: bumpMap,    // Appliquer la bump map
+    // bumpScale: 0.1,     // Ajuste l'intensité de la bump map
+});
 const planet = new THREE.Mesh(geometry, mat2);
 scene.add(planet);
+
+// Ajouter une lumière directionnelle (simuler le soleil)
+const sunlight = new THREE.DirectionalLight(0xffffff, 5); // Couleur blanche, intensité à 1
+sunlight.position.set(30, 10, 50); // Positionner la lumière d'un côté (par exemple en haut à droite)
+sunlight.castShadow = true; // Activer les ombres (optionnel)
+scene.add(sunlight);
+// Optionnel : ajouter une lumière ambiante pour éclairer les zones sombres
+// const ambientLight = new THREE.AmbientLight(0x404040, 0.5); // Lumière ambiante douce
+// scene.add(ambientLight);
 
 
 // Mise à jour de la rotation avec les flèches
@@ -294,13 +360,41 @@ const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube.position.set(0, 0, 0);
 
 // Ajouter le cube à la scène
-scene.add(cube);
+// scene.add(cube);
+
+// // Chargement de l'image d'arrière-plan
+// const textureLoader4 = new THREE.TextureLoader();
+// textureLoader4.load('../js/8k_stars.jpg', function(texture) {
+//     // Attendre que l'image soit complètement chargée avant de l'utiliser
+//     const width = texture.image.width;
+//     const height = texture.image.height;
+
+//     // Calculer le rapport d'aspect de l'image
+//     const aspectRatio = width / height;
+
+//     // Créer le plan avec les dimensions appropriées pour conserver le rapport d'aspect
+//     const planeWidth = 3;  // Choisissez une largeur souhaitée pour le plan
+//     const planeHeight = planeWidth / aspectRatio; // Calculer la hauteur pour conserver le rapport
+
+//     const planeGeometry = new THREE.PlaneGeometry(planeWidth, planeHeight);
+//     const planeMaterial = new THREE.MeshBasicMaterial({
+//         map: texture,
+//         side: THREE.DoubleSide,
+//         transparent: true
+//     });
+//     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+//     plane.position.z = -3;  // Placer derrière la sphère
+//     // plane.rotation.x = Math.PI / 2;  // Tourner le plan pour qu'il soit parallèle à la caméra
+//     scene.add(plane);
+// }, undefined, function(error) {
+//     console.error('Erreur lors du chargement de l\'image :', error);
+// });
 
 
 // Animation de la scène
 function animate() {
     const rotX = 0.0001;
-    const rotY = 0.0001;
+    const rotY = 0.0002;
     requestAnimationFrame(animate);
     sphere.rotation.y += rotY;
     planet.rotation.y += rotY;
@@ -314,9 +408,9 @@ function animate() {
     updateRotation();
 
     // cube rotation
-    cube.rotation.y += 0.001;
-    cube.rotation.x += 0.001;
-    cube.rotation.z += 0.001;
+    // cube.rotation.y += 0.001;
+    // cube.rotation.x += 0.001;
+    // cube.rotation.z += 0.001;
     renderer.render(scene, camera);
 }
 animate();
