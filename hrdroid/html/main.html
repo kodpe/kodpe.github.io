@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Human Resources Droid: Gérez vos recrutements dans une entreprise intergalactique.">
+    <title>Human Resources Droid</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        #top, #submission, #actions {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #actions button {
+            margin: 5px;
+        }
+
+        .candidate-info {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top">
+        <h2>===== TOP PANEL =====</h2>
+        <div id="days-value">JOUR 48</div>
+        <div id="vars">
+            <span id="wellbe">Well-being: <span id="wellbe-value">0</span></span> |
+            <span id="profit">Profit: <span id="profit-value">0</span></span> |
+            <span id="repute">Reputation: <span id="repute-value">0</span></span>
+        </div>
+        <div>
+            <span id="nb-submit-value">5 candidats restants aujourd'hui</span> |
+            <span id="nb-accept-value">0 accepted</span> |
+            <span id="nb-refuse-value">0 refused</span>
+        </div>
+    </div>
+
+    <div id="submission">
+        <h2>===== SUBMISSION PANEL =====</h2>
+        <div>
+            <h3>== CV ==</h3>
+            <div class="candidate-info" id="cv-details">
+                Profil: <b>John Doe</b><br>
+                Age: <b>34</b><br>
+                Adresse: <b>Terra Nova, Zone 5</b><br>
+                Espèce: <b>Humain</b><br>
+                Contact: <b>j.doe@galaxyhub.net</b><br>
+                Expériences: <b>Pilote, Technicien</b><br>
+                Qualifications: <b>Licence en robotique</b><br>
+                Langues: <b>Galactic Basic, Terrien</b><br>
+                Centres d'intérêt: <b>Échecs, exploration</b>
+            </div>
+        </div>
+        <div>
+            <h3>== ENTRETIEN TRANSCRIPT ==</h3>
+            <div id="transcript">
+                Recruteur: "Parlez-moi de votre dernière expérience." <br>
+                Candidat: "J'ai piloté un vaisseau cargo pendant 5 ans." <br>
+                Recruteur: "Pourquoi voulez-vous ce poste ?" <br>
+                Candidat: "Je cherche un environnement stable."
+            </div>
+        </div>
+        <div>
+            <h3>== MEDICAL CHECK-UP ==</h3>
+            <div id="medical-check">"Pas de contre-indication majeure."</div>
+        </div>
+        <div>
+            <h3>== SKILL TEST GRAPH ==</h3>
+            <div id="skill-graph">/* Graph d'étoile non implémenté */</div>
+        </div>
+        <div>
+            <h3>== JOB APPLICATION ==</h3>
+            <div id="job-details">
+                Poste: <b>Technicien Réparation</b><br>
+                Description: <b>Maintenance des systèmes vitaux</b><br>
+                Effets: <b>+2 Well-being, +1 Reputation</b><br>
+                Localisation: <b>Station Alpha</b><br>
+                Salaire: <b>1k - 2k crédits</b><br>
+                Heures: <b>40-50h/semaine</b>
+            </div>
+        </div>
+    </div>
+
+    <div id="actions">
+        <h2>===== PLAYER ACTIONS PANEL =====</h2>
+        <button id="accept-btn">ACCEPT</button>
+        <button id="reject-btn">REJECT</button>
+        <button id="next-btn">DOSSIER SUIVANT</button>
+        <button id="end-day-btn">FIN DE LA JOURNÉE</button>
+    </div>
+
+    <script>
+        // Example of dynamic interactivity
+        let remainingCandidates = 5;
+        let accepted = 0;
+        let refused = 0;
+
+        document.getElementById('accept-btn').addEventListener('click', () => {
+            if (remainingCandidates > 0) {
+                remainingCandidates--;
+                accepted++;
+                updateUI();
+            }
+        });
+
+        document.getElementById('reject-btn').addEventListener('click', () => {
+            if (remainingCandidates > 0) {
+                remainingCandidates--;
+                refused++;
+                updateUI();
+            }
+        });
+
+        function updateUI() {
+            document.getElementById('nb-submit-value').innerText = `${remainingCandidates} candidats restants aujourd'hui`;
+            document.getElementById('nb-accept-value').innerText = `${accepted} accepted`;
+            document.getElementById('nb-refuse-value').innerText = `${refused} refused`;
+        }
+    </script>
+    <script src="../js/imgtools.js"></script>
+</body>
+
+</html>
+
+<!-- https://codepen.io/rileyjshaw/pen/zGwNzw -->
+<!-- https://codepen.io/Grilly86/pen/BapwXz -->
+<!-- https://www.solarsystemscope.com/textures/ -->
+<!-- https://miro.medium.com/v2/resize:fit:720/format:webp/1*7Ct-2x8lIUUytARNs0D2Pg.png -->
+<!-- https://miro.medium.com/v2/resize:fit:828/format:webp/1*N0HTrrK21t7DJZGeod8G8g.png -->
+
+<!-- https://0.academia-photos.com/attachment_thumbnails/34001308/mini_magick20190327-16906-l911te.png?1553676382 -->
+<!-- https://imgv2-2-f.scribdassets.com/img/document/515606525/original/b5edaaf5c7/1729302553?v=1 -->
+<!-- https://imgv2-1-f.scribdassets.com/img/document/452044648/original/892bb205d2/1?v=1 -->
+<!-- https://www.assunta.com.my/wp-content/uploads/Pre-Employment_Screening_Packages_-_With_Selection_Options.jpg -->
+<!-- https://img.yumpu.com/62706425/1/500x640/pre-employment-medical-examination-form-page-1.jpg -->
+<!-- https://www.kinnect.com.au/wp-content/uploads/2014/08/Pre-Employment-Medicals-Explained.jpg -->
+<!-- https://www.carepatron.com/files/comprehensive-check-up-template-sample.jpg -->
+<!-- https://www.carepatron.com/files/pre-employment-medical-exam.jpg -->
+<!-- https://www.mattumland.dev/ -->
+
+<!-- https://codepen.io/juliangarnier/pen/krNqZO -->
+<!-- https://codepen.io/yashbhardwaj/pen/wvzzeV -->
+<!-- https://www.georgeandjonathan.com/#4 -->
+<!-- http://void.hi-res.net/elements -->
+<!-- https://threejs.org/examples/#webgl_geometry_terrain -->
+
+<!-- https://nasa3d.arc.nasa.gov/visualizations/networking -->
