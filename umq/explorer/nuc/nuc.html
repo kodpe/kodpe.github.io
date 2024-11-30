@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Nuclear Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="control-panel">
+        <div id="terminal">
+            <div id="output"></div>
+            <div id="input-line">
+                <span class="prompt">$</span>
+                <input type="text" id="command-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+        <div id="display">
+            <h2>Central Nuclear Status</h2>
+            <svg id="diagram" viewBox="0 0 300 300">
+                <!-- Réacteur -->
+                <rect x="50" y="50" width="80" height="120" fill="gray" stroke="black" />
+                <text x="65" y="120" fill="white">Reactor</text>
+
+                <!-- Piscine de refroidissement -->
+                <rect x="180" y="70" width="100" height="100" fill="blue" stroke="black" />
+                <text x="200" y="130" fill="white">Cooling Pool</text>
+
+                <!-- Jauge -->
+                <line x1="90" y1="200" x2="90" y2="250" stroke="red" stroke-width="5" id="power-gauge" />
+                <text x="50" y="240" fill="white">Power</text>
+            </svg>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

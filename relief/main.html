@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Fictive avec Isolignes</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #121212;
+        }
+
+        #info {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="mapCanvas"></canvas>
+    <div id="info">Cliquez sur la carte pour voir la valeur du relief.</div>
+
+    <script>
+        // Générateur manuel du bruit de Perlin
+        class PerlinNoise {
+            constructor() {
+                this.permutation = [];
+                this.gradients = [];
+
+                // Créer un tableau de permutations aléatoires
+                for (let i = 0; i < 256; i++) {
+                    this.permutation.push(i);
+                }
+                this.permutation.sort(() => Math.random() - 0.5);
+                this.permutation = [...this.permutation, ...this.permutation];
+
+                // Générer des gradients pour chaque point
+                for (let i = 0; i < 256; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    this.gradients.push({ x: Math.cos(angle), y: Math.sin(angle) });
+                }
+            }
+
+            dotProduct(ix, iy, x, y) {
+                const gradient = this.gradients[this.permutation[(ix + this.permutation[iy & 255]) & 255]];
+                return gradient.x * (x - ix) + gradient.y * (y - iy);
+            }
+
+            fade(t) {
+                return t * t * t * (t * (t * 6 - 15) + 10);
+            }
+
+            lerp(a, b, t) {
+                return a + t * (b - a);
+            }
+
+            noise(x, y, chaos = 0) {
+                const ix = Math.floor(x);
+                const iy = Math.floor(y);
+                const fx = x - ix;
+                const fy = y - iy;
+
+                const d00 = this.dotProduct(ix, iy, x, y) + (Math.random() * chaos - chaos / 2);
+                const d10 = this.dotProduct(ix + 1, iy, x, y) + (Math.random() * chaos - chaos / 2);
+                const d01 = this.dotProduct(ix, iy + 1, x, y) + (Math.random() * chaos - chaos / 2);
+                const d11 = this.dotProduct(ix + 1, iy + 1, x, y) + (Math.random() * chaos - chaos / 2);
+
+                const u = this.fade(fx);
+                const v = this.fade(fy);
+                const lerpX1 = this.lerp(d00, d10, u);
+                const lerpX2 = this.lerp(d01, d11, u);
+                return this.lerp(lerpX1, lerpX2, v);
+            }
+        }
+
+        const perlin = new PerlinNoise();
+        const canvas = document.getElementById('mapCanvas');
+        const ctx = canvas.getContext('2d');
+        const width = 1300;
+        const height = 900;
+        canvas.width = width;
+        canvas.height = height;
+
+        const generateNoiseMap = (width, height, scale, chaos) => {
+            const noiseMap = [];
+            for (let y = 0; y < height; y++) {
+                noiseMap[y] = [];
+                for (let x = 0; x < width; x++) {
+                    const nx = x / scale;
+                    const ny = y / scale;
+                    const value = (perlin.noise(nx, ny, chaos) + 1) / 2;
+                    noiseMap[y][x] = value;
+                }
+            }
+            return noiseMap;
+        };
+
+        const drawIsolines = (noiseMap, levels) => {
+            const thresholdValues = Array.from({ length: levels }, (_, i) => i / levels);
+
+            for (const threshold of thresholdValues) {
+                ctx.beginPath();
+                for (let y = 0; y < height - 1; y++) {
+                    for (let x = 0; x < width - 1; x++) {
+                        const square = [
+                            noiseMap[y][x] >= threshold,
+                            noiseMap[y][x + 1] >= threshold,
+                            noiseMap[y + 1][x + 1] >= threshold,
+                            noiseMap[y + 1][x] >= threshold,
+                        ];
+
+                        const marchingSquarePatterns = [
+                            [], // 0000
+                            [[0, 0.5], [0.5, 0]], // 0001
+                            [[0.5, 0], [1, 0.5]], // 0010
+                            [[0, 0.5], [1, 0.5]], // 0011
+                            [[0.5, 1], [1, 0.5]], // 0100
+                            [[0, 0.5], [0.5, 1], [0.5, 0], [1, 0.5]], // 0101
+                            [[0.5, 0], [0.5, 1]], // 0110
+                            [[0, 0.5], [0.5, 1]], // 0111
+                            [[0.5, 1], [0, 0.5]], // 1000
+                            [[0.5, 0], [0, 0.5]], // 1001
+                            [[1, 0.5], [0.5, 1]], // 1010
+                            [[0.5, 0], [1, 0.5]], // 1011
+                            [[1, 0.5], [0, 0.5]], // 1100
+                            [[0.5, 1], [1, 0.5]], // 1101
+                            [[0, 0.5], [0.5, 1]], // 1110
+                            [], // 1111
+                        ];
+
+                        const index =
+                            (square[0] ? 1 : 0) +
+                            (square[1] ? 2 : 0) +
+                            (square[2] ? 4 : 0) +
+                            (square[3] ? 8 : 0);
+
+                        const pattern = marchingSquarePatterns[index];
+                        for (let i = 0; i < pattern.length; i += 2) {
+                            const [start, end] = [pattern[i], pattern[i + 1]];
+                            ctx.moveTo(x + start[0] * 1, y + start[1] * 1);
+                            ctx.lineTo(x + end[0] * 1, y + end[1] * 1);
+                        }
+                    }
+                }
+                ctx.strokeStyle = `rgba(0, 0, 0, 0.5)`;
+                const depthColors = [
+                    '#ffcccc', // Très peu profond (presque rose clair)
+                    '#ff9999', // Peu profond
+                    '#ff6666', // Moyen peu profond
+                    '#ff3333', // Profondeur modérée
+                    '#cc0000', // Profond
+                    '#990000', // Très profond
+                ];
+                ctx.strokeStyle = depthColors[Math.floor(threshold * depthColors.length)];
+                ctx.lineWidth = 1; // Applique l'épaisseur ici
+                ctx.stroke();
+            }
+        };
+
+        const scale = 100;
+        const levels = 20;
+        const chaosFactor = 0.001; // Ajoute un facteur de chaos
+        // 0.3 banger
+        const noiseMap = generateNoiseMap(width, height, scale, chaosFactor);
+
+        drawIsolines(noiseMap, levels);
+
+        canvas.addEventListener('click', (event) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = Math.floor(event.clientX - rect.left);
+            const y = Math.floor(event.clientY - rect.top);
+            const reliefValue = noiseMap[y][x];
+            const depth = (reliefValue * 5000).toFixed(2); // Exemple : convertir en mètres
+            document.getElementById('info').innerText = `Profondeur à (${x}, ${y}) : ${depth} mètres`;
+        });
+    </script>
+</body>
+
+</html>

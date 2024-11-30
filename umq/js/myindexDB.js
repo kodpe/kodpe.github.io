@@ -1,4 +1,4 @@
-const DB_VERSION = 12;
+const DB_VERSION = 13;
 const DB_NAME = 'ulmedDB';
 
 /* ------ ------ ----- -----
@@ -13,32 +13,29 @@ const DB_STORE_USER_DOMAINS_RECORDS = [
     "histology",
     "cell_biology",
     "immunology",
-    //
     "genetics",
     "oncology",
     "pathology",
     "traumatology",
     "epidemiology",
     "various",
-    //
     "psychiatry",
     "toxicology",
     "neurology",
     "endocrinology",
     "nephrology",
     "gastroenterology",
-    //
     "nutrition",
     "orl_hns",
     "pneumology",
     "cardiology",
     "rheumatology",
     "physiology",
+    "TOTAL",
+];
     //
     // "surgery",
     // "pharmacology",
-    "TOTAL",
-];
 
 const DB_NB_QUESTIONS_QUIZ = {
     anatomy: 40,

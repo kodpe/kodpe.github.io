@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#terminal {
+    width: 80%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+#output {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 10px;
+    color: #00ff00;
+}
+
+#command-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+    font-family: inherit;
+    font-size: 1em;
+}
