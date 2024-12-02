@@ -364,7 +364,7 @@ const data = [
         keywords: ["fun", "nasa", "asteroid", "space"],
     },
     {
-        name: "Pleine-Peau.com",
+        name: "Pleine-Peau",
         url: "https://pleine-peau.com",
         img: "ppc.jpg",
         icon: ["art", "photowarning", "nsfw"],
