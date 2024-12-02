@@ -241,3 +241,9 @@ body {
     /* Eviter les sauts de ligne */
     z-index: 10;
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
