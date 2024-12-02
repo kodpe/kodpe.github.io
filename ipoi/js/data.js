@@ -539,6 +539,13 @@ const data = [
         keywords: ["coding", "learn"],
     },
     {
+        name: "The Million Dollar Homepage",
+        url: "http://milliondollarhomepage.com",
+        img: "mdp.jpg",
+        icon: ["art", "nsfw"],
+        keywords: ["fun", "weird", "web"],
+    },
+    {
         name: "Aesthetics Wiki",
         url: "https://aesthetics.fandom.com/wiki/List_of_Aesthetics",
         img: "aew.jpg",
@@ -558,13 +565,6 @@ const data = [
         img: "fra.jpg",
         icon: ["maths"],
         keywords: ["art", "games", "maths", "geometry", "fractals"],
-    },
-    {
-        name: "Science Vs Magic",
-        url: "https://sciencevsmagic.net",
-        img: "svm.jpg",
-        icon: ["maths"],
-        keywords: ["art", "maths", "geometry", "fractals", "learn"],
     },
     {
         name: "Logic Grid",
@@ -588,6 +588,13 @@ const data = [
         keywords: ["writing", "map", "tool", "fun"],
     },
     {
+        name: "Lifemap",
+        url: "https://lifemap-ncbi.univ-lyon1.fr",
+        img: "lml.jpg",
+        icon: ["science"],
+        keywords: ["learn", "life", "tree", "evolution", "map"],
+    },
+    {
         name: "Itch.io",
         url: "https://itch.io",
         img: "itc.jpg",
@@ -600,6 +607,13 @@ const data = [
         img: "ctv.jpg",
         icon: ["science"],
         keywords: ["learn", "medicine", "genetics"],
+    },
+    {
+        name: "2b2t Maps",
+        url: "https://map.daporkchop.net/#2021_256k_isometric/0/6/96/-656/0",
+        img: "b2t.jpg",
+        icon: ["games"],
+        keywords: ["fun", "weird", "map", "games", "web"],
     },
     {
         name: "LHC Page 1",
@@ -616,6 +630,13 @@ const data = [
         keywords: ["learn", "medicine", "genetics"],
     },
     {
+        name: "Science Vs Magic",
+        url: "https://sciencevsmagic.net",
+        img: "svm.jpg",
+        icon: ["maths"],
+        keywords: ["art", "maths", "geometry", "fractals", "learn"],
+    },
+    {
         name: "Tristan da Cunha",
         url: "https://tristandc.com/index.php",
         img: "tdc.jpg",
@@ -626,13 +647,6 @@ const data = [
         name: "One Zoom Biota",
         url: "https://onezoom.org/linnean",
         img: "ozb.jpg",
-        icon: ["science"],
-        keywords: ["learn", "life", "tree", "evolution", "map"],
-    },
-    {
-        name: "Lifemap",
-        url: "https://lifemap-ncbi.univ-lyon1.fr",
-        img: "lml.jpg",
         icon: ["science"],
         keywords: ["learn", "life", "tree", "evolution", "map"],
     },
@@ -656,20 +670,6 @@ const data = [
         img: "has.jpg",
         icon: ["location"],
         keywords: ["fun", "weird", "island", "location"],
-    },
-    {
-        name: "2b2t Maps",
-        url: "https://map.daporkchop.net/#2021_256k_isometric/0/6/96/-656/0",
-        img: "b2t.jpg",
-        icon: ["games"],
-        keywords: ["fun", "weird", "map", "games", "web"],
-    },
-    {
-        name: "The Million Dollar Homepage",
-        url: "http://milliondollarhomepage.com",
-        img: "mdp.jpg",
-        icon: ["games", "nsfw"],
-        keywords: ["fun", "weird", "map", "games", "web"],
     },
 
 ];
