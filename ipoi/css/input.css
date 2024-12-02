@@ -1,0 +1,79 @@
+/* INPUT */
+.input-wrapper {
+    border: 2px solid #4f58d3;
+    border-radius: 4px;
+    color: #4f58d3;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    margin-block: 48px;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 1em;
+    font-size: 16px;
+    padding: 8px;
+    display: inline-block;
+    /* max-width: 100%; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 190px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.size-span {
+    white-space: pre;
+    height: 1em;
+    display: inline-block;
+    line-height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+    min-width: 2px;
+    user-select: none;
+    vertical-align: top;
+    height: 32px;
+}
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: #ffffff;
+    height: 100%;
+    text-overflow: ellipsis;
+    background: none;
+    top: 0;
+    left: 0;
+    line-height: inherit;
+    padding: inherit;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.suggestions-list {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 4px;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #4f58d3;
+    border-radius: 4px;
+}
+
+.suggestions-list li:hover {
+    background-color: #4f58d3;
+    color: #ffffff;
+}

@@ -7,33 +7,72 @@
     <title>.Post Nemo Point</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/input.css">
 </head>
 
 <body>
-    <div id="title" class="refresh">.POST NEMO POINT</div>
-    <!-- <div id="title2" class="refresh">🐟 🐚 🐠 🐙 🐳 🐡</div> -->
 
     <div class="marquee-container refresh">
         <div class="marquee">
-            < / Knowledge / Mystery / Wonder / Journey / Weird / Marvelous / Games / Web Art / Mad / Lab / Outdated / Isolate / Space / Dive / Tools /
-            Useless / Art / Secret / Trove / Unusual / Rabbit hole / Labyrinth / Futur / Crazy / Idea / Odd / Sleep / Question / Under / Noise / Test /
-            Niche / Curiosity / Obscure / Indispensable / Fascination / Relic / Study / Deep / Maze / Absurd / Lost / Science / Swirl / Record / Map /
-            Artifact / Myth / Lost world / Discovery / Imagination / Accident / Artistic / Amazing / Cyber / Path / Random / Hollow / Rest / Node /
-            Forgotten / Creative / Outstanding / Hidden / Awful / Puzzle / Disturbing / Experience / Dark / Scary / Far away / Cursed / Submarine /
-            Adventure / Fun / Exploration / Quest / Treasure / Code / Graphic / Enigma / Catalogue / Antipodal / Sense / Cave / Neo / Aircraft / Wild /
-            Unknown / Ship / Memory / Case / Insane / Magic / Bookcase / Revolution / Forgotten / Void / Paradox / Parallel / Nonsense / Aberration /
-            Pole / Illusion / Compass / Riddle / Dream / Shell / Universe / Lonely / Sea / Chaos / Modern / Archives / Cranny / Chemical / Desert / >
+            .Knowledge .Mystery .Wonder .Journey .Weird .Marvelous .Games .Web Art .Mad .Lab .Outdated .Isolate .Space
+            .Dive .Tools .Useless .Art .Secret .Trove .Unusual .Rabbit hole .Labyrinth .Futur .Crazy .Idea .Odd
+            .Sleep .Question .Under .Noise .Test .Niche .Curiosity .Obscure .Indispensable .Fascination .Relic
+            .Study .Deep .Maze .Absurd .Lost .Science .Swirl .Record .Map .Artifact .Myth .Lost world .Discovery
+            .Imagination .Accident .Artistic .Amazing .Cyber .Path .Random .Hollow .Rest .Node .Forgotten .Creative
+            .Outstanding .Hidden .Awful .Puzzle .Disturbing .Experience .Dark .Scary .Far away .Cursed .Submarine
+            .Adventure .Fun .Exploration .Quest .Treasure .Code .Graphic .Enigma .Catalogue .Antipodal .Sense .Cave
+            .Neo .Aircraft .Wild .Unknown .Ship .Memory .Case .Insane .Magic .Bookcase .Revolution .Void .Paradox
+            .Parallel .Nonsense .Aberration .Pole .Illusion .Compass .Riddle .Dream .Shell .Universe .Lonely .Sea
+            .Chaos .Modern .Archives .Cranny .Chemical .Desert
         </div>
     </div>
-    
-    <main id="grid">
-    </main>
-    
-    
+
+    <div>
+        <!-- <div id="title" class="refresh">.nemodots</div> -->
+        <div id="title" class="refresh">.nemonodes</div>
+        <!-- <div id="title" class="refresh">.nemopods</div> -->
+        <!-- <div id="title" class="refresh">.demon odes</div> -->
+        <!-- <div id="title2" class="refresh">🐟 🐚 🐠 🐙 🐳 🐡</div> -->
+        <div id="title2" class="refresh">Dive into mysterious, artistic, funny, and sometimes useful sites. (102 sites)</div>
+    </div>
+
+    <div id="mainbar">
+        <button class="button-54">
+            <div class="mainbut-txt" id="btn-learn">learn</div>
+        </button>
+        <button class="button-54">
+            <div class="mainbut-txt" id="btn-fun">fun</div>
+        </button>
+        <button class="button-54">
+            <div class="mainbut-txt" id="btn-art">art</div>
+        </button>
+        <!-- <button id="addbutton" class="button-54" style="width: 48px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                <path d="M412-412H154v-136h258v-259h136v259h258v136H548v258H412v-258Z" />
+            </svg>
+        </button> -->
+    </div>
+    <div class="input-wrapper" id="input-wrp">
+        <span class="size-span" id="myinput"></span>
+        <input id="inp" oninput="updateChange(event); showSuggestions();" placeholder="type here.. 🔎"></input>
+    </div>
+    <ul id="suggestionsList" class="suggestions-list"></ul>
+
+
+    <div id="grid" class="grid"></div>
+    <!-- <div id="title3" onclick="scrollToTop()">⊂( ´ ▽ ` )⊃</div> -->
+    <div id="title3" onclick="scrollToTop()">· 🐡 ·</div>
+
+    <script src="../js/cards_icons.js"></script>
     <script src="../js/data.js"></script>
+    <script src="../js/input.js"></script>
     <script src="../js/main.js"></script>
-    </body>
-    
-    </html>
+
+
+</body>
+
+</html>
