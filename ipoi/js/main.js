@@ -130,11 +130,13 @@ function generateWebsiteGrid(queryStr) {
         const wimg = card.querySelector(".webimg");
         wimg.addEventListener('contextmenu', (event) => {
             event.preventDefault();
-            window.open(site.url, "_blank");
+            if (!site.keywords.includes("nsfw")) // TMP TODO warning box
+                window.open(site.url, "_blank");
         });
 
         card.addEventListener('click', () => {
-            window.open(site.url, "_blank");
+            if (!site.keywords.includes("nsfw")) // TMP TODO warning box
+                window.open(site.url, "_blank");
         });
         grid.appendChild(card);
     });

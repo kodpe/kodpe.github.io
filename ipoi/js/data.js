@@ -543,7 +543,7 @@ const data = [
         url: "http://milliondollarhomepage.com",
         img: "mdp.jpg",
         icon: ["art", "nsfw"],
-        keywords: ["fun", "weird", "web"],
+        keywords: ["fun", "weird", "web", "nsfw"],
     },
     {
         name: "Aesthetics Wiki",
