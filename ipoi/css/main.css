@@ -69,6 +69,7 @@ body {
 #title {
     font-size: 42px;
     padding: 32px;
+    letter-spacing: 4px;
 }
 #title:hover {
     transform: scale(1.05);
@@ -79,8 +80,8 @@ body {
 }
 
 #title3 {
-    font-size: 64px;
-    padding: 64px;
+    font-size: 42px;
+    padding: 32px;
     cursor: pointer;
 }
 #title3:hover {
@@ -162,14 +163,31 @@ body {
     aspect-ratio: 3/4;
     max-width: 400px;
     margin: 0 auto;
-    color: #4f58d3;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    /* color: #4f58d3; */
+    /* box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px; */
 }
 
 .card:hover {
-    transform: scale(1.05);
-    /* border: 1px solid #ffffff; */
     cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .card:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 800px) {
+    .grid {
+        gap: 0px !important;
+    }
+    .card {
+        max-width: 70% !important;
+        margin-block: 16px !important;
+    }
+    .site-name {
+        font-size: 18px !important;
+    }
 }
 
 .card img {
