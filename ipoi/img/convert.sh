@@ -18,9 +18,9 @@ for file in "$SOURCE_DIR"/*.{png,jpg,jpeg}; do
     output_file="$OUTPUT_DIR/$(basename "${file%.*}.webp")"
 
     # Convertit le fichier en WebP
-    ~/magick "$file" -quality 80 "$output_file"
+    ~/magick "$file" -quality 90 "$output_file"
 	ls -la "$output_file"
-	~/magick mogrify -resize 600x600 "$output_file"
+	~/magick mogrify -resize 700x700 "$output_file"
 	ls -la "$output_file"
     echo "done : $file -> [$output_file]"
 done
