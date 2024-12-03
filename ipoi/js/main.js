@@ -40,7 +40,7 @@ const elements = document.querySelectorAll('.refresh');
 elements.forEach(element => {
     element.addEventListener('click', function () {
         // location.reload(); // current page reload
-        clickGlobalShuffle();
+        shuffleArray(data);
         generateWebsiteGrid("all");
     });
 });
@@ -50,10 +50,6 @@ function shuffleArray(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-}
-
-function clickGlobalShuffle() {
-    shuffleArray(data);
 }
 
 function removeAccents(chaine) {
@@ -147,4 +143,5 @@ function generateWebsiteGrid(queryStr) {
 
 }
 
+shuffleArray(data);
 generateWebsiteGrid("all");
