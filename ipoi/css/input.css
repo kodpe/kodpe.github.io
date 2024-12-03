@@ -15,8 +15,19 @@
     text-overflow: ellipsis;
     overflow: hidden;
     min-width: 190px;
-    max-width: 600px;
     margin: 0 auto;
+}
+
+@media (min-width: 801px) {
+    .input-wrapper {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+    .input-wrapper {
+        max-width: 320px;
+    }
 }
 
 .input-wrapper:hover {
