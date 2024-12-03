@@ -111,9 +111,9 @@ function generateWebsiteGrid(queryStr) {
         card.className = "card";
         card.innerHTML = `
     <img class="webimg"
-    srcset="${'../img/sites/' + site.img} 600w"
+    srcset="${'../img/sites_webp/' + site.img +'.webp'} 600w"
     sizes="(max-width: 800px) 400px, (min-width: 801px) 600px"
-    src="${'../img/sites/' + site.img}"
+    src="${'../img/sites_webp/' + site.img +'.webp'}"
     alt="${site.name}"/>
     <div class="site-name">${site.name}</div>
     <div class="icon-grid"></div>
@@ -124,7 +124,7 @@ function generateWebsiteGrid(queryStr) {
             site.icon.forEach(name => {
                 const iconElement = document.createElement("div");
                 iconElement.className = "icon";
-                console.log(name);
+                // console.log(name);
                 iconElement.innerHTML = '<span>' + icons[name].svg + '</span>';
                 iconElement.title = icons[name].info;
                 iconGrid.appendChild(iconElement);
