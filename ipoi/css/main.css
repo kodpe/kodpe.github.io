@@ -150,8 +150,9 @@ body {
 
 .card {
     background: #1e243b;
+    /* background: #14182e; */
     /* border: 2px solid; */
-    background: #14182e;
+    background: #1a2046;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     border-radius: 8px;
     aspect-ratio: 3/4;
