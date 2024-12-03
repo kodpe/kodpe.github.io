@@ -107,9 +107,8 @@ function generateWebsiteGrid(queryStr) {
         card.className = "card";
         card.innerHTML = `
     <img class="webimg"
-    srcset="${'../img/sites_webp/' + site.img +'.webp'} 600w"
-    sizes="(max-width: 800px) 400px, (min-width: 801px) 600px"
-    src="${'../img/sites_webp/' + site.img +'.webp'}"
+    srcset="${'../img/sites_webp/' + site.img +'.webp'} 700w"
+    src="${'../img/sites_webp/' + site.img +'.webp'}" width="700"
     alt="${site.name}"/>
     <div class="site-name">${site.name}</div>
     <div class="icon-grid"></div>
