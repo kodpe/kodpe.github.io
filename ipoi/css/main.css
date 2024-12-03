@@ -165,7 +165,22 @@ body {
     cursor: pointer;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
+    .grid {
+        gap: 0px !important;
+    }
+
+    .card {
+        max-width: 70% !important;
+        margin-block: 16px !important;
+    }
+
+    .site-name {
+        font-size: 18px !important;
+    }
+}
+
+@media (min-width: 801px) {
 #title:hover {
     transform: scale(1.05);
 }
@@ -180,21 +195,6 @@ body {
         transform: scale(1.05);
     }
 
-}
-
-@media (max-width: 800px) {
-    .grid {
-        gap: 0px !important;
-    }
-
-    .card {
-        max-width: 70% !important;
-        margin-block: 16px !important;
-    }
-
-    .site-name {
-        font-size: 18px !important;
-    }
 }
 
 .card img {
