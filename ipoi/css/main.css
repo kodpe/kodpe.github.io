@@ -8,6 +8,10 @@
     /**/
 }
 
+.disabled {
+    display: none !important;
+}
+
 body {
     scrollbar-width: thin;
     /* Pour Firefox */
@@ -68,7 +72,8 @@ body {
 
 #title {
     font-size: 42px;
-    padding: 32px;
+    padding-top: 24px;
+    padding-bottom: 32px;
     letter-spacing: 4px;
 }
 
@@ -93,11 +98,18 @@ body {
     gap: 32px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+}
+
+#secondbar {
+    display: flex;
+    margin: 0 auto;
+    gap: 32px;
+    margin-bottom: 32px;
 }
 
 #addbutton {
-    margin-left: 48px;
+    /* margin-left: 48px; */
     height: 48px;
     width: 48px;
 }

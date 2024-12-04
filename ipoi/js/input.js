@@ -14,7 +14,10 @@ function updateChange(event) {
         btnLearn.parentElement.classList.remove("ui-selector");
         btnFun.parentElement.classList.remove("ui-selector");
         btnArt.parentElement.classList.remove("ui-selector");
+        btnAdd.classList.remove("ui-selector");
         document.getElementById('input-wrp').classList.add("ui-selector");
+        submitPageElement.classList.add("disabled");
+        grid.classList.remove("disabled");
     }
     generateWebsiteGrid(value);
 }
@@ -32,7 +35,7 @@ function showSuggestions() {
     if (query.length > 1) {
         const filteredTerms = terms.filter(term => term.toLowerCase().includes(query));
 
-        console.log(filteredTerms);
+        // console.log(filteredTerms);
 
         // Display filtered suggestions
         filteredTerms.forEach(term => {

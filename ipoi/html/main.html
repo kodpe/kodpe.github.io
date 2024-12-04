@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dive into a collection of fascinating, artistic, mysterious, and sometimes useful websites. Discover unique digital experiences and hidden gems on the web." />
-    <meta name="keywords" content="web, artistic websites, mysterious websites, useful tools, digital exploration, fascinating sites">
+    <meta name="description"
+        content="Dive into a collection of fascinating, artistic, mysterious, and sometimes useful websites. Discover unique digital experiences and hidden gems on the web." />
+    <meta name="keywords"
+        content="art, web art, fun, artistic, mysterious, useful tools, digital exploration, useless, fascinating sites">
     <meta name="author" content="Kodp">
     <title>.nemonodes</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500..600&display=swap"> -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/input.css">
+    <link rel="stylesheet" href="../css/submit.css">
 </head>
 
 <body>
@@ -38,7 +42,7 @@
         <!-- <div id="title" class="refresh">.nemopods</div> -->
         <!-- <div id="title" class="refresh">.demon odes</div> -->
         <!-- <div id="title2" class="refresh">🐟 🐚 🐠 🐙 🐳 🐡</div> -->
-        <!-- <div id="title2" class="refresh">Fascinating 105 sites.</div> -->
+        <!-- <div id="title2" class="refresh">showcase of fascinating 105 sites.</div> -->
     </div>
 
     <div id="mainbar">
@@ -51,28 +55,46 @@
         <button class="button-54">
             <div class="mainbut-txt" id="btn-art">art</div>
         </button>
-        <!-- <button id="addbutton" class="button-54" style="width: 48px;">
+    </div>
+    <div id="secondbar">
+        <div class="input-wrapper" id="input-wrp">
+            <span class="size-span" id="myinput"></span>
+            <input id="inp" oninput="updateChange(event); showSuggestions();" placeholder="🔎 type here..."></input>
+        </div>
+        <!-- <ul id="suggestionsList" class="suggestions-list"></ul> -->
+        <button id="addbutton" class="button-54">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
                 <path d="M412-412H154v-136h258v-259h136v259h258v136H548v258H412v-258Z" />
             </svg>
-        </button> -->
+        </button>
     </div>
-    <div class="input-wrapper" id="input-wrp">
-        <span class="size-span" id="myinput"></span>
-        <input id="inp" oninput="updateChange(event); showSuggestions();" placeholder="type here.. 🔎"></input>
-    </div>
-    <ul id="suggestionsList" class="suggestions-list"></ul>
 
+    <!-- SUBMIT PAGE  -->
+    <div id="submit-page" style="display: flex; justify-content: center;" class="disabled">
+        <form id="mailForm">
+            <label for="url">SUBMIT A SITE</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+            <label for="email">EMAIL<span class="optional">(if you want a reply)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@company.com">
+            <button type="submit" class="button-54" id="subbtn">
+                <div class="mainbut-txt" id="btn-submit">submit</div>
+            </button>
+        </form>
+        <div id="thankyou">Thank you!</div>
+    </div>
 
     <div id="grid" class="grid"></div>
-    <!-- <div id="title3" onclick="scrollToTop()">⊂( ´ ▽ ` )⊃</div> -->
     <div id="title3" onclick="scrollToTop()">ლ(ಠ_ಠ ლ)</div>
+
+    <script>
+    </script>
 
     <script src="../js/cards_icons.js"></script>
     <script src="../js/data.js"></script>
     <script src="../js/input.js"></script>
     <script src="../js/main.js"></script>
-
+    <script src="../js/sbrev.js"></script>
+    <script src="../js/submit.js"></script>
 
 </body>
 

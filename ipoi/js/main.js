@@ -10,6 +10,9 @@ const inp = document.getElementById('inp');
 const btnLearn = document.getElementById('btn-learn');
 const btnFun = document.getElementById('btn-fun');
 const btnArt = document.getElementById('btn-art');
+const btnAdd = document.getElementById('addbutton');
+const submitPageElement = document.getElementById("submit-page");
+const gridElement = document.getElementById('grid');
 
 btnLearn.addEventListener('click', function () {
     generateWebsiteGrid("learn");
@@ -31,6 +34,9 @@ function resetUIselector() {
     btnLearn.parentElement.classList.remove("ui-selector");
     btnFun.parentElement.classList.remove("ui-selector");
     btnArt.parentElement.classList.remove("ui-selector");
+    btnAdd.classList.remove("ui-selector");
+    submitPageElement.classList.add("disabled");
+    grid.classList.remove("disabled");
     inp.value = "";
     wrp.classList.remove("ui-selector");
 }
@@ -93,7 +99,7 @@ function generateWebsiteGrid(queryStr) {
             // keys.push(...splitString(normalizeWord(site.url)));
             keys.push(...site.keywords.map(element => normalizeWord(element)));
             keys = uniqSet(keys);
-            console.log("queries:", queries, " keys:", keys);
+            // console.log("queries:", queries, " keys:", keys);
             let found = queries.some(query => keys.some(key => key.includes(query)));
             if (found) {
                 console.log("%c[" + queries + "] found in " + site.name +" "+site.url, "background: black; color: green; padding: 2px;");

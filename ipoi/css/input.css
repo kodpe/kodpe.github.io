@@ -8,25 +8,25 @@
     position: relative;
     box-sizing: border-box;
     line-height: 1em;
-    font-size: 16px;
-    padding: 8px;
+    padding: 6px;
     display: inline-block;
     /* max-width: 100%; */
     text-overflow: ellipsis;
     overflow: hidden;
     min-width: 190px;
+    min-width: 258px;
     margin: 0 auto;
 }
 
 @media (min-width: 801px) {
     .input-wrapper {
-        max-width: 600px;
+        max-width: 258px;
     }
 }
 
 @media (max-width: 800px) {
     .input-wrapper {
-        max-width: 320px;
+        max-width: 258px;
     }
 }
 
@@ -48,7 +48,7 @@
     height: 32px;
 }
 
-input {
+#inp {
     border: none;
     background: none;
     outline: none;
@@ -63,6 +63,8 @@ input {
     position: absolute;
     box-sizing: border-box;
     width: 100%;
+    font-size: 18px;
+    /* padding: 8px; */
 }
 
 .suggestions-list {
