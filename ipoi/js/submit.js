@@ -16,6 +16,7 @@ mailFormElement.addEventListener("submit", function (event) {
 
 btnAdd.addEventListener('click', function () {
     resetUIselector();
+    resetInputSearch();
     document.getElementById("mailForm").reset();
     btnAdd.classList.add("ui-selector");
     grid.classList.add("disabled");

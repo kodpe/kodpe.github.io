@@ -177,15 +177,14 @@ body {
 }
 
 .card {
-    background: #1e243b;
+    /* background: #1e243b; */
     /* border: 2px solid #00ff00; */
     background: #1a2046;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     border-radius: 8px;
     aspect-ratio: 3/4;
     max-width: 400px;
-    /* color: #4f58d3; */
-    /* box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .card:hover {

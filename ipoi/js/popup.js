@@ -17,7 +17,7 @@ function showPopup() {
     }
     if (currentSite.icon.includes("photowarning")) {
         popupWarning.innerHTML += `
-        <span class="warntitle">PSE WARNING</span><br>This site contains flashing lights or images that may trigger seizures in people with photosensitive epilepsy.<br><br>
+        <span class="warntitle">MEDICAL WARNING</span><br>This site contains flashing lights or images that may trigger seizures in people with photosensitive epilepsy.<br><br>
         `;
     }
     popupOverlay.classList.add("visible");

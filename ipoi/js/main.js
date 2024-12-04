@@ -19,30 +19,36 @@ btnLearn.addEventListener('click', function () {
     shuffleArray(data);
     generateWebsiteGrid("learn");
     resetUIselector();
-    btnLearn.parentElement.classList.add("ui-selector");
+    resetInputSearch();
+    btnLearn.classList.add("ui-selector");
 });
 btnFun.addEventListener('click', function () {
     shuffleArray(data);
     generateWebsiteGrid("fun");
     resetUIselector();
-    btnFun.parentElement.classList.add("ui-selector");
+    resetInputSearch();
+    btnFun.classList.add("ui-selector");
 });
 btnArt.addEventListener('click', function () {
     shuffleArray(data);
     generateWebsiteGrid("art");
     resetUIselector();
-    btnArt.parentElement.classList.add("ui-selector");
+    resetInputSearch();
+    btnArt.classList.add("ui-selector");
 });
 
 function resetUIselector() {
-    btnLearn.parentElement.classList.remove("ui-selector");
-    btnFun.parentElement.classList.remove("ui-selector");
-    btnArt.parentElement.classList.remove("ui-selector");
+    btnLearn.classList.remove("ui-selector");
+    btnFun.classList.remove("ui-selector");
+    btnArt.classList.remove("ui-selector");
     btnAdd.classList.remove("ui-selector");
     submitPageElement.classList.add("disabled");
     grid.classList.remove("disabled");
-    inp.value = "";
+}
+
+function resetInputSearch() {
     wrp.classList.remove("ui-selector");
+    inp.value = "";
 }
 
 const elements = document.querySelectorAll('.refresh');

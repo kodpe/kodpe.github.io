@@ -11,13 +11,8 @@ function updateChange(event) {
         document.getElementById('input-wrp').classList.remove("ui-selector");
     if (value)
     {
-        btnLearn.parentElement.classList.remove("ui-selector");
-        btnFun.parentElement.classList.remove("ui-selector");
-        btnArt.parentElement.classList.remove("ui-selector");
-        btnAdd.classList.remove("ui-selector");
+        resetUIselector();
         document.getElementById('input-wrp').classList.add("ui-selector");
-        submitPageElement.classList.add("disabled");
-        grid.classList.remove("disabled");
     }
     generateWebsiteGrid(value);
 }
