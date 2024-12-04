@@ -487,7 +487,7 @@ const data = [
         url: "https://kodpe.github.io/umq/html/quizz.html",
         img: "umq",
         icon: ["games"],
-        keywords: ["learn", "fun", "games", "ultimate", "medicine", "quiz"],
+        keywords: ["learn", "fun", "games", "ultimate", "medicine", "quiz", "kodp"],
     },
     {
         name: "Tutoriel Synthétiseur",
@@ -690,7 +690,7 @@ const data = [
         url: "https://amazondating.co",
         img: "amz",
         icon: ["art"],
-        keywords: ["fun", "web"],
+        keywords: ["fun", "web", "weird"],
     },
     {
         name: "Ducksarethebest.com",
@@ -746,7 +746,7 @@ const data = [
         url: "https://aquarium.ru/en",
         img: "aqa",
         icon: ["music", "photowarning"],
-        keywords: ["art", "fun", "music", "unicorn", "licorne"],
+        keywords: ["art", "fun", "music", "unicorn", "licorne", "weird"],
     },
     {
         name: "Penderecki's Garden",
@@ -760,14 +760,14 @@ const data = [
         url: "http://dilladimension.com",
         img: "tdd",
         icon: ["music", "photowarning"],
-        keywords: ["art", "music", "garden", "fun", "donut"],
+        keywords: ["art", "music", "garden", "fun", "donut", "weird"],
     },
     {
         name: "A Number From the Ghost",
         url: "https://anumberfromtheghost.com",
         img: "nfg",
         icon: ["music", "photowarning"],
-        keywords: ["art", "music", "games", "fun"],
+        keywords: ["art", "music", "games", "fun", "weird"],
     },
     {
         name: "AnyDice",
@@ -789,6 +789,20 @@ const data = [
         img: "ggg",
         icon: ["art"],
         keywords: ["art", "coding", "fly"],
+    },
+    {
+        name: "LoL Champions Concepts",
+        url: "https://kodpe.github.io/devoidlab/Frankz.html",
+        img: "lol",
+        icon: ["art"],
+        keywords: ["art", "game", "kodp", "lol"],
+    },
+    {
+        name: "I miss her, my 3-lvl tin can",
+        url: "https://kodpe.github.io/ipoi/img/sites/s42.png",
+        img: "s42",
+        icon: ["art"],
+        keywords: ["art", "ascii", "kodp", "42", "school"],
     },
 
 ];

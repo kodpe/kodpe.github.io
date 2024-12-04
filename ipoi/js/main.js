@@ -82,6 +82,7 @@ function removeWordsUnderLength(array, minLength) {
 function improveKeywords(keywords) {
     const keywordMapping = {
         "sea": ["mer", "ocean", "marine", "maritime"],
+        "ship": ["boat", "bateau", "navire", "sea", "ocean"],
         "aviation" : ["plane", "air", "flight", "avion", "vol", "fly", "sky"],
         "coding": ["code", "codes", "dev"],
         "map": ["maps", "carte", "world", "plan", "cartes"],
@@ -94,8 +95,10 @@ function improveKeywords(keywords) {
         "dice": ["dices"],
         "music": ["musics", "musique", "sound"],
         "garden": ["jardin"],
+        "weird": ["wtf", "strange", "crazy", "mad"],
         "control": ["controle", "check"],
         "game": ["games", "jeux", "jeu", "play"],
+        "lol": ["league", "legends", "faille", "rift", "champion", "champ"],
         "road": ["route", "drive", "conduite", "car", "voiture"],
     };
 
