@@ -15,16 +15,19 @@ const submitPageElement = document.getElementById("submit-page");
 const gridElement = document.getElementById('grid');
 
 btnLearn.addEventListener('click', function () {
+    shuffleArray(data);
     generateWebsiteGrid("learn");
     resetUIselector();
     btnLearn.parentElement.classList.add("ui-selector");
 });
 btnFun.addEventListener('click', function () {
+    shuffleArray(data);
     generateWebsiteGrid("fun");
     resetUIselector();
     btnFun.parentElement.classList.add("ui-selector");
 });
 btnArt.addEventListener('click', function () {
+    shuffleArray(data);
     generateWebsiteGrid("art");
     resetUIselector();
     btnArt.parentElement.classList.add("ui-selector");
@@ -76,30 +79,35 @@ function removeWordsUnderLength(array, minLength) {
     return array.filter(word => word.length > minLength || !isNaN(word));
 }
 
-function betterKeywords(keywords) {
+function improveKeywords(keywords) {
     const keywordMapping = {
         "sea": ["mer", "ocean", "marine", "maritime"],
+        "aviation" : ["plane", "air", "flight", "avion", "vol", "fly", "sky"],
         "coding": ["code", "codes", "dev"],
-        "map": ["maps", "carte", "world", "plan"],
-        "tool": ["tools", "outils"],
+        "map": ["maps", "carte", "world", "plan", "cartes"],
+        "tool": ["tools", "outils", "util", "utils", "utile"],
         "art": ["arts", "artist", "artistic"],
-        "math": ["maths"]
+        "math": ["maths"],
+        "cat": ["cats", "chats"],
+        "donut": ["donuts"],
+        "comic": ["comics"],
+        "dice": ["dices"],
+        "music": ["musics", "musique", "sound"],
+        "garden": ["jardin"],
+        "control": ["controle", "check"],
+        "game": ["games", "jeux", "jeu", "play"],
+        "road": ["route", "drive", "conduite", "car", "voiture"],
     };
 
     let toAdd = [];
-
     keywords.forEach(key => {
-        // Ajouter les mots associés définis dans le mapping
         if (keywordMapping[key]) {
             toAdd.push(...keywordMapping[key]);
         }
-        
-        // Ajouter automatiquement le pluriel (par exemple : "maps", "tools")
         if (!keywordMapping[key]?.includes(key + "s") && !key.endsWith("s")) {
             toAdd.push(key + "s");
         }
     });
-
     return toAdd;
 }
 
@@ -122,15 +130,17 @@ function generateWebsiteGrid(queryStr) {
     data.forEach(site => {
         if (!queries.includes("all")) {
             let keys = [];
-            keys.push(...splitString(normalizeWord(site.name))); // ajout du nom du site aux keywords
+            keys.push(...splitString(normalizeWord(site.name)));
             keys.push(...splitString(normalizeWord(site.url)));
+            keys.push(...splitString(normalizeWord(site.img)));
+            keys.push(...splitString(normalizeWord(site.icon.join(","))));
             keys.push(...site.keywords.map(element => normalizeWord(element)));
-            keys.push(...betterKeywords(keys));
+            keys.push(...improveKeywords(keys));
             keys = uniqSet(keys);
             // console.log("queries:", queries, " keys:", keys);
             let found = queries.some(query => keys.some(key => key.includes(query)));
             if (found) {
-                console.log("%c[" + queries + "] found in " + site.name +" "+site.url, "background: black; color: green; padding: 2px;");
+                // console.log("%c[" + queries + "] found in " + site.name +" "+site.url, "background: black; color: green; padding: 2px;");
             } else {
                 // console.log("%c[" + queries + "] not found in " + site.name+" "+site.url, "background: black; color: orange; padding: 2px;");
                 return;
