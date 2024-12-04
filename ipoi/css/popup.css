@@ -23,6 +23,7 @@
     width: 100%;
     text-align: center;
     color: white;
+    z-index: 11;
     /* text-transform: uppercase; */
 }
 
