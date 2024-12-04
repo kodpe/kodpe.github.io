@@ -1,5 +1,4 @@
 const popupOverlay = document.getElementById("popup-overlay");
-// const showPopupButton = document.getElementById("show-popup");
 const confirmButton = popupOverlay.querySelector(".confirm");
 const cancelButton = popupOverlay.querySelector(".cancel");
 const popupContent = popupOverlay.querySelector(".popup");
@@ -7,7 +6,7 @@ const popupContent = popupOverlay.querySelector(".popup");
 function showPopup() {
     let popupWarning = document.getElementById("popup-warning");
     if (!popupWarning) {
-        // console.error("L'élément 'popup-warning' n'a pas été trouvé dans le DOM.");
+        console.error("L'élément 'popup-warning' n'a pas été trouvé dans le DOM.");
         return;
     }
     popupWarning.innerHTML = ``;
@@ -29,11 +28,9 @@ function hidePopup() {
     currentSite = {};
 }
 
-// showPopupButton.addEventListener("click", showPopup);
 cancelButton.addEventListener("click", hidePopup);
 
 confirmButton.addEventListener("click", () => {
-    // console.log("Action confirmée !");
     window.open(currentSite.url, "_blank");
     currentSite = {};
     hidePopup();
@@ -41,7 +38,6 @@ confirmButton.addEventListener("click", () => {
 
 popupOverlay.addEventListener("click", (e) => {
     if (!popupContent.contains(e.target)) { // Si le clic est en dehors du contenu
-        // console.log("clic en dehors  !");
         hidePopup();
     }
 });

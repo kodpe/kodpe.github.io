@@ -4,11 +4,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease-in-out;
@@ -33,7 +33,6 @@
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     cursor: pointer;
-    font-size: 18px;
 }
 
 .popup button.confirm {
@@ -53,5 +52,4 @@
 
 .warntitle {
     color: #dacc11;
-    font-size: 18px;
 }
