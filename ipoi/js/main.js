@@ -76,6 +76,33 @@ function removeWordsUnderLength(array, minLength) {
     return array.filter(word => word.length > minLength || !isNaN(word));
 }
 
+function betterKeywords(keywords) {
+    const keywordMapping = {
+        "sea": ["mer", "ocean", "marine", "maritime"],
+        "coding": ["code", "codes", "dev"],
+        "map": ["maps", "carte", "world", "plan"],
+        "tool": ["tools", "outils"],
+        "art": ["arts", "artist", "artistic"],
+        "math": ["maths"]
+    };
+
+    let toAdd = [];
+
+    keywords.forEach(key => {
+        // Ajouter les mots associés définis dans le mapping
+        if (keywordMapping[key]) {
+            toAdd.push(...keywordMapping[key]);
+        }
+        
+        // Ajouter automatiquement le pluriel (par exemple : "maps", "tools")
+        if (!keywordMapping[key]?.includes(key + "s") && !key.endsWith("s")) {
+            toAdd.push(key + "s");
+        }
+    });
+
+    return toAdd;
+}
+
 function uniqSet(arr) {
     return [...new Set(arr)];
 }
@@ -96,8 +123,9 @@ function generateWebsiteGrid(queryStr) {
         if (!queries.includes("all")) {
             let keys = [];
             keys.push(...splitString(normalizeWord(site.name))); // ajout du nom du site aux keywords
-            // keys.push(...splitString(normalizeWord(site.url)));
+            keys.push(...splitString(normalizeWord(site.url)));
             keys.push(...site.keywords.map(element => normalizeWord(element)));
+            keys.push(...betterKeywords(keys));
             keys = uniqSet(keys);
             // console.log("queries:", queries, " keys:", keys);
             let found = queries.some(query => keys.some(key => key.includes(query)));
@@ -148,5 +176,6 @@ function generateWebsiteGrid(queryStr) {
 
 }
 
+console.log("nb sites registered : [", data.length, "]");
 shuffleArray(data);
 generateWebsiteGrid("all");
