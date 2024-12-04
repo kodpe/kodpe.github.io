@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/input.css">
     <link rel="stylesheet" href="../css/submit.css">
+    <link rel="stylesheet" href="../css/popup.css">
 </head>
 
 <body>
@@ -88,6 +89,16 @@
         <div id="title3" onclick="scrollToTop()">ლ(ಠ_ಠ ლ)</div>
     </div>
 
+    <button id="show-popup">Afficher le popup</button>
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <div id="popup-warning"></div>
+            <button class="confirm">ENTER</button>
+            <button class="cancel">BACK</button>
+        </div>
+    </div>
+
     <script>
     </script>
 
@@ -97,6 +108,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/sbrev.js"></script>
     <script src="../js/submit.js"></script>
+    <script src="../js/popup.js"></script>
 
 </body>
 

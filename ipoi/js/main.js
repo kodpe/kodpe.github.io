@@ -13,6 +13,7 @@ const btnArt = document.getElementById('btn-art');
 const btnAdd = document.getElementById('addbutton');
 const submitPageElement = document.getElementById("submit-page");
 const gridElement = document.getElementById('grid');
+let currentSite = {};
 
 btnLearn.addEventListener('click', function () {
     shuffleArray(data);
@@ -176,17 +177,25 @@ function generateWebsiteGrid(queryStr) {
         const wimg = card.querySelector(".webimg");
         wimg.addEventListener('contextmenu', (event) => {
             event.preventDefault();
-            if (!site.keywords.includes("nsfw")) // TMP TODO warning box
-                window.open(site.url, "_blank");
+            scOpenHandler(site);
         });
 
         card.addEventListener('click', () => {
-            if (!site.keywords.includes("nsfw")) // TMP TODO warning box
-                window.open(site.url, "_blank");
+            scOpenHandler(site);
         });
         grid.appendChild(card);
     });
 
+}
+
+function scOpenHandler(site) {
+    currentSite = site;
+    if (site.icon.includes("nsfw") || site.icon.includes("photowarning")) {
+        showPopup();
+    }
+    else {
+        window.open(site.url, "_blank");
+    }
 }
 
 console.log("nb sites registered : [", data.length, "]");

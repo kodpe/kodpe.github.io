@@ -17,6 +17,11 @@ for file in "$SOURCE_DIR"/*.{png,jpg,jpeg}; do
     # Génère un nom de fichier de sortie avec l'extension .webp
     output_file="$OUTPUT_DIR/$(basename "${file%.*}.webp")"
 
+	#TMP skip all existent files
+	if [[ -e "$output_file" ]]; then
+		continue
+	fi
+
     # Convertit le fichier en WebP
     ~/magick "$file" -quality 90 "$output_file"
 	ls -la "$output_file"

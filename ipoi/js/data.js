@@ -122,7 +122,7 @@ const data = [
         name: "973-eht-namuh-973",
         url: "https://973-eht-namuh-973.com",
         img: "973",
-        icon: ["artu", "photowarning"],
+        icon: ["artu"],
         keywords: ["art", "universe", "weird", "eht", "namuh", "973"],
     },
     {
@@ -542,7 +542,7 @@ const data = [
         name: "The Million Dollar Homepage",
         url: "http://milliondollarhomepage.com",
         img: "mdp",
-        icon: ["art", "nsfw"],
+        icon: ["art", "photowarning", "nsfw"],
         keywords: ["fun", "weird", "web", "nsfw"],
     },
     {
@@ -563,7 +563,7 @@ const data = [
         name: "Fractal Machine",
         url: "https://sciencevsmagic.net/fractal",
         img: "fra",
-        icon: ["maths"],
+        icon: ["maths", "photowarning"],
         keywords: ["art", "games", "maths", "geometry", "fractals"],
     },
     {
@@ -803,6 +803,13 @@ const data = [
         img: "s42",
         icon: ["art"],
         keywords: ["art", "ascii", "kodp", "42", "school"],
+    },
+    {
+        name: "Infinite Drum Machine",
+        url: "https://experiments.withgoogle.com/ai/drum-machine/view",
+        img: "idm",
+        icon: ["tool"],
+        keywords: ["art", "music", "google", "map"],
     },
 
 ];
