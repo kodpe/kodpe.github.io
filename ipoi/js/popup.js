@@ -1,5 +1,5 @@
 const popupOverlay = document.getElementById("popup-overlay");
-const showPopupButton = document.getElementById("show-popup");
+// const showPopupButton = document.getElementById("show-popup");
 const confirmButton = popupOverlay.querySelector(".confirm");
 const cancelButton = popupOverlay.querySelector(".cancel");
 const popupContent = popupOverlay.querySelector(".popup");
@@ -29,7 +29,7 @@ function hidePopup() {
     currentSite = {};
 }
 
-showPopupButton.addEventListener("click", showPopup);
+// showPopupButton.addEventListener("click", showPopup);
 cancelButton.addEventListener("click", hidePopup);
 
 confirmButton.addEventListener("click", () => {
