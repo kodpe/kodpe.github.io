@@ -364,13 +364,6 @@ const data = [
         keywords: ["fun", "nasa", "asteroid", "space"],
     },
     {
-        name: "Pleine-Peau",
-        url: "https://pleine-peau.com",
-        img: "ppc",
-        icon: ["art", "photowarning", "nsfw"],
-        keywords: ["art", "pleine", "peau", "nsfw"],
-    },
-    {
         name: "Oxide.org",
         url: "http://oxide.org",
         img: "oxi",
