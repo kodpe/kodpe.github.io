@@ -791,7 +791,7 @@ const data = [
         keywords: ["art", "game", "kodp", "lol"],
     },
     {
-        name: "I miss her, my 3-lvl tin can",
+        name: "My 3-lvl tin can",
         url: "https://kodpe.github.io/ipoi/img/sites/s42.png",
         img: "s42",
         icon: ["art"],
