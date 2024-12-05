@@ -54,3 +54,9 @@
 .warntitle {
     color: #dacc11;
 }
+
+@media (min-width: 801px) {
+    .popup button:hover {
+        transform: scale(1.1);
+    }
+}

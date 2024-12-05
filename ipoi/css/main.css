@@ -58,6 +58,7 @@ body {
     padding-left: 10%;
     animation: marquee 180s linear infinite;
     text-transform: lowercase;
+    font-size: 14px;
 }
 
 @keyframes marquee {
@@ -71,10 +72,10 @@ body {
 }
 
 #title {
-    font-size: 42px;
-    padding-top: 24px;
-    padding-bottom: 32px;
-    letter-spacing: 4px;
+    font-size: 38px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    letter-spacing: 3px;
 }
 
 
@@ -109,8 +110,8 @@ body {
 
 #addbutton {
     /* margin-left: 48px; */
-    height: 48px;
-    width: 48px;
+    height: 42px;
+    width: 42px;
 }
 
 .button-54 {
@@ -126,7 +127,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48px;
+    height: 42px;
 }
 
 .mainbut-txt {
@@ -222,18 +223,16 @@ body {
 .site-name {
     display: flex;
     flex-direction: column;
-    font-size: 22px;
     font-style: normal;
-    margin-inline: 16px;
+    margin: 12px;
     border-radius: 6px;
-    height: 20%;
+    height: 18%;
     justify-content: center;
     color: #ffffff;
-    margin-top: 24px;
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
 }
 
 .line {
@@ -249,8 +248,8 @@ body {
     align-items: center;
     gap: 8px;
     justify-content: right;
-    margin: 16px;
-    height: 10%;
+    margin-inline: 12px;
+    margin-bottom: 12px;
 }
 
 .icon {
