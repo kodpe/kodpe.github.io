@@ -15,16 +15,15 @@
 }
 
 .popup {
-    background-color: #0f0e1a;
+    background-color: var(--body-bg-color);
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
     max-width: 300px;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--text-color);
     z-index: 11;
-    /* text-transform: uppercase; */
 }
 
 .popup button {
@@ -37,13 +36,13 @@
 }
 
 .popup button.confirm {
-    background: #dacc11;
-    color: black;
+    background: var(--warning-bg-color);
+    color: var(--warning-text-color);
 }
 
 .popup button.cancel {
-    background: #4f58d3;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
 }
 
 .popup-overlay.visible {
@@ -52,7 +51,8 @@
 }
 
 .warntitle {
-    color: #dacc11;
+    color: var(--warning-bg-color);
+    font-size: 20px;
 }
 
 @media (min-width: 801px) {

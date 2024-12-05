@@ -1,8 +1,8 @@
 /* INPUT */
 .input-wrapper {
-    border: 2px solid #4f58d3;
+    border: 2px solid var(--primary-color);
     border-radius: 4px;
-    color: #4f58d3;
+    color: var(--primary-color);
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     margin-block: 42px;
     position: relative;
@@ -51,7 +51,7 @@
     border: none;
     background: none;
     outline: none;
-    color: #ffffff;
+    color: var(--text-color);
     height: 100%;
     text-overflow: ellipsis;
     background: none;
@@ -80,11 +80,11 @@
 .suggestions-list li {
     padding: 8px;
     cursor: pointer;
-    border: 1px solid #4f58d3;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
 }
 
 .suggestions-list li:hover {
-    background-color: #4f58d3;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
