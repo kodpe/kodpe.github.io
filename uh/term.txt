@@ -13,3 +13,6 @@ If you would like to get in touch with me<!-- slightdelayhere-->, feel free to s
 
 <p>Cheers!</p>
 <span id="a">pradyuman@dixit</span>:<span id="b">~</span><span id="c">$</span> exit
+
+
+https://medium.com/@JeremyRaffin/site-web-statique-optimis%C3%A9-avec-github-pages-partie-2-configuration-dun-nom-de-domaine-95c94f14aec0

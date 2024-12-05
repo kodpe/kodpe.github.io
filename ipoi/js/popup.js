@@ -12,12 +12,12 @@ function showPopup() {
     popupWarning.innerHTML = ``;
     if (currentSite.icon.includes("nsfw")) {
         popupWarning.innerHTML += `
-        <span class="warntitle">NSFW WARNING</span><br>This site contains sexually explicit images or references and may not be suitable for all audiences.<br><br>
+        <div class="warntitle">NSFW WARNING</div>This site contains sexually explicit images or references and may not be suitable for all audiences.<br><br>
         `;
     }
     if (currentSite.icon.includes("photowarning")) {
         popupWarning.innerHTML += `
-        <span class="warntitle">MEDICAL WARNING</span><br>This site contains flashing lights or images that may trigger seizures in people with photosensitive epilepsy.<br><br>
+        <div class="warntitle">MEDICAL WARNING</div>This site contains flashing lights or images that may trigger seizures in people with photosensitive epilepsy.<br><br>
         `;
     }
     popupOverlay.classList.add("visible");

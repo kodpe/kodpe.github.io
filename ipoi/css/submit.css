@@ -6,6 +6,7 @@
 label {
     display: flex;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 input[type="text"],
@@ -24,4 +25,8 @@ input[type="url"] {
 
 #subbtn {
     margin: 0 auto;
+}
+
+#thankyou {
+    font-size: 20px;
 }

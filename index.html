@@ -1,108 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" href="img/icon.png">
-	<title>Kodp</title>
-	<link href="index.css" rel="stylesheet" type="text/css">
-	<link href="cat.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dive into a collection of fascinating, artistic, mysterious, and sometimes useful websites. Discover unique digital experiences and hidden gems on the web." />
+    <meta name="keywords"
+        content="art, web art, fun, artistic, mysterious, useful tools, digital exploration, useless, fascinating sites">
+    <meta name="author" content="Kodp">
+    <title>.nemosites</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500..600&display=swap"> -->
+    <link rel="stylesheet" href="ipoi/css/main.css">
+    <link rel="stylesheet" href="ipoi/css/input.css">
+    <link rel="stylesheet" href="ipoi/css/submit.css">
+    <link rel="stylesheet" href="ipoi/css/popup.css">
 </head>
 
 <body>
 
-	<script>
-		window.location.href = "https://nemosites.com/ipoi/html/main";
-	</script>
+    <div class="marquee-container refresh">
+        <div class="marquee">
+            .Knowledge .Mystery .Wonder .Journey .Weird .Marvelous .Games .Web Art .Mad .Lab .Outdated .Isolate .Space
+            .Dive .Tools .Useless .Art .Secret .Trove .Unusual .Rabbit hole .Labyrinth .Futur .Crazy .Idea .Odd
+            .Sleep .Question .Under .Noise .Test .Niche .Curiosity .Obscure .Indispensable .Fascination .Relic
+            .Study .Deep .Maze .Absurd .Lost .Science .Swirl .Record .Map .Artifact .Myth .Lost world .Discovery
+            .Imagination .Accident .Artistic .Amazing .Cyber .Path .Random .Hollow .Rest .Node .Forgotten .Creative
+            .Outstanding .Hidden .Awful .Puzzle .Disturbing .Experience .Dark .Scary .Far away .Cursed .Submarine
+            .Adventure .Fun .Exploration .Quest .Treasure .Code .Graphic .Enigma .Catalogue .Antipodal .Sense .Cave
+            .Neo .Aircraft .Wild .Unknown .Ship .Memory .Case .Insane .Magic .Bookcase .Revolution .Void .Paradox
+            .Parallel .Nonsense .Aberration .Pole .Illusion .Compass .Riddle .Dream .Shell .Universe .Lonely .Sea
+            .Chaos .Modern .Archives .Cranny .Chemical .Desert
+        </div>
+    </div>
 
+    <div>
+        <!-- <div id="title" class="refresh">.nemodots</div> -->
+        <div id="title" class="refresh">.nemoSites</div>
+        <!-- <div id="title" class="refresh">.nemopods</div> -->
+        <!-- <div id="title" class="refresh">.demon odes</div> -->
+        <!-- <div id="title2" class="refresh">🐟 🐚 🐠 🐙 🐳 🐡</div> -->
+        <!-- <div id="title2" class="refresh">showcase of fascinating 105 sites.</div> -->
+    </div>
 
-	<div class="bg-animation">
-		<div id="stars"></div>
-		<div id="stars2"></div>
-		<div id="stars3"></div>
-		<div id="stars4"></div>
-	</div>
+    <div id="mainbar">
+        <button class="button-54" id="btn-learn">
+            <div class="mainbut-txt">learn</div>
+        </button>
+        <button class="button-54" id="btn-fun">
+            <div class="mainbut-txt">fun</div>
+        </button>
+        <button class="button-54" id="btn-art">
+            <div class="mainbut-txt">art</div>
+        </button>
+    </div>
+    <div id="secondbar">
+        <div class="input-wrapper" id="input-wrp">
+            <span class="size-span" id="myinput"></span>
+            <input id="inp" oninput="updateChange(event); showSuggestions();" placeholder="🔎 type here..."></input>
+        </div>
+        <!-- <ul id="suggestionsList" class="suggestions-list"></ul> -->
+        <button id="addbutton" class="button-54">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+                <path d="M412-412H154v-136h258v-259h136v259h258v136H548v258H412v-258Z" />
+            </svg>
+        </button>
+    </div>
 
-	<div class="cat">
-		<!-- <div class="ear ear--left"></div> -->
-		<!-- <div class="ear ear--right"></div> -->
-		<div class="face">
-			<div class="eye eye--left">
-				<div class="eye-pupil"></div>
-			</div>
-			<div class="eye eye--right">
-				<div class="eye-pupil"></div>
-			</div>
-			<div class="muzzle"></div>
-		</div>
-	</div>
+    <!-- SUBMIT PAGE  -->
+    <div id="submit-page" style="display: flex; justify-content: center;" class="disabled">
+        <form id="mailForm">
+            <label for="url">
+                Found a quirky or funny site?
+                <br><br>Add it to our collection!
+                <br><br>URL</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+            <label for="email">EMAIL<span class="optional">(optional, for a reply)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@company.com">
+            <button type="submit" class="button-54" id="subbtn">
+                <div class="mainbut-txt" id="btn-submit">submit</div>
+            </button>
+        </form>
+        <div id="thankyou">Thank you!</div>
+    </div>
 
-	<nav role="navigation">
-		<div id="menuToggle">
-			<input type="checkbox" />
-			<span></span>
-			<span></span>
-			<span></span>
-			<ul id="menu">
-				<a href="devoidlab/Moka.html" target="_self">
-					<li>Devoid Lab</li>
-				</a>
-				<a href="walledworld/ww.html" target="_self">
-					<li>Walled World</li>
-				</a>
-				<a href="umq/html/quizz.html" target="_self">
-					<li>Ultimate Medecine Quizz</li>
-				</a>
-				<a href="p2.html" target="_self">
-					<li>test page</li>
-				</a>
-				<a href="map.html" target="_self">
-					<li>Earth</li>
-				</a>
-				<a href="solarsystem.html" target="_self">
-					<li>Solar System</li>
-				</a>
-				<a href="https://github.com/kodpe" target="_blank">
-					<li>Github</li>
-				</a>
-				<a href="https://profile.intra.42.fr/users/sloquet" target="_blank">
-					<li>42</li>
-				</a>
-				<a href="https://github.com/kodpe/42cursus" target="_blank">
-					<li>42 Cursus</li>
-				</a>
-				<a href="https://discordapp.com/users/431941345851211787/" target="_blank">
-					<li>Discord</li>
-				</a>
-				<a href="https://ryocpp.bandcamp.com/releases" target="_blank">
-					<li>Bandcamp</li>
-				</a>
-				<a href="https://open.spotify.com/user/80san9cht92ayboonted33c2m?si=3b24d55e0e2b4be0" target="_blank">
-					<li>Spotify</li>
-				</a>
-				<a href="https://instagram.com/sylvainloquet" target="_blank">
-					<li>Instagram</li>
-				</a>
-				<a href="index.html" target="_self">
-					<li>Moka</li>
-				</a>
-				<a href="index.html" target="_self">
-					<li>Grepo</li>
-				</a>
-				<a href="index.html" target="_self">
-					<li>Geoguessr</li>
-				</a>
-				<a href="index.html" target="_self">
-					<li>Magic square</li>
-				</a>
-				<a href="index.html" target="_self">
-					<li>Useful ressources</li>
-				</a>
-			</ul>
-		</div>
-	</nav>
+    <div style="display: flex; flex-direction: column;">
+        <div id="grid" class="grid"></div>
+        <div id="title3" onclick="scrollToTop()">ლ(ಠ‿ಠ ლ)</div>
+    </div>
+
+    <!-- <button id="show-popup">Afficher le popup</button> -->
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <div id="popup-warning"></div>
+            <button class="confirm">ENTER</button>
+            <button class="cancel">BACK</button>
+        </div>
+    </div>
+
+    <script>
+    </script>
+
+    <script src="ipoi/js/cards_icons.js"></script>
+    <script src="ipoi/js/data.js"></script>
+    <script src="ipoi/js/input.js"></script>
+    <script src="ipoi/js/main.js"></script>
+    <script src="ipoi/js/sbrev.js"></script>
+    <script src="ipoi/js/submit.js"></script>
+    <script src="ipoi/js/popup.js"></script>
 
 </body>
 

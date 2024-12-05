@@ -24,6 +24,7 @@
     text-align: center;
     color: var(--text-color);
     z-index: 11;
+    text-transform: uppercase;
 }
 
 .popup button {
@@ -38,11 +39,13 @@
 .popup button.confirm {
     background: var(--warning-bg-color);
     color: var(--warning-text-color);
+    font-size: 18px;
 }
 
 .popup button.cancel {
     background: var(--primary-color);
     color: var(--text-color);
+    font-size: 18px;
 }
 
 .popup-overlay.visible {
@@ -52,7 +55,8 @@
 
 .warntitle {
     color: var(--warning-bg-color);
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 @media (min-width: 801px) {
