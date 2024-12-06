@@ -24,6 +24,7 @@ function updateChange(event) {
 
 input.addEventListener("focus", () => {
     // console.log("L'input a le focus !");
+    scrollToTopInstant();
     if (!inputWrapper.classList.contains('ui-selector'))
     {
         resetUIselector();

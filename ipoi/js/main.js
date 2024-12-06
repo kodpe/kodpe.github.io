@@ -31,7 +31,7 @@ btnMaps.addEventListener('click', function () {
     resetUIselector();
     resetInputSearch();
     btnMaps.classList.add("ui-selector");
-    shuffleArray(data);
+    // shuffleArray(data);
     generateWebsiteGrid("maps");
 });
 btnGames.addEventListener('click', function () {
@@ -41,7 +41,7 @@ btnGames.addEventListener('click', function () {
     resetUIselector();
     resetInputSearch();
     btnGames.classList.add("ui-selector");
-    shuffleArray(data);
+    // shuffleArray(data);
     generateWebsiteGrid("games");
 });
 btnLearn.addEventListener('click', function () {
@@ -51,7 +51,7 @@ btnLearn.addEventListener('click', function () {
     resetUIselector();
     resetInputSearch();
     btnLearn.classList.add("ui-selector");
-    shuffleArray(data);
+    // shuffleArray(data);
     generateWebsiteGrid("learn");
 });
 btnFun.addEventListener('click', function () {
@@ -61,7 +61,7 @@ btnFun.addEventListener('click', function () {
     resetUIselector();
     resetInputSearch();
     btnFun.classList.add("ui-selector");
-    shuffleArray(data);
+    // shuffleArray(data);
     generateWebsiteGrid("fun");
 });
 btnArt.addEventListener('click', function () {
@@ -71,7 +71,7 @@ btnArt.addEventListener('click', function () {
     resetUIselector();
     resetInputSearch();
     btnArt.classList.add("ui-selector");
-    shuffleArray(data);
+    // shuffleArray(data);
     generateWebsiteGrid("art");
 });
 
@@ -247,5 +247,5 @@ function scOpenHandler(site) {
 }
 
 console.log("nb sites registered : [", data.length, "]");
-shuffleArray(data);
+// shuffleArray(data);
 generateWebsiteGrid("all");

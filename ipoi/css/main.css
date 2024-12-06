@@ -19,8 +19,8 @@
 }
 
 * {
-    /* font-family: "Roboto Mono", monospace; */
-    font-family: "Orbitron", sans-serif;
+    font-family: "Roboto Mono", monospace;
+    /* font-family: "Orbitron", sans-serif; */
     font-optical-sizing: auto;
     font-weight: 500; /* uniq */
     font-style: normal;
@@ -381,8 +381,8 @@ body {
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
-    /* font-size: clamp(1rem, 4vw, 1rem); */
-    font-size: 1rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    /* font-size: 1rem; */
 }
 
 /* ICONS */
