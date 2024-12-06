@@ -1,43 +1,83 @@
-function scrollToTop() {
+function scrollToTopSmooth() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
+function scrollToTopInstant() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    });
+}
+
 
 const wrp = document.getElementById('input-wrp');
 const inp = document.getElementById('inp');
 const btnLearn = document.getElementById('btn-learn');
 const btnFun = document.getElementById('btn-fun');
 const btnArt = document.getElementById('btn-art');
+const btnGames = document.getElementById('btn-games');
+const btnMaps = document.getElementById('btn-maps');
 const btnAdd = document.getElementById('addbutton');
 const submitPageElement = document.getElementById("submit-page");
 const gridElement = document.getElementById('grid');
 let currentSite = {};
 
-btnLearn.addEventListener('click', function () {
+btnMaps.addEventListener('click', function () {
+    scrollToTopInstant();
+    if (btnMaps.classList.contains('ui-selector'))
+        return;
+    resetUIselector();
+    resetInputSearch();
+    btnMaps.classList.add("ui-selector");
     shuffleArray(data);
-    generateWebsiteGrid("learn");
+    generateWebsiteGrid("maps");
+});
+btnGames.addEventListener('click', function () {
+    scrollToTopInstant();
+    if (btnGames.classList.contains('ui-selector'))
+        return;
+    resetUIselector();
+    resetInputSearch();
+    btnGames.classList.add("ui-selector");
+    shuffleArray(data);
+    generateWebsiteGrid("games");
+});
+btnLearn.addEventListener('click', function () {
+    scrollToTopInstant();
+    if (btnLearn.classList.contains('ui-selector'))
+        return;
     resetUIselector();
     resetInputSearch();
     btnLearn.classList.add("ui-selector");
+    shuffleArray(data);
+    generateWebsiteGrid("learn");
 });
 btnFun.addEventListener('click', function () {
-    shuffleArray(data);
-    generateWebsiteGrid("fun");
+    scrollToTopInstant();
+    if (btnFun.classList.contains('ui-selector'))
+        return;
     resetUIselector();
     resetInputSearch();
     btnFun.classList.add("ui-selector");
+    shuffleArray(data);
+    generateWebsiteGrid("fun");
 });
 btnArt.addEventListener('click', function () {
-    shuffleArray(data);
-    generateWebsiteGrid("art");
+    scrollToTopInstant();
+    if (btnArt.classList.contains('ui-selector'))
+        return;
     resetUIselector();
     resetInputSearch();
     btnArt.classList.add("ui-selector");
+    shuffleArray(data);
+    generateWebsiteGrid("art");
 });
 
 function resetUIselector() {
+    btnMaps.classList.remove("ui-selector");
+    btnGames.classList.remove("ui-selector");
     btnLearn.classList.remove("ui-selector");
     btnFun.classList.remove("ui-selector");
     btnArt.classList.remove("ui-selector");
@@ -55,7 +95,9 @@ const elements = document.querySelectorAll('.refresh');
 // console.log(elements);
 elements.forEach(element => {
     element.addEventListener('click', function () {
-        // location.reload(); // current page reload
+        scrollToTopInstant();
+        resetUIselector();
+        resetInputSearch();
         shuffleArray(data);
         generateWebsiteGrid("all");
     });

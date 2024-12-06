@@ -2,45 +2,41 @@ const terms = [
     "Art", "Music", "Science", "Technology", "Learning", "Fun", "Adventure", "Nature", "Books", "Movies", "Travel", "Games"
 ];
 
+const inputWrapper = document.getElementById('input-wrp');
 const spanElement = document.querySelector('.size-span');
+const input = document.getElementById("inp");
+
 function updateChange(event) {
     const value = event.target.value;
     spanElement.innerText = value;
-    // console.log(value);
     if (!value)
-        document.getElementById('input-wrp').classList.remove("ui-selector");
+        inputWrapper.classList.remove("ui-selector");
     if (value)
     {
-        resetUIselector();
-        document.getElementById('input-wrp').classList.add("ui-selector");
+        if (!inputWrapper.classList.contains('ui-selector'))
+        {
+            resetUIselector();
+            inputWrapper.classList.add("ui-selector");
+        }
     }
     generateWebsiteGrid(value);
 }
 
-function showSuggestions() {
-    return; // depr
-    const input = document.getElementById('myinput');
-    const suggestionsList = document.getElementById('suggestionsList');
-    const query = input.innerHTML.toLowerCase();
-    console.log(query);
-    const inp = document.getElementById('inp');
-
-    suggestionsList.innerHTML = '';
-
-    if (query.length > 1) {
-        const filteredTerms = terms.filter(term => term.toLowerCase().includes(query));
-
-        // console.log(filteredTerms);
-
-        // Display filtered suggestions
-        filteredTerms.forEach(term => {
-            const li = document.createElement('li');
-            li.textContent = term.toLowerCase();
-            li.onclick = function () {
-                inp.value = term.toLowerCase();
-                suggestionsList.innerHTML = '';
-            };
-            suggestionsList.appendChild(li);
-        });
+input.addEventListener("focus", () => {
+    // console.log("L'input a le focus !");
+    if (!inputWrapper.classList.contains('ui-selector'))
+    {
+        resetUIselector();
+        document.getElementById('input-wrp').classList.add("ui-selector");
     }
-}
+});
+
+input.addEventListener("blur", () => {
+//   console.log("L'input a perdu le focus !");
+    if (input.value.trim() == "")
+        inputWrapper.classList.remove("ui-selector");
+});
+
+inputWrapper.addEventListener('click', () => {
+        input.focus();
+});

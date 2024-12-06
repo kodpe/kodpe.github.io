@@ -1,9 +1,8 @@
 /* INPUT */
 .input-wrapper {
-    border: 2px solid var(--primary-color);
-    border-radius: 4px;
+    border: 1px solid gray;
+    border-radius: 5px;
     color: var(--primary-color);
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     margin-block: 42px;
     position: relative;
     box-sizing: border-box;
@@ -13,24 +12,31 @@
     /* max-width: 100%; */
     text-overflow: ellipsis;
     overflow: hidden;
-    min-width: 242px;
     margin: 0 auto;
 }
 
-@media (min-width: 801px) {
+@media (min-width: 1201px) {
     .input-wrapper {
-        max-width: 242px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .input-wrapper {
+        width: 340px;
     }
 }
 
 @media (max-width: 800px) {
     .input-wrapper {
-        max-width: 242px;
+        width: 90%;
     }
 }
 
-.input-wrapper:hover {
-    transform: scale(1.05);
+.input-wrapper svg {
+    position: absolute;
+    left: 5px;
+    top: 7px;
 }
 
 .size-span {
@@ -56,35 +62,12 @@
     text-overflow: ellipsis;
     background: none;
     top: 0;
-    left: 0;
+    right: 0;
     line-height: inherit;
     padding: inherit;
     position: absolute;
     box-sizing: border-box;
-    width: 100%;
-    font-size: 16px;
-}
-
-.suggestions-list {
-    max-height: 150px;
-    overflow-y: auto;
-    margin-top: 4px;
-    padding: 0;
-    list-style: none;
-    z-index: 10;
-    width: 200px;
-    margin: 0 auto;
-    margin-bottom: 48px;
-}
-
-.suggestions-list li {
-    padding: 8px;
-    cursor: pointer;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-}
-
-.suggestions-list li:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    width: 90%;
+    font-size: 14px;
+    text-align: left;
 }

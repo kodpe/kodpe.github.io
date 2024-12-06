@@ -176,7 +176,7 @@ const data = [
     },
     {
         name: "Map Army",
-        url: "https://map.army",
+        url: "https://www.map.army",
         img: "mmp",
         icon: ["military"],
         keywords: ["learn", "maps", "military", "army"],

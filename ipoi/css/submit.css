@@ -25,6 +25,8 @@ input[type="url"] {
 
 #subbtn {
     margin: 0 auto;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
 }
 
 #thankyou {
