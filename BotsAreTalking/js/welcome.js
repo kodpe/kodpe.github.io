@@ -10,7 +10,7 @@ let running = false;
 
 rc.addEventListener('mouseenter', function (event) {
     rcCheck.classList.add("rc-check-hover");
-    // userElement.classList.remove("disabled");
+    userElement.classList.remove("disabled");
     if (!running) {
         startTime = performance.now();
         running = true;
@@ -19,7 +19,7 @@ rc.addEventListener('mouseenter', function (event) {
 });
 
 rc.addEventListener('mouseleave', function (event) {
-    // userElement.classList.add("disabled");
+    userElement.classList.add("disabled");
     rcCheck.classList.remove("rc-check-hover");
     running = false;
 });
@@ -30,9 +30,7 @@ function resetUserElement() {
 
 rc.addEventListener('click', () => {
     running = false;
-    userElement.classList.remove("disabled");
-    setTimeout(resetUserElement, 3000);
-    setTimeout(showPopup, 1000);
+    setTimeout(showPopup, 500);
 });
 
 function isMouseInsideRect(event, rect) {

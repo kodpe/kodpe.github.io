@@ -28,27 +28,6 @@
     margin: 0 auto;
 }
 
-.popup button {
-    margin: 10px;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-}
-
-.popup button.confirm {
-    background: var(--warning-bg-color);
-    color: var(--warning-text-color);
-    font-size: 16px;
-}
-
-.popup button.cancel {
-    background: var(--primary-color);
-    color: black;
-    font-size: 16px;
-}
-
 .popup-overlay.visible {
     visibility: visible;
     opacity: 1;
@@ -84,14 +63,22 @@
     height: 45px;
     border-top: 1px solid rgb(204, 204, 204);
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 386px;
 }
 
 #rc-btns {
-    width: 264px;
-    padding: 0 10px 0 10px;
+    width: 144px;
+    margin-right: 140px;
+}
+
+.rc-btn {
+    border: none;
+    cursor: pointer;
+    /* width: 32px; */
+    /* height: 32px; */
+    background-color: transparent;
+    height: 42px;
 }
 
 #verify-btn {
