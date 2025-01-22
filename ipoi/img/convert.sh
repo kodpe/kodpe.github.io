@@ -7,8 +7,8 @@ then
     exit 1
 fi
 
-SOURCE_DIR="./sites"
-OUTPUT_DIR="./sites_webp"
+SOURCE_DIR="./sites2"
+OUTPUT_DIR="./sites_webp2"
 mkdir -p "$OUTPUT_DIR"
 
 for file in "$SOURCE_DIR"/*.{png,jpg,jpeg}; do

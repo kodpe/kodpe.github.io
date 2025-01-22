@@ -1,5 +1,47 @@
 const data = [
     {
+        name: "Miamoalex",
+        url: "https://miamoalex.net/home",
+        img: "mim",
+        icon: ["various"],
+        keywords: ["fun", "game", "art", "web", "food", "internet", "music", "weird"],
+    },
+    {
+        name: "Miamo.fun",
+        url: "https://miamo.fun",
+        img: "mia",
+        icon: ["games"],
+        keywords: ["fun", "game", "web", "food", "internet"],
+    },
+    {
+        name: "Pouler.fr",
+        url: "https://pouler.fr",
+        img: "plr",
+        icon: ["games"],
+        keywords: ["fun", "game", "web", "food", "internet"],
+    },
+    {
+        name: "Kung Fu Chess",
+        url: "https://www.kfchess.com",
+        img: "kfc",
+        icon: ["games"],
+        keywords: ["fun", "game", "chess"],
+    },
+    {
+        name: "The True Size",
+        url: "https://www.thetruesize.com",
+        img: "tts",
+        icon: ["wdata"],
+        keywords: ["fun", "wdata", "maps", "true", "size", "countrie"],
+    },
+    {
+        name: "Travle",
+        url: "https://travle.earth",
+        img: "tvl",
+        icon: ["games"],
+        keywords: ["fun", "game", "wdata", "maps", "countrie"],
+    },
+    {
         name: "Bartosz Ciechanowski",
         url: "https://ciechanow.ski",
         img: "bar",
@@ -804,6 +846,20 @@ const data = [
         icon: ["tool"],
         keywords: ["art", "music", "google", "map"],
     },
+    {
+        name: "The Geocities Gallery",
+        url: "https://geocities.restorativland.org",
+        img: "gct",
+        icon: ["various", "photowarning", "nsfw"],
+        keywords: ["art", "fun", "web", "internet", "weird"],
+    },
+    {
+        name: "Wheretaken",
+        url: "https://wheretaken.teuteuf.fr",
+        img: "wtk",
+        icon: ["games"],
+        keywords: ["fun", "game", "photo", "quiz", "countrie"],
+    }
 
 ];
 
