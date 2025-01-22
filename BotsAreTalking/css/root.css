@@ -1,0 +1,115 @@
+:root {
+    --body-bg-color: #000818;
+    --card-bg-color: #171a46;
+    --text-color: #ffffff;
+    --primary-color: #4f58d3;
+    --focus-color: #a90fd8;
+}
+
+* {
+    font-family: "Roboto Mono", monospace;
+    /* font-family: Arial, sans-serif; */
+    font-optical-sizing: auto;
+    font-weight: 500;
+    /* uniq */
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 1px;
+    /**/
+}
+
+body {
+    background-color: var(--body-bg-color);
+    margin: 0 auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 32px 4fr 1fr 1fr 1fr 1fr;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #141b29;
+    width: 80%;
+}
+
+.line {
+    display: contents;
+    /* Maintain grid alignment */
+    border: 1px solid #00ff00;
+    text-align: center;
+    cursor: pointer;
+}
+
+.line:hover {
+    color: #0f0;
+    .category {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.line .cell {
+    border-top: 1px solid #ccc;  /* Bordure légère autour de chaque cellule */
+    flex: 1;  /* Faire en sorte que les cellules occupent tout l'espace disponible */
+    white-space: pre-wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header {
+    font-weight: bold;
+    background-color: #0a253f;
+    padding: 8px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.category {
+    text-align: left;
+    padding-inline: 10px;
+}
+
+.pages-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, auto));
+    background-color: #0a253f;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+}
+
+.pages-bar div {
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+    padding-block: 8px;
+}
+
+.pages-bar div:hover {
+    text-decoration: underline;
+    color: #0f0;
+}
+
+#categories-bar div {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 16px;
+}
