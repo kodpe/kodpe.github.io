@@ -1,0 +1,62 @@
+:root {
+    --body-bg-color: #000818;
+    --text-color: #ffffff;
+    --board-light: rgb(160, 171, 177);
+    --board-dark: rgb(53, 60, 90);
+    --cooldown-color: rgba(32, 177, 63, 0.7);
+    --piece-outline: rgb(221, 199, 0);
+}
+
+.dark-mode {
+  --body-bg-color: #0f0e1a;
+  --text-color: #ffffff;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+canvas {
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+}
+
+input,
+button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#playerRole {
+    width: 200px;
+}
+
+#myPeerId {
+    width: 200px;
+}
+
+#peerId {
+    height: 40px;
+    width: 80px;
+}
+
+#btn {
+    height: 42px;
+    width: 88px;
+}
+
+#hz {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
