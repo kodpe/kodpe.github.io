@@ -1,19 +1,17 @@
 let peer = new Peer(generateShortPeerId());
 let conn;
-let boardSize = 12, cellSize = 50;
+let boardSize = 10, cellSize = 70;
 let pieces = [
     { x: 0, y: 0, cooldown: 0, color: "black", type: "tower" },
     { x: 1, y: 0, cooldown: 0, color: "black", type: "cavalier" },
     { x: 2, y: 0, cooldown: 0, color: "black", type: "fou" },
-    { x: 3, y: 0, cooldown: 0, color: "black", type: "faucon" },
-    { x: 4, y: 0, cooldown: 0, color: "black", type: "elephant" },
-    { x: 5, y: 0, cooldown: 0, color: "black", type: "roi" },
-    { x: 6, y: 0, cooldown: 0, color: "black", type: "reine" },
-    { x: 7, y: 0, cooldown: 0, color: "black", type: "elephant" },
-    { x: 8, y: 0, cooldown: 0, color: "black", type: "faucon" },
-    { x: 9, y: 0, cooldown: 0, color: "black", type: "fou" },
-    { x: 10, y: 0, cooldown: 0, color: "black", type: "cavalier" },
-    { x: 11, y: 0, cooldown: 0, color: "black", type: "tower" },
+    { x: 3, y: 0, cooldown: 0, color: "black", type: "elephant" },
+    { x: 4, y: 0, cooldown: 0, color: "black", type: "roi" },
+    { x: 5, y: 0, cooldown: 0, color: "black", type: "reine" },
+    { x: 6, y: 0, cooldown: 0, color: "black", type: "faucon" },
+    { x: 7, y: 0, cooldown: 0, color: "black", type: "fou" },
+    { x: 8, y: 0, cooldown: 0, color: "black", type: "cavalier" },
+    { x: 9, y: 0, cooldown: 0, color: "black", type: "tower" },
     { x: 0, y: 1, cooldown: 0, color: "black", type: "pion" },
     { x: 1, y: 1, cooldown: 0, color: "black", type: "pion" },
     { x: 2, y: 1, cooldown: 0, color: "black", type: "pion" },
@@ -24,32 +22,26 @@ let pieces = [
     { x: 7, y: 1, cooldown: 0, color: "black", type: "pion" },
     { x: 8, y: 1, cooldown: 0, color: "black", type: "pion" },
     { x: 9, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 10, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 11, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 0, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 1, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 2, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 3, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 4, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 5, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 6, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 7, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 8, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 9, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 10, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 11, y: 10, cooldown: 0, color: "white", type: "pion" },
-    { x: 0, y: 11, cooldown: 0, color: "white", type: "tower" },
-    { x: 1, y: 11, cooldown: 0, color: "white", type: "cavalier" },
-    { x: 2, y: 11, cooldown: 0, color: "white", type: "fou" },
-    { x: 3, y: 11, cooldown: 0, color: "white", type: "faucon" },
-    { x: 4, y: 11, cooldown: 0, color: "white", type: "elephant" },
-    { x: 5, y: 11, cooldown: 0, color: "white", type: "reine" },
-    { x: 6, y: 11, cooldown: 0, color: "white", type: "roi" },
-    { x: 7, y: 11, cooldown: 0, color: "white", type: "elephant" },
-    { x: 8, y: 11, cooldown: 0, color: "white", type: "faucon" },
-    { x: 9, y: 11, cooldown: 0, color: "white", type: "fou" },
-    { x: 10, y: 11, cooldown: 0, color: "white", type: "cavalier" },
-    { x: 11, y: 11, cooldown: 0, color: "white", type: "tower" },
+    { x: 0, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 1, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 2, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 3, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 4, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 5, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 6, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 7, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 8, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 9, y: 8, cooldown: 0, color: "white", type: "pion" },
+    { x: 0, y: 9, cooldown: 0, color: "white", type: "tower" },
+    { x: 1, y: 9, cooldown: 0, color: "white", type: "cavalier" },
+    { x: 2, y: 9, cooldown: 0, color: "white", type: "fou" },
+    { x: 3, y: 9, cooldown: 0, color: "white", type: "faucon" },
+    { x: 4, y: 9, cooldown: 0, color: "white", type: "reine" },
+    { x: 5, y: 9, cooldown: 0, color: "white", type: "roi" },
+    { x: 6, y: 9, cooldown: 0, color: "white", type: "elephant" },
+    { x: 7, y: 9, cooldown: 0, color: "white", type: "fou" },
+    { x: 8, y: 9, cooldown: 0, color: "white", type: "cavalier" },
+    { x: 9, y: 9, cooldown: 0, color: "white", type: "tower" },
 ];
 
 let playerColor = null;
@@ -373,7 +365,8 @@ function preloadImages() {
     pieceTypes.forEach(type => {
         colors.forEach(color => {
             let img = new Image();
-            img.src = `img/${type}-${color[0]}.png`;
+            // img.src = `img/${type}-${color[0]}.png`;
+            img.src = `img/${type}-${color[0]}.svg`;
             img.onload = () => {
                 images[`${color}-${type}`] = img;
             };

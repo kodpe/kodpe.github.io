@@ -1,26 +1,5 @@
 const data = [
     {
-        name: "Miamoalex",
-        url: "https://miamoalex.net/home",
-        img: "mim",
-        icon: ["various"],
-        keywords: ["fun", "game", "art", "web", "food", "internet", "music", "weird"],
-    },
-    {
-        name: "Miamo.fun",
-        url: "https://miamo.fun",
-        img: "mia",
-        icon: ["games"],
-        keywords: ["fun", "game", "web", "food", "internet"],
-    },
-    {
-        name: "Pouler.fr",
-        url: "https://pouler.fr",
-        img: "plr",
-        icon: ["games"],
-        keywords: ["fun", "game", "web", "food", "internet"],
-    },
-    {
         name: "Kung Fu Chess",
         url: "https://www.kfchess.com",
         img: "kfc",
@@ -61,6 +40,27 @@ const data = [
         img: "uqs",
         icon: ["art"],
         keywords: ["art", "unequal", "scenes", "photo"],
+    },
+    {
+        name: "Miamoalex",
+        url: "https://miamoalex.net/home",
+        img: "mim",
+        icon: ["various"],
+        keywords: ["fun", "game", "art", "web", "food", "internet", "music", "weird"],
+    },
+    {
+        name: "Miamo.fun",
+        url: "https://miamo.fun",
+        img: "mia",
+        icon: ["games"],
+        keywords: ["fun", "game", "web", "food", "internet"],
+    },
+    {
+        name: "Pouler.fr",
+        url: "https://pouler.fr",
+        img: "plr",
+        icon: ["games"],
+        keywords: ["fun", "game", "web", "food", "internet"],
     },
     {
         name: "Radar Tutorial",
