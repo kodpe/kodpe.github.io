@@ -1,10 +1,10 @@
 :root {
-    --body-bg-color: #000818;
+    --body-bg-color: #111118;
     --text-color: #ffffff;
-    --board-light: rgb(160, 171, 177);
-    --board-dark: rgb(53, 60, 90);
+    --board-light: rgb(235,236,208);
+    --board-dark: rgb(115,149,82);
     --cooldown-color: rgba(32, 177, 63, 0.7);
-    --piece-outline: rgb(221, 199, 0);
+    --piece-outline: rgb(0, 171, 223);
 }
 
 .dark-mode {
