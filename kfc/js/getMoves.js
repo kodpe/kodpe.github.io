@@ -171,38 +171,24 @@ export function getValidMoves(piece, pieces) {
             break;
 
         case "elephant":
-            // Déplacements diagonaux avant (haut-gauche et haut-droite)
-            let diagonalMoves = [
-                { dx: -1, dy: 1 }, // Avant-gauche
-                { dx: 1, dy: 1 }   // Avant-droite
+            let elephMoves = [
+                { dx: -1, dy: -1 }, // Diagonale haut-gauche
+                { dx: 0, dy: -1 },  // Haut
+                { dx: 1, dy: -1 },  // Diagonale haut-droite
+                { dx: -1, dy: 0 },  // Gauche
+                { dx: 1, dy: 0 },   // Droite
+                { dx: -1, dy: 1 },  // Diagonale bas-gauche
+                { dx: 0, dy: 1 },   // Bas
+                { dx: 1, dy: 1 }    // Diagonale bas-droite
             ];
-            diagonalMoves.forEach(move => {
+
+            elephMoves.forEach(move => {
                 let newX = piece.x + move.dx;
                 let newY = piece.y + move.dy;
-                if (isInBounds(newX, newY)) {
-                    if (!isAlly(newX, newY)) {
-                        moves.push({ x: newX, y: newY }); // Déplacement ou capture
-                    }
+                if (isInBounds(newX, newY) && !isAlly(newX, newY)) {
+                    moves.push({ x: newX, y: newY }); // Déplacement possible ou capture
                 }
             });
-
-            // Déplacement en avant (1 à 3 cases en ligne droite)
-            let forwardPath = [];
-            for (let i = 1; i <= 3; i++) {
-                let newX = piece.x;
-                let newY = piece.y + i;
-
-                if (!isInBounds(newX, newY))
-                    break; // Sort du plateau
-
-                forwardPath.push({ x: newX, y: newY });
-
-                // Capture toutes les pièces (ennemies et alliées)
-                if (isOccupied(newX, newY)) {
-                    continue; // Continue à avancer après avoir pris une pièce
-                }
-            }
-            moves = moves.concat(forwardPath);
             break;
     }
 

@@ -3,7 +3,7 @@
     --text-color: #ffffff;
     --board-light: rgb(235,236,208);
     --board-dark: rgb(115,149,82);
-    --cooldown-color: rgba(32, 177, 63, 0.7);
+    --cooldown-color: rgba(241, 222, 43, 0.7);
     --piece-outline: rgb(0, 171, 223);
     --valid-move-x-color: rgba(224, 67, 67, 0.4);
     --valid-move-c-color: rgba(80, 193, 221, 0.4);

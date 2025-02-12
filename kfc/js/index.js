@@ -382,6 +382,8 @@ function setupGame() {
     let interval = 1000 / fps; // Temps entre chaque frame (en ms)
 
     setInterval(() => {
+        if (gameStarted === false)
+            return;
         updateBoard(); // Met à jour tout le plateau
         checkForWinner();
     }, interval);
@@ -435,7 +437,7 @@ function pieceDeath(targetPiece, x, y) {
     pieces = pieces.filter(p => !(p.x === x && p.y === y));  // Retirer la pièce morte
 }
 
-function checkForWinner(pieces) {
+function checkForWinner() {
     let whiteKingAlive = false;
     let blackKingAlive = false;
 
@@ -450,15 +452,6 @@ function checkForWinner(pieces) {
         }
     });
 
-    if (!whiteKingAlive || !blackKingAlive) {
-        stopGameTimer();
-        gameStarted = false;  // Stopper le jeu
-        // reload page or reset game
-        setTimeout(() => {
-            window.location.reload();  // Recharge la page et recommence le jeu
-        }, 3000);
-    }
-
     // Déterminer le vainqueur si un roi est mort
     if (!whiteKingAlive) {
         let winner = "Noir ⚫";
@@ -468,5 +461,14 @@ function checkForWinner(pieces) {
         let winner = "Blanc ⚪";
         console.log(`Le joueur ${winner} a gagné en tuant le roi noir !`);
         alert(`Le joueur ${winner} a gagné !`);
+    }
+
+    if (!whiteKingAlive || !blackKingAlive) {
+        stopGameTimer();
+        gameStarted = false;  // Stopper le jeu
+        // reload page or reset game
+        setTimeout(() => {
+            window.location.reload();  // Recharge la page et recommence le jeu
+        }, 1000);
     }
 }
