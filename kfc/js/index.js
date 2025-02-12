@@ -378,7 +378,7 @@ function setupGame() {
     drawBoard(); // first draw
     updateCooldowns();
     startGameTimer();
-    let fps = 30; // 30 mises à jour par seconde
+    let fps = 120; // 30 mises à jour par seconde
     let interval = 1000 / fps; // Temps entre chaque frame (en ms)
 
     setInterval(() => {
