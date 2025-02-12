@@ -4,24 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kung-Fu Chess P2P</title>
+    <title>Kung-Fu Chess</title>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h2 align="center">Kung-Fu Chess P2P</h2>
-    <div id="hz">
-        <p id="myPeerId">Votre ID : En attente...</p>
-        <input id="peerId" placeholder="CODE AMI">
-        <button id="btn" onclick="joinGame()">Rejoindre</button>
-        <p id="playerRole">Rôle : En attente...</p>
-    </div>
-    <div id="countdown" style="display: none; font-size: 32px; text-align: center;"></div>
-    <canvas id="chessboard" width="700" height="700"></canvas>
+    <h1 align="center">Kung-Fu Chess</h1>
 
-    <script src="js/getMoves.js"></script>
-    <script src="js/index.js"></script>
+    <div id="host-menu" class="hz">
+        <button class="btn" id="btn-create">Créer une partie</button>
+        <p id="code-pin">9876</p>
+        <button class="btn" id="btn-copycode">Copier le code</button>
+    </div>
+
+    <div id="join-menu" class="hz">
+        <input id="peerId" placeholder="Code PIN du jeu">
+        <button class="btn" id="btn-join">Valider</button>
+    </div>
+    <p id="msg-error">Code PIN inconnu</p>
+    <p id="msg-waiting">En attente d'un adversaire...</p>
+
+    <div id="msg">
+    </div>
+
+    <div id="ingame-bar">
+        <div id="playerRole">Rôle : En attente...</div>
+        <div id="countdown"></div>
+        <div id="game-timer">00:00</div>
+    </div>
+
+    <canvas id="chessboard"></canvas>
+
+    <script type="module" src="js/index.js"></script>
 </body>
 
 </html>

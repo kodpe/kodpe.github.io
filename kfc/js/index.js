@@ -1,74 +1,175 @@
-let peer = new Peer(generateShortPeerId());
-let conn;
-let boardSize = 10, cellSize = 70;
-let pieces = [
-    { x: 0, y: 0, cooldown: 0, color: "black", type: "tower" },
-    { x: 1, y: 0, cooldown: 0, color: "black", type: "cavalier" },
-    { x: 2, y: 0, cooldown: 0, color: "black", type: "fou" },
-    { x: 3, y: 0, cooldown: 0, color: "black", type: "elephant" },
-    { x: 4, y: 0, cooldown: 0, color: "black", type: "roi" },
-    { x: 5, y: 0, cooldown: 0, color: "black", type: "reine" },
-    { x: 6, y: 0, cooldown: 0, color: "black", type: "faucon" },
-    { x: 7, y: 0, cooldown: 0, color: "black", type: "fou" },
-    { x: 8, y: 0, cooldown: 0, color: "black", type: "cavalier" },
-    { x: 9, y: 0, cooldown: 0, color: "black", type: "tower" },
-    { x: 0, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 1, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 2, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 3, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 4, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 5, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 6, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 7, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 8, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 9, y: 1, cooldown: 0, color: "black", type: "pion" },
-    { x: 0, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 1, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 2, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 3, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 4, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 5, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 6, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 7, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 8, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 9, y: 8, cooldown: 0, color: "white", type: "pion" },
-    { x: 0, y: 9, cooldown: 0, color: "white", type: "tower" },
-    { x: 1, y: 9, cooldown: 0, color: "white", type: "cavalier" },
-    { x: 2, y: 9, cooldown: 0, color: "white", type: "fou" },
-    { x: 3, y: 9, cooldown: 0, color: "white", type: "faucon" },
-    { x: 4, y: 9, cooldown: 0, color: "white", type: "reine" },
-    { x: 5, y: 9, cooldown: 0, color: "white", type: "roi" },
-    { x: 6, y: 9, cooldown: 0, color: "white", type: "elephant" },
-    { x: 7, y: 9, cooldown: 0, color: "white", type: "fou" },
-    { x: 8, y: 9, cooldown: 0, color: "white", type: "cavalier" },
-    { x: 9, y: 9, cooldown: 0, color: "white", type: "tower" },
-];
+import { piecesStartPosition, boardSize, cellSize, images, imageScaleFactor, cooldownTime } from './data.js';
+import { getCSSVariable, generateShortPeerId } from './tools.js';
+import { startGameTimer, stopGameTimer } from './gameTimer.js';
+import { getValidMoves, clearMoveIndicators, isOpponent } from './getMoves.js';
 
+let peer;
+let conn;
+let hostid = '';
+// canvas
+let canvas;
+let ctx;
+//
 let playerColor = null;
-let cooldownTime = 8000;
 let selectedPiece = null;
 let gameStarted = false;
+let pieces = piecesStartPosition;
+let boardNeedsUpdate = true;
 
-function generateShortPeerId() {
-    return Math.random().toString(36).substr(2, 1).toUpperCase();
+document.getElementById("code-pin").classList.add("disabled");
+document.getElementById("btn-copycode").classList.add("disabled");
+document.getElementById("ingame-bar").classList.add("disabled");
+document.getElementById("msg-error").classList.add("disabled");
+document.getElementById("msg-waiting").classList.add("disabled");
+
+function copy(texte) {
+    // create tmp
+    var element = document.createElement('textarea');
+    element.value = texte;
+    document.body.appendChild(element);
+    // Sélectionne et copie le texte
+    element.select();
+    document.execCommand('copy');
+    // remove tmp
+    document.body.removeChild(element);
 }
 
-peer.on("open", id => {
-    document.getElementById("myPeerId").innerText = "Votre ID : " + id;
-});
+function copyCodePin() {
+    copy(hostid);
+    let btn = document.getElementById("btn-copycode");
+    if (btn.classList.contains("btn-lock-on")) {
+        document.getElementById("btn-copycode").innerText = "Copier le code";
+        document.getElementById("btn-copycode").classList.remove("btn-lock-on");
+
+    }
+    else {
+        document.getElementById("btn-copycode").innerText = "Code copié";
+        document.getElementById("btn-copycode").classList.add("btn-lock-on");
+    }
+}
 
 
-function startHost() {
+function hostGame() {
+    peer = new Peer(generateShortPeerId());
+    peer.on("open", id => {
+        document.getElementById("code-pin").innerText = id;
+        hostid = id;
+        document.getElementById("code-pin").classList.remove("disabled");
+        document.getElementById("btn-copycode").classList.remove("disabled");
+        document.getElementById("join-menu").classList.add("disabled");
+        document.getElementById("btn-create").classList.add("disabled");
+        document.getElementById("msg-waiting").classList.remove("disabled");
+        console.log("create game id: ", hostid);
+    });
+
     peer.on("connection", connection => {
         if (conn) return;
         conn = connection;
         playerColor = "white";
-        document.getElementById("playerRole").innerText = "Rôle : Blanc ⚪";
+        document.getElementById("playerRole").innerText = "Vous avez les Blancs ⚪";
         conn.on("open", () => {
             conn.send(JSON.stringify({ role: "black", pieces }));
         });
         setupConnection();
     });
+
+}
+
+
+////////////////////////////////////////////////
+// host game button events
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnCreate = document.getElementById('btn-create');
+    btnCreate.addEventListener('click', hostGame);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnCopyCode = document.getElementById('btn-copycode');
+    btnCopyCode.addEventListener('click', copyCodePin);
+});
+
+////////////////////////////////////////////////
+// Input join event
+
+var input = document.getElementById('peerId');
+input.value = '';
+
+input.addEventListener('input', function () {
+    document.getElementById("msg-error").classList.add("disabled");
+    if (input.value.trim() === '') {
+        // empty input
+        input.classList.remove('hugeFont');
+    } else {
+        input.classList.add('hugeFont');
+    }
+});
+
+input.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' && input.value.trim() !== '') {
+        joinGame();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnJoin = document.getElementById('btn-join');
+    btnJoin.addEventListener('click', joinGame);
+});
+
+
+function joinGame() {
+    if (input.value.trim() === '') {
+        return;
+    }
+    console.log("try join game with id :", input.value);
+    let peerId = input.value;
+
+    try {
+        peer = new Peer(generateShortPeerId());
+        peer.on("open", id => {
+            console.log('id', id);
+            conn = peer.connect(peerId);
+            conn.on("data", data => {
+                try {
+                    let msg = JSON.parse(data);
+                    if (msg.role) {
+                        playerColor = msg.role;
+                        pieces = msg.pieces;
+                        document.getElementById("playerRole").innerText = "Vous avez les Noirs ⚫";
+                    } else {
+                        pieces = msg;
+                    }
+                } catch (e) {
+                    console.error("Erreur lors du traitement des données reçues :", e);
+                }
+            });
+
+            conn.on("open", () => {
+                console.log("Connexion établie !");
+                document.getElementById("ingame-bar").classList.remove("disabled");
+                document.getElementById("host-menu").classList.add("disabled");
+                document.getElementById("join-menu").classList.add("disabled");
+                startCountdown();
+            });
+
+            conn.on("error", err => {
+                console.warn("Erreur de connexion :", err);
+                document.getElementById("msg-error").innerText = "Code PIN inconnu";
+                document.getElementById("msg-error").classList.remove("disabled");
+            });
+        });
+
+        peer.on("error", err => {
+            console.warn("Erreur du Peer :", err);
+            document.getElementById("msg-error").innerText = "Code PIN inconnu";
+            document.getElementById("msg-error").classList.remove("disabled");
+        });
+
+    } catch (e) {
+        console.error("Erreur fatale dans joinGame():", e);
+        document.getElementById("msg-error").innerText = "joinGame() Fatal Error";
+        document.getElementById("msg-error").classList.remove("disabled");
+    }
 }
 
 function setupConnection() {
@@ -77,6 +178,10 @@ function setupConnection() {
     });
     conn.on("open", () => {
         console.log("Connexion établie !");
+        document.getElementById("ingame-bar").classList.remove("disabled");
+        document.getElementById("host-menu").classList.add("disabled");
+        document.getElementById("join-menu").classList.add("disabled");
+        document.getElementById("msg-waiting").classList.add("disabled");
         startCountdown();
     });
     conn.on("close", () => console.log("Connexion fermée !"));
@@ -84,8 +189,8 @@ function setupConnection() {
 
 function startCountdown() {
     let countdownElement = document.getElementById("countdown");
-    countdownElement.style.display = "block";
-    let count = 1;
+    countdownElement.innerText = "";
+    let count = 3;
     countdownElement.innerText = count;
     let countdownInterval = setInterval(() => {
         count--;
@@ -95,7 +200,7 @@ function startCountdown() {
             clearInterval(countdownInterval);
             countdownElement.innerText = "GO!";
             setTimeout(() => {
-                countdownElement.style.display = "none";
+                countdownElement.innerHTML = "&nbsp";
                 gameStarted = true;
                 setupGame();
             }, 1000);
@@ -103,21 +208,14 @@ function startCountdown() {
     }, 1000);
 }
 
-function getCSSVariable(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-}
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+/* GAME */
 
-function welcomeDrawBoard() {
-    let canvas = document.getElementById("chessboard");
-    let ctx = canvas.getContext("2d");
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+function DrawBoardCases() {
     let boardLight = getCSSVariable("--board-light");
     let boardDark = getCSSVariable("--board-dark");
-    let cooldownColor = getCSSVariable("--cooldown-color");
-    let pieceOutline = getCSSVariable("--piece-outline");
 
-    // Dessine les cases du plateau avec inversion pour le client
     for (let i = 0; i < boardSize; i++) {
         for (let j = 0; j < boardSize; j++) {
             // Inverser l'affichage des cases pour le client
@@ -127,11 +225,67 @@ function welcomeDrawBoard() {
                 displayX = boardSize - 1 - i;
                 displayY = boardSize - 1 - j;
             }
-
             ctx.fillStyle = (displayX + displayY) % 2 === 0 ? boardLight : boardDark;
             ctx.fillRect(displayX * cellSize, displayY * cellSize, cellSize, cellSize);
         }
     }
+}
+
+function DrawCooldownUpdate(p, x, y) {
+    if (p.cooldown > 0) {
+        ctx.fillStyle = getCSSVariable("--cooldown-color");
+        ctx.fillRect(
+            x * cellSize,
+            y * cellSize + (cellSize * (1 - p.cooldown / cooldownTime)),
+            cellSize,
+            cellSize * (p.cooldown / cooldownTime)
+        );
+    }
+}
+
+function DrawStrokeIfSelected(p, x, y) {
+    if (p === selectedPiece) {
+        ctx.strokeStyle = getCSSVariable("--piece-outline");
+        ctx.lineWidth = 3;
+        ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+    }
+}
+
+function DrawPieceImg(p, x, y) {
+    let pieceKey = `${p.type}-${p.color[0]}`;
+    let pieceImage = images[pieceKey];
+
+    if (pieceImage === null) {
+        console.error(`Image for ${pieceKey} not found!`);
+        return;
+    }
+    // console.log("DrawImages()", pieceKey);
+    // Dessiner l'image de la pièce avec la taille ajustée
+    let imageWidth = cellSize * imageScaleFactor;
+    let imageHeight = cellSize * imageScaleFactor;
+    ctx.drawImage(
+        pieceImage,
+        x * cellSize + (cellSize - imageWidth) / 2,  // Centrer horizontalement
+        y * cellSize + (cellSize - imageHeight) / 2, // Centrer verticalement
+        imageWidth,  // Largeur ajustée de l'image
+        imageHeight   // Hauteur ajustée de l'image
+    );
+}
+
+function sendPosition() {
+    if (conn && conn.open) {
+        conn.send(JSON.stringify(pieces));
+    }
+}
+
+function drawBoard() {
+    if (!boardNeedsUpdate) return;
+
+    // reset ctx canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    DrawBoardCases();
+    showValidMoves(selectedPiece);
 
     // Dessine les pièces
     pieces.forEach((p) => {
@@ -139,40 +293,37 @@ function welcomeDrawBoard() {
             console.error("Missing 'color' or 'type' in piece:", p);
             return;
         }
-
-        let pieceKey = `${p.color}-${p.type}`;
-        let pieceImage = images[pieceKey];
-        let imageScaleFactor = 1;
-
-        // Calculer les coordonnées des pièces en fonction du joueur
-        let pieceX = p.x;
-        let pieceY = p.y;
+        // Calculer les coordonnées des pièces en fonction du côté
+        let px = p.x;
+        let py = p.y;
         if (playerColor === "black") {
-            pieceX = boardSize - 1 - p.x;
-            pieceY = boardSize - 1 - p.y;
+            px = boardSize - 1 - p.x;
+            py = boardSize - 1 - p.y;
         }
-
-        if (pieceImage) {
-            let imageWidth = cellSize * imageScaleFactor;
-            let imageHeight = cellSize * imageScaleFactor;
-            // Dessiner l'image de la pièce avec la taille ajustée
-            ctx.drawImage(
-                pieceImage,
-                pieceX * cellSize + (cellSize - imageWidth) / 2,  // Centrer horizontalement
-                pieceY * cellSize + (cellSize - imageHeight) / 2, // Centrer verticalement
-                imageWidth,  // Largeur ajustée de l'image
-                imageHeight   // Hauteur ajustée de l'image
-            );
-        } else {
-            console.error(`Image for ${pieceKey} not found!`);
-        }
-
+        DrawCooldownUpdate(p, px, py);
+        DrawPieceImg(p, px, py);
+        DrawStrokeIfSelected(p, px, py);
     });
+
+    boardNeedsUpdate = false;
+    requestAnimationFrame(drawBoard);
 }
 
 function setupGame() {
-    let canvas = document.getElementById("chessboard");
-    let ctx = canvas.getContext("2d");
+    canvas = document.getElementById("chessboard");
+    canvas.width = boardSize * cellSize;
+    canvas.height = boardSize * cellSize;
+    ctx = canvas.getContext("2d");
+    DrawBoardCases();
+
+    function updateCooldowns() {
+        pieces.forEach(p => {
+            if (p.cooldown > 0) {
+                p.cooldown -= 50;
+            }
+        });
+        setTimeout(updateCooldowns, 50);
+    }
 
     canvas.addEventListener("click", (event) => {
         if (!gameStarted)
@@ -195,185 +346,127 @@ function setupGame() {
             clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
             showValidMoves(selectedPiece);
         }
-        else if (selectedPiece && selectedPiece.cooldown <= 0)
-        {
+        else if (selectedPiece && selectedPiece.cooldown <= 0) {
+            let moves = showValidMoves(selectedPiece);
+            let positionExists = moves.some(move => move.x === x && move.y === y);
+            if (!positionExists) {
+                selectedPiece = null;
+                return; // mouvement invalid, on quitte l'event de clique sur une case cible
+            }
+
             let targetPiece = pieces.find(p => p.x === x && p.y === y);
 
-            if (targetPiece && targetPiece.color !== selectedPiece.color)
-            {
+            if (targetPiece && targetPiece.color !== selectedPiece.color) {
                 console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
                 pieceDeath(targetPiece, x, y); // piece ennemie
             }
-            else if (targetPiece)
-            {
-                console.log("Mouvement impossible : La case est occupée par une pièce alliée.");
+            else if (targetPiece) {
                 return; // piece allie, pas de mouvement
             }
+            // movement
+            selectedPiece.oldx = selectedPiece.x;
+            selectedPiece.oldy = selectedPiece.y;
             selectedPiece.x = x;
             selectedPiece.y = y;
             selectedPiece.cooldown = cooldownTime;
             selectedPiece = null;
             sendPosition();
         }
+        // updateBoard();
     });
 
-    function pieceDeath(targetPiece, x, y) {
-        console.log(`La pièce ${targetPiece.color} ${targetPiece.type} a été tuée!`);
-        // Vérifier si c'est un roi et déclarer le gagnant
-        if (targetPiece.type === "roi") {
-            let winner = targetPiece.color === "black" ? "Blanc ⚪" : "Noir ⚫";
-            console.log(`Le joueur ${winner} a gagné en tuant le roi !`);
-            gameStarted = false; // Stopper le jeu
-            alert(`Le joueur ${winner} a gagné !`);
-            // reload page or reset game (todo improve)
-            setTimeout(() => {
-                window.location.reload();  // Recharge la page et recommence le jeu
-            }, 1000);
-            // resetGame(); // DEPR
-        }
-        pieces = pieces.filter(p => !(p.x === x && p.y === y));  // Retirer la pièce morte
-    }
-
-    function drawBoard() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let boardLight = getCSSVariable("--board-light");
-        let boardDark = getCSSVariable("--board-dark");
-        let cooldownColor = getCSSVariable("--cooldown-color");
-        let pieceOutline = getCSSVariable("--piece-outline");
-
-        // Dessine les cases du plateau avec inversion pour le client
-        for (let i = 0; i < boardSize; i++) {
-            for (let j = 0; j < boardSize; j++) {
-                // Inverser l'affichage des cases pour le client
-                let displayX = i;
-                let displayY = j;
-                if (playerColor === "black") {
-                    displayX = boardSize - 1 - i;
-                    displayY = boardSize - 1 - j;
-                }
-
-                ctx.fillStyle = (displayX + displayY) % 2 === 0 ? boardLight : boardDark;
-                ctx.fillRect(displayX * cellSize, displayY * cellSize, cellSize, cellSize);
-            }
-        }
-
-        // Dessine les pièces
-        pieces.forEach((p) => {
-            if (p.color === undefined || p.type === undefined) {
-                console.error("Missing 'color' or 'type' in piece:", p);
-                return;
-            }
-
-            let pieceKey = `${p.color}-${p.type}`;
-            let pieceImage = images[pieceKey];
-            let imageScaleFactor = 1;
-
-            // Calculer les coordonnées des pièces en fonction du joueur
-            let pieceX = p.x;
-            let pieceY = p.y;
-            if (playerColor === "black") {
-                pieceX = boardSize - 1 - p.x;
-                pieceY = boardSize - 1 - p.y;
-            }
-
-            if (pieceImage) {
-                let imageWidth = cellSize * imageScaleFactor;
-                let imageHeight = cellSize * imageScaleFactor;
-                // Dessiner l'image de la pièce avec la taille ajustée
-                ctx.drawImage(
-                    pieceImage,
-                    pieceX * cellSize + (cellSize - imageWidth) / 2,  // Centrer horizontalement
-                    pieceY * cellSize + (cellSize - imageHeight) / 2, // Centrer verticalement
-                    imageWidth,  // Largeur ajustée de l'image
-                    imageHeight   // Hauteur ajustée de l'image
-                );
-            } else {
-                console.error(`Image for ${pieceKey} not found!`);
-            }
-
-            if (p.cooldown > 0) {
-                ctx.fillStyle = cooldownColor;
-                ctx.fillRect(
-                    pieceX * cellSize,
-                    pieceY * cellSize + (cellSize * (1 - p.cooldown / cooldownTime)),
-                    cellSize,
-                    cellSize * (p.cooldown / cooldownTime)
-                );
-            }
-
-            if (p === selectedPiece) {
-                ctx.strokeStyle = pieceOutline;
-                ctx.lineWidth = 3;
-                ctx.strokeRect(pieceX * cellSize, pieceY * cellSize, cellSize, cellSize);
-            }
-        });
-
-        requestAnimationFrame(drawBoard);
-    }
-
-    function updateCooldowns() {
-        pieces.forEach(p => {
-            if (p.cooldown > 0) p.cooldown -= 50;
-        });
-        setTimeout(updateCooldowns, 50);
-    }
-
-    drawBoard();
+    drawBoard(); // first draw
     updateCooldowns();
+    startGameTimer();
+    let fps = 30; // 30 mises à jour par seconde
+    let interval = 1000 / fps; // Temps entre chaque frame (en ms)
+
+    setInterval(() => {
+        updateBoard(); // Met à jour tout le plateau
+        checkForWinner();
+    }, interval);
+
 }
 
-function sendPosition() {
-    if (conn && conn.open) {
-        conn.send(JSON.stringify(pieces));
-    }
-}
+function showValidMoves(p) {
+    if (p === null)
+        return null;
+    let valid_x_color = getCSSVariable("--valid-move-x-color");
+    let valid_c_color = getCSSVariable("--valid-move-c-color");
+    let moves = getValidMoves(p, pieces);
 
-function joinGame() {
-    let peerId = document.getElementById("peerId").value;
-    conn = peer.connect(peerId);
-    conn.on("data", data => {
-        let msg = JSON.parse(data);
-        if (msg.role) {
-            playerColor = msg.role;
-            pieces = msg.pieces;
-            document.getElementById("playerRole").innerText = "Rôle : Noir ⚫";
+    // Efface l'overlay avant de dessiner les nouveaux cercles
+    // ctx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+    // DrawBoardCases();
+
+    moves.forEach(move => {
+        let size = cellSize;
+        let x = move.x * cellSize + cellSize / 2;
+        let y = move.y * cellSize + cellSize / 2;
+
+        if (playerColor === "black") {
+            x = (boardSize - 1 - move.x) * cellSize + cellSize / 2;
+            y = (boardSize - 1 - move.y) * cellSize + cellSize / 2;
+        }
+
+        ctx.beginPath();
+        if (isOpponent(move.x, move.y)) {
+            ctx.fillStyle = valid_x_color;
         } else {
-            pieces = msg;
+            ctx.fillStyle = valid_c_color;
+        }
+        // un cercle
+        // ctx.arc(x, y, 10, 0, Math.PI * 2);
+        // ctx.fill();
+        ctx.fillRect(x - size / 2, y - size / 2, size, size);
+        ctx.closePath();
+    });
+
+    return moves;
+}
+
+function updateBoard() {
+    boardNeedsUpdate = true;
+    requestAnimationFrame(drawBoard);
+}
+
+function pieceDeath(targetPiece, x, y) {
+    console.log(`La pièce ${targetPiece.color} ${targetPiece.type} a été tuée!`);
+    pieces = pieces.filter(p => !(p.x === x && p.y === y));  // Retirer la pièce morte
+}
+
+function checkForWinner(pieces) {
+    let whiteKingAlive = false;
+    let blackKingAlive = false;
+
+    // Parcours de toutes les pièces pour vérifier la présence des rois
+    pieces.forEach(piece => {
+        if (piece.type === "roi") {
+            if (piece.color === "white") {
+                whiteKingAlive = true;
+            } else if (piece.color === "black") {
+                blackKingAlive = true;
+            }
         }
     });
-    conn.on("open", () => {
-        console.log("Connexion établie !");
-        startCountdown();
-    });
-}
 
-window.onload = function () {
-    let urlParams = new URLSearchParams(window.location.search);
-    let peerId = urlParams.get("peerId");
-    if (peerId) {
-        joinGame(peerId);
+    if (!whiteKingAlive || !blackKingAlive) {
+        stopGameTimer();
+        gameStarted = false;  // Stopper le jeu
+        // reload page or reset game
+        setTimeout(() => {
+            window.location.reload();  // Recharge la page et recommence le jeu
+        }, 3000);
     }
-};
 
-// Précharger les images des pièces
-let images = {};
-
-function preloadImages() {
-    const pieceTypes = ["pion", "cavalier", "fou", "faucon", "elephant", "tower", "reine", "roi"];
-    const colors = ["white", "black"];
-
-    pieceTypes.forEach(type => {
-        colors.forEach(color => {
-            let img = new Image();
-            // img.src = `img/${type}-${color[0]}.png`;
-            img.src = `img/${type}-${color[0]}.svg`;
-            img.onload = () => {
-                images[`${color}-${type}`] = img;
-            };
-        });
-    });
+    // Déterminer le vainqueur si un roi est mort
+    if (!whiteKingAlive) {
+        let winner = "Noir ⚫";
+        console.log(`Le joueur ${winner} a gagné en tuant le roi blanc !`);
+        alert(`Le joueur ${winner} a gagné !`);
+    } else if (!blackKingAlive) {
+        let winner = "Blanc ⚪";
+        console.log(`Le joueur ${winner} a gagné en tuant le roi noir !`);
+        alert(`Le joueur ${winner} a gagné !`);
+    }
 }
-
-preloadImages();
-startHost();
-welcomeDrawBoard();

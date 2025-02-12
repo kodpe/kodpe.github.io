@@ -1,10 +1,12 @@
 :root {
-    --body-bg-color: #111118;
+    --body-bg-color: #121218;
     --text-color: #ffffff;
     --board-light: rgb(235,236,208);
     --board-dark: rgb(115,149,82);
     --cooldown-color: rgba(32, 177, 63, 0.7);
     --piece-outline: rgb(0, 171, 223);
+    --valid-move-x-color: rgba(224, 67, 67, 0.4);
+    --valid-move-c-color: rgba(80, 193, 221, 0.4);
 }
 
 .dark-mode {
@@ -12,51 +14,142 @@
   --text-color: #ffffff;
 }
 
+.disabled {
+    display: none !important;
+}
+
 body {
-    font-family: "Roboto Mono", monospace;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
     background: var(--body-bg-color);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    gap: 16px;
 }
 
 canvas {
-    border: 2px solid black;
     display: block;
-    margin: auto;
+    margin: 0px auto;
 }
 
-input,
-button {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
+.hugeFont {
+    font-size: 2rem !important;
 }
 
-#playerRole {
-    width: 200px;
+.btn {
+    height: 48px;
+    width: 144px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px, rgba(0, 0, 0, 0.25) 0px -4px inset;
+    background: rgb(51, 51, 51);
+    color: #ffffff;
+    border-radius: 4px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0px 16px 4px;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }
 
-#myPeerId {
-    width: 200px;
+.btn:hover {
+    background: rgb(40, 107, 55);
+}
+
+.btn-lock-on {
+    background: rgb(40, 107, 55);
+}
+
+.hz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 16px;
+}
+
+#code-pin {
+    margin: 0px;
+    color: #282828;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }
 
 #peerId {
-    height: 40px;
-    width: 80px;
+    height: 48px;
+    width: 136px;
+    border-radius: 4px;
+    border: 0.125rem solid rgb(204, 204, 204);
+    margin: 0px;
+    color: #282828;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }
 
-#btn {
-    height: 42px;
-    width: 88px;
+#msg-error {
+    color: #cc3c32;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }
 
-#hz {
+#msg-waiting {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+
+
+#ingame-bar {
+    padding: 8px 8px;
+    width: 684px;
+    height: 24px;
+    color: #ffffff;
+    border-radius: 4px;
+    background-color: #222222;
     display: flex;
-    justify-content: center;
-    width: 600px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+#playerRole {
+    width: 300px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+#countdown {
+    width: 80px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#game-timer {
+    width: 300px;
+    text-align: right;
+    font-size: 2rem;
 }
