@@ -1,10 +1,10 @@
 const data = [
     {
-        name: "Kung Fu Chess",
-        url: "https://www.kfchess.com",
-        img: "kfc",
+        name: "Ultimate Kung Fu Chess",
+        url: "https://nemosites.com/kfc/",
+        img: "ukc",
         icon: ["games"],
-        keywords: ["fun", "game", "chess"],
+        keywords: ["fun", "game", "chess", "kodp"],
     },
     {
         name: "The True Size",
@@ -229,6 +229,13 @@ const data = [
         img: "tdm",
         icon: ["travel"],
         keywords: ["fun", "tour", "world", "monde", "travel", "voyage"],
+    },
+    {
+        name: "Kung Fu Chess",
+        url: "https://www.kfchess.com",
+        img: "kfc",
+        icon: ["games"],
+        keywords: ["fun", "game", "chess"],
     },
     {
         name: "NaNoWriMo",

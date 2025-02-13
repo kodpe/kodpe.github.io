@@ -1,6 +1,8 @@
 :root {
     --body-bg-color: #121218;
+    --footer-bg-color: #121218;
     --text-color: #ffffff;
+    --text-footer-color: #dddddd;
     --board-light: rgb(235,236,208);
     --board-dark: rgb(115,149,82);
     --cooldown-color: rgba(241, 222, 43, 0.7);
@@ -267,6 +269,36 @@ canvas {
     /**/
     color: #8da363;
     font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+#site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--footer-bg-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+    
+#site-footer a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--text-footer-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+#site-footer a:hover {
+    text-decoration: underline;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-size: 0.7rem;
     font-weight: bold;
     text-align: center;
     font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;

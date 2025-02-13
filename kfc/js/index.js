@@ -185,12 +185,7 @@ function joinGame() {
 
             conn.on("open", () => {
                 console.log("Connexion établie !");
-                document.getElementById("ingame-bar").classList.remove("disabled");
-                document.getElementById("host-menu").classList.add("disabled");
-                document.getElementById("join-menu").classList.add("disabled");
-                document.getElementById("url-menu").classList.add("disabled");
-                document.getElementById("btn-title").disabled = true;
-                startCountdown();
+                preSetupGame();
             });
 
             conn.on("error", err => {
@@ -219,19 +214,12 @@ function setupConnection() {
     });
     conn.on("open", () => {
         console.log("Connexion établie !");
-        document.getElementById("ingame-bar").classList.remove("disabled");
-        document.getElementById("host-menu").classList.add("disabled");
-        document.getElementById("join-menu").classList.add("disabled");
-        document.getElementById("url-menu").classList.add("disabled");
-        document.getElementById("msg-waiting").classList.add("disabled");
-        document.getElementById("btn-title").disabled = true;
-        startCountdown();
+        preSetupGame();
     });
     conn.on("close", () => console.log("Connexion fermée !"));
 }
 
 function startCountdown() {
-    preSetupGame();
     let countdownElement = document.getElementById("countdown");
     countdownElement.innerText = "";
     let count = 4;
@@ -360,14 +348,26 @@ function drawBoard() {
 }
 
 function preSetupGame() {
+    document.getElementById("host-menu").classList.add("disabled");
+    document.getElementById("join-menu").classList.add("disabled");
+    document.getElementById("url-menu").classList.add("disabled");
+    document.getElementById("msg-waiting").classList.add("disabled");
+    document.getElementById("title").classList.add("disabled");
+    document.getElementById("site-footer").classList.add("disabled");
+    //
+    document.getElementById("ingame-bar").classList.remove("disabled");
+    document.getElementById("grid-vt-nb").classList.remove("disabled");
+    document.getElementById("grid-hz-lt").classList.remove("disabled");
+    //
     canvas = document.getElementById("chessboard");
     canvas.width = boardSize * cellSize;
     canvas.height = boardSize * cellSize;
     ctx = canvas.getContext("2d");
     boardNeedsUpdate = true;
     drawBoard();
-    document.getElementById("grid-vt-nb").classList.remove("disabled");
-    document.getElementById("grid-hz-lt").classList.remove("disabled");
+    //
+    addAnimationProperties();
+    startCountdown();
 }
 
 function canvasEventMouseMove() {
@@ -419,7 +419,8 @@ function canvasEventClick() {
         }
         let clickedPiece = pieces.find(p => p.x === x && p.y === y && p.color === playerColor);
 
-        if (clickedPiece && clickedPiece.cooldown <= 0) {
+        // if (clickedPiece && clickedPiece.cooldown <= 0 && clickedPiece.isMoving === false) {
+        if (clickedPiece && clickedPiece.isMoving === false) {
                 selectedPiece = clickedPiece;
                 clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
                 showValidMoves(selectedPiece);
@@ -453,9 +454,11 @@ function canvasEventClick() {
             }
             pieces[pieceIndex].oldx = pieces[pieceIndex].x;
             pieces[pieceIndex].oldy = pieces[pieceIndex].y;
-            pieces[pieceIndex].x = x;
-            pieces[pieceIndex].y = y;
-            pieces[pieceIndex].cooldown = cooldownTime;
+            pieces[pieceIndex].moveTo = { x: x, y: y }; // definir la destination
+            pieces[pieceIndex].isMoving = true;
+            // pieces[pieceIndex].x = x;
+            // pieces[pieceIndex].y = y;
+            // pieces[pieceIndex].cooldown = cooldownTime; // pas de cooldown pendant le movement
             // si un pion arrive sur derniere ligne alors on le change en dame
             if (pieces[pieceIndex].type === "pion") {
                 if (playerColor === "white" && y === 0) {
@@ -489,6 +492,7 @@ function setupGame() {
 
 function updateBoard() {
     boardNeedsUpdate = true;
+    updateAllMovingAnimations();
     requestAnimationFrame(drawBoard);
 }
 
@@ -568,4 +572,41 @@ function checkForWinner() {
             window.location.reload();  // Recharge la page et recommence le jeu
         }, 1000);
     }
+}
+
+
+function addAnimationProperties() {
+    pieces.forEach(piece => {
+        piece.isMoving = false;                 // Si la pièce est en déplacement ou pas
+        piece.moveTo = { x: null, y: null };    // Destination du mouvement
+    });
+}
+
+function updateAllMovingAnimations() {
+    pieces.forEach(piece => {
+        if (piece.isMoving) {
+            console.warn("isMoving:", piece);
+            
+            const speed = 0.05; // Vitesse constante par frame (ajuste cette valeur pour la vitesse globale)
+            const dx = piece.moveTo.x - piece.x;
+            const dy = piece.moveTo.y - piece.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < speed) {
+                // Si la pièce est très proche de sa destination, on la place directement
+                piece.x = piece.moveTo.x;
+                piece.y = piece.moveTo.y;
+                piece.isMoving = false; // Fin du mouvement
+                piece.cooldown = cooldownTime;
+            } else {
+                // Calculer la direction normalisée
+                const dirX = dx / distance;
+                const dirY = dy / distance;
+                
+                // Déplacer la pièce à vitesse constante
+                piece.x += dirX * speed;
+                piece.y += dirY * speed;
+            }
+        }
+    });
 }

@@ -1,0 +1,91 @@
+:root {
+    --body-bg-color: #121218;
+    --footer-bg-color: #121218;
+    --text-color: #ffffff;
+    --text-footer-color: #dddddd;
+}
+
+.dark-mode {
+  --body-bg-color: #0f0e1a;
+  --text-color: #ffffff;
+}
+
+.disabled {
+    display: none !important;
+}
+
+body {
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    /* width: 800px; */
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#title {
+    display: flex;
+}
+
+#icon {
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    background-color: #dddddd;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 24px;
+}
+
+.text {
+    width: 70%;
+    white-space: pre-wrap;
+    margin: auto;
+    margin-top: 0;
+    font-size: 0.8rem;
+}
+
+.text a {
+    display: block;
+    color: #ffffff;
+}
+
+#bar {
+    text-align: center;
+    color: var(--text-footer-color);
+}
+
+#site-footer {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    /* background: var(--footer-bg-color); */
+    background: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+    
+#site-footer a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--text-footer-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+#site-footer a:hover {
+    text-decoration: underline;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
