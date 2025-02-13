@@ -11,7 +11,8 @@ let canvas;
 let ctx;
 //
 let playerColor = null;
-let selectedPiece = null;
+let selectedPiece_white = null;
+let selectedPiece_black = null;
 let gameStarted = false;
 let pieces = piecesStartPosition;
 let boardNeedsUpdate = true;
@@ -243,11 +244,26 @@ function DrawCooldownUpdate(p, x, y) {
     }
 }
 
+function samePos(p1, p2) {
+    if (p1.x === p2.x && p1.y === p2.y)
+        return true;
+    return false;
+}
+
 function DrawStrokeIfSelected(p, x, y) {
-    if (p === selectedPiece) {
+    // console.log(p);
+    // console.log(selectedPiece_white);
+    if (playerColor === "white" && selectedPiece_white && samePos(p, selectedPiece_white)) {
         ctx.strokeStyle = getCSSVariable("--piece-outline");
         ctx.lineWidth = 3;
         ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        console.warn("OUIUOIUOIU WHITE");
+    }
+    if (playerColor === "black" && selectedPiece_black && samePos(p, selectedPiece_black)) {
+        ctx.strokeStyle = getCSSVariable("--piece-outline");
+        ctx.lineWidth = 3;
+        ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        console.warn("OUIUOIUOIU BLACK");
     }
 }
 
@@ -285,7 +301,12 @@ function drawBoard() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     DrawBoardCases();
-    showValidMoves(selectedPiece);
+    if (playerColor === "white") {
+        showValidMoves(selectedPiece_white);
+    }
+    if (playerColor === "black") {
+        showValidMoves(selectedPiece_black);
+    }
 
     // Dessine les pièces
     pieces.forEach((p) => {
@@ -305,6 +326,8 @@ function drawBoard() {
         DrawStrokeIfSelected(p, px, py);
     });
 
+    // console.log("white dr:", selectedPiece_white);
+    // console.log("black dr:", selectedPiece_black);
     boardNeedsUpdate = false;
     requestAnimationFrame(drawBoard);
 }
@@ -326,51 +349,103 @@ function setupGame() {
     }
 
     canvas.addEventListener("click", (event) => {
+        console.log("white select:", selectedPiece_white);
+        console.log("black select:", selectedPiece_black);
         if (!gameStarted)
             return;
-
         let rect = canvas.getBoundingClientRect();
         let x = Math.floor((event.clientX - rect.left) / cellSize);
         let y = Math.floor((event.clientY - rect.top) / cellSize);
-
         // Inverser la position pour le client (=/= host)
         if (playerColor === "black") {
             x = boardSize - 1 - x;
             y = boardSize - 1 - y;
         }
-
         let clickedPiece = pieces.find(p => p.x === x && p.y === y && p.color === playerColor);
 
         if (clickedPiece && clickedPiece.cooldown <= 0) {
-            selectedPiece = clickedPiece;
-            clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
-            showValidMoves(selectedPiece);
+            if (playerColor === "white") {
+                selectedPiece_white = clickedPiece;
+                clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
+                showValidMoves(selectedPiece_white);
+                console.log("player white select:", selectedPiece_white);
+            }
+            if (playerColor === "black") {
+                selectedPiece_black = clickedPiece;
+                clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
+                showValidMoves(selectedPiece_black);
+                console.log("player black select:", selectedPiece_black);
+            }
         }
-        else if (selectedPiece && selectedPiece.cooldown <= 0) {
-            let moves = showValidMoves(selectedPiece);
-            let positionExists = moves.some(move => move.x === x && move.y === y);
-            if (!positionExists) {
-                selectedPiece = null;
-                return; // mouvement invalid, on quitte l'event de clique sur une case cible
-            }
+        else {
+            if (playerColor === "white" && selectedPiece_white && selectedPiece_white.cooldown <= 0) {
+                let moves = showValidMoves(selectedPiece_white);
+                let positionExists = moves.some(move => move.x === x && move.y === y);
+                if (!positionExists) {
+                    selectedPiece_white = null;
+                    console.log("mouvement invalid, on quitte l'event de clique sur une case cible");
+                    return; // mouvement invalid, on quitte l'event de clique sur une case cible
+                }
 
-            let targetPiece = pieces.find(p => p.x === x && p.y === y);
+                let targetPiece = pieces.find(p => p.x === x && p.y === y);
+                if (targetPiece && targetPiece.color !== selectedPiece_white.color) {
+                    console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
+                    pieceDeath(targetPiece, x, y); // piece ennemie
+                }
+                else if (targetPiece) {
+                    console.log("piece allie, pas de mouvement");
+                    return; // piece allie, pas de mouvement
+                }
+                console.warn("MOVE WHITE");
+                // movement
+                // Trouver l'index de la pièce déplacée dans pieces
+                let pieceIndex = pieces.findIndex(p => p.x === selectedPiece_white.x && p.y === selectedPiece_white.y);
+                if (pieceIndex === -1) {
+                    console.warn("ERROR find -1");
+                    return;
+                }
+                pieces[pieceIndex].oldx = pieces[pieceIndex].x;
+                pieces[pieceIndex].oldy = pieces[pieceIndex].y;
+                pieces[pieceIndex].x = x;
+                pieces[pieceIndex].y = y;
+                pieces[pieceIndex].cooldown = cooldownTime;
+                selectedPiece_white = null;
+                sendPosition();
+            }
+            if (playerColor === "black" && selectedPiece_black && selectedPiece_black.cooldown <= 0) {
+                let moves = showValidMoves(selectedPiece_black);
+                let positionExists = moves.some(move => move.x === x && move.y === y);
+                if (!positionExists) {
+                    selectedPiece_black = null;
+                    return; // mouvement invalid, on quitte l'event de clique sur une case cible
+                }
 
-            if (targetPiece && targetPiece.color !== selectedPiece.color) {
-                console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
-                pieceDeath(targetPiece, x, y); // piece ennemie
+                let targetPiece = pieces.find(p => p.x === x && p.y === y);
+                if (targetPiece && targetPiece.color !== selectedPiece_black.color) {
+                    console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
+                    pieceDeath(targetPiece, x, y); // piece ennemie
+                }
+                else if (targetPiece) {
+                    return; // piece allie, pas de mouvement
+                }
+                console.warn("MOVE BLACK");
+                // movement
+                // Trouver l'index de la pièce déplacée dans pieces
+                let pieceIndex = pieces.findIndex(p => p.x === selectedPiece_black.x && p.y === selectedPiece_black.y);
+                if (pieceIndex === -1) {
+                    console.warn("ERROR find -1");
+                    return;
+                }
+                pieces[pieceIndex].oldx = pieces[pieceIndex].x;
+                pieces[pieceIndex].oldy = pieces[pieceIndex].y;
+                pieces[pieceIndex].x = x;
+                pieces[pieceIndex].y = y;
+                pieces[pieceIndex].cooldown = cooldownTime;
+                selectedPiece_black = null;
+                sendPosition();
             }
-            else if (targetPiece) {
-                return; // piece allie, pas de mouvement
-            }
-            // movement
-            selectedPiece.oldx = selectedPiece.x;
-            selectedPiece.oldy = selectedPiece.y;
-            selectedPiece.x = x;
-            selectedPiece.y = y;
-            selectedPiece.cooldown = cooldownTime;
-            selectedPiece = null;
-            sendPosition();
+            // sendPosition();
+
         }
         // updateBoard();
     });
@@ -378,7 +453,7 @@ function setupGame() {
     drawBoard(); // first draw
     updateCooldowns();
     startGameTimer();
-    let fps = 120; // 30 mises à jour par seconde
+    let fps = 60; // 30 mises à jour par seconde
     let interval = 1000 / fps; // Temps entre chaque frame (en ms)
 
     setInterval(() => {
@@ -387,7 +462,11 @@ function setupGame() {
         updateBoard(); // Met à jour tout le plateau
         checkForWinner();
     }, interval);
+}
 
+function updateBoard() {
+    boardNeedsUpdate = true;
+    requestAnimationFrame(drawBoard);
 }
 
 function showValidMoves(p) {
@@ -425,11 +504,6 @@ function showValidMoves(p) {
     });
 
     return moves;
-}
-
-function updateBoard() {
-    boardNeedsUpdate = true;
-    requestAnimationFrame(drawBoard);
 }
 
 function pieceDeath(targetPiece, x, y) {
