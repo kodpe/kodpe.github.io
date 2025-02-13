@@ -156,8 +156,14 @@ export function getValidMoves(piece, pieces) {
 
         case "faucon":
             directions = [
-                { dx: 2, dy: 0 }, { dx: -2, dy: 0 }, { dx: 0, dy: 2 }, { dx: 0, dy: -2 }, // Lignes et colonnes
-                { dx: 2, dy: 2 }, { dx: 2, dy: -2 }, { dx: -2, dy: 2 }, { dx: -2, dy: -2 } // Diagonales
+                { dx: 2, dy: 1 }, { dx: 2, dy: -1 },
+                { dx: -2, dy: 1 }, { dx: -2, dy: -1 },
+                { dx: 1, dy: 2 }, { dx: 1, dy: -2 },
+                { dx: -1, dy: 2 }, { dx: -1, dy: -2 },
+                { dx: 2, dy: 0 }, { dx: -2, dy: 0 },
+                { dx: 0, dy: 2 }, { dx: 0, dy: -2 },
+                { dx: 2, dy: 2 }, { dx: 2, dy: -2 },
+                { dx: -2, dy: 2 }, { dx: -2, dy: -2 }
             ];
             directions.forEach(dir => {
                 let newX = piece.x + dir.dx;

@@ -129,6 +129,7 @@ canvas {
     transition: transform 0.5s ease;
 }
 
+
 #url-menu {
     height: 100px;
 }
@@ -204,7 +205,7 @@ canvas {
 }
 
 #playerRole {
-    width: 280px;
+    width: 240px;
     text-align: left;
     font-size: 1.2rem;
 }
@@ -215,8 +216,22 @@ canvas {
     font-size: 1.2rem;
 }
 
+#img-color {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+}
+
+#img-chrono {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+}
+
 #game-timer {
-    width: 280px;
+    width: 240px;
     text-align: right;
     font-size: 2rem;
 }

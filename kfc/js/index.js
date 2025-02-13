@@ -296,8 +296,8 @@ function samePos(p1, p2) {
 function DrawStrokeIfSelected(p, x, y) {
     if (selectedPiece && samePos(p, selectedPiece)) {
         ctx.strokeStyle = getCSSVariable("--piece-outline");
-        ctx.lineWidth = 3;
-        ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        ctx.lineWidth = 4;
+        ctx.strokeRect(x * cellSize + 2, y * cellSize + 2, cellSize - ctx.lineWidth, cellSize - ctx.lineWidth);
     }
 }
 
