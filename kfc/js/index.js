@@ -367,7 +367,13 @@ function preSetupGame() {
     drawBoard();
     //
     addAnimationProperties();
-    startCountdown();
+    let countdownElement = document.getElementById("countdown");
+    countdownElement.innerText = "";
+    //
+    pieces = piecesStartPosition;
+    gameStarted = true;
+    sendPosition();
+    setupGame();
 }
 
 function canvasEventMouseMove() {
@@ -438,9 +444,9 @@ function canvasEventClick() {
             let targetPiece = pieces.find(p => p.x === x && p.y === y);
             if (targetPiece && targetPiece.color !== selectedPiece.color) {
                 console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
-                pieceDeath(targetPiece, x, y); // piece ennemie
+                // pieceDeath(targetPiece, x, y); // piece ennemie
             }
-            else if (targetPiece) {
+            if (targetPiece && targetPiece.color === selectedPiece.color) {
                 console.log("piece allie, pas de mouvement");
                 return; // piece allie, pas de mouvement
             }
@@ -535,7 +541,8 @@ function showValidMoves(p) {
 
 function pieceDeath(targetPiece, x, y) {
     console.log(`La pièce ${targetPiece.color} ${targetPiece.type} a été tuée!`);
-    pieces = pieces.filter(p => !(p.x === x && p.y === y));  // Retirer la pièce morte
+    pieces = pieces.filter(p => !(p.x === x && p.y === y && playerColor !== p.color));  // Retirer la pièce morte
+    sendPosition();
 }
 
 function checkForWinner() {
@@ -569,8 +576,12 @@ function checkForWinner() {
         gameStarted = false;  // Stopper le jeu
         // reload page or reset game
         setTimeout(() => {
-            window.location.reload();  // Recharge la page et recommence le jeu
-        }, 1000);
+            pieces = piecesStartPosition;
+            gameStarted = true;
+            sendPosition();
+            startGameTimer();
+            // window.location.reload();  // Recharge la page et recommence le jeu
+        }, 2000);
     }
 }
 
@@ -593,6 +604,11 @@ function updateAllMovingAnimations() {
             const distance = Math.sqrt(dx * dx + dy * dy);
             
             if (distance < speed) {
+                // attack test on last case
+                let targetPiece = pieces.find(p => p.x === piece.moveTo.x && p.y === piece.moveTo.y);
+                if (targetPiece && targetPiece.color !== piece.color) {
+                    pieceDeath(targetPiece, piece.moveTo.x, piece.moveTo.y); // piece ennemie
+                }
                 // Si la pièce est très proche de sa destination, on la place directement
                 piece.x = piece.moveTo.x;
                 piece.y = piece.moveTo.y;
@@ -606,6 +622,18 @@ function updateAllMovingAnimations() {
                 // Déplacer la pièce à vitesse constante
                 piece.x += dirX * speed;
                 piece.y += dirY * speed;
+
+                if (piece.type !== 'cavalier' && piece.type !== 'faucon') {
+                    // Test d'attaque sur la case la plus proche
+                    let currentX = Math.round(piece.x);
+                    let currentY = Math.round(piece.y);
+                    console.log("test attack case:", {currentX, currentY});
+                    let targetPiece = pieces.find(p => p.x === currentX && p.y === currentY);
+                    if (targetPiece && targetPiece.color !== piece.color) {
+                        pieceDeath(targetPiece, currentX, currentY); // Pièce ennemie
+                    }
+
+                }
             }
         }
     });
