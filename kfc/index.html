@@ -4,29 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kung-Fu Castle Chess is funny chess game variante with special lands case and new pieces like hawks and elephants" />
+    <meta name="keywords" content="chess, kung-fu, castle, funny, game, variante, hawk, elephant, land">
+    <meta name="author" content="Kodp">
+    <title>.nemosites</title>
     <title>Kung-Fu Chess</title>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1 align="center">Kung-Fu Chess</h1>
+    <div id="title">
+        <button id="btn-title">
+            <img id="img-title-1" src="./img/cheval.png" alt="cheval">
+            <h1 align="center">Kung-Fu Castle Chess</h1>
+            <img id="img-title-2" src="./img/epee.png" alt="épées">
+        </button>
+    </div>
 
     <div id="host-menu" class="hz">
-        <button class="btn" id="btn-create">Créer une partie</button>
+        <button class="btn" id="btn-create">Créer une partie
+            <img id="img-create-game" src="./img/couronne.png" alt="couronne">
+        </button>
         <p id="code-pin">9876</p>
         <button class="btn" id="btn-copycode">Copier le code</button>
     </div>
+    <div id="url-menu" class="hz">
+        <p id="game-url">https://nemosites.com/kfc/?game=1234</p>
+        <button class="btn" id="btn-copylink">Copier le lien</button>
+    </div>
 
     <div id="join-menu" class="hz">
-        <input id="peerId" placeholder="Code PIN du jeu">
-        <button class="btn" id="btn-join">Valider</button>
+        <input id="peerId" placeholder="code partie">
+        <button class="btn" id="btn-join">Rejoindre
+            <img id="img-join-game" src="./img/pion.png" alt="pion">
+        </button>
     </div>
     <p id="msg-error">Code PIN inconnu</p>
     <p id="msg-waiting">En attente d'un adversaire...</p>
 
-    <div id="msg">
-    </div>
+    <div id="msg"></div>
 
     <div id="ingame-bar">
         <div id="playerRole">Rôle : En attente...</div>
@@ -34,8 +51,35 @@
         <div id="game-timer">00:00</div>
     </div>
 
-    <canvas id="chessboard"></canvas>
+    <div id="game-map">
+        <canvas id="chessboard"></canvas>
+        <div id="grid-vt-nb">
+            <div class="cell">10</div>
+            <div class="cell">9</div>
+            <div class="cell">8</div>
+            <div class="cell">7</div>
+            <div class="cell">6</div>
+            <div class="cell">5</div>
+            <div class="cell">4</div>
+            <div class="cell">3</div>
+            <div class="cell">2</div>
+            <div class="cell">1</div>
+        </div>
+        <div id="grid-hz-lt">
+            <div class="cell">a</div>
+            <div class="cell">b</div>
+            <div class="cell">c</div>
+            <div class="cell">d</div>
+            <div class="cell">e</div>
+            <div class="cell">f</div>
+            <div class="cell">g</div>
+            <div class="cell">h</div>
+            <div class="cell">i</div>
+            <div class="cell">j</div>
+        </div>
+    </div>
 
+    <script type="module" src="js/home.js"></script>
     <script type="module" src="js/index.js"></script>
 </body>
 

@@ -4,7 +4,7 @@
     --board-light: rgb(235,236,208);
     --board-dark: rgb(115,149,82);
     --cooldown-color: rgba(241, 222, 43, 0.7);
-    --piece-outline: rgb(0, 171, 223);
+    --piece-outline: rgb(0, 115, 223);
     --valid-move-x-color: rgba(224, 67, 67, 0.4);
     --valid-move-c-color: rgba(80, 193, 221, 0.4);
 }
@@ -41,7 +41,7 @@ canvas {
 
 .btn {
     height: 48px;
-    width: 144px;
+    width: 160px;
     margin: 0px;
     border: 0px;
     cursor: pointer;
@@ -55,31 +55,98 @@ canvas {
     min-height: 48px;
     padding: 0px 16px 4px;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }
 
 .btn:hover {
-    background: rgb(40, 107, 55);
+    background: rgb(60, 104, 47);
 }
 
 .btn-lock-on {
-    background: rgb(40, 107, 55);
+    background: rgb(60, 104, 47);
 }
 
 .hz {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #eeeeee;
     border-radius: 4px;
     padding: 16px;
     gap: 16px;
 }
 
+#title {
+    display: flex;
+    padding-top: 16px;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#btn-title {
+    display: flex;
+    background-color: #00000000;
+    color: #ffffff;
+    border: 0px;
+    cursor: pointer;
+}
+
+#img-title-1 {
+    padding: 16px;
+    width: 48px;
+    height: 48px;
+    transform: rotate(-20deg);
+    transition: transform 0.5s ease;
+}
+
+#img-title-2 {
+    padding: 16px;
+    width: 48px;
+    height: 48px;
+    transform: rotate(20deg);
+    transition: transform 0.5s ease;
+}
+
+#img-create-game {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transform: rotate(20deg);
+    transition: transform 0.5s ease;
+}
+
+#img-join-game {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    transform: rotate(20deg);
+    transition: transform 0.5s ease;
+}
+
+#url-menu {
+    height: 100px;
+}
+
+#game-url {
+    width: 310px;
+    margin: 0px;
+    color: #282828;
+    border-radius: 4px;
+    border: 0.125rem solid rgb(204, 204, 204);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
 #code-pin {
+    width: 310px;
     margin: 0px;
     color: #282828;
     font-size: 2rem;
@@ -95,7 +162,7 @@ canvas {
     border: 0.125rem solid rgb(204, 204, 204);
     margin: 0px;
     color: #282828;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
@@ -103,7 +170,7 @@ canvas {
 
 #msg-error {
     color: #cc3c32;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
@@ -111,7 +178,7 @@ canvas {
 
 #msg-waiting {
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
@@ -137,19 +204,55 @@ canvas {
 }
 
 #playerRole {
-    width: 300px;
+    width: 280px;
     text-align: left;
     font-size: 1.2rem;
 }
 
 #countdown {
-    width: 80px;
+    width: 100px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 #game-timer {
-    width: 300px;
+    width: 280px;
     text-align: right;
     font-size: 2rem;
+}
+
+#game-map {
+    height: 0px;
+}
+
+#grid-vt-nb {
+    display: grid;
+    grid-template-rows: repeat(10, 70px);
+    gap: 0px;
+    width: 10px;
+    position: relative;
+    top: -700px;
+    left: -35px;
+}
+
+#grid-hz-lt {
+    display: grid;
+    grid-template-columns: repeat(10, 70px);
+    gap: 0px;
+    width: 10px;
+    position: relative;
+    top: -680px;
+}
+
+.cell {
+    /* background-color: rgba(206, 44, 198, 0.15); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /**/
+    color: #8da363;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
 }

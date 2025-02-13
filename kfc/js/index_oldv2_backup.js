@@ -1,5 +1,5 @@
 import { piecesStartPosition, boardSize, cellSize, images, imageScaleFactor, cooldownTime } from './data.js';
-import { getCSSVariable, generateShortPeerId, getUrlParam, getCurrentUrl } from './tools.js';
+import { getCSSVariable, generateShortPeerId } from './tools.js';
 import { startGameTimer, stopGameTimer } from './gameTimer.js';
 import { getValidMoves, clearMoveIndicators, isOpponent } from './getMoves.js';
 
@@ -11,19 +11,17 @@ let canvas;
 let ctx;
 //
 let playerColor = null;
-let selectedPiece = null;
+let selectedPiece_white = null;
+let selectedPiece_black = null;
 let gameStarted = false;
 let pieces = piecesStartPosition;
 let boardNeedsUpdate = true;
 
 document.getElementById("code-pin").classList.add("disabled");
-document.getElementById("url-menu").classList.add("disabled");
 document.getElementById("btn-copycode").classList.add("disabled");
 document.getElementById("ingame-bar").classList.add("disabled");
 document.getElementById("msg-error").classList.add("disabled");
 document.getElementById("msg-waiting").classList.add("disabled");
-document.getElementById("grid-vt-nb").classList.add("disabled");
-document.getElementById("grid-hz-lt").classList.add("disabled");
 
 function copy(texte) {
     // create tmp
@@ -41,41 +39,23 @@ function copyCodePin() {
     copy(hostid);
     let btn = document.getElementById("btn-copycode");
     if (btn.classList.contains("btn-lock-on")) {
-        btn.innerText = "Copier le code";
-        btn.classList.remove("btn-lock-on");
+        document.getElementById("btn-copycode").innerText = "Copier le code";
+        document.getElementById("btn-copycode").classList.remove("btn-lock-on");
 
     }
     else {
-        btn.innerText = "Code copié";
-        btn.classList.add("btn-lock-on");
+        document.getElementById("btn-copycode").innerText = "Code copié";
+        document.getElementById("btn-copycode").classList.add("btn-lock-on");
     }
 }
-
-function copyGameUrl() {
-    copy(getCurrentUrl() + "?game=" + hostid);
-    let btn = document.getElementById("btn-copylink");
-    if (btn.classList.contains("btn-lock-on")) {
-        btn.innerText = "Copier le lien";
-        btn.classList.remove("btn-lock-on");
-
-    }
-    else {
-        btn.innerText = "Lien copié";
-        btn.classList.add("btn-lock-on");
-    }
-}
-
 
 
 function hostGame() {
-    let pin = generateShortPeerId();
-    peer = new Peer("kfc-" + pin); // kfc-
+    peer = new Peer(generateShortPeerId());
     peer.on("open", id => {
-        hostid = pin;
-        document.getElementById("code-pin").innerText = hostid;
-        document.getElementById("game-url").innerText = getCurrentUrl() + "?game=" + hostid;
+        document.getElementById("code-pin").innerText = id;
+        hostid = id;
         document.getElementById("code-pin").classList.remove("disabled");
-        document.getElementById("url-menu").classList.remove("disabled");
         document.getElementById("btn-copycode").classList.remove("disabled");
         document.getElementById("join-menu").classList.add("disabled");
         document.getElementById("btn-create").classList.add("disabled");
@@ -110,11 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
     btnCopyCode.addEventListener('click', copyCodePin);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const btnCopyLink = document.getElementById('btn-copylink');
-    btnCopyLink.addEventListener('click', copyGameUrl);
-});
-
 ////////////////////////////////////////////////
 // Input join event
 
@@ -142,19 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
     btnJoin.addEventListener('click', joinGame);
 });
 
-function checkJoinUrlGame() {
-    let pin = getUrlParam("game");
-    if (pin === null) {
-        console.log("no url game pin param");
-        return;
-    }
-    console.warn("url game pin found:", pin);
-    input.value = pin;
-    window.history.replaceState({}, document.title, window.location.pathname);
-    joinGame();
-}
-checkJoinUrlGame();
-
 
 function joinGame() {
     if (input.value.trim() === '') {
@@ -164,10 +126,10 @@ function joinGame() {
     let peerId = input.value;
 
     try {
-        peer = new Peer("kfc-" + generateShortPeerId()); // kfc-
+        peer = new Peer(generateShortPeerId());
         peer.on("open", id => {
             console.log('id', id);
-            conn = peer.connect("kfc-" + peerId); // kfc-
+            conn = peer.connect(peerId);
             conn.on("data", data => {
                 try {
                     let msg = JSON.parse(data);
@@ -188,8 +150,6 @@ function joinGame() {
                 document.getElementById("ingame-bar").classList.remove("disabled");
                 document.getElementById("host-menu").classList.add("disabled");
                 document.getElementById("join-menu").classList.add("disabled");
-                document.getElementById("url-menu").classList.add("disabled");
-                document.getElementById("btn-title").disabled = true;
                 startCountdown();
             });
 
@@ -222,19 +182,16 @@ function setupConnection() {
         document.getElementById("ingame-bar").classList.remove("disabled");
         document.getElementById("host-menu").classList.add("disabled");
         document.getElementById("join-menu").classList.add("disabled");
-        document.getElementById("url-menu").classList.add("disabled");
         document.getElementById("msg-waiting").classList.add("disabled");
-        document.getElementById("btn-title").disabled = true;
         startCountdown();
     });
     conn.on("close", () => console.log("Connexion fermée !"));
 }
 
 function startCountdown() {
-    preSetupGame();
     let countdownElement = document.getElementById("countdown");
     countdownElement.innerText = "";
-    let count = 4;
+    let count = 3;
     countdownElement.innerText = count;
     let countdownInterval = setInterval(() => {
         count--;
@@ -242,7 +199,7 @@ function startCountdown() {
             countdownElement.innerText = count;
         } else {
             clearInterval(countdownInterval);
-            countdownElement.innerText = "C PARTI !";
+            countdownElement.innerText = "GO!";
             setTimeout(() => {
                 countdownElement.innerHTML = "&nbsp";
                 gameStarted = true;
@@ -294,10 +251,19 @@ function samePos(p1, p2) {
 }
 
 function DrawStrokeIfSelected(p, x, y) {
-    if (selectedPiece && samePos(p, selectedPiece)) {
+    // console.log(p);
+    // console.log(selectedPiece_white);
+    if (playerColor === "white" && selectedPiece_white && samePos(p, selectedPiece_white)) {
         ctx.strokeStyle = getCSSVariable("--piece-outline");
         ctx.lineWidth = 3;
         ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        console.warn("OUIUOIUOIU WHITE");
+    }
+    if (playerColor === "black" && selectedPiece_black && samePos(p, selectedPiece_black)) {
+        ctx.strokeStyle = getCSSVariable("--piece-outline");
+        ctx.lineWidth = 3;
+        ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        console.warn("OUIUOIUOIU BLACK");
     }
 }
 
@@ -335,7 +301,12 @@ function drawBoard() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     DrawBoardCases();
-    showValidMoves(selectedPiece);
+    if (playerColor === "white") {
+        showValidMoves(selectedPiece_white);
+    }
+    if (playerColor === "black") {
+        showValidMoves(selectedPiece_black);
+    }
 
     // Dessine les pièces
     pieces.forEach((p) => {
@@ -355,58 +326,31 @@ function drawBoard() {
         DrawStrokeIfSelected(p, px, py);
     });
 
+    // console.log("white dr:", selectedPiece_white);
+    // console.log("black dr:", selectedPiece_black);
     boardNeedsUpdate = false;
     requestAnimationFrame(drawBoard);
 }
 
-function preSetupGame() {
+function setupGame() {
     canvas = document.getElementById("chessboard");
     canvas.width = boardSize * cellSize;
     canvas.height = boardSize * cellSize;
     ctx = canvas.getContext("2d");
-    boardNeedsUpdate = true;
-    drawBoard();
-    document.getElementById("grid-vt-nb").classList.remove("disabled");
-    document.getElementById("grid-hz-lt").classList.remove("disabled");
-}
+    DrawBoardCases();
 
-function canvasEventMouseMove() {
-    canvas.addEventListener("mousemove", (event) => {
-        const rect = canvas.getBoundingClientRect();
-        const mouseX = event.clientX - rect.left;
-        const mouseY = event.clientY - rect.top;
+    function updateCooldowns() {
+        pieces.forEach(p => {
+            if (p.cooldown > 0) {
+                p.cooldown -= 50;
+            }
+        });
+        setTimeout(updateCooldowns, 50);
+    }
 
-        // Convertir les coordonnées en indices de grille
-        let x = Math.floor(mouseX / cellSize);
-        let y = Math.floor(mouseY / cellSize);
-        if (playerColor === "black") {
-            x = boardSize - 1 - x;
-            y = boardSize - 1 - y;
-        }
-
-        // Vérifier si une pièce alliée est présente sur cette case
-        const piece = pieces.find(p => p.x === x && p.y === y && p.color === playerColor);
-
-        if (piece) {
-            canvas.style.cursor = "pointer"; // Changer en pointeur si c'est une pièce alliée
-        } else {
-            canvas.style.cursor = "default"; // Revenir au curseur normal sinon
-        }
-    });
-}
-
-function updateCooldowns() {
-    pieces.forEach(p => {
-        if (p.cooldown > 0) {
-            p.cooldown -= 50;
-        }
-    });
-    setTimeout(updateCooldowns, 50);
-}
-
-function canvasEventClick() {
     canvas.addEventListener("click", (event) => {
-        console.log("selectedPiece:", selectedPiece);
+        console.log("white select:", selectedPiece_white);
+        console.log("black select:", selectedPiece_black);
         if (!gameStarted)
             return;
         let rect = canvas.getBoundingClientRect();
@@ -420,71 +364,103 @@ function canvasEventClick() {
         let clickedPiece = pieces.find(p => p.x === x && p.y === y && p.color === playerColor);
 
         if (clickedPiece && clickedPiece.cooldown <= 0) {
-                selectedPiece = clickedPiece;
+            if (playerColor === "white") {
+                selectedPiece_white = clickedPiece;
                 clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
-                showValidMoves(selectedPiece);
-                console.log("showValidMoves:", selectedPiece);
-        }
-        else if (selectedPiece && selectedPiece.cooldown <= 0) {
-            let moves = showValidMoves(selectedPiece);
-            let positionExists = moves.some(move => move.x === x && move.y === y);
-            if (!positionExists) {
-                selectedPiece = null;
-                console.log("mouvement invalid, on quitte l'event de clique sur une case cible");
-                return; // mouvement invalid, on quitte l'event de clique sur une case cible
+                showValidMoves(selectedPiece_white);
+                console.log("player white select:", selectedPiece_white);
             }
+            if (playerColor === "black") {
+                selectedPiece_black = clickedPiece;
+                clearMoveIndicators();  // Efface les anciens indicateurs (cases possibles)
+                showValidMoves(selectedPiece_black);
+                console.log("player black select:", selectedPiece_black);
+            }
+        }
+        else {
+            if (playerColor === "white" && selectedPiece_white && selectedPiece_white.cooldown <= 0) {
+                let moves = showValidMoves(selectedPiece_white);
+                let positionExists = moves.some(move => move.x === x && move.y === y);
+                if (!positionExists) {
+                    selectedPiece_white = null;
+                    console.log("mouvement invalid, on quitte l'event de clique sur une case cible");
+                    return; // mouvement invalid, on quitte l'event de clique sur une case cible
+                }
 
-            let targetPiece = pieces.find(p => p.x === x && p.y === y);
-            if (targetPiece && targetPiece.color !== selectedPiece.color) {
-                console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
-                pieceDeath(targetPiece, x, y); // piece ennemie
-            }
-            else if (targetPiece) {
-                console.log("piece allie, pas de mouvement");
-                return; // piece allie, pas de mouvement
-            }
-            console.warn("MOVE SELECTED PIECE");
-            // movement
-            // Trouver l'index de la pièce déplacée dans pieces
-            let pieceIndex = pieces.findIndex(p => p.x === selectedPiece.x && p.y === selectedPiece.y);
-            if (pieceIndex === -1) {
-                console.warn("ERROR find -1");
-                return;
-            }
-            pieces[pieceIndex].oldx = pieces[pieceIndex].x;
-            pieces[pieceIndex].oldy = pieces[pieceIndex].y;
-            pieces[pieceIndex].x = x;
-            pieces[pieceIndex].y = y;
-            pieces[pieceIndex].cooldown = cooldownTime;
-            // si un pion arrive sur derniere ligne alors on le change en dame
-            if (pieces[pieceIndex].type === "pion") {
-                if (playerColor === "white" && y === 0) {
-                    pieces[pieceIndex].type = "reine";
+                let targetPiece = pieces.find(p => p.x === x && p.y === y);
+                if (targetPiece && targetPiece.color !== selectedPiece_white.color) {
+                    console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
+                    pieceDeath(targetPiece, x, y); // piece ennemie
                 }
-                if (playerColor === "black" && y === 9) {
-                    pieces[pieceIndex].type = "reine";
+                else if (targetPiece) {
+                    console.log("piece allie, pas de mouvement");
+                    return; // piece allie, pas de mouvement
                 }
+                console.warn("MOVE WHITE");
+                // movement
+                // Trouver l'index de la pièce déplacée dans pieces
+                let pieceIndex = pieces.findIndex(p => p.x === selectedPiece_white.x && p.y === selectedPiece_white.y);
+                if (pieceIndex === -1) {
+                    console.warn("ERROR find -1");
+                    return;
+                }
+                pieces[pieceIndex].oldx = pieces[pieceIndex].x;
+                pieces[pieceIndex].oldy = pieces[pieceIndex].y;
+                pieces[pieceIndex].x = x;
+                pieces[pieceIndex].y = y;
+                pieces[pieceIndex].cooldown = cooldownTime;
+                selectedPiece_white = null;
+                sendPosition();
             }
-            selectedPiece = null;
-            sendPosition();
+            if (playerColor === "black" && selectedPiece_black && selectedPiece_black.cooldown <= 0) {
+                let moves = showValidMoves(selectedPiece_black);
+                let positionExists = moves.some(move => move.x === x && move.y === y);
+                if (!positionExists) {
+                    selectedPiece_black = null;
+                    return; // mouvement invalid, on quitte l'event de clique sur une case cible
+                }
+
+                let targetPiece = pieces.find(p => p.x === x && p.y === y);
+                if (targetPiece && targetPiece.color !== selectedPiece_black.color) {
+                    console.log(`Une pièce ennemi ${targetPiece.color} ${targetPiece.type} a été trouvée a cet emplacement !`);
+                    pieceDeath(targetPiece, x, y); // piece ennemie
+                }
+                else if (targetPiece) {
+                    return; // piece allie, pas de mouvement
+                }
+                console.warn("MOVE BLACK");
+                // movement Trouver l'index de la pièce déplacée dans pieces
+                let pieceIndex = pieces.findIndex(p => p.x === selectedPiece_black.x && p.y === selectedPiece_black.y);
+                if (pieceIndex === -1) {
+                    console.warn("ERROR find -1");
+                    return;
+                }
+                pieces[pieceIndex].oldx = pieces[pieceIndex].x;
+                pieces[pieceIndex].oldy = pieces[pieceIndex].y;
+                pieces[pieceIndex].x = x;
+                pieces[pieceIndex].y = y;
+                pieces[pieceIndex].cooldown = cooldownTime;
+                selectedPiece_black = null;
+                sendPosition();
+            }
+            // sendPosition();
+
         }
+        // updateBoard();
     });
-}
 
-function setupGame() {
-    canvasEventMouseMove();
-    canvasEventClick();
-    boardNeedsUpdate = true;
     drawBoard(); // first draw
     updateCooldowns();
     startGameTimer();
+    let fps = 60; // 30 mises à jour par seconde
+    let interval = 1000 / fps; // Temps entre chaque frame (en ms)
 
     setInterval(() => {
         if (gameStarted === false)
             return;
         updateBoard(); // Met à jour tout le plateau
         checkForWinner();
-    }, 32); // ~ 30 fps
+    }, interval);
 }
 
 function updateBoard() {
