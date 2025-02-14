@@ -1,9 +1,9 @@
 export const soundsLib = [
+    new Audio("sounds/button.mp3"),
     new Audio("sounds/Adroite.mp3"),
     new Audio("sounds/Agauche.mp3"),
     new Audio("sounds/avecunwilly.mp3"),
     new Audio("sounds/benjecomprend.mp3"),
-    new Audio("sounds/button.mp3"),
     new Audio("sounds/cartekiwi.mp3"),
     new Audio("sounds/cartekiwishorter.mp3"),
     new Audio("sounds/chipi.mp3"),
@@ -58,4 +58,25 @@ export function stopAllSoundsLib() {
         sound.pause();
         sound.currentTime = 0;
     });
+}
+
+export function playPieceSoundLib(type) {
+    switch (type) {
+        case "pion":
+            break;
+        case "tower":
+            break;
+        case "cavalier":
+            break;
+        case "fou":
+            break;
+        case "roi":
+            break;
+        case "reine":
+            break;
+        case "faucon":
+            break;
+        case "elephant":
+            break;
+    }
 }

@@ -2,8 +2,7 @@ import { piecesStartPosition, boardSize, cellSize, images, imageScaleFactor, coo
 import { getCSSVariable, generateShortPeerId, getUrlParam, getCurrentUrl } from './tools.js';
 import { startGameTimer, stopGameTimer } from './gameTimer.js';
 import { getValidMoves, clearMoveIndicators, isOpponent } from './getMoves.js';
-import { playSoundLib, stopAllSoundsLib } from './soundsLib.js';
-
+import { playSoundLib, stopAllSoundsLib, playPieceSoundLib } from './soundsLib.js';
 
 let peer;
 let conn;
@@ -40,6 +39,7 @@ function copy(texte) {
 }
 
 function copyCodePin() {
+    playSoundLib(0);
     copy(hostid);
     let btn = document.getElementById("btn-copycode");
     if (btn.classList.contains("btn-lock-on")) {
@@ -54,6 +54,7 @@ function copyCodePin() {
 }
 
 function copyGameUrl() {
+    playSoundLib(0);
     copy(getCurrentUrl() + "?game=" + hostid);
     let btn = document.getElementById("btn-copylink");
     if (btn.classList.contains("btn-lock-on")) {
@@ -70,6 +71,7 @@ function copyGameUrl() {
 
 
 function hostGame() {
+    playSoundLib(0);
     let pin = generateShortPeerId();
     peer = new Peer("kfc-" + pin); // kfc-
     peer.on("open", id => {
@@ -159,6 +161,7 @@ checkJoinUrlGame();
 
 
 function joinGame() {
+    playSoundLib(0);
     if (input.value.trim() === '') {
         return;
     }
@@ -479,31 +482,11 @@ function canvasEventClick() {
             }
             selectedPiece = null;
             sendPosition();
-            playPieceSound(pieces[pieceIndex].type);
+            // playPieceSoundLib(pieces[pieceIndex].type); // TODO
         }
     });
 }
 
-function playPieceSound(type) {
-    switch (type) {
-        case "pion":
-            break;
-        case "tower":
-            break;
-        case "cavalier":
-            break;
-        case "fou":
-            break;
-        case "roi":
-            break;
-        case "reine":
-            break;
-        case "faucon":
-            break;
-        case "elephant":
-            break;
-    }
-}
 
 function setupGame() {
     canvasEventMouseMove();
