@@ -2,6 +2,8 @@ import { piecesStartPosition, boardSize, cellSize, images, imageScaleFactor, coo
 import { getCSSVariable, generateShortPeerId, getUrlParam, getCurrentUrl } from './tools.js';
 import { startGameTimer, stopGameTimer } from './gameTimer.js';
 import { getValidMoves, clearMoveIndicators, isOpponent } from './getMoves.js';
+import { playSoundLib, stopAllSoundsLib } from './soundsLib.js';
+
 
 let peer;
 let conn;
@@ -462,6 +464,7 @@ function canvasEventClick() {
             pieces[pieceIndex].oldy = pieces[pieceIndex].y;
             pieces[pieceIndex].moveTo = { x: x, y: y }; // definir la destination
             pieces[pieceIndex].isMoving = true;
+            playSoundLib();
             // pieces[pieceIndex].x = x;
             // pieces[pieceIndex].y = y;
             // pieces[pieceIndex].cooldown = cooldownTime; // pas de cooldown pendant le movement
@@ -476,8 +479,30 @@ function canvasEventClick() {
             }
             selectedPiece = null;
             sendPosition();
+            playPieceSound(pieces[pieceIndex].type);
         }
     });
+}
+
+function playPieceSound(type) {
+    switch (type) {
+        case "pion":
+            break;
+        case "tower":
+            break;
+        case "cavalier":
+            break;
+        case "fou":
+            break;
+        case "roi":
+            break;
+        case "reine":
+            break;
+        case "faucon":
+            break;
+        case "elephant":
+            break;
+    }
 }
 
 function setupGame() {
@@ -580,6 +605,7 @@ function checkForWinner() {
             gameStarted = true;
             sendPosition();
             startGameTimer();
+            stopAllSoundsLib();
             // window.location.reload();  // Recharge la page et recommence le jeu
         }, 2000);
     }

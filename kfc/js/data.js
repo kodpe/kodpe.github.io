@@ -1,6 +1,6 @@
 export const boardSize = 10;
 export const cellSize = 70;
-export const cooldownTime = 8000;
+export const cooldownTime = 10000;
 export const imageScaleFactor = 1;
 export const piecesStartPosition = [
     { oldx: -1, oldy: -1, x: 0, y: 0, cooldown: 0, color: "black", type: "tower" },
