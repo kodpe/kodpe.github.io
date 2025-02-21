@@ -1,0 +1,191 @@
+:root {
+    --body-bg-color: #121218;
+    --footer-bg-color: #121218;
+    --text-color: #ffffff;
+    --text-footer-color: #dddddd;
+    --board-light: rgb(235, 236, 208);
+    --board-dark: rgb(115, 149, 82);
+    --cooldown-color: rgba(241, 222, 43, 0.7);
+    --piece-outline: rgb(0, 115, 223);
+    --valid-move-x-color: rgba(224, 67, 67, 0.4);
+    --valid-move-c-color: rgba(80, 193, 221, 0.4);
+}
+
+.dark-mode {
+    --body-bg-color: #0f0e1a;
+    --text-color: #ffffff;
+}
+
+.disabled {
+    display: none !important;
+}
+
+html {
+    cursor: none;
+}
+
+body {
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+        
+/* */
+
+svg {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Réactive les événements uniquement pour les éléments <path> */
+svg path {
+    pointer-events: all;
+}
+
+svg rect {
+    pointer-events: none;
+    /* Désactive les événements sur les <rect> si présents */
+}
+
+/* */
+
+#btn-start {
+    z-index: 2;
+    border: 0;
+    background-color: #121218;
+    color: #ffffff;
+    font-size: 128px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.background-image {
+    max-width: 1400px;
+    max-height: 959px;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%)
+}
+
+.counter {
+    /* position: absolute; */
+    left: 0;
+    margin: 0px;
+    /* background-color: #121218; */
+    font-size: 24px;
+    border-radius: 3px;
+    padding-inline: 8px;
+    color: #ffffff;
+    z-index: 2;
+}
+
+#helper {
+    z-index: 0;
+    position: absolute;
+    /* background-color: rgba(16, 18, 43, 0.9); */
+    width: 100%;
+    height: 100%;
+} 
+
+.cursor {
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    width: 64px;
+    height: 64px;
+    /* background-color: rgba(168, 72, 16, 0.9); */
+}
+
+#tab {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    left: 0;
+    top: 0;
+    margin: 8px;
+}
+
+.cnt-bloc {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    background-color: #121218;
+    user-select: none;
+}
+
+.cnt-icon {
+    width: 48px;
+    height: 48px;
+}
+
+#tv {
+    width: 300px !important;
+    z-index: 10;
+    bottom: -35px !important;
+    left: -35px !important;
+}
+
+#t1 {
+    width: 180px !important;
+    height: 140px !important;
+    bottom: 60px !important;
+}
+
+#t3, #t4, #t5, #t6, #t7, #t8, #t9 {
+    width: 180px !important;
+    height: 140px !important;
+    bottom: 60px !important;
+}
+
+#container-tv {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+    height: auto;
+    user-select: none;
+}
+
+.tv-el {
+    z-index: 1;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 180px;
+    height: auto;
+}

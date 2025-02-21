@@ -45,7 +45,6 @@ function copyCodePin() {
     if (btn.classList.contains("btn-lock-on")) {
         btn.innerText = "Copier le code";
         btn.classList.remove("btn-lock-on");
-
     }
     else {
         btn.innerText = "Code copié";
@@ -467,6 +466,7 @@ function canvasEventClick() {
             pieces[pieceIndex].oldy = pieces[pieceIndex].y;
             pieces[pieceIndex].moveTo = { x: x, y: y }; // definir la destination
             pieces[pieceIndex].isMoving = true;
+            stopAllSoundsLib();
             playSoundLib();
             // pieces[pieceIndex].x = x;
             // pieces[pieceIndex].y = y;
@@ -588,7 +588,7 @@ function checkForWinner() {
             gameStarted = true;
             sendPosition();
             startGameTimer();
-            stopAllSoundsLib();
+            // stopAllSoundsLib();
             // window.location.reload();  // Recharge la page et recommence le jeu
         }, 2000);
     }
