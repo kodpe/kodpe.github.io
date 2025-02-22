@@ -401,10 +401,10 @@ function addPain() {
     //
     if (cnt_slicer_pain > 0) {
         if (cnt_machine_pain > 0) {
-            cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 9n) * (cnt_machine_pain * cnt_machine_pain * 99n);
+            cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 3n) * (cnt_machine_pain * cnt_machine_pain * 9n);
         }
         else {
-            cnt_nb_pain += 1n * (cnt_slicer_pain * 9n);
+            cnt_nb_pain += 1n * (cnt_slicer_pain * 3n);
         }
     }
     else {
@@ -418,10 +418,10 @@ function addFromage() {
     //
     if (cnt_slicer_fromage > 0) {
         if (cnt_machine_fromage > 0) {
-            cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 9n) * (cnt_machine_fromage * cnt_machine_fromage * 99n);
+            cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 3n) * (cnt_machine_fromage * cnt_machine_fromage * 9n);
         }
         else {
-            cnt_nb_fromage += 1n * (cnt_slicer_fromage * 9n); // BigInt
+            cnt_nb_fromage += 1n * (cnt_slicer_fromage * 3n); // BigInt
         }
     }
     else {
@@ -777,17 +777,20 @@ function hasChance(pourcentage) {
 
 // ----- MACHINE A PAIN
 function AutoMachines() {
+    if (isGameON === false)
+        return;
+
     if (cnt_machine_pain >= 1) {
-        cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 9n) * (cnt_machine_pain * cnt_machine_pain * 99n);
+        cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 3n) * (cnt_machine_pain * cnt_machine_pain * 9n);
         if (hasChance(10)) {
-            cnt_nb_bras += cnt_machine_pain + cnt_slicer_pain;
+            cnt_nb_bras += cnt_machine_pain + cnt_slicer_pain / 2n;
             cnt_nb_tartine += cnt_machine_pain;
         }
     }
     if (cnt_machine_fromage >= 1) {
-        cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 9n) * (cnt_machine_fromage * cnt_machine_fromage * 99n);
+        cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 3n) * (cnt_machine_fromage * cnt_machine_fromage * 9n);
         if (hasChance(10)) {
-            cnt_nb_bras += cnt_machine_fromage + cnt_slicer_fromage;
+            cnt_nb_bras += cnt_machine_fromage + cnt_slicer_fromage / 2n;
             cnt_nb_tartine += cnt_machine_fromage;
         }
     }
@@ -797,3 +800,121 @@ function AutoMachines() {
 }
 
 setInterval(AutoMachines, 250);
+
+
+// ---------------------
+const hoverDiv = document.getElementById('tab');
+hoverDiv.addEventListener('mousemove', (event) => {
+    const xOffset = 10; // Décalage horizontal
+    const yOffset = 10; // Décalage vertical
+    description.style.left = `${event.pageX + xOffset}px`; // Position horizontale à côté de la souris
+    description.style.top = `${event.pageY + yOffset}px`;  // Position verticale juste en dessous
+});
+//
+const description = document.getElementById('description');
+//
+const hoverSlicerFromage = document.getElementById('cnt-img-slicer-fromage');
+hoverSlicerFromage.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'La trancheuse à fromage';
+});
+hoverSlicerFromage.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverSlicerPain = document.getElementById('cnt-img-slicer-pain');
+hoverSlicerPain.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'La trancheuse à pain';
+});
+hoverSlicerPain.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverMachineFromage = document.getElementById('cnt-img-machine-fromage');
+hoverMachineFromage.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'La machine à fromage';
+});
+hoverMachineFromage.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverMachinePain = document.getElementById('cnt-img-machine-pain');
+hoverMachinePain.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'La machine à pain';
+});
+hoverMachinePain.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverTartine = document.getElementById('cnt-img-tartine');
+hoverTartine.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'La tartine';
+});
+hoverTartine.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverBras = document.getElementById('cnt-img-bras');
+hoverBras.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'Le bras';
+});
+hoverBras.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverFromage = document.getElementById('cnt-img-fromage');
+hoverFromage.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'Le fromage';
+});
+hoverFromage.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverPain = document.getElementById('cnt-img-pain');
+hoverPain.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    description.innerHTML = 'Le pain';
+});
+hoverPain.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
