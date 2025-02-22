@@ -256,7 +256,7 @@ function le_pain() {
     playAtSecond(76.3);
     setTimeout(function () {
         isPain = true;
-        // playAtSecond(0);
+        playAtSecond(0);
     }, 5000);
 }
 
