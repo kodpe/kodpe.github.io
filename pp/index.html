@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>couper du pain .fr</title>
+    <title>couper le pain .fr</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:,">
 </head>
@@ -28,6 +28,11 @@
             <div id="cnt-img-bras"><img src="img/cnt-bras.jpg" class="cnt-icon" alt="bras"></div>
             <div id="cnt-bras" class="counter">0</div>
         </div>
+        <div class="cnt-bloc">
+            <div id="cnt-img-tartine"><img src="img/cnt-tartine.jpg" class="cnt-icon" alt="tartine"></div>
+            <div id="cnt-tartine" class="counter">0</div>
+            <div id="cnt-tartine-btn" class="counter btn-cnt">+</div>
+        </div>
         <div id="container-tv">
             <img id="tv" src="img/tv.png" class="tv-el" alt="tv">
             <img id="t1" src="img/tv/t1.jpg" class="tv-el" alt="tv">
@@ -43,7 +48,10 @@
     </div>
     <div id="helper"></div>
 
-    <div id="cursor" class="cursor disabled"><img src="img/cur.png" alt="cursor"></div>
+    <div id="cursor" class="cursor disabled">
+        <img id="knife" class="disabled" src="img/cur.png" alt="cut">
+        <img id="knife-blood" class="disabled" src="img/cur-blood.png" alt="cut"></div>
+    </div>
 </body>
 <script src="js/pain-fromage.js"></script>
 

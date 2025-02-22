@@ -1,17 +1,25 @@
 // Nom de la base de données et de l'objet de stockage
 const DB_NAME = "compteursDB";
 const STORE_NAME = "compteurs";
+const DB_VERSION = 1;
 let db;
-let cnt_nb_pain = 0;
-let cnt_nb_fromage = 0;
-let cnt_nb_bras = 0;
+let cnt_nb_pain = BigInt("0");
+let cnt_nb_fromage = BigInt("0");
+let cnt_nb_bras = BigInt("0");
+let cnt_nb_tartine = BigInt("0");
+//
+cursor = document.getElementById("cursor");
+knife = document.getElementById("knife");
+knifeBlood = document.getElementById("knife-blood");
+btnTartine = document.getElementById("cnt-tartine-btn");
+//
 CntTab = document.getElementById('tab');
 CntTab.classList.add('disabled');
 
 // Ouvrir la base de données IndexedDB
 function openDB() {
     return new Promise((resolve, reject) => {
-        let request = indexedDB.open(DB_NAME, 1);
+        let request = indexedDB.open(DB_NAME, DB_VERSION);
 
         request.onupgradeneeded = function (event) {
             let db = event.target.result;
@@ -32,8 +40,8 @@ function openDB() {
 }
 
 // Sauvegarde des compteurs dans IndexedDB avec gestion des erreurs
-function saveCounters(nb_pain, nb_fromage, nb_bras) {
-    console.warn("saveCounters()");
+function saveCounters(nb_pain, nb_fromage, nb_bras, nb_tartine) {
+    // console.warn("saveCounters()");
     if (!db) {
         console.error("IndexedDB non initialisé !");
         return;
@@ -42,7 +50,7 @@ function saveCounters(nb_pain, nb_fromage, nb_bras) {
     try {
         let transaction = db.transaction(STORE_NAME, "readwrite");
         let store = transaction.objectStore(STORE_NAME);
-        let data = { id: 1, nb_pain, nb_fromage, nb_bras };
+        let data = { id: 1, nb_pain, nb_fromage, nb_bras, nb_tartine };
 
         let request = store.put(data);
 
@@ -62,7 +70,7 @@ function saveCounters(nb_pain, nb_fromage, nb_bras) {
 function loadCounters() {
     return new Promise((resolve) => {
         if (!db) {
-            resolve({ nb_pain: 0, nb_fromage: 0, nb_bras: 0 });
+            resolve({ nb_pain: "0", nb_fromage: "0", nb_bras: "0", nb_tartine: "0" });
             return;
         }
 
@@ -72,26 +80,64 @@ function loadCounters() {
 
         request.onsuccess = function (event) {
             let data = event.target.result;
-            resolve(data ? data : { nb_pain: 0, nb_fromage: 0, nb_bras: 0 });
+            resolve(data ? data : { nb_pain: "0", nb_fromage: "0", nb_bras: "0", nb_tartine: "0" });
         };
 
         request.onerror = function () {
-            resolve({ nb_pain: 0, nb_fromage: 0, nb_bras: 0 });
+            resolve({ nb_pain: "0", nb_fromage: "0", nb_bras: "0", nb_tartine: "0" });
         };
     });
 }
 
 // Initialisation : Ouverture de la DB et chargement des compteurs
 openDB().then(() => {
-    loadCounters().then(({ nb_pain, nb_fromage, nb_bras }) => {
-        document.getElementById("cnt-pain").textContent = nb_pain;
-        document.getElementById("cnt-fromage").textContent = nb_fromage;
-        document.getElementById("cnt-bras").textContent = nb_bras;
-        cnt_nb_pain = nb_pain;
-        cnt_nb_fromage = nb_fromage;
-        cnt_nb_bras = nb_bras;
+    loadCounters().then(({ nb_pain, nb_fromage, nb_bras, nb_tartine }) => {
+        document.getElementById("cnt-pain").textContent = BigInt(nb_pain);
+        document.getElementById("cnt-fromage").textContent = BigInt(nb_fromage);
+        document.getElementById("cnt-bras").textContent = BigInt(nb_bras);
+        document.getElementById("cnt-tartine").textContent = BigInt(nb_tartine);
+        cnt_nb_pain = BigInt(nb_pain);
+        cnt_nb_fromage = BigInt(nb_fromage);
+        cnt_nb_bras = BigInt(nb_bras);
+        cnt_nb_tartine = BigInt(nb_tartine);
+        updateCntValues();
     });
 });
+
+// --------------------
+isOnTabUI = false;
+const tab = document.getElementById("tab");
+isWasInside = false;
+
+document.addEventListener("mousemove", (event) => {
+    const rect = tab.getBoundingClientRect();
+    const inside = (
+        event.clientX >= rect.left -50 &&
+        event.clientX <= rect.right +50 &&
+        event.clientY >= rect.top -50 &&
+        event.clientY <= rect.bottom +50
+    );
+
+    if (inside) {
+        // console.log("Souris à l'intérieur !");
+        isOnTabUI = true;
+        isWasInside = true;
+        document.body.classList.add("show-cursor");
+        knife.classList.add("disabled");
+        knifeBlood.classList.add("disabled");
+    } else {
+        if (isWasInside) {
+            // console.log("Souris à l'extérieur !");
+            isOnTabUI = false;
+            document.body.classList.remove("show-cursor");
+            knife.classList.remove("disabled");
+            knifeBlood.classList.add("disabled");
+            isWasInside = false;
+        }
+    }
+});
+
+//
 
 const story = new Audio("sounds/painfromage.mp3");
 story.loop = true;
@@ -101,10 +147,14 @@ isFromage = true;
 isPain = true;
 isOuille = true;
 //
+const bgAmbiant = new Audio("sounds/casino-ambiance.mp3");
+bgAmbiant.loop = true;
+bgAmbiant.volume = 0.4;
 
 CntPain = document.getElementById('cnt-pain');
 CntFromage = document.getElementById('cnt-fromage');
 CntBras = document.getElementById('cnt-bras');
+CntTartine = document.getElementById('cnt-tartine');
 
 function playAtSecond(seconds) {
     story.currentTime = seconds;
@@ -160,32 +210,83 @@ function le_pain() {
     }, 5000);
 }
 
+let slicePainSound = new Audio("sounds/slice-pain.mp3");
+slicePainSound.currentTime = 2000;
+slicePainSound.volume = 1;
+function slice_pain_sound() {
+    slicePainSound.play();
+    setTimeout(() => {
+        slicePainSound.pause();
+        slicePainSound.currentTime = 2000;
+    }, 2000);
+}
+
+let sliceFromageSound = new Audio("sounds/slice-fromage.mp3");
+sliceFromageSound.playbackRate = 1.5;
+sliceFromageSound.currentTime = 200;
+sliceFromageSound.volume = 1;
+function slice_fromage_sound() {
+    sliceFromageSound.play();
+    setTimeout(() => {
+        sliceFromageSound.pause();
+        sliceFromageSound.currentTime = 200;
+    }, 900);
+}
+
 function do_nothing() {
 }
 
 function play_sound_effect(message) {
     if (message === 'fromage') {
-        cnt_nb_fromage++;
+        sliceAnimation();
+        slice_fromage_sound();
+        cnt_nb_fromage += 1n; // BigInt
         var fnct = [le_fromage];
         var r = fnct[Math.floor(Math.random() * fnct.length)];
         r();
     }
     if (message === 'pain') {
-        cnt_nb_pain++;
+        sliceAnimation();
+        slice_pain_sound();
+        cnt_nb_pain += 1n;
         var fnct = [le_pain];
         var r = fnct[Math.floor(Math.random() * fnct.length)];
         r();
     }
     if (message === 'bras') {
-        cnt_nb_bras++;
+        ActiveKnifeBlood();
+        cnt_nb_bras += 1n;
         var fnct = [ouille_et_cest_lerreur, ouille_aieuh_oooh];
         var r = fnct[Math.floor(Math.random() * fnct.length)];
         r();
     }
-    CntFromage.innerHTML = cnt_nb_fromage;
-    CntPain.innerHTML = cnt_nb_pain;
-    CntBras.innerHTML = cnt_nb_bras;
-    saveCounters(cnt_nb_pain, cnt_nb_fromage, cnt_nb_bras);
+    updateCntValues();
+}
+
+function updateCntValues() {
+    CntFromage.innerHTML = cnt_nb_fromage.toString();
+    CntPain.innerHTML = cnt_nb_pain.toString();
+    CntBras.innerHTML = cnt_nb_bras.toString();
+    CntTartine.innerHTML = cnt_nb_tartine.toString();
+    saveCounters(cnt_nb_pain.toString(), cnt_nb_fromage.toString(), cnt_nb_bras.toString(), cnt_nb_tartine.toString());
+    if (cnt_nb_pain < 1 || cnt_nb_fromage < 1)
+        btnTartine.classList.add('disabled');
+    else
+        btnTartine.classList.remove('disabled');
+}
+
+function ActiveKnifeBlood() {
+    knife.classList.add("disabled");
+    knifeBlood.classList.remove("disabled");
+    setTimeout(function () {
+        if (isWasInside) {
+            knifeBlood.classList.add("disabled");
+            knife.classList.add("disabled");
+            return;
+        }
+        knifeBlood.classList.add("disabled");
+        knife.classList.remove("disabled");
+    }, 10000);
 }
 
 let timeouts = []; // Stocke les setTimeout actifs
@@ -201,27 +302,20 @@ story.addEventListener("play", () => {
 });
 
 function addPain() {
-    cnt_nb_pain++;
-    CntFromage.innerHTML = cnt_nb_fromage;
-    CntPain.innerHTML = cnt_nb_pain;
-    CntBras.innerHTML = cnt_nb_bras;
-    saveCounters(cnt_nb_pain, cnt_nb_fromage, cnt_nb_bras);
+    cnt_nb_pain += 1n;
+    updateCntValues();
 }
 
 function addFromage() {
-    cnt_nb_fromage++;
-    CntFromage.innerHTML = cnt_nb_fromage;
-    CntPain.innerHTML = cnt_nb_pain;
-    CntBras.innerHTML = cnt_nb_bras;
-    saveCounters(cnt_nb_pain, cnt_nb_fromage, cnt_nb_bras);
+    cnt_nb_fromage += 1n;
+    updateCntValues();
 }
 
 function addBras() {
-    cnt_nb_bras++;
-    CntFromage.innerHTML = cnt_nb_fromage;
-    CntPain.innerHTML = cnt_nb_pain;
-    CntBras.innerHTML = cnt_nb_bras;
-    saveCounters(cnt_nb_pain, cnt_nb_fromage, cnt_nb_bras);
+    console.warn('addBras() + ActiveKnifeBlood()');
+    ActiveKnifeBlood();
+    cnt_nb_bras += 1n;
+    updateCntValues();
 }
 
 function chargerSVG(fichier, containerId, message) {
@@ -238,6 +332,8 @@ function chargerSVG(fichier, containerId, message) {
             // Ajout d'un écouteur de clic sur chaque path
             paths.forEach(path => {
                 path.addEventListener('click', function (event) {
+                    if (isOnTabUI)
+                        return;
                     console.log("Path cliqué !");
                     // alert(message);
                     play_sound_effect(message);
@@ -256,9 +352,7 @@ function init() {
     chargerSVG('img/lepain.svg', 'svgContainer2', 'pain'); ``
 
 
-    cursor = document.getElementById("cursor");
-    if (cursor)
-        cursor.classList.add("disabled");
+
     svg1 = document.getElementById("svgContainer");
     svg2 = document.getElementById("svgContainer2");
     if (svg1)
@@ -278,9 +372,10 @@ function init() {
 }
 
 function loadGame() {
-    cursor = document.getElementById("cursor");
+    bgAmbiant.play();
     cursor.classList.remove("disabled");
     CntTab.classList.remove('disabled');
+    knife.classList.remove("disabled");
 
     btnStart.classList.add("disabled");
     if (bg)
@@ -292,6 +387,8 @@ function loadGame() {
     story.play();
     // Détecter un clic global sur la page (en dehors des path)
     document.addEventListener('click', function (event) {
+        if (isOnTabUI)
+            return;
         const clickedOnFromage = event.target.closest('#svgContainer') && event.target.closest('#svgContainer').querySelector('#fromagePath');
         const clickedOnPain = event.target.closest('#svgContainer2') && event.target.closest('#svgContainer2').querySelector('#painPath');
 
@@ -307,10 +404,12 @@ function loadGame() {
     document.addEventListener('mousemove', function (event) {
         var cursor = document.querySelector('.cursor');
         var cursorImg = cursor.querySelector('img');
+        var offsetX = 100;  // Décalage vers la gauche
+        var offsetY = 100;  // Décalage vers le bas
 
         // Calcule la position de la souris pour centrer l'image dessus
-        var cursorX = event.pageX - cursorImg.width / 2;
-        var cursorY = event.pageY - cursorImg.height / 2;
+        var cursorX = event.pageX - cursorImg.width / 2 + offsetX;
+        var cursorY = event.pageY - cursorImg.height / 2 + offsetY;
 
         // Met à jour la position du curseur
         cursor.style.left = cursorX + 'px';
@@ -344,3 +443,29 @@ function tv_roll() {
 }
 
 tv_roll();
+
+function sliceAnimation() {
+    knife.classList.add("tremble");
+    knifeBlood.classList.add("tremble");
+    setTimeout(() => {
+        knife.classList.remove("tremble");
+        knifeBlood.classList.remove("tremble");
+    }, 2000);
+}
+
+// ------------
+
+btnTartine = document.getElementById("cnt-tartine-btn");
+btnTartine.addEventListener("click", function () {
+    makeTartine();
+});
+
+function makeTartine() {
+    if (cnt_nb_pain < 1 || cnt_nb_fromage < 1) {
+        return;
+    }
+    cnt_nb_pain -= 1n; // BigInt
+    cnt_nb_fromage -= 1n;
+    cnt_nb_tartine += 1n;
+    updateCntValues();
+}
