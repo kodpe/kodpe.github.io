@@ -101,7 +101,8 @@ svg rect {
     left: 0;
     margin: 0px;
     /* background-color: #121218; */
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     border-radius: 3px;
     padding-inline: 8px;
     color: #ffffff;
@@ -144,13 +145,13 @@ svg rect {
     border-radius: 3px;
     background-color: #121218;
     user-select: none;
-    height: 48px;
+    height: 42px;
 }
 
 .cnt-icon {
     margin-top: 3px;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
 }
 
 #tv {
@@ -208,7 +209,7 @@ svg rect {
 
 .btn-cnt {
     border: 2px solid rgb(255, 255, 255);
-    border-radius: 3px;
+    border-radius: 32px;
     background-color: #121218;
     margin-inline: 8px;
     cursor: pointer;
