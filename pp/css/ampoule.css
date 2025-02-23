@@ -1,0 +1,49 @@
+.svg-container {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+}
+
+svg {
+    position: relative !important;
+}
+
+#g2svg {
+    max-width: 100%;
+    height: auto;
+    width: max-content;
+}
+
+.ampoule {
+    animation: clignoter 1.5s infinite alternate;
+}
+
+@keyframes clignoter {
+    0% {
+        fill: var(--color1);
+        filter: drop-shadow(0 0 15px var(--color1));
+    }
+
+    25% {
+        fill: var(--color2);
+        filter: drop-shadow(0 0 15px var(--color2));
+    }
+
+    50% {
+        fill: var(--color3);
+        filter: drop-shadow(0 0 15px var(--color3));
+    }
+
+    75% {
+        fill: var(--color4);
+        filter: drop-shadow(0 0 15px var(--color4));
+    }
+
+    100% {
+        fill: var(--color5);
+        filter: drop-shadow(0 0 15px var(--color5));
+    }
+}

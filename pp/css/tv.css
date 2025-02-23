@@ -1,0 +1,36 @@
+#tv {
+    width: 300px !important;
+    z-index: 10;
+    bottom: -35px !important;
+    left: -25px !important;
+}
+
+#t1 {
+    width: 180px !important;
+    height: 140px !important;
+    bottom: 60px !important;
+}
+
+#t3, #t4, #t5, #t6, #t7, #t8, #t9 {
+    width: 180px !important;
+    height: 140px !important;
+    bottom: 60px !important;
+}
+
+#container-tv {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+    height: 230px;
+    user-select: none;
+}
+
+.tv-el {
+    z-index: 1;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 180px;
+    height: auto;
+}

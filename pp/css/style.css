@@ -48,8 +48,6 @@ body {
     width: 100%;
     height: 100%;
 }
-        
-/* */
 
 svg {
     position: absolute;
@@ -59,17 +57,13 @@ svg {
     height: 100%;
 }
 
-/* Réactive les événements uniquement pour les éléments <path> */
 svg path {
     pointer-events: all;
 }
 
 svg rect {
     pointer-events: none;
-    /* Désactive les événements sur les <rect> si présents */
 }
-
-/* */
 
 #btn-start {
     z-index: 2;
@@ -86,7 +80,6 @@ svg rect {
     max-width: 1400px;
     max-height: 959px;
     width: 100%;
-    /* height: 100%; */
     object-fit: cover;
     object-position: center;
     position: absolute;
@@ -96,152 +89,24 @@ svg rect {
     transform: translate(-50%, -50%)
 }
 
-.counter {
-    /* position: absolute; */
-    left: 0;
-    margin: 0px;
-    /* background-color: #121218; */
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 3px;
-    padding-inline: 8px;
-    color: #ffffff;
-    z-index: 2;
-}
-
 #helper {
     z-index: 0;
     position: absolute;
-    /* background-color: rgba(16, 18, 43, 0.9); */
     width: 100%;
     height: 100%;
+    background-color: rgba(10, 16, 44, 0.87);
 } 
 
-.cursor {
-    position: absolute;
-    pointer-events: none;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 9999;
-    width: 400px;
-    height: 300px;
-    /* background-color: rgba(168, 72, 16, 0.9); */
+/* SMARTPHONE */
+@media (min-width: 1px) and (max-width: 500px) {
+  body {
+    font-size: 8px !important;
+  }
 }
 
-#tab {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    left: 0;
-    top: 0;
-    margin: 8px;
-}
-
-.cnt-bloc {
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 2px;
-    background-color: #121218;
-    user-select: none;
-    height: 42px;
-}
-
-.cnt-icon {
-    margin-top: 3px;
-    width: 42px;
-    height: 42px;
-}
-
-#tv {
-    width: 300px !important;
-    z-index: 10;
-    bottom: -35px !important;
-    left: -25px !important;
-}
-
-#t1 {
-    width: 180px !important;
-    height: 140px !important;
-    bottom: 60px !important;
-}
-
-#t3, #t4, #t5, #t6, #t7, #t8, #t9 {
-    width: 180px !important;
-    height: 140px !important;
-    bottom: 60px !important;
-}
-
-#container-tv {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 256px;
-    height: 230px;
-    user-select: none;
-}
-
-.tv-el {
-    z-index: 1;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 180px;
-    height: auto;
-}
-
-/**/
-
-@keyframes tremblement {
-    0% { transform: translate(0px, 0px) rotate(0deg); }
-    25% { transform: translate(-1px, 1px) rotate(-1deg); }
-    50% { transform: translate(1px, -1px) rotate(1deg); }
-    75% { transform: translate(-1px, 1px) rotate(-1deg); }
-    100% { transform: translate(1px, -1px) rotate(1deg); }
-}
-
-@keyframes tremblement-diagonal {
-    0% { transform: translate(0px, 0px) rotate(0deg); }
-    20% { transform: translate(-8px, -8px) rotate(-3deg); }
-    40% { transform: translate(8px, 8px) rotate(3deg); }
-    60% { transform: translate(-8px, -8px) rotate(-3deg); }
-    80% { transform: translate(8px, 8px) rotate(3deg); }
-    100% { transform: translate(0px, 0px) rotate(0deg); }
-}
-
-.tremble {
-    /* animation: tremblement 0.2s infinite; */
-    animation: tremblement-diagonal 0.3s infinite;
-}
-
-/**/
-
-.btn-cnt {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 32px;
-    background-color: #121218;
-    margin-inline: 8px;
-    cursor: pointer;
-}
-
-.btn-cnt:hover {
-    border: 2px solid #00ff00 !important;
-    color: #00ff00 !important;
-}
-
-/**/
-.description {
-    position: absolute;
-    padding: 8px;
-    color: white;
-    white-space: nowrap;
-    text-align: left;
-    z-index: 98237594687;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 2px;
-    background-color: #121218;
-    user-select: none;
-    font-size: 13px;
-    font-weight: 500;
+/* PC/TABLETTE */
+@media (min-width: 501px) {
+  body {
+    font-size: 32px;
+  }
 }

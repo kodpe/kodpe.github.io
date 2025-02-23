@@ -1,0 +1,30 @@
+.cursor {
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    width: 400px !important;
+    height: 300px !important;
+}
+
+@keyframes tremblement {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    25% { transform: translate(-1px, 1px) rotate(-1deg); }
+    50% { transform: translate(1px, -1px) rotate(1deg); }
+    75% { transform: translate(-1px, 1px) rotate(-1deg); }
+    100% { transform: translate(1px, -1px) rotate(1deg); }
+}
+
+@keyframes tremblement-diagonal {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    20% { transform: translate(-8px, -8px) rotate(-3deg); }
+    40% { transform: translate(8px, 8px) rotate(3deg); }
+    60% { transform: translate(-8px, -8px) rotate(-3deg); }
+    80% { transform: translate(8px, 8px) rotate(3deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.tremble {
+    animation: tremblement-diagonal 0.3s infinite;
+}

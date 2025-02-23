@@ -3,13 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>couper le pain .fr</title>
+    <link rel="stylesheet" href="css/cursor.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ampoule.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/tv.css">
     <link rel="icon" href="data:,">
 </head>
 
 <body>
+    <!-- -->
+    <div id="guirlande" class="svg-container">
+        <img id="g2svg" src="img/g2.svg" alt="SVG" />
+    </div>
+    <div id="ampoules" class="svg-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
+            <circle class="ampoule" cx="9" cy="8" r="3.8" />
+            <circle class="ampoule" cx="34" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="59.5" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="76" cy="8" r="3.8" />
+            <circle class="ampoule" cx="101" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="126.5" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="143" cy="8" r="3.8" />
+            <circle class="ampoule" cx="167.5" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="193.5" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="209" cy="8" r="3.8" />
+            <circle class="ampoule" cx="233.5" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="259.5" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="276" cy="8" r="3.8" />
+            <circle class="ampoule" cx="300" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="326" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="343" cy="8" r="3.8" />
+            <circle class="ampoule" cx="367" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="393" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="409" cy="8" r="3.8" />
+            <circle class="ampoule" cx="433" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="459" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="475.5" cy="8" r="3.8" />
+            <circle class="ampoule" cx="500" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="526" cy="7.5" r="3.8" />
+            <circle class="ampoule" cx="542" cy="8" r="3.8" />
+            <circle class="ampoule" cx="567" cy="10.5" r="3.8" />
+            <circle class="ampoule" cx="593" cy="7.5" r="3.8" />
+        </svg>
+    </div>
+
+    <!-- -->
+
     <button id="btn-start">?</button>
     <div id="bg-img"><img src="img/bg.jpg" class="background-image" alt="bg"></div>
     <div id="svgContainer" class="container"></div>
@@ -79,6 +121,9 @@
         <img id="knife-blood" class="disabled" src="img/cur-blood.png" alt="cut"></div>
     </div>
 </body>
+<script type="module" src="js/lib.js"></script>
+<script type="module" src="js/tab-description.js"></script>
+<script src="js/ampoule.js"></script>
 <script src="js/pain-fromage.js"></script>
 
 </html>
