@@ -3,11 +3,11 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
     left: 0;
     top: 0;
     margin: 8px;
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
 .counter {
@@ -28,13 +28,13 @@
     border-radius: 2px;
     background-color: #121218;
     user-select: none;
-    height: 64px;
+    height: 48px;
 }
 
 .cnt-icon {
     margin-top: 8px;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
 }
 
 .btn-cnt {

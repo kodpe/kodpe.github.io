@@ -632,25 +632,61 @@ btnSlicerPain.addEventListener("click", function () {
     makeSlicerPain();
 });
 function makeSlicerPain() {
-    if (cnt_nb_bras >= 10000) {
+    if (cnt_nb_bras >= 10000000000n) {
+        cnt_nb_bras -= 10000000000n;
+        cnt_slicer_pain += 1000000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 1000000000n) {
+        cnt_nb_bras -= 1000000000n;
+        cnt_slicer_pain += 100000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 100000000n) {
+        cnt_nb_bras -= 100000000n;
+        cnt_slicer_pain += 10000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 10000000n) {
+        cnt_nb_bras -= 10000000n;
+        cnt_slicer_pain += 1000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 1000000n) {
+        cnt_nb_bras -= 1000000n;
+        cnt_slicer_pain += 100000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 100000n) {
+        cnt_nb_bras -= 100000n;
+        cnt_slicer_pain += 10000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 10000n) {
         cnt_nb_bras -= 10000n;
         cnt_slicer_pain += 1000n;
         updateCntValues();
         return;
     }
-    else if (cnt_nb_bras >= 1000) {
+    else if (cnt_nb_bras >= 1000n) {
         cnt_nb_bras -= 1000n;
         cnt_slicer_pain += 100n;
         updateCntValues();
         return;
     }
-    else if (cnt_nb_bras >= 100) {
+    else if (cnt_nb_bras >= 100n) {
         cnt_nb_bras -= 100n;
         cnt_slicer_pain += 10n;
         updateCntValues();
         return;
     }
-    else if (cnt_nb_bras >= 10) {
+    else if (cnt_nb_bras >= 10n) {
         cnt_nb_bras -= 10n;
         cnt_slicer_pain += 1n;
         updateCntValues();
@@ -663,7 +699,43 @@ btnSlicerFromage.addEventListener("click", function () {
     makeSlicerFromage();
 });
 function makeSlicerFromage() {
-    if (cnt_nb_bras >= 10000) {
+    if (cnt_nb_bras >= 10000000000n) {
+        cnt_nb_bras -= 10000000000n;
+        cnt_slicer_fromage += 1000000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 1000000000n) {
+        cnt_nb_bras -= 1000000000n;
+        cnt_slicer_fromage += 100000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 100000000n) {
+        cnt_nb_bras -= 100000000n;
+        cnt_slicer_fromage += 10000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 10000000n) {
+        cnt_nb_bras -= 10000000n;
+        cnt_slicer_fromage += 1000000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 1000000n) {
+        cnt_nb_bras -= 1000000n;
+        cnt_slicer_fromage += 100000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 100000n) {
+        cnt_nb_bras -= 100000n;
+        cnt_slicer_fromage += 10000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_nb_bras >= 10000) {
         cnt_nb_bras -= 10000n;
         cnt_slicer_fromage += 1000n;
         updateCntValues();
@@ -694,7 +766,16 @@ btnMachinePain.addEventListener("click", function () {
     makeMachinePain();
 });
 function makeMachinePain() {
-    if (cnt_slicer_pain >= 10000 && cnt_nb_bras >= 10000 && cnt_nb_pain >= 10000 && cnt_nb_tartine >= 10000) {
+    if (cnt_slicer_pain >= 100000 && cnt_nb_bras >= 100000 && cnt_nb_pain >= 100000 && cnt_nb_tartine >= 100000) {
+        cnt_slicer_pain -= 100000n;
+        cnt_nb_bras -= 100000n;
+        cnt_nb_pain -= 100000n;
+        cnt_nb_tartine -= 100000n;
+        cnt_machine_pain += 10000n;
+        updateCntValues();
+        return;
+    }
+    else if (cnt_slicer_pain >= 10000 && cnt_nb_bras >= 10000 && cnt_nb_pain >= 10000 && cnt_nb_tartine >= 10000) {
         cnt_slicer_pain -= 10000n;
         cnt_nb_bras -= 10000n;
         cnt_nb_pain -= 10000n;
@@ -737,6 +818,15 @@ btnMachineFromage.addEventListener("click", function () {
     makeMachineFromage();
 });
 function makeMachineFromage() {
+    if (cnt_slicer_fromage >= 100000 && cnt_nb_bras >= 100000 && cnt_nb_fromage >= 100000 && cnt_nb_tartine >= 100000) {
+        cnt_slicer_fromage -= 100000n;
+        cnt_nb_bras -= 100000n;
+        cnt_nb_fromage -= 100000n;
+        cnt_nb_tartine -= 100000n;
+        cnt_machine_fromage += 10000n;
+        updateCntValues();
+        return;
+    }
     if (cnt_slicer_fromage >= 10000 && cnt_nb_bras >= 10000 && cnt_nb_fromage >= 10000 && cnt_nb_tartine >= 10000) {
         cnt_slicer_fromage -= 10000n;
         cnt_nb_bras -= 10000n;
