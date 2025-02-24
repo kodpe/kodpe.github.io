@@ -121,8 +121,44 @@ hoverCntTartine.addEventListener('mouseenter', () => {
 hoverCntTartine.addEventListener('mouseleave', () => {
     description.classList.add('disabled');
 });
-
-
-
-
-
+//
+const hoverCntSlicerPain = document.getElementById('cnt-slicer-pain');
+hoverCntSlicerPain.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    let bg = BigInt(removeDots(hoverCntSlicerPain.innerHTML));
+    description.innerHTML = approxBigIntToWords(bg) + ' (' + bigIntToScientificNotation(bg) + ')';
+});
+hoverCntSlicerPain.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverCntSlicerFromage = document.getElementById('cnt-slicer-fromage');
+hoverCntSlicerFromage.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    let bg = BigInt(removeDots(hoverCntSlicerFromage.innerHTML));
+    description.innerHTML = approxBigIntToWords(bg) + ' (' + bigIntToScientificNotation(bg) + ')';
+});
+hoverCntSlicerFromage.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverCntMachinePain = document.getElementById('cnt-machine-pain');
+hoverCntMachinePain.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    let bg = BigInt(removeDots(hoverCntMachinePain.innerHTML));
+    description.innerHTML = approxBigIntToWords(bg) + ' (' + bigIntToScientificNotation(bg) + ')';
+});
+hoverCntMachinePain.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
+const hoverCntMachineFromage = document.getElementById('cnt-machine-fromage');
+hoverCntMachineFromage.addEventListener('mouseenter', () => {
+    description.classList.remove('disabled');
+    let bg = BigInt(removeDots(hoverCntMachineFromage.innerHTML));
+    description.innerHTML = approxBigIntToWords(bg) + ' (' + bigIntToScientificNotation(bg) + ')';
+});
+hoverCntMachineFromage.addEventListener('mouseleave', () => {
+    description.classList.add('disabled');
+});
+//
