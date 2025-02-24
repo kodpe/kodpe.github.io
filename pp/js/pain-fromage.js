@@ -264,7 +264,7 @@ function play_sound_effect(message) {
         sliceAnimation();
         slice_fromage_sound();
         //
-        cnt_nb_fromage += 1n + 4n * (cnt_slicer_fromage ** 4n);
+        cnt_nb_fromage += 1n + (cnt_slicer_fromage ** 3n);
         updateCntValues();
         //
         var fnct = [le_fromage];
@@ -275,7 +275,7 @@ function play_sound_effect(message) {
         sliceAnimation();
         slice_pain_sound();
         //
-        cnt_nb_pain += 1n + 4n * (cnt_slicer_pain ** 4n);
+        cnt_nb_pain += 1n + (cnt_slicer_pain ** 3n);
         updateCntValues();
         //
         var fnct = [le_pain];
