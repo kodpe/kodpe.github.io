@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/ampoule.css">
     <link rel="stylesheet" href="css/tab.css">
     <link rel="stylesheet" href="css/tv.css">
+    <link rel="stylesheet" href="css/volume.css">
     <link rel="icon" href="data:,">
 </head>
 
@@ -53,7 +54,7 @@
     <!-- -->
 
     <button id="btn-start">?</button>
-    <div id="bg-img"><img src="img/bg.jpg" class="background-image" alt="bg"></div>
+    <div id="bg-img"><img src="img/places/bg.jpg" class="background-image" alt="bg"></div>
     <div id="svgContainer" class="container"></div>
     <div id="svgContainer2" class="container"></div>
 
@@ -95,6 +96,8 @@
             <div id="cnt-machine-fromage" class="counter">0</div>
             <div id="cnt-machine-fromage-btn" class="counter btn-cnt">+</div>
         </div>
+
+
         <div class="description disabled" id="description">La description</div>
         <div id="container-tv">
             <img id="tv" src="img/tv.png" class="tv-el" alt="tv">
@@ -115,6 +118,21 @@
     </div>
     <!-- <div id="helper"></div> -->
 
+    <div id="volume-container" class="disabled">
+        <span class="material-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path
+                    d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320Z" />
+            </svg>
+        </span>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+    </div>
+
+    <div id="place-name" class="disabled">
+        <button id="btn-place-left" class="btn-place disabled"><</button>
+        <div id="place-name-text">cuisine</div>
+        <button id="btn-place-right" class="btn-place disabled">></button>
+    </div>
 
     <div id="cursor" class="cursor disabled">
         <img id="knife" class="disabled" src="img/cur.png" alt="cut">
@@ -124,6 +142,8 @@
 <script type="module" src="js/lib.js"></script>
 <script type="module" src="js/tab-description.js"></script>
 <script src="js/ampoule.js"></script>
+<script src="js/disableKnifeOnUI.js"></script>
 <script src="js/pain-fromage.js"></script>
+<script src="js/tab-buttons.js"></script>
 
 </html>

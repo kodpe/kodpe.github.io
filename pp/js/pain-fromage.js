@@ -25,6 +25,10 @@ btnMachineFromage = document.getElementById("cnt-machine-fromage-btn");
 //
 CntTab = document.getElementById('tab');
 CntTab.classList.add('disabled');
+CntVolume = document.getElementById('volume-container');
+CntVolume.classList.add('disabled');
+CntPlaceName = document.getElementById('place-name');
+CntPlaceName.classList.add('disabled');
 
 // Ouvrir la base de données IndexedDB
 function openDB() {
@@ -148,42 +152,11 @@ openDB().then(() => {
     });
 });
 
-// --------------------
-isOnTabUI = false;
-const tab = document.getElementById("tab");
-isWasInside = false;
-
-document.addEventListener("mousemove", (event) => {
-    const rect = tab.getBoundingClientRect();
-    const inside = (
-        event.clientX >= rect.left -50 &&
-        event.clientX <= rect.right +50 &&
-        event.clientY >= rect.top -50 &&
-        event.clientY <= rect.bottom +50
-    );
-
-    if (inside) {
-        // console.log("Souris à l'intérieur !");
-        isOnTabUI = true;
-        isWasInside = true;
-        document.body.classList.add("show-cursor");
-        knife.classList.add("disabled");
-        knifeBlood.classList.add("disabled");
-    } else {
-        if (isWasInside) {
-            // console.log("Souris à l'extérieur !");
-            isOnTabUI = false;
-            document.body.classList.remove("show-cursor");
-            knife.classList.remove("disabled");
-            knifeBlood.classList.add("disabled");
-            isWasInside = false;
-        }
-    }
-});
 
 //
 
 const story = new Audio("sounds/painfromage.mp3");
+story.volume = 0.8;
 story.loop = true;
 isGameON = false;
 //
@@ -192,8 +165,8 @@ isPain = true;
 isOuille = true;
 //
 const bgAmbiant = new Audio("sounds/casino-ambiance.mp3");
-bgAmbiant.loop = true;
 bgAmbiant.volume = 0.4;
+bgAmbiant.loop = true;
 
 CntPain = document.getElementById('cnt-pain');
 CntFromage = document.getElementById('cnt-fromage');
@@ -496,6 +469,8 @@ function loadGame() {
     bgAmbiant.play();
     cursor.classList.remove("disabled");
     CntTab.classList.remove('disabled');
+    CntVolume.classList.remove('disabled');
+    CntPlaceName.classList.remove('disabled');
     knife.classList.remove("disabled");
 
     btnStart.classList.add("disabled");
@@ -578,320 +553,35 @@ function sliceAnimation() {
     }, 2000);
 }
 
-// ------------ BUTTON MAKE TARTINE
-btnTartine.addEventListener("click", function () {
-    makeTartine();
+
+// ameliorer le systeme sonore
+// faire nouvelle television
+// serveur enshroured 6$ par mois
+// parc a tartines (bras et jambes)
+
+const volumeSlider = document.getElementById('volumeSlider');
+// const volumeLabel = document.getElementById('volumeLabel');
+
+volumeSlider.addEventListener('input', () => {
+    let volumeRatio = volumeSlider.value / 100;
+    story.volume = 0.8 * volumeRatio;
+    bgAmbiant.volume = 0.4 * volumeRatio;
+    slicePainSound.volume = 1 * volumeRatio;
+    sliceFromageSound.volume = 1 * volumeRatio;
 });
-function makeTartine() {
-    if (cnt_nb_pain >= 1000000000n && cnt_nb_fromage >= 1000000000n) {
-        cnt_nb_pain -= 1000000n; // BigInt
-        cnt_nb_fromage -= 1000000n;
-        cnt_nb_tartine += 1000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_pain >= 100000000n && cnt_nb_fromage >= 100000000n) {
-        cnt_nb_pain -= 100000n; // BigInt
-        cnt_nb_fromage -= 100000n;
-        cnt_nb_tartine += 100000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_pain >= 10000000n && cnt_nb_fromage >= 10000000n) {
-        cnt_nb_pain -= 10000n; // BigInt
-        cnt_nb_fromage -= 10000n;
-        cnt_nb_tartine += 10000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_pain >= 1000000n && cnt_nb_fromage >= 1000000n) {
-        cnt_nb_pain -= 1000n; // BigInt
-        cnt_nb_fromage -= 1000n;
-        cnt_nb_tartine += 1000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_pain >= 10000n && cnt_nb_fromage >= 10000n) {
-        cnt_nb_pain -= 10n; // BigInt
-        cnt_nb_fromage -= 10n;
-        cnt_nb_tartine += 10n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_pain >= 1 && cnt_nb_fromage >= 1) {
-        cnt_nb_pain -= 1n; // BigInt
-        cnt_nb_fromage -= 1n;
-        cnt_nb_tartine += 1n;
-        updateCntValues();
-        return;
-    }
-}
 
-// ------------ BUTTON MAKE SLICER PAIN
-btnSlicerPain.addEventListener("click", function () {
-    makeSlicerPain();
+
+////
+
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && 
+      (e.key === '+' || e.key === '-' || e.key === '0')) {
+    e.preventDefault(); // Empêche le zoom
+  }
 });
-function makeSlicerPain() {
-    if (cnt_nb_bras >= 10000000000n) {
-        cnt_nb_bras -= 10000000000n;
-        cnt_slicer_pain += 1000000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000000000n) {
-        cnt_nb_bras -= 1000000000n;
-        cnt_slicer_pain += 100000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100000000n) {
-        cnt_nb_bras -= 100000000n;
-        cnt_slicer_pain += 10000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 10000000n) {
-        cnt_nb_bras -= 10000000n;
-        cnt_slicer_pain += 1000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000000n) {
-        cnt_nb_bras -= 1000000n;
-        cnt_slicer_pain += 100000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100000n) {
-        cnt_nb_bras -= 100000n;
-        cnt_slicer_pain += 10000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 10000n) {
-        cnt_nb_bras -= 10000n;
-        cnt_slicer_pain += 1000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000n) {
-        cnt_nb_bras -= 1000n;
-        cnt_slicer_pain += 100n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100n) {
-        cnt_nb_bras -= 100n;
-        cnt_slicer_pain += 10n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 10n) {
-        cnt_nb_bras -= 10n;
-        cnt_slicer_pain += 1n;
-        updateCntValues();
-        return;
-    }
-}
 
-// ------------ BUTTON MAKE SLICER FROMAGE
-btnSlicerFromage.addEventListener("click", function () {
-    makeSlicerFromage();
-});
-function makeSlicerFromage() {
-    if (cnt_nb_bras >= 10000000000n) {
-        cnt_nb_bras -= 10000000000n;
-        cnt_slicer_fromage += 1000000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000000000n) {
-        cnt_nb_bras -= 1000000000n;
-        cnt_slicer_fromage += 100000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100000000n) {
-        cnt_nb_bras -= 100000000n;
-        cnt_slicer_fromage += 10000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 10000000n) {
-        cnt_nb_bras -= 10000000n;
-        cnt_slicer_fromage += 1000000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000000n) {
-        cnt_nb_bras -= 1000000n;
-        cnt_slicer_fromage += 100000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100000n) {
-        cnt_nb_bras -= 100000n;
-        cnt_slicer_fromage += 10000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 10000) {
-        cnt_nb_bras -= 10000n;
-        cnt_slicer_fromage += 1000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 1000) {
-        cnt_nb_bras -= 1000n;
-        cnt_slicer_fromage += 100n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_nb_bras >= 100) {
-        cnt_nb_bras -= 100n;
-        cnt_slicer_fromage += 10n;
-        updateCntValues();
-        return;
-    }
-    if (cnt_nb_bras >= 10) {
-        cnt_nb_bras -= 10n;
-        cnt_slicer_fromage += 1n;
-        updateCntValues();
-        return;
-    }
-}
-
-// ------------ BUTTON MAKE MACHINE PAIN
-btnMachinePain.addEventListener("click", function () {
-    makeMachinePain();
-});
-function makeMachinePain() {
-    if (cnt_slicer_pain >= 100000 && cnt_nb_bras >= 100000 && cnt_nb_pain >= 100000 && cnt_nb_tartine >= 100000) {
-        cnt_slicer_pain -= 100000n;
-        cnt_nb_bras -= 100000n;
-        cnt_nb_pain -= 100000n;
-        cnt_nb_tartine -= 100000n;
-        cnt_machine_pain += 10000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_pain >= 10000 && cnt_nb_bras >= 10000 && cnt_nb_pain >= 10000 && cnt_nb_tartine >= 10000) {
-        cnt_slicer_pain -= 10000n;
-        cnt_nb_bras -= 10000n;
-        cnt_nb_pain -= 10000n;
-        cnt_nb_tartine -= 10000n;
-        cnt_machine_pain += 1000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_pain >= 1000 && cnt_nb_bras >= 1000 && cnt_nb_pain >= 1000 && cnt_nb_tartine >= 1000) {
-        cnt_slicer_pain -= 1000n;
-        cnt_nb_bras -= 1000n;
-        cnt_nb_pain -= 1000n;
-        cnt_nb_tartine -= 1000n;
-        cnt_machine_pain += 100n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_pain >= 100 && cnt_nb_bras >= 100 && cnt_nb_pain >= 100 && cnt_nb_tartine >= 100) {
-        cnt_slicer_pain -= 100n;
-        cnt_nb_bras -= 100n;
-        cnt_nb_pain -= 100n;
-        cnt_nb_tartine -= 100n;
-        cnt_machine_pain += 10n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_pain >= 10 && cnt_nb_bras >= 10 && cnt_nb_pain >= 10 && cnt_nb_tartine >= 10) {
-        cnt_slicer_pain -= 10n;
-        cnt_nb_bras -= 10n;
-        cnt_nb_pain -= 10n;
-        cnt_nb_tartine -= 10n;
-        cnt_machine_pain += 1n;
-        updateCntValues();
-        return;
-    }
-}
-
-// ------------ BUTTON MAKE MACHINE PAIN
-btnMachineFromage.addEventListener("click", function () {
-    makeMachineFromage();
-});
-function makeMachineFromage() {
-    if (cnt_slicer_fromage >= 100000 && cnt_nb_bras >= 100000 && cnt_nb_fromage >= 100000 && cnt_nb_tartine >= 100000) {
-        cnt_slicer_fromage -= 100000n;
-        cnt_nb_bras -= 100000n;
-        cnt_nb_fromage -= 100000n;
-        cnt_nb_tartine -= 100000n;
-        cnt_machine_fromage += 10000n;
-        updateCntValues();
-        return;
-    }
-    if (cnt_slicer_fromage >= 10000 && cnt_nb_bras >= 10000 && cnt_nb_fromage >= 10000 && cnt_nb_tartine >= 10000) {
-        cnt_slicer_fromage -= 10000n;
-        cnt_nb_bras -= 10000n;
-        cnt_nb_fromage -= 10000n;
-        cnt_nb_tartine -= 10000n;
-        cnt_machine_fromage += 1000n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_fromage >= 1000 && cnt_nb_bras >= 1000 && cnt_nb_fromage >= 1000 && cnt_nb_tartine >= 1000) {
-        cnt_slicer_fromage -= 1000n;
-        cnt_nb_bras -= 1000n;
-        cnt_nb_fromage -= 1000n;
-        cnt_nb_tartine -= 1000n;
-        cnt_machine_fromage += 100n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_fromage >= 100 && cnt_nb_bras >= 100 && cnt_nb_fromage >= 100 && cnt_nb_tartine >= 100) {
-        cnt_slicer_fromage -= 100n;
-        cnt_nb_bras -= 100n;
-        cnt_nb_fromage -= 100n;
-        cnt_nb_tartine -= 100n;
-        cnt_machine_fromage += 10n;
-        updateCntValues();
-        return;
-    }
-    else if (cnt_slicer_fromage >= 10 && cnt_nb_bras >= 10 && cnt_nb_fromage >= 10 && cnt_nb_tartine >= 10) {
-        cnt_slicer_fromage -= 10n;
-        cnt_nb_bras -= 10n;
-        cnt_nb_fromage -= 10n;
-        cnt_nb_tartine -= 10n;
-        cnt_machine_fromage += 1n;
-        updateCntValues();
-        return;
-    }
-}
-
-function hasChance(pourcentage) {
-    return Math.random() * 100 < pourcentage;
-}
-
-// ----- MACHINE A PAIN
-function AutoMachines() {
-    if (isGameON === false)
-        return;
-
-    if (cnt_machine_pain >= 1) {
-        cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 3n) * (cnt_machine_pain * cnt_machine_pain * 9n);
-        if (hasChance(10)) {
-            cnt_nb_bras += cnt_machine_pain + cnt_slicer_pain / 2n;
-            cnt_nb_tartine += cnt_machine_pain;
-        }
-    }
-    if (cnt_machine_fromage >= 1) {
-        cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 3n) * (cnt_machine_fromage * cnt_machine_fromage * 9n);
-        if (hasChance(10)) {
-            cnt_nb_bras += cnt_machine_fromage + cnt_slicer_fromage / 2n;
-            cnt_nb_tartine += cnt_machine_fromage;
-        }
-    }
-    if (cnt_machine_pain >= 1 || cnt_machine_fromage >= 1) {
-        updateCntValues();
-    }
-}
-
-setInterval(AutoMachines, 250);
-
+document.addEventListener('wheel', function(e) {
+  if (e.ctrlKey || e.metaKey) {
+    e.preventDefault(); // Empêche le zoom
+  }
+}, { passive: false });

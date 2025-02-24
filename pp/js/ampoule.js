@@ -3,7 +3,6 @@ const christmasColors = ['#FF0000', '#00FF00', '#FFFF00', '#0000FF', '#FF00FF'];
 const ampoules = document.querySelectorAll('.ampoule');
 
 ampoules.forEach((ampoule, index) => {
-    console.log("IUHIUH");
     const colorIndex = index % christmasColors.length;
     ampoule.style.setProperty('--color1', christmasColors[colorIndex]);
     ampoule.style.setProperty('--color2', christmasColors[(colorIndex + 1) % christmasColors.length]);

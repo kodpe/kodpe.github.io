@@ -3,7 +3,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0px;
     left: 0;
     top: 0;
     margin: 8px;
@@ -13,47 +13,61 @@
 .counter {
     left: 0;
     margin: 0px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    border-radius: 3px;
-    padding-inline: 8px;
+    border-radius: 0px 4px 4px 0px;
+    padding-inline: 12px;
     color: #ffffff;
     z-index: 2;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #121218;
+    /**/
+    height: 32px;
+    padding-block: 3px;
+    /**/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cnt-bloc {
     display: flex;
     align-items: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 2px;
-    background-color: #121218;
+    /* border: 1px solid rgb(255, 255, 255); */
+    /* border-radius: 2px; */
+    /* background-color: #121218; */
     user-select: none;
-    height: 48px;
+    /**/
+    height: 40px;
 }
 
 .cnt-icon {
     margin-top: 8px;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 }
 
 .btn-cnt {
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 32px;
+    border: 1px solid rgb(35, 136, 184);
+    border-left: 0px;
+    border-radius: 0px 4px 4px 0px;
     background-color: #121218;
-    padding-inline: 0 !important;
-    width: 32px !important;
-    height: 32px !important;
+    /* margin-inline: 10px; */
+    padding-inline: 3px !important;
+    width: 24px !important;
+    height: 24px !important;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 500;
 }
 
 .btn-cnt:hover {
     border: 2px solid #00ff00 !important;
+    border-left: 0px;
     color: #00ff00 !important;
 }
 
