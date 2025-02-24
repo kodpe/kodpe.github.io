@@ -1,3 +1,7 @@
+/*
+    IMPORT REQUIREMENT : pain-fromage.js
+*/
+
 // ------------ BUTTON MAKE TARTINE
 btnTartine.addEventListener("click", function () {
     makeTartine();
@@ -394,24 +398,39 @@ function hasChance(pourcentage) {
 function AutoMachines() {
     if (isGameON === false)
         return;
+    let isChanceToMakeBrasAndTartines = false;
+    if (hasChance(5)) {
+        isChanceToMakeBrasAndTartines = true;
+    }
 
     if (cnt_machine_pain >= 1) {
-        cnt_nb_pain += 1n * ((1n + cnt_slicer_pain) * 3n) * (cnt_machine_pain * cnt_machine_pain * 9n);
-        if (hasChance(5)) {
-            cnt_nb_bras += (cnt_machine_pain + cnt_slicer_pain) / 2n;
-            cnt_nb_tartine += cnt_machine_pain;
+        cnt_nb_pain += 10n + cnt_machine_pain ** 4n;
+        if (isChanceToMakeBrasAndTartines) {
+            cnt_nb_bras += cnt_machine_pain / 10n;
+            cnt_nb_tartine += cnt_machine_pain / 10n;
         }
     }
     if (cnt_machine_fromage >= 1) {
-        cnt_nb_fromage += 1n * ((1n + cnt_slicer_fromage) * 3n) * (cnt_machine_fromage * cnt_machine_fromage * 9n);
-        if (hasChance(5)) {
-            cnt_nb_bras += (cnt_machine_fromage + cnt_slicer_fromage) / 2n;
-            cnt_nb_tartine += cnt_machine_fromage;
+        cnt_nb_fromage += 10n + cnt_machine_fromage ** 4n;
+        if (isChanceToMakeBrasAndTartines) {
+            cnt_nb_bras += cnt_machine_fromage / 10n;
+            cnt_nb_tartine += cnt_machine_fromage / 10n;
         }
     }
-    if (cnt_machine_pain >= 1 || cnt_machine_fromage >= 1) {
-        updateCntValues();
-    }
+    updateCntValues();
 }
+setInterval(AutoMachines, 280);
 
-setInterval(AutoMachines, 240);
+// AUTOSAVE DATABASE
+function AutoSaveDB() {
+    saveCounters(cnt_nb_pain.toString(),
+                cnt_nb_fromage.toString(),
+                cnt_nb_bras.toString(),
+                cnt_nb_tartine.toString(),
+                cnt_slicer_pain.toString(),
+                cnt_slicer_fromage.toString(),
+                cnt_machine_pain.toString(),
+                cnt_machine_fromage.toString(),
+            );
+}
+setInterval(AutoSaveDB, 3000);

@@ -264,7 +264,8 @@ function play_sound_effect(message) {
         sliceAnimation();
         slice_fromage_sound();
         //
-        addFromage();
+        cnt_nb_fromage += 1n;
+        updateCntValues();
         //
         var fnct = [le_fromage];
         var r = fnct[Math.floor(Math.random() * fnct.length)];
@@ -274,7 +275,8 @@ function play_sound_effect(message) {
         sliceAnimation();
         slice_pain_sound();
         //
-        addPain();
+        cnt_nb_pain += 1n;
+        updateCntValues();
         //
         var fnct = [le_pain];
         var r = fnct[Math.floor(Math.random() * fnct.length)];
@@ -304,6 +306,7 @@ function updateCntValues() {
     CntMachinePain.innerHTML = formatNPT(cnt_machine_pain.toString());
     CntMachineFromage.innerHTML = formatNPT(cnt_machine_fromage.toString());
     //
+    /* // autosaveDB() // this is DEPR
     saveCounters(cnt_nb_pain.toString(),
                 cnt_nb_fromage.toString(),
                 cnt_nb_bras.toString(),
@@ -313,6 +316,7 @@ function updateCntValues() {
                 cnt_machine_pain.toString(),
                 cnt_machine_fromage.toString(),
             );
+            */
     //
     if (cnt_nb_pain < 1 || cnt_nb_fromage < 1)
         btnTartine.classList.add('disabled');
@@ -405,10 +409,8 @@ function addFromage() {
 }
 
 function addBras() {
-    // console.warn('addBras() + ActiveKnifeBlood()');
     ActiveKnifeBlood();
     cnt_nb_bras += 1n;
-    //
     updateCntValues();
 }
 
@@ -515,35 +517,6 @@ function loadGame() {
 
 init();
 
-img1 = document.getElementById("t1");
-img2 = document.getElementById("t2");
-img3 = document.getElementById("t3");
-img4 = document.getElementById("t4");
-img5 = document.getElementById("t5");
-img6 = document.getElementById("t6");
-img7 = document.getElementById("t7");
-img8 = document.getElementById("t8");
-img9 = document.getElementById("t9");
-img10 = document.getElementById("t10");
-img11 = document.getElementById("t11");
-img12 = document.getElementById("t12");
-img13 = document.getElementById("t13");
-var imgsTV = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
-
-function tv_roll() {
-    // console.log('tv_roll()');
-    for (var i = 0; i < imgsTV.length; i++) {
-        imgsTV[i].classList.add('disabled');
-    }
-    var randomId = Math.floor(Math.random() * imgsTV.length);
-    imgsTV[randomId].classList.remove('disabled');
-    setTimeout(function () {
-        tv_roll();
-    }, 3000);
-}
-
-tv_roll();
-
 function sliceAnimation() {
     knife.classList.add("tremble");
     knifeBlood.classList.add("tremble");
@@ -553,15 +526,11 @@ function sliceAnimation() {
     }, 2000);
 }
 
-
-// ameliorer le systeme sonore
-// faire nouvelle television
 // serveur enshroured 6$ par mois
 // parc a tartines (bras et jambes)
 
 const volumeSlider = document.getElementById('volumeSlider');
-// const volumeLabel = document.getElementById('volumeLabel');
-
+// TODO ameliorer le systeme sonore
 volumeSlider.addEventListener('input', () => {
     let volumeRatio = volumeSlider.value / 100;
     story.volume = 0.8 * volumeRatio;
@@ -570,18 +539,11 @@ volumeSlider.addEventListener('input', () => {
     sliceFromageSound.volume = 1 * volumeRatio;
 });
 
-
-////
-
-document.addEventListener('keydown', function(e) {
-  if ((e.ctrlKey || e.metaKey) && 
-      (e.key === '+' || e.key === '-' || e.key === '0')) {
-    e.preventDefault(); // Empêche le zoom
+// HIDDEN MODE
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    console.log('L’utilisateur a quitté la page (changement d’onglet ou fenêtre minimisée)');
+  } else {
+    console.log('L’utilisateur est revenu sur la page');
   }
 });
-
-document.addEventListener('wheel', function(e) {
-  if (e.ctrlKey || e.metaKey) {
-    e.preventDefault(); // Empêche le zoom
-  }
-}, { passive: false });
