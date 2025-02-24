@@ -419,7 +419,7 @@ function AutoMachines() {
     }
     updateCntValues();
 }
-setInterval(AutoMachines, 280);
+setInterval(AutoMachines, 250);
 
 // AUTOSAVE DATABASE
 function AutoSaveDB() {
