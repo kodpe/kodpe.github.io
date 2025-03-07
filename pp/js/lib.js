@@ -12,7 +12,7 @@ export function approxBigIntToWords(num) {
         unitIndex++;
     }
 
-  const unit = units[unitIndex - 1];
+    const unit = units[unitIndex - 1];
     const plural = value > 1 ? 's' : ''; // Pluriel si la valeur est supérieure à 1
 
     return `${value} ${unit}${plural}`;
@@ -21,7 +21,7 @@ export function approxBigIntToWords(num) {
 export function bigIntToScientificNotation(num) {
     const strNum = num.toString();
     const length = strNum.length;
-    
+
     if (length <= 3) {
         return `${num}`;
     }
@@ -29,19 +29,19 @@ export function bigIntToScientificNotation(num) {
     const exponent = length - 1;
     const mantissa = num / BigInt(10 ** exponent); // Déplacement de la virgule
 
-    return `${mantissa}*10^${exponent}`;
+    return `${mantissa}x10^${exponent}`;
 }
 
 const prefixes = [
-  'm', // 10^6 - méga
-  'G', // 10^9 - giga
-  'T', // 10^12 - tera
-  'P', // 10^15 - peta
-  'E', // 10^18 - exa
-  'Z', // 10^21 - zetta
-  'Y', // 10^24 - yotta
-  'rY', // 10^27 - ronna
-  'qY', // 10^30 - quetta
+    'm', // 10^6 - méga
+    'G', // 10^9 - giga
+    'T', // 10^12 - tera
+    'P', // 10^15 - peta
+    'E', // 10^18 - exa
+    'Z', // 10^21 - zetta
+    'Y', // 10^24 - yotta
+    'rY', // 10^27 - ronna
+    'qY', // 10^30 - quetta
 ];
 
 export function bigIntToInternationalFormat(num) {
@@ -86,5 +86,21 @@ console.log(bigIntToInternationalFormat(num4)); // "2 trillions"
 */
 
 export function removeDots(str) {
-    return str.replace(/\./g, ''); // Remplace tous les points par une chaîne vide
+    return str.replace(/\./g, '');
+}
+
+export function removeSpaces(str) {
+    return str.replace(/\ /g, '');
+}
+
+export function formatNPT(str) {
+    return str.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+export function formatNSP(str) {
+    return str.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+export function hasChance(pourcentage) {
+    return Math.random() * 100 < pourcentage;
 }

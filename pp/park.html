@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parc</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/volume.css">
+    <!---->
+    <link rel="stylesheet" href="css/park.css">
+    <!---->
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="canvas-container">
+
+    <canvas id="myCanvas"></canvas>
+
+    <div id="commandPanel" class="cmd-panel PDA">
+        <span id="cmd-panel-title">PANNEAU DE COMMANDE</span>
+        <button id="btn-park" class="btn-cmd">OUVRIR LE PARC</button>
+        <button id="btn-activity" class="btn-cmd">EN ORDRE ! / RECREATION</button>
+        <button id="btn-domaine-tour" class="btn-cmd">FAIRE LE TOUR DU DOMAINE</button>
+    </div>
+
+    <div id="infoPanel" class="info-panel disabled PDA">
+        <button id="btn-left-select" class="profil-nav-btn"> ⏴ </button>
+        <button id="btn-right-select" class="profil-nav-btn"> ⏵ </button>
+        <button id="closePanel">×</button>
+        <div class="table-container">
+    <table>
+        <tr>
+            <td class="case left-align"><img id="img-tartipod" src="img/bonhomme-tartine.png" height="50"></td>
+            <td id="tartipod-name" class="case left-align">[txt]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Niveau</td>
+            <td id="tartipod-lvl" class="case right-align">[nb]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Age</td>
+            <td id="tartipod-age" class="case right-align">[nb] 10 jours</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Etat</td>
+            <td id="tartipod-status" class="case right-align">[au bord de la mort]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Pense à</td>
+            <td id="tartipod-think" class="case right-align">[barbecue/écureuil]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Aime le</td>
+            <td id="tartipod-favorite" class="case right-align">[pain/fromage]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Consommation</td>
+            <td id="tartipod-need" class="case right-align">[nb pain par heure]</td>
+        </tr>
+        <tr>
+            <td class="case left-align">Bonus</td>
+            <td id="tartipod-xp" class="case right-align">
+                <div id="xp-bar" class="xp-bar">
+                    <div id="xp-fill" class="xp-fill"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+        <button id="upgrade-btn">AMELIORER</button>
+    <table id="cost-table" class="disabled">
+        <tr>
+            <td class="case left-align">Coût</td>
+            <td id="upgrade-cost" class="case right-align">[upgrade-cost]</td>
+        </tr>
+    </table>
+    </div>
+</div>
+
+    <div id="tab" class="disabled">
+        <div class="cnt-bloc">
+            <div id="cnt-img-pain"><img src="img/cnt-pain.jpg" class="cnt-icon" alt="pain"></div>
+            <div id="cnt-pain" class="counter">0</div>
+        </div>
+        <div class="cnt-bloc">
+            <div id="cnt-img-fromage"><img src="img/cnt-fromage.jpg" class="cnt-icon" alt="fromage"></div>
+            <div id="cnt-fromage" class="counter">0</div>
+        </div>
+        <div class="cnt-bloc">
+            <div id="cnt-img-bras"><img src="img/cnt-bras.jpg" class="cnt-icon" alt="bras"></div>
+            <div id="cnt-bras" class="counter">0</div>
+        </div>
+        <div class="cnt-bloc">
+            <div id="cnt-img-tartine"><img src="img/cnt-tartine.jpg" class="cnt-icon" alt="tartine"></div>
+            <div id="cnt-tartine" class="counter">0</div>
+            <div id="cnt-tartine-btn" class="counter btn-cnt">+</div>
+        </div>
+        <div class="cnt-bloc">
+            <div id="cnt-img-tartipod"><img src="img/bonhomme-tartine-w.png" class="cnt-icon" alt="tartine"></div>
+            <div id="cnt-tartipod" class="counter">0</div>
+            <div id="cnt-tartipod-btn" class="counter btn-cnt">+</div>
+        </div>
+    </div>
+
+    <!-- -->
+        <div class="description disabled" id="description">La description</div>
+    <!-- -->
+
+</body>
+<script type="module" src="js/database.js"></script>
+<script type="module" src="js/autoDiv.js"></script>
+<script type="module" src="js/volume.js"></script>
+<script type="module" src="js/lib.js"></script>
+<script type="module" src="js/tab-description.js"></script>
+<script type="module" src="js/itemsManager.js"></script>
+<script type="module" src="js/park.js"></script>
+
+</html>

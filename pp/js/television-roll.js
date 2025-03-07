@@ -1,30 +1,47 @@
+import { URL } from "./constants.js";
+import { cnt_machine_pain, cnt_machine_fromage } from "./itemsManager.js";
+import { setupAudio, setVolume, playSounds, pauseSounds, initPageSoundsArrayVolumeRatio } from "./volume.js";
+import { updatePageDB } from "./database.js";
 // TELEVISION ROLL
-// TODO faire nouvelle television
-img1 = document.getElementById("t1");
-img2 = document.getElementById("t2");
-img3 = document.getElementById("t3");
-img4 = document.getElementById("t4");
-img5 = document.getElementById("t5");
-img6 = document.getElementById("t6");
-img7 = document.getElementById("t7");
-img8 = document.getElementById("t8");
-img9 = document.getElementById("t9");
-img10 = document.getElementById("t10");
-img11 = document.getElementById("t11");
-img12 = document.getElementById("t12");
-img13 = document.getElementById("t13");
-var imgsTV = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
+// TODO faire nouvelle television plus belle
+const imgsTV = Array.from({ length: 15 }, (_, i) => document.getElementById(`t${i + 1}`));
+
+let currentIndex = Math.floor(Math.random() * imgsTV.length); // Image de départ aléatoire
 
 function tv_roll() {
-    // console.log('tv_roll()');
-    for (var i = 0; i < imgsTV.length; i++) {
-        imgsTV[i].classList.add('disabled');
-    }
-    var randomId = Math.floor(Math.random() * imgsTV.length);
-    imgsTV[randomId].classList.remove('disabled');
-    setTimeout(function () {
-        tv_roll();
-    }, 3000);
-}
+    // Désactiver toutes les images
+    imgsTV.forEach(img => img.classList.add('disabled'));
 
+    // Activer l'image actuelle
+    imgsTV[currentIndex].classList.remove('disabled');
+
+    // Passer à l'image suivante (boucle infinie)
+    currentIndex = (currentIndex + 1) % imgsTV.length;
+    if ((currentIndex === 5 || currentIndex === 9) && (cnt_machine_pain === 0 || cnt_machine_fromage === 0))
+        currentIndex++;
+
+    // Relancer le roulement
+    setTimeout(tv_roll, 2000);
+}
 tv_roll();
+
+const button = setupAudio('sounds/old-button.mp3', 1, false);
+
+let btnTV = document.getElementById('btn-tv');
+btnTV.addEventListener('click', function () {
+    console.log('click on tv:', currentIndex);
+    button.play();
+    if (currentIndex === 5) {
+        console.log("GOTO TV STREET");
+        updatePageDB(3, { found: true });
+        window.location.href = URL.STREET;
+    }
+    else if (currentIndex === 9) {
+        console.log("GOTO TV PARK");
+        updatePageDB(1, { found: true });
+        window.location.href = URL.PARK;
+    }
+    else {
+    }
+
+});

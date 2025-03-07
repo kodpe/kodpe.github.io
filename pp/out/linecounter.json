@@ -1,0 +1,610 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "/home/kodp/kodpe.github.io/pp",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2025-03-01 15:17:59",
+            "filesum": 86,
+            "codesum": 3970,
+            "commentsum": 401,
+            "blanksum": 362,
+            "statistics": {
+                ".html": {
+                    "code": 269,
+                    "comment": 5,
+                    "blank": 22
+                },
+                ".svg": {
+                    "code": 78,
+                    "comment": 2,
+                    "blank": 2
+                },
+                ".js": {
+                    "code": 3000,
+                    "comment": 356,
+                    "blank": 261
+                },
+                ".css": {
+                    "code": 623,
+                    "comment": 38,
+                    "blank": 77
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 8,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "css/ampoule.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 75,
+                    "comment": 2,
+                    "filename": "css/button.css"
+                },
+                {
+                    "blank": 3,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "css/cursor.css"
+                },
+                {
+                    "blank": 24,
+                    "code": 155,
+                    "comment": 12,
+                    "filename": "css/park.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 75,
+                    "comment": 2,
+                    "filename": "css/street.css"
+                },
+                {
+                    "blank": 13,
+                    "code": 88,
+                    "comment": 2,
+                    "filename": "css/style.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 74,
+                    "comment": 7,
+                    "filename": "css/tab.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 48,
+                    "comment": 5,
+                    "filename": "css/tv.css"
+                },
+                {
+                    "blank": 5,
+                    "code": 40,
+                    "comment": 8,
+                    "filename": "css/volume.css"
+                },
+                {
+                    "filename": "img/bonhomme-tartine-w.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/bonhomme-tartine.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cnt-bras.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cnt-fromage.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cnt-pain.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cnt-tartine.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cur-blood.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/cur.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 32,
+                    "comment": 0,
+                    "filename": "img/g2.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 23,
+                    "comment": 1,
+                    "filename": "img/lefromage.svg"
+                },
+                {
+                    "blank": 1,
+                    "code": 23,
+                    "comment": 1,
+                    "filename": "img/lepain.svg"
+                },
+                {
+                    "filename": "img/machine-fromage.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/machine-pain.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/bg.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/domain.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/domainOVER.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/gare.avif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/park.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/parkFG.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/rue.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/places/salon.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/slicer-fromage.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/slicer-pain.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t1.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t10.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t11.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t12.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t13.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t14.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t15.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t2.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t3.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t4.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t5.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t6.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t7.webp",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t8.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "img/tv/t9.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 9,
+                    "code": 133,
+                    "comment": 5,
+                    "filename": "index.html"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "js/ampoule.js"
+                },
+                {
+                    "blank": 24,
+                    "code": 149,
+                    "comment": 10,
+                    "filename": "js/autoDiv.js"
+                },
+                {
+                    "blank": 27,
+                    "code": 378,
+                    "comment": 50,
+                    "filename": "js/database.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 28,
+                    "comment": 12,
+                    "filename": "js/dataManager.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 39,
+                    "comment": 2,
+                    "filename": "js/disableKnifeOnUI.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 49,
+                    "comment": 41,
+                    "filename": "js/lib.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 56,
+                    "comment": 4,
+                    "filename": "js/pageManager.js"
+                },
+                {
+                    "blank": 66,
+                    "code": 873,
+                    "comment": 77,
+                    "filename": "js/pain-fromage.js"
+                },
+                {
+                    "blank": 65,
+                    "code": 568,
+                    "comment": 94,
+                    "filename": "js/park.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 85,
+                    "comment": 10,
+                    "filename": "js/street.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "js/tab-buttons.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 145,
+                    "comment": 23,
+                    "filename": "js/tab-description.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 528,
+                    "comment": 6,
+                    "filename": "js/tartinoide-data.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 23,
+                    "comment": 10,
+                    "filename": "js/television-roll.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 58,
+                    "comment": 14,
+                    "filename": "js/volume.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 3,
+                    "filename": "js/zoom-blocker.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 107,
+                    "comment": 0,
+                    "filename": "park.html"
+                },
+                {
+                    "filename": "sounds/alienloop.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/button-up.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/casino-ambiance.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/city-night.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/lvlup.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/mamie1.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/mamie2.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/mamie3.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/mamie4.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/old-button.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/painfromage.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/slice-fromage.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/slice-pain.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/st-james-park.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/tawny-owl.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/tvnoise.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "sounds/xpup.mp3",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "street.html"
+                },
+                {
+                    "filename": "videos/tv.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "videos/tv2.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                }
+            ]
+        }
+    ]
+}

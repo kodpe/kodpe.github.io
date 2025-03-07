@@ -1,26 +1,23 @@
+/***************/
+/* VOLUME */
 #volume-container {
     position: absolute;
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: center;
-    gap: 4px;
-    background: #121218;
-    border-radius: 4px;
-    z-index: 2;
-    border: 1px solid rgb(255, 255, 255);
-    width: 130px;
+    flex-direction: row;
     z-index: 3;
-    /**/
-    height: 32px;
-    padding: 4px;
+}
+
+#volume-container span {
+    padding-top: 2px;
 }
 
 input[type=range] {
     -webkit-appearance: none;
     appearance: none;
     width: 100px;
-    height: 6px;
+    height: 4px;
     background: #ddd;
     border-radius: 5px;
     outline: none;
@@ -29,21 +26,16 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #82cece;
+    width: 14px;
+    height: 14px;
+    background-color: #ddb42cff;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.volume-label {
-    font-size: 1.2em;
-    color: #333;
-}
-
 input[type=range]::-webkit-slider-thumb:hover {
-    background: #00ff00 !important;
-    transform: scale(1.1);
+    /* background: #00ff00 !important; */
+    transform: scale(1.2);
 }
 
 #volume-container:hover {
@@ -52,56 +44,13 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 /***************/
 /* PLACE-NAME */
-
 #place-name {
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    background-color: #121218;
-    user-select: none;
-    min-width: 300px;
-    text-align: center;
     position: absolute;
-    bottom: 0;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    /**/
-    height: 32px;
-    padding: 4px;
-    gap: 32px;
-}
-
-.btn-place {
-    background-color: #121218;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding-inline: 7px;
-    margin-inline: 4px;
-}
-
-.btn-place:hover {
-    color: #00ff00 !important;
-    border: 1px solid rgb(0, 255, 0);
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-#btn-place-left {
-    position: absolute;
+    top: 0;
     left: 0;
-    margin-left: 6px;
-}
-
-#btn-place-right {
-    position: absolute;
-    right: 0;
-    margin-right: 6px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    text-transform: uppercase;
+    padding: 6px 32px;
+    font-size: 20px;
 }

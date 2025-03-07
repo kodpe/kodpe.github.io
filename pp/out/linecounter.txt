@@ -1,0 +1,106 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2025-03-01 15:17:59
+count workspace : /home/kodp/kodpe.github.io/pp
+total files : 86
+total code lines : 3970
+total comment lines : 401
+total blank lines : 362
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .html|            269|              5|             22|    6.8|
+   |           .svg|             78|              2|              2|    2.0|
+   |            .js|           3000|            356|            261|     76|
+   |           .css|            623|             38|             77|     16|
+   -------------------------------------------------------------------------
+css/ampoule.css, code is 41, comment is 0, blank is 8.
+css/button.css, code is 75, comment is 2, blank is 6.
+css/cursor.css, code is 27, comment is 0, blank is 3.
+css/park.css, code is 155, comment is 12, blank is 24.
+css/street.css, code is 75, comment is 2, blank is 6.
+css/style.css, code is 88, comment is 2, blank is 13.
+css/tab.css, code is 74, comment is 7, blank is 6.
+css/tv.css, code is 48, comment is 5, blank is 6.
+css/volume.css, code is 40, comment is 8, blank is 5.
+img/bonhomme-tartine-w.png, it is a binary file.
+img/bonhomme-tartine.png, it is a binary file.
+img/cnt-bras.jpg, it is a binary file.
+img/cnt-fromage.jpg, it is a binary file.
+img/cnt-pain.jpg, it is a binary file.
+img/cnt-tartine.jpg, it is a binary file.
+img/cur-blood.png, it is a binary file.
+img/cur.png, it is a binary file.
+img/g2.svg, code is 32, comment is 0, blank is 0.
+img/lefromage.svg, code is 23, comment is 1, blank is 1.
+img/lepain.svg, code is 23, comment is 1, blank is 1.
+img/machine-fromage.jpg, it is a binary file.
+img/machine-pain.jpg, it is a binary file.
+img/places/bg.jpg, it is a binary file.
+img/places/domain.jpg, it is a binary file.
+img/places/domainOVER.png, it is a binary file.
+img/places/gare.avif, it is a binary file.
+img/places/park.jpg, it is a binary file.
+img/places/parkFG.png, it is a binary file.
+img/places/rue.jpg, it is a binary file.
+img/places/salon.jpg, it is a binary file.
+img/slicer-fromage.jpg, it is a binary file.
+img/slicer-pain.jpg, it is a binary file.
+img/tv.png, it is a binary file.
+img/tv/t1.jpg, it is a binary file.
+img/tv/t10.jpg, it is a binary file.
+img/tv/t11.jpg, it is a binary file.
+img/tv/t12.jpg, it is a binary file.
+img/tv/t13.jpg, it is a binary file.
+img/tv/t14.jpg, it is a binary file.
+img/tv/t15.jpg, it is a binary file.
+img/tv/t2.jpg, it is a binary file.
+img/tv/t3.jpg, it is a binary file.
+img/tv/t4.jpg, it is a binary file.
+img/tv/t5.jpg, it is a binary file.
+img/tv/t6.jpg, it is a binary file.
+img/tv/t7.webp, it is a binary file.
+img/tv/t8.jpg, it is a binary file.
+img/tv/t9.jpg, it is a binary file.
+index.html, code is 133, comment is 5, blank is 9.
+js/ampoule.js, code is 10, comment is 0, blank is 2.
+js/autoDiv.js, code is 149, comment is 10, blank is 24.
+js/database.js, code is 378, comment is 50, blank is 27.
+js/dataManager.js, code is 28, comment is 12, blank is 5.
+js/disableKnifeOnUI.js, code is 39, comment is 2, blank is 3.
+js/lib.js, code is 49, comment is 41, blank is 17.
+js/pageManager.js, code is 56, comment is 4, blank is 1.
+js/pain-fromage.js, code is 873, comment is 77, blank is 66.
+js/park.js, code is 568, comment is 94, blank is 65.
+js/street.js, code is 85, comment is 10, blank is 16.
+js/tab-buttons.js, code is 0, comment is 0, blank is 0.
+js/tab-description.js, code is 145, comment is 23, blank is 0.
+js/tartinoide-data.js, code is 528, comment is 6, blank is 20.
+js/television-roll.js, code is 23, comment is 10, blank is 7.
+js/volume.js, code is 58, comment is 14, blank is 7.
+js/zoom-blocker.js, code is 11, comment is 3, blank is 1.
+park.html, code is 107, comment is 0, blank is 8.
+sounds/alienloop.mp3, it is a binary file.
+sounds/button-up.mp3, it is a binary file.
+sounds/casino-ambiance.mp3, it is a binary file.
+sounds/city-night.mp3, it is a binary file.
+sounds/lvlup.mp3, it is a binary file.
+sounds/mamie1.mp3, it is a binary file.
+sounds/mamie2.mp3, it is a binary file.
+sounds/mamie3.mp3, it is a binary file.
+sounds/mamie4.mp3, it is a binary file.
+sounds/old-button.mp3, it is a binary file.
+sounds/painfromage.mp3, it is a binary file.
+sounds/slice-fromage.mp3, it is a binary file.
+sounds/slice-pain.mp3, it is a binary file.
+sounds/st-james-park.mp3, it is a binary file.
+sounds/tawny-owl.mp3, it is a binary file.
+sounds/tvnoise.mp3, it is a binary file.
+sounds/xpup.mp3, it is a binary file.
+street.html, code is 29, comment is 0, blank is 5.
+videos/tv.mp4, it is a binary file.
+videos/tv2.mp4, it is a binary file.
+===============================================================================

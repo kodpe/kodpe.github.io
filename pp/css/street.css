@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.disabled {
+    display: none !important;
+}
+
+ #tv-video {
+    width: 246px; 
+    height: 186px;
+    position: absolute;
+    top: 599px;
+    left: 843px;
+    border-radius: 16px;
+    rotate: -1.7deg;
+    z-index: 90;
+    object-fit: cover;
+    pointer-events: none;
+    animation: expand 1s ease-out forwards; 
+  }
+
+#btn-tv {
+    position: absolute;
+    top: 683px;
+    left: 1169px;
+    z-index: 91;
+    width: 40px;
+    height: 40px;
+    border-radius: 45px;
+    /* border: 1px solid #5e631a; */
+    background: transparent;
+    border: none;
+}
+
+#btn-tv:hover {
+    /* border: 1px solid #5e631a; */
+    background: transparent !important;
+    cursor: pointer;
+}
+
+#tv-video {
+  position: absolute;
+  top: 775px; /* Position initiale */
+  left: 843px; /* Position initiale */
+  width: 246px; 
+  height: 10px; /* Hauteur initiale */
+  background-color: blue; /* Ajoute une couleur de fond pour visualiser mieux l'élément */
+  border-radius: 16px;
+  transform-origin: center center; /* Centre l'élément pour l'animation */
+  animation: expand 0.2s ease-out forwards; /* L'animation s'applique */
+  object-fit: cover; /* Pour le contenu vidéo (si applicable) */
+  pointer-events: none; /* Désactive les événements sur l'élément pendant l'animation */
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+    top: 680px;
+  }
+  70% {
+    transform: scaleY(0.1);
+  }
+  90% {
+    transform: scaleY(-1.1);
+  }
+  100% {
+    width: 246px; 
+    height: 186px; 
+    top: 599px;
+    left: 843px;
+  }
+}

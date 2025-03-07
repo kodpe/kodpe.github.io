@@ -1,0 +1,206 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    font-size: 14px;
+    /* font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif; */
+    /* font-weight: 400; */
+    /* font-style: normal; */
+    /**/
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    user-select: none; /* Empêche la sélection de texte */
+    -webkit-user-select: none; /* Pour les navigateurs Webkit (Chrome, Safari) */
+    -moz-user-select: none; /* Pour Firefox */
+    -ms-user-select: none; /* Pour Internet Explorer/Edge */
+}
+
+canvas {
+    display: block;
+    background-color: #121218;
+    height: 100%;
+}
+
+.canvas-container {
+    position: relative; /* Important pour positionner les éléments enfants */
+}
+
+.info-panel {
+    position: absolute;
+    top: 132px;
+    right: 0;
+    padding: 4px;
+    width: 272px;
+    max-width: 100%;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.case {
+    border-width: 2px;
+    border-color: #121218dd;
+    background-color: rgba(25, 25, 40, 0.9);
+    font-size: 15px;
+    margin: 0;
+    padding: 6px;
+}
+
+#img-tartipod {
+    animation: bonhomme-bon 0.6s infinite ease-in-out;
+    padding-top: 18px !important;
+    padding-left: 18px !important;
+    margin: -10px !important;
+}
+
+@keyframes bonhomme-bon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        /* Position de départ : pas de mouvement, pas de rotation */
+    }
+
+    25% {
+        transform: translateY(-12px) rotate(-12deg);
+        /* Petit saut en haut et penche à gauche */
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+        /* Retour à la position normale */
+    }
+
+    75% {
+        transform: translateY(-12px) rotate(12deg);
+        /* Petit saut en haut et penche à droite */
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+        /* Retour à la position normale */
+    }
+}
+
+#closePanel {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border: none;
+    font-size: 18px;
+    padding: 0px 5px;
+    font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, "Bai Jamjuree", sans-serif;
+}
+
+#btn-left-select {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 16px;
+    border: none;
+    padding-bottom: 4px;
+    z-index: 12;
+}
+
+#btn-right-select {
+    position: absolute;
+    top: 6px;
+    left: 44px;
+    font-size: 16px;
+    padding-bottom: 4px;
+    border: none;
+    z-index: 12;
+}
+
+
+#upgrade-btn {
+    padding: 8px 20px;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.xp-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+.xp-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #ddb42cff;
+    /* transition: width 0.1s ease; */
+    border-radius: 45px;
+}
+
+#tartipod-lvl, #tartipod-name {
+    font-size: 18px;
+}
+
+.btn-upgrade-too-expensive {
+    border: 1px solid #424242;
+    background-color: #424242 !important;
+}
+
+.cost-table-too-expensive {
+    color: #eb001f;
+}
+
+/*/////////////////// PANNEAU DE COMMANDE */
+#commandPanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+#cmd-panel-title {
+    position: absolute;
+    top: 10px;
+}
+
+.btn-cmd {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    margin-top: 32px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Pour que les cellules soient bien alignées sans espaces entre elles */
+}
+
+td {
+    border: 2px solid #ddd;
+}

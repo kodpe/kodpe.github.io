@@ -5,13 +5,7 @@
     left: -25px !important;
 }
 
-#t1 {
-    width: 180px !important;
-    height: 140px !important;
-    bottom: 60px !important;
-}
-
-#t3, #t4, #t5, #t6, #t7, #t8, #t9 {
+#t1, #t3, #t4, #t5, #t6, #t7, #t8, #t9, #t14, #t15 {
     width: 180px !important;
     height: 140px !important;
     bottom: 60px !important;
@@ -34,3 +28,32 @@
     width: 180px;
     height: auto;
 }
+
+#btn-tv {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    /* background-color: aqua; */
+    z-index: 11;
+    width: 210px;
+    height: 200px;
+    border: 0;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+#btn-tv:hover {
+    /* background-color: greenyellow; */
+    /* cursor: pointer; */
+    transform: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+ #btn-tv:active {
+    /* border: 1px solid transparent; */
+    transition: border-color 0.1s;
+    /* border-color: rgba(196, 46, 46, 0.7); */
+  }
