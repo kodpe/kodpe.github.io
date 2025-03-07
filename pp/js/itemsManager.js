@@ -609,7 +609,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         function makeTartipod() {
             // TODO CHECK LEFTTIME (600, 0 is mandatory)
-            if (cnt_nb_tartine >= 1_000_000_000_000n) { // 1000 milliard
+            if (cnt_nb_tartine >= 1_000_000_000_000n && cnt_nb_bras >= 1_000_000_000_000n) { // 1000 milliard
+                cnt_nb_bras -= 1_000_000_000_000n;
                 cnt_nb_tartine -= 1_000_000_000_000n;
                 updateCntValues();
                 const id = parseInt(cnt_nb_tartipods.toString(), 10);
@@ -705,7 +706,7 @@ function updateCntButtonsActions() {
         }
     }
     if (btnTartipod) {
-        if (cnt_nb_tartine < 1_000_000_000_000n) {
+        if (cnt_nb_tartine < 1_000_000_000_000n || cnt_nb_bras < 1_000_000_000_000n) {
             btnTartipod.classList.add('disabled');
         }
         else {
