@@ -621,9 +621,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // + 439025 / h
-    // - 32859852 / h
-
     function AutoMachines() {
         cnt_nb_bras += (cnt_machine_pain + cnt_machine_fromage) * 10n;
         cnt_nb_tartine += cnt_machine_pain + cnt_machine_fromage;
