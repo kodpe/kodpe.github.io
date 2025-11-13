@@ -61,9 +61,9 @@ body {
 }
 
 .small-title {
-    font-family: 'B-Bold', sans-serif;
+    font-family: 'B-Bold';
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: medium;
     color: #fff;
     text-transform: uppercase;
     padding-left: 16px;
