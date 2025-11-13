@@ -1,5 +1,12 @@
 const data = [
     {
+        name: "Tanasinn",
+        url: "http://tanasinn.org/index.htm",
+        img: "tns",
+        icon: ["art"],
+        keywords: ["art", "web", "internet", "weird"],
+    },
+    {
         name: "Ultimate Kung Fu Chess",
         url: "https://nemosites.com/kfc/",
         img: "ukc",
@@ -834,7 +841,7 @@ const data = [
     },
     {
         name: "LoL Champions Concepts",
-        url: "https://kodpe.github.io/devoidlab/Frankz.html",
+        url: "https://kodpe.github.io/devoidlab/index.html",
         img: "lol",
         icon: ["art"],
         keywords: ["art", "game", "kodp", "lol"],

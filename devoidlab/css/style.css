@@ -1,169 +1,20 @@
-/* Styles de base */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #0a1128;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    background-color: #ddd;
     margin: 0;
-    padding-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
 }
 
-#mentions {
+#footer-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    /* background-color: #0a1128; */
+    font-size: 0.8rem;
     color: #333;
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); */
-}
-
-/* Barre de navigation */
-.navbar {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-color: #181818;
-    width: 100%;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-left: 100px;
-    height: 48px;
-}
-
-.big-title {
-    font-family: 'B-Bold';
-    font-size: 2.5rem;
-    font-weight: bold;
-    /* color: #e4ab3b; */
-    /* color: #e6b75b; */
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
-.small-title {
-    font-family: 'B-Bold';
-    font-size: 0.8rem;
-    font-weight: medium;
-    color: #fff;
-    text-transform: uppercase;
-    padding-left: 16px;
-    padding-right: 100px;
-    padding-top: 16px;
-    letter-spacing: 0.1rem;
-}
-
-.gold-text {
-  text-shadow:
-    0 0 1px rgba(228, 171, 59, 0.3),
-    0 0 20px rgba(228, 171, 59, 0.2),
-    0 0 40px rgba(228, 171, 59, 0.1);
-}
-/*
-#121212 max dark
-#181818 dark
-#0a202f dark dark blue
-#302d6a blue
-#871c3e dark red
-#d32836 red
-*/
-
-/* Style du bouton */
-.ag-button {
-    font-family: 'B-Bold', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    /*  */
-    text-transform: uppercase;
-    text-align: center;
-    border: none;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    /* border-radius: 4px; */
-    transform: skewX(-6deg) scale(1);
-    /* box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5); */
-    min-width: 20%;
-    min-width: fit-content;
-    padding: 12px;
-    height: 40px;
-    /* color: #e6b75b; */
-    background-color: #181818;
-}
-
-/* Effets de survol et de clic */
-.ag-button:hover {
-    /* box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.7); */
-    /* transform: skewX(-10deg) scale(1.1); */
-    background-color: rgb(58, 67, 83);
-}
-
-/* Adaptation responsive pour les smartphones */
-@media (max-width: 768px) {
-    .navbar {
-        gap: 0.5rem;
-        padding: 0.8rem;
-    }
-
-    .angled-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-        min-width: 100px;
-    }
-}
-
-@media (max-width: 580px) {
-    body {
-        padding-top: 240px;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .angled-button {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
-        width: 100%;
-        /* Boutons prennent toute la largeur */
-        text-align: center;
-    }
-}
-
-.centered-container {
-    display: flex;             /* Utilisation de Flexbox */
-    justify-content: center;   /* Centrer horizontalement */
-    align-items: center;       /* Centrer verticalement */
-    height: 100vh;             /* Utilise 100% de la hauteur de la fenêtre */
-}
-
-.centered-image {
-    max-width: 100%;            /* Pour que l'image soit responsive */
-    max-height: 100%;           /* Pour que l'image s'adapte à l'écran */
-    object-fit: contain;       /* Pour que l'image conserve ses proportions */
-    transform: scale(0.2);
+    padding-top: 50px;
+    padding-inline: 50px;
 }
 
 .skin {
