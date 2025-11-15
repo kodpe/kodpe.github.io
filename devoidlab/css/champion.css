@@ -33,29 +33,35 @@
     flex-direction: row;
     width: fit-content;
     gap: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
 }
 
 .square-box {
     display: flex;
-    width: min-content;
-    min-width: 120px;
-    min-height: 120px;
-    background-color: #0a1428;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /* Size */
+    min-width: 110px;
+    min-height: 110px;
+    height: fit-content;
+    background-color: #0a1428;
+
+    /* Text */
     color: white;
     font-size: 1.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 
+    /* Border */
     border-radius: 1px;
     border-width: 1px;
     border-style: solid;
     border-color: #c8aa6e;
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); */
 
-    flex-direction: column;
+    padding: 4px;
 }
 
 .img-box {
@@ -84,16 +90,15 @@
 .svg-role {
     aspect-ratio: 1 / 1;
     height: 32px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .img-region {
     aspect-ratio: 1 / 1;
     height: 32px;
-    filter: brightness(1.4);
-    margin-left: 10px;
-    margin-right: 10px;
+    filter: brightness(1.5);
+    margin-inline: 4px;
 }
 
 .role-icon-wrapper {
@@ -102,7 +107,7 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     margin-bottom: 16px;
     margin-top: 10px;
 }
@@ -115,21 +120,20 @@
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
-    gap: 8px;
     text-transform: uppercase;
     color: white;
     font-size: 10px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    gap: 8px;
 }
 
 .long-txt {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     color: white;
     margin: 16px;
     padding: 16px;
     min-width: 90%;
-    /* min-width: fit-content; */
 }
 
 .champion-title-1 {

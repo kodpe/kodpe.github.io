@@ -25,3 +25,8 @@ body {
 .gold {
     color: #c8aa6e;
 }
+
+.box {
+    padding: 0px;
+    margin: 0px;
+}

@@ -20,17 +20,50 @@
       <div class="champion-caption">The Oldfire Poppet</div>
       <div class="champion-name">Gribiwee</div>
 
+      <div class="square-box long-txt">
+        <p>
+          Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie ancien et maléfique.
+          Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à l'autre.
+          Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des fusées sur ses adversaires, et aussi parfois comme une canne.
+          Malgré ses manières tranquilles, Gribi reste instable et imprévisible.
+          Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage.
+        </p>
+      </div>
+
+      <div class="square-box img-box">
+        <img src="images/Gribi.webp" style="max-width: 400px;" />
+      </div>
+
       <div class="champion-header">
+
         <div class="square-box">
           <div class="role-icon-wrapper">
-            <span>
-              <img src="images/icons/roleMarksman.svg" class="svg-role" alt="svg" />
-              <img src="images/icons/roleAssassin.svg" class="svg-role" alt="svg" />
+            <span id="role-icons-js">
           </span>
           </div>
           <div class="meta-description">
-            <p class="title">Role</p>
-            <p class="gold">Tireur / Assassin</p>
+            <p class="box">Role</p>
+            <p class="box gold" id="role-text-js"></p>
+          </div>
+        </div>
+
+        <div class="square-box">
+          <div class="role-icon-wrapper">
+            <span id="difficulty-icon-js"></span>
+          </div>
+          <div class="meta-description">
+            <p class="box">Difficulty</p>
+            <p class="box gold" id="difficulty-text-js"></p>
+          </div>
+        </div>
+
+        <div class="square-box">
+          <div class="role-icon-wrapper">
+            <span id="position-icons-js"></span>
+          </div>
+          <div class="meta-description">
+            <p class="box">Position</p>
+            <p class="box gold" id="position-text-js"></p>
           </div>
         </div>
 
@@ -38,34 +71,19 @@
           <div class="role-icon-wrapper">
             <span
               ><img
-                src="images/icons/difficultyMed.svg"
-                class="svg-role"
+                src="images/icons/regions/bandle_city_crest_icon.png"
+                class="img-region"
                 alt="svg"
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Difficulty</p>
-            <p class="gold">Medium</p>
+            <p class="box">Region</p>
+            <p class="box gold">Bandle</p>
           </div>
         </div>
 
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span>
-              <img src="images/icons/icon-position-bottom.png" class="svg-role" alt="svg" />
-              <img src="images/icons/icon-position-jungle.png" class="svg-role" alt="svg" />
-          </span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Position</p>
-            <p class="gold">Bot / Jungle</p>
-          </div>
-        </div>
       </div>
 
-      <div class="square-box img-box">
-        <img src="images/Gribi.webp" style="max-width: 400px;" />
-      </div>
 
       <div class="champion-header">
         <div class="square-box">
@@ -75,8 +93,8 @@
           </span>
           </div>
           <div class="meta-description">
-            <p class="title">Range</p>
-            <p class="gold">Distance - 550</p>
+            <p class="box">Range</p>
+            <p class="box gold">Distance - 550</p>
           </div>
         </div>
 
@@ -90,8 +108,8 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Resource</p>
-            <p class="gold">Manaless</p>
+            <p class="box">Resource</p>
+            <p class="box gold">Manaless</p>
           </div>
         </div>
 
@@ -105,23 +123,8 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Damage</p>
-            <p class="gold">Physical</p>
-          </div>
-        </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/Movement_speed_icon.webp"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Dash / Tp</p>
-            <p class="gold">1</p>
+            <p class="box">Damage</p>
+            <p class="box gold">Physical</p>
           </div>
         </div>
 
@@ -135,52 +138,16 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Crowd Control</p>
-            <p class="gold">0</p>
+            <p class="box">Crowd Control</p>
+            <p class="box gold">0</p>
           </div>
         </div>
 
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/balance-svgrepo-com.svg"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Balance</p>
-            <p class="gold">B</p>
-          </div>
-        </div>
       </div>
 
-      <div class="square-box long-txt">
-        <p>
-          Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie ancien et maléfique.
-          Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à l'autre.
-          Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des fusées sur ses adversaires, et aussi parfois comme une canne.
-          Malgré ses manières tranquilles, Gribi reste instable et imprévisible.
-          Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage.
-        </p>
-      </div>
 
       <div class="champion-header">
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/regions/bandle_city_crest_icon.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Region</p>
-            <p class="gold">Bandle</p>
-          </div>
-        </div>
+
 
         <div class="square-box">
           <div class="role-icon-wrapper">
@@ -190,12 +157,24 @@
                 class="img-region"
                 alt="svg"
             /></span>
-            <span
-              ><img
+            <span><img
                 src="images/icons/champions/117.png"
                 class="img-region"
                 alt="svg"
             /></span>
+
+            <span><img
+                src="images/icons/champions/117.png"
+                class="img-region"
+                alt="svg"
+            /></span>
+
+            <span><img
+                src="images/icons/champions/117.png"
+                class="img-region"
+                alt="svg"
+            /></span>
+
             <span
               ><img
                 src="images/icons/champions/68.png"
@@ -204,8 +183,8 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Relations</p>
-            <p class="gold">Veigar / Lulu / Rumble</p>
+            <p class="box">Relations</p>
+            <p class="box gold">Veigar / Lulu / Rumble</p>
           </div>
         </div>
 
@@ -219,20 +198,8 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Born / Age</p>
-            <p class="gold">906 AN / 101 Y</p>
-          </div>
-        </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img src="images/icons/icon-add.png" class="svg-role" alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Creation Date</p>
-            <p class="gold">14/11/2025</p>
+            <p class="box">Born / Age</p>
+            <p class="box gold">906 AN / 101 Y</p>
           </div>
         </div>
 
@@ -243,25 +210,11 @@
             /></span>
           </div>
           <div class="meta-description">
-            <p class="title">Revision Date</p>
-            <p class="gold">15/11/2025</p>
+            <p class="box">Created / Updated</p>
+            <p class="box gold">14-11-25 / 15-11-25</p>
           </div>
         </div>
 
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/icon-gear-over.png"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="title">Completion</p>
-            <p class="gold">~ 20 %</p>
-          </div>
-        </div>
       </div>
 
       <!-- <div class="square-box img-box"> -->
@@ -353,5 +306,12 @@ Limite de charges simultanées : 1
     <div id="bottom-container"></div>
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/loadChampion.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        loadChampion("data/champions/Gribiwee.json");
+      });
+    </script>
+
   </body>
 </html>

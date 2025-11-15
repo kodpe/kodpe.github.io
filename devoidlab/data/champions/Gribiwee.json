@@ -4,21 +4,23 @@
 
     "roles" : [ "Fighter", "Mage" ],
     "difficulty" : "Medium",
-    "positions" : [ "bot", "jungle" ],
+    "positions" : [ "Bot", "Jungle" ],
 
     "range_type" : "Distance",
     "range_value" : "550",
     "resource" : "Manaless",
     "damage_type" : "Physical",
 
+    "creation_date" : "2025-11-14",
+    "revision_date" : "2025-11-15",
+    "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+
     "lore": {
         "region" : "Bandle",
         "relations" : [ "veigar", "lulu", "rumble" ],
         "age" : "906 AN",
+        "quote" : "",
         "short": "description courte",
         "full": "texte complet"
-    },
-
-    "creation_date" : "2025-11-14",
-    "revision_date" : "2025-11-15"
+    }
 }
