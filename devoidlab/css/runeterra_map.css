@@ -1,0 +1,158 @@
+  :root{
+    --topbar-height: 56px;
+    --bg: #0b1220;
+    --btn-bg: rgba(255,255,255,0.06);
+    --btn-border: rgba(255,255,255,0.08);
+    --accent: #ffb74d;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color:#e6eef8;
+  }
+
+  .icon {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  /* Top bar fixed */
+  .topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:var(--topbar-height);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:8px 14px;
+    box-sizing:border-box;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(10,16,28,0.6), rgba(10,16,28,0.35));
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    z-index:50;
+  }
+  .brand {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+  }
+  .brand .dot {
+    width:12px;height:12px;border-radius:50%;
+    background:var(--accent);
+    box-shadow: 0 0 8px rgba(255,183,77,0.18);
+  }
+
+  .controls {
+    margin-left:auto;
+    display:flex;
+    gap:10px;
+    align-items:center;
+  }
+  .btn {
+    height:36px;
+    min-width:40px;
+    padding:0 10px;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    background:var(--btn-bg);
+    border:1px solid var(--btn-border);
+    color:inherit;
+    user-select:none;
+    -webkit-user-select:none;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn.icon { width:36px; padding:0; }
+
+  /* Viewport area: accounts for topbar */
+  .viewport {
+    position:fixed;
+    top: var(--topbar-height);
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    touch-action: none; /* we handle gestures */
+    background: linear-gradient(180deg, rgba(5,10,20,1), rgba(8,12,20,1));
+  }
+
+  /* The map image - we'll transform this element */
+  .map {
+    position:absolute;
+    /* left:50%; */
+    /* top:50%; */
+    transform-origin: 0 0;
+    will-change: transform;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    pointer-events: none; 
+    z-index: 9;
+  }
+
+  /* image styling */
+  .map img {
+    display:block;
+    width:8192px;
+    height:8192px;
+    max-width:none;
+    max-height:none;
+    user-drag:none;
+    user-select:none;
+    pointer-events:none;
+    -webkit-user-drag: none;
+    z-index: 9;
+  }
+
+  /* small helper legend */
+  .legend {
+    position:fixed;
+    left:12px;
+    bottom:12px;
+    background: rgba(0,0,0,0.35);
+    padding:8px 10px;
+    border-radius:8px;
+    font-size:13px;
+    color:#d6e6ff;
+    border:1px solid rgba(255,255,255,0.03);
+    z-index:60;
+  }
+
+  /* responsive adjustments */
+  @media (max-width:420px) {
+    .topbar { padding:6px 8px; gap:8px; }
+    .brand { font-size:14px; }
+    .btn { height:34px; border-radius:7px; }
+  }
+
+#map-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    pointer-events: auto;
+    z-index: 20; /* plus haut que la map */
+}
+
+.map-marker {
+    position: absolute;
+    width: 64px;   /* taille de ton choix */
+    height: 64px;
+    background: #00ff00;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 30;
+}

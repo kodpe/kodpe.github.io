@@ -1,0 +1,42 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    background: #0b1220;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.viewport {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #081020;
+}
+
+.map-wrapper,
+#map-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+}
+
+.map-wrapper img {
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    /* width:8192px; */
+    /* height:8192px; */
+}
+
+.map-marker {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: lime;
+    cursor: pointer;
+}

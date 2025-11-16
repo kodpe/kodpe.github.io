@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Map avec markers, drag et zoom</title>
+  <link rel="stylesheet" href="css/runeterra_map.css">
+  <link rel="stylesheet" href="css/map2.css">
+</head>
+
+<body>
+
+  <div class="topbar" role="toolbar" aria-label="Map Controls">
+    <div class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      <div>Runeterra World Map</div>
+    </div>
+
+    <div class="controls" id="controls">
+      <div class="btn icon" id="zoom-out" title="Zoom out">−</div>
+      <div class="btn icon" id="zoom-in" title="Zoom in">+</div>
+      <div class="btn" id="fit" title="Fit to screen">reset</div>
+    </div>
+  </div>
+
+  <div class="viewport" id="viewport">
+    <div class="map-wrapper" id="map-wrapper">
+      <img src="images/map6600x6600.webp" alt="Carte">
+    </div>
+    <div id="map-markers"></div>
+  </div>
+
+  <div class="legend" id="legend">Drag / Pinch to move · Double-tap to zoom</div>
+
+  <script src="js/runeterraMap.js"></script>
+</body>
+
+</html>
