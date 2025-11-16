@@ -14,7 +14,7 @@
     "creation_date" : "2025-11-14",
     "revision_date" : "2025-11-15",
     "concept_similarities" : [ "veigar", "lulu", "rumble" ],
-    "splash_face": { "file": "Yshtav1.webp", "x": 130, "y": 20, "r": 20 },
+    "splash_face": { "file": "YshTav1.webp", "x": 130, "y": 20, "r": 20 },
 
     "lore": {
         "region" : "Bandle",
