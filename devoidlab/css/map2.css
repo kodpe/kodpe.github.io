@@ -28,15 +28,22 @@ html {
     display: block;
     user-select: none;
     pointer-events: none;
-    /* width:8192px; */
-    /* height:8192px; */
 }
 
 .map-marker {
     position: absolute;
-    width: 64px;
-    height: 64px;
     border-radius: 50%;
-    background: lime;
+    border: 3px solid #c8aa6e;
+    padding: 0;
+    overflow: hidden;
     cursor: pointer;
+    /*  */
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.map-marker:hover {
+    border: 3px solid #fff;
+    filter: brightness(110%);
+    transform: scale(1.2);
 }

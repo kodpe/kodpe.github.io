@@ -1,0 +1,28 @@
+{
+    "name" : "Scuti",
+    "title" : "The Oldfire Poppet",
+
+    "roles" : [ "Fighter", "Mage" ],
+    "difficulty" : "Medium",
+    "positions" : [ "Bot", "Jungle" ],
+
+    "range_type" : "Distance",
+    "range_value" : "550",
+    "resource" : "Manaless",
+    "damage_type" : "Physical",
+
+    "creation_date" : "2025-11-14",
+    "revision_date" : "2025-11-15",
+    "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+    "splash_face": { "file": "Scutiv1_full.webp", "x": 0, "y": 40, "r": 60 },
+
+    "lore": {
+        "region" : "Bandle",
+        "position": { "x": 3000, "y": 4250 },
+        "relations" : [ "veigar", "lulu", "rumble" ],
+        "age" : "906 AN",
+        "quote" : "",
+        "short": "description courte",
+        "full": "texte complet"
+    }
+}

@@ -14,9 +14,11 @@
     "creation_date" : "2025-11-14",
     "revision_date" : "2025-11-15",
     "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+    "splash_face": { "file": "Gribi.webp", "x": 20, "y": 30, "r": 50 },
 
     "lore": {
         "region" : "Bandle",
+        "position": { "x": 1800, "y": 2500 },
         "relations" : [ "veigar", "lulu", "rumble" ],
         "age" : "906 AN",
         "quote" : "",

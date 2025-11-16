@@ -1,0 +1,28 @@
+{
+    "name" : "Moka",
+    "title" : "The Oldfire Poppet",
+
+    "roles" : [ "Fighter", "Mage" ],
+    "difficulty" : "Medium",
+    "positions" : [ "Bot", "Jungle" ],
+
+    "range_type" : "Distance",
+    "range_value" : "550",
+    "resource" : "Manaless",
+    "damage_type" : "Physical",
+
+    "creation_date" : "2025-11-14",
+    "revision_date" : "2025-11-15",
+    "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+    "splash_face": { "file": "Mokav1.webp", "x": 30, "y": 10, "r": 40 },
+
+    "lore": {
+        "region" : "Bandle",
+        "position": { "x": 4300, "y": 4050 },
+        "relations" : [ "veigar", "lulu", "rumble" ],
+        "age" : "906 AN",
+        "quote" : "",
+        "short": "description courte",
+        "full": "texte complet"
+    }
+}

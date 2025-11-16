@@ -12,7 +12,6 @@
     background:var(--bg);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 0.9rem;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     color:#e6eef8;
@@ -40,6 +39,9 @@
     background: linear-gradient(180deg, rgba(10,16,28,0.6), rgba(10,16,28,0.35));
     border-bottom: 1px solid rgba(255,255,255,0.03);
     z-index:50;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
   }
   .brand {
     display:flex;
@@ -60,8 +62,8 @@
     align-items:center;
   }
   .btn {
-    height:36px;
-    min-width:40px;
+    height:32px;
+    min-width:32px;
     padding:0 10px;
     border-radius:8px;
     display:inline-flex;
@@ -136,23 +138,3 @@
     .brand { font-size:14px; }
     .btn { height:34px; border-radius:7px; }
   }
-
-#map-markers {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: 0 0;
-    pointer-events: auto;
-    z-index: 20; /* plus haut que la map */
-}
-
-.map-marker {
-    position: absolute;
-    width: 64px;   /* taille de ton choix */
-    height: 64px;
-    background: #00ff00;
-    border-radius: 50%;
-    pointer-events: auto;
-    cursor: pointer;
-    z-index: 30;
-}

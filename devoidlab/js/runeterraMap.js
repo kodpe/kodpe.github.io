@@ -54,18 +54,32 @@ document.getElementById('viewport').addEventListener('wheel', e=>{
 }, { passive:false });
 
 // Add markers
-function addMapMarker(x, y) {
-  const marker = document.createElement('button');
-  marker.className = 'map-marker';
-  marker.style.left = x + 'px';
-  marker.style.top = y + 'px';
-  marker.addEventListener('click', () => alert(`Marker cliqué à ${x},${y}`));
-  mapMarkers.appendChild(marker);
+function addMapMarker(mapX, mapY, imgData, url, markerSize = 128) {
+    const marker = document.createElement('button');
+    marker.className = 'map-marker';
+    marker.style.left = mapX + 'px';
+    marker.style.top = mapY + 'px';
+    marker.style.width = markerSize + 'px';
+    marker.style.height = markerSize + 'px';
+
+    const { file, x, y, r } = imgData;
+    const scale = markerSize / (r * 2);
+    marker.style.backgroundImage = `url('images/${file}')`;
+    marker.style.backgroundSize = `${scale * 100}% auto`;
+    marker.style.backgroundPosition = `-${x}px -${y}px`;
+
+
+
+    //   marker.addEventListener('click', () => alert(`Marker cliqué à ${x},${y}`));
+    // TODO passer le nom du champion en param au lieu d'une page precise
+    // pour la page generique de champion
+    marker.addEventListener('click', () => { window.location.href = url;});
+    mapMarkers.appendChild(marker);
 }
 
 // Example markers
-addMapMarker(400,400);
-addMapMarker(5000,5000);
+// addMapMarker(400,400);
+// addMapMarker(5000,5000);
 
 const mapWidth = 6600;
 const mapHeight = 6600;
@@ -74,7 +88,7 @@ const mapHeight = 6600;
 function fitMapToViewport() {
   const vw = viewport.clientWidth;
   const vh = viewport.clientHeight;
-  scale = Math.min(vw / mapWidth, vh / mapHeight);
+  scale = Math.min(vw / mapWidth, vh / mapHeight) * 1.5;
   // panX = 0;
   // panY = 0;
    // centrer la carte
@@ -127,7 +141,6 @@ window.addEventListener('resize', fitMapToViewport);
 
   // Buttons
   document.getElementById('zoom-in').addEventListener('click', () => {
-    // zoom at center
     const rect = viewport.getBoundingClientRect();
     zoomAt(1.25, rect.left + rect.width/2, rect.top + rect.height/2);
   });
@@ -136,3 +149,34 @@ window.addEventListener('resize', fitMapToViewport);
     zoomAt(1/1.25, rect.left + rect.width/2, rect.top + rect.height/2);
   });
   document.getElementById('fit').addEventListener('click', fitMapToViewport);
+
+
+
+
+async function loadChampionPositions() {
+    const folder = "data/champions/";
+
+    // 1. récupérer la liste des fichiers
+    const files = await fetch(folder + "index.json").then(r => r.json());
+
+    const positions = [];
+
+    for (const file of files) {
+        const json = await fetch(folder + file).then(r => r.json());
+
+        if (json?.lore?.position) {
+            positions.push({
+                name: json.name,
+                position: json.lore.position
+            });
+            const url = json.name + ".html";
+            const imgData = json.splash_face;
+            addMapMarker(json.lore.position.x, json.lore.position.y, imgData, url);
+        }
+    }
+
+    // console.log("Positions :", positions);
+    return positions;
+}
+
+loadChampionPositions();

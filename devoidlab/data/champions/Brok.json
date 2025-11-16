@@ -1,0 +1,28 @@
+{
+    "name" : "Brok",
+    "title" : "The Oldfire Poppet",
+
+    "roles" : [ "Fighter", "Mage" ],
+    "difficulty" : "Medium",
+    "positions" : [ "Bot", "Jungle" ],
+
+    "range_type" : "Distance",
+    "range_value" : "550",
+    "resource" : "Manaless",
+    "damage_type" : "Physical",
+
+    "creation_date" : "2025-11-14",
+    "revision_date" : "2025-11-15",
+    "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+    "splash_face": { "file": "Brokv1.webp", "x": 100, "y": 0, "r": 25 },
+
+    "lore": {
+        "region" : "Bandle",
+        "position": { "x": 1650, "y": 3190 },
+        "relations" : [ "veigar", "lulu", "rumble" ],
+        "age" : "906 AN",
+        "quote" : "",
+        "short": "description courte",
+        "full": "texte complet"
+    }
+}
