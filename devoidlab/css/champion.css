@@ -15,7 +15,7 @@
     text-transform: uppercase;
     font-style: italic;
     font-weight: 1000;
-    font-size: 32px;
+    font-size: 20px;
     color: #c8aa6e;
 }
 
@@ -23,16 +23,16 @@
     text-transform: uppercase;
     font-style: italic;
     font-weight: 1000;
-    font-size: 72px;
+    font-size: 64px;
     color: white;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .champion-header {
     display: flex;
     flex-direction: row;
     width: fit-content;
-    gap: 16px;
+    gap: 10px;
     padding-bottom: 8px;
     padding-top: 8px;
 }
@@ -44,8 +44,8 @@
     align-items: center;
 
     /* Size */
-    min-width: 110px;
-    min-height: 110px;
+    min-width: 90px;
+    aspect-ratio: 1/1;
     height: fit-content;
     background-color: #0a1428;
 
@@ -89,27 +89,45 @@
 
 .svg-role {
     aspect-ratio: 1 / 1;
-    height: 32px;
-    margin-left: 8px;
-    margin-right: 8px;
+    height: 24px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.svg-role-22 {
+    aspect-ratio: 1 / 1;
+    height: 22px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .img-region {
     aspect-ratio: 1 / 1;
     height: 32px;
     filter: brightness(1.5);
+    /* margin-inline: 8px; */
+}
+
+.img-relation {
+    aspect-ratio: 1 / 1;
+    height: 32px;
+    /* filter: brightness(1.5); */
     margin-inline: 4px;
 }
 
 .role-icon-wrapper {
     position: relative;
+    top: 0px;
     z-index: 1;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-    margin-top: 10px;
+    justify-content: center;
+    /* gap: 12px; */
+    margin-bottom: 8px;
+    /* margin-top: 10px; */
 }
 
 .meta-description {

@@ -64,7 +64,7 @@ function addMapMarker(mapX, mapY, imgData, url, markerSize = 128) {
 
     const { file, x, y, r } = imgData;
     const scale = markerSize / (r * 2);
-    marker.style.backgroundImage = `url('images/${file}')`;
+    marker.style.backgroundImage = `url('images/champions/${file}')`;
     marker.style.backgroundSize = `${scale * 100}% auto`;
     marker.style.backgroundPosition = `-${x}px -${y}px`;
 
@@ -88,7 +88,7 @@ const mapHeight = 6600;
 function fitMapToViewport() {
   const vw = viewport.clientWidth;
   const vh = viewport.clientHeight;
-  scale = Math.min(vw / mapWidth, vh / mapHeight) * 1.5;
+  scale = Math.min(vw / mapWidth, vh / mapHeight) * 3;
   // panX = 0;
   // panY = 0;
    // centrer la carte

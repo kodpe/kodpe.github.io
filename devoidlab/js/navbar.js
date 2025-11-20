@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     var navbarContainer = document.querySelector("#navbar-container");
     
     fetch('navbar.html') // Charger le fichier navbar.html
@@ -7,4 +7,4 @@ window.onload = function() {
             navbarContainer.innerHTML = data;  // Insérer la navbar dans le conteneur
         })
         .catch(error => console.log('Erreur lors du chargement de la navbar:', error));
-};
+});

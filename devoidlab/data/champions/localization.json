@@ -1,0 +1,33 @@
+{
+  "style_scale": [
+    { "value": 0.1, "label": "Mostly uses basic attacks" },
+    { "value": 0.3, "label": "More attacks than abilities" },
+    { "value": 0.5, "label": "Balanced between attacks and abilities" },
+    { "value": 0.7, "label": "More abilities than attacks" },
+    { "value": 0.9, "label": "Mostly uses abilities" }
+  ],
+  "mechanics_fr": {
+    "range": "Portée",
+    "cooldown": "Délai de récupération",
+    "damage": "Dégâts"
+  },
+  "mechanics_en": {
+    "range": "Range",
+    "cooldown": "Cooldown",
+    "damage": "Damage"
+  },
+  "sw_en": {
+    "dmg": "Damage - A champion's ability to deal damage.",
+    "tgh": "Toughness - A champion's ability to survive being focused.",
+    "ctl": "Control - A champion's ability to disable or disrupt enemies.",
+    "mob": "Mobility - A champion's ability to move quickly around the map, blink or dash.",
+    "uti": "Utility - A champion's ability to grant beneficial effects to their allies or to provide vision."
+  },
+  "sw_fr": {
+    "dmg": "Dégâts : la capacité d’un champion à infliger des dégâts.",
+    "tgh": "Robustesse : la capacité d’un champion à survivre sous concentration ennemie.",
+    "ctl": "Contrôle : la capacité d’un champion à immobiliser ou perturber les ennemis.",
+    "mob": "Mobilité : la capacité d’un champion à se déplacer rapidement, à blinker ou à dash.",
+    "uti": "Utilité : la capacité d’un champion à aider ses alliés ou à fournir de la vision."
+  }
+}

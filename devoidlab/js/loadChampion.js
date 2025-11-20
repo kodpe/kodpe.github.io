@@ -39,7 +39,7 @@ function renderDifficulty(difficulty) {
   img.classList.add("svg-role");
   iconWrapper.appendChild(img);
 
-  textField.textContent = difficulty;
+  textField.innerHTML = difficulty + "<br>difficulty";
 }
 
 function renderPositions(positions) {
@@ -71,7 +71,7 @@ function renderPositions(positions) {
   });
 
   // Ajouter le texte
-  textField.textContent = validPositions.join(" / ");
+  textField.innerHTML = validPositions.join("<br>");
 }
 
 function renderRoles(roles) {
@@ -98,21 +98,124 @@ function renderRoles(roles) {
     const img = document.createElement("img");
     img.src = ROLE_DATA[role];
     img.alt = role;
-    img.classList.add("svg-role");
+    img.classList.add("svg-role-22");
     iconWrapper.appendChild(img);
   });
 
   // Ajouter le texte
-  textField.textContent = validRoles.join(" / ");
+  // textField.textContent = validRoles.join(" / ");
+  textField.innerHTML = validRoles.join("<br>");
+}
+
+function renderProfil(json) {
+  if (json.name.length > 20) { console.warn("too long value :", json.name); return }
+  if (json.title.length > 30) { console.warn("too long value :", json.title); return }
+  if (json.lore.short.length > 200) { console.warn("too long value :", json.lore.short); return }
+
+    document.title = json.name;
+
+    const caption = document.getElementById("caption-txt");
+    caption.textContent = json.title;
+
+    const name = document.getElementById("name-txt");
+    name.textContent = json.name;
+
+    const short = document.getElementById("short-txt");
+    short.textContent = json.lore.short;
+
+    const img = document.getElementById("champion-img");
+    img.src = "images/champions/" + json.splash_face.file;
+}
+
+function renderAbilitiesButtons(json) {
+
+  const buttonsPanel = document.getElementById("champion-buttons-panel");
+
+  const keys = ["p", "q", "w", "e", "r"];
+  for (const key of keys) {
+    btn = document.createElement("div");
+    btn.classList.add("spell-btn");
+    btn.classList.add("bordered");
+    btn.id = "ability-btn-" + key;
+    buttonsPanel.appendChild(btn);
+    //
+    keyb = document.createElement("div");
+    keyb.innerHTML = key.toUpperCase();
+    keyb.classList.add("keyb-key");
+    btn.appendChild(keyb);
+    //
+    img = document.createElement("img");
+    img.src = "images/champions_abilities/" + json.name + "/_all_icons/icon_" + key + ".png",
+    img.alt = "ability_img_"+key;
+    img.classList.add("ability-icon-img"); 
+    btn.appendChild(img);
+    //
+    keyt = document.createElement("div");
+    abname = json.abilities[key].name;
+    keyt.innerHTML = abname.toUpperCase();
+    keyt.classList.add("keyb-name");
+    btn.appendChild(keyt);
+  }
+}
+
+function renderRadarChampionStats(json) {
+  Object.entries(json).forEach(([statName, value]) => {
+    const bars = Array.from(document.querySelectorAll(`.stat-wheel-${statName} .stat-wheel-bar`));
+    console.warn(bars);
+    bars.forEach((bar, index) => {
+      if (index < value) {
+        bar.classList.add('stat-wheel-bar-lit');
+      } else {
+        bar.classList.remove('stat-wheel-bar-lit');
+      }
+    });
+  });
 }
 
 async function loadChampion(jsonPath) {
   try {
     const response = await fetch(jsonPath);
     const json = await response.json();
+
+    // RENDERING DE LA PAGE
+    renderProfil(json);
     renderRoles(json.roles);
-    renderDifficulty(json.difficulty);
     renderPositions(json.positions);
+    //
+    renderAbilitiesButtons(json);
+    //
+    renderRadarChampionStats(json.stats_wheel);
+    renderDifficulty(json.difficulty);
+
+    //
+  } catch (err) {
+    console.error("Erreur lors du chargement du JSON :", err);
+  }
+}
+
+function renderRadar(json) {
+  const LANG = "fr"; // ou "en"
+  const prefix = `sw_${LANG}`;
+  const stats = ["dmg", "tgh", "ctl", "mob", "uti"];
+
+  stats.forEach(st => {
+    const el = document.getElementById(`${st}-id`);
+    if (el) {
+      el.textContent = json[prefix][st];
+    } else {
+      console.warn(`Élément #${st}-id introuvable`);
+    }
+  });
+
+
+
+}
+
+async function loadLocalization(jsonPath) {
+  try {
+    const response = await fetch(jsonPath);
+    const json = await response.json();
+    renderRadar(json);
   } catch (err) {
     console.error("Erreur lors du chargement du JSON :", err);
   }

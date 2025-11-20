@@ -1,317 +1,539 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gribiwee : The Oldfire Poppet</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/champion.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-  </head>
 
-  <body>
-    <div id="navbar-container"></div>
-    <div class="champion-container">
-      <div class="champion-caption">The Oldfire Poppet</div>
-      <div class="champion-name">Gribiwee</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gribiwee : The Oldfire Poppet</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/champion.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/champion_v2.css" />
+  <link rel="stylesheet" href="css/radar.css" />
+  <link rel="stylesheet" href="css/slider.css" />
+</head>
 
-      <div class="square-box long-txt">
-        <p>
-          Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie ancien et maléfique.
-          Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à l'autre.
-          Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des fusées sur ses adversaires, et aussi parfois comme une canne.
-          Malgré ses manières tranquilles, Gribi reste instable et imprévisible.
-          Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage.
-        </p>
-      </div>
+<body>
+  <div id="navbar-container"></div>
 
-      <div class="square-box img-box">
-        <img src="images/Gribi.webp" style="max-width: 400px;" />
-      </div>
+  <div class="champion-container-v2">
+    <div class="champion-profil-panel">
+
+      <div id="caption-txt"></div>
+      <div id="name-txt"></div>
+      <div id="short-txt"></div>
 
       <div class="champion-header">
 
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span id="role-icons-js">
+
+
+      </div>
+      <div id="champion-image-wrapper">
+        <img id="champion-img" src="" />
+        <div class="corner-tag" style="bottom: 11px; left: 11px;">
+          <div class="square-box-2-a">
+            <div class="role-icon-wrapper"><span id="role-icons-js"></span></div>
+            <div class="meta-description-2">
+              <!-- <p class="box-txt">Role</p> -->
+              <p class="box-txt gold" id="role-text-js"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="corner-tag" style="bottom: 11px; right: 11px;">
+
+          <div class="square-box-2-a">
+            <div class="role-icon-wrapper">
+              <span id="position-icons-js"></span>
+            </div>
+            <div class="meta-description-2">
+              <!-- <p class="box">Position</p> -->
+              <p class="box gold" id="position-text-js"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="champion-abilities-panel">
+      <div id="champion-citation-txt">
+        « Si la fête ne pouvais jamais se terminer. »
+        <br>~ Gribiwee
+      </div>
+
+      <div id="champion-buttons-panel"><!-- js --></div>
+      <div class="champion-media-panel">
+      </div>
+      <div class="champion-text-panel">texte</div>
+    </div>
+
+    <div class="champion-details-panel">
+
+      <div class="champion-lore-panel setw90p">
+
+        <div class="panel-vt">
+          <div class="panel-hz">
+            <div class="panel-vt w50p">
+              <div class="panel-hz">
+
+                <div class="border-gold">
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/difficultyHigh.svg" class="img-region"
+                        alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">Real Name</p> -->
+                    <p class="box gold">Grisilda Wee</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="border-gold">
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/regions/bandle_city_crest_icon.png" class="img-region"
+                        alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">Region</p> -->
+                    <p class="box gold">Bandle</p>
+                  </div>
+                </div>
+                </div>
+
+
+
+              </div>
+              <div class="panel-hz">
+
+                <div class="border-gold">
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/icon-prize.png" class="svg-role" alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">Born / Age</p> -->
+                    <p class="box gold">906 AN / 101 Y</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="border-gold">
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/difficultyHigh.svg" class="img-region"
+                        alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">Occupation</p> -->
+                    <p class="box gold">Retraitée</p>
+                  </div>
+                </div>
+                </div>
+
+
+              </div>
+              <div class="panel-hz">
+                <div class="border-gold" style="width: 100%;">
+                <div class="square-box-2-b">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/champions/45.png" class="img-relation" alt="svg" /></span>
+                    <span><img src="images/icons/champions/117.png" class="img-relation" alt="svg" /></span>
+                    <span><img src="images/icons/champions/68.png" class="img-relation" alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <p class="box gold">Relations</p>
+                    <!-- <p class="box gold">Veigar / Lulu / Rumble</p> -->
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+                <div class="border-gold">
+            <div class="crop"><img src="images/map6600x6600.webp" class="" /></div>
+            </div>
+          </div>
+          <!-- <div class="text-box-relations">bonjour le monde</div> -->
+        </div>
+
+      </div>
+
+      <div id="champion-citation-txt">
+        « Si la fête ne pouvais jamais se terminer. »
+        <br>~ Gribiwee
+      </div>
+
+    <div class="champion-game-panel setw90p">
+
+          <div class="panel-hz">
+            <div class="panel-vt w50p">
+              <div class="panel-hz">
+
+                <div class="border-gold">
+
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/Attack_damage_icon.webp" class="svg-role" alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">Damage</p> -->
+                    <p class="box gold">Physical</p>
+                    <!-- Physical / Magical / Mixed -->
+                  </div>
+                </div>
+
+                </div>
+
+                <div class="border-gold">
+                <div class="square-box-2-a">
+                  <div class="role-icon-wrapper">
+                    <span><img src="images/icons/Ranged_role.webp" class="svg-role" alt="svg" /></span>
+                  </div>
+                  <div class="meta-description">
+                    <!-- <p class="box">AA Range</p> -->
+                    <p class="box gold">Ranged - 550</p>
+                  </div>
+                </div>
+                </div>
+
+              </div>
+
+
+              <div class="panel-hz">
+
+                <div class="border-gold">
+                  <div class="square-box-2-a">
+                    <div class="role-icon-wrapper">
+                      <span id="difficulty-icon-js"></span>
+                    </div>
+                    <div class="meta-description">
+                      <!-- <p class="box">Difficulty</p> -->
+                      <p class="box gold" id="difficulty-text-js"></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border-gold">
+                  <div class="square-box-2-a">
+                    <div class="role-icon-wrapper">
+                      <span><img src="images/icons/Manaless_resource.webp" class="svg-role" alt="svg" /></span>
+                    </div>
+                    <div class="meta-description">
+                      <!-- <p class="box">Resource</p> -->
+                      <p class="box gold">Manaless</p>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+
+              <div class="panel-hz">
+
+                <div class="border-gold">
+                  <div class="square-box-2" style="border: none;">
+                    <div class="slider-container">
+                      <img src="images/icons/Champion_style_basic_attacks_active.webp" class="slider-icons">
+                      <div class="slider-line">
+                        <div class="slider-thumb""></div></div>
+                                     <img src=" images/icons/Champion_style_abilities_active.webp" class="slider-icons">
+                        </div>
+                        <div class="meta-description">
+                          <span class="gold">Mostly use basic attacks</span>
+                          <!-- <span>Mostly use abilities</span> -->
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+            </div>
+                <div class="border-gold">
+            <div class="panel-vt w50p">
+              <div id="radar-container"></div>
+            </div>
+            </div>
+          </div>
+
+    </div>
+
+<div class="panel-hz">
+
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-edit.png" class="svg-role" alt="svg" /></span>
+        </div>
+
+        <div class="meta-description">
+        <p class="gold">created: 14-11-25 / updated: 20-11-25 / author: kodp</p>
+        </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+  <div class="champion-container">
+    <div class="champion-caption">The Oldfire Poppet</div>
+    <div class="champion-name">Gribiwee</div>
+
+    <div class="square-box long-txt">
+      <p>
+        Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie
+        ancien et maléfique.
+        Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à
+        l'autre.
+        Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des
+        fusées sur ses adversaires, et aussi parfois comme une canne.
+        Malgré ses manières tranquilles, Gribi reste instable et imprévisible.
+        Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage.
+      </p>
+    </div>
+
+    <div class="square-box img-box">
+      <img src="images/champions/Gribiwee.webp" style="max-width: 400px;" />
+    </div>
+
+    <div class="champion-header">
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span id="role-icons-js">
           </span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Role</p>
-            <p class="box gold" id="role-text-js"></p>
-          </div>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span id="difficulty-icon-js"></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Difficulty</p>
-            <p class="box gold" id="difficulty-text-js"></p>
-          </div>
+        <div class="meta-description">
+          <p class="box">Role</p>
+          <p class="box gold" id="role-text-js"></p>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span id="position-icons-js"></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Position</p>
-            <p class="box gold" id="position-text-js"></p>
-          </div>
-        </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/regions/bandle_city_crest_icon.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Region</p>
-            <p class="box gold">Bandle</p>
-          </div>
-        </div>
-
       </div>
 
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span id="difficulty-icon-js"></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Difficulty</p>
+          <p class="box gold" id="difficulty-text-js"></p>
+        </div>
+      </div>
 
-      <div class="champion-header">
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span>
-              <img src="images/icons/Ranged_role.webp" class="svg-role" alt="svg" />
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span id="position-icons-js"></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Position</p>
+          <p class="box gold" id="position-text-js"></p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/regions/bandle_city_crest_icon.png" class="img-region" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Region</p>
+          <p class="box gold">Bandle</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="champion-header">
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span>
+            <img src="images/icons/Ranged_role.webp" class="svg-role" alt="svg" />
           </span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Range</p>
-            <p class="box gold">Distance - 550</p>
-          </div>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/Manaless_resource.webp"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Resource</p>
-            <p class="box gold">Manaless</p>
-          </div>
+        <div class="meta-description">
+          <p class="box">Range</p>
+          <p class="box gold">Distance - 550</p>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/Attack_damage_icon.webp"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Damage</p>
-            <p class="box gold">Physical</p>
-          </div>
-        </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/Acquisition_range.webp"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Crowd Control</p>
-            <p class="box gold">0</p>
-          </div>
-        </div>
-
       </div>
 
-
-      <div class="champion-header">
-
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/champions/45.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-            <span><img
-                src="images/icons/champions/117.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-
-            <span><img
-                src="images/icons/champions/117.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-
-            <span><img
-                src="images/icons/champions/117.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-
-            <span
-              ><img
-                src="images/icons/champions/68.png"
-                class="img-region"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Relations</p>
-            <p class="box gold">Veigar / Lulu / Rumble</p>
-          </div>
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Manaless_resource.webp" class="svg-role" alt="svg" /></span>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img
-                src="images/icons/icon-prize.png"
-                class="svg-role"
-                alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Born / Age</p>
-            <p class="box gold">906 AN / 101 Y</p>
-          </div>
+        <div class="meta-description">
+          <p class="box">Resource</p>
+          <p class="box gold">Manaless</p>
         </div>
-
-        <div class="square-box">
-          <div class="role-icon-wrapper">
-            <span
-              ><img src="images/icons/icon-edit.png" class="svg-role" alt="svg"
-            /></span>
-          </div>
-          <div class="meta-description">
-            <p class="box">Created / Updated</p>
-            <p class="box gold">14-11-25 / 15-11-25</p>
-          </div>
-        </div>
-
       </div>
 
-      <!-- <div class="square-box img-box"> -->
-        <!-- <img src="" class="fixed-image" style="max-width: 400px; height: auto;" /> -->
-      <!-- </div> -->
-
-      <p class="champion-title-1">ABILITIES</p>
-
-      <div class="square-box long-txt">
-        <p class="champion-title-24">Passive : / à petit feu</p>
-        <p>
-          Les auto attaques et compétences de Gribiwee applique un effet de brûlure non cumulable qui inflige des dégâts sur la durée.
-        </p>
-        <pre class="champion-tech">Durée de la brûlure : 3 sec</pre>
-        <pre class="champion-tech">Dégats par seconde : 3% AD en dégats physiques</pre>
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Attack_damage_icon.webp" class="svg-role" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Damage</p>
+          <p class="box gold">Physical</p>
+        </div>
       </div>
 
-      <div class="square-box long-txt">
-        <p class="champion-title-24">Q : / Fusée</p>
-        <p>
-          Gribiwee tire une fusée qui plonge sur une position éloigné, infligeant des dégâts physiques en zone.
-          Le sort est réinitialisé si Gribiwee tue un champion ou un monstre de la jungle.
-        </p>
-        <pre class="champion-tech">
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/Acquisition_range.webp" class="svg-role" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Crowd Control</p>
+          <p class="box gold">0</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="champion-header">
+
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/champions/45.png" class="img-region" alt="svg" /></span>
+          <span><img src="images/icons/champions/117.png" class="img-region" alt="svg" /></span>
+
+          <span><img src="images/icons/champions/117.png" class="img-region" alt="svg" /></span>
+
+          <span><img src="images/icons/champions/117.png" class="img-region" alt="svg" /></span>
+
+          <span><img src="images/icons/champions/68.png" class="img-region" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Relations</p>
+          <p class="box gold">Veigar / Lulu / Rumble</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-prize.png" class="svg-role" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Born / Age</p>
+          <p class="box gold">906 AN / 101 Y</p>
+        </div>
+      </div>
+
+      <div class="square-box">
+        <div class="role-icon-wrapper">
+          <span><img src="images/icons/icon-edit.png" class="svg-role" alt="svg" /></span>
+        </div>
+        <div class="meta-description">
+          <p class="box">Created / Updated</p>
+          <p class="box gold">14-11-25 / 15-11-25</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div class="square-box img-box"> -->
+    <!-- <img src="" class="fixed-image" style="max-width: 400px; height: auto;" /> -->
+    <!-- </div> -->
+
+    <p class="champion-title-1">ABILITIES</p>
+
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Passive : / à petit feu</p>
+      <p>
+        Les auto attaques et compétences de Gribiwee applique un effet de brûlure non cumulable qui inflige des dégâts
+        sur la durée.
+      </p>
+      <pre class="champion-tech">Durée de la brûlure : 3 sec</pre>
+      <pre class="champion-tech">Dégats par seconde : 3% AD en dégats physiques</pre>
+    </div>
+
+    <div class="square-box long-txt">
+      <p class="champion-title-24">Q : / Fusée</p>
+      <p>
+        Gribiwee tire une fusée qui plonge sur une position éloigné, infligeant des dégâts physiques en zone.
+        Le sort est réinitialisé si Gribiwee tue un champion ou un monstre de la jungle.
+      </p>
+      <pre class="champion-tech">
 Portée : 900
 Délai de récupération : 15s
 Dégâts : 30 | 50 | 70 | 90 | 110 (+ 30% AD)
         </pre>
-      </div>
+    </div>
 
-      <div class="square-box long-txt">
-        <p class="champion-title-24">W : / Feu d'artifice</p>
-        <p>
-          Les 3 prochaine auto-attaques de Gribiwee créés des motifs pyrotechniques autour de leur cible, infligeant des dégâts de zone supplémentaires.
-          Chaque auto-attaque à son propre motif. Le motif commence toujours par apparaitre en son centre sur la cible et s'etend ensuite autour.
-        </p>
-        <p><img src="images/gribiwee/motifs.jpg" alt="" class="square-box img-box" style="max-width: 600px;" /></p>
-        <pre class="champion-tech">
+    <div class="square-box long-txt">
+      <p class="champion-title-24">W : / Feu d'artifice</p>
+      <p>
+        Les 3 prochaine auto-attaques de Gribiwee créés des motifs pyrotechniques autour de leur cible, infligeant des
+        dégâts de zone supplémentaires.
+        Chaque auto-attaque à son propre motif. Le motif commence toujours par apparaitre en son centre sur la cible et
+        s'etend ensuite autour.
+      </p>
+      <p><img src="images/gribiwee/motifs.jpg" alt="" class="square-box img-box" style="max-width: 600px;" /></p>
+      <pre class="champion-tech">
 Portée : 550
 Délai de récupération : 15s
 Dégâts : 30 | 50 | 70 | 90 | 110 (+ 30% AD)
 </pre>
-      </div>
+    </div>
 
-      <div class="square-box long-txt">
-        <p class="champion-title-24">E : / Course Folle</p>
-        <p>
-          Gribiwee devient fantomatique, gagne 100 % de vitesse de déplacement totale bonus et la capacité d’ignorer les collisions avec le terrain. L'effet s'annule si Gribiwee subit une immobilisation.
-        </p>
-        <pre class="champion-tech">
+    <div class="square-box long-txt">
+      <p class="champion-title-24">E : / Course Folle</p>
+      <p>
+        Gribiwee devient fantomatique, gagne 100 % de vitesse de déplacement totale bonus et la capacité d’ignorer les
+        collisions avec le terrain. L'effet s'annule si Gribiwee subit une immobilisation.
+      </p>
+      <pre class="champion-tech">
 Durée de l'effet: 3 secondes
 Délai de récupération : 30s
         </pre>
-      </div>
+    </div>
 
-      <div class="square-box long-txt">
-        <p class="champion-title-24">R : / Grand éventail</p>
-        <p>
-          Gribiwee fait apparaître une fontaine pyrotechnique en arc de cercle.
-          L'arc de cercle inflige des dégâts constants aux ennemis qui le traverse.
-          Les compétences de Gribiwee qui traverse l'arc de cercle sont dupliquées.
-        </p>
-        <p><img src="images/gribiwee/eventail.jpg" alt="" class="square-box img-box fixed-image-small" /></p>
-        <pre class="champion-tech">
+    <div class="square-box long-txt">
+      <p class="champion-title-24">R : / Grand éventail</p>
+      <p>
+        Gribiwee fait apparaître une fontaine pyrotechnique en arc de cercle.
+        L'arc de cercle inflige des dégâts constants aux ennemis qui le traverse.
+        Les compétences de Gribiwee qui traverse l'arc de cercle sont dupliquées.
+      </p>
+      <p><img src="images/gribiwee/eventail.jpg" alt="" class="square-box img-box fixed-image-small" /></p>
+      <pre class="champion-tech">
 Durée de l'éventail : 5 sec
 Arc de cercle : 220°
 Délai de récupération : 120s
 </pre>
-      </div>
+    </div>
 
-      <div class="square-box long-txt">
-        <p class="champion-title-24">TRINKET WARD : / Fusée Parachute</p>
-        <p>
+    <div class="square-box long-txt">
+      <p class="champion-title-24">TRINKET WARD : / Fusée Parachute</p>
+      <p>
         Gribiwee possède une ward unique, la fusée à parachute. C'est une ward de contrôle éphémère à portée illimité.
         Elle a une durée de vie courte avec un champ de vision qui se réduit progressivement.
         Gribiwee ne peut pas prendre une autre ward.
-        </p>
-        <p><img src="images/gribiwee/fuseeparachute.webp" alt="" class="square-box img-box fixed-image-small" /></p>
-        <pre class="champion-tech">
+      </p>
+      <p><img src="images/gribiwee/fuseeparachute.webp" alt="" class="square-box img-box fixed-image-small" /></p>
+      <pre class="champion-tech">
 PV : 1
 Rayon de vision : 900 > 60 (-14 par seconde)
 Durée active : 60 sec
 Temps de recharge : 180s
 Limite de charges simultanées : 1
         </pre>
-      </div>
-
     </div>
-    <div id="bottom-container"></div>
-    <script src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/loadChampion.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        loadChampion("data/champions/Gribiwee.json");
-      });
-    </script>
 
-  </body>
+  </div>
+  <div id="bottom-container"></div>
+  <script src="js/radar.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/loadChampion.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // loadLocalization("data/champions/localization.json");
+      // loadChampion("data/champions/Gribiwee.json");
+    });
+  </script>
+
+</body>
+
 </html>

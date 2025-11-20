@@ -2,7 +2,7 @@
     "name" : "Gribiwee",
     "title" : "The Oldfire Poppet",
 
-    "roles" : [ "Fighter", "Mage" ],
+    "roles" : [ "Tireur" ],
     "difficulty" : "Medium",
     "positions" : [ "Bot", "Jungle" ],
 
@@ -14,7 +14,8 @@
     "creation_date" : "2025-11-14",
     "revision_date" : "2025-11-15",
     "concept_similarities" : [ "veigar", "lulu", "rumble" ],
-    "splash_face": { "file": "Gribi.webp", "x": 20, "y": 30, "r": 50 },
+    "splash_face": { "file": "gribiwee.webp", "x": 20, "y": 30, "r": 50 },
+    "design_description" :"description complete de l'apparence",
 
     "lore": {
         "region" : "Bandle",
@@ -22,7 +23,57 @@
         "relations" : [ "veigar", "lulu", "rumble" ],
         "age" : "906 AN",
         "quote" : "",
-        "short": "description courte",
+        "short": "Gribiwee est une grand-mère pyortechnicienne. Elle utilise une lance à feu pour envoyer des fusées sur ses adversaires. Elle organisait autrefois des spectacles de feux d'artifice dans tout Bandle.",
         "full": "texte complet"
+    },
+
+    "stats_wheel": {
+        "damage" : 3,
+        "resistance" : 0,
+        "control" : 1,
+        "mobility" : 2,
+        "utility" : 1
+    },
+
+    "abilities": {
+        "p": {
+            "media": "images/champions_abilities/gribiwee/p",
+            "name": "a petit feu",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus urna ac viverra dignissim. Proin nibh eros, rhoncus et venenatis ac, gravida id dolor. Aliquam est metus, fermentum et porta id, convallis sed neque. Aliquam erat volutpat. Donec vitae lectus eu orci luctus semper vel nec ex. Vivamus augue justo, lobortis eu diam sit amet, dignissim accumsan lectus. Ut porta tellus sed ipsum semper placerat. Curabitur dolor quam, facilisis vel sem sed, laoreet mattis dolor. Etiam finibus cras.",
+            "mechanics": {
+            }
+        },
+        "q": {
+            "media": "images/champions_abilities/gribiwee/q",
+            "name": "fusee",
+            "description": "description",
+            "mechanics": {
+                "range": "900",
+                "cooldown": "10s"
+            }
+        },
+        "w": {
+            "media": "images/champions_abilities/gribiwee/w",
+            "name": "feu d'artifice",
+            "description": "description",
+            "mechanics": {
+                "range": "900"
+            }
+        },
+        "e": {
+            "media": "images/champions_abilities/gribiwee/e",
+            "name": "course folle",
+            "description": "description",
+            "mechanics": {
+                "cooldown": "10s"
+            }
+        },
+        "r": {
+            "media": "images/champions_abilities/gribiwee/r",
+            "name": "grand eventail",
+            "description": "description",
+            "mechanics": {
+            }
+        }
     }
 }
