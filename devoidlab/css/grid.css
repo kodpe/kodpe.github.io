@@ -121,3 +121,12 @@ body {
 .corner-icon {
   filter: brightness(150%);
 }
+
+#footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+    padding-top: 50px;
+    padding-inline: 50px;
+}

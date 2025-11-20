@@ -9,25 +9,30 @@
     padding: 16px;
     padding-top: 60px;
     color: #fff;
+    background-color: #0a1428;
 }
 
 @media (max-width: 900px) {
     .champion-container-v2 {
         width: 100%;
-        max-width: 100%;
+        /* max-width: 100%; */
         /* overflow-x: hidden; */
         grid-template-columns: 1fr;
         justify-items: center;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 }
 
 #short-txt {
-    max-width: 90%;
     font-size: 14px;
-    padding: 5px;
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.02rem;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-inline: 30px;
+    margin-block: 10px;
 }
 
 #caption-txt {
@@ -36,12 +41,13 @@
     font-weight: 1000;
     font-size: 16px;
     color: #c8aa6e;
-    height: fit-content;
-    padding: 0;
-    margin: 0;
+    /* height: fit-content; */
     letter-spacing: 0.05rem;
-    padding-top: 12px;
-    padding-inline: 5px;
+    /*  */
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin: 10px auto;
+    margin-inline: 30px;
 }
 
 #name-txt {
@@ -50,9 +56,11 @@
     font-weight: 1000;
     font-size: 72px;
     color: white;
-    height: fit-content;
-    padding: 0;
-    margin: 0;
+    /*  */
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin: 10px auto;
+    margin-inline: 30px;
 }
 
 .setw90p{
@@ -67,7 +75,9 @@
     border: 1px solid #c8aa6e;
     box-sizing: border-box;
     padding: 5px;
-    display: inline-block;
+    /* display: inline-block; */
+    margin: 0 auto;
+    margin-inline: 30px;
 }
 
 #champion-img {
@@ -96,9 +106,10 @@
 }
 
 .champion-details-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 .bordered {
@@ -111,10 +122,11 @@
 }
 
 .champion-profil-panel {
-    padding-left: 12px;
-    margin-left: 12px;
+    /* padding-left: 12px; */
+    /* margin-left: 12px; */
     border-top: 1px solid #c8aa6e;
     border-left: 1px solid #c8aa6e;
+    box-sizing: border-box;
 }
 
 .champion-abilities-panel {
@@ -126,6 +138,7 @@
     gap: 5px;
     padding-bottom: 12px;
     border-bottom: 1px solid #c8aa6e;
+    box-sizing: border-box;
 }
 
 .champion-details-panel {
@@ -140,6 +153,8 @@
     border-bottom: 1px solid #c8aa6e;
     padding-right: 12px;
     margin-right: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .champion-lore-panel {

@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #ddd;
-    background-color: #0a1428;
+    /* background-color: #0a1428; */
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
