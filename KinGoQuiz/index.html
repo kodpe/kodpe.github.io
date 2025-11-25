@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>KinGoQuiz</title>
+
+  <!-- Highlight.js (CDN) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+
+  <!-- Dark+ style -->
+  <link rel="stylesheet" href="dark.css">
+  <link rel="stylesheet" href="kinGoQuiz.css">
+</head>
+
+<body>
+
+<h1 id="title">KinGoQuiz</h1>
+
+<div id="question-cnt">
+    <image class="logo" src="go.png"/>
+    <div id="question"></div>
+</div>
+
+
+<div class="answers-cnt">
+<pre><code id="answer-1" class="language-go code-block">Loading…</code></pre>
+<pre><code id="answer-2" class="language-go code-block">Loading…</code></pre>
+</div>
+
+
+<div id="term-cnt" class="term-cnt disabled">
+<div class="term-title">sortie</div>
+<pre id="term-block" class="term-block"></pre>
+</div>
+
+<div id="result"></div>
+<button id="btn-next" class="btn">></button>
+<div id="score"></div>
+<div id="session-score"></div>
+
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+$ go run programme.go
+Hello Whale
+Hello World
+Hello World
+Hello Bird

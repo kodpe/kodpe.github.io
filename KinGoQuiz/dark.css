@@ -1,0 +1,83 @@
+  pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  /* Keywords */
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-link {
+    color: #569cd6;
+  }
+
+  /* Types / built-ins */
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-attr {
+    color: #4ec9b0;
+  }
+
+  /* Strings */
+  .hljs-string,
+  .hljs-title,
+  .hljs-name,
+  .hljs-meta-string {
+    color: #ce9178;
+  }
+
+  /* Numbers */
+  .hljs-number,
+  .hljs-hexcolor,
+  .hljs-constant {
+    color: #b5cea8;
+  }
+
+  /* Comments */
+  .hljs-comment,
+  .hljs-quote {
+    color: #6a9955;
+    font-style: italic;
+  }
+
+  /* Function names */
+  .hljs-function .hljs-title {
+    color: #dcdcaa;
+  }
+
+  /* Variables / identifiers */
+  .hljs-variable,
+  .hljs-template-variable {
+    color: #9cdcfe;
+  }
+
+  /* Operators, punctuation */
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-meta {
+    color: #d4d4d4;
+  }
+
+  /* HTML/XML tags (if displayed) */
+  .hljs-tag,
+  .hljs-name,
+  .hljs-builtin-name {
+    color: #569cd6;
+  }
+
+  /* Emphasis / strong */
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
