@@ -54,7 +54,7 @@ document.getElementById('viewport').addEventListener('wheel', e=>{
 }, { passive:false });
 
 // Add markers
-function addMapMarker(mapX, mapY, imgData, url, markerSize = 128) {
+function addMapMarker(mapX, mapY, imgData, name, url, markerSize = 128) {
     const marker = document.createElement('button');
     marker.className = 'map-marker';
     marker.style.left = mapX + 'px';
@@ -64,7 +64,10 @@ function addMapMarker(mapX, mapY, imgData, url, markerSize = 128) {
 
     const { file, x, y, r } = imgData;
     const scale = markerSize / (r * 2);
-    marker.style.backgroundImage = `url('images/champions/${file}')`;
+    if (name == "Gribiwee")
+      marker.style.backgroundImage = `url('data/champions/${name}/splashArt/${file}')`;
+    else
+      marker.style.backgroundImage = `url('images/${file}')`;
     marker.style.backgroundSize = `${scale * 100}% auto`;
     marker.style.backgroundPosition = `-${x}px -${y}px`;
 
@@ -153,30 +156,48 @@ window.addEventListener('resize', fitMapToViewport);
 
 
 
-async function loadChampionPositions() {
-    const folder = "data/champions/";
+async function loadChampionsPositions() {
+  logCALL("loadChampionsPositions()");
+  //
+  try {
+    const championsNames = await fetch('data/champions/index.json').then(r => r.json());
 
-    // 1. récupérer la liste des fichiers
-    const files = await fetch(folder + "index.json").then(r => r.json());
-
-    const positions = [];
-
-    for (const file of files) {
-        const json = await fetch(folder + file).then(r => r.json());
-
-        if (json?.lore?.position) {
-            positions.push({
-                name: json.name,
-                position: json.lore.position
-            });
-            const url = json.name + ".html";
-            const imgData = json.splash_face;
-            addMapMarker(json.lore.position.x, json.lore.position.y, imgData, url);
+    // const positions = [];
+    logCREATE("create champions map markers");
+    //
+    for (const name of championsNames) {
+      try {
+        var response = await fetch('data/champions/' + name + '/' + name + '.json');
+      } catch (err) {
+        console.error(err);
+      }
+      if (!response.ok) {
+        response = await fetch('data/champions/' + name + '.json');
+        if (!response.ok) {
+          continue;
         }
+      }
+
+      const json = await response.json();
+
+      if (json?.lore?.position) {
+        // positions.push({
+        //     name: json.name,
+        //     position: json.lore.position
+        // });
+        const url = name + ".html";
+        const imgData = json.splash_face;
+        logINFO(imgData);
+        addMapMarker(json.lore.position.x, json.lore.position.y, imgData, json.name, url);
+      }
     }
 
     // console.log("Positions :", positions);
-    return positions;
+    // return positions;
+  } catch (err) {
+    console.error(err);
+  }
+  logOK("loadChampionsPositions()");
 }
 
-loadChampionPositions();
+loadChampionsPositions();

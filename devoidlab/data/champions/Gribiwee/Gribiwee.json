@@ -1,0 +1,93 @@
+{
+    "name" : "Gribiwee",
+    "title" : "The Oldfire Poppet",
+
+    "roles" : [ "Tireur" ],
+    "difficulty" : "Medium",
+    "positions" : [ "Bot", "Jungle" ],
+
+    "range_type" : "Distance",
+    "range_value" : "550",
+    "resource" : "Manaless",
+    "damage_type" : "Physical",
+
+    "creation_date" : "2025-11-14",
+    "revision_date" : "2025-11-15",
+    "concept_similarities" : [ "veigar", "lulu", "rumble" ],
+    "splash_face": { "file": "gribiwee.webp", "x": 20, "y": 30, "r": 50 },
+    "design_description" :"description complete de l'apparence",
+
+    "lore": {
+        "region" : "Bandle",
+        "position": { "x": 1800, "y": 2500 },
+        "relations" : [ "veigar", "lulu", "rumble" ],
+        "age" : "906 AN",
+        "quote" : "",
+        "short": "Gribiwee est une grand-mère pyortechnicienne. Elle utilise une lance à feu pour envoyer des fusées sur ses adversaires. Elle organisait autrefois des spectacles de feux d'artifice dans tout Bandle.",
+        "full": "Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie ancien et maléfique. Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à l'autre. Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des fusées sur ses adversaires, et aussi parfois comme une canne. Malgré ses manières tranquilles, Gribi reste instable et imprévisible. Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage."
+    },
+
+    "stats_wheel": {
+        "damage" : 3,
+        "resistance" : 0,
+        "control" : 1,
+        "mobility" : 2,
+        "utility" : 1
+    },
+
+    "abilities": {
+        "p": {
+            "name": "A petit feu",
+            "description": "Passive 1: Les auto attaques et compétences de Gribiwee applique un effet de brûlure non cumulable qui inflige des dégâts sur la durée.",
+            "mechanics": {
+                "duration": "Durée de la brûlure : 3 sec",
+                "m2": "Dégats par seconde : 3% AD en dégats physiques",
+                "cooldown": "0s"
+            },
+            "name_2": "Fusée parachute",
+            "description_2": "Passive 2: Gribiwee possède une ward unique, la fusée à parachute. C'est une ward de contrôle éphémère à portée illimité. Elle a une durée de vie courte avec un champ de vision qui se réduit progressivement. Gribiwee ne peut pas prendre une autre ward.",
+            "mechanics_2": {
+                "m1": "PV : 1",
+                "m2": "Rayon de vision : 900 > 60 (-14 par seconde)",
+                "m5": "Limite de charges simultanées : 1",
+                "duration": "Durée active : 60 sec",
+                "cooldown": "180s"
+            }
+        },
+        "q": {
+            "name": "Fusée",
+            "description": "Gribiwee tire une fusée qui plonge sur une position éloigné, infligeant des dégâts physiques en zone. Le sort est réinitialisé si Gribiwee tue un champion ou un monstre de la jungle.",
+            "mechanics": {
+                "range": "900",
+                "damage": "Dégâts : 30 | 50 | 70 | 90 | 110 (+ 30% AD)",
+                "cooldown": "15s"
+            }
+        },
+        "w": {
+            "name": "Feu d'artifice",
+            "description": "Les 3 prochaine auto-attaques de Gribiwee créés des motifs pyrotechniques autour de leur cible, infligeant des dégâts de zone supplémentaires. Chaque auto-attaque à son propre motif. Le motif commence toujours par apparaitre en son centre sur la cible et s'etend ensuite autour.",
+            "mechanics": {
+                "range": "550",
+                "damage": "Dégâts : 30 | 50 | 70 | 90 | 110 (+ 30% AD)",
+                "cooldown": "15s"
+            }
+        },
+        "e": {
+            "name": "Course folle",
+            "description": "Gribiwee devient fantomatique, gagne 100 % de vitesse de déplacement totale bonus et la capacité d’ignorer les collisions avec le terrain. L'effet s'annule si Gribiwee subit une immobilisation.",
+            "mechanics": {
+                "duration": "Durée de l'effet: 3 secondes",
+                "cooldown": "30s"
+            }
+        },
+        "r": {
+            "name": "Grand éventail",
+            "description": "Gribiwee fait apparaître une fontaine pyrotechnique en arc de cercle. L'arc de cercle inflige des dégâts constants aux ennemis qui le traverse. Les compétences de Gribiwee qui traverse l'arc de cercle sont dupliquées.",
+            "mechanics": {
+                "duration": "Durée de l'éventail : 5 sec",
+                "m1": "Arc de cercle : 220°",
+                "cooldown": "120s"
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+body {
+    background: #191919;
+    color: #fff;
+}
+/* Masonry Elements */
+
+.kp-masonry-gallery {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.kp-masonry-grid-item {
+    width: 240px;
+    margin-bottom: 10px;
+    /* border: 1px solid #00000000; */
+    /* padding: 5px; */
+    filter: brightness(90%);
+}
+
+.kp-masonry-grid-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.kp-masonry-grid-item:hover {
+    cursor: pointer;
+    /* border: 1px solid #ffffff; */
+    transform: scale(101%);
+    filter: brightness(100%);
+}
+
+.kp-masonry-txt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: white;
+    display: flex;
+    justify-content:center;
+}

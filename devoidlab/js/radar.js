@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
         .then(data => {
             container.innerHTML = data;
             loadLocalization("data/champions/localization.json");
-            loadChampion("data/champions/Gribiwee.json"); // get champion name
+            loadChampion("data/champions/Gribiwee/Gribiwee.json"); // get champion name
         })
         .catch(error => console.log('Erreur lors du chargement du radar:', error));
 

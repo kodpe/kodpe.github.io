@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie Masonry Vanilla JS</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            background: #111;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: white;
+        }
+
+        .gallery {
+            margin: 0 auto;
+        }
+        .grid-item {
+            width: 400px;
+            margin-bottom: 10px;
+            border: 1px solid #00000000;
+            padding: 8px;
+        }
+        .grid-item img {
+            width: 100%;
+            display: block;
+        }
+        .grid-item:hover {
+            cursor: pointer;
+            border: 1px solid #ffffff;
+            /* transform: scale(101%); */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Board</h1>
+
+    <div class="gallery">
+        <div class="grid-item">
+            <img src="https://picsum.photos/300/400?1">
+            <span>The cow jumped over the moon jwiefjoijio ewoifjweoigjiowgj  jiweogjiojgioj wijegoij fjweiojgiojrgiooigrj  jwiofejgiojgiojggi hfueihuighi uewhgfiuhw uigh wehgui ewhguih euighewui hguiewh giuhugi huihe uighewiu ghuiewh guiwh</pre>
+        </div>
+        <div class="grid-item">
+            <pre>bonjour hehe oui </pre>
+        </div>
+        <div class="grid-item"><img src="https://picsum.photos/600/300?2"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/500?3"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/350?4"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/450?5"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/320?6"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/600?7"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/380?8"></div>
+        <div class="grid-item"><img src="https://picsum.photos/1300/520?9"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?18"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?19"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?20"></div>
+        <div class="grid-item"><pre>bonjour hehe oui </pre></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?10"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?11"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?12"></div>
+        <div class="grid-item"><pre>bonjour hehe oui </pre></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?13"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?14"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?15"></div>
+        <div class="grid-item"><img src="https://picsum.photos/300/360?16"></div>
+    </div>
+
+    <!-- Masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- avoids layout shift when images load -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/packery@3/dist/packery.pkgd.min.js"></script>
+
+    <script>
+        const gallery = document.querySelector('.gallery');
+
+        imagesLoaded(gallery, function () {
+            // new Masonry(gallery, {
+            new Packery(gallery, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                gutter: 10,
+                // fitWidth: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>
