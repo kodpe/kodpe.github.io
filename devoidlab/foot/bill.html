@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Billard 3D minimaliste — Three.js</title>
+  <style>
+    html,body { height:100%; margin:0; background:#111; }
+    #canvas { display:block; width:100vw; height:100vh; }
+    /* minimal UI note (hidden) */
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.155.0/build/three.module.js';
+
+    // ---------- CONFIG ----------
+    const BALL_COUNT = 10;
+    const TABLE_WIDTH = 16;   // x direction
+    const TABLE_DEPTH = 8.5;  // z direction
+    const BALL_RADIUS = 0.25;
+    const FRICTION = 0.995;   // per frame multiplier (slight slow down)
+    const MAX_INIT_SPEED = 0.12;
+
+    // ---------- SETUP ----------
+    const canvas = document.getElementById('canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio || 1);
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0b0b0b);
+
+    const camera = new THREE.PerspectiveCamera(45, 2, 0.1, 100);
+    camera.position.set(0, 10, 12);
+    camera.lookAt(0, 0, 0);
+
+    // Lights
+    const hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 0.8);
+    scene.add(hemi);
+    const dir = new THREE.DirectionalLight(0xffffff, 0.6);
+    dir.position.set(5, 10, 7);
+    scene.add(dir);
+
+    // ---------- TABLE ----------
+    const table = new THREE.Group();
+
+    // table surface
+    const surfaceGeo = new THREE.PlaneGeometry(TABLE_WIDTH, TABLE_DEPTH);
+    const surfaceMat = new THREE.MeshStandardMaterial({ color: 0x073b07, roughness: 0.9 });
+    const surface = new THREE.Mesh(surfaceGeo, surfaceMat);
+    surface.rotation.x = -Math.PI/2;
+    surface.receiveShadow = true;
+    table.add(surface);
+
+    // borders (simple raised edges)
+    const railHeight = 0.35;
+    const railThickness = 0.4;
+    const railMat = new THREE.MeshStandardMaterial({ color: 0x3a2b1f, roughness: 0.8 });
+
+    const makeRail = (w,h,d) => new THREE.Mesh(new THREE.BoxGeometry(w,h,d), railMat);
+    const railTop = TABLE_DEPTH/2 + railThickness/2;
+
+    const rail1 = makeRail(TABLE_WIDTH + 2*railThickness, railHeight, railThickness);
+    rail1.position.set(0, railHeight/2, -TABLE_DEPTH/2 - railThickness/2);
+    table.add(rail1);
+    const rail2 = makeRail(TABLE_WIDTH + 2*railThickness, railHeight, railThickness);
+    rail2.position.set(0, railHeight/2, TABLE_DEPTH/2 + railThickness/2);
+    table.add(rail2);
+    const rail3 = makeRail(railThickness, railHeight, TABLE_DEPTH + 2*railThickness);
+    rail3.position.set(-TABLE_WIDTH/2 - railThickness/2, railHeight/2, 0);
+    table.add(rail3);
+    const rail4 = makeRail(railThickness, railHeight, TABLE_DEPTH + 2*railThickness);
+    rail4.position.set(TABLE_WIDTH/2 + railThickness/2, railHeight/2, 0);
+    table.add(rail4);
+
+    scene.add(table);
+
+    // floor under table (visual) - optional
+    const floor = new THREE.Mesh(new THREE.BoxGeometry(40, 0.1, 30), new THREE.MeshStandardMaterial({color:0x070707, roughness:1}));
+    floor.position.set(0, -0.05, 0);
+    scene.add(floor);
+
+    // ---------- BALLS (2D physics on XZ plane) ----------
+    const ballGeo = new THREE.SphereGeometry(BALL_RADIUS, 24, 24);
+
+    const colors = [0xffffff,0xff0000,0x0000ff,0xffff00,0xff8800,0x00ff88,0x8800ff,0x00ffff,0xff00aa,0x889900];
+
+    const balls = [];
+
+    function randomPositionNonOverlapping() {
+      for (let attempts=0; attempts<500; attempts++) {
+        const x = (Math.random() * (TABLE_WIDTH - 2*BALL_RADIUS)) - (TABLE_WIDTH/2 - BALL_RADIUS);
+        const z = (Math.random() * (TABLE_DEPTH - 2*BALL_RADIUS)) - (TABLE_DEPTH/2 - BALL_RADIUS);
+        let ok = true;
+        for (const b of balls) {
+          const dx = b.pos.x - x;
+          const dz = b.pos.z - z;
+          const dist2 = dx*dx + dz*dz;
+          if (dist2 < (2*BALL_RADIUS)*(2*BALL_RADIUS) * 1.01) { ok = false; break; }
+        }
+        if (ok) return {x,z};
+      }
+      // fallback: place on a grid (should not happen normally)
+      return {x:0,z:0};
+    }
+
+    for (let i=0;i<BALL_COUNT;i++){
+      const mat = new THREE.MeshStandardMaterial({ color: colors[i % colors.length], metalness: 0.2, roughness: 0.6 });
+      const mesh = new THREE.Mesh(ballGeo, mat);
+      // keep them slightly above surface so they look like resting
+      mesh.castShadow = true;
+
+      const pos = randomPositionNonOverlapping();
+      mesh.position.set(pos.x, BALL_RADIUS, pos.z);
+      scene.add(mesh);
+
+      const angle = Math.random()*Math.PI*2;
+      const speed = 0.02 + Math.random()*(MAX_INIT_SPEED - 0.02);
+      const vel = { x: Math.cos(angle)*speed, z: Math.sin(angle)*speed };
+
+      balls.push({ mesh, pos:{x:pos.x, z:pos.z}, vel, radius: BALL_RADIUS, mass: 1 });
+    }
+
+    // ---------- PHYSICS UTILITIES (2D) ----------
+    function stepPhysics() {
+      // integrate
+      for (const b of balls) {
+        b.pos.x += b.vel.x;
+        b.pos.z += b.vel.z;
+
+        // wall collisions (simple reflect)
+        const minX = -TABLE_WIDTH/2 + b.radius;
+        const maxX = TABLE_WIDTH/2 - b.radius;
+        const minZ = -TABLE_DEPTH/2 + b.radius;
+        const maxZ = TABLE_DEPTH/2 - b.radius;
+
+        if (b.pos.x < minX) { b.pos.x = minX; b.vel.x *= -1; }
+        if (b.pos.x > maxX) { b.pos.x = maxX; b.vel.x *= -1; }
+        if (b.pos.z < minZ) { b.pos.z = minZ; b.vel.z *= -1; }
+        if (b.pos.z > maxZ) { b.pos.z = maxZ; b.vel.z *= -1; }
+
+        // friction
+        b.vel.x *= FRICTION;
+        b.vel.z *= FRICTION;
+
+        // tiny clamp to zero
+        if (Math.abs(b.vel.x) < 1e-4) b.vel.x = 0;
+        if (Math.abs(b.vel.z) < 1e-4) b.vel.z = 0;
+      }
+
+      // ball-ball collisions
+      for (let i=0;i<balls.length;i++){
+        for (let j=i+1;j<balls.length;j++){
+          const A = balls[i];
+          const B = balls[j];
+          const dx = B.pos.x - A.pos.x;
+          const dz = B.pos.z - A.pos.z;
+          const dist2 = dx*dx + dz*dz;
+          const minDist = A.radius + B.radius;
+          if (dist2 <= minDist*minDist) {
+            const dist = Math.sqrt(Math.max(dist2, 1e-9));
+            // minimal translation to separate
+            const overlap = 0.5 * (minDist - dist + 1e-6);
+            const nx = dx / dist;
+            const nz = dz / dist;
+            A.pos.x -= nx * overlap;
+            A.pos.z -= nz * overlap;
+            B.pos.x += nx * overlap;
+            B.pos.z += nz * overlap;
+
+            // relative velocity
+            const rvx = B.vel.x - A.vel.x;
+            const rvz = B.vel.z - A.vel.z;
+            const relVelAlongNormal = rvx * nx + rvz * nz;
+            if (relVelAlongNormal > 0) continue; // moving apart
+
+            // assume perfectly elastic collision
+            const e = 0.98;
+            const jImpulse = -(1 + e) * relVelAlongNormal / (1/A.mass + 1/B.mass);
+            const ix = jImpulse * nx;
+            const iz = jImpulse * nz;
+            A.vel.x -= ix / A.mass;
+            A.vel.z -= iz / A.mass;
+            B.vel.x += ix / B.mass;
+            B.vel.z += iz / B.mass;
+          }
+        }
+      }
+
+      // update meshes
+      for (const b of balls) {
+        b.mesh.position.x = b.pos.x;
+        b.mesh.position.z = b.pos.z;
+      }
+    }
+
+    // ---------- RENDER LOOP ----------
+    function resizeRendererToDisplaySize() {
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      const needResize = canvas.width !== Math.floor(width * window.devicePixelRatio) || canvas.height !== Math.floor(height * window.devicePixelRatio);
+      if (needResize) {
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+      return needResize;
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      stepPhysics();
+      resizeRendererToDisplaySize();
+      renderer.render(scene, camera);
+    }
+
+    // start
+    animate();
+
+    // no user interaction by design
+    // purely autonomous visual
+
+    // expose nothing globally
+  </script>
+</body>
+</html>

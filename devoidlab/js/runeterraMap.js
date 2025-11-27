@@ -65,12 +65,11 @@ function addMapMarker(mapX, mapY, imgData, name, url, markerSize = 128) {
     const { file, x, y, r } = imgData;
     const scale = markerSize / (r * 2);
     if (name == "Gribiwee")
-      marker.style.backgroundImage = `url('data/champions/${name}/splashArt/${file}')`;
+      marker.style.backgroundImage = `url('data/champions/${name}/splash/${file}')`;
     else
       marker.style.backgroundImage = `url('images/${file}')`;
     marker.style.backgroundSize = `${scale * 100}% auto`;
     marker.style.backgroundPosition = `-${x}px -${y}px`;
-
 
 
     //   marker.addEventListener('click', () => alert(`Marker cliqué à ${x},${y}`));

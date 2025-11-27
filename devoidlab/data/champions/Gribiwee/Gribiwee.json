@@ -1,4 +1,10 @@
 {
+    "project": {
+        "author" : [ "kodp" ],
+        "created" : "14-11-25",
+        "updated" : "26-11-25"
+    },
+
     "name" : "Gribiwee",
     "title" : "The Oldfire Poppet",
 
@@ -18,11 +24,13 @@
     "design_description" :"description complete de l'apparence",
 
     "lore": {
+        "realname": "real",
         "region" : "Bandle",
         "position": { "x": 1800, "y": 2500 },
+        "birthdate" : "906 AN",
+        "occupation" : "occ",
         "relations" : [ "veigar", "lulu", "rumble" ],
-        "age" : "906 AN",
-        "quote" : "",
+        "quote" : "Si la fête ne pouvais jamais se terminer.",
         "short": "Gribiwee est une grand-mère pyortechnicienne. Elle utilise une lance à feu pour envoyer des fusées sur ses adversaires. Elle organisait autrefois des spectacles de feux d'artifice dans tout Bandle.",
         "full": "Gribiwee est une grand-mère de petite taille espiègle avec un esprit vif et un savoir-faire de pyrotechnie ancien et maléfique. Elle a un visage figé peint en blanc et rouge, de longs cheveux blancs, un oeil anormalement gros par rapport à l'autre. Une tunique ancienne blanche , rouge et doré. Son arme est une lance à feu qu’elle utilise pour envoyer des fusées sur ses adversaires, et aussi parfois comme une canne. Malgré ses manières tranquilles, Gribi reste instable et imprévisible. Elle a la capacité de se battre égalemment au corps à corps grâce à sa lance à double usage."
     },

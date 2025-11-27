@@ -50,13 +50,9 @@
 
     <div class="champion-abilities-panel">
 
-      <div id="champion-buttons-panel"><!-- js --></div>
-      <div class="champion-media-panel">
-        <pre>media</pre>
-      </div>
-      <div class="champion-text-panel">
-        <pre>texte</pre>
-      </div>
+      <div id="champion-buttons-panel"><!-- Injected by JS --></div>
+      <div class="champion-media-panel"><!-- Injected by JS --></div>
+      <div class="champion-text-panel"><!-- Injected by JS --></div>
     </div>
 
     <div class="champion-details-panel">
@@ -248,15 +244,9 @@
           </div>
 
           <div class="panel-hz">
-
-            <div class="role-icon-wrapper">
-              <span><img src="images/icons/icon-edit.png" class="svg-role" alt="svg" /></span>
-            </div>
-
             <div class="meta-description">
-              <p class="gold">created: 14-11-25 / updated: 20-11-25 / author: kodp</p>
+              <p id="champion-author-text" class="gold"></p>
             </div>
-
           </div>
 
         </div>
@@ -296,6 +286,7 @@
       <script src="js/loadChampion/renderRoles.js"></script>
       <script src="js/loadChampion/renderAbilities.js"></script>
       <script src="js/loadChampion/renderAbilitiesButtons.js"></script>
+      <script src="js/loadChampion/renderAuthor.js"></script>
       <script src="js/loadChampion/renderBoard.js"></script>
       <script src="js/loadChampion.js"></script>
       <!-- END loadChampion.js -->

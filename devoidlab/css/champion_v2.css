@@ -144,8 +144,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    gap: 5px;
+    padding-top: 5px;
+    /* gap: 10px; */
     padding-bottom: 12px;
     border-bottom: 1px solid #c8aa6e;
     box-sizing: border-box;
@@ -183,16 +183,20 @@
 
 .champion-media-panel {
     width: 600px;
-    height: 350px;
+    height: 410px;
     /* height: 70%; */
     border: 1px solid #c8aa6e;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
 }
 
 .champion-text-panel {
     width: 600px;
-    height: 200px;
+    height: 250px;
     /* height: 30%; */
-    border: 1px solid #c8aa6e;
+    /* border: 1px solid #c8aa6e; */
+    text-align: center;
 }
 
 #champion-buttons-panel {
@@ -449,5 +453,27 @@
     font-weight: 500;
 }
 
+.champion-abilitie-txt {
+    margin: 0 auto;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.02rem;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px;
+}
 
-/*  */
+.champion-abilitie-img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.champion-media-pre {
+    /* position: relative; */
+    /* right: 0; */
+    /* bottom: 0; */
+    width: 100px;
+    background-color: chocolate;
+}

@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Football 3D automatique — Three.js</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            background: #111;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        #score {
+            position: absolute;
+            /* top: 10px; */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d8b90c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+            background-color: #111;
+            padding-inline: 20px;
+            z-index: 10;
+        }
+
+        #red-icon {
+            position: absolute;
+            top: 64px;
+            left: 48%;
+            transform: translateX(-50%);
+            background-color: red;
+            width: 60px;
+            height: 10px;
+            z-index: 10;
+        }
+
+        #blue-icon {
+            position: absolute;
+            top: 64px;
+            left: 52%;
+            transform: translateX(-50%);
+            background-color: blue;
+            width: 60px;
+            height: 10px;
+            z-index: 10;
+        }
+
+        .ball-indicator {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #32cd32;
+            /* pointer-events: none; */
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            overflow: hidden;
+            /* border: 2px solid #bbbbbb; */
+            /* border: 1px solid #00ff00; */
+        }
+
+        .red-team {
+            border: 2px solid #ff0000;
+        }
+        .blue-team {
+            border: 2px solid #0000ff;
+        }
+
+        .ball-indicator:hover {
+            border: 3px solid white;
+        }
+
+        .ball-indicator img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+    <!-- <link rel="icon" href="" type="image/x-icon"> -->
+</head>
+
+<body>
+    <div id="score">0 - 0</div>
+    <div id="red-icon"></div>
+    <div id="blue-icon"></div>
+    <canvas id="canvas"></canvas>
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.155.0/build/three.module.js';
+
+        const FIELD_WIDTH = 18;
+        const FIELD_DEPTH = 24;
+        const BALL_RADIUS = 0.4;
+        const PLAYER_COUNT = 5;
+        const TEAM_COLORS = [0x0000dd, 0xdd0000];
+        const FRICTION = 0.98;
+        const MAX_PLAYER_SPEED = 0.08;
+        const MAX_BALL_SPEED = 0.08;
+
+        const canvas = document.getElementById('canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio || 1);
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x0b100a);
+
+        let cameraAngle = 0;
+        const cameraRadius = 20;
+        const cameraHeight = 15;
+        const camera = new THREE.PerspectiveCamera(50, 2, 0.1, 100);
+
+        const light = new THREE.DirectionalLight(0xffffff, 1.5); // 1
+        light.position.set(5, 10, 5);
+        scene.add(light);
+        scene.add(new THREE.AmbientLight(0x555555));
+
+        function createNoiseTexture(size = 512, intensity = 0.9) {
+            const canvas = document.createElement('canvas');
+            canvas.width = canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            const imageData = ctx.createImageData(size, size);
+            for (let i = 0; i < size * size * 4; i += 4) {
+                const v = Math.random() * 255 * intensity;
+                imageData.data[i] = v;
+                imageData.data[i + 1] = v;
+                imageData.data[i + 2] = v;
+                imageData.data[i + 3] = 255;
+            }
+            ctx.putImageData(imageData, 0, 0);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(10, 10); // répéter le grain si besoin
+            return texture;
+        }
+
+        // Exemple d'utilisation : mélanger avec ta texture principale
+        const noiseTexture = createNoiseTexture(256, 0.9);
+        const noiseTexture2 = createNoiseTexture(256, 0.9);
+
+        // --- Création d'une texture damier ---
+        function createCheckerTexture(color1, color2, repeatsX, repeatsY) {
+            const canvas = document.createElement('canvas');
+            canvas.width = FIELD_WIDTH * 100;
+            canvas.height = FIELD_DEPTH * 100;
+            const ctx = canvas.getContext('2d');
+            ctx.imageSmoothingEnabled = true;
+
+            const stepX = canvas.width / repeatsX;
+            const stepY = canvas.height / repeatsY;
+
+            for (let x = 0; x < repeatsX; x++) {
+
+                for (let y = 0; y < repeatsY; y++) {
+                    ctx.fillStyle = (x + y) % 2 === 0 ? color1 : color2;
+                    ctx.fillRect(x * stepX, y * stepY, stepX, stepY);
+                }
+            }
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(1, 1); // répétion si nécessaire
+            return texture;
+        }
+        // const textureDamier = createCheckerTexture('#5b9452', '#30632a', 5, 8);
+        const caseFactor = 1;
+        // const textureDamier = createCheckerTexture('#13c647', '#009121', 5 * caseFactor, 8 * caseFactor);
+        const textureDamier = createCheckerTexture('#002200', '#005500', 1 * caseFactor, 20 * caseFactor);
+
+        const fieldGeo = new THREE.PlaneGeometry(FIELD_WIDTH, FIELD_DEPTH);
+        // const fieldMat = new THREE.MeshStandardMaterial({ color: 0x20aa20, roughness:0.9 });
+        const fieldMat = new THREE.MeshStandardMaterial({ map: textureDamier, roughness: 0.9, aoMap: noiseTexture, aoMapIntensity: 10 });
+        fieldMat.transparent = true;
+        fieldMat.opacity = 0.3;
+        // const fieldMat = new THREE.MeshBasicMaterial({ map: textureDamier, roughness:0.9 });
+        const field = new THREE.Mesh(fieldGeo, fieldMat);
+        field.rotation.x = -Math.PI / 2;
+        scene.add(field);
+        // text 2
+        const textureDamier2 = createCheckerTexture('#13c647', '#009121', 12 * caseFactor, 1 * caseFactor);
+        // const fieldMat2 = new THREE.MeshStandardMaterial({ map: textureDamier2, roughness:0.9 });
+        const fieldMat2 = new THREE.MeshStandardMaterial({ map: textureDamier2, roughness: 0.9, aoMap: noiseTexture2, aoMapIntensity: 10 });
+        fieldMat2.transparent = true;
+        fieldMat2.opacity = 0.3;
+        const field2 = new THREE.Mesh(fieldGeo, fieldMat2);
+        field2.rotation.x = -Math.PI / 2;
+        scene.add(field2);
+
+        const hw = FIELD_WIDTH / 2;
+        const hd = FIELD_DEPTH / 2;
+
+        function createRectBorderCenter(color = 0x00ff00, elevationY = 0.01, originX = 0, originZ = 0, sizeX = 4, sizeZ = 4) {
+            const p1 = { x: originX - sizeX / 2, z: originZ - sizeZ / 2 }
+            const p2 = { x: originX + sizeX / 2, z: originZ - sizeZ / 2 }
+            const p3 = { x: originX + sizeX / 2, z: originZ + sizeZ / 2 }
+            const p4 = { x: originX - sizeX / 2, z: originZ + sizeZ / 2 }
+            return createRectBorder(color, elevationY, p1.x, p1.z, p2.x, p2.z, p3.x, p3.z, p4.x, p4.z, p1.x, p1.z);
+        }
+
+        // scene.add(createRectBorder(0xff00ff, 0.01, p1.x, p1.z, p2.x, p2.z, p3.x, p3.z, p4.x, p4.z, p1.x, p1.z));
+        function createRectBorder(color = 0x00ff00, elevationY = 0.01, aX, aZ, bX, bZ, cX, cZ, dX, dZ) {
+            const borderPoints = [
+                new THREE.Vector3(aX, elevationY, aZ),
+                new THREE.Vector3(bX, elevationY, bZ),
+                new THREE.Vector3(cX, elevationY, cZ),
+                new THREE.Vector3(dX, elevationY, dZ),
+                new THREE.Vector3(aX, elevationY, aZ) // boucle
+            ];
+            const borderGeo = new THREE.BufferGeometry().setFromPoints(borderPoints);
+            const borderMat = new THREE.LineBasicMaterial({ color: color });
+            const border = new THREE.Line(borderGeo, borderMat);
+            return border;
+        }
+
+        // Football field border
+        scene.add(createRectBorder(0xffffff, 0.01, -hw, -hd, hw, -hd, hw, hd, -hw, hd, -hw, -hd));
+
+        // const sizeX = 8;
+        // const sizeZ = 3.5;
+        // const originX = 0;
+        // const originZ = 10.25;
+        scene.add(createRectBorderCenter(0xffffff, 0.011, 0, 10.2, 9, 3.6));
+        scene.add(createRectBorderCenter(0xffffff, 0.011, 0, -10.2, 9, 3.6));
+        scene.add(createRectBorderCenter(0xffffff, 0.012, 0, 11.4, 4.5, 1.2));
+        scene.add(createRectBorderCenter(0xffffff, 0.012, 0, -11.4, 4.5, 1.2));
+
+
+        // Coordonnées des coins du terrain
+        const borderPoints2 = [
+            new THREE.Vector3(-hw, 0.01, 0),
+            new THREE.Vector3(hw, 0.01, 0),
+        ];
+
+        const borderGeo2 = new THREE.BufferGeometry().setFromPoints(borderPoints2);
+        const borderMat2 = new THREE.LineBasicMaterial({ color: 0xffffff });
+        const border2 = new THREE.Line(borderGeo2, borderMat2);
+        scene.add(border2);
+
+        // Cercle central
+        const radius = 2; // rayon du cercle central
+        const curve = new THREE.EllipseCurve(
+            0, 0,       // centre x, z
+            radius, radius, // rayon x, y
+            0, 2 * Math.PI, // angle
+            false,
+            0
+        );
+        const points = curve.getPoints(60);
+        const circleGeo = new THREE.BufferGeometry().setFromPoints(
+            points.map(p => new THREE.Vector3(p.x, 0.013, p.y))
+        );
+        const circle = new THREE.Line(circleGeo, new THREE.LineBasicMaterial({ color: 0xffffff }));
+        scene.add(circle);
+
+        // Point central
+        const curve2 = new THREE.EllipseCurve(
+            0, 0,       // centre x, z
+            0.05, 0.05, // rayon x, y
+            0, 2 * Math.PI, // angle
+            false,
+            0
+        );
+        const points2 = curve2.getPoints(8);
+        const circleGeo2 = new THREE.BufferGeometry().setFromPoints(
+            points2.map(p => new THREE.Vector3(p.x, 0.013, p.y))
+        );
+        const circle2 = new THREE.Line(circleGeo2, new THREE.LineBasicMaterial({ color: 0xffffff }));
+        scene.add(circle2);
+
+        function getEllipseCurve(radius = 2, cx = 0, cz = 0, startRadf = 0.25, endRadf = 0.75, color = 0x00ff00) {
+            // Paramètres
+            // const radius = 2;      // rayon du demi-cercle
+            const centerX = cx;
+            const centerZ = cz;
+            const segments = 32;   // nombre de points
+            // const startAngle = 0;
+            // const endAngle = Math.PI;  // demi-cercle
+            // const startAngle = Math.PI * 0.25;
+            // const endAngle = Math.PI * 0.75;
+            const startAngle = Math.PI * startRadf;
+            const endAngle = Math.PI * endRadf;
+
+            // Créer la courbe
+            const curve = new THREE.EllipseCurve(
+                centerX, centerZ, // centre
+                radius, radius,   // rayons x et y
+                startAngle, endAngle, // angle
+                false,            // clockwise
+                0                 // rotation
+            );
+
+            // Points
+            const points = curve.getPoints(segments);
+            const positions = points.map(p => new THREE.Vector3(p.x, 0.01, p.y)); // y=0.01 pour éviter z-fighting
+
+            // Geometry et ligne
+            const geometry = new THREE.BufferGeometry().setFromPoints(positions);
+            const material = new THREE.LineBasicMaterial({ color: color });
+            const halfCircle = new THREE.Line(geometry, material);
+            return halfCircle;
+        }
+
+        scene.add(getEllipseCurve(2, 0, -9.8, 0.25, 0.75, 0xffffff));
+        scene.add(getEllipseCurve(2, 0, 9.8, -0.75, -0.25, 0xffffff));
+
+        scene.add(getEllipseCurve(0.3, FIELD_WIDTH / 2, FIELD_DEPTH / 2, 1, -0.5, 0xffffff));
+        scene.add(getEllipseCurve(0.3, FIELD_WIDTH / 2, -FIELD_DEPTH / 2, 0.5, -1, 0xffffff));
+        scene.add(getEllipseCurve(0.3, -FIELD_WIDTH / 2, -FIELD_DEPTH / 2, 0, 0.5, 0xffffff));
+        scene.add(getEllipseCurve(0.3, -FIELD_WIDTH / 2, FIELD_DEPTH / 2, -0.5, 0, 0xffffff));
+
+
+
+        const GOAL_WIDTH = 3;
+        const GOAL_DEPTH = 1;
+
+        const goalMat1 = new THREE.MeshStandardMaterial({ color: 0x0000dd });
+        const goal1 = new THREE.Mesh(new THREE.BoxGeometry(GOAL_WIDTH, 1, GOAL_DEPTH), goalMat1);
+        goal1.position.set(0, 0.5, -FIELD_DEPTH / 2 - GOAL_DEPTH / 2);
+        scene.add(goal1);
+
+        const goalMat2 = new THREE.MeshStandardMaterial({ color: 0xdd0000 });
+        const goal2 = new THREE.Mesh(new THREE.BoxGeometry(GOAL_WIDTH, 1, GOAL_DEPTH), goalMat2);
+        goal2.position.set(0, 0.5, FIELD_DEPTH / 2 + GOAL_DEPTH / 2);
+        scene.add(goal2);
+
+        const ballGeo = new THREE.SphereGeometry(BALL_RADIUS*1, 24, 24);
+        const ballMat = new THREE.MeshStandardMaterial({ color: 0xffffff });
+        // const soccerTex = createSoccerBallTexture();
+        // soccerTex.flipX = false;
+        // const ballMat = new THREE.MeshStandardMaterial({ map: soccerTex });
+        const ballMesh = new THREE.Mesh(ballGeo, ballMat);
+        ballMesh.position.set(0, BALL_RADIUS, 0);
+        scene.add(ballMesh);
+        const ball = { pos: { x: 0, z: 0 }, vel: { x: 0, z: 0 }, radius: BALL_RADIUS };
+
+        const playerGeo = new THREE.SphereGeometry(BALL_RADIUS, 24, 24);
+        const players = [];
+        // players png
+        const png1 = [6, 25, 27, 31, 32];
+        const png2 = [33, 45, 61, 86, 90];
+        const TEAM_PLAYERS_PNG = [png1, png2];
+
+        // load texture
+        const tex = new THREE.TextureLoader().load('../images/icons/champions/33.png');
+        // create sprite material
+        const spriteMat = new THREE.SpriteMaterial({ map: tex });
+        spriteMat.color.setScalar(1);
+
+        for (let team = 0; team < 2; team++) {
+            for (let i = 0; i < PLAYER_COUNT; i++) {
+                // const mesh = new THREE.Mesh(playerGeo, new THREE.MeshStandardMaterial({ color: TEAM_COLORS[team] }));
+                const mesh = new THREE.Mesh(playerGeo, new THREE.MeshBasicMaterial({ color: TEAM_COLORS[team] }));
+                // mesh.visible = false;
+                // mesh.material.transparent = true;
+                // mesh.material.opacity = 0.2;
+                const x = (Math.random() - 0.5) * (FIELD_WIDTH - 2 * BALL_RADIUS);
+                const z = (team === 0 ? -1 : 1) * (Math.random() * (FIELD_DEPTH / 2 - 1));
+                mesh.position.set(x, BALL_RADIUS, z);
+                // create sprite and size of the image in world units
+                // const sprite = new THREE.Sprite(spriteMat);
+                // sprite.scale.set(0.5, 0.5, 1);
+                // mesh.add(sprite);
+                // sprite.position.set(0.5, BALL_RADIUS*1.2, 0);
+                scene.add(mesh);
+
+                // --- Création du div HTML ---
+                const div = document.createElement('div');
+                div.className = 'ball-indicator';
+                if (team == 0)
+                    div.classList.add('blue-team');
+                else
+                    div.classList.add('red-team');
+                const img = document.createElement('img');
+                // img.src = '../images/icons/champions/33.png';
+                img.src = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/221.png";
+                img.src = '../images/icons/champions/'+TEAM_PLAYERS_PNG[team][i]+'.png';
+                div.appendChild(img);
+                document.body.appendChild(div);
+
+                players.push({
+                    team,
+                    mesh,
+                    pos: { x, z },
+                    vel: { x: 0, z: 0 },
+                    behavior: null,
+                    behaviorTime: 0,
+                    div
+                });
+            }
+        }
+
+        // --- Update div positions ---
+        function updateDivs() {
+            for (const b of players) {
+                const vector = new THREE.Vector3(b.pos.x, BALL_RADIUS, b.pos.z);
+                vector.project(camera);
+                const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
+                const y = (-vector.y * 0.5 + 0.5) * window.innerHeight;
+                b.div.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+            }
+        }
+
+        let score = [0, 0];
+        const scoreDiv = document.getElementById('score');
+
+        function randomBehavior() {
+            const behaviors = ['rush', 'slow', 'between', 'follow', 'defense', 'idle', 'shoot', 'pass'];
+            return behaviors[Math.floor(Math.random() * behaviors.length)];
+        }
+
+        const min = 1;
+        const max = 1;
+        const behaviorConfig = [
+            { name: 'rush', weight: 5, duration: [min, max] },
+            { name: 'slow', weight: 5, duration: [min, max] },
+            { name: 'between', weight: 10, duration: [min, max] },
+            { name: 'follow', weight: 1, duration: [min, max] },
+            { name: 'defense', weight: 10, duration: [min, max] },
+            { name: 'idle', weight: 1, duration: [min, max] },
+            { name: 'shoot', weight: 10, duration: [min, max] },
+            { name: 'pass', weight: 1, duration: [min, max] }
+        ];
+        const behaviorMap = {};
+        behaviorConfig.forEach(b => behaviorMap[b.name] = b);
+        console.log(behaviorMap['shoot']);
+
+        function randomBehaviorWeighted() {
+            const total = behaviorConfig.reduce((s, b) => s + b.weight, 0);
+            let r = Math.random() * total;
+
+            for (const b of behaviorConfig) {
+                r -= b.weight;
+                if (r <= 0) return b;
+            }
+            return behaviorConfig[behaviorConfig.length - 1]; // fallback
+        }
+
+
+        function updateBehavior(p, delta) {
+            if (p.behaviorTime <= 0) {
+                // p.behavior = randomBehavior();
+                // p.behaviorTime = 50 + Math.random()*150; // frames
+                const b = randomBehaviorWeighted();
+                // const b = behaviorMap['defense'];
+                p.behavior = b.name;
+                const [min, max] = b.duration;
+                p.behaviorTime = min + Math.random() * (max - min);
+            } else {
+                p.behaviorTime -= delta;
+            }
+        }
+
+        function stepAI(delta) {
+            for (const p of players) {
+                updateBehavior(p, delta);
+                let targetX = ball.pos.x;
+                let targetZ = ball.pos.z;
+
+                if (p.behavior === 'rush') {
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED - MAX_PLAYER_SPEED / 2);
+                    moveTowards(p, targetX, targetZ, MAX_PLAYER_SPEED);
+
+                } else if (p.behavior === 'slow') {
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED / 2 - 0);
+                    moveTowards(p, targetX, targetZ, r_speed);
+
+                } else if (p.behavior === 'between') {
+                    targetX = ball.pos.x;
+                    targetZ = (p.team === 0 ? -FIELD_DEPTH / 2 : FIELD_DEPTH / 2);
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED * 0.7 - MAX_PLAYER_SPEED * 0.1);
+                    moveTowards(p, targetX, targetZ, r_speed);
+
+                } else if (p.behavior === 'follow') {
+                    let opponent = players.find(o => o.team !== p.team);
+                    if (opponent) {
+                        let r_speed = Math.random() * (MAX_PLAYER_SPEED * 0.7 - MAX_PLAYER_SPEED * 0.1);
+                        moveTowards(p, opponent.pos.x, opponent.pos.z, r_speed);
+                    }
+
+                } else if (p.behavior === 'defense') {
+                    targetX = p.pos.x; targetZ = (p.team === 0 ? -FIELD_DEPTH / 2 + 4 : FIELD_DEPTH / 2 - 4);
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED * 0.7 - MAX_PLAYER_SPEED * 0.1);
+                    moveTowards(p, targetX, targetZ, r_speed);
+
+                } else if (p.behavior === 'idle') {
+                    // do nothing
+                    //   p.vel.x = (Math.random() - 0.5) * 0.01;
+                    //   p.vel.z = (Math.random() - 0.5) * 0.01;
+                    //   p.pos.x += p.vel.x;
+                    //   p.pos.z += p.vel.z;
+                } else if (p.behavior === 'shoot') {
+                    if (distance(p.pos, ball.pos) < 1.0) {
+                        const dirZ = p.team === 0 ? 1 : -1;
+                        ball.vel.x += (ball.pos.x - p.pos.x) * 0.02;
+                        ball.vel.z += dirZ * 0.1;
+                    }
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED * 0.7 - MAX_PLAYER_SPEED * 0.1);
+                    moveTowards(p, ball.pos.x, ball.pos.z, r_speed);
+
+                } else if (p.behavior === 'pass') {
+                    const ally = players.find(a => a.team === p.team && a !== p);
+                    if (ally && distance(p.pos, ball.pos) < 1.0) {
+                        ball.vel.x += (ally.pos.x - ball.pos.x) * 0.02;
+                        ball.vel.z += (ally.pos.z - ball.pos.z) * 0.02;
+                    }
+                    let r_speed = Math.random() * (MAX_PLAYER_SPEED * 0.7 - MAX_PLAYER_SPEED * 0.1);
+                    moveTowards(p, ball.pos.x, ball.pos.z, r_speed);
+                }
+
+                // wall constraints
+                const minX = -FIELD_WIDTH / 2 + BALL_RADIUS;
+                const maxX = FIELD_WIDTH / 2 - BALL_RADIUS;
+                const minZ = -FIELD_DEPTH / 2 + BALL_RADIUS;
+                const maxZ = FIELD_DEPTH / 2 - BALL_RADIUS;
+                p.pos.x = Math.min(maxX, Math.max(minX, p.pos.x));
+                p.pos.z = Math.min(maxZ, Math.max(minZ, p.pos.z));
+            }
+            resolvePlayerCollisions();
+            players.forEach(p => { p.mesh.position.x = p.pos.x; p.mesh.position.z = p.pos.z; });
+        }
+
+        function moveTowards(p, tx, tz, speed) {
+            const dx = tx - p.pos.x;
+            const dz = tz - p.pos.z;
+            const dist = Math.sqrt(dx * dx + dz * dz) + 1e-6;
+            p.vel.x = dx / dist * speed;
+            p.vel.z = dz / dist * speed;
+            p.pos.x += p.vel.x;
+            p.pos.z += p.vel.z;
+        }
+
+        function distance(a, b) { return Math.sqrt((a.x - b.x) ** 2 + (a.z - b.z) ** 2); }
+
+        function resolvePlayerCollisions() {
+            for (let i = 0; i < players.length; i++) {
+                for (let j = i + 1; j < players.length; j++) {
+                    const A = players[i]; const B = players[j];
+                    const dx = B.pos.x - A.pos.x; const dz = B.pos.z - A.pos.z;
+                    const dist2 = dx * dx + dz * dz; const minDist = BALL_RADIUS * 2;
+                    if (dist2 < minDist * minDist) {
+                        const dist = Math.sqrt(dist2) + 1e-6;
+                        const overlap = (minDist - dist) / 2;
+                        const nx = dx / dist; const nz = dz / dist;
+                        A.pos.x -= nx * overlap; A.pos.z -= nz * overlap;
+                        B.pos.x += nx * overlap; B.pos.z += nz * overlap;
+                    }
+                }
+            }
+        }
+
+        function stepBall() {
+            for (const p of players) {
+                const dx = ball.pos.x - p.pos.x;
+                const dz = ball.pos.z - p.pos.z;
+                const dist2 = dx * dx + dz * dz;
+                const minDist = BALL_RADIUS * 2;
+                if (dist2 < minDist * minDist) {
+                    const dist = Math.sqrt(dist2) + 1e-6;
+                    const nx = dx / dist;
+                    const nz = dz / dist;
+                    ball.vel.x += nx * 0.03;
+                    ball.vel.z += nz * 0.03;
+                }
+            }
+
+            if (ball.vel.x > MAX_BALL_SPEED)
+                ball.vel.x = MAX_BALL_SPEED;
+
+            if (ball.vel.z > MAX_BALL_SPEED)
+                ball.vel.z = MAX_BALL_SPEED;
+
+            ball.pos.x += ball.vel.x;
+            ball.pos.z += ball.vel.z;
+            ball.vel.x *= FRICTION;
+            ball.vel.z *= FRICTION;
+            const minX = -FIELD_WIDTH / 2 + BALL_RADIUS, maxX = FIELD_WIDTH / 2 - BALL_RADIUS;
+            const minZ = -FIELD_DEPTH / 2 + BALL_RADIUS, maxZ = FIELD_DEPTH / 2 - BALL_RADIUS;
+            if (ball.pos.x < minX) { ball.pos.x = minX; ball.vel.x *= -1; }
+            if (ball.pos.x > maxX) { ball.pos.x = maxX; ball.vel.x *= -1; }
+            if (ball.pos.z < minZ) { ball.pos.z = minZ; ball.vel.z *= -1; }
+            if (ball.pos.z > maxZ) { ball.pos.z = maxZ; ball.vel.z *= -1; }
+            ballMesh.position.x = ball.pos.x; ballMesh.position.z = ball.pos.z;
+
+            // check goals
+            if (ball.pos.z - 1.1 < -FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1.5) {
+                score[0]++; resetBall(0);
+                console.warn("+1 for RED TEAM");
+            }
+            if (ball.pos.z + 1.1 > FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1.5) {
+                score[1]++; resetBall(1);
+                console.warn("+1 for BLUE TEAM");
+            }
+            scoreDiv.textContent = `${score[0]} - ${score[1]}`;
+        }
+
+        function resetBall(team) {
+            ball.pos.x = 0; ball.pos.z = 0; ball.vel.x = 0; ball.vel.z = 0;
+        }
+
+        function resizeRendererToDisplaySize() {
+            const width = canvas.clientWidth; const height = canvas.clientHeight;
+            const needResize = canvas.width !== Math.floor(width * window.devicePixelRatio) || canvas.height !== Math.floor(height * window.devicePixelRatio);
+            if (needResize) {
+                renderer.setSize(width, height, false);
+                camera.aspect = width / height; camera.updateProjectionMatrix();
+            }
+        }
+
+        const clock = new THREE.Clock();
+        const slowMotion = 1;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const delta = clock.getDelta() * slowMotion;
+
+            stepAI(delta);
+            stepBall();
+
+            cameraAngle += 0.0003;
+            camera.position.x = Math.cos(cameraAngle) * cameraRadius;
+            camera.position.z = Math.sin(cameraAngle) * cameraRadius;
+            camera.position.y = cameraHeight;
+            camera.lookAt(0, -3, 0);
+            // let dx = ball.pos.x;
+            // let dz = ball.pos.z;
+            // const trig = 2;
+            // dx = normalize(dx, -FIELD_WIDTH/2, FIELD_WIDTH/2) * trig;
+            // dz = normalize(dx, -FIELD_DEPTH/2, FIELD_DEPTH/2) * trig;
+            // console.log(dx)
+            // console.log(dz)
+            // camera.lookAt(dx, -1, dz);
+            // camera.lookAt(0,-3,0);
+            updateDivs();
+
+            resizeRendererToDisplaySize();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        function normalize(value, min, max) {
+            return (value - min) / (max - min);
+        }
+
+    </script>
+    <script src="../js/GameSoundManager.js"></script>
+</body>
+
+</html>

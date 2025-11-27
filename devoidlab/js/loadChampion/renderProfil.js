@@ -16,6 +16,6 @@ function renderProfil(json) {
     short.textContent = json.lore.short;
 
     const img = document.getElementById("champion-img");
-    img.src = "data/champions/"+json.name+"/splashArt/"+ json.splash_face.file;
+    img.src = "data/champions/"+json.name+"/splash/"+ json.splash_face.file;
   logOK("renderProfil()");
 }

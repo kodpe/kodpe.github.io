@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Football 3D automatique — Three.js</title>
+  <style>
+    html,body { height:100%; margin:0; background:#111; }
+    #canvas { display:block; width:100vw; height:100vh; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.155.0/build/three.module.js';
+
+    const FIELD_WIDTH = 20;
+    const FIELD_DEPTH = 12;
+    const BALL_RADIUS = 0.25;
+    const PLAYER_COUNT = 5;
+    const TEAM_COLORS = [0x0000ff, 0xff0000];
+    const FRICTION = 0.98;
+    const MAX_PLAYER_SPEED = 0.08;
+    const MAX_BALL_SPEED = 0.15;
+
+    const canvas = document.getElementById('canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio || 1);
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0b3b0b);
+
+    // camera orbiting
+    const camera = new THREE.PerspectiveCamera(50, 2, 0.1, 100);
+    let angle = 0;
+    const radius = 20;
+    const height = 15;
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(5, 10, 5);
+    scene.add(light);
+    scene.add(new THREE.AmbientLight(0x555555));
+
+    const fieldGeo = new THREE.PlaneGeometry(FIELD_WIDTH, FIELD_DEPTH);
+    const fieldMat = new THREE.MeshStandardMaterial({ color: 0x0b610b, roughness:0.9 });
+    const field = new THREE.Mesh(fieldGeo, fieldMat);
+    field.rotation.x = -Math.PI/2;
+    scene.add(field);
+
+    const GOAL_WIDTH = 4;
+    const GOAL_DEPTH = 0.5;
+    const goalMat = new THREE.MeshStandardMaterial({ color:0xffffff });
+    const goal1 = new THREE.Mesh(new THREE.BoxGeometry(GOAL_WIDTH, 1, GOAL_DEPTH), goalMat);
+    goal1.position.set(0, 0.5, -FIELD_DEPTH/2 - GOAL_DEPTH/2);
+    scene.add(goal1);
+    const goal2 = new THREE.Mesh(new THREE.BoxGeometry(GOAL_WIDTH, 1, GOAL_DEPTH), goalMat);
+    goal2.position.set(0, 0.5, FIELD_DEPTH/2 + GOAL_DEPTH/2);
+    scene.add(goal2);
+
+    const ballGeo = new THREE.SphereGeometry(BALL_RADIUS, 24, 24);
+    const ballMat = new THREE.MeshStandardMaterial({ color:0xffff00 });
+    const ballMesh = new THREE.Mesh(ballGeo, ballMat);
+    ballMesh.position.set(0, BALL_RADIUS, 0);
+    scene.add(ballMesh);
+    const ball = { pos:{x:0,z:0}, vel:{x:0,z:0}, radius: BALL_RADIUS };
+
+    const playerGeo = new THREE.SphereGeometry(BALL_RADIUS, 24, 24);
+    const players = [];
+
+    for (let team=0; team<2; team++){
+      for (let i=0;i<PLAYER_COUNT;i++){
+        const mat = new THREE.MeshStandardMaterial({ color: TEAM_COLORS[team] });
+        const mesh = new THREE.Mesh(playerGeo, mat);
+        const x = (Math.random()-0.5)*(FIELD_WIDTH-2*BALL_RADIUS);
+        const z = (team===0 ? -1 : 1) * (Math.random()*(FIELD_DEPTH/2-1));
+        mesh.position.set(x, BALL_RADIUS, z);
+        scene.add(mesh);
+        players.push({ team, mesh, pos:{x,z}, vel:{x:0,z:0} });
+      }
+    }
+
+    let score = [0,0];
+
+    function stepAI(){
+      for (const p of players){
+        const dx = ball.pos.x - p.pos.x;
+        const dz = ball.pos.z - p.pos.z;
+        const dist = Math.sqrt(dx*dx + dz*dz) + 1e-6;
+        const speed = MAX_PLAYER_SPEED;
+        p.vel.x = dx/dist * speed;
+        p.vel.z = dz/dist * speed;
+        p.pos.x += p.vel.x;
+        p.pos.z += p.vel.z;
+        const minX = -FIELD_WIDTH/2 + BALL_RADIUS;
+        const maxX = FIELD_WIDTH/2 - BALL_RADIUS;
+        const minZ = -FIELD_DEPTH/2 + BALL_RADIUS;
+        const maxZ = FIELD_DEPTH/2 - BALL_RADIUS;
+        if(p.pos.x < minX) p.pos.x = minX;
+        if(p.pos.x > maxX) p.pos.x = maxX;
+        if(p.pos.z < minZ) p.pos.z = minZ;
+        if(p.pos.z > maxZ) p.pos.z = maxZ;
+        p.mesh.position.x = p.pos.x;
+        p.mesh.position.z = p.pos.z;
+      }
+    }
+
+    function stepBall(){
+      for (const p of players){
+        const dx = ball.pos.x - p.pos.x;
+        const dz = ball.pos.z - p.pos.z;
+        const dist2 = dx*dx + dz*dz;
+        const minDist = BALL_RADIUS*2;
+        if(dist2 < minDist*minDist){
+          const dist = Math.sqrt(dist2) + 1e-6;
+          const nx = dx/dist;
+          const nz = dz/dist;
+          ball.vel.x += nx*0.03;
+          ball.vel.z += nz*0.03;
+        }
+      }
+      ball.pos.x += ball.vel.x;
+      ball.pos.z += ball.vel.z;
+      ball.vel.x *= FRICTION;
+      ball.vel.z *= FRICTION;
+      const minX = -FIELD_WIDTH/2 + BALL_RADIUS;
+      const maxX = FIELD_WIDTH/2 - BALL_RADIUS;
+      const minZ = -FIELD_DEPTH/2 + BALL_RADIUS;
+      const maxZ = FIELD_DEPTH/2 - BALL_RADIUS;
+      if(ball.pos.x<minX){ball.pos.x=minX; ball.vel.x*=-1;}
+      if(ball.pos.x>maxX){ball.pos.x=maxX; ball.vel.x*=-1;}
+      if(ball.pos.z<minZ){ball.pos.z=minZ; ball.vel.z*=-1;}
+      if(ball.pos.z>maxZ){ball.pos.z=maxZ; ball.vel.z*=-1;}
+      ballMesh.position.x = ball.pos.x;
+      ballMesh.position.z = ball.pos.z;
+      if(ball.pos.z < -FIELD_DEPTH/2){ score[1]++; resetBall(); }
+      if(ball.pos.z > FIELD_DEPTH/2){ score[0]++; resetBall(); }
+    }
+
+    function resetBall(){
+      ball.pos.x = 0; ball.pos.z = 0;
+      ball.vel.x = 0; ball.vel.z = 0;
+      console.log(`Score: ${score[0]} - ${score[1]}`);
+    }
+
+    function resizeRendererToDisplaySize() {
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      const needResize = canvas.width !== Math.floor(width * window.devicePixelRatio) || canvas.height !== Math.floor(height * window.devicePixelRatio);
+      if (needResize) {
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+      return needResize;
+    }
+
+    function animate(){
+      requestAnimationFrame(animate);
+      stepAI();
+      stepBall();
+
+      // rotate camera around center
+      angle += 0.002;
+      camera.position.x = Math.cos(angle)*radius;
+      camera.position.z = Math.sin(angle)*radius;
+      camera.position.y = height;
+      camera.lookAt(0, 0, 0);
+
+      resizeRendererToDisplaySize();
+      renderer.render(scene,camera);
+    }
+
+    animate();
+
+  </script>
+</body>
+</html>

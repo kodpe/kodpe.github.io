@@ -88,7 +88,7 @@ function renderRadarStats(json) {
       }
     });
   });
-  logCALL("renderRadarStats()");
+  logOK("renderRadarStats()");
 }
 
 async function loadChampion(jsonPath) {
@@ -101,6 +101,7 @@ async function loadChampion(jsonPath) {
     renderProfil(json);
     renderRoles(json.roles);
     renderPositions(json.positions);
+    renderAuthor(json);
 
     // TODO
     renderAbilities(json);
