@@ -599,11 +599,11 @@
             ballMesh.position.x = ball.pos.x; ballMesh.position.z = ball.pos.z;
 
             // check goals
-            if (ball.pos.z - 1.1 < -FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1.5) {
+            if (ball.pos.z - 0.5 < -FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1) {
                 score[0]++; resetBall(0);
                 console.warn("+1 for RED TEAM");
             }
-            if (ball.pos.z + 1.1 > FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1.5) {
+            if (ball.pos.z + 0.5 > FIELD_DEPTH / 2 && Math.abs(ball.pos.x - GOAL_WIDTH / 2) < 1) {
                 score[1]++; resetBall(1);
                 console.warn("+1 for BLUE TEAM");
             }
