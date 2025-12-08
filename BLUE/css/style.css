@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100svh;
+    background-color: #1e1e1e;
+    padding-top: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.machine-cnt {
+    margin: 0;
+    /* height: 100svh; */
+    height: 95vh;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    /* place-items: center; */
+}
+
+.warriors-list {
+    min-width: 400px;
+    background: rgba(41, 41, 41, 0.37);
+    display: block;
+}
+
+#warriors-list {
+    background: rgb(49, 48, 48);
+    padding: 10px;
+    color: #fff;
+}
+
+#blue-machine-memory {
+    height: 95vh;
+    aspect-ratio: 1/1;
+    border: 1px solid #00ffff;
+}
+
+#memCanvas {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    background: #020202ff;
+}
+
+.editors-cnt {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.editor-block {
+    background-color: #000000;
+    border: 1px solid #fffff555;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.editor-block.on {
+    border: 1px solid #00ff00ff;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.5);
+}
+
+.editor {
+    /* border: 1px solid #00fff777; */
+    border-top: 1px solid #fffff555;
+    box-sizing: border-box;
+}
+
+#vim-status {
+    color: #aaa;
+    font-family: monospace;
+    padding: 3px 6px;
+    background: #111;
+    border-top: 1px solid #333;
+    height: 10px;
+}
+
+
+.inputFile {
+    background-color: #232323;
+    color: #ccc;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 220px;
+    cursor: pointer;
+    border-right: 1px solid #333;
+    /* border: 1px solid #00ffffff; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.inputFile:hover {
+    background: #00cfcf;
+    color: #000;
+}

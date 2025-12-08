@@ -1,0 +1,81 @@
+/* Fond + texte */
+.CodeMirror {
+    /* background: #45a72c !important; */
+    color: #ddd !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px !important;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* height: calc(50 * 15px + 4px); */
+    height: 90vh;
+    /* height: 44vh; */
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #121f35;
+}
+
+.CodeMirror::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(12ch);
+    /* 2 tabs * largeur d’un tab (ici 4 caractères) */
+    width: 1px;
+    /* épaisseur de la ligne */
+    background: #0a820022;
+    /* couleur de la ligne */
+    pointer-events: none;
+    /* ne gêne pas la sélection */
+}
+
+/* Numéros de ligne */
+.CodeMirror-linenumber {
+    color: #666 !important;
+}
+
+/* Curseur */
+.CodeMirror-cursor {
+    border-left: 2px solid #ffaa00 !important;
+}
+
+/* Sélection */
+.CodeMirror-selected {
+    background: #333 !important;
+    border: 1px solid #ffaa00 !important;
+}
+
+/* ==================== */
+/*   SYNTAX HIGHLIGHT   */
+/* ==================== */
+
+.cm-keyword {
+    color: #79eb0e !important;
+    /* font-weight: bold; */
+}
+
+.cm-access {
+    color: #00ff00 !important;
+    /* font-weight: bold; */
+}
+
+.cm-number {
+    color: #0fe267 !important;
+}
+
+.cm-string {
+    color: #b4ff9e;
+}
+
+.cm-comment {
+    color: #779 !important;
+    /* font-style: italic; */
+}
+
+.cm-special {
+    color: #cc5be9 !important;
+    /* font-weight: bold; */
+}

@@ -1,0 +1,78 @@
+/* Bouton toujours en haut, centré */
+#toggleButton {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 8px 8px;
+    background: #344853;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+/* Panneau central */
+#panel {
+    position: fixed;
+    top: -100%;
+    /* Hors écran au départ */
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 81vh;
+    /* 80% de la hauteur de l'écran */
+    background: #181f35ee;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: top 0.5s ease;
+    z-index: 9998;
+    padding-left: 16px;
+    padding-right: 12px;
+    border-radius: 0px;
+    border: 1px solid #00ffffff;
+    /*  */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* font-family: 'JetBrains Mono', monospace; */
+    font-family: monospace;
+    font-size: 14px;
+    width: 560px;
+    /*  */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #121f35;
+}
+
+/* Pour Chrome, Edge, Safari */
+#panel::-webkit-scrollbar {
+    width: 8px;
+    /* largeur de la scrollbar verticale */
+}
+
+#panel::-webkit-scrollbar-track {
+    /* background: #f0f0f0;  couleur du "track" (fond derrière la barre) */
+    background: #181f35;
+    background-color: #181f35;
+    border-radius: 4px;
+}
+
+#panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* couleur de la barre */
+    background-color: #181f35;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+    /* un petit contour pour effet */
+}
+
+#panel::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* couleur au survol */
+}

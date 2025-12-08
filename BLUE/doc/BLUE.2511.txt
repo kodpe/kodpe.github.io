@@ -1,0 +1,956 @@
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                 [B]ATTLEFIELD [L]ASER [U]NIT [E]NGINE
+
+                           THE BLUE MACHINE
+                                   &
+                             THE BLUECODE
+
+    BLUECODE is a minimalist programming language inspired by CoreWar,
+    designed to control programs warriors in a memory battlefield.
+
+                      │ o                     O │
+                      ┼/|{B}              (C)/|\┼   
+                       / \                   ˩˩ 
+
+    The battlefield is a linear memory space that wraps around itself.
+    All addresses used are relative and wrap around the memory size.
+    It is usually represented by a grid.
+
+                           ┌────┬────┬────┐
+           loop to 0x08 <- │0x00│0x01│0x02│
+                           ├────┼────┼────┤
+                           │0x03│0x04│0x05│
+                           ├────┼────┼────┤
+                           │0x06│0x07│0x08│ -> loop to 0x0
+                           └────┴────┴────┘ 
+
+    Warriors live by executing instructions in this shared memory.
+    And die if they reach a raw data cell that contains no instruction.
+    Your warrior starts at the beginning of your code at a random
+    location in shared memory space. At some point, your warrior may
+    execute your opponent’s code, and your opponent may execute yours.
+
+    You can program your own warrior by combining instructions:
+
+        JUMP : Jump in memory.
+        FORK : Creates subprocess.
+        COPY : Duplicates cells.
+        BEAM : Fires a destructive laser beam.
+        WAIT : Do nothing then resume.
+        MSET : Update cells.
+        IFEQ : Compare cells.
+        SPIN : Cycles between values and cells.
+        FLIP : Reverse flow execution.
+
+    Each instruction performs a specific action per execution cycle.
+    Some instructions can be repeated over multiple cycles,
+    to adjust their duration or effect range.
+
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                    Example of a warrior's bluecode
+
+    This warrior continuously JUMP 5 cells downward 
+    by duplicating its code with COPY of his own 3 lines program,
+    leaving behind him each time a deadly cell of raw data: 0
+    __________________
+
+            COPY 6 0 3  ; the warrior process execute the copy
+            JUMP 5      ; then he jump downward to its own new code 
+            0           ; raw data (deadly for warrior process)
+            .
+            .
+            .
+            ; next COPY 6 0 3
+            ; next JUMP 5
+            ; next raw data 0
+            .
+            .
+    __________________
+
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                                LABELS
+
+    Relative addresses can be replaced with labels:
+        <labelname>:
+
+    Labels can be used as arguments. They are always resolved
+    at compile-time, meaning they are replaced with real numeric offsets.
+    __________________
+
+    a:  BEAM -7      ; even if you insert lines here,
+        JUMP a       ; the jump will always target label 'a'
+    __________________
+    __________________
+
+        BEAM -7      ; at compile-time the label is replaced
+        JUMP -1      ; with the correct relative offset
+    __________________
+    __________________
+
+        BEAM -7      ; if you inserted a line here,
+        FORK 43      ; the compiler would adjust the offset:
+        JUMP -2      ; the jump now correctly lands on 'a'
+    __________________
+
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                        DYNAMIC INSTRUCTIONS
+
+    You can also prefix a label or an offset with * to use the value
+    stored in the cell pointed to by that label or offset.
+
+    This value will be interpreted as either an address offset or 
+    a number, depending on the instruction.
+
+    Because * is resolved at runtime, the argument becomes dynamic
+    and can change during execution.
+    __________________
+
+    a:  -1
+        BEAM -7
+        JUMP *a      ; this does not jump -2, but jumps using the
+                     ; value stored at label 'a' (here: -1)
+    __________________
+    __________________
+
+        -1
+        BEAM -7
+        JUMP *-2     ; after compilation, label 'a' becomes offset -2
+                     ; thanks to the star (*), the argument is resolved
+                     ; at runtime: the value stored at cell -2
+                     ; which is currently -1
+                     ; this value may change during execution
+    __________________
+
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        JUMP 
+
+SYNOPSIS
+        JUMP <dest>
+
+DESCRIPTION
+        Jump to the <dest> address, transferring
+        the process execution to that location.
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        ; The process repeatedly creates subprocesses because 
+        ; it always jump to the FORK instruction at address -1.
+        __________________
+
+            FORK 2
+            JUMP -1
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────────┐
+        │ Hex  │ Name │ Address     │
+        ├──────┼──────┼─────────────┤
+        │ 0x11 │ JUMP │ destination │
+        └──────┴──────┴─────────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        FORK 
+
+SYNOPSIS
+        FORK <dest>
+
+DESCRIPTION
+        Creates a new subprocess starting at the <dest> address.
+        The new process runs independently, while the parent process
+        continues execution at the next instruction.
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        ; Fork creates a new process at address +20.
+        ; The parent process continues, while the new process
+        ; executes the two copied instructions at address +20.
+        __________________
+
+            COPY 20 0 2
+            FORK 20
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────────┐
+        │ Hex  │ Name │ Address     │
+        ├──────┼──────┼─────────────┤
+        │ 0x22 │ FORK │ destination │
+        └──────┴──────┴─────────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        COPY 
+
+SYNOPSIS
+        COPY <dest> <src> [size n]
+
+DESCRIPTION
+        Copy into <dest> from <src> addresses.
+        If [size n] is provided, copy n consecutive cells.
+        After each copy, both <dest> and <src> addresses
+        are incremented (circular addressing).
+
+                            src++   dest++
+
+CYCLES
+        Each copied cell costs 1 cycle, so COPY costs n cycles.
+
+EXAMPLE
+        ; Copy 3 cells starting at address 0 into address +3.
+        ; This effectively places a duplicate of the first 3 cells
+        ; immediately after them. This copy costs 3 cycles.
+        __________________
+
+            COPY 3 0 3
+            JUMP 2
+            0
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────────┬─────────┬────────┐
+        │ Hex  │ Name │ Address     │ Address │ Cycles │
+        ├──────┼──────┼─────────────┼─────────┼────────┤
+        │ 0x33 │ COPY │ destination │ source  │ size   │
+        └──────┴──────┴─────────────┴─────────┴────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        BEAM 
+
+SYNOPSIS
+        BEAM <+/- power n>
+
+DESCRIPTION
+        Fires a destructive beam into the circular memory.
+        The beam destroys the first instruction it encounters
+        and replaces it with a random raw data value. 
+        Existing raw value cells are unaffected.
+
+        The direction can be forward (+) or backward (-).
+
+        The <power n> indicates the charging power in cycles.
+        The range of the beam is calculated as: range = power³.
+
+                power 5	=> 5 * 5 * 5 => 125 cells
+
+        BEAM +/- 0 targets the process's own cell, replacing its
+        own cell with a random value, which kills the process.
+
+CYCLES
+        Each power unit costs 1 cycle, so BEAM costs n cycles.
+        BEAM 0 costs 1 cycle.
+
+EXAMPLE
+        ; Fire a beam 1000 cells (10³) backward (-) in a loop
+        __________________
+
+            BEAM -10
+            JUMP -1
+        __________________
+
+DETAILS
+        ┌──────┬──────┬───────────┐
+        │ Hex  │ Name │ Value     │
+        ├──────┼──────┼───────────┤
+        │ 0x44 │ BEAM │ +/- power │
+        └──────┴──────┴───────────┘
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        WAIT 
+
+SYNOPSIS
+        WAIT <cycles n>
+
+DESCRIPTION
+        Pauses the process for <n> cycles, doing nothing,
+        then resumes normal execution.
+        WAIT 0 cannot be interpreted and immediately kills the process.
+
+CYCLES
+        WAIT consumes n cycles.
+        WAIT 0 costs 1 cycle.
+
+EXAMPLE
+        ; The process waits for 1 cycle, then proceeds
+        ; to the next WAIT instruction, which will pause
+        ; it for 5 cycles before continuing.
+        __________________
+
+            WAIT 1
+            WAIT 5
+        __________________
+
+DETAILS
+        ┌──────┬──────┬────────┐
+        │ Hex  │ Name │ Cycles │
+        ├──────┼──────┼────────┤
+        │ 0x55 │ WAIT │ cycles │
+        └──────┴──────┴────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        MSET 
+
+SYNOPSIS
+        [MSET] <dest> <op> [value]
+
+DESCRIPTION
+        MSET assigns a value or performs an arithmetic operation,
+        storing the result in <dest>. Available operators are: 
+                    
+                    =  +=  -=  *=  /=  %=  ++  --
+
+            =                   : assignment  
+            ++, --              : increment, decrement  
+            +=, -=, *=, /=, %=  : arithmetic operations with [value]
+
+        The instruction name "MSET" is optional,
+        "a++" is equivalent to "MSET a++".
+
+        Note: MSET do nothing if <dest> or [value] is an instruction.
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        __________________
+
+        t:  a += 1      ; add 1 to a using MSET
+            a += a      ; add the offset address of a (5)
+            a += *a     ; add the value stored at the address of a (42)
+            a += *s     ; does nothing because t is an instruction
+            FORK *a     ; use the value stored at the address of a (42)
+            JUMP t
+        a:  42          ; the value of a is stored here
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────────┬─────────┬─────────┐
+        │ Hex  │ Name │ Address     │ Symbol  │ Address │
+        ├──────┼──────┼─────────────┼─────────┼─────────┤
+        │ 0x66 │ MSET │ destination │ op      │ value   │
+        └──────┴──────┴─────────────┴─────────┴─────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        IFEQ 
+
+SYNOPSIS
+        IFEQ <a> <b>
+
+DESCRIPTION
+        THe process moves to the next instruction
+        only if <a> and <b> are equal.
+        
+        - adresse : a# (pass adress as value)
+        - deferencement : *a (prend la valeur de la cell a)
+        - valeurs brutes : a
+        - magick value constants : JUMP (0x11)
+        (Rappel de base : Les address sont toujours relatives.)
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        ; description du code example
+        __________________
+
+            IFEQ *a 12 ; if a contains value 12
+                ; do something if equal
+            ; normal flow
+
+            IFEQ a b ; if a and b has same value or same instruction
+                ; do something if equal
+            ; normal flow
+
+            IFEQ a JUMP ; if a is a JUMP instruction
+                ; do something if equal
+            ; normal flow
+
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────┬─────────┐
+        │ Hex  │ Name │ Address │ Address │
+        ├──────┼──────┼─────────┼─────────┤
+        │ 0x77 │ IFEQ │ a       │ b       │
+        └──────┴──────┴─────────┴─────────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        SPIN
+
+SYNOPSIS
+        SPIN <a> <b> [c]
+
+DESCRIPTION
+        SPIN generates an internal cyclic value. Each time is executed,
+        the SPIN updates its internal state by cycling through 
+        the values <a>, <b> and optionally [c].
+
+        The current value is stored inside the SPIN cell itself and 
+        can be read by any instruction that evaluates a cell value (e.g. JUMP, MSET).
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        ; BEAM use the current SPIN value.
+        ; The SPIN cycles between -5 and -8 each time it is executed.
+        ; JUMP keeps the whole routine running in a loop.
+        __________________
+
+        be:		BEAM *sp
+        sp:		SPIN -5 -8
+		        JUMP be
+        __________________
+
+DETAILS
+        ┌──────┬──────┬───────┬───────┬───────┐
+        │ Hex  │ Name │ Value │ Value │ Value │
+        ├──────┼──────┼───────┼───────┼───────┤
+        │ 0x88 │ SPIN │ a     │ b     │ c     │
+        └──────┴──────┴───────┴───────┴───────┘ 
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        FLIP
+
+SYNOPSIS
+        FLIP [dest]
+
+DESCRIPTION
+        Reverses the execution flow of the process at [dest].
+        After FLIP, the process at [dest] reads instructions
+        in the opposite direction.
+
+        FLIP do nothing if there is no process at [dest].
+        If multiple processes exist at [dest], FLIP only affects
+        the last process that arrived.
+
+        Note: "FLIP 0" can be written simply as "FLIP".
+        In this case, the process executing the FLIP is itself flipped.
+
+        Note: Address arithmetic does not change.
+        For example, JUMP +4 always moves downward 4 memory cells,
+        regardless of the current execution direction.
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        The first process creates a subprocess and then flips.
+        All processes self-flip, creating a queue of processes
+        that moves upward through memory with reversed execution flow.
+        __________________
+
+            FORK 0
+            FLIP 0
+        __________________
+
+DETAILS
+        ┌──────┬──────┬─────────┐
+        │ Hex  │ Name │ Address │
+        ├──────┼──────┼─────────┤
+        │ 0x99 │ FLIP │ target  │
+        └──────┴──────┴─────────┘
+
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+NAME 
+        WALL
+
+SYNOPSIS
+        WALL <thickness>
+
+DESCRIPTION
+        WALL creates a cell with a given <thickness> value.
+        As long as the WALL has thickness > 0, any instruction targeting
+        it — friendly or hostile — becomes a no-op but reduces the
+        thickness by 1.
+        
+        A WALL also kills any enemy process attempting
+        to enter its cell and loses 1 thickness as a result.
+
+        When thickness reaches 0, the WALL loses its invulnerability and
+        can be overwritten or affected like any normal cell.
+
+        If a friendly process executes the WALL instruction, its 
+        thickness is increased by +1, up to a maximum value of 100.
+
+CYCLES
+        Single-cycle operation.
+
+EXAMPLE
+        ; cette defense elegante semble monstrueusement solide
+        __________________
+
+        FORK 0
+        WALL
+        JUMP -2
+        __________________
+
+
+DETAILS
+        ┌──────┬──────┬───────────┐
+        │ Hex  │ Name │ Value     │
+        ├──────┼──────┼───────────┤
+        │ 0xBB │ WALL │ thickness │
+        └──────┴──────┴───────────┘
+
+VERSION
+        BLUE.2511
+_______________________________________________________________________
+
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                           BATTLE PARAMETERS
+        
+    This section describes the possible battle parameters
+    and lists some standardized parameter sets used for tournaments.
+
+WARRIORS
+        The number of warriors in the battlefield.
+
+BATTLE_SIZE
+        The size of the the battlefield, the number of cells 
+        in the shared circular memory.
+
+BATTLE_SET
+        Can be set to "ZERO", "RANDOM", or "PROVIDED":
+        - "ZERO" initializes all memory cells to 0.
+        - "RANDOM" initializes memory with random values.
+        - "PROVIDED" requires a memory map file with specific values.
+
+MIN_SPAWN_SEP
+        The minimum number of cells between each warrior.
+
+MAX_CYCLES
+        The maximum number of cycles for the battle.
+        Reaching this value declares a draw.
+
+MAX_WARLOC
+        The maximum number of lines of code allowed in a Bluecode file
+        representing a warrior.
+
+MAX_FORK
+        The maximum number of forks allowed per warrior.
+
+BEAM_SEED
+        If the seed is set to 0, BEAM always produces 0.
+        Otherwise, each BEAM produces 0 or 1 according to a
+        pseudo-random function (PRNG) based on the seed.
+
+        B2511 Standard Parameters Set
+        WARRIORS:       2
+        BATTLE_SIZE:    10000
+        BATTLE_SET:     ZERO
+        MIN_SPAWN_SEP:  1000
+        MAX_CYCLES:     100000
+        MAX_WARLOC:     100
+        MAX_FORK:       1000
+        BEAM_SEED:      0
+_______________________________________________________________________
+_______________________________________________________________________
+B2511                   GENERAL BLUECODE MANUAL                   B2511
+
+                           INSTRUCTIONS TABLE
+
+            ┌──────┬──────┬──────────┬─────────┬─────────┐
+            │ Hex  │ Name │ Arg 1    │ Arg 2   │ Arg 3   │ Impact
+            ├──────┼──────┼──────────┼─────────┼─────────┤
+            │ 0x11 │ JUMP │ <dest>   │         │         │ flow
+            │ 0x22 │ FORK │ <dest>   │         │         │ flow
+            │ 0x33 │ COPY │ <dest>   │ <src>   │ [size]  │ memory
+            │ 0x44 │ BEAM │ <dirpow> │         │         │ memory
+            │ 0x55 │ WAIT │ <cycles> │         │         │ flow
+            │ 0x66 │ MSET │ <dest>   │ <op>    │ [addr]  │ memory
+            │ 0x77 │ IFEQ │ <addr>   │ <addr>  │         │ flow
+            │ 0x88 │ SPIN │ <addr>   │ <addr>  │ [addr]  │ memory
+            │ 0x99 │ FLIP │ [dest]   │         │         │ flow
+            ├──────┼──────┼──────────┼─────────┼─────────┤
+            │ 0xBB │ WALL │ <thick>  │         │         │ flow
+            └──────┴──────┴──────────┴─────────┴─────────┘ 
+
+VERSION
+        BLUE.2511                                                [END]
+_______________________________________________________________________
+
+############################################################
+# EXEMPLES DE PROGRAMMES / DEPRECATED / REQUIRE UPDATE B2511
+############################################################
+
+///////////////////////////////////////////////////////////////////////
+```
+; Bomber crawler minimaliste (the 303)
+COPY 3 0 3
+JUMP 2
+0
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+```
+; Bomber crawler qui laisse que des bombes derrière lui (the 707)
+COPY 7 0 7
+COPY -5 3
+COPY -2 2 3
+JUMP 4
+0
+0
+0
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+```
+; Bomber fixe avec sécurité de boucle
+OPER a = 7
+main:
+    EVAL +a == -1
+        OPER a+=7
+    COPY bomb +a
+    OPER a++
+    JUMP main
+bomb:
+    KILL
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+```
+; Scan-sniper
+OPER a=5
+main:
+    EVAL +a != +4
+        EVAL +a == JUMP
+            COPY 3 +a
+    OPER a++
+    JUMP main
+KILL
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+```bluecode
+BEAM -10
+OPEX >2
+JUMP -2
+BEAM +10
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+```bluecode
+            BEAM -10     ; backward beam
+            JUMP 2
+            JUMP 4
+            FLIP          ; execution reverses here
+            JUMP -4
+            JUMP -2
+            BEAM +10     ; forward beam
+```
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// equivalent de SPIN sans SPIN
+
+state:  #0
+var:    #0
+s0:     MSET var =  #-10
+        MSET state = #0
+        JUMP action
+s1:     MSET var =  #-5
+        MSET state = #1
+        JUMP action
+s2:     MSET var =  #-3
+        MSET state = #2
+        JUMP action
+
+action: FORK *var // instructions qui ont besoin de (var) mis a jour
+
+        EVAL state == #0
+            JUMP s1
+        EVAL state == #1
+            JUMP s2
+        EVAL state == #2
+            JUMP s0
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+b:      BEAM sp
+sp:	    SPIN -10, -5, -3
+		JUMP b
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+	// comment facilement se proteger de BEAM
+	// avec un sheild qui se regenere en permanence
+	// .
+	// .	WAIT 0 copied (sheild part)
+	// .	WAIT 0 copied (sheild part)
+	// .	WAIT 0 copied (sheild part)
+	// .	...
+	// .
+	// .	sheild zone regenerant
+	// .
+	// .
+	// .	...
+	// .
+	// .
+	// .	WAIT 0 copied (sheild part)
+			// the first process jump to fork
+			JUMP 3
+			COPY -20 4 20 // copy le shield vers le haut
+addsheild:	JUMP -1
+			FORK -1 // subprocess pour le sheild
+			JUMP mainprog // skip zone tampon
+// creer un subprocess juste pour la loop addsheild
+// celui fera des copies successives du shield
+// defini ici
+sheild:
+			WAIT 0
+			WAIT 0
+			WAIT 0
+			WAIT 0
+			WAIT 0	 // sheild original pour la copie
+			WAIT 0
+			WAIT 0
+			WAIT 0
+			WAIT 0
+mainprog:	// suite des instructions
+
+// ici on optimise la securite avec
+// un gros shield de 20 cells qui se regenere
+// en 21 cycles(copy 20 + jump 1)
+// on peut aussi imagine des petits shields
+// en 2 cycles (copy 1 + jump 1)
+// moins de place, mais plus fragile
+
+// ce shield peut etre reproduit dans les deux sens
+// presque a l'identique, permettant de totalement
+// securise son programme des BEAM +/-
+
+// on pourra aussi imaginer un sheild intelligent
+// avec un process en plus qui sert de sentinelle
+// qui controle l etat du sheild avec un EVAL
+// si le sheild commence a etre attaqué
+// le EVAL pourrait provoquer un FORK
+// pour appeller un process builder de sheild
+// et si le sheild est reparer le process
+// peut etre envoye a d autres taches
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// SPIN avec 4 valeurs
+b:		BEAM *sp
+sp:		SPIN -4 -3 -10 -2
+		JUMP b
+///////////////////////////////////////////////////////////////////////
+		
+///////////////////////////////////////////////////////////////////////
+// equivalent sans SPIN avec 4 valeurs
+b:		BEAM *var
+		JUMP swap
+var:	-4
+swap:	EVAL *var == -4#
+			JUMP s1
+		EVAL *var == -3#
+			JUMP s2
+		EVAL *var == -10#
+			JUMP s3
+		EVAL *var == -2#
+			JUMP s4
+s1:		var = -3#
+		JUMP b
+s2:		var = -10#
+		JUMP b
+s3:		var = -2#
+		JUMP b
+s4:		var = -4#
+		JUMP b
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+    loop:	FORK
+sp:		SPIN bomber scanner repairer
+		JUMP sp
+		
+bomber: 	; code bomber
+
+scanner: 	; code scanner
+
+repairer:	; code repairer
+
+		JUMP loop
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+loop:	FORK bomber
+		FORK scanner
+		FORK repairer
+		JUMP loop
+		
+bomber: 	; code bomber
+		JUMP bomber
+
+scanner: 	; code scanner
+		JUMP scanner
+
+repairer:	; code repairer
+		JUMP repairer
+///////////////////////////////////////////////////////////////////////
+
+
+
+# OTHERS IDEAS
+HOLO, HIDE, RAIN, TREE, MAKE, SCAN, XRAY, KILL, BOMB, WORM, HOLE, WALL
+DEEP, QUAD, DOOR, BACK, OPEN, TAKE, POOL, RAZE, BLAZ, WAVE, TICK, OPEX
+# IMPORTANT ORDRE D EXECUTION
+    ... previous process
+    1. Le process execute l'instruction de sa cellule
+    2. Le process descend d'un cran (flox instruction de haut en bas)
+    ... next process
+
+MSET a++        ; valeur brute de a
+MSET a.1 += 5   ; second argument si c'est une instruction
+MSET a[2] *= 2  ; troisième argument
+MSET a.0 ->b    ; copier vers b
+
+    WAIT 5 // raw data implicite
+    WAIT label // interdit // non sens
+    WAIT *label // valide et devient WAIT *5 (valeur a offset de 5)
+
+Idee de resolution du probleme de compatibilite les instructions 
+MSET (arithmetic operations) et EVAL(comparisons operations)
+quand on leur donne en argument des addresse qui pointent 
+sur des instructions et pas des valeurs brutes
+
+En fait toutes les instruction aurait un code (une valeur magique qui la represente)
+
+        0x22 : JUMP : Jump in memory.
+        0x33 : FORK : Creates subprocess.
+        0x44 : BEAM : Fires a destructive laser beam.
+        0x55 : COPY : Duplicates cells.
+        0x66 : MSET : Update memory cells.
+        0x77 : EVAL : Make comparisons between cells.
+        0x88 : FLIP : Reverse flow execution.
+        0x99 : WAIT : Do nothing then resume.
+        0x11 : SPIN : 
+
+        0xAA : FIRE : destruction qui se repand
+        0xBB : WALL : Bloque les BEAM
+
+MSET (arithmetic) et EVAL(comparisons) considere alors les instructions comme
+des valeurs (leur code) , on peut faire des calculs avec et comparaisons 
+pour detecter des instructions precises, 
+
+Mais Cela fait que EVAL (fonction possiblement utile pour scan l'ennemie) 
+ne fera jamais la difference entre une cellule qui contient une simple valeur 
+et une cellule qui contient une instruction car elle verra que le code de l'instruction
+
+donc on peut faire sembler qu on a mis des instructions mais en fait c est juste  
+de la raw data 
+
+SI ON FAIT CELA ALORS ON PEUT DUCOUP FAIRE CA :
+
+Nouvelle idee d'instruction : OPEX (operation execute / operation exterieur (dans le sens dissimulée))
+autres noms possibles : EXEC / CALL / REVE / BLUE / INSC / EXOP / ( MEXE memory execute != MSET)
+OPEX <dest> [<a] [<b] [<c]
+
+OPEX permet d'executer une instruction a distance situe a <dest> 
+et a b c (jusqu a 3 arguments possibles sous forme de valeurs ou *labels)
+
+ducoup OPEX peut executer indiferemment des cellules avec
+de veritables instructions ou des cellules qui contiennent
+seulement le code de l'instruction : par exemple 0x42
+
+je rappel que BEAM ne peut detruire que des instructions, donc il ne detruirait
+jamais une cellule qui contient une donnee brute qui correspond
+au code d'une instruction, OPEX et les magic values des instructions serait un ajout
+qui affaiblie la puissance de l instruction BEAM, puisque il offre une alternative
+sur
+
+est ce que une instruction OPEX peut en appeler une autre
+imaginons on a une cellule raw data 0x11 (OPEX code)
+OPEX <this cell> <next cell> b c
+c 'est impossible et cela n a pas de sens car OPEX requiert forcement une AUTRE instruction
+donc on pourrait dire que OPEX ne fais rien si sa dest est 0x11 (ou instruction OPEX)
+
+
+est ce que on peut dire que cet ajout potentiel renforce la coherence
+de MSET et EVAL, tout en affaiblissant la puissance de EVAL et BEAM,
+tout en ajoutant OPEX qui semble plutot cool pour activer des instructions cacher
+dans les donnees brutes, ca creer meme une seconde lecture possible
+
+$? pour avoir le succces ou echec de la derniere instruction
+0 -> reussie
+1 -> echec
