@@ -1,0 +1,1042 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2025-12-14 06:11:44
+count workspace : c:\Users\33652\Documents\kodpe.github.io
+total files : 1014
+total code lines : 33509
+total comment lines : 3043
+total blank lines : 3944
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .html|           5416|            350|            747|     16|
+   |           .css|           7975|            720|           1173|     24|
+   |            .js|          12275|           1839|           1548|     37|
+   |          .json|           5353|              0|             34|     16|
+   |           .svg|            679|              2|              3|    2.0|
+   |            .md|             53|              1|              3|   0.16|
+   |           .txt|            819|             72|            160|    2.4|
+   |            .sh|             38|             11|             11|   0.11|
+   |               |             28|              9|              2|  0.084|
+   |            .go|            857|             39|            263|    2.6|
+   |           .ico|              0|              0|              0|    0.0|
+   |             .b|             16|              0|              0|  0.048|
+   -------------------------------------------------------------------------
+BLUE\css\bluecode-decoration.css, code is 52, comment is 18, blank is 11.
+BLUE\css\manual-panel.css, code is 41, comment is 12, blank is 4.
+BLUE\css\style.css, code is 118, comment is 6, blank is 17.
+BLUE\css\toggle.css, code is 49, comment is 10, blank is 4.
+BLUE\doc\BLUE.2511.txt, code is 492, comment is 71, blank is 138.
+BLUE\doc\def1.b, code is 4, comment is 0, blank is 0.
+BLUE\doc\def2.b, code is 4, comment is 0, blank is 0.
+BLUE\doc\def3.b, code is 4, comment is 0, blank is 0.
+BLUE\doc\def4.b, code is 4, comment is 0, blank is 0.
+BLUE\doc\umbra-colors.js, code is 155, comment is 0, blank is 0.
+BLUE\index.html, code is 53, comment is 12, blank is 10.
+BLUE\js\bluecode-compiler.js, code is 216, comment is 60, blank is 46.
+BLUE\js\bluecode-decoration.js, code is 22, comment is 8, blank is 6.
+BLUE\js\bluecode-machine.js, code is 92, comment is 23, blank is 18.
+BLUE\js\createMachineMemory.js, code is 119, comment is 23, blank is 16.
+BLUE\js\executeTopProcess.js, code is 49, comment is 4, blank is 4.
+BLUE\js\gameRunner.js, code is 57, comment is 7, blank is 12.
+BLUE\js\main-editor.js, code is 162, comment is 29, blank is 30.
+BLUE\js\manual-toogle.js, code is 21, comment is 0, blank is 0.
+BLUE\js\ProcessReaderHead.js, code is 203, comment is 35, blank is 29.
+BLUE\js\tools.js, code is 83, comment is 14, blank is 21.
+BLUE\v2\css\canvas-flex.css, code is 26, comment is 6, blank is 2.
+BLUE\v2\css\fixed-bars.css, code is 46, comment is 7, blank is 3.
+BLUE\v2\css\grid-cnt.css, code is 21, comment is 0, blank is 2.
+BLUE\v2\css\style.css, code is 38, comment is 12, blank is 2.
+BLUE\v2\css\tabs-cnt.css, code is 101, comment is 11, blank is 9.
+BLUE\v2\css\var.css, code is 8, comment is 2, blank is 1.
+BLUE\v2\js\editor\bluecode-decoration.js, code is 22, comment is 8, blank is 6.
+BLUE\v2\js\engine\bluecode-compiler.js, code is 216, comment is 60, blank is 46.
+BLUE\v2\js\engine\bluecode-machine.js, code is 58, comment is 66, blank is 11.
+BLUE\v2\js\engine\createMachineMemory.js, code is 119, comment is 23, blank is 16.
+BLUE\v2\js\ui\canvas-flex.js, code is 91, comment is 8, blank is 18.
+BLUE\v2\js\ui\left-bar-btn.js, code is 38, comment is 4, blank is 5.
+BLUE\v2\js\ui\tabs-btn.js, code is 12, comment is 3, blank is 3.
+BLUE\v2\v2.html, code is 97, comment is 14, blank is 12.
+BotsAreTalking\css\popup.css, code is 88, comment is 3, blank is 9.
+BotsAreTalking\css\root.css, code is 97, comment is 4, blank is 14.
+BotsAreTalking\css\welcome.css, code is 75, comment is 1, blank is 12.
+BotsAreTalking\img\2014-03-18-edne-gp-mentor3f23bdd1bf5d3475098138a87a56d3bf9.png, it is a binary file.
+BotsAreTalking\img\26151433129.webp, it is a binary file.
+BotsAreTalking\img\AOhTtPGdK95FhHmXl8p0s3oieBkIgZsajK4gSyt6sr-WL_pTYpks31XsxzWEcdkBD2ALi6odLLe4e6jpisCjrn2r8aiA4qedHA9AVGqf4aOsSMDsC2UqMuwrTqQ7CAKgmtzADT-G.png, it is a binary file.
+BotsAreTalking\img\cadence-allegro-viewer.png, it is a binary file.
+BotsAreTalking\img\istockphoto-1192900962-612x612.jpg, it is a binary file.
+BotsAreTalking\img\logo.png, it is a binary file.
+BotsAreTalking\img\logo_48.png, it is a binary file.
+BotsAreTalking\img\OrCAD_PCB_Editor_fig2.png, it is a binary file.
+BotsAreTalking\img\PCB layout.jpg, it is a binary file.
+BotsAreTalking\img\pcb-design-layout-plc-ladder-logic-hmi-design-auto-cad-drafting-2d-3d-cnc-nc.jpg, it is a binary file.
+BotsAreTalking\img\pcb-design-service-1000x1000.png, it is a binary file.
+BotsAreTalking\img\PCBlayout2.jpg, it is a binary file.
+BotsAreTalking\img\recaptcha (1).png, it is a binary file.
+BotsAreTalking\img\recaptcha.png, it is a binary file.
+BotsAreTalking\img\recaptcha_en.png, it is a binary file.
+BotsAreTalking\index.html, code is 23, comment is 1, blank is 3.
+BotsAreTalking\js\counter.js, code is 41, comment is 1, blank is 4.
+BotsAreTalking\js\data.js, code is 68, comment is 30, blank is 10.
+BotsAreTalking\js\pagination.js, code is 57, comment is 13, blank is 19.
+BotsAreTalking\js\popup.js, code is 34, comment is 1, blank is 6.
+BotsAreTalking\js\root.js, code is 37, comment is 0, blank is 5.
+BotsAreTalking\js\timestamp.js, code is 31, comment is 7, blank is 9.
+BotsAreTalking\js\welcome.js, code is 54, comment is 5, blank is 12.
+BotsAreTalking\root\index.html, code is 27, comment is 1, blank is 5.
+checkDomain.sh, code is 14, comment is 4, blank is 5.
+CNAME, code is 1, comment is 0, blank is 0.
+deploy.sh, code is 3, comment is 1, blank is 0.
+devoidlab\Brok.html, code is 228, comment is 0, blank is 39.
+devoidlab\css\champion.css, code is 150, comment is 10, blank is 23.
+devoidlab\css\champion_v2.css, code is 363, comment is 56, blank is 60.
+devoidlab\css\fonts.css, code is 42, comment is 0, blank is 7.
+devoidlab\css\grid.css, code is 115, comment is 3, blank is 14.
+devoidlab\css\map2.css, code is 43, comment is 1, blank is 5.
+devoidlab\css\masonry.css, code is 32, comment is 4, blank is 6.
+devoidlab\css\mdstyle.css, code is 1620, comment is 2, blank is 354.
+devoidlab\css\navbar.css, code is 61, comment is 9, blank is 6.
+devoidlab\css\radar.css, code is 30, comment is 2, blank is 8.
+devoidlab\css\runeterra_map.css, code is 123, comment is 8, blank is 9.
+devoidlab\css\slider.css, code is 26, comment is 0, blank is 3.
+devoidlab\css\style.css, code is 27, comment is 1, blank is 4.
+devoidlab\data\champions\Brok.json, code is 24, comment is 0, blank is 4.
+devoidlab\data\champions\Frankz.json, code is 24, comment is 0, blank is 4.
+devoidlab\data\champions\Gribiwee\abilities\icon_e.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\icon_p.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\icon_q.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\icon_r.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\icon_w.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\p\fuseeparachute.webp, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\r\eventail.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\abilities\w\motifs.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board.json, code is 118, comment is 0, blank is 0.
+devoidlab\data\champions\Gribiwee\board\55798d341bb6679798d341bb66d798v-960x640.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\672.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\80537883-geometric-flowers-abstract-flower-set-tulip-shape-line-icons.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\8e080a89c3180b5e5863077b24743858.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\98ea7aaf4c55c1bc0cc98a5098e9c0ded7054a8e_original.jpeg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\BRITGI.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\carteCommodeGuerre.JPEG, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\ChatGPT Image 19 nov. 2025, 14_48_58.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\ChatGPT Image 19 nov. 2025, 14_49_20.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\ChatGPT Image 19 nov. 2025, 14_49_26.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\ChatGPT Image 19 nov. 2025, 14_49_30.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\ChatGPT Image 19 nov. 2025, 14_50_44.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\collection-celtique-de-noeud-6191070.webp, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\constellations-du-zodiaque-800x581.jpeg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\EAbndCwU8AA5EuD.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\Feux-artifice-01.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\fire-lance-b0410a64-4a65-4ddd-9f94-916c2aa4f6f-resize-750.jpeg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\Fireworks-painting.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\illustration-classement-des-AD.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\is-the-gunlance-based-off-of-the-9th-century-chinese-fire-v0-u492clxhzv1e1.webp, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\lances_a_feu_du_moyen_age.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\li_hua_qiang.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\logoetoile.webp, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\motif.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\RVB-schema-510x510.png, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\s-l1200.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\unnamed.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\Weapons-Cannon-Illustration.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\board\zhao_shi_zhen_li_hua_qiang.jpg, it is a binary file.
+devoidlab\data\champions\Gribiwee\Gribiwee.json, code is 94, comment is 0, blank is 7.
+devoidlab\data\champions\Gribiwee\splash\gribiwee.webp, it is a binary file.
+devoidlab\data\champions\index.json, code is 8, comment is 0, blank is 1.
+devoidlab\data\champions\localization.json, code is 33, comment is 0, blank is 0.
+devoidlab\data\champions\Moka.json, code is 24, comment is 0, blank is 4.
+devoidlab\data\champions\Scuti.json, code is 24, comment is 0, blank is 4.
+devoidlab\data\champions\Tink.json, code is 24, comment is 0, blank is 4.
+devoidlab\data\champions\YshTa.json, code is 24, comment is 0, blank is 4.
+devoidlab\favicon.ico, code is 0, comment is 0, blank is 0.
+devoidlab\fonts\BeaufortforLOL-Bold.ttf, it is a binary file.
+devoidlab\fonts\BeaufortforLOL-BoldItalic.ttf, it is a binary file.
+devoidlab\fonts\BeaufortforLOL-Medium.ttf, it is a binary file.
+devoidlab\fonts\BeaufortforLOL-MediumItalic.ttf, it is a binary file.
+devoidlab\fonts\SpiegelSans-5Regular_TRIAL.otf, it is a binary file.
+devoidlab\fonts\SpiegelSans-5RegularItalic_TRIAL.otf, it is a binary file.
+devoidlab\fonts\SpiegelSans-7Bold_TRIAL.otf, it is a binary file.
+devoidlab\foot\bill.html, code is 193, comment is 0, blank is 35.
+devoidlab\foot\bill2.html, code is 217, comment is 0, blank is 43.
+devoidlab\foot\bill3.html, code is 129, comment is 0, blank is 21.
+devoidlab\foot\bill4.html, code is 197, comment is 0, blank is 29.
+devoidlab\foot\foot.html, code is 172, comment is 0, blank is 29.
+devoidlab\foot\foot2.html, code is 157, comment is 0, blank is 21.
+devoidlab\foot\foot3.html, code is 574, comment is 1, blank is 87.
+devoidlab\Frankz.html, code is 226, comment is 0, blank is 33.
+devoidlab\go.go, code is 16, comment is 0, blank is 6.
+devoidlab\Gribiwee.html, code is 179, comment is 11, blank is 34.
+devoidlab\icons - Raccourci.lnk, it is a binary file.
+devoidlab\images\BrokRegion.jpg, it is a binary file.
+devoidlab\images\Brokv1.webp, it is a binary file.
+devoidlab\images\Frankzv1.webp, it is a binary file.
+devoidlab\images\icons\Ability_power_icon.webp, it is a binary file.
+devoidlab\images\icons\Acquisition_range.webp, it is a binary file.
+devoidlab\images\icons\ASCII-Table-wide.svg, code is 285, comment is 0, blank is 0.
+devoidlab\images\icons\Attack_damage_icon.webp, it is a binary file.
+devoidlab\images\icons\balance-svgrepo-com.svg, code is 8, comment is 0, blank is 0.
+devoidlab\images\icons\Champion_style_abilities_active.webp, it is a binary file.
+devoidlab\images\icons\Champion_style_abilities_inactive.webp, it is a binary file.
+devoidlab\images\icons\Champion_style_basic_attacks_active.webp, it is a binary file.
+devoidlab\images\icons\Champion_style_basic_attacks_inactive.webp, it is a binary file.
+devoidlab\images\icons\champions\107.png, it is a binary file.
+devoidlab\images\icons\champions\112.png, it is a binary file.
+devoidlab\images\icons\champions\117.png, it is a binary file.
+devoidlab\images\icons\champions\164.png, it is a binary file.
+devoidlab\images\icons\champions\245.png, it is a binary file.
+devoidlab\images\icons\champions\246.png, it is a binary file.
+devoidlab\images\icons\champions\25.png, it is a binary file.
+devoidlab\images\icons\champions\268.png, it is a binary file.
+devoidlab\images\icons\champions\27.png, it is a binary file.
+devoidlab\images\icons\champions\31.png, it is a binary file.
+devoidlab\images\icons\champions\32.png, it is a binary file.
+devoidlab\images\icons\champions\33.png, it is a binary file.
+devoidlab\images\icons\champions\45.png, it is a binary file.
+devoidlab\images\icons\champions\517.png, it is a binary file.
+devoidlab\images\icons\champions\518.png, it is a binary file.
+devoidlab\images\icons\champions\6.png, it is a binary file.
+devoidlab\images\icons\champions\61.png, it is a binary file.
+devoidlab\images\icons\champions\68.png, it is a binary file.
+devoidlab\images\icons\champions\86.png, it is a binary file.
+devoidlab\images\icons\champions\90.png, it is a binary file.
+devoidlab\images\icons\champions\96.png, it is a binary file.
+devoidlab\images\icons\difficultyHigh.svg, code is 5, comment is 0, blank is 0.
+devoidlab\images\icons\difficultyLow.svg, code is 5, comment is 0, blank is 0.
+devoidlab\images\icons\difficultyMed.svg, code is 5, comment is 0, blank is 0.
+devoidlab\images\icons\Energy_resource.webp, it is a binary file.
+devoidlab\images\icons\icon-add.png, it is a binary file.
+devoidlab\images\icons\icon-check.png, it is a binary file.
+devoidlab\images\icons\icon-edit.png, it is a binary file.
+devoidlab\images\icons\icon-gear-over.png, it is a binary file.
+devoidlab\images\icons\icon-position-bottom.png, it is a binary file.
+devoidlab\images\icons\icon-position-jungle.png, it is a binary file.
+devoidlab\images\icons\icon-position-middle.png, it is a binary file.
+devoidlab\images\icons\icon-position-top.png, it is a binary file.
+devoidlab\images\icons\icon-position-utility.png, it is a binary file.
+devoidlab\images\icons\icon-prize.png, it is a binary file.
+devoidlab\images\icons\justice.png, it is a binary file.
+devoidlab\images\icons\Mana_resource.webp, it is a binary file.
+devoidlab\images\icons\Manaless_resource.webp, it is a binary file.
+devoidlab\images\icons\Melee_role.webp, it is a binary file.
+devoidlab\images\icons\Movement_speed_icon.webp, it is a binary file.
+devoidlab\images\icons\pine-svgrepo-com.svg, code is 6, comment is 0, blank is 0.
+devoidlab\images\icons\Range_icon.webp, it is a binary file.
+devoidlab\images\icons\Ranged_role.webp, it is a binary file.
+devoidlab\images\icons\regions\bandle_city_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\bilgewater_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\demacia_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\freljord_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\iona_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\ixtal_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\mt_targon_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\noxus_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\piltover_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\shadow_isles_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\shurima_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\void_crest_icon.png, it is a binary file.
+devoidlab\images\icons\regions\zaun_crest_icon.png, it is a binary file.
+devoidlab\images\icons\roleAssassin.svg, code is 11, comment is 0, blank is 0.
+devoidlab\images\icons\roleFighter.svg, code is 11, comment is 0, blank is 0.
+devoidlab\images\icons\roleMage.svg, code is 11, comment is 0, blank is 0.
+devoidlab\images\icons\roleMarksman.svg, code is 13, comment is 0, blank is 0.
+devoidlab\images\icons\roleSupport.svg, code is 12, comment is 0, blank is 0.
+devoidlab\images\icons\roleTank.svg, code is 12, comment is 0, blank is 0.
+devoidlab\images\icons\winged-arrow.png, it is a binary file.
+devoidlab\images\map6600x6600.webp, it is a binary file.
+devoidlab\images\map8192x8192.webp, it is a binary file.
+devoidlab\images\Mokav1.webp, it is a binary file.
+devoidlab\images\Scuti1.png, it is a binary file.
+devoidlab\images\Scuti2.png, it is a binary file.
+devoidlab\images\Scutiv1.webp, it is a binary file.
+devoidlab\images\Scutiv1_full.webp, it is a binary file.
+devoidlab\images\skins\AzirAnanas.webp, it is a binary file.
+devoidlab\images\skins\NunuBousierFreljord.webp, it is a binary file.
+devoidlab\images\skins\VladimirCouscous.webp, it is a binary file.
+devoidlab\images\skins\ZeriTechEdf.webp, it is a binary file.
+devoidlab\images\skins\ZoeBolognaise1.webp, it is a binary file.
+devoidlab\images\TinkCity.jpg, it is a binary file.
+devoidlab\images\Tinkv1.webp, it is a binary file.
+devoidlab\images\videoframe.png, it is a binary file.
+devoidlab\images\work-in-progress.png, it is a binary file.
+devoidlab\images\YshTav1.webp, it is a binary file.
+devoidlab\images\YshTav10.webp, it is a binary file.
+devoidlab\index.html, code is 67, comment is 1, blank is 5.
+devoidlab\js\devlog.js, code is 15, comment is 0, blank is 4.
+devoidlab\js\footer.js, code is 15, comment is 0, blank is 1.
+devoidlab\js\GameSoundManager.js, code is 65, comment is 32, blank is 10.
+devoidlab\js\loadChampion.js, code is 117, comment is 9, blank is 23.
+devoidlab\js\loadChampion\renderAbilities.js, code is 28, comment is 4, blank is 4.
+devoidlab\js\loadChampion\renderAbilitiesButtons.js, code is 28, comment is 4, blank is 2.
+devoidlab\js\loadChampion\renderAuthor.js, code is 11, comment is 3, blank is 0.
+devoidlab\js\loadChampion\renderBoard.js, code is 40, comment is 8, blank is 5.
+devoidlab\js\loadChampion\renderProfil.js, code is 16, comment is 0, blank is 5.
+devoidlab\js\loadChampion\renderRoles.js, code is 27, comment is 3, blank is 4.
+devoidlab\js\main.js, code is 4, comment is 1, blank is 0.
+devoidlab\js\navbar.js, code is 9, comment is 3, blank is 1.
+devoidlab\js\radar.js, code is 11, comment is 1, blank is 4.
+devoidlab\js\runeterraMap.js, code is 134, comment is 33, blank is 35.
+devoidlab\mansory.html, code is 81, comment is 2, blank is 10.
+devoidlab\map.html, code is 34, comment is 2, blank is 9.
+devoidlab\Moka.html, code is 297, comment is 0, blank is 39.
+devoidlab\navbar.html, code is 7, comment is 1, blank is 0.
+devoidlab\notes.md, code is 5, comment is 0, blank is 0.
+devoidlab\radar.html, code is 62, comment is 1, blank is 0.
+devoidlab\Scuti.html, code is 318, comment is 0, blank is 22.
+devoidlab\skins.html, code is 81, comment is 10, blank is 3.
+devoidlab\slider.html, code is 11, comment is 0, blank is 5.
+devoidlab\sounds\a-football-hits-the-net-goal-313216.mp3, it is a binary file.
+devoidlab\sounds\cheering-lech-poznan-w-grodzie-przemysawa-23379.mp3, it is a binary file.
+devoidlab\sounds\crowd-cheering-379666.mp3, it is a binary file.
+devoidlab\sounds\football-crowd-3-69245.mp3, it is a binary file.
+devoidlab\sounds\football-game-in-a-big-arena-31575.mp3, it is a binary file.
+devoidlab\sounds\football-party-people-in-the-streets-24170.mp3, it is a binary file.
+devoidlab\sounds\ireland-gaelic-football-match-anthem-55742.mp3, it is a binary file.
+devoidlab\sounds\metal-whistle-6121.mp3, it is a binary file.
+devoidlab\sounds\powerful-stomps-claps-cheering-sport-rhythmic-applause-317290.mp3, it is a binary file.
+devoidlab\sounds\soccer-ball-kick-37625.mp3, it is a binary file.
+devoidlab\sounds\soccerballkick-6770.mp3, it is a binary file.
+devoidlab\Tink.html, code is 231, comment is 0, blank is 30.
+devoidlab\tmp\46v38Hc.jpeg, it is a binary file.
+devoidlab\tmp\ability_0221_R1.mp4, it is a binary file.
+devoidlab\tmp\Capture d’écran 2025-11-13 002406.jpg, it is a binary file.
+devoidlab\tmp\Capture d’écran 2025-11-13 002420.jpg, it is a binary file.
+devoidlab\tmp\Counters.webp, it is a binary file.
+devoidlab\tmp\if-runeterra-regions-made-a-football-team-bandle-city-v0-pcu2txi835rf1.webp, it is a binary file.
+devoidlab\tmp\ingameLayers\base.jpg, it is a binary file.
+devoidlab\tmp\ingameLayers\i1631456797332877.jpeg, it is a binary file.
+devoidlab\tmp\ingameLayers\i1631456914047573.jpeg, it is a binary file.
+devoidlab\tmp\ingameLayers\mid.jpg, it is a binary file.
+devoidlab\tmp\ingameLayers\mid_2.jpg, it is a binary file.
+devoidlab\tmp\ingameLayers\wCCvzPD.jpeg, it is a binary file.
+devoidlab\tmp\ingameLayers\wp15730993.jpg, it is a binary file.
+devoidlab\tmp\league-of-legends-spell-hover-1920x1080.jpg, it is a binary file.
+devoidlab\tmp\map.png, it is a binary file.
+devoidlab\tmp\Runeterra Map 2.png, it is a binary file.
+devoidlab\tt.txt, code is 192, comment is 0, blank is 17.
+devoidlab\YshTa.html, code is 17, comment is 0, blank is 3.
+docs\42, code is 24, comment is 6, blank is 0.
+docs\CV-Lucas-Guibert.pdf, it is a binary file.
+docs\tools, code is 3, comment is 3, blank is 2.
+docs\Untitled-2022-10-05-0545.png, it is a binary file.
+docs\Untitled.xcf, it is a binary file.
+gg\html\main.html, code is 23, comment is 1, blank is 0.
+gg\js\main.js, code is 16, comment is 9, blank is 7.
+home\css\contact.css, code is 127, comment is 2, blank is 37.
+home\css\masonry.css, code is 39, comment is 5, blank is 7.
+home\css\style.css, code is 62, comment is 1, blank is 5.
+home\favicon.ico, it is a binary file.
+home\masonry\kfc.png, it is a binary file.
+home\masonry\kingoquiz.png, it is a binary file.
+home\masonry\loc.png, it is a binary file.
+home\masonry\nemosites.png, it is a binary file.
+home\masonry\pp.png, it is a binary file.
+home\masonry\umq.png, it is a binary file.
+home\preview.png, it is a binary file.
+hrdroid\html\main.html, code is 62, comment is 23, blank is 13.
+hrdroid\html\planet.html, code is 20, comment is 2, blank is 0.
+hrdroid\html\planetcell.html, code is 41, comment is 0, blank is 2.
+hrdroid\js\2k_mercury.jpg, it is a binary file.
+hrdroid\js\4k_ceres.jpg, it is a binary file.
+hrdroid\js\4k_makemake.jpg, it is a binary file.
+hrdroid\js\8k_mars.jpg, it is a binary file.
+hrdroid\js\8k_milky.jpg, it is a binary file.
+hrdroid\js\8k_stars.jpg, it is a binary file.
+hrdroid\js\imgtools.js, code is 45, comment is 20, blank is 11.
+hrdroid\js\MarsBump.png, it is a binary file.
+hrdroid\js\MarsNormal.png, it is a binary file.
+hrdroid\js\mat.jpg, it is a binary file.
+hrdroid\js\planet.js, code is 124, comment is 25, blank is 31.
+hrdroid\js\planetcell.js, code is 247, comment is 124, blank is 72.
+hrdroid\js\red.jpg, it is a binary file.
+img\icon.png, it is a binary file.
+index.html, code is 86, comment is 52, blank is 12.
+ipoi\css\input.css, code is 65, comment is 2, blank is 6.
+ipoi\css\main.css, code is 313, comment is 38, blank is 55.
+ipoi\css\popup.css, code is 67, comment is 1, blank is 8.
+ipoi\css\submit.css, code is 29, comment is 0, blank is 5.
+ipoi\img\convert.sh, code is 21, comment is 6, blank is 6.
+ipoi\img\hcrab.png, it is a binary file.
+ipoi\img\sites\973.jpg, it is a binary file.
+ipoi\img\sites\aec.jpg, it is a binary file.
+ipoi\img\sites\aew.jpg, it is a binary file.
+ipoi\img\sites\alx.jpg, it is a binary file.
+ipoi\img\sites\amz.jpg, it is a binary file.
+ipoi\img\sites\any.jpg, it is a binary file.
+ipoi\img\sites\aqa.jpg, it is a binary file.
+ipoi\img\sites\arc.jpg, it is a binary file.
+ipoi\img\sites\avn.jpg, it is a binary file.
+ipoi\img\sites\b2t.jpg, it is a binary file.
+ipoi\img\sites\bar.jpg, it is a binary file.
+ipoi\img\sites\bbm.jpg, it is a binary file.
+ipoi\img\sites\bbx.jpg, it is a binary file.
+ipoi\img\sites\cbg.png, it is a binary file.
+ipoi\img\sites\cli.jpg, it is a binary file.
+ipoi\img\sites\clm.jpg, it is a binary file.
+ipoi\img\sites\col.jpg, it is a binary file.
+ipoi\img\sites\cow.jpg, it is a binary file.
+ipoi\img\sites\crd.jpg, it is a binary file.
+ipoi\img\sites\ctv.jpg, it is a binary file.
+ipoi\img\sites\dab.jpg, it is a binary file.
+ipoi\img\sites\dco.jpg, it is a binary file.
+ipoi\img\sites\dgv.jpg, it is a binary file.
+ipoi\img\sites\dpi.jpg, it is a binary file.
+ipoi\img\sites\eda.jpg, it is a binary file.
+ipoi\img\sites\epg.jpg, it is a binary file.
+ipoi\img\sites\esl.jpg, it is a binary file.
+ipoi\img\sites\exc.jpg, it is a binary file.
+ipoi\img\sites\fra.jpg, it is a binary file.
+ipoi\img\sites\gct.jpg, it is a binary file.
+ipoi\img\sites\ggg.jpg, it is a binary file.
+ipoi\img\sites\gif.jpg, it is a binary file.
+ipoi\img\sites\gna.jpg, it is a binary file.
+ipoi\img\sites\gpt.jpg, it is a binary file.
+ipoi\img\sites\gre.jpg, it is a binary file.
+ipoi\img\sites\gvl.jpg, it is a binary file.
+ipoi\img\sites\has.jpg, it is a binary file.
+ipoi\img\sites\hde.jpg, it is a binary file.
+ipoi\img\sites\hum.jpg, it is a binary file.
+ipoi\img\sites\hyd.jpg, it is a binary file.
+ipoi\img\sites\idm.jpg, it is a binary file.
+ipoi\img\sites\ifl.jpg, it is a binary file.
+ipoi\img\sites\ikb.jpg, it is a binary file.
+ipoi\img\sites\ink.jpg, it is a binary file.
+ipoi\img\sites\itc.jpg, it is a binary file.
+ipoi\img\sites\jff.jpg, it is a binary file.
+ipoi\img\sites\jft.jpg, it is a binary file.
+ipoi\img\sites\jod.jpg, it is a binary file.
+ipoi\img\sites\kfc.jpg, it is a binary file.
+ipoi\img\sites\lhc.jpg, it is a binary file.
+ipoi\img\sites\lml.jpg, it is a binary file.
+ipoi\img\sites\log.jpg, it is a binary file.
+ipoi\img\sites\lol.jpg, it is a binary file.
+ipoi\img\sites\map.jpg, it is a binary file.
+ipoi\img\sites\mdp.jpg, it is a binary file.
+ipoi\img\sites\mia.jpg, it is a binary file.
+ipoi\img\sites\mim.jpg, it is a binary file.
+ipoi\img\sites\mmp.jpg, it is a binary file.
+ipoi\img\sites\mpt.jpg, it is a binary file.
+ipoi\img\sites\mrt.jpg, it is a binary file.
+ipoi\img\sites\mtc.jpg, it is a binary file.
+ipoi\img\sites\nan.jpg, it is a binary file.
+ipoi\img\sites\nar.jpg, it is a binary file.
+ipoi\img\sites\naw.jpg, it is a binary file.
+ipoi\img\sites\nea.jpg, it is a binary file.
+ipoi\img\sites\nfg.jpg, it is a binary file.
+ipoi\img\sites\nic.jpg, it is a binary file.
+ipoi\img\sites\nnw.jpg, it is a binary file.
+ipoi\img\sites\oei.jpg, it is a binary file.
+ipoi\img\sites\ope.jpg, it is a binary file.
+ipoi\img\sites\opt.jpg, it is a binary file.
+ipoi\img\sites\osd.jpg, it is a binary file.
+ipoi\img\sites\osm.jpg, it is a binary file.
+ipoi\img\sites\oxi.jpg, it is a binary file.
+ipoi\img\sites\ozb.jpg, it is a binary file.
+ipoi\img\sites\pat.jpg, it is a binary file.
+ipoi\img\sites\peg.jpg, it is a binary file.
+ipoi\img\sites\pel.jpg, it is a binary file.
+ipoi\img\sites\plf.jpg, it is a binary file.
+ipoi\img\sites\plr.jpg, it is a binary file.
+ipoi\img\sites\pol.jpg, it is a binary file.
+ipoi\img\sites\ppc.jpg, it is a binary file.
+ipoi\img\sites\ppt.jpg, it is a binary file.
+ipoi\img\sites\ptr.jpg, it is a binary file.
+ipoi\img\sites\pts.jpg, it is a binary file.
+ipoi\img\sites\raa.jpg, it is a binary file.
+ipoi\img\sites\rad.jpg, it is a binary file.
+ipoi\img\sites\rbg.jpg, it is a binary file.
+ipoi\img\sites\rbk.jpg, it is a binary file.
+ipoi\img\sites\rdg.jpg, it is a binary file.
+ipoi\img\sites\ric.jpg, it is a binary file.
+ipoi\img\sites\rns.jpg, it is a binary file.
+ipoi\img\sites\rpa.jpg, it is a binary file.
+ipoi\img\sites\s42.png, it is a binary file.
+ipoi\img\sites\scm.jpg, it is a binary file.
+ipoi\img\sites\sei.jpg, it is a binary file.
+ipoi\img\sites\sel.jpg, it is a binary file.
+ipoi\img\sites\sht.jpg, it is a binary file.
+ipoi\img\sites\sim.jpg, it is a binary file.
+ipoi\img\sites\sis.jpg, it is a binary file.
+ipoi\img\sites\sou.jpg, it is a binary file.
+ipoi\img\sites\spb.jpg, it is a binary file.
+ipoi\img\sites\stg.jpg, it is a binary file.
+ipoi\img\sites\svm.jpg, it is a binary file.
+ipoi\img\sites\sym.jpg, it is a binary file.
+ipoi\img\sites\syn.jpg, it is a binary file.
+ipoi\img\sites\tdc.jpg, it is a binary file.
+ipoi\img\sites\tdd.jpg, it is a binary file.
+ipoi\img\sites\tdm.jpg, it is a binary file.
+ipoi\img\sites\tds.jpg, it is a binary file.
+ipoi\img\sites\tss.jpg, it is a binary file.
+ipoi\img\sites\tts.jpg, it is a binary file.
+ipoi\img\sites\tvl.jpg, it is a binary file.
+ipoi\img\sites\tvt.jpg, it is a binary file.
+ipoi\img\sites\ukc.jpg, it is a binary file.
+ipoi\img\sites\umq.jpg, it is a binary file.
+ipoi\img\sites\upp.jpg, it is a binary file.
+ipoi\img\sites\uqs.jpg, it is a binary file.
+ipoi\img\sites\usw.jpg, it is a binary file.
+ipoi\img\sites\vts.jpg, it is a binary file.
+ipoi\img\sites\w93.jpg, it is a binary file.
+ipoi\img\sites\wdm.jpg, it is a binary file.
+ipoi\img\sites\wik.jpg, it is a binary file.
+ipoi\img\sites\wtk.jpg, it is a binary file.
+ipoi\img\sites\www.jpg, it is a binary file.
+ipoi\img\sites\xiy.jpg, it is a binary file.
+ipoi\img\sites\ytb.jpg, it is a binary file.
+ipoi\img\sites\zco.jpg, it is a binary file.
+ipoi\img\sites\zql.jpg, it is a binary file.
+ipoi\img\sites_webp\973.webp, it is a binary file.
+ipoi\img\sites_webp\aec.webp, it is a binary file.
+ipoi\img\sites_webp\aew.webp, it is a binary file.
+ipoi\img\sites_webp\alx.webp, it is a binary file.
+ipoi\img\sites_webp\amz.webp, it is a binary file.
+ipoi\img\sites_webp\any.webp, it is a binary file.
+ipoi\img\sites_webp\aqa.webp, it is a binary file.
+ipoi\img\sites_webp\arc.webp, it is a binary file.
+ipoi\img\sites_webp\avn.webp, it is a binary file.
+ipoi\img\sites_webp\b2t.webp, it is a binary file.
+ipoi\img\sites_webp\bar.webp, it is a binary file.
+ipoi\img\sites_webp\bbm.webp, it is a binary file.
+ipoi\img\sites_webp\bbx.webp, it is a binary file.
+ipoi\img\sites_webp\cbg.webp, it is a binary file.
+ipoi\img\sites_webp\cli.webp, it is a binary file.
+ipoi\img\sites_webp\clm.webp, it is a binary file.
+ipoi\img\sites_webp\col.webp, it is a binary file.
+ipoi\img\sites_webp\cow.webp, it is a binary file.
+ipoi\img\sites_webp\crd.webp, it is a binary file.
+ipoi\img\sites_webp\ctv.webp, it is a binary file.
+ipoi\img\sites_webp\dab.webp, it is a binary file.
+ipoi\img\sites_webp\dco.webp, it is a binary file.
+ipoi\img\sites_webp\dgv.webp, it is a binary file.
+ipoi\img\sites_webp\dpi.webp, it is a binary file.
+ipoi\img\sites_webp\eda.webp, it is a binary file.
+ipoi\img\sites_webp\epg.webp, it is a binary file.
+ipoi\img\sites_webp\esl.webp, it is a binary file.
+ipoi\img\sites_webp\exc.webp, it is a binary file.
+ipoi\img\sites_webp\fra.webp, it is a binary file.
+ipoi\img\sites_webp\gct.webp, it is a binary file.
+ipoi\img\sites_webp\ggg.webp, it is a binary file.
+ipoi\img\sites_webp\gif.webp, it is a binary file.
+ipoi\img\sites_webp\gna.webp, it is a binary file.
+ipoi\img\sites_webp\gpt.webp, it is a binary file.
+ipoi\img\sites_webp\gre.webp, it is a binary file.
+ipoi\img\sites_webp\gvl.webp, it is a binary file.
+ipoi\img\sites_webp\has.webp, it is a binary file.
+ipoi\img\sites_webp\hde.webp, it is a binary file.
+ipoi\img\sites_webp\hum.webp, it is a binary file.
+ipoi\img\sites_webp\hyd.webp, it is a binary file.
+ipoi\img\sites_webp\idm.webp, it is a binary file.
+ipoi\img\sites_webp\ifl.webp, it is a binary file.
+ipoi\img\sites_webp\ikb.webp, it is a binary file.
+ipoi\img\sites_webp\ink.webp, it is a binary file.
+ipoi\img\sites_webp\itc.webp, it is a binary file.
+ipoi\img\sites_webp\jff.webp, it is a binary file.
+ipoi\img\sites_webp\jft.webp, it is a binary file.
+ipoi\img\sites_webp\jod.webp, it is a binary file.
+ipoi\img\sites_webp\kfc.webp, it is a binary file.
+ipoi\img\sites_webp\lhc.webp, it is a binary file.
+ipoi\img\sites_webp\lml.webp, it is a binary file.
+ipoi\img\sites_webp\log.webp, it is a binary file.
+ipoi\img\sites_webp\lol.webp, it is a binary file.
+ipoi\img\sites_webp\map.webp, it is a binary file.
+ipoi\img\sites_webp\mdp.webp, it is a binary file.
+ipoi\img\sites_webp\mia.webp, it is a binary file.
+ipoi\img\sites_webp\mim.webp, it is a binary file.
+ipoi\img\sites_webp\mmp.webp, it is a binary file.
+ipoi\img\sites_webp\mpt.webp, it is a binary file.
+ipoi\img\sites_webp\mrt.webp, it is a binary file.
+ipoi\img\sites_webp\mtc.webp, it is a binary file.
+ipoi\img\sites_webp\nan.webp, it is a binary file.
+ipoi\img\sites_webp\nar.webp, it is a binary file.
+ipoi\img\sites_webp\naw.webp, it is a binary file.
+ipoi\img\sites_webp\nea.webp, it is a binary file.
+ipoi\img\sites_webp\nfg.webp, it is a binary file.
+ipoi\img\sites_webp\nic.webp, it is a binary file.
+ipoi\img\sites_webp\nnw.webp, it is a binary file.
+ipoi\img\sites_webp\oei.webp, it is a binary file.
+ipoi\img\sites_webp\ope.webp, it is a binary file.
+ipoi\img\sites_webp\opt.webp, it is a binary file.
+ipoi\img\sites_webp\osd.webp, it is a binary file.
+ipoi\img\sites_webp\osm.webp, it is a binary file.
+ipoi\img\sites_webp\oxi.webp, it is a binary file.
+ipoi\img\sites_webp\ozb.webp, it is a binary file.
+ipoi\img\sites_webp\pat.webp, it is a binary file.
+ipoi\img\sites_webp\peg.webp, it is a binary file.
+ipoi\img\sites_webp\pel.webp, it is a binary file.
+ipoi\img\sites_webp\plf.webp, it is a binary file.
+ipoi\img\sites_webp\plr.webp, it is a binary file.
+ipoi\img\sites_webp\pol.webp, it is a binary file.
+ipoi\img\sites_webp\ppc.webp, it is a binary file.
+ipoi\img\sites_webp\ppt.webp, it is a binary file.
+ipoi\img\sites_webp\ptr.webp, it is a binary file.
+ipoi\img\sites_webp\pts.webp, it is a binary file.
+ipoi\img\sites_webp\raa.webp, it is a binary file.
+ipoi\img\sites_webp\rad.webp, it is a binary file.
+ipoi\img\sites_webp\rbg.webp, it is a binary file.
+ipoi\img\sites_webp\rbk.webp, it is a binary file.
+ipoi\img\sites_webp\rdg.webp, it is a binary file.
+ipoi\img\sites_webp\ric.webp, it is a binary file.
+ipoi\img\sites_webp\rns.webp, it is a binary file.
+ipoi\img\sites_webp\rpa.webp, it is a binary file.
+ipoi\img\sites_webp\s42.webp, it is a binary file.
+ipoi\img\sites_webp\scm.webp, it is a binary file.
+ipoi\img\sites_webp\sei.webp, it is a binary file.
+ipoi\img\sites_webp\sel.webp, it is a binary file.
+ipoi\img\sites_webp\sht.webp, it is a binary file.
+ipoi\img\sites_webp\sim.webp, it is a binary file.
+ipoi\img\sites_webp\sis.webp, it is a binary file.
+ipoi\img\sites_webp\sou.webp, it is a binary file.
+ipoi\img\sites_webp\spb.webp, it is a binary file.
+ipoi\img\sites_webp\stg.webp, it is a binary file.
+ipoi\img\sites_webp\svm.webp, it is a binary file.
+ipoi\img\sites_webp\sym.webp, it is a binary file.
+ipoi\img\sites_webp\syn.webp, it is a binary file.
+ipoi\img\sites_webp\tdc.webp, it is a binary file.
+ipoi\img\sites_webp\tdd.webp, it is a binary file.
+ipoi\img\sites_webp\tdm.webp, it is a binary file.
+ipoi\img\sites_webp\tds.webp, it is a binary file.
+ipoi\img\sites_webp\tns.webp, it is a binary file.
+ipoi\img\sites_webp\tss.webp, it is a binary file.
+ipoi\img\sites_webp\tts.webp, it is a binary file.
+ipoi\img\sites_webp\tvl.webp, it is a binary file.
+ipoi\img\sites_webp\tvt.webp, it is a binary file.
+ipoi\img\sites_webp\ukc.webp, it is a binary file.
+ipoi\img\sites_webp\umq.webp, it is a binary file.
+ipoi\img\sites_webp\upp.webp, it is a binary file.
+ipoi\img\sites_webp\uqs.webp, it is a binary file.
+ipoi\img\sites_webp\usw.webp, it is a binary file.
+ipoi\img\sites_webp\vts.webp, it is a binary file.
+ipoi\img\sites_webp\w93.webp, it is a binary file.
+ipoi\img\sites_webp\wdm.webp, it is a binary file.
+ipoi\img\sites_webp\wik.webp, it is a binary file.
+ipoi\img\sites_webp\wtk.webp, it is a binary file.
+ipoi\img\sites_webp\www.webp, it is a binary file.
+ipoi\img\sites_webp\xiy.webp, it is a binary file.
+ipoi\img\sites_webp\ytb.webp, it is a binary file.
+ipoi\img\sites_webp\zco.webp, it is a binary file.
+ipoi\img\sites_webp\zql.webp, it is a binary file.
+ipoi\js\cards_icons.js, code is 102, comment is 1, blank is 0.
+ipoi\js\data.js, code is 877, comment is 4, blank is 2.
+ipoi\js\input.js, code is 36, comment is 2, blank is 5.
+ipoi\js\main.js, code is 216, comment is 14, blank is 23.
+ipoi\js\popup.js, code is 38, comment is 1, blank is 5.
+ipoi\js\sbrev.js, code is 16, comment is 2, blank is 2.
+ipoi\js\submit.js, code is 23, comment is 2, blank is 2.
+kfc\css\style.css, code is 265, comment is 2, blank is 38.
+kfc\img\cavalier-b.svg, code is 22, comment is 0, blank is 0.
+kfc\img\cavalier-w.svg, code is 19, comment is 0, blank is 0.
+kfc\img\cheval.png, it is a binary file.
+kfc\img\couronne.png, it is a binary file.
+kfc\img\elephant-b.svg, code is 4, comment is 0, blank is 0.
+kfc\img\elephant-w.svg, code is 4, comment is 0, blank is 0.
+kfc\img\epee.png, it is a binary file.
+kfc\img\faucon-b.svg, code is 4, comment is 0, blank is 0.
+kfc\img\faucon-w.svg, code is 4, comment is 0, blank is 0.
+kfc\img\fou-b.svg, code is 12, comment is 0, blank is 0.
+kfc\img\fou-w.svg, code is 12, comment is 0, blank is 0.
+kfc\img\minuteur.png, it is a binary file.
+kfc\img\pion-b.svg, code is 5, comment is 0, blank is 0.
+kfc\img\pion-w.svg, code is 5, comment is 0, blank is 0.
+kfc\img\pion.png, it is a binary file.
+kfc\img\reine-b.svg, code is 26, comment is 0, blank is 1.
+kfc\img\reine-w.svg, code is 15, comment is 0, blank is 0.
+kfc\img\roi-b.svg, code is 12, comment is 0, blank is 0.
+kfc\img\roi-w.svg, code is 9, comment is 0, blank is 0.
+kfc\img\tower-b.svg, code is 39, comment is 0, blank is 0.
+kfc\img\tower-w.svg, code is 25, comment is 0, blank is 0.
+kfc\img\trophee.png, it is a binary file.
+kfc\index.html, code is 41, comment is 0, blank is 4.
+kfc\js\data.js, code is 61, comment is 2, blank is 4.
+kfc\js\gameTimer.js, code is 20, comment is 11, blank is 6.
+kfc\js\getMoves.js, code is 176, comment is 37, blank is 17.
+kfc\js\home.js, code is 34, comment is 3, blank is 4.
+kfc\js\index.js, code is 521, comment is 75, blank is 77.
+kfc\js\index_oldv2_backup.js, code is 447, comment is 57, blank is 62.
+kfc\js\soundsLib.js, code is 97, comment is 0, blank is 3.
+kfc\js\tools.js, code is 16, comment is 0, blank is 3.
+kfc\sounds\Adroite.mp3, it is a binary file.
+kfc\sounds\Agauche.mp3, it is a binary file.
+kfc\sounds\aguagu.mp3, it is a binary file.
+kfc\sounds\avecunwilly.mp3, it is a binary file.
+kfc\sounds\babyvoice.mp3, it is a binary file.
+kfc\sounds\baguette.mp3, it is a binary file.
+kfc\sounds\benjecomprend.mp3, it is a binary file.
+kfc\sounds\button.mp3, it is a binary file.
+kfc\sounds\cartekiwi.mp3, it is a binary file.
+kfc\sounds\cartekiwishorter.mp3, it is a binary file.
+kfc\sounds\chipi.mp3, it is a binary file.
+kfc\sounds\Coconut.mp3, it is a binary file.
+kfc\sounds\corbin.mp3, it is a binary file.
+kfc\sounds\cpassorcier.mp3, it is a binary file.
+kfc\sounds\dansedeforet.mp3, it is a binary file.
+kfc\sounds\deco.mp3, it is a binary file.
+kfc\sounds\destrucs.mp3, it is a binary file.
+kfc\sounds\Ehwewe.mp3, it is a binary file.
+kfc\sounds\everybodydotheflop.mp3, it is a binary file.
+kfc\sounds\gps.mp3, it is a binary file.
+kfc\sounds\grelotine.mp3, it is a binary file.
+kfc\sounds\habebabeu.mp3, it is a binary file.
+kfc\sounds\hamburger.mp3, it is a binary file.
+kfc\sounds\heeey.mp3, it is a binary file.
+kfc\sounds\howareyou.mp3, it is a binary file.
+kfc\sounds\hydrate.mp3, it is a binary file.
+kfc\sounds\icitourdecontrole.mp3, it is a binary file.
+kfc\sounds\iliketrains.mp3, it is a binary file.
+kfc\sounds\Johanne.mp3, it is a binary file.
+kfc\sounds\josianepichet.mp3, it is a binary file.
+kfc\sounds\ma1.mp3, it is a binary file.
+kfc\sounds\ma2.mp3, it is a binary file.
+kfc\sounds\ma3.mp3, it is a binary file.
+kfc\sounds\ma4.mp3, it is a binary file.
+kfc\sounds\ma5.mp3, it is a binary file.
+kfc\sounds\ma6.mp3, it is a binary file.
+kfc\sounds\mariage.mp3, it is a binary file.
+kfc\sounds\mayday.mp3, it is a binary file.
+kfc\sounds\monmetier.mp3, it is a binary file.
+kfc\sounds\monsieur.mp3, it is a binary file.
+kfc\sounds\moveit.mp3, it is a binary file.
+kfc\sounds\nope.mp3, it is a binary file.
+kfc\sounds\ouah.mp3, it is a binary file.
+kfc\sounds\ouille.mp3, it is a binary file.
+kfc\sounds\painfromage.mp3, it is a binary file.
+kfc\sounds\pasdewilly.mp3, it is a binary file.
+kfc\sounds\petitdej.mp3, it is a binary file.
+kfc\sounds\pitoupitou.mp3, it is a binary file.
+kfc\sounds\rire1.mp3, it is a binary file.
+kfc\sounds\rire2.mp3, it is a binary file.
+kfc\sounds\rire3.mp3, it is a binary file.
+kfc\sounds\rire4.mp3, it is a binary file.
+kfc\sounds\riresante.mp3, it is a binary file.
+kfc\sounds\someburger.mp3, it is a binary file.
+kfc\sounds\SylvainDurif.mp3, it is a binary file.
+kfc\sounds\sylvaing.mp3, it is a binary file.
+kfc\sounds\turtlehello.mp3, it is a binary file.
+kfc\sounds\williwaller.mp3, it is a binary file.
+kfc\sounds\xandiloquence.mp3, it is a binary file.
+kfc\sounds\yoda.mp3, it is a binary file.
+KinGoQuiz\code\output\0.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\1.txt, code is 5, comment is 0, blank is 0.
+KinGoQuiz\code\output\2.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\3.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\4.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\5.txt, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\output\6.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\7.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\8.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\output\9.txt, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_prog\2samefor.go, code is 10, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog\binaire.go, code is 19, comment is 0, blank is 7.
+KinGoQuiz\code\valid_prog\bizarre.go, code is 8, comment is 0, blank is 0.
+KinGoQuiz\code\valid_prog\conditions.go, code is 12, comment is 0, blank is 6.
+KinGoQuiz\code\valid_prog\giantcom.go, code is 5, comment is 17, blank is 3.
+KinGoQuiz\code\valid_prog\helloword.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog\onefor.go, code is 7, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog\printf.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog\progwithfunc.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_prog\stupidvar.go, code is 8, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog\sum.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\2samefor copy 2.go, code is 9, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\2samefor copy.go, code is 9, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\2samefor.go, code is 10, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog_not\binaire copy 2.go, code is 19, comment is 0, blank is 7.
+KinGoQuiz\code\valid_prog_not\binaire copy 3.go, code is 17, comment is 0, blank is 5.
+KinGoQuiz\code\valid_prog_not\binaire copy.go, code is 19, comment is 0, blank is 7.
+KinGoQuiz\code\valid_prog_not\binaire.go, code is 19, comment is 0, blank is 7.
+KinGoQuiz\code\valid_prog_not\bizarre copy 2.go, code is 8, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\bizarre copy.go, code is 8, comment is 0, blank is 0.
+KinGoQuiz\code\valid_prog_not\bizarre.go, code is 8, comment is 0, blank is 0.
+KinGoQuiz\code\valid_prog_not\conditions copy 2.go, code is 12, comment is 0, blank is 6.
+KinGoQuiz\code\valid_prog_not\conditions copy.go, code is 13, comment is 0, blank is 6.
+KinGoQuiz\code\valid_prog_not\conditions.go, code is 12, comment is 0, blank is 6.
+KinGoQuiz\code\valid_prog_not\displayimage.go, code is 17, comment is 2, blank is 6.
+KinGoQuiz\code\valid_prog_not\helloword copy 2.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\helloword copy.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\helloword.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\onefor copy 2.go, code is 7, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\onefor copy.go, code is 7, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\onefor.go, code is 7, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\printf copy 2.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\printf copy.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\printf.go, code is 5, comment is 0, blank is 2.
+KinGoQuiz\code\valid_prog_not\progwithfunc copy 2.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_prog_not\progwithfunc copy.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_prog_not\progwithfunc.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_prog_not\stupidvar copy 2.go, code is 8, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog_not\stupidvar copy.go, code is 8, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog_not\stupidvar.go, code is 8, comment is 0, blank is 4.
+KinGoQuiz\code\valid_prog_not\sum copy 2.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\sum copy.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_prog_not\sum.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_type\addbool.go, code is 9, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\binaire.go, code is 14, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type\byte.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\compare.go, code is 10, comment is 0, blank is 4.
+KinGoQuiz\code\valid_type\convert.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\floatesque.go, code is 4, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\forchar.go, code is 4, comment is 9, blank is 0.
+KinGoQuiz\code\valid_type\forfor.go, code is 6, comment is 1, blank is 3.
+KinGoQuiz\code\valid_type\func.go, code is 4, comment is 1, blank is 0.
+KinGoQuiz\code\valid_type\george.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\int_float.go, code is 7, comment is 0, blank is 2.
+KinGoQuiz\code\valid_type\int_string.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\len.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\poulet.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\return.go, code is 6, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type\return2.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\scan.go, code is 4, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\scanf.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type\string_int.go, code is 5, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type\tableau.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\addbool.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\binaire.go, code is 19, comment is 0, blank is 2.
+KinGoQuiz\code\valid_type_not\byte.go, code is 2, comment is 1, blank is 0.
+KinGoQuiz\code\valid_type_not\compare.go, code is 8, comment is 0, blank is 2.
+KinGoQuiz\code\valid_type_not\convert.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\floatesque.go, code is 4, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\forchar.go, code is 3, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type_not\forfor.go, code is 5, comment is 1, blank is 2.
+KinGoQuiz\code\valid_type_not\func.go, code is 4, comment is 1, blank is 0.
+KinGoQuiz\code\valid_type_not\george.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\int_float.go, code is 7, comment is 0, blank is 2.
+KinGoQuiz\code\valid_type_not\int_string.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\len.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\poulet.go, code is 2, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\return.go, code is 6, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type_not\return2.go, code is 3, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\scan.go, code is 4, comment is 0, blank is 0.
+KinGoQuiz\code\valid_type_not\scanf.go, code is 3, comment is 0, blank is 2.
+KinGoQuiz\code\valid_type_not\string_int.go, code is 5, comment is 0, blank is 1.
+KinGoQuiz\code\valid_type_not\tableau.go, code is 4, comment is 0, blank is 0.
+KinGoQuiz\code\valid_with_out\0.go, code is 22, comment is 0, blank is 3.
+KinGoQuiz\code\valid_with_out\1.go, code is 9, comment is 0, blank is 2.
+KinGoQuiz\code\valid_with_out\2.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out\3.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out\4.go, code is 11, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out\5.go, code is 16, comment is 0, blank is 6.
+KinGoQuiz\code\valid_with_out\6.go, code is 17, comment is 3, blank is 2.
+KinGoQuiz\code\valid_with_out\7.go, code is 14, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out\8.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_with_out\9.go, code is 8, comment is 0, blank is 2.
+KinGoQuiz\code\valid_with_out_not\0.go, code is 9, comment is 0, blank is 2.
+KinGoQuiz\code\valid_with_out_not\1.go, code is 9, comment is 0, blank is 2.
+KinGoQuiz\code\valid_with_out_not\2.go, code is 8, comment is 0, blank is 4.
+KinGoQuiz\code\valid_with_out_not\3.go, code is 9, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out_not\4.go, code is 11, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out_not\5.go, code is 16, comment is 0, blank is 6.
+KinGoQuiz\code\valid_with_out_not\6.go, code is 17, comment is 3, blank is 2.
+KinGoQuiz\code\valid_with_out_not\7.go, code is 14, comment is 0, blank is 5.
+KinGoQuiz\code\valid_with_out_not\8.go, code is 11, comment is 0, blank is 3.
+KinGoQuiz\code\valid_with_out_not\9.go, code is 8, comment is 0, blank is 2.
+KinGoQuiz\dark.css, code is 62, comment is 10, blank is 11.
+KinGoQuiz\go.png, it is a binary file.
+KinGoQuiz\index.html, code is 34, comment is 2, blank is 11.
+KinGoQuiz\kinGoQuiz.css, code is 165, comment is 3, blank is 20.
+KinGoQuiz\quiz.js, code is 364, comment is 15, blank is 31.
+legal\cgu.html, code is 22, comment is 0, blank is 3.
+legal\contact.html, code is 37, comment is 0, blank is 4.
+legal\cookies.html, code is 20, comment is 0, blank is 2.
+legal\credits.html, code is 42, comment is 0, blank is 3.
+legal\img\confiance.png, it is a binary file.
+legal\img\cookies-internet.png, it is a binary file.
+legal\img\email.png, it is a binary file.
+legal\img\loi.png, it is a binary file.
+legal\img\merci.png, it is a binary file.
+legal\legal-style.css, code is 77, comment is 3, blank is 11.
+legal\mentions-legales.html, code is 25, comment is 0, blank is 3.
+listesDomains.txt, code is 100, comment is 0, blank is 0.
+nemosites.html, code is 115, comment is 32, blank is 13.
+perikkles-esa.md, code is 3, comment is 0, blank is 0.
+pp\css\ampoule.css, code is 41, comment is 0, blank is 8.
+pp\css\button.css, code is 96, comment is 2, blank is 7.
+pp\css\cursor.css, code is 27, comment is 0, blank is 3.
+pp\css\kitchen.css, code is 58, comment is 2, blank is 6.
+pp\css\park.css, code is 167, comment is 12, blank is 27.
+pp\css\street.css, code is 75, comment is 2, blank is 6.
+pp\css\tab.css, code is 73, comment is 8, blank is 6.
+pp\css\tv.css, code is 48, comment is 5, blank is 6.
+pp\css\volume.css, code is 42, comment is 8, blank is 6.
+pp\img\bonhomme-tartine-w.png, it is a binary file.
+pp\img\bonhomme-tartine.png, it is a binary file.
+pp\img\cnt-bras.jpg, it is a binary file.
+pp\img\cnt-fromage.jpg, it is a binary file.
+pp\img\cnt-pain.jpg, it is a binary file.
+pp\img\cnt-tartine.jpg, it is a binary file.
+pp\img\cur-blood.png, it is a binary file.
+pp\img\cur.png, it is a binary file.
+pp\img\g2.svg, code is 32, comment is 0, blank is 0.
+pp\img\lefromage.svg, code is 23, comment is 1, blank is 1.
+pp\img\lepain.svg, code is 23, comment is 1, blank is 1.
+pp\img\machine-fromage.jpg, it is a binary file.
+pp\img\machine-pain.jpg, it is a binary file.
+pp\img\places\bg.jpg, it is a binary file.
+pp\img\places\domain.jpg, it is a binary file.
+pp\img\places\domainOVER.png, it is a binary file.
+pp\img\places\gare.avif, it is a binary file.
+pp\img\places\park.jpg, it is a binary file.
+pp\img\places\parkFG.png, it is a binary file.
+pp\img\places\rue.jpg, it is a binary file.
+pp\img\places\salon.jpg, it is a binary file.
+pp\img\slicer-fromage.jpg, it is a binary file.
+pp\img\slicer-pain.jpg, it is a binary file.
+pp\img\tv.png, it is a binary file.
+pp\img\tv\t1.jpg, it is a binary file.
+pp\img\tv\t10.jpg, it is a binary file.
+pp\img\tv\t11.jpg, it is a binary file.
+pp\img\tv\t12.jpg, it is a binary file.
+pp\img\tv\t13.jpg, it is a binary file.
+pp\img\tv\t14.jpg, it is a binary file.
+pp\img\tv\t15.jpg, it is a binary file.
+pp\img\tv\t2.jpg, it is a binary file.
+pp\img\tv\t3.jpg, it is a binary file.
+pp\img\tv\t4.jpg, it is a binary file.
+pp\img\tv\t5.jpg, it is a binary file.
+pp\img\tv\t6.jpg, it is a binary file.
+pp\img\tv\t7.webp, it is a binary file.
+pp\img\tv\t8.jpg, it is a binary file.
+pp\img\tv\t9.jpg, it is a binary file.
+pp\index.html, code is 35, comment is 0, blank is 5.
+pp\js\ampoule.js, code is 10, comment is 0, blank is 2.
+pp\js\autoDiv.js, code is 161, comment is 16, blank is 27.
+pp\js\constants.js, code is 6, comment is 1, blank is 0.
+pp\js\database.js, code is 468, comment is 60, blank is 32.
+pp\js\dataManager.js, code is 28, comment is 16, blank is 6.
+pp\js\itemsManager.js, code is 725, comment is 45, blank is 30.
+pp\js\kitchen.js, code is 192, comment is 24, blank is 17.
+pp\js\knifeCursor.js, code is 70, comment is 6, blank is 8.
+pp\js\lib.js, code is 61, comment is 40, blank is 21.
+pp\js\pageManager.js, code is 55, comment is 8, blank is 5.
+pp\js\park.js, code is 675, comment is 104, blank is 70.
+pp\js\street.js, code is 79, comment is 8, blank is 15.
+pp\js\tab-description.js, code is 177, comment is 27, blank is 0.
+pp\js\tartinoide-data.js, code is 592, comment is 7, blank is 19.
+pp\js\television-roll.js, code is 33, comment is 7, blank is 8.
+pp\js\volume.js, code is 65, comment is 14, blank is 5.
+pp\js\welcome.js, code is 4, comment is 0, blank is 0.
+pp\kitchen.html, code is 131, comment is 8, blank is 3.
+pp\park.html, code is 111, comment is 4, blank is 9.
+pp\sounds\alienloop.mp3, it is a binary file.
+pp\sounds\button-up.mp3, it is a binary file.
+pp\sounds\casino-ambiance.mp3, it is a binary file.
+pp\sounds\city-night.mp3, it is a binary file.
+pp\sounds\lvlup.mp3, it is a binary file.
+pp\sounds\mamie1.mp3, it is a binary file.
+pp\sounds\mamie2.mp3, it is a binary file.
+pp\sounds\mamie3.mp3, it is a binary file.
+pp\sounds\mamie4.mp3, it is a binary file.
+pp\sounds\old-button.mp3, it is a binary file.
+pp\sounds\painfromage.mp3, it is a binary file.
+pp\sounds\slice-fromage.mp3, it is a binary file.
+pp\sounds\slice-pain.mp3, it is a binary file.
+pp\sounds\st-james-park.mp3, it is a binary file.
+pp\sounds\tawny-owl.mp3, it is a binary file.
+pp\sounds\tvnoise.mp3, it is a binary file.
+pp\sounds\xpup.mp3, it is a binary file.
+pp\street.html, code is 28, comment is 2, blank is 5.
+pp\videos\tv2.mp4, it is a binary file.
+README.md, code is 1, comment is 0, blank is 0.
+relief\city.css, code is 16, comment is 2, blank is 2.
+relief\city.html, code is 16, comment is 0, blank is 4.
+relief\city.js, code is 31, comment is 12, blank is 8.
+relief\city2.js, code is 95, comment is 18, blank is 19.
+relief\city3.js, code is 215, comment is 27, blank is 39.
+relief\main.html, code is 140, comment is 0, blank is 19.
+uh\cat.css, code is 105, comment is 76, blank is 6.
+uh\index.css, code is 102, comment is 161, blank is 29.
+uh\index.html, code is 98, comment is 2, blank is 9.
+uh\map.html, code is 44, comment is 6, blank is 10.
+uh\p2.html, code is 27, comment is 8, blank is 5.
+uh\solarsystem.css, code is 777, comment is 2, blank is 0.
+uh\solarsystem.html, code is 72, comment is 0, blank is 7.
+uh\term.css, code is 33, comment is 3, blank is 8.
+uh\term.html, code is 36, comment is 0, blank is 8.
+uh\term.js, code is 90, comment is 2, blank is 21.
+uh\term.txt, code is 11, comment is 1, blank is 5.
+umq\css\achievements.css, code is 84, comment is 0, blank is 12.
+umq\css\buttons.css, code is 127, comment is 17, blank is 20.
+umq\css\container.css, code is 199, comment is 54, blank is 31.
+umq\css\default.css, code is 8, comment is 1, blank is 0.
+umq\css\gamemode-slider.css, code is 42, comment is 13, blank is 4.
+umq\css\ig-style.css, code is 237, comment is 36, blank is 37.
+umq\css\litepicker.css, code is 365, comment is 11, blank is 60.
+umq\css\monthTracker.css, code is 155, comment is 16, blank is 27.
+umq\css\quizz.css, code is 151, comment is 6, blank is 23.
+umq\css\radar.css, code is 17, comment is 11, blank is 2.
+umq\css\search.css, code is 43, comment is 0, blank is 6.
+umq\css\title-part.css, code is 20, comment is 5, blank is 5.
+umq\explorer\nuc\nuc.html, code is 32, comment is 3, blank is 5.
+umq\explorer\nuc\script.js, code is 54, comment is 1, blank is 5.
+umq\explorer\nuc\styles.css, code is 58, comment is 0, blank is 8.
+umq\explorer\script.js, code is 22, comment is 1, blank is 4.
+umq\explorer\styles.css, code is 39, comment is 0, blank is 5.
+umq\explorer\term.html, code is 19, comment is 0, blank is 3.
+umq\html\badges.html, code is 39, comment is 31, blank is 7.
+umq\html\gamemode-slider.html, code is 6, comment is 0, blank is 0.
+umq\html\quizz.html, code is 158, comment is 5, blank is 25.
+umq\html\radar.html, code is 70, comment is 107, blank is 11.
+umq\html\sandbox.html, code is 60, comment is 4, blank is 11.
+umq\html\search.html, code is 18, comment is 1, blank is 3.
+umq\images\back-arrow.png, it is a binary file.
+umq\images\bookmark.png, it is a binary file.
+umq\images\calendar.png, it is a binary file.
+umq\images\favoris.png, it is a binary file.
+umq\images\flag.png, it is a binary file.
+umq\images\home.png, it is a binary file.
+umq\images\medal.png, it is a binary file.
+umq\images\molecule.png, it is a binary file.
+umq\images\profil.png, it is a binary file.
+umq\images\radar.png, it is a binary file.
+umq\images\science.png, it is a binary file.
+umq\images\settings.png, it is a binary file.
+umq\images\share.png, it is a binary file.
+umq\images\star.png, it is a binary file.
+umq\images\Star_of_life3.svg.png, it is a binary file.
+umq\images\success.png, it is a binary file.
+umq\js\container.js, code is 391, comment is 41, blank is 33.
+umq\js\DB_gameFilters.js, code is 25, comment is 14, blank is 3.
+umq\js\DB_gameMode.js, code is 25, comment is 16, blank is 3.
+umq\js\expertise.js, code is 97, comment is 23, blank is 19.
+umq\js\gamemode-slider.js, code is 34, comment is 5, blank is 8.
+umq\js\geometry.js, code is 21, comment is 70, blank is 6.
+umq\js\lvl-titles.js, code is 102, comment is 0, blank is 0.
+umq\js\managerUI.js, code is 85, comment is 13, blank is 23.
+umq\js\monthTracker.js, code is 127, comment is 20, blank is 16.
+umq\js\myindexDB.js, code is 451, comment is 92, blank is 78.
+umq\js\quizz.js, code is 387, comment is 60, blank is 63.
+umq\js\radar.js, code is 128, comment is 9, blank is 14.
+umq\js\sbrev.js, code is 16, comment is 2, blank is 2.
+umq\js\search.js, code is 29, comment is 7, blank is 7.
+umq\js\tabs.js, code is 8, comment is 0, blank is 2.
+umq\js\updateOldKeys.js, code is 43, comment is 6, blank is 16.
+umq\js\users-stats.js, code is 284, comment is 35, blank is 64.
+umq\q-data\config.json, code is 26, comment is 0, blank is 0.
+umq\q-data\meta.md, code is 44, comment is 1, blank is 3.
+umq\q-data\q1-anatomy.json, code is 242, comment is 0, blank is 0.
+umq\q-data\q10-various.json, code is 368, comment is 0, blank is 0.
+umq\q-data\q11-oncology.json, code is 320, comment is 0, blank is 0.
+umq\q-data\q12-cardiology.json, code is 92, comment is 0, blank is 0.
+umq\q-data\q2-physiology.json, code is 362, comment is 0, blank is 0.
+umq\q-data\q20-hematology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q21-dermatology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q22-histology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q23-cell_biology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q24-immunology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q25-orl_hns.json, code is 602, comment is 0, blank is 0.
+umq\q-data\q26-nutrition.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q27-rheumatology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q28-gastroenterology.json, code is 128, comment is 0, blank is 0.
+umq\q-data\q29-pneumology.json, code is 122, comment is 0, blank is 0.
+umq\q-data\q3-pathology.json, code is 320, comment is 0, blank is 0.
+umq\q-data\q4-surgery.json, code is 182, comment is 0, blank is 0.
+umq\q-data\q5-pharmacology.json, code is 290, comment is 0, blank is 0.
+umq\q-data\q6-genetics.json, code is 242, comment is 0, blank is 0.
+umq\q-data\q7-neurology.json, code is 242, comment is 0, blank is 0.
+umq\q-data\q8-epidemiology.json, code is 182, comment is 0, blank is 0.
+umq\q-data\q9-endocrinology.json, code is 182, comment is 0, blank is 0.
+walledworld\app.js, code is 61, comment is 45, blank is 13.
+walledworld\countries_data.json, code is 200, comment is 0, blank is 2.
+walledworld\style.css, code is 107, comment is 12, blank is 21.
+walledworld\ww.html, code is 30, comment is 0, blank is 1.
+===============================================================================

@@ -1,0 +1,79 @@
+/* .editor-block {
+    background-color: #000000;
+    border: 1px solid #fffff555;
+    box-sizing: border-box;
+    position: relative;
+} */
+
+.editor-block.on {
+    border: 1px solid #00ff00ff;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.5);
+}
+
+.editor {
+    /* border: 1px solid #00fff777; */
+    /* border-top: 1px solid #fffff555; */
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#vim-status {
+    color: #aaa;
+    font-family: monospace;
+    padding: 3px 6px;
+    background: #111;
+    border-top: 1px solid #333;
+    height: 10px;
+}
+
+
+.inputFile {
+    background-color: #232323;
+    color: #ccc;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 220px;
+    cursor: pointer;
+    border-right: 1px solid #333;
+    /* border: 1px solid #00ffffff; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.inputFile:hover {
+    background: #00cfcf;
+    color: #000;
+}
+
+#ctrl-bar {
+    position: fixed;
+    top: 0px;
+    /* width: 500px; */
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.ctrl-bar-btn {
+    z-index: 9999;
+    /*  */
+    background: #344853;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    /*  */
+    padding: 5px 5px;
+    min-width: 20px;
+}
+
+.ctrl-bar-btn:hover {
+    background: #eee;
+    color: black;
+}

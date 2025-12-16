@@ -1,0 +1,11 @@
+:root {
+    /* COLORS */
+    --main-color: #00ff9c;
+    --main-inactive-color: #00ff9d6a;
+    --main-background : #101010;
+    --fixed-bars-background : #181818;
+
+    /* SIZES */
+    --vt-left-bar-width: 40px;
+    --hz-top-bar-height: 40px;
+}

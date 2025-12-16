@@ -1,0 +1,63 @@
+.toggle-btn {
+    width: 75px;
+    height: 20px;
+    /*  */
+    position: absolute;
+    right: 0;
+    /*  */
+    background-color: #7a2e2e; /* OFF */
+    color: #f8f8f2;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    /*  */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #00000000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+.toggle-btn.on {
+    background-color: #00ff00; /* ON */
+    border: 1px solid #00ff00ff;
+    color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0,255,0,0.5);
+    box-sizing: border-box;
+}
+
+.save-btn {
+    width: 50px;
+    height: 20px;
+    /*  */
+    /* position: absolute; */
+    /* left: 220px; */
+    /*  */
+    background-color: #232323;
+    color: #f8f8f2;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    /*  */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* border: 1px solid #fffff555; */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.save-btn:hover {
+    background-color: #00ff00; /* ON */
+    /* border: 1px solid #00ffff; */
+    box-sizing: border-box;
+    color: #000;
+}
+
+.reset-btn {
+    width: 50px;
+}
+.reset-btn:hover {
+    background: #ff0000 !important;
+}

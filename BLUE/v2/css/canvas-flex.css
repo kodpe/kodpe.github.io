@@ -1,0 +1,44 @@
+.canvas-panel {
+    /* width: 100%; */
+    flex: 2 0 0;
+    height: 95%;
+    box-sizing: border-box;
+    /* border: 1px solid #333; */
+    /* border: 1px solid #0f0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-flex {
+    display: block;
+    image-rendering: pixelated;
+}
+
+.panel {
+    /* width: 10%; */
+    flex: 1 0 0;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    display: flex;
+    /* margin: 10px; */
+}
+#left-panel {
+    border: 1px solid #333;
+    border: 1px solid #ff0;
+}
+#right-panel {
+    /* border: 1px solid #333; */
+    border: 1px solid #0ff;
+    /*  */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list {
+    box-sizing: border-box;
+    border: 1px solid #333;
+    margin: 5px;
+}

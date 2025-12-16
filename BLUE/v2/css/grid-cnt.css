@@ -1,0 +1,30 @@
+.editors-grid-cnt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    /* min-width: 0; */
+}
+
+.editors-grid-cnt > * {
+    /* overflow: hidden; */
+    /* min-width: 0; */
+}
+
+.editor-block {
+    border: 1px solid #333;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hzbar {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    display: flex;
+}
