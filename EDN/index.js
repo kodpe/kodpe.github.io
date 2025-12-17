@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
 
 // Si quelqu’un fait GET /, renvoyer index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index2.html"));
 });
 
 app.listen(PORT, () => console.log(`🌐 Serveur web actif sur le port ${PORT}`));
