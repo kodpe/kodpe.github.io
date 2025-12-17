@@ -1,0 +1,3520 @@
+[
+  {
+    "number": 1,
+    "text": "La relation médecin-malade dans le cadre du colloque singulier ou au sein d'une équipe, le cas échéant pluriprofessionnelle. La communication avec le patient et son entourage. L'annonce d'une maladie grave ou létale ou d'un dommage associé aux soins. La formation du patient. La personnalisation de la prise en charge médicale",
+    "UE": "UE1",
+    "disciplines": [
+      "Psy",
+      "MI"
+    ]
+  },
+  {
+    "number": 2,
+    "text": "Les valeurs professionnelles du médecin et des autres professions de santé",
+    "UE": "UE1",
+    "disciplines": [
+      "MI"
+    ]
+  },
+  {
+    "number": 3,
+    "text": "Le raisonnement et la décision en médecine. La médecine fondée sur les preuves (Evidence Based Medicine, EBM). La décision médicale partagée. La controverse",
+    "UE": "UE1",
+    "disciplines": [
+      "SP",
+      "MI"
+    ]
+  },
+  {
+    "number": 4,
+    "text": "Qualité et sécurité des soins. La sécurité du patient. La gestion des risques. Les événements indésirables associés aux soins (EIAS). Démarche qualité et évaluation des pratiques professionnelles",
+    "UE": "UE1",
+    "disciplines": [
+      "SP",
+      "Inf",
+      "AR",
+      "MIR"
+    ]
+  },
+  {
+    "number": 5,
+    "text": "La gestion des erreurs et des plaintes ; l'aléa thérapeutique",
+    "UE": "UE1",
+    "disciplines": [
+      "SP",
+      "MTL",
+      "MIR"
+    ]
+  },
+  {
+    "number": 6,
+    "text": "L'organisation de l'exercice clinique et les méthodes qui permettent de sécuriser le parcours du patient",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 7,
+    "text": "Les droits individuels et collectifs du patient",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 8,
+    "text": "Les discriminations",
+    "UE": "UE1",
+    "disciplines": [
+      "SP",
+      "MG"
+    ]
+  },
+  {
+    "number": 9,
+    "text": "Introduction à l’éthique médicale",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL",
+      "Gér",
+      "GO",
+      "AR",
+      "MPR",
+      "MG"
+    ]
+  },
+  {
+    "number": 10,
+    "text": "Approches transversales du corps",
+    "UE": "UE1",
+    "disciplines": []
+  },
+  {
+    "number": 11,
+    "text": "Violences et santé",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL",
+      "MG"
+    ]
+  },
+  {
+    "number": 12,
+    "text": "Violences sexuelles",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL",
+      "GO"
+    ]
+  },
+  {
+    "number": 13,
+    "text": "Certificats médicaux. Décès et législation",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL",
+      "Ped"
+    ]
+  },
+  {
+    "number": 14,
+    "text": "La mort",
+    "UE": "UE1",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 15,
+    "text": "Soins psychiatriques sans consentement",
+    "UE": "UE1",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 16,
+    "text": "Organisation du système de soins. Sa régulation. Les indicateurs. Parcours de soins",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 17,
+    "text": "Télémédecine, télésanté et téléservices en santé",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 18,
+    "text": "Santé et numérique",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 19,
+    "text": "La sécurité sociale. L'assurance maladie. Les assurances complémentaires. La complémentaire santé solidaire (CSS). La consommation médicale. Protection sociale. Consommation médicale et économie de la santé",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 20,
+    "text": "La méthodologie de la recherche en santé",
+    "UE": "UE1",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 21,
+    "text": "Mesure de l'état de santé de la population",
+    "UE": "UE1",
+    "disciplines": [
+      "SP",
+      "MPR"
+    ]
+  },
+  {
+    "number": 22,
+    "text": "Maladies rares",
+    "UE": "UE2",
+    "disciplines": [
+      "MI",
+      "Gén"
+    ]
+  },
+  {
+    "number": 23,
+    "text": "Grossesse normale",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Nép",
+      "MG"
+    ]
+  },
+  {
+    "number": 24,
+    "text": "Principales complications de la grossesse",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Nép"
+    ]
+  },
+  {
+    "number": 25,
+    "text": "Grossesse extra-utérine",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 26,
+    "text": "Douleur abdominale aiguë chez une femme enceinte",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 27,
+    "text": "Prévention des risques fœtaux : infection, médicaments, toxiques, irradiation",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Inf",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 28,
+    "text": "Connaître les particularités de l'infection urinaire au cours de la grossesse",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Inf"
+    ]
+  },
+  {
+    "number": 29,
+    "text": "Connaître les principaux risques professionnels pour la maternité, liés au travail de la mère",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "MTL"
+    ]
+  },
+  {
+    "number": 30,
+    "text": "Prématurité et retard de croissance intra-utérin : facteurs de risque et prévention",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Ped"
+    ]
+  },
+  {
+    "number": 31,
+    "text": "Accouchement, délivrance et suites de couches normales",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 32,
+    "text": "Évaluation et soins du nouveau-né à terme",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 33,
+    "text": "Allaitement maternel",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Ped",
+      "Nut",
+      "MG"
+    ]
+  },
+  {
+    "number": 34,
+    "text": "Suites de couches pathologiques : pathologie maternelle dans les 40 jours",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 35,
+    "text": "Anomalies du cycle menstruel. Métrorragies",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 36,
+    "text": "Contraception",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Thé",
+      "End",
+      "Uro",
+      "MG"
+    ]
+  },
+  {
+    "number": 37,
+    "text": "Interruption volontaire de grossesse",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "MG"
+    ]
+  },
+  {
+    "number": 38,
+    "text": "Infertilité du couple : conduite de la première consultation",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "End",
+      "Uro"
+    ]
+  },
+  {
+    "number": 39,
+    "text": "Assistance médicale à la procréation : principaux aspects biologiques, médicaux et éthiques",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 40,
+    "text": "Algies pelviennes chez la femme",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Uro"
+    ]
+  },
+  {
+    "number": 41,
+    "text": "Endométriose",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 42,
+    "text": "Aménorrhée",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "End"
+    ]
+  },
+  {
+    "number": 43,
+    "text": "Hémorragie génitale chez la femme",
+    "UE": "UE2",
+    "disciplines": [
+      "GO"
+    ]
+  },
+  {
+    "number": 44,
+    "text": "Tuméfaction pelvienne chez la femme",
+    "UE": "UE2",
+    "disciplines": [
+      "GO",
+      "Uro",
+      "CD"
+    ]
+  },
+  {
+    "number": 45,
+    "text": "Spécificités des maladies génétiques",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "Gén"
+    ]
+  },
+  {
+    "number": 46,
+    "text": "Médecine génomique",
+    "UE": "UE2",
+    "disciplines": [
+      "Gén"
+    ]
+  },
+  {
+    "number": 47,
+    "text": "Suivi d'un nourrisson, d'un enfant et d'un adolescent normal. Dépistage des anomalies orthopédiques, des troubles visuels, auditifs et dentaires. Examens de santé obligatoires. Médecine scolaire. Mortalité et morbidité infantiles",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "CMF",
+      "Oph",
+      "OT",
+      "ORL",
+      "MG"
+    ]
+  },
+  {
+    "number": 48,
+    "text": "Alimentation et besoins nutritionnels du nourrisson et de l'enfant",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 49,
+    "text": "Puberté normale et pathologique",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "GO",
+      "MG"
+    ]
+  },
+  {
+    "number": 50,
+    "text": "Pathologie génito-scrotale chez le garçon et chez l'homme",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "Uro",
+      "End"
+    ]
+  },
+  {
+    "number": 51,
+    "text": "Troubles de la miction chez l'enfant",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 52,
+    "text": "Strabisme et amblyopie de l'enfant",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "Oph"
+    ]
+  },
+  {
+    "number": 53,
+    "text": "Retard de croissance staturo-pondérale",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 54,
+    "text": "Boiterie chez l'enfant",
+    "UE": "UE2",
+    "disciplines": [
+      "Ped",
+      "OT",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 55,
+    "text": "Développement psychomoteur du nourrisson et de l'enfant",
+    "UE": "UE3",
+    "disciplines": [
+      "Ped",
+      "Psy",
+      "MG"
+    ]
+  },
+  {
+    "number": 56,
+    "text": "L'enfant handicapé : orientation et prise en charge",
+    "UE": "UE3",
+    "disciplines": [
+      "Ped",
+      "MPR",
+      "ORL"
+    ]
+  },
+  {
+    "number": 57,
+    "text": "Maltraitance et enfants en danger. Protection maternelle et infantile",
+    "UE": "UE3",
+    "disciplines": [
+      "Ped",
+      "MTL"
+    ]
+  },
+  {
+    "number": 58,
+    "text": "Sexualité normale et ses troubles",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "GO",
+      "Uro"
+    ]
+  },
+  {
+    "number": 59,
+    "text": "Sujets en situation de précarité",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "Ped",
+      "SP",
+      "MI"
+    ]
+  },
+  {
+    "number": 60,
+    "text": "Connaître les facteurs de risque, prévention, dépistage des troubles psychiques de l'enfant à la personne âgée",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 61,
+    "text": "Connaître les bases des classifications des troubles mentaux de l'enfant à la personne âgée",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 62,
+    "text": "Décrire l'organisation de l'offre de soins en psychiatrie, de l'enfant à la personne âgée",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 63,
+    "text": "Trouble schizophrénique",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 64,
+    "text": "Trouble bipolaire",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 65,
+    "text": "Trouble délirant persistant",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 66,
+    "text": "Diagnostiquer : un trouble dépressif, un trouble anxieux généralisé, un trouble panique, un trouble phobique, un trouble obsessionnel compulsif, un état de stress post-traumatique, un trouble de l'adaptation (de l'enfant à la personne âgée), un trouble de la personnalité",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "MG"
+    ]
+  },
+  {
+    "number": 67,
+    "text": "Troubles envahissants du développement",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 68,
+    "text": "Troubles du comportement de l'adolescent",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 69,
+    "text": "Troubles psychiques de la grossesse et du post-partum",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "GO"
+    ]
+  },
+  {
+    "number": 70,
+    "text": "Troubles psychiques du sujet âgé",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "Gér"
+    ]
+  },
+  {
+    "number": 71,
+    "text": "Troubles des conduites alimentaires chez l'adolescent et l'adulte",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "Ped",
+      "Nut"
+    ]
+  },
+  {
+    "number": 72,
+    "text": "Troubles à symptomatologie somatique et apparentés à tous les âges",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "DSP",
+      "MI",
+      "MG"
+    ]
+  },
+  {
+    "number": 73,
+    "text": "Différents types de techniques psychothérapeutiques",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 74,
+    "text": "Prescription et surveillance des psychotropes",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "Thé",
+      "Gér",
+      "MG"
+    ]
+  },
+  {
+    "number": 75,
+    "text": "Addiction au tabac",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "SP",
+      "Pne",
+      "MG"
+    ]
+  },
+  {
+    "number": 76,
+    "text": "Addiction à l'alcool",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "SP",
+      "Neu",
+      "MG"
+    ]
+  },
+  {
+    "number": 77,
+    "text": "Addiction aux médicaments psychotropes (benzodiazépines et apparentés)",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "SP"
+    ]
+  },
+  {
+    "number": 78,
+    "text": "Addiction au cannabis, à la cocaïne, aux amphétamines, aux opiacés, aux drogues de synthèse",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "SP"
+    ]
+  },
+  {
+    "number": 79,
+    "text": "Addictions comportementales",
+    "UE": "UE3",
+    "disciplines": [
+      "Psy",
+      "SP",
+      "MG"
+    ]
+  },
+  {
+    "number": 80,
+    "text": "Dopage et conduites dopantes",
+    "UE": "UE4",
+    "disciplines": [
+      "Psy",
+      "MG"
+    ]
+  },
+  {
+    "number": 81,
+    "text": "Altération chronique de la vision",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph",
+      "Gér"
+    ]
+  },
+  {
+    "number": 82,
+    "text": "Altération aiguë de la vision",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph",
+      "Neu"
+    ]
+  },
+  {
+    "number": 83,
+    "text": "Infections et inflammations oculaires",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph"
+    ]
+  },
+  {
+    "number": 84,
+    "text": "Glaucomes",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph"
+    ]
+  },
+  {
+    "number": 85,
+    "text": "Troubles de la réfraction",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph"
+    ]
+  },
+  {
+    "number": 86,
+    "text": "Pathologie des paupières",
+    "UE": "UE4",
+    "disciplines": [
+      "Oph"
+    ]
+  },
+  {
+    "number": 87,
+    "text": "Epistaxis",
+    "UE": "UE4",
+    "disciplines": [
+      "ORL"
+    ]
+  },
+  {
+    "number": 88,
+    "text": "Trouble aigu de la parole. Dysphonie",
+    "UE": "UE4",
+    "disciplines": [
+      "ORL",
+      "Neu"
+    ]
+  },
+  {
+    "number": 89,
+    "text": "Altération de la fonction auditive",
+    "UE": "UE4",
+    "disciplines": [
+      "ORL",
+      "Ped",
+      "Gér"
+    ]
+  },
+  {
+    "number": 90,
+    "text": "Pathologie des glandes salivaires",
+    "UE": "UE4",
+    "disciplines": [
+      "ORL",
+      "CMF"
+    ]
+  },
+  {
+    "number": 91,
+    "text": "Déficit neurologique récent",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu"
+    ]
+  },
+  {
+    "number": 92,
+    "text": "Déficit moteur et/ou sensitif des membres",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu"
+    ]
+  },
+  {
+    "number": 93,
+    "text": "Compression médullaire non traumatique et syndrome de la queue de cheval",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "NC",
+      "Rhu",
+      "OT",
+      "MPR"
+    ]
+  },
+  {
+    "number": 94,
+    "text": "Rachialgie",
+    "UE": "UE4",
+    "disciplines": [
+      "Rhu",
+      "OT",
+      "MPR",
+      "DSP",
+      "MG"
+    ]
+  },
+  {
+    "number": 95,
+    "text": "Radiculalgie et syndrome canalaire",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "NC",
+      "Rhu",
+      "OT",
+      "DSP"
+    ]
+  },
+  {
+    "number": 96,
+    "text": "Neuropathies périphériques",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu"
+    ]
+  },
+  {
+    "number": 97,
+    "text": "Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MIR"
+    ]
+  },
+  {
+    "number": 98,
+    "text": "Myasthénie",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MIR"
+    ]
+  },
+  {
+    "number": 99,
+    "text": "Migraine, névralgie du trijumeau et algies de la face",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "NC",
+      "CMF",
+      "DSP",
+      "MG"
+    ]
+  },
+  {
+    "number": 100,
+    "text": "Céphalée inhabituelle aiguë et chronique chez l'adulte et l'enfant",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "DSP",
+      "Ped"
+    ]
+  },
+  {
+    "number": 101,
+    "text": "Paralysie faciale",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "CMF",
+      "ORL"
+    ]
+  },
+  {
+    "number": 102,
+    "text": "Diplopie",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "Oph"
+    ]
+  },
+  {
+    "number": 103,
+    "text": "Vertige",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "ORL"
+    ]
+  },
+  {
+    "number": 104,
+    "text": "Sclérose en plaques",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MPR",
+      "Oph"
+    ]
+  },
+  {
+    "number": 105,
+    "text": "Épilepsie de l'enfant et de l'adulte",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 106,
+    "text": "Maladie de Parkinson",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MPR"
+    ]
+  },
+  {
+    "number": 107,
+    "text": "Mouvements anormaux",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu"
+    ]
+  },
+  {
+    "number": 108,
+    "text": "Confusion, démences",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "Gér",
+      "MIR"
+    ]
+  },
+  {
+    "number": 109,
+    "text": "Troubles de la marche et de l'équilibre",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "MPR",
+      "Gér",
+      "ORL",
+      "Rhu",
+      "MG"
+    ]
+  },
+  {
+    "number": 110,
+    "text": "Troubles du sommeil de l'enfant et de l'adulte",
+    "UE": "UE4",
+    "disciplines": [
+      "Neu",
+      "Psy",
+      "Pne",
+      "ORL",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 111,
+    "text": "Dermatoses faciales : acné, rosacée, dermatite séborrhéique",
+    "UE": "UE4",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 112,
+    "text": "Dermatose bulleuse touchant la peau et/ou les muqueuses externes",
+    "UE": "UE4",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 113,
+    "text": "Hémangiomes et malformations vasculaires cutanées",
+    "UE": "UE4",
+    "disciplines": [
+      "Der",
+      "CMF"
+    ]
+  },
+  {
+    "number": 114,
+    "text": "Exanthème et érythrodermie de l'adulte et de l'enfant",
+    "UE": "UE4",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 115,
+    "text": "Toxidermies",
+    "UE": "UE4",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 116,
+    "text": "Prurit",
+    "UE": "UE4",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 117,
+    "text": "Psoriasis Accompagnement",
+    "UE": "UE5",
+    "disciplines": [
+      "Der",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 118,
+    "text": "La personne handicapée : bases de l'évaluation fonctionnelle et thérapeutique",
+    "UE": "UE5",
+    "disciplines": [
+      "MPR",
+      "Neu",
+      "ORL"
+    ]
+  },
+  {
+    "number": 119,
+    "text": "Soin et accompagnement dans la maladie chronique et le handicap",
+    "UE": "UE5",
+    "disciplines": [
+      "MG"
+    ]
+  },
+  {
+    "number": 120,
+    "text": "Complications de l'immobilité et du décubitus. Prévention et prise en charge",
+    "UE": "UE5",
+    "disciplines": [
+      "MPR",
+      "Gér"
+    ]
+  },
+  {
+    "number": 121,
+    "text": "Le handicap psychique",
+    "UE": "UE5",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 122,
+    "text": "Principales techniques de rééducation et de réadaptation",
+    "UE": "UE5",
+    "disciplines": [
+      "MPR",
+      "ORL"
+    ]
+  },
+  {
+    "number": 123,
+    "text": "Vieillissement normal : aspects biologiques, fonctionnels et relationnels. Données épidémiologiques et sociologiques. Prévention du vieillissement pathologique",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "MG"
+    ]
+  },
+  {
+    "number": 124,
+    "text": "Ménopause, insuffisance ovarienne prématurée, andropause, déficit androgénique lié à l’âge",
+    "UE": "UE5",
+    "disciplines": [
+      "GO",
+      "Uro",
+      "End",
+      "Thé"
+    ]
+  },
+  {
+    "number": 125,
+    "text": "Troubles de la miction et incontinence urinaire de l'adulte et du sujet âgé",
+    "UE": "UE5",
+    "disciplines": [
+      "Uro",
+      "Gér",
+      "MPR"
+    ]
+  },
+  {
+    "number": 126,
+    "text": "Trouble de l'érection",
+    "UE": "UE5",
+    "disciplines": [
+      "Uro",
+      "End"
+    ]
+  },
+  {
+    "number": 127,
+    "text": "Hypertrophie bénigne de la prostate",
+    "UE": "UE5",
+    "disciplines": [
+      "Uro"
+    ]
+  },
+  {
+    "number": 128,
+    "text": "Ostéopathies fragilisantes",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "Rhu",
+      "End"
+    ]
+  },
+  {
+    "number": 129,
+    "text": "Arthrose",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "Rhu",
+      "MPR"
+    ]
+  },
+  {
+    "number": 130,
+    "text": "La personne âgée malade : particularités sémiologiques, psychologiques et thérapeutiques",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér"
+    ]
+  },
+  {
+    "number": 131,
+    "text": "Troubles de la marche et de l'équilibre",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "Rhu",
+      "Neu"
+    ]
+  },
+  {
+    "number": 132,
+    "text": "Troubles cognitifs du sujet âgé",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "Neu",
+      "MG"
+    ]
+  },
+  {
+    "number": 133,
+    "text": "Autonomie et dépendance chez le sujet âgé",
+    "UE": "UE5",
+    "disciplines": [
+      "Gér",
+      "MG"
+    ]
+  },
+  {
+    "number": 134,
+    "text": "Bases neurophysiologiques, mécanismes physiopathologiques d'une douleur aiguë et d'une douleur chronique",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Neu",
+      "NC",
+      "AR",
+      "Gér",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 135,
+    "text": "Thérapeutiques antalgiques, médicamenteuses et non médicamenteuses",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Thé",
+      "NC",
+      "AR",
+      "MIR",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 136,
+    "text": "Anesthésie locale, locorégionale et générale",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "AR"
+    ]
+  },
+  {
+    "number": 137,
+    "text": "Douleur chez l'enfant : évaluation et traitements antalgiques",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Ped"
+    ]
+  },
+  {
+    "number": 138,
+    "text": "Douleur chez la personne vulnérable",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Psy"
+    ]
+  },
+  {
+    "number": 139,
+    "text": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (1). Principaux repères cliniques. Modalités d'organisation des équipes, en établissement de santé et en et en ambulatoire",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Gér",
+      "MG"
+    ]
+  },
+  {
+    "number": 140,
+    "text": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (2). Accompagnement de la personne malade et de son entourage. Principaux repères éthiques",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Gér"
+    ]
+  },
+  {
+    "number": 141,
+    "text": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (3). La sédation pour détresse en phase terminale et dans des situations spécifiques et complexes en fin de vie. Réponse à la demande d'euthanasie ou de suicide assisté",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Gér"
+    ]
+  },
+  {
+    "number": 142,
+    "text": "Connaître les aspects spécifiques des soins palliatifs en pédiatrie",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "Ped"
+    ]
+  },
+  {
+    "number": 143,
+    "text": "Connaître les aspects spécifiques des soins palliatifs en réanimation",
+    "UE": "UE5",
+    "disciplines": [
+      "DSP",
+      "AR",
+      "MIR"
+    ]
+  },
+  {
+    "number": 144,
+    "text": "Deuil normal et pathologique",
+    "UE": "UE6",
+    "disciplines": [
+      "Psy",
+      "MG"
+    ]
+  },
+  {
+    "number": 145,
+    "text": "Surveillance des maladies infectieuses transmissibles",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "SP",
+      "MG"
+    ]
+  },
+  {
+    "number": 146,
+    "text": "Vaccinations",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "SP",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 147,
+    "text": "Fièvre aiguë chez l'enfant et l'adulte",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 148,
+    "text": "Infections naso-sinusiennes de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "ORL",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 149,
+    "text": "Angines de l'adulte et de l'enfant et rhinopharyngites de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "ORL",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 150,
+    "text": "Otites infectieuses de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "ORL",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 151,
+    "text": "Méningites, méningoencéphalites, abcès cérébral chez l'adulte et l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Neu",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 152,
+    "text": "Endocardite infectieuse",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "MCV",
+      "MIR",
+      "MI"
+    ]
+  },
+  {
+    "number": 153,
+    "text": "Surveillance des porteurs de valve et prothèses vasculaires",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "MCV"
+    ]
+  },
+  {
+    "number": 154,
+    "text": "Infections broncho pulmonaires communautaires de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Pne",
+      "MIR",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 155,
+    "text": "Infections cutanéo-muqueuses et des phanères, bactériennes et mycosiques de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Der",
+      "CMF",
+      "AR",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 156,
+    "text": "Infections ostéo articulaires (IOA) de l'enfant et de l'adulte",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Rhu",
+      "OT",
+      "Ped"
+    ]
+  },
+  {
+    "number": 157,
+    "text": "Septicémie/Bactériémie/Fongémie de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "AR",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 158,
+    "text": "Sepsis et choc septique de l’enfant et de l’adulte",
+    "UE": "UE6",
+    "disciplines": [
+      "AR",
+      "MIR"
+    ]
+  },
+  {
+    "number": 159,
+    "text": "Tuberculose de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Pne",
+      "Ped"
+    ]
+  },
+  {
+    "number": 160,
+    "text": "Tétanos",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 161,
+    "text": "Infections urinaires de l'enfant et de l'adulte",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Uro",
+      "Nép",
+      "MIR",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 162,
+    "text": "Infections sexuellement transmissibles (IST) : gonococcies, chlamydioses, syphilis, papillomavirus humain (HPV), trichomonose",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "GO",
+      "Der",
+      "MG"
+    ]
+  },
+  {
+    "number": 163,
+    "text": "Coqueluche",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Ped"
+    ]
+  },
+  {
+    "number": 164,
+    "text": "Exanthèmes fébriles de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Der",
+      "Ped"
+    ]
+  },
+  {
+    "number": 165,
+    "text": "Oreillons",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 166,
+    "text": "Grippe",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "MG"
+    ]
+  },
+  {
+    "number": 167,
+    "text": "Hépatites virales",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "HGE",
+      "MIR"
+    ]
+  },
+  {
+    "number": 168,
+    "text": "Infections à herpès virus du sujet immunocompétent",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Der",
+      "Neu",
+      "CMF",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 169,
+    "text": "Infections à VIH",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Der",
+      "Neu",
+      "Ped"
+    ]
+  },
+  {
+    "number": 170,
+    "text": "Paludisme",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 171,
+    "text": "Gale et pédiculose",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Der"
+    ]
+  },
+  {
+    "number": 172,
+    "text": "Parasitoses digestives : giardiose, amoebose, téniasis, ascaridiose, oxyurose, anguillulose, cryptosporidiose",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 173,
+    "text": "Zoonoses",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 174,
+    "text": "Pathologie infectieuse chez les migrants adultes et enfants",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Ped"
+    ]
+  },
+  {
+    "number": 175,
+    "text": "Voyage en pays tropical de l'adulte et de l'enfant : conseils avant le départ, pathologies du retour : fièvre, diarrhée, manifestations cutanées",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 176,
+    "text": "Diarrhées infectieuses de l'adulte et de l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf",
+      "Ped",
+      "SP"
+    ]
+  },
+  {
+    "number": 177,
+    "text": "Prescription et surveillance des anti-infectieux chez l'adulte et l'enfant",
+    "UE": "UE6",
+    "disciplines": [
+      "Thé",
+      "Inf",
+      "MIR",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 178,
+    "text": "Risques émergents, bioterrorisme, maladies hautement transmissibles",
+    "UE": "UE6",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 179,
+    "text": "Risques sanitaires liés à l'eau et à l'alimentation. Toxi-infections alimentaires",
+    "UE": "UE6",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 180,
+    "text": "Risques sanitaires liés aux irradiations. Radioprotection",
+    "UE": "UE6",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 181,
+    "text": "La sécurité sanitaire des produits destinés à l'homme. La veille sanitaire",
+    "UE": "UE6",
+    "disciplines": [
+      "SP"
+    ]
+  },
+  {
+    "number": 182,
+    "text": "Environnement professionnel et santé au travail",
+    "UE": "UE6",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 183,
+    "text": "Organisation de la médecine du travail. Prévention des risques professionnels",
+    "UE": "UE6",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 184,
+    "text": "Accidents du travail et maladies professionnelles : définitions et enjeux",
+    "UE": "UE7",
+    "disciplines": [
+      "MTL"
+    ]
+  },
+  {
+    "number": 185,
+    "text": "Réaction inflammatoire : aspects biologiques et cliniques. Conduite à tenir",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MI"
+    ]
+  },
+  {
+    "number": 186,
+    "text": "Hypersensibilités et allergies chez l'enfant et l'adulte : aspects physiopathologiques, épidémiologiques, diagnostiques et principes de traitement",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Pne",
+      "MTL",
+      "Ped"
+    ]
+  },
+  {
+    "number": 187,
+    "text": "Hypersensibilités et allergies cutanéomuqueuses chez l'enfant et l'adulte. Urticaire, dermatites atopique et de contact, conjonctivite allergique",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Der",
+      "Oph",
+      "MTL"
+    ]
+  },
+  {
+    "number": 188,
+    "text": "Hypersensibilité et allergies respiratoires chez l'enfant et chez l'adulte. Asthme, rhinite",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Pne",
+      "MTL",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 189,
+    "text": "Déficit immunitaire",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "MI",
+      "Ped"
+    ]
+  },
+  {
+    "number": 190,
+    "text": "Fièvre prolongée",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Inf",
+      "MI"
+    ]
+  },
+  {
+    "number": 191,
+    "text": "Fièvre chez un patient immunodéprimé",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Inf",
+      "MI",
+      "MIR"
+    ]
+  },
+  {
+    "number": 192,
+    "text": "Pathologies auto-immunes : aspects épidémiologiques, diagnostiques et principes de traitement",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MI"
+    ]
+  },
+  {
+    "number": 193,
+    "text": "Connaître les principaux types de vascularite systémique, les organes cibles, les outils diagnostiques et les moyens thérapeutiques",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MI",
+      "Nép"
+    ]
+  },
+  {
+    "number": 194,
+    "text": "Lupus systémique. Syndrome des anti-phospholipides (SAPL)",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MI",
+      "Nép",
+      "Der"
+    ]
+  },
+  {
+    "number": 195,
+    "text": "Artérite à cellules géantes",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MI"
+    ]
+  },
+  {
+    "number": 196,
+    "text": "Polyarthrite rhumatoïde",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MPR"
+    ]
+  },
+  {
+    "number": 197,
+    "text": "Spondyloarthrite",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "MPR"
+    ]
+  },
+  {
+    "number": 198,
+    "text": "Arthropathie microcristalline",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 199,
+    "text": "Syndrome douloureux régional complexe (ex algodystrophie)",
+    "UE": "UE7",
+    "disciplines": [
+      "Rhu",
+      "OT",
+      "MPR",
+      "DSP"
+    ]
+  },
+  {
+    "number": 200,
+    "text": "Douleur et épanchement articulaire. Arthrite d'évolution récente",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Rhu",
+      "OT"
+    ]
+  },
+  {
+    "number": 201,
+    "text": "Transplantation d'organes : aspects épidémiologiques et immunologiques ; principes de traitement; complications et pronostic ; aspects éthiques et légaux. Prélèvements d'organes et législation",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Uro",
+      "Nép",
+      "Der",
+      "Oph",
+      "CD",
+      "MIR",
+      "AR"
+    ]
+  },
+  {
+    "number": 202,
+    "text": "Biothérapies et thérapies ciblées",
+    "UE": "UE7",
+    "disciplines": [
+      "Imm",
+      "Hém",
+      "Rhu",
+      "MI"
+    ]
+  },
+  {
+    "number": 203,
+    "text": "Dyspnée aiguë et chronique",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "MCV",
+      "ORL",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 204,
+    "text": "Toux chez l'enfant et chez l'adulte (avec le traitement)",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 205,
+    "text": "Hémoptysie",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "MIR"
+    ]
+  },
+  {
+    "number": 206,
+    "text": "Épanchement pleural liquidien",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "MIR"
+    ]
+  },
+  {
+    "number": 207,
+    "text": "Opacités et masses intra-thoraciques chez l'enfant et chez l'adulte",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "Ped"
+    ]
+  },
+  {
+    "number": 208,
+    "text": "Insuffisance respiratoire chronique",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne"
+    ]
+  },
+  {
+    "number": 209,
+    "text": "Bronchopneumopathie chronique obstructive chez l'adulte",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "MIR",
+      "MG"
+    ]
+  },
+  {
+    "number": 210,
+    "text": "Pneumopathie interstitielle diffuse",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "Imm",
+      "MI"
+    ]
+  },
+  {
+    "number": 211,
+    "text": "Sarcoïdose",
+    "UE": "UE7",
+    "disciplines": [
+      "Pne",
+      "Imm",
+      "Der",
+      "Rhu",
+      "MI"
+    ]
+  },
+  {
+    "number": 212,
+    "text": "Hémogramme chez l'adulte et l'enfant : indications et interprétation",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "Ped"
+    ]
+  },
+  {
+    "number": 213,
+    "text": "Anémie chez l'adulte et l'enfant",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "MI",
+      "Ped"
+    ]
+  },
+  {
+    "number": 214,
+    "text": "Thrombopénie chez l'adulte et l'enfant",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "MI",
+      "MIR"
+    ]
+  },
+  {
+    "number": 215,
+    "text": "Purpuras chez l'adulte et l'enfant",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Inf",
+      "MI",
+      "MIR",
+      "Der",
+      "Ped"
+    ]
+  },
+  {
+    "number": 216,
+    "text": "Syndrome hémorragique d'origine hématologique",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Ped"
+    ]
+  },
+  {
+    "number": 217,
+    "text": "Syndrome mononucléosique",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "Inf",
+      "MI"
+    ]
+  },
+  {
+    "number": 218,
+    "text": "Éosinophilie",
+    "UE": "UE7",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "Inf",
+      "MI"
+    ]
+  },
+  {
+    "number": 219,
+    "text": "Pathologie du fer chez l'adulte et l'enfant",
+    "UE": "UE7",
+    "disciplines": [
+      "End",
+      "HGE",
+      "Rhu",
+      "MI",
+      "Ped"
+    ]
+  },
+  {
+    "number": 220,
+    "text": "Adénopathie superficielle de l'adulte et de l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Hém",
+      "Imm",
+      "Inf",
+      "MI",
+      "ORL",
+      "Ped"
+    ]
+  },
+  {
+    "number": 221,
+    "text": "Athérome : épidémiologie et physiopathologie. Le malade poly-athéromateux",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "SP",
+      "MG"
+    ]
+  },
+  {
+    "number": 222,
+    "text": "Facteurs de risque cardio-vasculaire et prévention",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "End",
+      "Nut",
+      "SP",
+      "MG"
+    ]
+  },
+  {
+    "number": 223,
+    "text": "Dyslipidémies",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "End",
+      "Nut",
+      "MG"
+    ]
+  },
+  {
+    "number": 224,
+    "text": "Hypertension artérielle de l'adulte et de l’enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "End",
+      "Nép",
+      "Oph",
+      "MI",
+      "MIR",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 225,
+    "text": "Artériopathie oblitérante de l'aorte, des artères viscérales et des membres inférieurs ; anévrysmes",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 226,
+    "text": "Thrombose veineuse profonde et embolie pulmonaire",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "Pne",
+      "Hém",
+      "MI",
+      "MIR"
+    ]
+  },
+  {
+    "number": 227,
+    "text": "Insuffisance veineuse chronique. Varices",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 228,
+    "text": "Ulcère de jambe",
+    "UE": "UE8",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 229,
+    "text": "Surveillance et complications des abords veineux",
+    "UE": "UE8",
+    "disciplines": [
+      "AR",
+      "MIR"
+    ]
+  },
+  {
+    "number": 230,
+    "text": "Douleur thoracique aiguë",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "Pne"
+    ]
+  },
+  {
+    "number": 231,
+    "text": "Électrocardiogramme : indications et interprétations",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 232,
+    "text": "Fibrillation atriale",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 233,
+    "text": "Valvulopathies",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 234,
+    "text": "Insuffisance cardiaque de l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "MIR"
+    ]
+  },
+  {
+    "number": 235,
+    "text": "Péricardite aiguë",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 236,
+    "text": "Troubles de la conduction intracardiaque",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV"
+    ]
+  },
+  {
+    "number": 237,
+    "text": "Palpitations",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "MG"
+    ]
+  },
+  {
+    "number": 238,
+    "text": "Souffle cardiaque chez l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "MCV",
+      "Ped"
+    ]
+  },
+  {
+    "number": 239,
+    "text": "Acrosyndromes (phénomène de Raynaud, érythermalgie, acrocyanose, engelures, ischémie digitale)",
+    "UE": "UE8",
+    "disciplines": [
+      "Der",
+      "MI"
+    ]
+  },
+  {
+    "number": 240,
+    "text": "Hypoglycémie chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "Ped"
+    ]
+  },
+  {
+    "number": 241,
+    "text": "Goitre, nodules thyroïdiens et cancers thyroïdiens",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "ORL",
+      "CD"
+    ]
+  },
+  {
+    "number": 242,
+    "text": "Hyperthyroïdie",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "Oph"
+    ]
+  },
+  {
+    "number": 243,
+    "text": "Hypothyroïdie",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "Ped"
+    ]
+  },
+  {
+    "number": 244,
+    "text": "Adénome hypophysaire",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "NC"
+    ]
+  },
+  {
+    "number": 245,
+    "text": "Insuffisance surrénale chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "MIR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 246,
+    "text": "Gynécomastie",
+    "UE": "UE8",
+    "disciplines": [
+      "End"
+    ]
+  },
+  {
+    "number": 247,
+    "text": "Diabète sucré de types 1 et 2 de l'enfant et de l'adulte. Complications",
+    "UE": "UE8",
+    "disciplines": [
+      "End",
+      "Nut",
+      "GO",
+      "Nép",
+      "Oph",
+      "MIR",
+      "Ped",
+      "Thé",
+      "MG"
+    ]
+  },
+  {
+    "number": 248,
+    "text": "Prévention primaire par la nutrition chez l'adulte et chez l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "MG"
+    ]
+  },
+  {
+    "number": 249,
+    "text": "Modifications thérapeutiques du mode de vie (alimentation et activité physique) chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "MPR",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 250,
+    "text": "Dénutrition chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 251,
+    "text": "Amaigrissement à tous les âges",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "MI",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 252,
+    "text": "Troubles nutritionnels chez le sujet âgé",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "Gér"
+    ]
+  },
+  {
+    "number": 253,
+    "text": "Obésité de l'enfant et de l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "End",
+      "CD",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 254,
+    "text": "Besoins nutritionnels et grossesse",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "GO"
+    ]
+  },
+  {
+    "number": 255,
+    "text": "Diabète gestationnel",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "End",
+      "GO",
+      "Ped"
+    ]
+  },
+  {
+    "number": 256,
+    "text": "Aptitude au sport chez l'adulte et l'enfant ; besoins nutritionnels chez le sportif",
+    "UE": "UE8",
+    "disciplines": [
+      "Nut",
+      "MPR",
+      "Rhu",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 257,
+    "text": "Œdèmes des membres inférieurs localisés ou généralisés",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "MI"
+    ]
+  },
+  {
+    "number": 258,
+    "text": "Protéinurie et syndrome néphrotique de chez l'adulte et de l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "Ped"
+    ]
+  },
+  {
+    "number": 259,
+    "text": "Protéinurie et syndrome néphrotique de chez l'adulte et de l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "Ped"
+    ]
+  },
+  {
+    "number": 260,
+    "text": "Hématurie",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "Uro",
+      "Ped"
+    ]
+  },
+  {
+    "number": 261,
+    "text": "Néphropathie glomérulaire",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép"
+    ]
+  },
+  {
+    "number": 262,
+    "text": "Néphropathies interstitielles",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép"
+    ]
+  },
+  {
+    "number": 263,
+    "text": "Néphropathies vasculaires",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép"
+    ]
+  },
+  {
+    "number": 264,
+    "text": "Insuffisance rénale chronique chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "Ped"
+    ]
+  },
+  {
+    "number": 265,
+    "text": "Lithiase urinaire",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "Uro"
+    ]
+  },
+  {
+    "number": 266,
+    "text": "Polykystose rénale",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép"
+    ]
+  },
+  {
+    "number": 267,
+    "text": "Troubles de l'équilibre acido-basique et désordres hydro-électrolytiques",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "End",
+      "AR",
+      "MIR"
+    ]
+  },
+  {
+    "number": 268,
+    "text": "Hypercalcémie",
+    "UE": "UE8",
+    "disciplines": [
+      "Nép",
+      "End",
+      "Rhu",
+      "MI",
+      "MIR"
+    ]
+  },
+  {
+    "number": 269,
+    "text": "Douleurs abdominales aiguës chez l'enfant et chez l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped"
+    ]
+  },
+  {
+    "number": 270,
+    "text": "Douleurs lombaires aiguës chez l'enfant et chez l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "MG"
+    ]
+  },
+  {
+    "number": 271,
+    "text": "Reflux gastro-œsophagien chez le nourrisson, chez l'enfant et chez l'adulte. Hernie hiatale",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 272,
+    "text": "Ulcère gastrique et duodénal. Gastrite",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE"
+    ]
+  },
+  {
+    "number": 273,
+    "text": "Dysphagie",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "ORL"
+    ]
+  },
+  {
+    "number": 274,
+    "text": "Vomissements du nourrisson, de l'enfant et de l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped"
+    ]
+  },
+  {
+    "number": 275,
+    "text": "Splénomégalie",
+    "UE": "UE8",
+    "disciplines": [
+      "Hém",
+      "MI"
+    ]
+  },
+  {
+    "number": 276,
+    "text": "Hépatomégalie et masse abdominale",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 277,
+    "text": "Lithiase biliaire et complications",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 278,
+    "text": "Ictère",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped",
+      "MIR"
+    ]
+  },
+  {
+    "number": 279,
+    "text": "Cirrhose et complications",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "MIR"
+    ]
+  },
+  {
+    "number": 280,
+    "text": "Ascite",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD",
+      "MIR"
+    ]
+  },
+  {
+    "number": 281,
+    "text": "Pancréatite chronique",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE"
+    ]
+  },
+  {
+    "number": 282,
+    "text": "Maladies Inflammatoires Chroniques de l'Intestin (MICI) chez l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 283,
+    "text": "Constipation chez l'enfant et l'adulte (avec le traitement)",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 284,
+    "text": "Colopathie fonctionnelle",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "MG"
+    ]
+  },
+  {
+    "number": 285,
+    "text": "Diarrhée chronique chez l'adulte et l'enfant",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped"
+    ]
+  },
+  {
+    "number": 286,
+    "text": "Diarrhée aiguë et déshydratation chez le nourrisson, l'enfant et l'adulte",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "Ped"
+    ]
+  },
+  {
+    "number": 287,
+    "text": "Diverticulose colique et diverticulite aiguë du sigmoïde",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 288,
+    "text": "Pathologie hémorroïdaire",
+    "UE": "UE8",
+    "disciplines": [
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 289,
+    "text": "Hernie pariétale chez l'enfant et l'adulte",
+    "UE": "UE9",
+    "disciplines": [
+      "CD",
+      "Ped"
+    ]
+  },
+  {
+    "number": 290,
+    "text": "Épidémiologie, facteurs de risque, prévention et dépistage des cancers",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "SP",
+      "MTL",
+      "GO",
+      "MG"
+    ]
+  },
+  {
+    "number": 291,
+    "text": "Cancer : cancérogénèse, oncogénétique",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "MTL"
+    ]
+  },
+  {
+    "number": 292,
+    "text": "Diagnostic des cancers : signes d'appel et investigations para-cliniques ; caractérisation du stade ; pronostic",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "MG"
+    ]
+  },
+  {
+    "number": 293,
+    "text": "Le médecin préleveur de cellules et/ou de tissus pour des examens d'Anatomie et Cytologie Pathologiques : connaître les principes de réalisation, transmission et utilisation des prélèvements à visée sanitaire et de recherche",
+    "UE": "UE9",
+    "disciplines": [
+      "Can"
+    ]
+  },
+  {
+    "number": 294,
+    "text": "Traitement des cancers : principales modalités, classes thérapeutiques et leurs complications majeures. La décision thérapeutique pluridisciplinaire et l'information du malade",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "CD"
+    ]
+  },
+  {
+    "number": 295,
+    "text": "Prise en charge et accompagnement d'un malade atteint de cancer à tous les stades de la maladie dont le stade de soins palliatifs en abordant les problématiques techniques, relationnelles, sociales et éthiques. Traitements symptomatiques. Modalités de surveillance",
+    "UE": "UE9",
+    "disciplines": [
+      "Can"
+    ]
+  },
+  {
+    "number": 296,
+    "text": "Agranulocytose médicamenteuse : conduite à tenir",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém"
+    ]
+  },
+  {
+    "number": 297,
+    "text": "Cancer de l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Ped",
+      "SP",
+      "NC"
+    ]
+  },
+  {
+    "number": 298,
+    "text": "Tumeurs de la cavité buccale, naso-sinusiennes et du cavum, et des voies aérodigestives supérieures",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "ORL",
+      "CMF"
+    ]
+  },
+  {
+    "number": 299,
+    "text": "Tumeurs intracrâniennes",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Neu",
+      "NC"
+    ]
+  },
+  {
+    "number": 300,
+    "text": "Tumeurs du col utérin, tumeur du corps utérin",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "GO",
+      "MG"
+    ]
+  },
+  {
+    "number": 301,
+    "text": "Tumeurs du colon et du rectum",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "HGE",
+      "CD",
+      "MG"
+    ]
+  },
+  {
+    "number": 302,
+    "text": "Tumeurs cutanées, épithéliales et mélaniques",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Der",
+      "CMF"
+    ]
+  },
+  {
+    "number": 303,
+    "text": "Tumeurs de l'estomac",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 304,
+    "text": "Tumeurs du foie, primitives et secondaires",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 305,
+    "text": "Tumeurs de l'œsophage",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 306,
+    "text": "Tumeurs de l'ovaire",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "GO"
+    ]
+  },
+  {
+    "number": 307,
+    "text": "Tumeurs des os primitives et secondaires",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Rhu",
+      "OT",
+      "CMF"
+    ]
+  },
+  {
+    "number": 308,
+    "text": "Tumeurs du pancréas",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "HGE",
+      "CD"
+    ]
+  },
+  {
+    "number": 309,
+    "text": "Tumeurs du poumon, primitives et secondaires",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Pne"
+    ]
+  },
+  {
+    "number": 310,
+    "text": "Tumeurs de la prostate",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Uro"
+    ]
+  },
+  {
+    "number": 311,
+    "text": "Tumeurs du rein de l’adulte",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Uro"
+    ]
+  },
+  {
+    "number": 312,
+    "text": "Tumeurs du sein",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "GO",
+      "MG"
+    ]
+  },
+  {
+    "number": 313,
+    "text": "Tumeurs du testicule",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Uro"
+    ]
+  },
+  {
+    "number": 314,
+    "text": "Tumeurs vésicales",
+    "UE": "UE9",
+    "disciplines": [
+      "Can",
+      "Uro"
+    ]
+  },
+  {
+    "number": 315,
+    "text": "Leucémies aiguës",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém",
+      "Ped"
+    ]
+  },
+  {
+    "number": 316,
+    "text": "Syndromes myélodysplasiques",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém"
+    ]
+  },
+  {
+    "number": 317,
+    "text": "Syndromes myéloprolifératifs",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém"
+    ]
+  },
+  {
+    "number": 318,
+    "text": "Leucémies lymphoïdes chroniques",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém"
+    ]
+  },
+  {
+    "number": 319,
+    "text": "Lymphomes malins",
+    "UE": "UE9",
+    "disciplines": [
+      "Hém",
+      "Der"
+    ]
+  },
+  {
+    "number": 320,
+    "text": "Myélome multiple des os",
+    "UE": "UE10",
+    "disciplines": [
+      "Hém",
+      "Rhu",
+      "Nép"
+    ]
+  },
+  {
+    "number": 321,
+    "text": "Principe du bon usage du médicament",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "MG"
+    ]
+  },
+  {
+    "number": 322,
+    "text": "La décision thérapeutique personnalisée : bon usage dans des situations à risque",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "Gér",
+      "AR",
+      "MG"
+    ]
+  },
+  {
+    "number": 323,
+    "text": "Analyser et utiliser les résultats des études cliniques dans la perspective du bon usage - analyse critique, recherche clinique et niveaux de preuve",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "SP"
+    ]
+  },
+  {
+    "number": 324,
+    "text": "Éducation thérapeutique, observance et automédication",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "MI",
+      "MG"
+    ]
+  },
+  {
+    "number": 325,
+    "text": "Identification et gestion des risques liés aux médicaments et aux biomatériaux, risque iatrogène, erreur médicamenteuse",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "SP",
+      "Gér",
+      "MIR"
+    ]
+  },
+  {
+    "number": 326,
+    "text": "Cadre réglementaire de la prescription thérapeutique et recommandations pour le bon usage",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé"
+    ]
+  },
+  {
+    "number": 327,
+    "text": "Principes de la médecine intégrative, utilité et risques des interventions non médicamenteuses et des thérapies complémentaires",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "MG"
+    ]
+  },
+  {
+    "number": 328,
+    "text": "Thérapeutiques non médicamenteuses et dispositifs médicaux",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "MPR"
+    ]
+  },
+  {
+    "number": 329,
+    "text": "Transfusion sanguine et produits dérivés du sang : indications, complications. Hémovigilance",
+    "UE": "UE10",
+    "disciplines": [
+      "Thé",
+      "Hém",
+      "Gér",
+      "Ped",
+      "MIR",
+      "AR"
+    ]
+  },
+  {
+    "number": 330,
+    "text": "Prescription et surveillance des classes de médicaments les plus courantes chez l'adulte et chez l'enfant, hors anti-infectieux. Connaitre les grands principes thérapeutiques",
+    "UE": "UE11",
+    "disciplines": [
+      "Thé",
+      "Hém",
+      "Gér",
+      "Ped",
+      "MIR",
+      "DSP",
+      "Rhu",
+      "Nép",
+      "MI",
+      "MCV",
+      "Der"
+    ]
+  },
+  {
+    "number": 331,
+    "text": "Arrêt cardio-circulatoire",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "MCV",
+      "Ped"
+    ]
+  },
+  {
+    "number": 332,
+    "text": "État de choc. Principales étiologies : hypovolémique, septique, cardiogénique, anaphylactique",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 333,
+    "text": "Situations sanitaires exceptionnelles",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR"
+    ]
+  },
+  {
+    "number": 334,
+    "text": "Prise en charge immédiate pré-hospitalière et à l'arrivée à l'hôpital, évaluation des complications chez : un brûlé, un traumatisé sévère, un traumatisé thoracique, un traumatisé abdominal, un traumatisé des membres et/ou du bassin, un traumatisé du rachis ou vertébro-médullaire, un traumatisé crânien ou crânio-encéphalique",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "OT",
+      "NC",
+      "ORL",
+      "CD",
+      "Ped"
+    ]
+  },
+  {
+    "number": 335,
+    "text": "Orientation diagnostique et conduite à tenir devant un traumatisme maxillo-facial et oculaire",
+    "UE": "UE11",
+    "disciplines": [
+      "CMF",
+      "ORL",
+      "Oph",
+      "NC",
+      "Ped"
+    ]
+  },
+  {
+    "number": 336,
+    "text": "Coma non traumatique chez l'adulte et chez l'enfant",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "Neu"
+    ]
+  },
+  {
+    "number": 337,
+    "text": "Principales intoxications aiguës",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 338,
+    "text": "Œdème de Quincke et anaphylaxie",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "Pne"
+    ]
+  },
+  {
+    "number": 339,
+    "text": "Syndromes coronariens aigus",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "MCV"
+    ]
+  },
+  {
+    "number": 340,
+    "text": "Accidents vasculaires cérébraux",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "Neu",
+      "NC",
+      "MPR"
+    ]
+  },
+  {
+    "number": 341,
+    "text": "Hémorragie méningée",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "AR",
+      "Neu",
+      "NC"
+    ]
+  },
+  {
+    "number": 342,
+    "text": "Malaise, perte de connaissance, crise convulsive chez l'adulte",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "Neu",
+      "MCV"
+    ]
+  },
+  {
+    "number": 343,
+    "text": "État confusionnel et trouble de conscience chez l'adulte et chez l'enfant",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "Neu",
+      "Gér",
+      "Ped"
+    ]
+  },
+  {
+    "number": 344,
+    "text": "Prise en charge d'une patiente atteinte de pré-éclampsie",
+    "UE": "UE11",
+    "disciplines": [
+      "MIR",
+      "GO",
+      "Nép",
+      "AR"
+    ]
+  },
+  {
+    "number": 345,
+    "text": "Malaise grave du nourrisson et mort inattendue du nourrisson",
+    "UE": "UE11",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 346,
+    "text": "Convulsions chez le nourrisson et chez l'enfant",
+    "UE": "UE11",
+    "disciplines": [
+      "Ped"
+    ]
+  },
+  {
+    "number": 347,
+    "text": "Rétention aiguë d'urine",
+    "UE": "UE11",
+    "disciplines": [
+      "Uro",
+      "Gér"
+    ]
+  },
+  {
+    "number": 348,
+    "text": "Insuffisance rénale aiguë - Anurie",
+    "UE": "UE11",
+    "disciplines": [
+      "Nép",
+      "Uro",
+      "MIR",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 349,
+    "text": "Infection aiguë des parties molles (abcès, panaris, phlegmon des gaines)",
+    "UE": "UE11",
+    "disciplines": [
+      "OT",
+      "AR"
+    ]
+  },
+  {
+    "number": 350,
+    "text": "Grosse jambe rouge aiguë",
+    "UE": "UE11",
+    "disciplines": [
+      "Der"
+    ]
+  },
+  {
+    "number": 351,
+    "text": "Agitation et délire aiguë",
+    "UE": "UE11",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 352,
+    "text": "Crise d'angoisse aiguë et attaque de panique",
+    "UE": "UE11",
+    "disciplines": [
+      "Psy"
+    ]
+  },
+  {
+    "number": 353,
+    "text": "Risque et conduite suicidaires chez l'enfant, l'adolescent et l'adulte : identification et prise en charge",
+    "UE": "UE11",
+    "disciplines": [
+      "Psy",
+      "Ped",
+      "MG"
+    ]
+  },
+  {
+    "number": 354,
+    "text": "Syndrome occlusif de l'enfant et de l'adulte",
+    "UE": "UE11",
+    "disciplines": [
+      "CD",
+      "Ped"
+    ]
+  },
+  {
+    "number": 355,
+    "text": "Hémorragie digestive",
+    "UE": "UE11",
+    "disciplines": [
+      "HGE",
+      "MIR",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 356,
+    "text": "Appendicite de l'enfant et de l'adulte",
+    "UE": "UE11",
+    "disciplines": [
+      "CD",
+      "Ped"
+    ]
+  },
+  {
+    "number": 357,
+    "text": "Péritonite aiguë chez l'enfant et chez l'adulte",
+    "UE": "UE11",
+    "disciplines": [
+      "CD",
+      "Inf",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 358,
+    "text": "Pancréatite aiguë",
+    "UE": "UE11",
+    "disciplines": [
+      "HGE",
+      "CD",
+      "MIR",
+      "AR"
+    ]
+  },
+  {
+    "number": 359,
+    "text": "Détresse et insuffisance respiratoire aigüe du nourrisson, de l'enfant et de l'adulte",
+    "UE": "UE11",
+    "disciplines": [
+      "Pne",
+      "ORL",
+      "MIR",
+      "AR",
+      "Ped"
+    ]
+  },
+  {
+    "number": 360,
+    "text": "Pneumothorax",
+    "UE": "UE11",
+    "disciplines": [
+      "Pne",
+      "MIR"
+    ]
+  },
+  {
+    "number": 361,
+    "text": "Lésions péri-articulaires et ligamentaires du genou, de la cheville et de l'épaule",
+    "UE": "UE11",
+    "disciplines": [
+      "OT",
+      "Rhu"
+    ]
+  },
+  {
+    "number": 362,
+    "text": "Prothèses et ostéosynthèses",
+    "UE": "UE11",
+    "disciplines": [
+      "OT",
+      "Inf"
+    ]
+  },
+  {
+    "number": 363,
+    "text": "Fractures fréquentes de l'adulte et du sujet âgé",
+    "UE": "UE11",
+    "disciplines": [
+      "OT"
+    ]
+  },
+  {
+    "number": 364,
+    "text": "Fractures chez l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+    "UE": "UE11",
+    "disciplines": [
+      "OT",
+      "Ped"
+    ]
+  },
+  {
+    "number": 365,
+    "text": "Surveillance d'un malade sous plâtre/résine, diagnostiquer une complication",
+    "UE": "UE11",
+    "disciplines": [
+      "OT",
+      "Ped"
+    ]
+  },
+  {
+    "number": 366,
+    "text": "Exposition accidentelle aux liquides biologiques : conduite à tenir",
+    "UE": "UE11",
+    "disciplines": [
+      "Inf"
+    ]
+  },
+  {
+    "number": 367,
+    "text": "Impact de l’environnement sur la santé",
+    "UE": "UE11",
+    "disciplines": [
+      "SP",
+      "MTL",
+      "MG"
+    ]
+  }
+]

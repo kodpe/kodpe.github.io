@@ -15,7 +15,7 @@ function gameRunner() {
     loop();
 }
 
-let tickRate = 120; // ticks par seconde
+let tickRate = 400; // ticks par seconde
 let tickInterval = 1000 / tickRate;
 let nextTick = performance.now();
 

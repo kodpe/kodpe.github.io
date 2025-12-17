@@ -1,0 +1,56 @@
+.hz-top-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--fixed-bars-background);
+    /* border: 1px solid #333; */
+    box-sizing: border-box;
+    display: flex;
+    z-index: 991;
+    width: 100vw;
+    /* TOP BAR SIZE */
+    height: var(--hz-top-bar-height);
+}
+
+.vt-left-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--fixed-bars-background);
+    /* border: 1px solid #333; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 990;
+    height: 100vh;
+    /* LEFT BAR SIZE */
+    width: var(--vt-left-bar-width);
+    /*  */
+    /* ADD padding of hz-top-bar */
+    padding-top: var(--hz-top-bar-height); 
+}
+
+.vtbar-btn {
+    background: var(--fixed-bars-background);
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-block: 10px;
+}
+.vtbar-btn:hover svg {
+    fill: var(--main-color);
+}
+.vtbar-btn svg {
+    fill: var(--main-inactive-color);
+    shape-rendering: crispEdges;
+}
+
+.separator-line {
+    /* border-top: 1px solid #333; */
+    width: 80%;
+}

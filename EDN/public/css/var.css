@@ -1,0 +1,15 @@
+:root {
+    /* COLORS */
+    /* --main-color: #00ff9c; */
+    --main-color: #9900ff;
+    --select-color: #9900ff;
+    --valid-color: #00ee00;
+    --border-color: #777;
+    --main-inactive-color: #00ff9d6a;
+    --main-background : #1a181f;
+    --fixed-bars-background : #303030;
+
+    /* SIZES */
+    --vt-left-bar-width: 0px;
+    --hz-top-bar-height: 50px;
+}
