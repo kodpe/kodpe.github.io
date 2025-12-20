@@ -1,0 +1,24 @@
+.zones {
+  display: flex;
+  gap: 20px;
+}
+
+.zone {
+  width: 400px;
+  min-height: 150px;
+  padding: 10px;
+  background: #eaeaea;
+  border: 2px dashed #333;
+}
+
+.itemd {
+  width: 100px;
+  height: 40px;
+  background: darkgreen;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: grab;
+}

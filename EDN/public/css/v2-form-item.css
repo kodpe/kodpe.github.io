@@ -1,0 +1,186 @@
+.grid {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    /* border: 1px solid #0f0; */
+    border-radius: 4px;
+    background: #000000cc;
+    box-shadow: rgba(128, 128, 255, 0.5) 0px 0px 40px 0px;
+    margin-top: 40px;
+    gap: 0px;
+    /*  */
+    /* height: 80vh !important;  */
+    /* overflow-y: scroll; */
+}
+
+.static {
+    border-top: 1px dashed #555;
+    padding-top: 4px;
+    /*  */
+    color: #ccc;
+    font-size: 13px;
+    user-select: none;
+    width: calc(100% - 20px);
+    margin-inline: 10px;
+    margin-top: 10px;
+    /*  */
+    z-index: 100;
+}
+
+/* v2-form-item scheme
+
+    input - label(id + text(title + tags-list)) - draghand
+
+    // input : 20 px * 20 px (centered)
+    // label: width adaptative mais id 40 px
+    // draghand 40 px * 40 px (centered)
+
+ */
+
+/* ================================
+   FORM ITEM (CONTAINER PRINCIPAL)
+   input | label | drag
+================================ */
+.v2-form-item {
+    display: grid;
+    grid-template-columns: 0px 1fr 30px;
+    gap: 1px;
+    align-items: center;
+
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding-left: 5px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    width: calc(100% - 20px);
+    max-width: 600px;
+    margin-bottom: 2px;
+    margin-inline: 10px;
+    /*  */
+    background: #080816cc;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
+    accent-color: var(--valid-color);
+    /*  */
+}
+@media (min-width: 600px) {
+    .v2-form-item {
+        margin-left: 80px;
+        width: calc(100% - 160px);
+    }
+}
+
+
+
+.v2-form-item:hover {
+    border: 1px solid var(--select-color);
+}
+
+/* ================================
+   INPUT (20x20 centré)
+================================ */
+.v2-form-input {
+    width: 20px;
+    height: 20px;
+
+    display: grid;
+    place-items: center;
+    /*  */
+    cursor: pointer;
+    opacity: 0.5;
+    /*  */
+}
+.v2-form-item input:hover {
+    opacity: 1;
+}
+.v2-form-item input:checked {
+    opacity: 1;
+}
+.v2-form-item:has(input[type="checkbox"]:checked) {
+    border: 1px solid var(--valid-color);
+}
+
+
+/* ================================
+   LABEL (ID + TEXTE)
+================================ */
+.v2-form-label {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1px;
+    align-items: center;
+    cursor: pointer;
+    /* border: 1px solid #0f0; */
+    /*  */
+    padding-left: 20px;
+}
+
+/* ================================
+   ID (40x40 centré)
+================================ */
+.v2-form-item-id {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid #0f0; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    /*  */
+    padding-left: 4px;
+}
+
+/* ================================
+   TEXTE (TITLE + TAGS)
+================================ */
+.v2-form-text {
+    display: flex;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    /* border: 1px solid #0f0; */
+}
+
+.v2-form-title {
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.v2-form-tags {
+    font-size: 12px;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    gap: 5px;
+}
+
+/* ================================
+   DRAG HANDLE (30x40 centré)
+================================ */
+.v2-form-drag {
+    width: 30px;
+    height: 40px;
+    /* border: 1px solid #0f0; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: grab;
+    user-select: none;
+    /*  */
+    font-size: 24px;
+    color: #888;
+    /* force le texte à occuper toute la hauteur */
+    line-height: 40px;
+}

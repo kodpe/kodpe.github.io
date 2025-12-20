@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 
 const pckry = new Packery(grid, {
-    itemSelector: '.static, .form-item',
+    itemSelector: '.static, .v2-form-item',
     gutter: 8
 });
 

@@ -1,0 +1,213 @@
+#cnt-progress {
+    gap: 10px;
+}
+
+.dark-box {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    /* border: 1px solid #0f0; */
+    margin-top: 40px;
+    border-radius: 4px;
+    background: #000000cc;
+    box-shadow: rgba(128, 128, 255, 0.5) 0px 0px 40px 0px;
+    /*  */
+    /* height: 80vh !important;  */
+    /* overflow-y: scroll; */
+    padding: 10px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 10px; */
+}
+
+.chart-container {
+    width: 100%;
+    height: 200px;
+    max-width: 800px;
+    max-height: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #000000cc;
+    box-shadow: rgba(128, 128, 255, 0.5) 0px 0px 40px 0px;
+}
+
+@media (max-width: 600px) {
+    .chart-container {
+        height: 200px;
+        max-height: 200px;
+    }
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ////////////////////// */
+
+#habit-tracker {
+    font-family: system-ui;
+    font-size: 12px;
+    height: 200px;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    background: #000000dd;
+    box-shadow: rgba(128, 128, 255, 0.5) 0px 0px 40px 0px;
+    /*  */
+}
+
+#habit-sum-text {
+    width: 100%;
+    text-align: right;
+}
+
+.habit-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(53, 12px);
+    gap: 2px;
+    /*  */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /*  */
+}
+
+#habit-7days-col {
+    display: grid;
+    grid-template-rows: repeat(7, 12px);
+    gap: 2px;
+}
+
+.habit-7days-col {
+    display: grid;
+    grid-template-rows: repeat(7, 12px);
+    gap: 2px;
+}
+
+.habit-day {
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    background: #333;
+}
+
+.habit-day[data-level="0"] {
+    background: #140d29;
+}
+
+.habit-day[data-level="1"] {
+    background: #370466;
+}
+
+.habit-day[data-level="2"] {
+    background: #490c83;
+}
+
+.habit-day[data-level="3"] {
+    background: #6e19c4;
+}
+
+.habit-day[data-level="4"] {
+    background: #9333e7;
+}
+
+/* SCROLL BAR */
+.habit-grid {
+    scrollbar-width: thin;                 /* Firefox */
+    scrollbar-color: rgba(255,255,255,.35) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.habit-grid::-webkit-scrollbar {
+    height: 6px;                           /* scroll horizontal fin */
+}
+
+.habit-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.habit-grid::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.35);
+    border-radius: 3px;
+}
+
+.habit-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,.6);
+}
+
+.habit-day {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: fadeInUp 0.25s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ////////////////////// */
+
+.progress-title {
+    font-size: 12px;
+    text-align: right;
+}
+
+#specs-progress-list {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    /* border: 1px solid #0f0; */
+    /* margin-top: 40px; */
+    border-radius: 4px;
+    /* background: #00000000; */
+    /* box-shadow: rgba(128, 128, 255, 0.5) 0px 0px 40px 0px; */
+    /*  */
+    /* height: 80vh !important;  */
+    /* overflow-y: scroll; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+@media (max-width: 800px) {
+    #specs-progress-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.progress-nbrev-bar {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+    gap: 5px;
+}
+
+.progress-nbrev-bar button {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+    background-color: #00000000;
+    border: 1px solid #ddd;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 4px;
+}
+
+.progress-nbrev-bar button:hover {
+    background-color: #33333340;
+}

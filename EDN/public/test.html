@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Item – Layout Exemple</title>
+
+  <style>
+    /* RESET MINIMAL */
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #eee;
+      padding: 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ================================
+   FORM ITEM (CONTAINER PRINCIPAL)
+   input | label | drag
+================================ */
+    .v2-form-item {
+      display: grid;
+      grid-template-columns: 20px 1fr 40px;
+      gap: 12px;
+      align-items: center;
+
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    /* ================================
+   INPUT (20x20 centré)
+================================ */
+    .v2-form-input {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #0f0;
+
+      display: grid;
+      place-items: center;
+    }
+
+    /* ================================
+   LABEL (ID + TEXTE)
+================================ */
+    .v2-form-label {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    /* ================================
+   ID (40x40 centré)
+================================ */
+    .v2-form-item-id {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #0f0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* ================================
+   TEXTE (TITLE + TAGS)
+================================ */
+    .v2-form-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .v2-form-title {
+      font-weight: bold;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .v2-form-tags {
+      font-size: 12px;
+      opacity: 0.7;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      gap: 5px;
+    }
+
+    /* ================================
+   DRAG HANDLE (40x40 centré)
+================================ */
+    .v2-form-drag {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #0f0;
+
+      display: grid;
+      place-items: center;
+
+      cursor: grab;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="v2-form-item">
+    <div class="v2-form-input"></div>
+    <div class="v2-form-label">
+      <div class="v2-form-item-id">1</div>
+      <div class="v2-form-text">
+        <div class="v2-form-title">Titre adaptatif très long pour test</div>
+        <div class="v2-form-tags">
+          <div>tag1</div>
+          <div>tag1</div>
+          <div>tag1</div>
+          <div>tag1</div>
+        </div>
+      </div>
+    </div>
+    <div class="v2-form-drag">≡</div>
+  </div>
+
+</body>
+
+</html>

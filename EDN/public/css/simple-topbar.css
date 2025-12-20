@@ -1,0 +1,50 @@
+.simple-topbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid #0f0; */
+    display: flex;
+    align-items: center;
+    /* height: 80px; */
+    z-index: 1001;
+    padding: 40px;
+}
+
+@media (max-width: 600px) {
+    .simple-topbar {
+        position: fixed;
+        background-image: url('/public/images/673df7fbe95a8e90a7571751_D-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--main-background);
+        padding: 20px;
+    }
+}
+
+.edn-logo {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid #0f0; */
+}
+
+.edn-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.edn-logo div {
+    font-family: Fredoka;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    height: fit-content;
+}
+
+.edn-logo:hover {
+    cursor: pointer;
+}

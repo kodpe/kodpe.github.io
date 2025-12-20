@@ -1,0 +1,50 @@
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+
+    background: #0e0922;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /*  */
+    font-family: Fredoka;
+    font-size: 32px;
+}
+
+@media (max-width: 600px) {
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+#backToTop:hover {
+    transition: 0.3s;
+    background: #55555540;
+    border: 1px solid #fff;
+}
+
+#backToTop.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#backToTop.hide {
+    opacity: 0;
+    transform: translateY(20px);
+}

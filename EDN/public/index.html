@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>EDN PLAN</title>
+    <link rel="icon" href="/public/images/doctor.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidePanel.css">
+    <!-- <link rel="stylesheet" href="css/planning.css"> -->
+    <link rel="stylesheet" href="css/segments.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <!-- <link rel="stylesheet" href="css/domainslist.css"> -->
+    <link rel="stylesheet" href="css/dragzone.css">
+    <link rel="stylesheet" href="css/simple-topbar.css">
+    <link rel="stylesheet" href="css/backtotop.css">
+    <link rel="stylesheet" href="css/plan-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/v2-form-item.css">
+    <link rel="stylesheet" href="css/specs-list.css">
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+
+<body>
+    <!-- <img id="global-bg" src="images/673df7fbe95a8e90a7571751_D-bg.png"> -->
+    <button id="backToTop">^</button>
+
+    <div class="simple-topbar">
+        <div class="edn-logo">
+            <img src="images/doctor.png">
+            <div>EDN PLAN</div>
+        </div>
+        <button id="panelBtn">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+        <div class="overlay" id="overlay"></div>
+        <aside class="side-panel" id="sidePanel">
+            <nav>
+                <div class="edn-logo">
+                    <img src="images/doctor.png">
+                    <div>EDN PLAN</div>
+                </div>
+                <div id="btn-planning" class="side-btn">Planning</div>
+                <div id="btn-progress" class="side-btn">Progression</div>
+                <div id="btn-segments" class="side-btn">Segments</div>
+                <div id="btn-items" class="side-btn">Items</div>
+                <div id="btn-specs" class="side-btn">Spécialités</div>
+            </nav>
+        </aside>
+    </div>
+
+    <div class="main-container">
+        <div class="cnt" id="top-cnt">
+
+            <div id="cnt-planning" class="cnt">
+
+                <div class="grid">
+
+                    <div class="static">mer. 17/12</div>
+
+                    <div class="v2-form-item">
+                        <input type="checkbox" id="check-2" value="false" name="form-item" class="v2-form-input">
+                        <label for="check-2" class="v2-form-label">
+                            <div class="v2-form-item-id">367</div>
+                            <div class="v2-form-text">
+                                <div class="v2-form-title">Titre adaptatif très long pour test jwoifejio ojwefo gij
+                                    weoijg</div>
+                                <div class="v2-form-tags">
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                    <div class="item-tag">tag1</div>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="v2-form-drag">⣿</div>
+                    </div>
+
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+                    <div class="static">mer. 17/12</div>
+
+                    <div class="v2-form-item">
+                        <input type="checkbox" id="check-3" value="false" name="form-item" class="v2-form-input">
+                        <label for="check-3" class="v2-form-label">
+                            <div class="v2-form-item-id"></div>
+                            <div class="v2-form-text">
+                                <div class="v2-form-title">QCM</div>
+                                <div class="v2-form-tags">
+                                </div>
+                            </div>
+                        </label>
+                        <div class="v2-form-drag">⣿</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id="cnt-progress" class="cnt">
+                <div>Progression</div>
+                <div class="dark-box">
+                    Progression du segment actuel
+                </div>
+                <div class="dark-box">
+                    Progression globale
+                </div>
+                <div class="chart-container">
+                    <canvas id="revisionsChart"></canvas>
+                </div>
+
+                <div id="habit-tracker">
+                    <div id="habit-sum-text"></div>
+                    <div id="habit-grid" class="habit-grid"></div>
+                </div>
+
+                <div class="dark-box">
+                    <div class="progress-title">Progression par spécialité</div>
+
+                    <div id="specs-progress-list"></div>
+
+                    <div class="progress-nbrev-bar">
+                        <div id="nbrev-value">3 révisions par item</div>
+                        <div style="display: flex;">
+                            <button>-</button>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="cnt-segments" class="cnt">
+                <div>Segments</div>
+
+                <input id="date-range" placeholder="Sélectionner une période">
+
+                <div style="height: 100px;"></div>
+
+                <div> Personalisez le nombre d'items à réviser chaque jour</div>
+                <div class="grid-37">
+                    <div class="item day">Lun</div>
+                    <div class="item day">Mar</div>
+                    <div class="item day">Mer</div>
+                    <div class="item day">Jeu</div>
+                    <div class="item day">Ven</div>
+                    <div class="item day">Sam</div>
+                    <div class="item day">Dim</div>
+                    <div class="item btn-value" id="btn-inc-0">+</div>
+                    <div class="item btn-value" id="btn-inc-1">+</div>
+                    <div class="item btn-value" id="btn-inc-2">+</div>
+                    <div class="item btn-value" id="btn-inc-3">+</div>
+                    <div class="item btn-value" id="btn-inc-4">+</div>
+                    <div class="item btn-value" id="btn-inc-5">+</div>
+                    <div class="item btn-value" id="btn-inc-6">+</div>
+                    <div class="item" id="val-0">1</div>
+                    <div class="item" id="val-1">1</div>
+                    <div class="item" id="val-2">3</div>
+                    <div class="item" id="val-3">1</div>
+                    <div class="item" id="val-4">1</div>
+                    <div class="item" id="val-5">3</div>
+                    <div class="item" id="val-6">0</div>
+                    <div class="item btn-value dec" id="btn-dec-0">-</div>
+                    <div class="item btn-value dec" id="btn-dec-1">-</div>
+                    <div class="item btn-value dec" id="btn-dec-2">-</div>
+                    <div class="item btn-value dec" id="btn-dec-3">-</div>
+                    <div class="item btn-value dec" id="btn-dec-4">-</div>
+                    <div class="item btn-value dec" id="btn-dec-5">-</div>
+                    <div class="item btn-value dec" id="btn-dec-6">-</div>
+                </div>
+                <div id="week-total">~ n items par semaine</div>
+
+
+                <div class="zones">
+                    <div class="zone" id="zoneA">
+                        <div class="itemd">item 01</div>
+                        <div class="itemd">item 02</div>
+                    </div>
+
+                    <div class="zone" id="zoneB">
+                        <div class="itemd">item 03</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="cnt-items" class="cnt">
+                <div>Items</div>
+            </div>
+            <div id="cnt-specs" class="cnt">
+                <div id="domains-list" class="specs-list"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+    <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- DATA -->
+    <script src="data/domains.js"></script>
+    <!-- UI -->
+    <script src="js/colors.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/weekpattern.js"></script>
+    <script src="js/domainslist.js"></script>
+    <script src="js/dragzone.js"></script>
+    <script src="js/logoBtn.js"></script>
+    <script src="js/backtotop.js"></script>
+    <script src="js/graph-bar.js"></script>
+    <script src="js/habitTracker.js"></script>
+    <!-- ENGINE -->
+</body>
+
+</html>

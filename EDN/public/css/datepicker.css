@@ -1,0 +1,26 @@
+.datepicker {
+    width: 180px;
+    box-sizing: border-box;
+    border: 1px solid #00ff00;
+    color: #fff;
+}
+
+#date-range {
+width: 180px;
+}
+
+.date-range-popup {
+  position: absolute;
+  display: none;
+  gap: 6px;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+.date-range-popup input {
+  background: #ddd;
+  color: #000;
+  border: 1px solid #444;
+}

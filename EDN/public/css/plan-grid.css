@@ -1,0 +1,55 @@
+
+.form-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+.form-item-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    font-size: 20px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0f0;
+}
+
+
+.form-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-item-title {
+    font-size: 14px;
+    text-wrap-mode: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.form-item-tags-list {
+    display: flex;
+    gap: 4px;
+    overflow: hidden;
+}
+
+
+.draghand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    width: 40px;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: grab;
+    /*  */
+    box-sizing: border-box;
+    border: 1px solid #0f0;
+}
