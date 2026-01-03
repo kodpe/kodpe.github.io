@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OS, Noyau, Shell — Linux, Windows et WSL</title>
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --accent: #1e3a8a;
+            --code-bg: #0f172a;
+            --code-text: #e5e7eb;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Georgia", "Times New Roman", serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+
+        header p {
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            color: #111827;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .note {
+            background: #eef2ff;
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 1.2rem;
+            overflow-x: auto;
+            border-radius: 6px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95rem;
+        }
+
+        code {
+            background: #e5e7eb;
+            padding: 0.15rem 0.3rem;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>OS, noyau et shell</h1>
+        <p>Comprendre Linux, Windows et WSL — Cours introductif</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Le système d’exploitation (OS)</h2>
+
+            <p>
+                Un <strong>système d’exploitation</strong> (Operating System) est le logiciel fondamental
+                qui permet à un ordinateur de fonctionner.
+            </p>
+
+            <p>
+                Il agit comme un intermédiaire entre :
+            </p>
+
+            <ul>
+                <li>le <strong>matériel</strong> (processeur, mémoire, disque, clavier…)</li>
+                <li>les <strong>programmes</strong></li>
+                <li>l’<strong>utilisateur</strong></li>
+            </ul>
+
+            <p>
+                Sans système d’exploitation, le matériel est inutilisable.
+            </p>
+
+            <h3>Exemples de systèmes d’exploitation</h3>
+            <ul>
+                <li>Linux</li>
+                <li>Windows</li>
+                <li>macOS</li>
+                <li>Android</li>
+                <li>iOS</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Le noyau (Kernel)</h2>
+
+            <p>
+                Le <strong>noyau</strong> est le <strong>cœur du système d’exploitation</strong>.
+            </p>
+
+            <p>
+                C’est le seul programme qui communique directement avec le matériel.
+            </p>
+
+            <h3>Rôles du noyau</h3>
+            <ul>
+                <li>gérer le processeur (qui travaille, quand)</li>
+                <li>gérer la mémoire</li>
+                <li>gérer les périphériques</li>
+                <li>empêcher les programmes de se nuire entre eux</li>
+            </ul>
+
+            <div class="note">
+                L’utilisateur n’interagit jamais directement avec le noyau.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Le shell</h2>
+
+            <p>
+                Le <strong>shell</strong> est une interface textuelle permettant à l’utilisateur
+                de donner des ordres au système.
+            </p>
+
+            <p>
+                C’est un programme qui :
+            </p>
+
+            <ul>
+                <li>lit les commandes tapées au clavier</li>
+                <li>les interprète</li>
+                <li>demande au noyau de les exécuter</li>
+            </ul>
+
+            <h3>Exemples de shells</h3>
+            <ul>
+                <li><code>bash</code></li>
+                <li><code>zsh</code></li>
+                <li><code>fish</code></li>
+            </ul>
+
+            <p>
+                Exemple :
+            </p>
+
+            <pre>
+ls
+    </pre>
+
+            <p>
+                Le shell comprend la commande, le noyau accède au disque,
+                et le résultat est affiché à l’écran.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Relation entre OS, noyau et shell</h2>
+
+            <pre>
+Utilisateur
+    ↑
+Shell
+    ↑
+Noyau
+    ↑
+Matériel
+    </pre>
+
+            <ul>
+                <li>Le <strong>noyau</strong> contrôle le matériel</li>
+                <li>Le <strong>shell</strong> permet de dialoguer avec le système</li>
+                <li>Le <strong>système d’exploitation</strong> est l’ensemble</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Linux</h2>
+
+            <p>
+                À l’origine, <strong>Linux</strong> désigne uniquement un <strong>noyau</strong>.
+            </p>
+
+            <p>
+                Un système Linux complet (souvent appelé <strong>GNU/Linux</strong>) contient :
+            </p>
+
+            <ul>
+                <li>le noyau Linux</li>
+                <li>un shell (bash)</li>
+                <li>des commandes de base (<code>ls</code>, <code>cp</code>, <code>mv</code>…)</li>
+                <li>éventuellement une interface graphique</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Windows</h2>
+
+            <p>
+                <strong>Windows</strong> est également un système d’exploitation complet,
+                mais son architecture est différente de Linux.
+            </p>
+
+            <p>
+                Windows possède :
+            </p>
+
+            <ul>
+                <li>son propre noyau (noyau Windows NT)</li>
+                <li>une interface graphique dominante</li>
+                <li>un shell en ligne de commande</li>
+            </ul>
+
+            <h3>Shells sous Windows</h3>
+            <ul>
+                <li><code>cmd.exe</code> (ancien)</li>
+                <li><code>PowerShell</code> (moderne)</li>
+            </ul>
+
+            <div class="note">
+                Les commandes Windows sont différentes de celles de Linux.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. WSL (Windows Subsystem for Linux)</h2>
+
+            <p>
+                <strong>WSL</strong> permet d’exécuter un environnement Linux
+                directement à l’intérieur de Windows.
+            </p>
+
+            <p>
+                Avec WSL :
+            </p>
+
+            <ul>
+                <li>Windows reste le système principal</li>
+                <li>Linux fonctionne comme un sous-système</li>
+                <li>on utilise les vraies commandes Linux</li>
+            </ul>
+
+            <p>
+                Exemple de commandes sous WSL :
+            </p>
+
+            <pre>
+ls
+cd
+pwd
+    </pre>
+
+            <div class="note">
+                WSL est très utilisé pour l’apprentissage, le développement
+                et les cours d’informatique.
+            </div>
+        </section>
+
+        <section>
+            <h2>8. Résumé</h2>
+
+            <ul>
+                <li><strong>OS</strong> : fait fonctionner l’ordinateur</li>
+                <li><strong>Noyau</strong> : gère le matériel</li>
+                <li><strong>Shell</strong> : interface de commande</li>
+                <li><strong>Linux</strong> : noyau + outils</li>
+                <li><strong>Windows</strong> : OS différent avec son propre noyau</li>
+                <li><strong>WSL</strong> : Linux à l’intérieur de Windows</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Cours introductif — Architecture des systèmes d’exploitation
+    </footer>
+
+</body>
+
+</html>

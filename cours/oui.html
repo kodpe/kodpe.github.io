@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Linux, WSL et shells — usages et apprentissage</title>
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --accent: #1e3a8a;
+            --code-bg: #0f172a;
+            --code-text: #e5e7eb;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Georgia", "Times New Roman", serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+
+        header p {
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            color: #111827;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .note {
+            background: #eef2ff;
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 1.2rem;
+            overflow-x: auto;
+            border-radius: 6px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95rem;
+        }
+
+        code {
+            background: #e5e7eb;
+            padding: 0.15rem 0.3rem;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Linux, WSL et shells</h1>
+    <p>Usages en enseignement, apprentissage et monde professionnel</p>
+</header>
+
+<main>
+
+<section>
+    <h2>1. Linux et WSL sont-ils plus utilisés ?</h2>
+
+    <p>
+        Dans l’enseignement supérieur et les métiers techniques,
+        <strong>Linux (et WSL)</strong> est aujourd’hui plus utilisé que
+        Windows seul.
+    </p>
+
+    <p>
+        Cela ne signifie pas que Windows disparaît, mais que
+        <strong>les environnements techniques reposent majoritairement sur Linux</strong>.
+    </p>
+
+    <div class="note">
+        Windows reste dominant pour le grand public,  
+        Linux domine pour les serveurs, le développement et l’ingénierie.
+    </div>
+</section>
+
+<section>
+    <h2>2. Pourquoi Linux est privilégié dans les écoles</h2>
+
+    <h3>Un standard historique</h3>
+    <p>
+        Les universités utilisaient Unix bien avant Linux.
+        Linux a hérité de cette culture :
+        terminal, fichiers, processus, scripts.
+    </p>
+
+    <h3>Gratuit et accessible</h3>
+    <ul>
+        <li>pas de licence</li>
+        <li>installable sur n’importe quel ordinateur</li>
+        <li>identique pour tous les étudiants</li>
+    </ul>
+
+    <h3>Pédagogiquement efficace</h3>
+    <p>
+        Linux oblige à comprendre le fonctionnement réel d’un système :
+    </p>
+    <ul>
+        <li>processus</li>
+        <li>permissions</li>
+        <li>réseau</li>
+        <li>automatisation</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Le rôle clé de WSL</h2>
+
+    <p>
+        <strong>WSL (Windows Subsystem for Linux)</strong> permet
+        d’utiliser Linux directement à l’intérieur de Windows.
+    </p>
+
+    <p>
+        Il est très utilisé dans l’enseignement car :
+    </p>
+
+    <ul>
+        <li>beaucoup d’étudiants ont Windows</li>
+        <li>WSL évite l’installation complexe de Linux</li>
+        <li>les commandes sont exactement les mêmes que sur un serveur</li>
+    </ul>
+
+    <pre>
+ls
+cd
+pwd
+    </pre>
+
+    <div class="note">
+        WSL est aujourd’hui le compromis pédagogique le plus courant.
+    </div>
+</section>
+
+<section>
+    <h2>4. Linux dans le monde professionnel</h2>
+
+    <h3>Serveurs et cloud</h3>
+    <p>
+        La quasi-totalité des serveurs professionnels tournent sous Linux :
+    </p>
+
+    <ul>
+        <li>serveurs web</li>
+        <li>bases de données</li>
+        <li>cloud</li>
+        <li>containers (Docker, Kubernetes)</li>
+    </ul>
+
+    <h3>Développement et ingénierie</h3>
+    <p>
+        Linux est omniprésent en :
+    </p>
+
+    <ul>
+        <li>développement logiciel</li>
+        <li>data science</li>
+        <li>intelligence artificielle</li>
+        <li>cybersécurité</li>
+        <li>DevOps</li>
+    </ul>
+</section>
+
+<section>
+    <h2>5. Quel shell apprendre en priorité ?</h2>
+
+    <p>
+        La question du shell est centrale dans l’apprentissage du terminal.
+    </p>
+
+    <h3>Le choix recommandé</h3>
+    <p>
+        <strong>Bash est le shell à apprendre en priorité.</strong>
+    </p>
+
+    <h3>Pourquoi Bash ?</h3>
+    <ul>
+        <li>shell par défaut sur la majorité des systèmes Linux</li>
+        <li>présent sur les serveurs</li>
+        <li>utilisé dans WSL</li>
+        <li>standard de la documentation et des scripts</li>
+    </ul>
+
+    <pre>
+#!/bin/bash
+ls | grep ".txt"
+    </pre>
+</section>
+
+<section>
+    <h2>6. Et les autres shells ?</h2>
+
+    <h3>Zsh</h3>
+    <p>
+        Plus ergonomique, très populaire chez les développeurs,
+        mais basé sur Bash.
+    </p>
+    <p>
+        → Excellent après Bash
+    </p>
+
+    <h3>Fish</h3>
+    <p>
+        Très convivial, mais incompatible avec Bash.
+    </p>
+    <p>
+        → Mauvais choix pour débuter dans un cadre académique
+    </p>
+
+    <h3>PowerShell</h3>
+    <p>
+        Shell Windows puissant, orienté objets.
+    </p>
+    <p>
+        → Utile uniquement pour des contextes Windows spécifiques
+    </p>
+</section>
+
+<section>
+    <h2>7. Recommandation pédagogique finale</h2>
+
+    <ul>
+        <li>Utiliser Linux ou WSL pour l’apprentissage</li>
+        <li>Apprendre le terminal via Bash</li>
+        <li>Se concentrer sur les concepts Unix</li>
+        <li>Découvrir d’autres shells ensuite</li>
+    </ul>
+
+    <div class="note">
+        Ce choix garantit une continuité entre l’école,
+        les stages et le monde professionnel.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    Cours introductif — Environnements systèmes et terminal
+</footer>
+
+</body>
+</html>

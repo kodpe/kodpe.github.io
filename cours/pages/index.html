@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Linux — Introduction</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Introduction au terminal</h1>
+        <p>@Kodp — Cours débutant — Le système, le terminal, et le Bash</p>
+    </header>
+
+    <main>
+
+        <nav>
+            <h2>Sommaire</h2>
+            <ol>
+                <li>Définitions</li>
+                <ul>
+                    <li>Ordinateur</li>
+                    <li>Système d'exploitation</li>
+                    <li>Kernel</li>
+                    <li>Shell</li>
+                    <li>Terminal</li>
+                    <li>WSL</li>
+                </ul>
+                <br>
+                <li>Foire aux questions</li>
+                <ul>
+                    <li>Pourquoi Linux domine dans l'informatique professionnelle ?</li>
+                    <li>Pourquoi Windows est si populaire chez le grand public ?</li>
+                    <li>Pourquoi le terminal est plus efficace et rapide que l'interface graphique ?</li>
+                    <li>Pourquoi apprendre le Bash ?</li>
+                </ul>
+                <br>
+                <li>Quelques commandes linux bash</li>
+                <ul>
+                    <li>pwd</li>
+                    <li>ls</li>
+                    <li>cd</li>
+                    <li>echo</li>
+                    <li>cat</li>
+                    <li>mkdir</li>
+                    <li>rm</li>
+                    <li>grep</li>
+                    <li>man</li>
+                    <li>exit</li>
+                </ul>
+            </ol>
+        </nav>
+
+        <section>
+            <h2>1. Définitions</h2>
+            <div class="box">
+                <h3>Ordinateur</h3>
+                <p>
+                    Un <strong>ordinateur</strong> est une machine programmable qui exécute des instructions pour
+                    traiter automatiquement des données.
+                </p>
+                <p>
+                    Pour qu’une machine soit considérée comme un <strong>ordinateur</strong>, il faut au minimum qu’elle
+                    ait ces composants essentiels :
+                </p>
+                <ul>
+                    <li>Un processeur</li>
+                    <li>De la mémoire / stockage</li>
+                    <li>Des entrées et sorties</li>
+                    <li>Un programme intégré firmware (micrologiciel) / OS (operating system)</li>
+                </ul>
+                <h4>Exemples d'ordinateurs particuliers et leur firmware / OS typique</h4>
+                <ul>
+                    <li>Un supercalculateur (Linux)</li>
+                    <li>L'ordinateur de bord d'un véhicule (RTOS)</li>
+                    <li>Une console de jeu (base Linux)</li>
+                    <li>Un smartphone (Linux / iOS)</li>
+                    <li>Une imprimante moderne (RTOS ou base Linux embarqué)</li>
+                    <li>Une montre intelligente (base Linux embarqué)</li>
+                    <li>Une souris programmable (firmware minimaliste)</li>
+                    <li>Un pacemaker (firmware minimaliste très spécialisé)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Système d’exploitation (OS Operating System)</h3>
+                <p>
+                    Le <strong>système d’exploitation</strong> est un ensemble cohérent de programmes et logiciels pour
+                    gérer toutes les ressources d'un <strong>ordinateur</strong> (mémoire, calcul, communications...) et
+                    fournir des services de base.
+                <h4>Exemples de systèmes d'exploitation</h4>
+                <ul>
+                    <li>Linux (Android, Ubuntu, Debian...)</li>
+                    <li>Windows</li>
+                    <li>macOS / iOS</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Kernel (noyau)</h3>
+                <p>
+                    Le <strong>kernel</strong> est le coeur d'un <strong>système d’exploitation</strong>.
+                </p>
+                <p>
+                    C’est le programme fondamental qui gère le processeur, la mémoire et les périphériques.
+                    C'est la partie la plus critique d'un système. Le développement d'un <strong>kernel</strong> est
+                    particulièrement complexe et délicat.
+                </p>
+                <h4>Exemples de noyaux</h4>
+                <ul>
+                    <li>Linux → noyau Linux (pour Android, Ubuntu...)</li>
+                    <li>Windows → noyau NT</li>
+                    <li>macOS → noyau XNU</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Shell (coque)</h3>
+                <p>
+                    Le <strong>shell</strong> est un programme qui permet à l'utilisateur d'interagir avec la machine,
+                    il lit et interprète des commandes, puis les envoi au <strong>noyau</strong>.
+                    L'ensemble des commandes d'un <strong>shell</strong> peuvent consistuer un langage :
+                    c'est un langage de script spécialisé dans le contrôle d'un système.
+                </p>
+                <h4>Utilisateur → Shell → Noyau → Matériel</h4>
+                <h4>Exemples de shell connus</h4>
+                <ul>
+                    <li>Bash (Bourne-Again shell, Linux)</li>
+                    <li>zsh (Bash amélioré plus puissant)</li>
+                    <li>Windows PowerShell</li>
+                    <li>L'explorateur Windows est un shell graphique.</li>
+                </ul>
+            </div>
+
+
+            <div class="box">
+                <h3>Terminal (console)</h3>
+                <p>
+                    Un <strong>terminal</strong> est le logiciel d'interface texte permettant
+                    de contrôler un ordinateur à l’aide de commandes de <strong>shell</strong>.
+                </p>
+
+                <p>
+                <h4>
+                    Le terminal à l’origine
+                </h4>
+                <p>
+                    À l’origine, les ordinateurs étaient tellement volumineux qu'ils occupaient des salles entières.
+                    Les utilisateurs communiquaient alors avec la machine avec des équipements dédiés appelés terminaux.
+                    Ces terminaux étaient des appareils périphériques d’entrée et de sortie. Ils pouvaient être équipés
+                    d’un
+                    clavier, d’un écran, parfois d’une imprimante. Leur rôle était
+                    uniquement de permettre à l’utilisateur d’envoyer des instructions
+                    à l’ordinateur central et d’en afficher les résultats.
+                    Le terminal était donc un appareil intermédiaire entre l’humain et la machine.
+                </p>
+
+                <h4>Le terminal aujourd’hui</h4>
+                <p>
+                    Aujourd’hui, le terminal n’est plus un appareil physique séparé. Il s’agit d’un logiciel intégré au
+                    système d’exploitation, qui s’exécute dans une fenêtre comme n’importe quelle autre application.
+                    Le terminal reçoit du texte au clavier, affiche des réponses et transmet les commandes au système.
+                    Il sert d’interface vers le shell, qui interprète les commandes,
+                    puis vers le noyau, qui les exécute réellement.
+
+                    Même si les interfaces graphiques sont devenues la norme pour le grand public,
+                    le terminal basé sur l'utilisation du clavier reste un outil central en informatique,
+                    car c'est toujours le moyen le plus précis, rapide et puissant de contrôler un ordinateur.
+                    <br>
+                    <br>
+                    Il est massivement utilisé pour :
+                <ul>
+                    <li>le développement logiciel</li>
+                    <li>l’administration des systèmes / des serveurs</li>
+                    <li>l’automatisation de tâches</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>WSL (Windows Subsystem for Linux)</h3>
+                WSL est un outil puissant qui permet
+                d’utiliser Linux à l’intérieur de Windows, et de profiter
+                des avantages des deux systèmes.
+            </div>
+
+        </section>
+
+        <section>
+            <h2>2. FAQ</h2>
+            <h3>Pourquoi Linux domine dans l'informatique professionnelle ?</h3>
+            <div class="box">
+                <ul>
+                    <li>gratuit et open source</li>
+                    <li>plus léger, rapide, et stable que Windows</li>
+                    <li>95% des serveurs utilisent Linux</li>
+                    <li>plus sécurisé que Windows, moins sujet aux virus et attaques</li>
+                    <li>Meilleur pour le respect de la vie privée</li>
+                </ul>
+            </div>
+
+            <h3>Pourquoi Windows est si populaire chez le grand public ?</h3>
+            <div class="box">
+                <ul>
+                    <li>préinstallé sur la plupart des ordinateurs</li>
+                    <li>interface plus simple à utiliser</li>
+                    <li>énorme catalogue de logiciels</li>
+                    <li>support principal pour les logiciels communs</li>
+                    <li>support principal pour les jeux vidéo</li>
+                </ul>
+            </div>
+
+            <h3>Pourquoi le terminal est plus efficace et rapide que l'interface graphique ?</h3>
+            <div class="box">
+                <p>
+                    Le terminal permet d'utiliser plusieurs milliers de commandes différentes
+                    et de les combiner entres elles.
+                </p>
+                <p>
+                    Les possibilités sont presque infinies,
+                    seule une petite partie de ces actions sont possibles via les interfaces graphiques.
+                </p>
+
+                <p>
+                    Un utilisateur de terminal sera généralement plus rapide, par exemple :
+                </p>
+
+                Cette commande permet de compter le nombre de fois que le mot "bouton"
+                apparait dans tous les fichiers d'un dossier.
+                <pre>$ cat * | grep bouton | wc</pre>
+
+                Cette commande créé d'un coup 290 dossiers, un pour chaque année de 2010 jusqu'à 2300.
+                <pre>$ mkdir {2010..2300}</pre>
+
+                Cette commande supprime tous les fichiers d'un dossier.
+                <pre>$ rm *</pre>
+            </div>
+
+            <h3>Pourquoi apprendre le Bash ?</h3>
+            <div class="box">
+                <p>
+                    Bash est le langage de script shell le plus utilisé sous Linux, il est présent sur presque tous les
+                    systèmes et serveurs.
+                </p>
+                <p>
+                    C'est le standard dans les écoles, les cours et la documentation.
+                    C’est celui que l’on apprend en priorité.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Quelques commandes linux bash</h2>
+
+    <table class="cheatsheet">
+        <thead>
+            <tr>
+                <th>Commande</th>
+                <th>Fonction</th>
+                <th>Exemple</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>pwd</td>
+                <td>Afficher le chemin du dossier courant</td>
+                <td><code>$ pwd</code></td>
+            </tr>
+            <tr>
+                <td>ls</td>
+                <td>Lister les fichiers et dossiers</td>
+                <td><code>$ ls -l</code></td>
+            </tr>
+            <tr>
+                <td>cd</td>
+                <td>Se déplacer dans un autre dossier</td>
+                <td><code>$ cd Documents</code></td>
+            </tr>
+            <tr>
+                <td>echo</td>
+                <td>Afficher du texte</td>
+                <td><code>$ echo "Bonjour"</code></td>
+            </tr>
+            <tr>
+                <td>cat</td>
+                <td>Afficher le contenu d’un fichier</td>
+                <td><code>$ cat fichier.txt</code></td>
+            </tr>
+            <tr>
+                <td>mkdir</td>
+                <td>Créer un dossier</td>
+                <td><code>$ mkdir projet</code></td>
+            </tr>
+            <tr>
+                <td>rm</td>
+                <td>Supprimer des fichiers ou dossiers</td>
+                <td><code>$ rm fichier.txt</code></td>
+            </tr>
+            <tr>
+                <td>grep</td>
+                <td>Rechercher un texte précis dans un fichier</td>
+                <td><code>$ grep "erreur" journal.log</code></td>
+            </tr>
+            <tr>
+                <td>man</td>
+                <td>Afficher le manuel d’une commande</td>
+                <td><code>$ man ls</code></td>
+            </tr>
+            <tr>
+                <td>exit</td>
+                <td>Quitter le terminal ou la session</td>
+                <td><code>$ exit</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="command-block">
+        <h3><code>pwd</code></h3>
+        <p>Affiche le chemin du dossier actuel dans lequel vous vous trouvez.</p>
+        <pre>
+$ pwd
+/home/utilisateur/Documents
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>ls</code></h3>
+        <p>Liste les fichiers et dossiers présents dans le dossier courant (ou vous vous trouvez).</p>
+        <pre>
+$ ls
+Documents  Téléchargements  script.sh  image.png
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>cd</code></h3>
+        <p>Permet de se déplacer dans un autre dossier. Exemple : aller dans "Documents".</p>
+        <pre>
+$ cd Documents
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>echo</code></h3>
+        <p>Affiche du texte dans le terminal.</p>
+        <pre>
+$ echo "Bonjour Linux"
+Bonjour Linux
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>cat</code></h3>
+        <p>Affiche le contenu d'un fichier texte dans le terminal.</p>
+        <pre>
+$ cat fichier.txt
+Ceci est le contenu du fichier.
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>mkdir</code></h3>
+        <p>Crée un nouveau dossier. Exemple : créer un dossier "projet".</p>
+        <pre>
+$ mkdir projet
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>rm</code></h3>
+        <p>Supprime des fichiers ou dossiers (attention : suppression définitive).</p>
+        <pre>
+$ rm fichier.txt
+$ rm -r dossier
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>grep</code></h3>
+        <p>Recherche une chaîne de texte précise dans un fichier.</p>
+        <pre>
+$ grep "erreur" journal.log
+Ligne 23 : erreur détectée
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>man</code></h3>
+        <p>Affiche le manuel d’une commande pour obtenir de l’aide.</p>
+        <pre>
+$ man ls
+        </pre>
+    </div>
+
+    <div class="command-block">
+        <h3><code>exit</code></h3>
+        <p>Quitte le terminal ou la session en cours.</p>
+        <pre>
+$ exit
+        </pre>
+    </div>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>@Kodp — Cours débutant — Le système, le terminal, et le Bash</p>
+    </footer>
+
+</body>
+
+</html>

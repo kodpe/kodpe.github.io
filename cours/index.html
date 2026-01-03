@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction au terminal Linux</title>
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --text: #1f2933;
+            --muted: #6b7280;
+            --accent: #1e3a8a;
+            --code-bg: #0f172a;
+            --code-text: #e5e7eb;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Georgia", "Times New Roman", serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+
+        header p {
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            color: #111827;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .note {
+            background: #eef2ff;
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 1.2rem;
+            overflow-x: auto;
+            border-radius: 6px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95rem;
+        }
+
+        code {
+            background: #e5e7eb;
+            padding: 0.15rem 0.3rem;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Introduction au terminal Linux</h1>
+        <p>Cours ultra débutant – Comprendre et utiliser les commandes de base</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Qu’est-ce qu’un terminal ?</h2>
+            <p>
+                Le <strong>terminal</strong> est une interface textuelle qui permet de communiquer directement
+                avec le système d’exploitation.
+                Contrairement aux interfaces graphiques (fenêtres, icônes, souris),
+                le terminal fonctionne uniquement avec du texte.
+            </p>
+
+            <p>
+                Sous Linux, le terminal permet :
+            </p>
+            <ul>
+                <li>d’explorer les fichiers</li>
+                <li>de créer, déplacer ou supprimer des dossiers</li>
+                <li>d’exécuter des programmes</li>
+                <li>d’administrer le système</li>
+            </ul>
+
+            <div class="note">
+                Le terminal peut sembler intimidant au début, mais il est précis, rapide
+                et extrêmement puissant.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Ouvrir un terminal</h2>
+            <p>
+                Selon votre environnement Linux :
+            </p>
+            <ul>
+                <li>Raccourci courant : <code>Ctrl</code> + <code>Alt</code> + <code>T</code></li>
+                <li>Ou via le menu : Applications → Terminal</li>
+            </ul>
+
+            <p>
+                Une fois ouvert, vous voyez une ligne semblable à :
+            </p>
+
+            <pre>
+utilisateur@ordinateur:~$
+        </pre>
+
+            <p>
+                Cette ligne s’appelle le <strong>prompt</strong>.
+                Elle indique que le terminal attend une commande.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Où suis-je ?</h2>
+
+            <h3>La commande <code>pwd</code></h3>
+            <p>
+                Pour savoir dans quel dossier vous vous trouvez :
+            </p>
+
+            <pre>
+pwd
+        </pre>
+
+            <p>
+                Cette commande affiche le chemin complet du dossier courant.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Lister les fichiers</h2>
+
+            <h3>La commande <code>ls</code></h3>
+            <p>
+                Pour afficher le contenu du dossier courant :
+            </p>
+
+            <pre>
+ls
+        </pre>
+
+            <p>
+                Pour afficher plus de détails :
+            </p>
+
+            <pre>
+ls -l
+        </pre>
+        </section>
+
+        <section>
+            <h2>5. Se déplacer dans les dossiers</h2>
+
+            <h3>La commande <code>cd</code></h3>
+
+            <p>
+                Aller dans un dossier :
+            </p>
+
+            <pre>
+cd Documents
+        </pre>
+
+            <p>
+                Revenir au dossier précédent :
+            </p>
+
+            <pre>
+cd ..
+        </pre>
+
+            <p>
+                Revenir au dossier personnel :
+            </p>
+
+            <pre>
+cd
+        </pre>
+        </section>
+
+        <section>
+            <h2>6. Créer et supprimer</h2>
+
+            <h3>Créer un dossier</h3>
+            <pre>
+mkdir cours_linux
+        </pre>
+
+            <h3>Supprimer un fichier</h3>
+            <pre>
+rm fichier.txt
+        </pre>
+
+            <h3>Supprimer un dossier (attention)</h3>
+            <pre>
+rm -r dossier
+        </pre>
+
+            <div class="note">
+                Sous Linux, une suppression est définitive.
+                Il n’y a pas de corbeille par défaut.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Lire un fichier texte</h2>
+
+            <h3>La commande <code>cat</code></h3>
+            <pre>
+cat fichier.txt
+        </pre>
+
+            <p>
+                Elle affiche le contenu du fichier dans le terminal.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Commandes essentielles à retenir</h2>
+
+            <ul>
+                <li><code>pwd</code> – afficher le dossier courant</li>
+                <li><code>ls</code> – lister les fichiers</li>
+                <li><code>cd</code> – changer de dossier</li>
+                <li><code>mkdir</code> – créer un dossier</li>
+                <li><code>rm</code> – supprimer</li>
+                <li><code>cp</code> – copier</li>
+                <li><code>mv</code> – déplacer ou renommer</li>
+                <li><code>cat</code> – lire un fichier</li>
+                <li><code>man</code> – lire le manuel d’une commande</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Cours introductif au terminal Linux — Université
+    </footer>
+
+</body>
+
+</html>
