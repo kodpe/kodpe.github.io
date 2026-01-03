@@ -26,29 +26,26 @@
                     <li>Kernel</li>
                     <li>Shell</li>
                     <li>Terminal</li>
-                    <li>WSL</li>
+                    <li>Commande</li>
                 </ul>
                 <br>
                 <li>Foire aux questions</li>
                 <ul>
-                    <li>Pourquoi Linux domine dans l'informatique professionnelle ?</li>
-                    <li>Pourquoi Windows est si populaire chez le grand public ?</li>
-                    <li>Pourquoi le terminal est plus efficace et rapide que l'interface graphique ?</li>
+                    <li>Pourquoi Linux est largement utilisé dans l'informatique professionnelle ?</li>
+                    <li>Pourquoi Windows est-il si répandu auprès du grand public ?</li>
+                    <li>Pourquoi utiliser le terminal plutôt qu'une interface graphique ?</li>
+                    <li>Comment utiliser un terminal Linux sous Windows ? (WSL)</li>
                     <li>Pourquoi apprendre le Bash ?</li>
                 </ul>
                 <br>
                 <li>Quelques commandes linux bash</li>
                 <ul>
-                    <li>pwd</li>
-                    <li>ls</li>
-                    <li>cd</li>
-                    <li>echo</li>
-                    <li>cat</li>
-                    <li>mkdir</li>
-                    <li>rm</li>
-                    <li>grep</li>
-                    <li>man</li>
-                    <li>exit</li>
+                    <li>pwd : Affiche le dossier actuel</li>
+                    <li>ls : Liste les fichiers et dossiers</li>
+                    <li>cd : Se déplacer dans un dossier</li>
+                    <li>mkdir : Créer un dossier</li>
+                    <li>touch : Créer un fichier</li>
+                    <li>rm : Supprimer un fichier ou dossier</li>
                 </ul>
             </ol>
         </nav>
@@ -69,16 +66,17 @@
                     <li>Un processeur</li>
                     <li>De la mémoire / stockage</li>
                     <li>Des entrées et sorties</li>
-                    <li>Un programme intégré firmware (micrologiciel) / OS (operating system)</li>
+                    <li>Un programme intégré firmware (micrologiciel), et éventuellement un système d’exploitation (OS)
+                    </li>
                 </ul>
-                <h4>Exemples d'ordinateurs particuliers et leur firmware / OS typique</h4>
+                <h4>Exemples d'ordinateurs spécialisés et leur firmware / OS typique</h4>
                 <ul>
                     <li>Un supercalculateur (Linux)</li>
                     <li>L'ordinateur de bord d'un véhicule (RTOS)</li>
-                    <li>Une console de jeu (base Linux)</li>
-                    <li>Un smartphone (Linux / iOS)</li>
+                    <li>Une console de jeu (OS propriétaire ou base Linux)</li>
+                    <li>Un smartphone (Android / iOS)</li>
                     <li>Une imprimante moderne (RTOS ou base Linux embarqué)</li>
-                    <li>Une montre intelligente (base Linux embarqué)</li>
+                    <li>Une montre intelligente (RTOS ou base Linux embarqué)</li>
                     <li>Une souris programmable (firmware minimaliste)</li>
                     <li>Un pacemaker (firmware minimaliste très spécialisé)</li>
                 </ul>
@@ -92,7 +90,7 @@
                     fournir des services de base.
                 <h4>Exemples de systèmes d'exploitation</h4>
                 <ul>
-                    <li>Linux (Android, Ubuntu, Debian...)</li>
+                    <li>Linux (Android, Ubuntu, Debian, etc.)</li>
                     <li>Windows</li>
                     <li>macOS / iOS</li>
                 </ul>
@@ -111,7 +109,7 @@
                 </p>
                 <h4>Exemples de noyaux</h4>
                 <ul>
-                    <li>Linux → noyau Linux (pour Android, Ubuntu...)</li>
+                    <li>Linux → noyau Linux</li>
                     <li>Windows → noyau NT</li>
                     <li>macOS → noyau XNU</li>
                 </ul>
@@ -121,9 +119,11 @@
                 <h3>Shell (coque)</h3>
                 <p>
                     Le <strong>shell</strong> est un programme qui permet à l'utilisateur d'interagir avec la machine,
-                    il lit et interprète des commandes, puis les envoi au <strong>noyau</strong>.
-                    L'ensemble des commandes d'un <strong>shell</strong> peuvent consistuer un langage :
-                    c'est un langage de script spécialisé dans le contrôle d'un système.
+                    il lit et interprète des commandes, puis les envoie au <strong>noyau</strong>.
+                    Le shell n’exécute pas les instructions directement sur le matériel,
+                    il demande au noyau de le faire.
+                    L'ensemble des commandes d'un <strong>shell</strong> peuvent constituer un langage :
+                    c'est alors un langage de script spécialisé dans le contrôle d'un système.
                 </p>
                 <h4>Utilisateur → Shell → Noyau → Matériel</h4>
                 <h4>Exemples de shell connus</h4>
@@ -131,10 +131,9 @@
                     <li>Bash (Bourne-Again shell, Linux)</li>
                     <li>zsh (Bash amélioré plus puissant)</li>
                     <li>Windows PowerShell</li>
-                    <li>L'explorateur Windows est un shell graphique.</li>
+                    <li>L'explorateur Windows est un shell graphique</li>
                 </ul>
             </div>
-
 
             <div class="box">
                 <h3>Terminal (console)</h3>
@@ -143,7 +142,6 @@
                     de contrôler un ordinateur à l’aide de commandes de <strong>shell</strong>.
                 </p>
 
-                <p>
                 <h4>
                     Le terminal à l’origine
                 </h4>
@@ -168,7 +166,7 @@
 
                     Même si les interfaces graphiques sont devenues la norme pour le grand public,
                     le terminal basé sur l'utilisation du clavier reste un outil central en informatique,
-                    car c'est toujours le moyen le plus précis, rapide et puissant de contrôler un ordinateur.
+                    car c'est toujours le moyen le plus direct, précis, rapide et puissant de contrôler un ordinateur.
                     <br>
                     <br>
                     Il est massivement utilisé pour :
@@ -181,68 +179,114 @@
             </div>
 
             <div class="box">
-                <h3>WSL (Windows Subsystem for Linux)</h3>
-                WSL est un outil puissant qui permet
-                d’utiliser Linux à l’intérieur de Windows, et de profiter
-                des avantages des deux systèmes.
+                <h3>Commande</h3>
+                <p>
+                    Une <strong>commande</strong> de <strong>shell</strong> est une instruction que l’on tape dans un
+                    <strong>terminal</strong> pour demander au <strong>noyau</strong> du <strong>système
+                        d'exploitation</strong> d’exécuter une action.
+                </p>
+                </p>
+                <p>
+                    Elle peut être composée de :
+                </p>
+                <ul>
+                    <li>Le nom de la commande (<code>ls</code>, <code>cat</code>, <code>exit</code>).</li>
+                    <li>Des options qui modifient son comportement (<code>-l</code>, <code>-c</code>).</li>
+                    <li>Des arguments qui précisent sur quoi la commande doit agir (nom de fichiers, dossiers,
+                        processus, utilisateurs, etc.).</li>
+                </ul>
+                <p>Exemple :</p>
+                <pre>$ ls -l Documents</pre>
+                <p>
+                    Ici, <code>ls</code> est le nom de la commande, <code>-l</code> est une option pour afficher des
+                    détails supplémentaires, et <code>documents</code> est l’argument (le dossier sur lequel agir).
+                    L'état ou le resultat de la commande s'affichera sous la commande dans le terminal.
+                </p>
             </div>
+
 
         </section>
 
         <section>
             <h2>2. FAQ</h2>
-            <h3>Pourquoi Linux domine dans l'informatique professionnelle ?</h3>
+            <h3>Pourquoi Linux est largement utilisé dans l'informatique professionnelle ?</h3>
             <div class="box">
                 <ul>
-                    <li>gratuit et open source</li>
-                    <li>plus léger, rapide, et stable que Windows</li>
-                    <li>95% des serveurs utilisent Linux</li>
-                    <li>plus sécurisé que Windows, moins sujet aux virus et attaques</li>
-                    <li>Meilleur pour le respect de la vie privée</li>
+                    <li>gratuit, libre et open source</li>
+                    <li>plus léger, plus rapide, et plus stable que Windows</li>
+                    <li>La très grande majorité des serveurs dans le monde utilisent Linux</li>
+                    <li>généralement plus sécurisé que Windows, plus de contrôle, moins sujet aux virus et attaques</li>
+                    <li>Meilleur pour la protection de la vie privée, distributions spécialisées dans la privacy</li>
                 </ul>
             </div>
 
-            <h3>Pourquoi Windows est si populaire chez le grand public ?</h3>
+            <h3>Pourquoi Windows est-il si répandu auprès du grand public ?</h3>
             <div class="box">
                 <ul>
                     <li>préinstallé sur la plupart des ordinateurs</li>
                     <li>interface plus simple à utiliser</li>
-                    <li>énorme catalogue de logiciels</li>
-                    <li>support principal pour les logiciels communs</li>
+                    <li>énorme catalogue de logiciels, écosystème intégré et homogène</li>
+                    <li>standard professionnel dans beaucoup de domaines</li>
                     <li>support principal pour les jeux vidéo</li>
                 </ul>
             </div>
 
-            <h3>Pourquoi le terminal est plus efficace et rapide que l'interface graphique ?</h3>
+            <h3>Pourquoi utiliser le terminal plutôt qu’une interface graphique ?</h3>
             <div class="box">
                 <p>
                     Le terminal permet d'utiliser plusieurs milliers de commandes différentes
-                    et de les combiner entres elles.
+                    et de les combiner entre elles.
                 </p>
                 <p>
                     Les possibilités sont presque infinies,
-                    seule une petite partie de ces actions sont possibles via les interfaces graphiques.
+                    seule une petite partie de ces actions est possible via les interfaces graphiques.
                 </p>
 
                 <p>
-                    Un utilisateur de terminal sera généralement plus rapide, par exemple :
+                    Grâce au terminal, un utilisateur peut accomplir des tâches répétitives
+                    ou complexes en quelques secondes et les automatiser, voici quelques exemples :
                 </p>
 
-                Cette commande permet de compter le nombre de fois que le mot "bouton"
-                apparait dans tous les fichiers d'un dossier.
-                <pre>$ cat * | grep bouton | wc</pre>
+                <p>
+                    1. Compter combien de fois un mot apparaît dans tous les fichiers d’un dossier.
+                </p>
+                Cette commande compte le nombre de fois que le mot "bouton"
+                apparaît dans tous les fichiers d'un dossier.
+                <pre>$ grep -c "bouton" *</pre>
 
-                Cette commande créé d'un coup 290 dossiers, un pour chaque année de 2010 jusqu'à 2300.
-                <pre>$ mkdir {2010..2300}</pre>
+                <p>
+                    2. Créer rapidement plusieurs dossiers pour organiser des fichiers :
+                </p>
+                Cette commande crée 40 dossiers nommés "photos_1990" à "photos_2030" en une seule ligne.
+                <pre>$ mkdir photos_{1990..2030}</pre>
 
-                Cette commande supprime tous les fichiers d'un dossier.
-                <pre>$ rm *</pre>
+                <p>
+                    3. Copier, renommer ou déplacer en masse des fichiers :
+                </p>
+                Cette commande déplace tous les fichiers .txt dans le dossier "archive".
+                <pre>$ mv *.txt archive/</pre>
+
+                <p>
+                    4. Gérer des processus :
+                </p>
+                Cette commande ferme tous les processus dont le nom contient "firefox", même si ils sont freeze.
+                <pre>$ pkill -9 firefox</pre>
+            </div>
+
+            <h3>Comment utiliser un terminal Linux sous Windows ? (WSL)</h3>
+            <div class="box">
+                <p>
+                    Sous Windows, nous utilisons WSL (Windows Subsystem for Linux) pour disposer d’un terminal Linux.
+                    WSL permet d’exécuter un environnement Linux directement dans Windows, sans machine virtuelle.
+                    L'installation est simplifiée et offre les mêmes commandes et comportement que sur Linux.
+                    On peut ainsi profiter des avantages des deux systèmes.
+                </p>
             </div>
 
             <h3>Pourquoi apprendre le Bash ?</h3>
             <div class="box">
                 <p>
-                    Bash est le langage de script shell le plus utilisé sous Linux, il est présent sur presque tous les
+                    Bash est le langage de script shell le plus utilisé, il est présent sur presque tous les
                     systèmes et serveurs.
                 </p>
                 <p>
@@ -255,155 +299,57 @@
         <section>
             <h2>3. Quelques commandes linux bash</h2>
 
-    <table class="cheatsheet">
-        <thead>
-            <tr>
-                <th>Commande</th>
-                <th>Fonction</th>
-                <th>Exemple</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>pwd</td>
-                <td>Afficher le chemin du dossier courant</td>
-                <td><code>$ pwd</code></td>
-            </tr>
-            <tr>
-                <td>ls</td>
-                <td>Lister les fichiers et dossiers</td>
-                <td><code>$ ls -l</code></td>
-            </tr>
-            <tr>
-                <td>cd</td>
-                <td>Se déplacer dans un autre dossier</td>
-                <td><code>$ cd Documents</code></td>
-            </tr>
-            <tr>
-                <td>echo</td>
-                <td>Afficher du texte</td>
-                <td><code>$ echo "Bonjour"</code></td>
-            </tr>
-            <tr>
-                <td>cat</td>
-                <td>Afficher le contenu d’un fichier</td>
-                <td><code>$ cat fichier.txt</code></td>
-            </tr>
-            <tr>
-                <td>mkdir</td>
-                <td>Créer un dossier</td>
-                <td><code>$ mkdir projet</code></td>
-            </tr>
-            <tr>
-                <td>rm</td>
-                <td>Supprimer des fichiers ou dossiers</td>
-                <td><code>$ rm fichier.txt</code></td>
-            </tr>
-            <tr>
-                <td>grep</td>
-                <td>Rechercher un texte précis dans un fichier</td>
-                <td><code>$ grep "erreur" journal.log</code></td>
-            </tr>
-            <tr>
-                <td>man</td>
-                <td>Afficher le manuel d’une commande</td>
-                <td><code>$ man ls</code></td>
-            </tr>
-            <tr>
-                <td>exit</td>
-                <td>Quitter le terminal ou la session</td>
-                <td><code>$ exit</code></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="command-block">
-        <h3><code>pwd</code></h3>
-        <p>Affiche le chemin du dossier actuel dans lequel vous vous trouvez.</p>
-        <pre>
+            <div class="command-block">
+                <h3><code>pwd</code></h3>
+                <p>Affiche le chemin du dossier actuel dans lequel vous vous trouvez.</p>
+                <pre>
 $ pwd
 /home/utilisateur/Documents
         </pre>
-    </div>
+            </div>
 
-    <div class="command-block">
-        <h3><code>ls</code></h3>
-        <p>Liste les fichiers et dossiers présents dans le dossier courant (ou vous vous trouvez).</p>
-        <pre>
+            <div class="command-block">
+                <h3><code>ls</code></h3>
+                <p>Liste les fichiers et dossiers présents dans le dossier courant (ou vous vous trouvez).</p>
+                <pre>
 $ ls
 Documents  Téléchargements  script.sh  image.png
         </pre>
-    </div>
+            </div>
 
-    <div class="command-block">
-        <h3><code>cd</code></h3>
-        <p>Permet de se déplacer dans un autre dossier. Exemple : aller dans "Documents".</p>
-        <pre>
+            <div class="command-block">
+                <h3><code>cd</code></h3>
+                <p>Permet de se déplacer dans un autre dossier. Exemple : aller dans "Documents".</p>
+                <pre>
 $ cd Documents
         </pre>
-    </div>
+            </div>
 
-    <div class="command-block">
-        <h3><code>echo</code></h3>
-        <p>Affiche du texte dans le terminal.</p>
-        <pre>
-$ echo "Bonjour Linux"
-Bonjour Linux
-        </pre>
-    </div>
-
-    <div class="command-block">
-        <h3><code>cat</code></h3>
-        <p>Affiche le contenu d'un fichier texte dans le terminal.</p>
-        <pre>
-$ cat fichier.txt
-Ceci est le contenu du fichier.
-        </pre>
-    </div>
-
-    <div class="command-block">
-        <h3><code>mkdir</code></h3>
-        <p>Crée un nouveau dossier. Exemple : créer un dossier "projet".</p>
-        <pre>
+            <div class="command-block">
+                <h3><code>mkdir</code></h3>
+                <p>Crée un nouveau dossier. Exemple : créer un dossier "projet".</p>
+                <pre>
 $ mkdir projet
         </pre>
-    </div>
+            </div>
 
-    <div class="command-block">
-        <h3><code>rm</code></h3>
-        <p>Supprime des fichiers ou dossiers (attention : suppression définitive).</p>
-        <pre>
+            <div class="command-block">
+                <h3><code>touch</code></h3>
+                <p>Crée un nouveau fichier vide. Exemple : créer un fichier "monsite.html".</p>
+                <pre>
+$ touch monsite.html
+        </pre>
+            </div>
+
+            <div class="command-block">
+                <h3><code>rm</code></h3>
+                <p>Supprime des fichiers ou dossiers (attention : suppression définitive).</p>
+                <pre>
 $ rm fichier.txt
-$ rm -r dossier
         </pre>
-    </div>
+            </div>
 
-    <div class="command-block">
-        <h3><code>grep</code></h3>
-        <p>Recherche une chaîne de texte précise dans un fichier.</p>
-        <pre>
-$ grep "erreur" journal.log
-Ligne 23 : erreur détectée
-        </pre>
-    </div>
-
-    <div class="command-block">
-        <h3><code>man</code></h3>
-        <p>Affiche le manuel d’une commande pour obtenir de l’aide.</p>
-        <pre>
-$ man ls
-        </pre>
-    </div>
-
-    <div class="command-block">
-        <h3><code>exit</code></h3>
-        <p>Quitte le terminal ou la session en cours.</p>
-        <pre>
-$ exit
-        </pre>
-    </div>
-
-</section>
+        </section>
 
     </main>
 
