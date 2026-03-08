@@ -22,11 +22,23 @@
     }
 }
 
+#cnt-items-list {
+    grid-template-columns: 1fr;
+}
+
 .domain-row {
     display: flex;
     align-items: center;
     gap: 6px;
     margin-bottom: 4px;
+    flex-direction: row;
+}
+
+.domain-row-vert {
+    flex-direction: column !important;
+    align-items: flex-start;
+    border-top: 1px dashed #555;
+    padding-block: 10px;
 }
 
 .item-tag {

@@ -174,14 +174,21 @@ function createHabitTracker() {
     const habit_grid = document.getElementById("habit-grid");
     const sumtext = document.getElementById("habit-sum-text");
 
-    // sum des items only
+    // sum des items (habit data)
     {
         const ivs = Object.values(habit_data).filter(v => v > 0).sort((a, b) => a - b);
         const sum = ivs.reduce((acc, curr) => acc + curr, 0);
-        sumtext.textContent = sum + " items révisés sur l'année glissante";
+        sumtext.textContent = sum + " items révisés et ";
     }
 
-    // Calcul des seuils (quartiles) (combined = items + others)
+    // sum des pratiques (habit data 2)
+    {
+        const ivs = Object.values(habit_data_2).filter(v => v > 0).sort((a, b) => a - b);
+        const sum = ivs.reduce((acc, curr) => acc + curr, 0);
+        sumtext.textContent += sum + " pratiques effectuées sur l'année glissante";
+    }
+
+    // Calcul des seuils (quartiles) (combined = items + others(pratiques))
     const combined = mergeDicts_strict(habit_data, habit_data_2);
     const cvs = Object.values(combined).filter(v => v > 0).sort((a, b) => a - b);
     const q = p => cvs[Math.floor(cvs.length * p)] || 0;
@@ -218,7 +225,7 @@ function createHabitTracker() {
             cell.dataset.level = level;
             const value_items = habit_data[key] ?? 0;
             const value_others = habit_data_2[key] ?? 0;
-            cell.title = `${key}\n${value_items} items\n${value_others} others`;
+            cell.title = `${key}\n${value_items} items\n${value_others} pratiques`;
             cell.style.animationDelay = `${(371 - k * 7 + i) * 9}ms`;
             col.prepend(cell);
 

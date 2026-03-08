@@ -1,0 +1,125 @@
+{
+  "seed": 54813874,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P4",
+      "label": "Voisin",
+      "type": "person"
+    }
+  ],
+  "edges": [],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-03 07:14",
+      "event": "Perte importante d'argent liée à des dettes personnelles",
+      "location": "Rue",
+      "elements": [
+        "licenciement",
+        "humiliation professionnelle"
+      ],
+      "causes": [],
+      "text": "Licenciement après plusieurs avertissements disciplinaires",
+      "prep_bias": 0.7
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-05 05:15",
+      "event": "Dispute verbale violente avec la victime",
+      "location": "Entrepôt",
+      "elements": [
+        "menaces",
+        "hausse du ton"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "direct",
+      "text": "Dispute verbale violente avec la victime"
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-05 07:11",
+      "event": "Récupération d'un objet potentiellement dangereux",
+      "location": "Rue",
+      "elements": [
+        "objet contondant"
+      ],
+      "causes": [
+        1
+      ],
+      "text": "Récupération d'un objet potentiellement dangereux",
+      "requires_time": false
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-06 02:28",
+      "event": "Agression mortelle par surprise",
+      "location": "Entrepôt",
+      "elements": [
+        "violence",
+        "mort"
+      ],
+      "causes": [
+        2
+      ],
+      "style": "impulsif",
+      "text": "Altercation dégénérant en homicide"
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-06 04:44",
+      "event": "Retour au domicile et tentative de dissimulation",
+      "location": "Rue",
+      "elements": [
+        "déplacement",
+        "panique"
+      ],
+      "causes": [
+        3
+      ],
+      "coherence": "très faible",
+      "text": "Tentative de fuite immédiate"
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-06 06:35",
+      "event": "Un voisin alerte la police après avoir entendu des cris",
+      "location": "Appartement",
+      "elements": [
+        "porte ouverte",
+        "corps visible"
+      ],
+      "causes": [
+        3
+      ],
+      "text": "Découverte fortuite lors d'un passage imprévu",
+      "delay_minutes": [
+        30,
+        720
+      ]
+    },
+    {
+      "id": 6,
+      "type": "enquete",
+      "time": "2026-01-06 07:47",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Appartement",
+      "elements": [],
+      "causes": [
+        5
+      ]
+    }
+  ]
+}

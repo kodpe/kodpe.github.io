@@ -1,0 +1,3153 @@
+[
+    {
+        "item": "1",
+        "description": "La relation médecin-malade dans le cadre du colloque singulier ou au sein d'une équipe, le cas échéant pluriprofessionnelle. La communication avec le patient et son entourage. L'annonce d'une maladie grave ou létale ou d'un dommage associé aux soins. La formation du patient. La personnalisation de la prise en charge médicale",
+        "codes": [
+            "Psy",
+            "MI"
+        ]
+    },
+    {
+        "item": "2",
+        "description": "Les valeurs professionnelles du médecin et des autres professions de santé",
+        "codes": [
+            "MI"
+        ]
+    },
+    {
+        "item": "3",
+        "description": "Le raisonnement et la décision en médecine. La médecine fondée sur les preuves (Evidence Based Medicine, EBM). La décision médicale partagée. La controverse",
+        "codes": [
+            "SP",
+            "MI"
+        ]
+    },
+    {
+        "item": "4",
+        "description": "Qualité et sécurité des soins. La sécurité du patient. La gestion des risques. Les événements indésirables associés aux soins (EIAS). Démarche qualité et évaluation des pratiques professionnelles",
+        "codes": [
+            "SP",
+            "Inf",
+            "AR",
+            "MIR"
+        ]
+    },
+    {
+        "item": "5",
+        "description": "La gestion des erreurs et des plaintes ; l'aléa thérapeutique",
+        "codes": [
+            "SP",
+            "MTL",
+            "MIR"
+        ]
+    },
+    {
+        "item": "6",
+        "description": "L'organisation de l'exercice clinique et les méthodes qui permettent de sécuriser le parcours du patient",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "7",
+        "description": "Les droits individuels et collectifs du patient",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "8",
+        "description": "Les discriminations",
+        "codes": [
+            "SP",
+            "MG"
+        ]
+    },
+    {
+        "item": "9",
+        "description": "Introduction à l’éthique médicale",
+        "codes": [
+            "MTL",
+            "Gér",
+            "GO",
+            "AR",
+            "MPR",
+            "MG"
+        ]
+    },
+    {
+        "item": "10",
+        "description": "Approches transversales du corps",
+        "codes": []
+    },
+    {
+        "item": "11",
+        "description": "Violences et santé",
+        "codes": [
+            "MTL",
+            "MG"
+        ]
+    },
+    {
+        "item": "12",
+        "description": "Violences sexuelles",
+        "codes": [
+            "MTL",
+            "GO"
+        ]
+    },
+    {
+        "item": "13",
+        "description": "Certificats médicaux. Décès et législation",
+        "codes": [
+            "MTL",
+            "Ped"
+        ]
+    },
+    {
+        "item": "14",
+        "description": "La mort",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "15",
+        "description": "Soins psychiatriques sans consentement",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "16",
+        "description": "Organisation du système de soins. Sa régulation. Les indicateurs. Parcours de soins",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "17",
+        "description": "Télémédecine, télésanté et téléservices en santé",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "18",
+        "description": "Santé et numérique",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "19",
+        "description": "La sécurité sociale. L'assurance maladie. Les assurances complémentaires. La complémentaire santé solidaire (CSS). La consommation médicale. Protection sociale. Consommation médicale et économie de la santé",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "20",
+        "description": "La méthodologie de la recherche en santé",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "21",
+        "description": "Mesure de l'état de santé de la population",
+        "codes": [
+            "SP",
+            "MPR"
+        ]
+    },
+    {
+        "item": "22",
+        "description": "Maladies rares",
+        "codes": [
+            "MI",
+            "Gén"
+        ]
+    },
+    {
+        "item": "23",
+        "description": "Grossesse normale",
+        "codes": [
+            "GO",
+            "Nép",
+            "MG"
+        ]
+    },
+    {
+        "item": "24",
+        "description": "Principales complications de la grossesse",
+        "codes": [
+            "GO",
+            "Nép"
+        ]
+    },
+    {
+        "item": "25",
+        "description": "Grossesse extra-utérine",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "26",
+        "description": "Douleur abdominale aiguë chez une femme enceinte",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "27",
+        "description": "Prévention des risques fœtaux : infection, médicaments, toxiques, irradiation",
+        "codes": [
+            "GO",
+            "Inf",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "28",
+        "description": "Connaître les particularités de l'infection urinaire au cours de la grossesse",
+        "codes": [
+            "GO",
+            "Inf"
+        ]
+    },
+    {
+        "item": "29",
+        "description": "Connaître les principaux risques professionnels pour la maternité, liés au travail de la mère",
+        "codes": [
+            "GO",
+            "MTL"
+        ]
+    },
+    {
+        "item": "30",
+        "description": "Prématurité et retard de croissance intra-utérin : facteurs de risque et prévention",
+        "codes": [
+            "GO",
+            "Ped"
+        ]
+    },
+    {
+        "item": "31",
+        "description": "Accouchement, délivrance et suites de couches normales",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "32",
+        "description": "Évaluation et soins du nouveau-né à terme",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "33",
+        "description": "Allaitement maternel",
+        "codes": [
+            "GO",
+            "Ped",
+            "Nut",
+            "MG"
+        ]
+    },
+    {
+        "item": "34",
+        "description": "Suites de couches pathologiques : pathologie maternelle dans les 40 jours",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "35",
+        "description": "Anomalies du cycle menstruel. Métrorragies",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "36",
+        "description": "Contraception",
+        "codes": [
+            "GO",
+            "Thé",
+            "End",
+            "Uro",
+            "MG"
+        ]
+    },
+    {
+        "item": "37",
+        "description": "Interruption volontaire de grossesse",
+        "codes": [
+            "GO",
+            "MG"
+        ]
+    },
+    {
+        "item": "38",
+        "description": "Infertilité du couple : conduite de la première consultation",
+        "codes": [
+            "GO",
+            "End",
+            "Uro"
+        ]
+    },
+    {
+        "item": "39",
+        "description": "Assistance médicale à la procréation : principaux aspects biologiques, médicaux et éthiques",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "40",
+        "description": "Algies pelviennes chez la femme",
+        "codes": [
+            "GO",
+            "Uro"
+        ]
+    },
+    {
+        "item": "41",
+        "description": "Endométriose",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "42",
+        "description": "Aménorrhée",
+        "codes": [
+            "GO",
+            "End"
+        ]
+    },
+    {
+        "item": "43",
+        "description": "Hémorragie génitale chez la femme",
+        "codes": [
+            "GO"
+        ]
+    },
+    {
+        "item": "44",
+        "description": "Tuméfaction pelvienne chez la femme",
+        "codes": [
+            "GO",
+            "Uro",
+            "CD"
+        ]
+    },
+    {
+        "item": "45",
+        "description": "Spécificités des maladies génétiques",
+        "codes": [
+            "Ped",
+            "Gén"
+        ]
+    },
+    {
+        "item": "46",
+        "description": "Médecine génomique",
+        "codes": [
+            "Gén"
+        ]
+    },
+    {
+        "item": "47",
+        "description": "Suivi d'un nourrisson, d'un enfant et d'un adolescent normal. Dépistage des anomalies orthopédiques, des troubles visuels, auditifs et dentaires. Examens de santé obligatoires. Médecine scolaire. Mortalité et morbidité infantiles",
+        "codes": [
+            "Ped",
+            "CMF",
+            "Oph",
+            "OT",
+            "ORL",
+            "MG"
+        ]
+    },
+    {
+        "item": "48",
+        "description": "Alimentation et besoins nutritionnels du nourrisson et de l'enfant",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "49",
+        "description": "Puberté normale et pathologique",
+        "codes": [
+            "Ped",
+            "GO",
+            "MG"
+        ]
+    },
+    {
+        "item": "50",
+        "description": "Pathologie génito-scrotale chez le garçon et chez l'homme",
+        "codes": [
+            "Ped",
+            "Uro",
+            "End"
+        ]
+    },
+    {
+        "item": "51",
+        "description": "Troubles de la miction chez l'enfant",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "52",
+        "description": "Strabisme et amblyopie de l'enfant",
+        "codes": [
+            "Ped",
+            "Oph"
+        ]
+    },
+    {
+        "item": "53",
+        "description": "Retard de croissance staturo-pondérale",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "54",
+        "description": "Boiterie chez l'enfant",
+        "codes": [
+            "Ped",
+            "OT",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "55",
+        "description": "Développement psychomoteur du nourrisson et de l'enfant",
+        "codes": [
+            "Ped",
+            "Psy",
+            "MG"
+        ]
+    },
+    {
+        "item": "56",
+        "description": "L'enfant handicapé : orientation et prise en charge",
+        "codes": [
+            "Ped",
+            "MPR",
+            "ORL"
+        ]
+    },
+    {
+        "item": "57",
+        "description": "Maltraitance et enfants en danger. Protection maternelle et infantile",
+        "codes": [
+            "Ped",
+            "MTL"
+        ]
+    },
+    {
+        "item": "58",
+        "description": "Sexualité normale et ses troubles",
+        "codes": [
+            "Psy",
+            "GO",
+            "Uro"
+        ]
+    },
+    {
+        "item": "59",
+        "description": "Sujets en situation de précarité",
+        "codes": [
+            "Psy",
+            "Ped",
+            "SP",
+            "MI"
+        ]
+    },
+    {
+        "item": "60",
+        "description": "Connaître les facteurs de risque, prévention, dépistage des troubles psychiques de l'enfant à la personne âgée",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "61",
+        "description": "Connaître les bases des classifications des troubles mentaux de l'enfant à la personne âgée",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "62",
+        "description": "Décrire l'organisation de l'offre de soins en psychiatrie, de l'enfant à la personne âgée",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "63",
+        "description": "Trouble schizophrénique",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "64",
+        "description": "Trouble bipolaire",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "65",
+        "description": "Trouble délirant persistant",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "66",
+        "description": "Diagnostiquer : un trouble dépressif, un trouble anxieux généralisé, un trouble panique, un trouble phobique, un trouble obsessionnel compulsif, un état de stress post-traumatique, un trouble de l'adaptation (de l'enfant à la personne âgée), un trouble de la personnalité",
+        "codes": [
+            "Psy",
+            "MG"
+        ]
+    },
+    {
+        "item": "67",
+        "description": "Troubles envahissants du développement",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "68",
+        "description": "Troubles du comportement de l'adolescent",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "69",
+        "description": "Troubles psychiques de la grossesse et du post-partum",
+        "codes": [
+            "Psy",
+            "GO"
+        ]
+    },
+    {
+        "item": "70",
+        "description": "Troubles psychiques du sujet âgé",
+        "codes": [
+            "Psy",
+            "Gér"
+        ]
+    },
+    {
+        "item": "71",
+        "description": "Troubles des conduites alimentaires chez l'adolescent et l'adulte",
+        "codes": [
+            "Psy",
+            "Ped",
+            "Nut"
+        ]
+    },
+    {
+        "item": "72",
+        "description": "Troubles à symptomatologie somatique et apparentés à tous les âges",
+        "codes": [
+            "Psy",
+            "DSP",
+            "MI",
+            "MG"
+        ]
+    },
+    {
+        "item": "73",
+        "description": "Différents types de techniques psychothérapeutiques",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "74",
+        "description": "Prescription et surveillance des psychotropes",
+        "codes": [
+            "Psy",
+            "Thé",
+            "Gér",
+            "MG"
+        ]
+    },
+    {
+        "item": "75",
+        "description": "Addiction au tabac",
+        "codes": [
+            "Psy",
+            "SP",
+            "Pne",
+            "MG"
+        ]
+    },
+    {
+        "item": "76",
+        "description": "Addiction à l'alcool",
+        "codes": [
+            "Psy",
+            "SP",
+            "Neu",
+            "MG"
+        ]
+    },
+    {
+        "item": "77",
+        "description": "Addiction aux médicaments psychotropes (benzodiazépines et apparentés)",
+        "codes": [
+            "Psy",
+            "SP"
+        ]
+    },
+    {
+        "item": "78",
+        "description": "Addiction au cannabis, à la cocaïne, aux amphétamines, aux opiacés, aux drogues de synthèse",
+        "codes": [
+            "Psy",
+            "SP"
+        ]
+    },
+    {
+        "item": "79",
+        "description": "Addictions comportementales",
+        "codes": [
+            "Psy",
+            "SP",
+            "MG"
+        ]
+    },
+    {
+        "item": "80",
+        "description": "Dopage et conduites dopantes",
+        "codes": [
+            "Psy",
+            "MG"
+        ]
+    },
+    {
+        "item": "81",
+        "description": "Altération chronique de la vision",
+        "codes": [
+            "Oph",
+            "Gér"
+        ]
+    },
+    {
+        "item": "82",
+        "description": "Altération aiguë de la vision",
+        "codes": [
+            "Oph",
+            "Neu"
+        ]
+    },
+    {
+        "item": "83",
+        "description": "Infections et inflammations oculaires",
+        "codes": [
+            "Oph"
+        ]
+    },
+    {
+        "item": "84",
+        "description": "Glaucomes",
+        "codes": [
+            "Oph"
+        ]
+    },
+    {
+        "item": "85",
+        "description": "Troubles de la réfraction",
+        "codes": [
+            "Oph"
+        ]
+    },
+    {
+        "item": "86",
+        "description": "Pathologie des paupières",
+        "codes": [
+            "Oph"
+        ]
+    },
+    {
+        "item": "87",
+        "description": "Epistaxis",
+        "codes": [
+            "ORL"
+        ]
+    },
+    {
+        "item": "88",
+        "description": "Trouble aigu de la parole. Dysphonie",
+        "codes": [
+            "ORL",
+            "Neu"
+        ]
+    },
+    {
+        "item": "89",
+        "description": "Altération de la fonction auditive",
+        "codes": [
+            "ORL",
+            "Ped",
+            "Gér"
+        ]
+    },
+    {
+        "item": "90",
+        "description": "Pathologie des glandes salivaires",
+        "codes": [
+            "ORL",
+            "CMF"
+        ]
+    },
+    {
+        "item": "91",
+        "description": "Déficit neurologique récent",
+        "codes": [
+            "Neu"
+        ]
+    },
+    {
+        "item": "92",
+        "description": "Déficit moteur et/ou sensitif des membres",
+        "codes": [
+            "Neu"
+        ]
+    },
+    {
+        "item": "93",
+        "description": "Compression médullaire non traumatique et syndrome de la queue de cheval",
+        "codes": [
+            "Neu",
+            "NC",
+            "Rhu",
+            "OT",
+            "MPR"
+        ]
+    },
+    {
+        "item": "94",
+        "description": "Rachialgie",
+        "codes": [
+            "Rhu",
+            "OT",
+            "MPR",
+            "DSP",
+            "MG"
+        ]
+    },
+    {
+        "item": "95",
+        "description": "Radiculalgie et syndrome canalaire",
+        "codes": [
+            "Neu",
+            "NC",
+            "Rhu",
+            "OT",
+            "DSP"
+        ]
+    },
+    {
+        "item": "96",
+        "description": "Neuropathies périphériques",
+        "codes": [
+            "Neu"
+        ]
+    },
+    {
+        "item": "97",
+        "description": "Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)",
+        "codes": [
+            "Neu",
+            "MIR"
+        ]
+    },
+    {
+        "item": "98",
+        "description": "Myasthénie",
+        "codes": [
+            "Neu",
+            "MIR"
+        ]
+    },
+    {
+        "item": "99",
+        "description": "Migraine, névralgie du trijumeau et algies de la face",
+        "codes": [
+            "Neu",
+            "NC",
+            "CMF",
+            "DSP",
+            "MG"
+        ]
+    },
+    {
+        "item": "100",
+        "description": "Céphalée inhabituelle aiguë et chronique chez l'adulte et l'enfant",
+        "codes": [
+            "Neu",
+            "DSP",
+            "Ped"
+        ]
+    },
+    {
+        "item": "101",
+        "description": "Paralysie faciale",
+        "codes": [
+            "Neu",
+            "CMF",
+            "ORL"
+        ]
+    },
+    {
+        "item": "102",
+        "description": "Diplopie",
+        "codes": [
+            "Neu",
+            "Oph"
+        ]
+    },
+    {
+        "item": "103",
+        "description": "Vertige",
+        "codes": [
+            "Neu",
+            "ORL"
+        ]
+    },
+    {
+        "item": "104",
+        "description": "Sclérose en plaques",
+        "codes": [
+            "Neu",
+            "MPR",
+            "Oph"
+        ]
+    },
+    {
+        "item": "105",
+        "description": "Épilepsie de l'enfant et de l'adulte",
+        "codes": [
+            "Neu",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "106",
+        "description": "Maladie de Parkinson",
+        "codes": [
+            "Neu",
+            "MPR"
+        ]
+    },
+    {
+        "item": "107",
+        "description": "Mouvements anormaux",
+        "codes": [
+            "Neu"
+        ]
+    },
+    {
+        "item": "108",
+        "description": "Confusion, démences",
+        "codes": [
+            "Neu",
+            "Gér",
+            "MIR"
+        ]
+    },
+    {
+        "item": "109",
+        "description": "Troubles de la marche et de l'équilibre",
+        "codes": [
+            "Neu",
+            "MPR",
+            "Gér",
+            "ORL",
+            "Rhu",
+            "MG"
+        ]
+    },
+    {
+        "item": "110",
+        "description": "Troubles du sommeil de l'enfant et de l'adulte",
+        "codes": [
+            "Neu",
+            "Psy",
+            "Pne",
+            "ORL",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "111",
+        "description": "Dermatoses faciales : acné, rosacée, dermatite séborrhéique",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "112",
+        "description": "Dermatose bulleuse touchant la peau et/ou les muqueuses externes",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "113",
+        "description": "Hémangiomes et malformations vasculaires cutanées",
+        "codes": [
+            "Der",
+            "CMF"
+        ]
+    },
+    {
+        "item": "114",
+        "description": "Exanthème et érythrodermie de l'adulte et de l'enfant",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "115",
+        "description": "Toxidermies",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "116",
+        "description": "Prurit",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "117",
+        "description": "Psoriasis",
+        "codes": [
+            "Der",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "118",
+        "description": "La personne handicapée : bases de l'évaluation fonctionnelle et thérapeutique",
+        "codes": [
+            "MPR",
+            "Neu",
+            "ORL"
+        ]
+    },
+    {
+        "item": "119",
+        "description": "Soin et accompagnement dans la maladie chronique et le handicap",
+        "codes": [
+            "MG"
+        ]
+    },
+    {
+        "item": "120",
+        "description": "Complications de l'immobilité et du décubitus. Prévention et prise en charge",
+        "codes": [
+            "MPR",
+            "Gér"
+        ]
+    },
+    {
+        "item": "121",
+        "description": "Le handicap psychique",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "122",
+        "description": "Principales techniques de rééducation et de réadaptation",
+        "codes": [
+            "MPR",
+            "ORL"
+        ]
+    },
+    {
+        "item": "123",
+        "description": "Vieillissement normal : aspects biologiques, fonctionnels et relationnels. Données épidémiologiques et sociologiques. Prévention du vieillissement pathologique",
+        "codes": [
+            "Gér",
+            "MG"
+        ]
+    },
+    {
+        "item": "124",
+        "description": "Ménopause, insuffisance ovarienne prématurée, andropause, déficit androgénique lié à l’âge",
+        "codes": [
+            "GO",
+            "Uro",
+            "End",
+            "Thé"
+        ]
+    },
+    {
+        "item": "125",
+        "description": "Troubles de la miction et incontinence urinaire de l'adulte et du sujet âgé",
+        "codes": [
+            "Uro",
+            "Gér",
+            "MPR"
+        ]
+    },
+    {
+        "item": "126",
+        "description": "Trouble de l'érection",
+        "codes": [
+            "Uro",
+            "End"
+        ]
+    },
+    {
+        "item": "127",
+        "description": "Hypertrophie bénigne de la prostate",
+        "codes": [
+            "Uro"
+        ]
+    },
+    {
+        "item": "128",
+        "description": "Ostéopathies fragilisantes",
+        "codes": [
+            "Gér",
+            "Rhu",
+            "End"
+        ]
+    },
+    {
+        "item": "129",
+        "description": "Arthrose",
+        "codes": [
+            "Gér",
+            "Rhu",
+            "MPR"
+        ]
+    },
+    {
+        "item": "130",
+        "description": "La personne âgée malade : particularités sémiologiques, psychologiques et thérapeutiques",
+        "codes": [
+            "Gér"
+        ]
+    },
+    {
+        "item": "131",
+        "description": "Troubles de la marche et de l'équilibre",
+        "codes": [
+            "Gér",
+            "Rhu",
+            "Neu"
+        ]
+    },
+    {
+        "item": "132",
+        "description": "Troubles cognitifs du sujet âgé",
+        "codes": [
+            "Gér",
+            "Neu",
+            "MG"
+        ]
+    },
+    {
+        "item": "133",
+        "description": "Autonomie et dépendance chez le sujet âgé",
+        "codes": [
+            "Gér",
+            "MG"
+        ]
+    },
+    {
+        "item": "134",
+        "description": "Bases neurophysiologiques, mécanismes physiopathologiques d'une douleur aiguë et d'une douleur chronique",
+        "codes": [
+            "DSP",
+            "Neu",
+            "NC",
+            "AR",
+            "Gér",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "135",
+        "description": "Thérapeutiques antalgiques, médicamenteuses et non médicamenteuses",
+        "codes": [
+            "DSP",
+            "Thé",
+            "NC",
+            "AR",
+            "MIR",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "136",
+        "description": "Anesthésie locale, locorégionale et générale",
+        "codes": [
+            "DSP",
+            "AR"
+        ]
+    },
+    {
+        "item": "137",
+        "description": "Douleur chez l'enfant : évaluation et traitements antalgiques",
+        "codes": [
+            "DSP",
+            "Ped"
+        ]
+    },
+    {
+        "item": "138",
+        "description": "Douleur chez la personne vulnérable",
+        "codes": [
+            "DSP",
+            "Psy"
+        ]
+    },
+    {
+        "item": "139",
+        "description": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (1). Principaux repères cliniques. Modalités d'organisation des équipes, en établissement de santé et en et en ambulatoire",
+        "codes": [
+            "DSP",
+            "Gér",
+            "MG"
+        ]
+    },
+    {
+        "item": "140",
+        "description": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (2). Accompagnement de la personne malade et de son entourage. Principaux repères éthiques",
+        "codes": [
+            "DSP",
+            "Gér"
+        ]
+    },
+    {
+        "item": "141",
+        "description": "Soins palliatifs pluridisciplinaires chez un malade en phase palliative ou terminale d'une maladie grave, chronique ou létale (3). La sédation pour détresse en phase terminale et dans des situations spécifiques et complexes en fin de vie. Réponse à la demande d'euthanasie ou de suicide assisté",
+        "codes": [
+            "DSP",
+            "Gér"
+        ]
+    },
+    {
+        "item": "142",
+        "description": "Connaître les aspects spécifiques des soins palliatifs en pédiatrie",
+        "codes": [
+            "DSP",
+            "Ped"
+        ]
+    },
+    {
+        "item": "143",
+        "description": "Connaître les aspects spécifiques des soins palliatifs en réanimation",
+        "codes": [
+            "DSP",
+            "AR",
+            "MIR"
+        ]
+    },
+    {
+        "item": "144",
+        "description": "Deuil normal et pathologique",
+        "codes": [
+            "Psy",
+            "MG"
+        ]
+    },
+    {
+        "item": "145",
+        "description": "Surveillance des maladies infectieuses transmissibles",
+        "codes": [
+            "Inf",
+            "SP",
+            "MG"
+        ]
+    },
+    {
+        "item": "146",
+        "description": "Vaccinations",
+        "codes": [
+            "Inf",
+            "SP",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "147",
+        "description": "Fièvre aiguë chez l'enfant et l'adulte",
+        "codes": [
+            "Inf",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "148",
+        "description": "Infections naso-sinusiennes de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "ORL",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "149",
+        "description": "Angines de l'adulte et de l'enfant et rhinopharyngites de l'enfant",
+        "codes": [
+            "Inf",
+            "ORL",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "150",
+        "description": "Otites infectieuses de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "ORL",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "151",
+        "description": "Méningites, méningoencéphalites, abcès cérébral chez l'adulte et l'enfant",
+        "codes": [
+            "Inf",
+            "Neu",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "152",
+        "description": "Endocardite infectieuse",
+        "codes": [
+            "Inf",
+            "MCV",
+            "MIR",
+            "MI"
+        ]
+    },
+    {
+        "item": "153",
+        "description": "Surveillance des porteurs de valve et prothèses vasculaires",
+        "codes": [
+            "Inf",
+            "MCV"
+        ]
+    },
+    {
+        "item": "154",
+        "description": "Infections broncho pulmonaires communautaires de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "Pne",
+            "MIR",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "155",
+        "description": "Infections cutanéo-muqueuses et des phanères, bactériennes et mycosiques de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "Der",
+            "CMF",
+            "AR",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "156",
+        "description": "Infections ostéo articulaires (IOA) de l'enfant et de l'adulte",
+        "codes": [
+            "Inf",
+            "Rhu",
+            "OT",
+            "Ped"
+        ]
+    },
+    {
+        "item": "157",
+        "description": "Septicémie/Bactériémie/Fongémie de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "AR",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "158",
+        "description": "Sepsis et choc septique de l’enfant et de l’adulte",
+        "codes": [
+            "AR",
+            "MIR"
+        ]
+    },
+    {
+        "item": "159",
+        "description": "Tuberculose de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "Pne",
+            "Ped"
+        ]
+    },
+    {
+        "item": "160",
+        "description": "Tétanos",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "161",
+        "description": "Infections urinaires de l'enfant et de l'adulte",
+        "codes": [
+            "Inf",
+            "Uro",
+            "Nép",
+            "MIR",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "162",
+        "description": "Infections sexuellement transmissibles (IST) : gonococcies, chlamydioses, syphilis, papillomavirus humain (HPV), trichomonose",
+        "codes": [
+            "Inf",
+            "GO",
+            "Der",
+            "MG"
+        ]
+    },
+    {
+        "item": "163",
+        "description": "Coqueluche",
+        "codes": [
+            "Inf",
+            "Ped"
+        ]
+    },
+    {
+        "item": "164",
+        "description": "Exanthèmes fébriles de l'enfant",
+        "codes": [
+            "Der",
+            "Ped"
+        ]
+    },
+    {
+        "item": "165",
+        "description": "Oreillons",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "166",
+        "description": "Grippe",
+        "codes": [
+            "Inf",
+            "MG"
+        ]
+    },
+    {
+        "item": "167",
+        "description": "Hépatites virales",
+        "codes": [
+            "Inf",
+            "HGE",
+            "MIR"
+        ]
+    },
+    {
+        "item": "168",
+        "description": "Infections à herpès virus du sujet immunocompétent",
+        "codes": [
+            "Inf",
+            "Der",
+            "Neu",
+            "CMF",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "169",
+        "description": "Infections à VIH",
+        "codes": [
+            "Inf",
+            "Der",
+            "Neu",
+            "Ped"
+        ]
+    },
+    {
+        "item": "170",
+        "description": "Paludisme",
+        "codes": [
+            "Inf",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "171",
+        "description": "Gale et pédiculose",
+        "codes": [
+            "Inf",
+            "Der"
+        ]
+    },
+    {
+        "item": "172",
+        "description": "Parasitoses digestives : giardiose, amoebose, téniasis, ascaridiose, oxyurose, anguillulose, cryptosporidiose",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "173",
+        "description": "Zoonoses",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "174",
+        "description": "Pathologie infectieuse chez les migrants adultes et enfants",
+        "codes": [
+            "Inf",
+            "Ped"
+        ]
+    },
+    {
+        "item": "175",
+        "description": "Voyage en pays tropical de l'adulte et de l'enfant : conseils avant le départ, pathologies du retour : fièvre, diarrhée, manifestations cutanées",
+        "codes": [
+            "Inf",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "176",
+        "description": "Diarrhées infectieuses de l'adulte et de l'enfant",
+        "codes": [
+            "Inf",
+            "Ped",
+            "SP"
+        ]
+    },
+    {
+        "item": "177",
+        "description": "Prescription et surveillance des anti-infectieux chez l'adulte et l'enfant",
+        "codes": [
+            "Thé",
+            "Inf",
+            "MIR",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "178",
+        "description": "Risques émergents, bioterrorisme, maladies hautement transmissibles",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "179",
+        "description": "Risques sanitaires liés à l'eau et à l'alimentation. Toxi-infections alimentaires",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "180",
+        "description": "Risques sanitaires liés aux irradiations. Radioprotection",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "181",
+        "description": "La sécurité sanitaire des produits destinés à l'homme. La veille sanitaire",
+        "codes": [
+            "SP"
+        ]
+    },
+    {
+        "item": "182",
+        "description": "Environnement professionnel et santé au travail",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "183",
+        "description": "Organisation de la médecine du travail. Prévention des risques professionnels",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "184",
+        "description": "Accidents du travail et maladies professionnelles : définitions et enjeux",
+        "codes": [
+            "MTL"
+        ]
+    },
+    {
+        "item": "185",
+        "description": "Réaction inflammatoire : aspects biologiques et cliniques. Conduite à tenir",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MI"
+        ]
+    },
+    {
+        "item": "186",
+        "description": "Hypersensibilités et allergies chez l'enfant et l'adulte : aspects physiopathologiques, épidémiologiques, diagnostiques et principes de traitement",
+        "codes": [
+            "Imm",
+            "Pne",
+            "MTL",
+            "Ped"
+        ]
+    },
+    {
+        "item": "187",
+        "description": "Hypersensibilités et allergies cutanéomuqueuses chez l'enfant et l'adulte. Urticaire, dermatites atopique et de contact, conjonctivite allergique",
+        "codes": [
+            "Imm",
+            "Der",
+            "Oph",
+            "MTL"
+        ]
+    },
+    {
+        "item": "188",
+        "description": "Hypersensibilité et allergies respiratoires chez l'enfant et chez l'adulte. Asthme, rhinite",
+        "codes": [
+            "Imm",
+            "Pne",
+            "MTL",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "189",
+        "description": "Déficit immunitaire",
+        "codes": [
+            "Imm",
+            "MI",
+            "Ped"
+        ]
+    },
+    {
+        "item": "190",
+        "description": "Fièvre prolongée",
+        "codes": [
+            "Imm",
+            "Inf",
+            "MI"
+        ]
+    },
+    {
+        "item": "191",
+        "description": "Fièvre chez un patient immunodéprimé",
+        "codes": [
+            "Imm",
+            "Inf",
+            "MI",
+            "MIR"
+        ]
+    },
+    {
+        "item": "192",
+        "description": "Pathologies auto-immunes : aspects épidémiologiques, diagnostiques et principes de traitement",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MI"
+        ]
+    },
+    {
+        "item": "193",
+        "description": "Connaître les principaux types de vascularite systémique, les organes cibles, les outils diagnostiques et les moyens thérapeutiques",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MI",
+            "Nép"
+        ]
+    },
+    {
+        "item": "194",
+        "description": "Lupus systémique. Syndrome des anti-phospholipides (SAPL)",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MI",
+            "Nép",
+            "Der"
+        ]
+    },
+    {
+        "item": "195",
+        "description": "Artérite à cellules géantes",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MI"
+        ]
+    },
+    {
+        "item": "196",
+        "description": "Polyarthrite rhumatoïde",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MPR"
+        ]
+    },
+    {
+        "item": "197",
+        "description": "Spondyloarthrite",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "MPR"
+        ]
+    },
+    {
+        "item": "198",
+        "description": "Arthropathie microcristalline",
+        "codes": [
+            "Imm",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "199",
+        "description": "Syndrome douloureux régional complexe (ex algodystrophie)",
+        "codes": [
+            "Rhu",
+            "OT",
+            "MPR",
+            "DSP"
+        ]
+    },
+    {
+        "item": "200",
+        "description": "Douleur et épanchement articulaire. Arthrite d'évolution récente",
+        "codes": [
+            "Imm",
+            "Rhu",
+            "OT"
+        ]
+    },
+    {
+        "item": "201",
+        "description": "Transplantation d'organes : aspects épidémiologiques et immunologiques ; principes de traitement; complications et pronostic ; aspects éthiques et légaux. Prélèvements d'organes et législation",
+        "codes": [
+            "Imm",
+            "Uro",
+            "Nép",
+            "Der",
+            "Oph",
+            "CD",
+            "MIR",
+            "AR"
+        ]
+    },
+    {
+        "item": "202",
+        "description": "Biothérapies et thérapies ciblées",
+        "codes": [
+            "Imm",
+            "Hém",
+            "Rhu",
+            "MI"
+        ]
+    },
+    {
+        "item": "203",
+        "description": "Dyspnée aiguë et chronique",
+        "codes": [
+            "Pne",
+            "MCV",
+            "ORL",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "204",
+        "description": "Toux chez l'enfant et chez l'adulte (avec le traitement)",
+        "codes": [
+            "Pne",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "205",
+        "description": "Hémoptysie",
+        "codes": [
+            "Pne",
+            "MIR"
+        ]
+    },
+    {
+        "item": "206",
+        "description": "Épanchement pleural liquidien",
+        "codes": [
+            "Pne",
+            "MIR"
+        ]
+    },
+    {
+        "item": "207",
+        "description": "Opacités et masses intra-thoraciques chez l'enfant et chez l'adulte",
+        "codes": [
+            "Pne",
+            "Ped"
+        ]
+    },
+    {
+        "item": "208",
+        "description": "Insuffisance respiratoire chronique",
+        "codes": [
+            "Pne"
+        ]
+    },
+    {
+        "item": "209",
+        "description": "Bronchopneumopathie chronique obstructive chez l'adulte",
+        "codes": [
+            "Pne",
+            "MIR",
+            "MG"
+        ]
+    },
+    {
+        "item": "210",
+        "description": "Pneumopathie interstitielle diffuse",
+        "codes": [
+            "Pne",
+            "Imm",
+            "MI"
+        ]
+    },
+    {
+        "item": "211",
+        "description": "Sarcoïdose",
+        "codes": [
+            "Pne",
+            "Imm",
+            "Der",
+            "Rhu",
+            "MI"
+        ]
+    },
+    {
+        "item": "212",
+        "description": "Hémogramme chez l'adulte et l'enfant : indications et interprétation",
+        "codes": [
+            "Hém",
+            "Imm",
+            "Ped"
+        ]
+    },
+    {
+        "item": "213",
+        "description": "Anémie chez l'adulte et l'enfant",
+        "codes": [
+            "Hém",
+            "Imm",
+            "MI",
+            "Ped"
+        ]
+    },
+    {
+        "item": "214",
+        "description": "Thrombopénie chez l'adulte et l'enfant",
+        "codes": [
+            "Hém",
+            "Imm",
+            "MI",
+            "MIR"
+        ]
+    },
+    {
+        "item": "215",
+        "description": "Purpuras chez l'adulte et l'enfant",
+        "codes": [
+            "Hém",
+            "Inf",
+            "MI",
+            "MIR",
+            "Der",
+            "Ped"
+        ]
+    },
+    {
+        "item": "216",
+        "description": "Syndrome hémorragique d'origine hématologique",
+        "codes": [
+            "Hém",
+            "Ped"
+        ]
+    },
+    {
+        "item": "217",
+        "description": "Syndrome mononucléosique",
+        "codes": [
+            "Hém",
+            "Imm",
+            "Inf",
+            "MI"
+        ]
+    },
+    {
+        "item": "218",
+        "description": "Éosinophilie",
+        "codes": [
+            "Hém",
+            "Imm",
+            "Inf",
+            "MI"
+        ]
+    },
+    {
+        "item": "219",
+        "description": "Pathologie du fer chez l'adulte et l'enfant",
+        "codes": [
+            "End",
+            "HGE",
+            "Rhu",
+            "MI",
+            "Ped"
+        ]
+    },
+    {
+        "item": "220",
+        "description": "Adénopathie superficielle de l'adulte et de l'enfant",
+        "codes": [
+            "Hém",
+            "Imm",
+            "Inf",
+            "MI",
+            "ORL",
+            "Ped"
+        ]
+    },
+    {
+        "item": "221",
+        "description": "Athérome : épidémiologie et physiopathologie. Le malade poly-athéromateux",
+        "codes": [
+            "MCV",
+            "SP",
+            "MG"
+        ]
+    },
+    {
+        "item": "222",
+        "description": "Facteurs de risque cardio-vasculaire et prévention",
+        "codes": [
+            "MCV",
+            "End",
+            "Nut",
+            "SP",
+            "MG"
+        ]
+    },
+    {
+        "item": "223",
+        "description": "Dyslipidémies",
+        "codes": [
+            "MCV",
+            "End",
+            "Nut",
+            "MG"
+        ]
+    },
+    {
+        "item": "224",
+        "description": "Hypertension artérielle de l'adulte et de l’enfant",
+        "codes": [
+            "MCV",
+            "End",
+            "Nép",
+            "Oph",
+            "MI",
+            "MIR",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "225",
+        "description": "Artériopathie oblitérante de l'aorte, des artères viscérales et des membres inférieurs ; anévrysmes",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "226",
+        "description": "Thrombose veineuse profonde et embolie pulmonaire",
+        "codes": [
+            "MCV",
+            "Pne",
+            "Hém",
+            "MI",
+            "MIR"
+        ]
+    },
+    {
+        "item": "227",
+        "description": "Insuffisance veineuse chronique. Varices",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "228",
+        "description": "Ulcère de jambe",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "229",
+        "description": "Surveillance et complications des abords veineux",
+        "codes": [
+            "AR",
+            "MIR"
+        ]
+    },
+    {
+        "item": "230",
+        "description": "Douleur thoracique aiguë",
+        "codes": [
+            "MCV",
+            "Pne"
+        ]
+    },
+    {
+        "item": "231",
+        "description": "Électrocardiogramme : indications et interprétations",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "232",
+        "description": "Fibrillation atriale",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "233",
+        "description": "Valvulopathies",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "234",
+        "description": "Insuffisance cardiaque de l'adulte",
+        "codes": [
+            "MCV",
+            "MIR"
+        ]
+    },
+    {
+        "item": "235",
+        "description": "Péricardite aiguë",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "236",
+        "description": "Troubles de la conduction intracardiaque",
+        "codes": [
+            "MCV"
+        ]
+    },
+    {
+        "item": "237",
+        "description": "Palpitations",
+        "codes": [
+            "MCV",
+            "MG"
+        ]
+    },
+    {
+        "item": "238",
+        "description": "Souffle cardiaque chez l'enfant",
+        "codes": [
+            "MCV",
+            "Ped"
+        ]
+    },
+    {
+        "item": "239",
+        "description": "Acrosyndromes (phénomène de Raynaud, érythermalgie, acrocyanose, engelures, ischémie digitale)",
+        "codes": [
+            "Der",
+            "MI"
+        ]
+    },
+    {
+        "item": "240",
+        "description": "Hypoglycémie chez l'adulte et l'enfant",
+        "codes": [
+            "End",
+            "Ped"
+        ]
+    },
+    {
+        "item": "241",
+        "description": "Goitre, nodules thyroïdiens et cancers thyroïdiens",
+        "codes": [
+            "End",
+            "ORL",
+            "CD"
+        ]
+    },
+    {
+        "item": "242",
+        "description": "Hyperthyroïdie",
+        "codes": [
+            "End",
+            "Oph"
+        ]
+    },
+    {
+        "item": "243",
+        "description": "Hypothyroïdie",
+        "codes": [
+            "End",
+            "Ped"
+        ]
+    },
+    {
+        "item": "244",
+        "description": "Adénome hypophysaire",
+        "codes": [
+            "End",
+            "NC"
+        ]
+    },
+    {
+        "item": "245",
+        "description": "Insuffisance surrénale chez l'adulte et l'enfant",
+        "codes": [
+            "End",
+            "MIR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "246",
+        "description": "Gynécomastie",
+        "codes": [
+            "End"
+        ]
+    },
+    {
+        "item": "247",
+        "description": "Diabète sucré de types 1 et 2 de l'enfant et de l'adulte. Complications",
+        "codes": [
+            "End",
+            "Nut",
+            "GO",
+            "Nép",
+            "Oph",
+            "MIR",
+            "Ped",
+            "Thé",
+            "MG"
+        ]
+    },
+    {
+        "item": "248",
+        "description": "Prévention primaire par la nutrition chez l'adulte et chez l'enfant",
+        "codes": [
+            "Nut",
+            "MG"
+        ]
+    },
+    {
+        "item": "249",
+        "description": "Modifications thérapeutiques du mode de vie (alimentation et activité physique) chez l'adulte et l'enfant",
+        "codes": [
+            "Nut",
+            "MPR",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "250",
+        "description": "Dénutrition chez l'adulte et l'enfant",
+        "codes": [
+            "Nut",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "251",
+        "description": "Amaigrissement à tous les âges",
+        "codes": [
+            "Nut",
+            "MI",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "252",
+        "description": "Troubles nutritionnels chez le sujet âgé",
+        "codes": [
+            "Nut",
+            "Gér"
+        ]
+    },
+    {
+        "item": "253",
+        "description": "Obésité de l'enfant et de l'adulte",
+        "codes": [
+            "Nut",
+            "End",
+            "CD",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "254",
+        "description": "Besoins nutritionnels et grossesse",
+        "codes": [
+            "Nut",
+            "GO"
+        ]
+    },
+    {
+        "item": "255",
+        "description": "Diabète gestationnel",
+        "codes": [
+            "Nut",
+            "End",
+            "GO",
+            "Ped"
+        ]
+    },
+    {
+        "item": "256",
+        "description": "Aptitude au sport chez l'adulte et l'enfant ; besoins nutritionnels chez le sportif",
+        "codes": [
+            "Nut",
+            "MPR",
+            "Rhu",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "257",
+        "description": "Œdèmes des membres inférieurs localisés ou généralisés",
+        "codes": [
+            "Nép",
+            "MI"
+        ]
+    },
+    {
+        "item": "258",
+        "description": "Protéinurie et syndrome néphrotique de chez l'adulte et de l'enfant",
+        "codes": [
+            "Nép",
+            "Ped"
+        ]
+    },
+    {
+        "item": "259",
+        "description": "Protéinurie et syndrome néphrotique de chez l'adulte et de l'enfant",
+        "codes": [
+            "Nép",
+            "Ped"
+        ]
+    },
+    {
+        "item": "260",
+        "description": "Hématurie",
+        "codes": [
+            "Nép",
+            "Uro",
+            "Ped"
+        ]
+    },
+    {
+        "item": "261",
+        "description": "Néphropathie glomérulaire",
+        "codes": [
+            "Nép"
+        ]
+    },
+    {
+        "item": "262",
+        "description": "Néphropathies interstitielles",
+        "codes": [
+            "Nép"
+        ]
+    },
+    {
+        "item": "263",
+        "description": "Néphropathies vasculaires",
+        "codes": [
+            "Nép"
+        ]
+    },
+    {
+        "item": "264",
+        "description": "Insuffisance rénale chronique chez l'adulte et l'enfant",
+        "codes": [
+            "Nép",
+            "Ped"
+        ]
+    },
+    {
+        "item": "265",
+        "description": "Lithiase urinaire",
+        "codes": [
+            "Nép",
+            "Uro"
+        ]
+    },
+    {
+        "item": "266",
+        "description": "Polykystose rénale",
+        "codes": [
+            "Nép"
+        ]
+    },
+    {
+        "item": "267",
+        "description": "Troubles de l'équilibre acido-basique et désordres hydro-électrolytiques",
+        "codes": [
+            "Nép",
+            "End",
+            "AR",
+            "MIR"
+        ]
+    },
+    {
+        "item": "268",
+        "description": "Hypercalcémie",
+        "codes": [
+            "Nép",
+            "End",
+            "Rhu",
+            "MI",
+            "MIR"
+        ]
+    },
+    {
+        "item": "269",
+        "description": "Douleurs abdominales aiguës chez l'enfant et chez l'adulte",
+        "codes": [
+            "HGE",
+            "Ped"
+        ]
+    },
+    {
+        "item": "270",
+        "description": "Douleurs lombaires aiguës chez l'enfant et chez l'adulte",
+        "codes": [
+            "MG"
+        ]
+    },
+    {
+        "item": "271",
+        "description": "Reflux gastro-œsophagien chez le nourrisson, chez l'enfant et chez l'adulte. Hernie hiatale",
+        "codes": [
+            "HGE",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "272",
+        "description": "Ulcère gastrique et duodénal. Gastrite",
+        "codes": [
+            "HGE"
+        ]
+    },
+    {
+        "item": "273",
+        "description": "Dysphagie",
+        "codes": [
+            "HGE",
+            "ORL"
+        ]
+    },
+    {
+        "item": "274",
+        "description": "Vomissements du nourrisson, de l'enfant et de l'adulte",
+        "codes": [
+            "HGE",
+            "Ped"
+        ]
+    },
+    {
+        "item": "275",
+        "description": "Splénomégalie",
+        "codes": [
+            "Hém",
+            "MI"
+        ]
+    },
+    {
+        "item": "276",
+        "description": "Hépatomégalie et masse abdominale",
+        "codes": [
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "277",
+        "description": "Lithiase biliaire et complications",
+        "codes": [
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "278",
+        "description": "Ictère",
+        "codes": [
+            "HGE",
+            "Ped",
+            "MIR"
+        ]
+    },
+    {
+        "item": "279",
+        "description": "Cirrhose et complications",
+        "codes": [
+            "HGE",
+            "MIR"
+        ]
+    },
+    {
+        "item": "280",
+        "description": "Ascite",
+        "codes": [
+            "HGE",
+            "CD",
+            "MIR"
+        ]
+    },
+    {
+        "item": "281",
+        "description": "Pancréatite chronique",
+        "codes": [
+            "HGE"
+        ]
+    },
+    {
+        "item": "282",
+        "description": "Maladies Inflammatoires Chroniques de l'Intestin (MICI) chez l'adulte",
+        "codes": [
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "283",
+        "description": "Constipation chez l'enfant et l'adulte (avec le traitement)",
+        "codes": [
+            "HGE",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "284",
+        "description": "Colopathie fonctionnelle",
+        "codes": [
+            "HGE",
+            "MG"
+        ]
+    },
+    {
+        "item": "285",
+        "description": "Diarrhée chronique chez l'adulte et l'enfant",
+        "codes": [
+            "HGE",
+            "Ped"
+        ]
+    },
+    {
+        "item": "286",
+        "description": "Diarrhée aiguë et déshydratation chez le nourrisson, l'enfant et l'adulte",
+        "codes": [
+            "HGE",
+            "Ped"
+        ]
+    },
+    {
+        "item": "287",
+        "description": "Diverticulose colique et diverticulite aiguë du sigmoïde",
+        "codes": [
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "288",
+        "description": "Pathologie hémorroïdaire",
+        "codes": [
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "289",
+        "description": "Hernie pariétale chez l'enfant et l'adulte",
+        "codes": [
+            "CD",
+            "Ped"
+        ]
+    },
+    {
+        "item": "290",
+        "description": "Épidémiologie, facteurs de risque, prévention et dépistage des cancers",
+        "codes": [
+            "Can",
+            "SP",
+            "MTL",
+            "GO",
+            "MG"
+        ]
+    },
+    {
+        "item": "291",
+        "description": "Cancer : cancérogénèse, oncogénétique",
+        "codes": [
+            "Can",
+            "MTL"
+        ]
+    },
+    {
+        "item": "292",
+        "description": "Diagnostic des cancers : signes d'appel et investigations para-cliniques ; caractérisation du stade ; pronostic",
+        "codes": [
+            "Can",
+            "MG"
+        ]
+    },
+    {
+        "item": "293",
+        "description": "Le médecin préleveur de cellules et/ou de tissus pour des examens d'Anatomie et Cytologie Pathologiques : connaître les principes de réalisation, transmission et utilisation des prélèvements à visée sanitaire et de recherche",
+        "codes": [
+            "Can"
+        ]
+    },
+    {
+        "item": "294",
+        "description": "Traitement des cancers : principales modalités, classes thérapeutiques et leurs complications majeures. La décision thérapeutique pluridisciplinaire et l'information du malade",
+        "codes": [
+            "Can",
+            "CD"
+        ]
+    },
+    {
+        "item": "295",
+        "description": "Prise en charge et accompagnement d'un malade atteint de cancer à tous les stades de la maladie dont le stade de soins palliatifs en abordant les problématiques techniques, relationnelles, sociales et éthiques. Traitements symptomatiques. Modalités de surveillance",
+        "codes": [
+            "Can"
+        ]
+    },
+    {
+        "item": "296",
+        "description": "Agranulocytose médicamenteuse : conduite à tenir",
+        "codes": [
+            "Hém"
+        ]
+    },
+    {
+        "item": "297",
+        "description": "Cancer de l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+        "codes": [
+            "Can",
+            "Ped",
+            "SP",
+            "NC"
+        ]
+    },
+    {
+        "item": "298",
+        "description": "Tumeurs de la cavité buccale, naso-sinusiennes et du cavum, et des voies aérodigestives supérieures",
+        "codes": [
+            "Can",
+            "ORL",
+            "CMF"
+        ]
+    },
+    {
+        "item": "299",
+        "description": "Tumeurs intracrâniennes",
+        "codes": [
+            "Can",
+            "Neu",
+            "NC"
+        ]
+    },
+    {
+        "item": "300",
+        "description": "Tumeurs du col utérin, tumeur du corps utérin",
+        "codes": [
+            "Can",
+            "GO",
+            "MG"
+        ]
+    },
+    {
+        "item": "301",
+        "description": "Tumeurs du colon et du rectum",
+        "codes": [
+            "Can",
+            "HGE",
+            "CD",
+            "MG"
+        ]
+    },
+    {
+        "item": "302",
+        "description": "Tumeurs cutanées, épithéliales et mélaniques",
+        "codes": [
+            "Can",
+            "Der",
+            "CMF"
+        ]
+    },
+    {
+        "item": "303",
+        "description": "Tumeurs de l'estomac",
+        "codes": [
+            "Can",
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "304",
+        "description": "Tumeurs du foie, primitives et secondaires",
+        "codes": [
+            "Can",
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "305",
+        "description": "Tumeurs de l'œsophage",
+        "codes": [
+            "Can",
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "306",
+        "description": "Tumeurs de l'ovaire",
+        "codes": [
+            "Can",
+            "GO"
+        ]
+    },
+    {
+        "item": "307",
+        "description": "Tumeurs des os primitives et secondaires",
+        "codes": [
+            "Can",
+            "Rhu",
+            "OT",
+            "CMF"
+        ]
+    },
+    {
+        "item": "308",
+        "description": "Tumeurs du pancréas",
+        "codes": [
+            "Can",
+            "HGE",
+            "CD"
+        ]
+    },
+    {
+        "item": "309",
+        "description": "Tumeurs du poumon, primitives et secondaires",
+        "codes": [
+            "Can",
+            "Pne"
+        ]
+    },
+    {
+        "item": "310",
+        "description": "Tumeurs de la prostate",
+        "codes": [
+            "Can",
+            "Uro"
+        ]
+    },
+    {
+        "item": "311",
+        "description": "Tumeurs du rein de l’adulte",
+        "codes": [
+            "Can",
+            "Uro"
+        ]
+    },
+    {
+        "item": "312",
+        "description": "Tumeurs du sein",
+        "codes": [
+            "Can",
+            "GO",
+            "MG"
+        ]
+    },
+    {
+        "item": "313",
+        "description": "Tumeurs du testicule",
+        "codes": [
+            "Can",
+            "Uro"
+        ]
+    },
+    {
+        "item": "314",
+        "description": "Tumeurs vésicales",
+        "codes": [
+            "Can",
+            "Uro"
+        ]
+    },
+    {
+        "item": "315",
+        "description": "Leucémies aiguës",
+        "codes": [
+            "Hém",
+            "Ped"
+        ]
+    },
+    {
+        "item": "316",
+        "description": "Syndromes myélodysplasiques",
+        "codes": [
+            "Hém"
+        ]
+    },
+    {
+        "item": "317",
+        "description": "Syndromes myéloprolifératifs",
+        "codes": [
+            "Hém"
+        ]
+    },
+    {
+        "item": "318",
+        "description": "Leucémies lymphoïdes chroniques",
+        "codes": [
+            "Hém"
+        ]
+    },
+    {
+        "item": "319",
+        "description": "Lymphomes malins",
+        "codes": [
+            "Hém",
+            "Der"
+        ]
+    },
+    {
+        "item": "320",
+        "description": "Myélome multiple des os",
+        "codes": [
+            "Hém",
+            "Rhu",
+            "Nép"
+        ]
+    },
+    {
+        "item": "321",
+        "description": "Principe du bon usage du médicament",
+        "codes": [
+            "Thé",
+            "MG"
+        ]
+    },
+    {
+        "item": "322",
+        "description": "La décision thérapeutique personnalisée : bon usage dans des situations à risque",
+        "codes": [
+            "Thé",
+            "Gér",
+            "AR",
+            "MG"
+        ]
+    },
+    {
+        "item": "323",
+        "description": "Analyser et utiliser les résultats des études cliniques dans la perspective du bon usage - analyse critique, recherche clinique et niveaux de preuve",
+        "codes": [
+            "Thé",
+            "SP"
+        ]
+    },
+    {
+        "item": "324",
+        "description": "Éducation thérapeutique, observance et automédication",
+        "codes": [
+            "Thé",
+            "MI",
+            "MG"
+        ]
+    },
+    {
+        "item": "325",
+        "description": "Identification et gestion des risques liés aux médicaments et aux biomatériaux, risque iatrogène, erreur médicamenteuse",
+        "codes": [
+            "Thé",
+            "SP",
+            "Gér",
+            "MIR"
+        ]
+    },
+    {
+        "item": "326",
+        "description": "Cadre réglementaire de la prescription thérapeutique et recommandations pour le bon usage",
+        "codes": [
+            "Thé"
+        ]
+    },
+    {
+        "item": "327",
+        "description": "Principes de la médecine intégrative, utilité et risques des interventions non médicamenteuses et des thérapies complémentaires",
+        "codes": [
+            "Thé",
+            "MG"
+        ]
+    },
+    {
+        "item": "328",
+        "description": "Thérapeutiques non médicamenteuses et dispositifs médicaux",
+        "codes": [
+            "Thé",
+            "MPR"
+        ]
+    },
+    {
+        "item": "329",
+        "description": "Transfusion sanguine et produits dérivés du sang : indications, complications. Hémovigilance",
+        "codes": [
+            "Thé",
+            "Hém",
+            "Gér",
+            "Ped",
+            "MIR",
+            "AR"
+        ]
+    },
+    {
+        "item": "330",
+        "description": "Prescription et surveillance des classes de médicaments les plus courantes chez l'adulte et chez l'enfant, hors anti-infectieux. Connaitre les grands principes thérapeutiques",
+        "codes": [
+            "Thé",
+            "Hém",
+            "Gér",
+            "Ped",
+            "MIR",
+            "DSP",
+            "Rhu",
+            "Nép",
+            "MI",
+            "MCV",
+            "Der"
+        ]
+    },
+    {
+        "item": "331",
+        "description": "Arrêt cardio-circulatoire",
+        "codes": [
+            "MIR",
+            "AR",
+            "MCV",
+            "Ped"
+        ]
+    },
+    {
+        "item": "332",
+        "description": "État de choc. Principales étiologies : hypovolémique, septique, cardiogénique, anaphylactique",
+        "codes": [
+            "MIR",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "333",
+        "description": "Situations sanitaires exceptionnelles",
+        "codes": [
+            "MIR",
+            "AR"
+        ]
+    },
+    {
+        "item": "334",
+        "description": "Prise en charge immédiate pré-hospitalière et à l'arrivée à l'hôpital, évaluation des complications chez : un brûlé, un traumatisé sévère, un traumatisé thoracique, un traumatisé abdominal, un traumatisé des membres et/ou du bassin, un traumatisé du rachis ou vertébro-médullaire, un traumatisé crânien ou crânio-encéphalique",
+        "codes": [
+            "MIR",
+            "AR",
+            "OT",
+            "NC",
+            "ORL",
+            "CD",
+            "Ped"
+        ]
+    },
+    {
+        "item": "335",
+        "description": "Orientation diagnostique et conduite à tenir devant un traumatisme maxillo-facial et oculaire",
+        "codes": [
+            "CMF",
+            "ORL",
+            "Oph",
+            "NC",
+            "Ped"
+        ]
+    },
+    {
+        "item": "336",
+        "description": "Coma non traumatique chez l'adulte et chez l'enfant",
+        "codes": [
+            "MIR",
+            "AR",
+            "Neu"
+        ]
+    },
+    {
+        "item": "337",
+        "description": "Principales intoxications aiguës",
+        "codes": [
+            "MIR",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "338",
+        "description": "Œdème de Quincke et anaphylaxie",
+        "codes": [
+            "MIR",
+            "AR",
+            "Pne"
+        ]
+    },
+    {
+        "item": "339",
+        "description": "Syndromes coronariens aigus",
+        "codes": [
+            "MIR",
+            "MCV"
+        ]
+    },
+    {
+        "item": "340",
+        "description": "Accidents vasculaires cérébraux",
+        "codes": [
+            "MIR",
+            "Neu",
+            "NC",
+            "MPR"
+        ]
+    },
+    {
+        "item": "341",
+        "description": "Hémorragie méningée",
+        "codes": [
+            "MIR",
+            "AR",
+            "Neu",
+            "NC"
+        ]
+    },
+    {
+        "item": "342",
+        "description": "Malaise, perte de connaissance, crise convulsive chez l'adulte",
+        "codes": [
+            "MIR",
+            "Neu",
+            "MCV"
+        ]
+    },
+    {
+        "item": "343",
+        "description": "État confusionnel et trouble de conscience chez l'adulte et chez l'enfant",
+        "codes": [
+            "MIR",
+            "Neu",
+            "Gér",
+            "Ped"
+        ]
+    },
+    {
+        "item": "344",
+        "description": "Prise en charge d'une patiente atteinte de pré-éclampsie",
+        "codes": [
+            "MIR",
+            "GO",
+            "Nép",
+            "AR"
+        ]
+    },
+    {
+        "item": "345",
+        "description": "Malaise grave du nourrisson et mort inattendue du nourrisson",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "346",
+        "description": "Convulsions chez le nourrisson et chez l'enfant",
+        "codes": [
+            "Ped"
+        ]
+    },
+    {
+        "item": "347",
+        "description": "Rétention aiguë d'urine",
+        "codes": [
+            "Uro",
+            "Gér"
+        ]
+    },
+    {
+        "item": "348",
+        "description": "Insuffisance rénale aiguë - Anurie",
+        "codes": [
+            "Nép",
+            "Uro",
+            "MIR",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "349",
+        "description": "Infection aiguë des parties molles (abcès, panaris, phlegmon des gaines)",
+        "codes": [
+            "OT",
+            "AR"
+        ]
+    },
+    {
+        "item": "350",
+        "description": "Grosse jambe rouge aiguë",
+        "codes": [
+            "Der"
+        ]
+    },
+    {
+        "item": "351",
+        "description": "Agitation et délire aiguë",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "352",
+        "description": "Crise d'angoisse aiguë et attaque de panique",
+        "codes": [
+            "Psy"
+        ]
+    },
+    {
+        "item": "353",
+        "description": "Risque et conduite suicidaires chez l'enfant, l'adolescent et l'adulte : identification et prise en charge",
+        "codes": [
+            "Psy",
+            "Ped",
+            "MG"
+        ]
+    },
+    {
+        "item": "354",
+        "description": "Syndrome occlusif de l'enfant et de l'adulte",
+        "codes": [
+            "CD",
+            "Ped"
+        ]
+    },
+    {
+        "item": "355",
+        "description": "Hémorragie digestive",
+        "codes": [
+            "HGE",
+            "MIR",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "356",
+        "description": "Appendicite de l'enfant et de l'adulte",
+        "codes": [
+            "CD",
+            "Ped"
+        ]
+    },
+    {
+        "item": "357",
+        "description": "Péritonite aiguë chez l'enfant et chez l'adulte",
+        "codes": [
+            "CD",
+            "Inf",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "358",
+        "description": "Pancréatite aiguë",
+        "codes": [
+            "HGE",
+            "CD",
+            "MIR",
+            "AR"
+        ]
+    },
+    {
+        "item": "359",
+        "description": "Détresse et insuffisance respiratoire aigüe du nourrisson, de l'enfant et de l'adulte",
+        "codes": [
+            "Pne",
+            "ORL",
+            "MIR",
+            "AR",
+            "Ped"
+        ]
+    },
+    {
+        "item": "360",
+        "description": "Pneumothorax",
+        "codes": [
+            "Pne",
+            "MIR"
+        ]
+    },
+    {
+        "item": "361",
+        "description": "Lésions péri-articulaires et ligamentaires du genou, de la cheville et de l'épaule",
+        "codes": [
+            "OT",
+            "Rhu"
+        ]
+    },
+    {
+        "item": "362",
+        "description": "Prothèses et ostéosynthèses",
+        "codes": [
+            "OT",
+            "Inf"
+        ]
+    },
+    {
+        "item": "363",
+        "description": "Fractures fréquentes de l'adulte et du sujet âgé",
+        "codes": [
+            "OT"
+        ]
+    },
+    {
+        "item": "364",
+        "description": "Fractures chez l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques",
+        "codes": [
+            "OT",
+            "Ped"
+        ]
+    },
+    {
+        "item": "365",
+        "description": "Surveillance d'un malade sous plâtre/résine, diagnostiquer une complication",
+        "codes": [
+            "OT",
+            "Ped"
+        ]
+    },
+    {
+        "item": "366",
+        "description": "Exposition accidentelle aux liquides biologiques : conduite à tenir",
+        "codes": [
+            "Inf"
+        ]
+    },
+    {
+        "item": "367",
+        "description": "Impact de l’environnement sur la santé",
+        "codes": [
+            "SP",
+            "MTL",
+            "MG"
+        ]
+    }
+]

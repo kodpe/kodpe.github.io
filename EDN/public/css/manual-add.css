@@ -1,0 +1,127 @@
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f1117;
+    color: #fff;
+} */
+
+/* .dark-box {
+    background: #171b24;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    box-sizing: border-box;
+} */
+
+.page {
+    /* min-height: 100vh; */
+    /* min-height: 500px; */
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+    box-sizing: border-box;
+}
+
+.activity-box {
+    width: 100%;
+    padding: 20px;
+}
+
+.page-title {
+    margin: 0 0 20px 0;
+    font-size: 1.35rem;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.activity-section {
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    max-width: 370px;
+}
+
+.section-title {
+    margin: 0 0 16px 0;
+    font-size: 1.05rem;
+}
+
+.activity-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input,
+.form-group select {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+    padding: 0 12px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.form-group select option {
+    color: black;
+}
+/* FIX THIS SHIT WITH REAL NAME */
+#practice-submit-btn,
+#item-submit-btn {
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #6d28d9;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#practice-submit-btn :hover,
+#item-submit-btn :hover {
+    filter: brightness(1.08);
+}
+
+#practice-submit-btn :disabled,
+#item-submit-btn :disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.feedback {
+    min-height: 20px;
+    font-size: 0.92rem;
+}
+
+.feedback.success {
+    color: #7CFFB2;
+}
+
+.feedback.error {
+    color: #FF8E8E;
+}
+
+@media (max-width: 800px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+}

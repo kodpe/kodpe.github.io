@@ -1,0 +1,120 @@
+{
+  "persons": [
+    { "id": "P1", "label": "Victime" },
+    { "id": "P2", "label": "Suspect" },
+    { "id": "P3", "label": "Conjoint" },
+    { "id": "P4", "label": "Voisin" }
+  ],
+  "objects": [
+    { "id": "O1", "label": "Couteau" },
+    { "id": "O2", "label": "Arme à feu" },
+    { "id": "O3", "label": "Téléphone" },
+    { "id": "O4", "label": "Clé" }
+  ],
+  "locations": [
+    "Appartement",
+    "Rue",
+    "Bar",
+    "Entrepôt",
+    "Maison"
+  ],
+  "events": {
+    "context": [
+      {
+        "text": "Licenciement après plusieurs avertissements disciplinaires",
+        "elements": ["licenciement", "humiliation professionnelle"],
+        "prep_bias": 0.7
+      },
+      {
+        "text": "Perte importante d'argent liée à des dettes personnelles",
+        "elements": ["dettes", "pression financière"],
+        "prep_bias": 0.6
+      },
+      {
+        "text": "Séparation conflictuelle avec sentiment d'injustice",
+        "elements": ["rupture", "conflit émotionnel"],
+        "prep_bias": 0.3
+      },
+      {
+        "text": "Accumulation de frustrations sans événement déclencheur clair",
+        "elements": ["isolement", "ressentiment"],
+        "prep_bias": 0.4
+      }
+    ],
+    "relation": [
+      {
+        "text": "Dispute verbale violente avec la victime",
+        "elements": ["menaces", "hausse du ton"],
+        "mode": "direct"
+      },
+      {
+        "text": "Échange téléphonique conflictuel avec la victime",
+        "elements": ["appel", "propos agressifs"],
+        "mode": "distance"
+      },
+      {
+        "text": "Observation répétée de la victime sans interaction",
+        "elements": ["filature", "obsession"],
+        "mode": "unilateral"
+      }
+    ],
+    "preparation": [
+      {
+        "text": "Achat légal d'une arme quelques jours avant les faits",
+        "elements": ["arme", "munition"],
+        "requires_time": true
+      },
+      {
+        "text": "Récupération d'un objet potentiellement dangereux",
+        "elements": ["objet contondant"],
+        "requires_time": false
+      }
+    ],
+    "crime": [
+      {
+        "text": "Altercation dégénérant en homicide",
+        "elements": ["violence", "mort"],
+        "style": "impulsif"
+      },
+      {
+        "text": "Agression mortelle par surprise",
+        "elements": ["attaque", "lésions mortelles"],
+        "style": "soudain"
+      }
+    ],
+    "post_crime": [
+      {
+        "text": "Retour au domicile et tentative de dissimulation",
+        "elements": ["vêtements tachés", "nettoyage"],
+        "coherence": "faible"
+      },
+      {
+        "text": "Errance prolongée avant de rentrer",
+        "elements": ["confusion", "stress"],
+        "coherence": "moyenne"
+      },
+      {
+        "text": "Tentative de fuite immédiate",
+        "elements": ["déplacement", "panique"],
+        "coherence": "très faible"
+      }
+    ],
+    "discovery": [
+      {
+        "text": "Un voisin alerte la police après avoir entendu des cris",
+        "elements": ["cris", "tapage"],
+        "delay_minutes": [5, 60]
+      },
+      {
+        "text": "Un proche inquiet découvre le corps",
+        "elements": ["absence de réponse", "découverte"],
+        "delay_minutes": [120, 1440]
+      },
+      {
+        "text": "Découverte fortuite lors d'un passage imprévu",
+        "elements": ["porte ouverte", "corps visible"],
+        "delay_minutes": [30, 720]
+      }
+    ]
+  }
+}

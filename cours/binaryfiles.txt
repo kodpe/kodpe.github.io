@@ -1,0 +1,253 @@
+# Les fichiers binaires, exécutables, l'ELF, et le linker
+
+## Les fichiers binaires
+
+Par stricte définition, tous les fichiers sont binaires. Cependant, dans l’usage courant, on distingue les fichiers de texte brut (par exemple du code source) des autres fichiers, qui ne sont pas directement interprétables sous forme de texte (par exemple une image). Ce sont généralement ces derniers que l’on appelle fichiers binaires.
+
+```
+$ cat exemple_de_fichier_texte
+
+bonjour les gens
+
+je suis du texte brut
+...
+```
+```
+$ cat exemple_de_fichier_binaire
+�����   <<�-�=�=,0.>>�8880hhhDDS�td8880P�td   DDQ�tdR�td�-�=�=/lib64/ld-linux-x86-64.GNU���GNU��~�1^SԽD�NbC _ n�i	�
+�8� @�?�?�?�?�?��H�H��/H��t��H���5�/��%�/����
+...
+```
+
+Les fichiers binaires sont utilisés pour représenter :
+- des images
+- du son
+- des données formatées
+- des données compressées
+- des instructions machine (les fichiers exécutables)
+
+---
+
+### Format d'un fichier binaire
+
+Le contenu d'un fichier binaire est souvent organisé selon un format précis. De nombreux systèmes et outils peuvent reconnaître le format d’un fichier binaire grâce à une suite de caractères présente au tout début du fichier. Cette suite est appelée la **signature** ou le **nombre magique** (magic number).
+
+Par exemple :
+- le format d’image JPEG commence par la signature `FF D8`
+- les fichiers PDF commencent par `25 50 44 46 2D`
+- les fichiers ZIP commencent par `50 4B 03 04`
+
+Il peut exister des fichiers binaires sans signature et format standard identifiable : on parle alors de fichier binaire **brut**. Des extensions propriétaires ou l’extension générique **.bin** sont souvent utilisées pour ces fichiers.
+
+L’extension dans le nom d’un fichier n’est pas du tout une information fiable : elle est simplement indicative et peut être modifiée sans que cela ne change la véritable structure interne du fichier. (par exemple on peut renommer un fichier .zip en .jpeg, ça restera un zip)
+
+---
+
+### Analyser un fichier binaire
+
+Pour visualiser le contenu d’un fichier binaire, on peut utiliser un éditeur hexadécimal. Ces éditeurs affichent le contenu binaire converti en représentation **hexadécimale**. On parle aussi souvent de **hex dump**.
+
+```
+$ hexdump ./programme
+0000010 0003 003e 0001 0000 1040 0000 0000 0000
+0000020 0040 0000 0000 0000 3718 0000 0000 0000
+0000030 0000 0000 0040 0038 000d 0040 001d 001c
+...
+```
+
+L’examen de fichiers binaires est utilisé dans le **débogage**, la **rétro-ingénierie** et la **criminalistique numérique**.
+
+Parfait ! J’ai corrigé **les fautes d’orthographe, les accents, les majuscules, et la précision technique sur le point d’entrée**, sans toucher à ton style ni à ton Markdown. Voici la version corrigée :
+
+---
+
+## Les fichiers exécutables
+
+Un fichier exécutable est un type particulier de **fichier binaire**, on peut dire aussi que c'est un programme ou simplement un exécutable. Il contient une suite d'instructions en langage machine compréhensibles par le **processeur**.
+
+Lorsqu’un fichier exécutable est lancé :
+
+* le système crée un **processus**
+* le programme est placé dans la **mémoire**
+* son exécution commence à un point précis appelé **point d’entrée**, qui lance une routine d’initialisation avant d’appeler la **fonction main**
+
+Le fichier exécutable est créé par deux programmes appelés **compilateur** et **linker**.
+
+`Code source -> Compilateur -> Linker -> Fichier binaire exécutable`
+
+Exemples de langages compilés : C, C++, Java, Go
+
+Par abus de langage, on parle parfois aussi d'exécutable pour les fichiers non binaires mais textuels qui contiennent du code source interprétable, qui sera traduit et exécuté **ligne par ligne** grâce à un programme **interpréteur**, sans jamais produire de fichier binaire.
+
+`Code source -> Interpréteur -> Exécution ligne par ligne`
+
+Exemples de langages interprétés : Python, JavaScript, Bash, PHP
+
+---
+
+### Que contient vraiment un fichier exécutable ?
+
+En fait, un exécutable ne contient pas seulement les instructions machines de son programme. Il contient aussi différentes informations nécessaires au système d’exploitation pour l'exécuter correctement.
+
+Un format exécutable sert précisément à :
+
+* définir des sections (code, données, etc.)
+* indiquer où se trouve le point d’entrée du programme
+* gérer des symboles (noms de fonctions, variables globales…)
+* permettre le lien dynamique avec des dépendances (bibliothèques externes)
+* contenir des informations de relocation et de chargement en mémoire ramme.
+
+Tout ceci est organisé selon une structure particulière :  un format.
+
+---
+
+## Le format ELF
+
+ELF signifie **Executable and Linkable Format** (*format exécutable et liable*).
+
+C’est un format de **fichier binaire** standard utilisé pour représenter des **exécutables**, des bibliothèques partagées, des fichiers objets, et d’autres types de données liés à un programme. Il permet au système d’exploitation de comprendre exactement comment charger un programme en mémoire, comment relier les différents morceaux entre eux, et comment gérer les dépendances et les symboles.
+
+Aujourd’hui, l’ELF est le format exécutable le plus utilisé au monde :
+* Linux (serveurs, cloud, infrastructures réseau et industrielles)
+* Android
+* La majorité des systèmes embarqués (routeurs, objets connectés, télévisions connectées, box internet…)
+
+PE (Portable Executable) reste le format spécifique utilisé par Windows.
+
+---
+
+### Structure générale d’un fichier ELF
+
+Un fichier ELF est composé de plusieurs parties structurées.
+
+* **En‑tête ELF (ELF header)**
+  C’est la toute première partie du fichier. Elle permet au système d’identifier qu’il s’agit bien d’un fichier ELF et contient des informations générales : architecture (32/64 bits), format d’adressage, et surtout l’adresse du **point d’entrée** du programme.
+
+* **Table des en‑têtes de programme (Program header table)**
+  Elle décrit les **segments** du fichier. Les segments servent à indiquer au système d’exploitation quelles parties du fichier doivent être chargées en mémoire pour l’exécution.
+
+* **Table des en‑têtes de section (Section header table)**
+  Elle décrit les **sections** du fichier. Les sections sont utilisées principalement au moment de l’édition de liens : elles contiennent le code, les données, les tableaux de symboles, les informations de relocation, etc.
+
+---
+
+### Segments et Sections
+
+Dans un fichier ELF, on distingue deux vues différentes.
+
+* **Segments** – servent à l’exécution du programme. Ils indiquent quelles parties doivent être chargées en mémoire et comment le système doit les traiter.
+
+* **Sections** – servent surtout à la création et à la liaison du programme. Elles contiennent des informations utiles pour l’éditeur de liens, comme le code `.text`, les données `.data`, ou la zone non initialisée `.bss`.
+
+Un segment peut contenir une ou plusieurs sections, et toutes les sections ne sont pas forcément chargées en mémoire. Parmi les sections que l’on trouve souvent dans un ELF : 
+* `.text` – contient le **code exécutable**.
+* `.data` – contient les **données initialisées**.
+* `.rodata` – données **en lecture seule**.
+* `.bss` – variables **non initialisées**.
+
+---
+
+### Schéma simplifié d’un fichier ELF
+```
++------------------------+
+|      ELF Header        |  <-- Identifie le fichier comme ELF
+|   (type, architecture, |
+|    point d'entrée...)  |
++------------------------+
+| Program Header Table   |  <-- Décrit les segments à charger en mémoire
++------------------------+
+| Segment 1              |  <-- Peut contenir la section .text
+|  .text (code exécutable) |
+|  .rodata (données lecture seule) |
++------------------------+
+| Segment 2              |  <-- Peut contenir la section .data
+|  .data (données initialisées) |
+|  .bss (données non initialisées) |
++------------------------+
+| Segment 3              |  <-- Autres sections, bibliothèques, etc.
++------------------------+
+| Section Header Table   |  <-- Décrit toutes les sections du fichier
++------------------------+
+```
+* **ELF Header** → Indique que le fichier est un ELF, définit l’architecture et l’adresse du point d’entrée.
+* **Program Header Table** → Donne les informations nécessaires au **loader** pour charger le programme en mémoire.
+* **Segments** → Parties du fichier chargées en mémoire pour l’exécution.
+* **Sections** → Parties du fichier utilisées pour le **linkage**, le code, les données et les symboles.
+* **Section Header Table** → Contient la liste et la description de toutes les sections.
+
+---
+
+## Le linker
+
+Le linker (ou éditeur de liens) est le programme qui intervient juste après la compilation et prend plusieurs fichiers objets compilés `.o` produits par le compilateur et les assemble pour créer l'exécutable final ou une bibliothèque.
+
+Son rôle principal est de :
+- Relier les symboles entre fichiers (fonctions, variables)
+- Résoudre les références externes
+- Organiser les sections et segments dans la mémoire
+- Produire un format exécutable ou une bibliothèque (ELF sur Linux, PE sur Windows)
+
+Sans linker, chaque fichier objet serait isolé et impossible à exécuter seul.
+
+
+---
+### Le Linker script
+Le linker script, souvent nommé `linker.ld` est le fichier de configuration qui indique au linker où et comment placer chaque section dans l’exécutable.
+
+#### Exemple de linker script minimal
+
+```
+/* Définir le point d'entrée du programme */
+ENTRY(_start)
+
+/* Définition des sections principales */
+SECTIONS
+{
+  /* Section .text : code exécutable et données en lecture seule */
+  .text :
+  {
+    *(.text)      /* tout le code de tous les fichiers objets */
+    *(.rodata)    /* toutes les données en lecture seule */
+  }
+
+  /* Section .data : données initialisées */
+  .data :
+  {
+    *(.data)
+  }
+
+  /* Section .bss : données non initialisées */
+  .bss :
+  {
+    *(.bss)
+  }
+}
+```
+
+---
+### Linker tests
+
+```
+$ cat demo.c
+int a = 1, b = 2, c = 3;
+
+int func1(void) { return a; }
+int func2(void) { return b; }
+int func3(void) { return c; }
+
+int main(void)
+{
+	return func1() + func2() + func3();
+}
+
+$ gcc demo.c
+
+$ ls
+a.out demo.c demo.o
+
+$ readelf -W --syms a.out | grep func | sort -k 2
+19: 0000000000001129    16 FUNC    GLOBAL DEFAULT   14 func1
+30: 0000000000001139    16 FUNC    GLOBAL DEFAULT   14 func2
+18: 0000000000001149    16 FUNC    GLOBAL DEFAULT   14 func3
+
+```

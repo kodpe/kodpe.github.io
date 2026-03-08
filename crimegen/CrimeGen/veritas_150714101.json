@@ -1,0 +1,120 @@
+{
+  "seed": 150714101,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P2",
+      "label": "Suspect",
+      "type": "person"
+    },
+    {
+      "id": "O4",
+      "label": "Clé",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P1",
+      "target": "O4",
+      "type": 1
+    },
+    {
+      "source": "P1",
+      "target": "O4",
+      "type": 0
+    },
+    {
+      "source": "P2",
+      "target": "O4",
+      "type": 0
+    },
+    {
+      "source": "P1",
+      "target": "P2",
+      "type": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-04",
+      "event": "Séparation conflictuelle",
+      "location": "Appartement",
+      "elements": [
+        "garde"
+      ],
+      "causes": []
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-09",
+      "event": "Dispute violente avec la victime",
+      "location": "Maison",
+      "elements": [
+        "menaces"
+      ],
+      "causes": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-07",
+      "event": "Aucune préparation identifiable",
+      "location": "Bar",
+      "elements": [
+        "improvisation"
+      ],
+      "causes": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-08",
+      "event": "Agression mortelle",
+      "location": "Entrepôt",
+      "elements": [
+        "hémorragie"
+      ],
+      "causes": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-07",
+      "event": "Fuite désorganisée",
+      "location": "Entrepôt",
+      "elements": [
+        "panique"
+      ],
+      "causes": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-04",
+      "event": "Découverte du corps",
+      "location": "Entrepôt",
+      "elements": [
+        "porte ouverte"
+      ],
+      "causes": [
+        4
+      ]
+    }
+  ]
+}

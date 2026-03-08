@@ -160,6 +160,7 @@ canvas {
     text-align: right;
 }
 
+#items-progress-list,
 #specs-progress-list {
     width: 100%;
     max-width: 800px;
@@ -177,10 +178,16 @@ canvas {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+#items-progress-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 
 @media (max-width: 800px) {
     #specs-progress-list {
         grid-template-columns: 1fr;
+    }
+    #items-progress-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
 

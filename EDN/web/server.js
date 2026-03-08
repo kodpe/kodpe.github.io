@@ -6,6 +6,8 @@ const { PORT } = require("../config/env");
 function startServer() {
   const app = express();
 
+  app.use(express.json());
+
   // assets libres
   app.use("/css", express.static(path.join(__dirname, "..", "public/css")));
   app.use("/js", express.static(path.join(__dirname, "..", "public/js")));

@@ -1,0 +1,110 @@
+{
+  "seed": 385576036,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P4",
+      "label": "Voisin",
+      "type": "person"
+    }
+  ],
+  "edges": [],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-10 15:35",
+      "event": "Licenciement après plusieurs avertissements disciplinaires",
+      "location": "Rue",
+      "elements": [
+        "isolement",
+        "ressentiment"
+      ],
+      "causes": [],
+      "text": "Accumulation de frustrations sans événement déclencheur clair",
+      "prep_bias": 0.4
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-12 18:53",
+      "event": "Échange téléphonique conflictuel avec la victime",
+      "location": "Bar",
+      "elements": [
+        "filature",
+        "obsession"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "unilateral",
+      "text": "Observation répétée de la victime sans interaction"
+    },
+    {
+      "id": 2,
+      "type": "crime",
+      "time": "2026-01-13 03:22",
+      "event": "Agression mortelle par surprise",
+      "location": "Maison",
+      "elements": [
+        "violence",
+        "mort"
+      ],
+      "causes": [
+        1
+      ],
+      "style": "impulsif",
+      "text": "Altercation dégénérant en homicide"
+    },
+    {
+      "id": 3,
+      "type": "post_crime",
+      "time": "2026-01-13 05:18",
+      "event": "Retour au domicile et tentative de dissimulation",
+      "location": "Entrepôt",
+      "elements": [
+        "vêtements tachés",
+        "nettoyage"
+      ],
+      "causes": [
+        2
+      ],
+      "coherence": "faible",
+      "text": "Retour au domicile et tentative de dissimulation"
+    },
+    {
+      "id": 4,
+      "type": "discovery",
+      "time": "2026-01-14 04:23",
+      "event": "Un voisin alerte la police après avoir entendu des cris",
+      "location": "Entrepôt",
+      "elements": [
+        "absence de réponse",
+        "découverte"
+      ],
+      "causes": [
+        2
+      ],
+      "text": "Un proche inquiet découvre le corps",
+      "delay_minutes": [
+        120,
+        1440
+      ]
+    },
+    {
+      "id": 5,
+      "type": "enquete",
+      "time": "2026-01-14 07:11",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Entrepôt",
+      "elements": [],
+      "causes": [
+        4
+      ]
+    }
+  ]
+}

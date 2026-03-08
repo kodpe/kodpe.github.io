@@ -1,0 +1,203 @@
+[
+  {
+    "id": 10601,
+    "type": "Solitude",
+    "contexte": "L’isolement affectif prolongé accentue le sentiment de rejet et d’injustice.",
+    "interaction": "Tentative de rapprochement rejetée brutalement, déclenchant un sentiment d’abandon transformé en haine.",
+    "mobile": "Le besoin de punir la personne responsable du rejet et de restaurer un sentiment de contrôle déclenche une réaction violente.",
+    "cible": "Personne ayant rejeté l’auteur"
+  },
+  {
+    "id": 10602,
+    "type": "Solitude",
+    "contexte": "La comparaison sociale devient omniprésente dans l’isolement.",
+    "interaction": "Observation répétée d’une relation heureuse vécue comme une provocation, déclenchant un désir destructeur.",
+    "mobile": "La jalousie et la frustration accumulées conduisent à une attaque ciblée contre un symbole de bonheur que l’auteur ne possède pas.",
+    "cible": "Individu en couple ou socialement intégré"
+  },
+  {
+    "id": 10603,
+    "type": "Solitude",
+    "contexte": "L’absence de soutien affectif quotidien accentue la vulnérabilité émotionnelle.",
+    "interaction": "Invitation ignorée ou exclusion lors d’un événement social, perçue comme un rejet total.",
+    "mobile": "Le sentiment d’injustice et de marginalisation déclenche un passage à l’acte pour se venger.",
+    "cible": "Organisateur de l’événement"
+  },
+  {
+    "id": 10604,
+    "type": "Solitude",
+    "contexte": "La solitude prolongée nourrit une perception de menace dans chaque interaction sociale.",
+    "interaction": "Commentaires ou remarques anodines interprétés comme moqueries, déclenchant une rage explosive.",
+    "mobile": "La frustration accumulée face au sentiment d’infériorité sociale motive une attaque violente.",
+    "cible": "Auteur des remarques"
+  },
+  {
+    "id": 10605,
+    "type": "Solitude",
+    "contexte": "L’absence de contacts réguliers augmente l’hyper-sensibilité aux micro-déceptions sociales.",
+    "interaction": "Ignorance délibérée dans un échange quotidien, vécue comme une humiliation extrême.",
+    "mobile": "Le désir de restaurer son existence et sa reconnaissance déclenche une action violente ciblée.",
+    "cible": "Interlocuteur quotidien"
+  },
+  {
+    "id": 10606,
+    "type": "Invisibilisation",
+    "contexte": "L’auteur se sent progressivement effacé de l’espace social.",
+    "interaction": "Ignorance systématique dans un échange important, déclenchant une rage liée au sentiment de ne plus exister.",
+    "mobile": "Le besoin de prouver sa présence et de punir l’offenseur conduit à une violence ciblée.",
+    "cible": "Personne ayant ignoré l’auteur"
+  },
+  {
+    "id": 10607,
+    "type": "Invisibilisation",
+    "contexte": "Le sentiment d’être transparent alimente une hypersensibilité aux micro-interactions.",
+    "interaction": "Passage à l’acte après qu’une personne traverse ou bouscule l’auteur sans s’excuser, vécu comme la preuve ultime de son effacement.",
+    "mobile": "La colère face à l’invisibilisation répétée déclenche une réaction immédiate et violente.",
+    "cible": "Auteur du bousculement"
+  },
+  {
+    "id": 10608,
+    "type": "Invisibilisation",
+    "contexte": "L’absence de reconnaissance régulière accentue l’impression d’inexistence sociale.",
+    "interaction": "Compliments ou interventions de l’auteur systématiquement ignorés en réunion ou public.",
+    "mobile": "La frustration accumulée face à l’invisibilisation déclenche une attaque contre la personne responsable.",
+    "cible": "Collègue ou supérieur"
+  },
+  {
+    "id": 10609,
+    "type": "Invisibilisation",
+    "contexte": "L’auteur perçoit chaque oubli ou omission comme une tentative délibérée de l’effacer.",
+    "interaction": "Refus de prise en compte dans une décision collective importante.",
+    "mobile": "La réaction violente est motivée par la volonté de restaurer son importance et punir l’excluant.",
+    "cible": "Décideur ou responsable"
+  },
+  {
+    "id": 10610,
+    "type": "Invisibilisation",
+    "contexte": "La perception d’invisibilité constante crée une hypersensibilité aux interactions anodines.",
+    "interaction": "Ignorance persistante lors d’un contact social répété, perçue comme une humiliation maximale.",
+    "mobile": "La colère dirigée contre l’agent d’invisibilisation déclenche une violence ciblée.",
+    "cible": "Interlocuteur régulier"
+  },
+  {
+    "id": 10611,
+    "type": "Perte de réseau",
+    "contexte": "La disparition progressive des soutiens relationnels fragilise l’auteur.",
+    "interaction": "Refus collectif d’aide par d’anciens proches, déclenchant un ressentiment violent envers un individu symbolisant ce rejet.",
+    "mobile": "Le besoin de punir et de se venger de la trahison sociale motive une attaque ciblée.",
+    "cible": "Ancien proche"
+  },
+  {
+    "id": 10612,
+    "type": "Perte de réseau",
+    "contexte": "La comparaison avec d’anciens pairs nourrit un sentiment de déclassement.",
+    "interaction": "Rencontre avec un ancien membre du réseau ayant “réussi”, vécue comme une trahison insupportable.",
+    "mobile": "La jalousie et la frustration accumulée conduisent à un passage à l’acte violent.",
+    "cible": "Ancien pair réussi"
+  },
+  {
+    "id": 10613,
+    "type": "Perte de réseau",
+    "contexte": "La perte progressive de contacts professionnels diminue l’influence sociale de l’auteur.",
+    "interaction": "Refus d’échange d’informations ou de soutien sur un projet important.",
+    "mobile": "La frustration liée à l’exclusion sociale motive une réaction agressive.",
+    "cible": "Contact professionnel"
+  },
+  {
+    "id": 10614,
+    "type": "Perte de réseau",
+    "contexte": "L’éloignement des soutiens habituels accentue la dépendance émotionnelle à quelques individus.",
+    "interaction": "Ignorance ou refus d’aide de ces individus clés.",
+    "mobile": "Le ressentiment face à la perte de soutien déclenche une attaque contre la personne responsable.",
+    "cible": "Individu clé du réseau"
+  },
+  {
+    "id": 10615,
+    "type": "Perte de réseau",
+    "contexte": "La disparition de contacts significatifs réduit les opportunités sociales et professionnelles.",
+    "interaction": "Découverte que des opportunités lui ont été refusées par d’anciens contacts.",
+    "mobile": "La colère face à l’exclusion et la trahison sociale motive une réaction violente.",
+    "cible": "Ancien contact influent"
+  },
+  {
+    "id": 10701,
+    "type": "Absence de reconnaissance",
+    "contexte": "Les efforts répétés de l’auteur n’ont jamais été valorisés.",
+    "interaction": "Efforts ignorés ou attribués à quelqu’un d’autre, déclenchant une colère liée à l’effacement personnel.",
+    "mobile": "Le besoin de restaurer sa dignité et de punir l’usurpateur déclenche une réaction violente.",
+    "cible": "Personne ayant pris le crédit des efforts"
+  },
+  {
+    "id": 10702,
+    "type": "Absence de reconnaissance",
+    "contexte": "La comparaison constante nourrit un sentiment d’injustice.",
+    "interaction": "Réussite d’un pair médiocre, vécue comme une injustice appelant réparation violente.",
+    "mobile": "La frustration liée à l’injustice sociale et professionnelle motive un passage à l’acte.",
+    "cible": "Pair médiocre ayant été favorisé"
+  },
+  {
+    "id": 10703,
+    "type": "Absence de reconnaissance",
+    "contexte": "Les contributions de l’auteur sont régulièrement minimisées dans le groupe.",
+    "interaction": "Commentaires dépréciatifs publics sur le travail effectué.",
+    "mobile": "Le désir de rétablir sa valeur perçue déclenche une agression ciblée.",
+    "cible": "Supérieur ou collègue dénigrant"
+  },
+  {
+    "id": 10704,
+    "type": "Absence de reconnaissance",
+    "contexte": "L’absence de retours positifs alimente un sentiment d’effacement progressif.",
+    "interaction": "Remarque ironique ou moqueuse sur les résultats de l’auteur.",
+    "mobile": "La colère accumulée face à la dévalorisation déclenche un passage à l’acte.",
+    "cible": "Interlocuteur moqueur"
+  },
+  {
+    "id": 10705,
+    "type": "Absence de reconnaissance",
+    "contexte": "L’auteur constate que ses succès sont ignorés lors des réunions importantes.",
+    "interaction": "Non-mention ou oubli délibéré des réussites passées.",
+    "mobile": "La frustration de l’invisibilisation conduit à une réaction agressive.",
+    "cible": "Responsable ou animateur de la réunion"
+  },
+  {
+    "id": 10706,
+    "type": "Sentiment de dépossession",
+    "contexte": "L’auteur perçoit une perte progressive de contrôle sur sa vie.",
+    "interaction": "Décision prise sans consultation de l’auteur, vécue comme un vol de contrôle.",
+    "mobile": "Le besoin de reprendre le contrôle et de punir l’imposant déclenche une action violente.",
+    "cible": "Décideur ou supérieur ayant imposé la décision"
+  },
+  {
+    "id": 10707,
+    "type": "Sentiment de dépossession",
+    "contexte": "Les changements imposés se sont accumulés sans opposition possible.",
+    "interaction": "Changement imposé affectant sa vie personnelle, déclenchant une violence revendicatrice.",
+    "mobile": "La frustration liée à la perte d’autonomie motive une réaction ciblée.",
+    "cible": "Personne ayant imposé les changements"
+  },
+  {
+    "id": 10708,
+    "type": "Sentiment de dépossession",
+    "contexte": "L’auteur se sent exclu des décisions importantes concernant ses biens ou son travail.",
+    "interaction": "Décision collective sans avis de l’auteur.",
+    "mobile": "Le désir de restaurer son contrôle personnel conduit à une attaque ciblée.",
+    "cible": "Membre du groupe décisionnel"
+  },
+  {
+    "id": 10709,
+    "type": "Sentiment de dépossession",
+    "contexte": "Les interventions répétées d’autres personnes réduisent l’influence de l’auteur.",
+    "interaction": "Imposition d’un changement majeur sans consultation.",
+    "mobile": "La colère face à cette perte de contrôle déclenche un passage à l’acte.",
+    "cible": "Personne responsable de l’imposition"
+  },
+  {
+    "id": 10710,
+    "type": "Sentiment de dépossession",
+    "contexte": "L’auteur subit une série de décisions arbitraires limitant son autonomie.",
+    "interaction": "Intervention sur ses affaires personnelles ou professionnelles sans accord.",
+    "mobile": "La volonté de récupérer son autonomie et de punir la personne déclenche une réaction violente.",
+    "cible": "Individu imposant ces décisions"
+  }
+]
+

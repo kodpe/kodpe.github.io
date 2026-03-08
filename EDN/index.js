@@ -6,5 +6,15 @@ const { DISCORD_BOT_TOKEN } = require("./config/env");
 
 (async () => {
   startServer();
-  client.login(DISCORD_BOT_TOKEN);
+  if (process.env.NODE_ENV === "development") {
+    console.log("DEVELOPMENT MODE")
+    console.log("http://localhost:3000/?token=d67a4ba21340adf0241c7eac0604169a39851a789857ec437e568c1f0c63373a")
+  }
+  else {
+    console.log("PRODUCTION MODE")
+    // client.login(DISCORD_BOT_TOKEN);
+  }
 })();
+
+// npm run dev
+// fly ssh console -C "printenv"

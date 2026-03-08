@@ -1,0 +1,123 @@
+{
+  "seed": 144995620,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P3",
+      "label": "Conjoint",
+      "type": "person"
+    },
+    {
+      "id": "O4",
+      "label": "Clé",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "O4",
+      "target": "P3",
+      "type": 0
+    },
+    {
+      "source": "O4",
+      "target": "P1",
+      "type": 1
+    },
+    {
+      "source": "O4",
+      "target": "P3",
+      "type": 2
+    },
+    {
+      "source": "O4",
+      "target": "P3",
+      "type": 3
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-02",
+      "event": "Perte d'emploi récente",
+      "location": "Rue",
+      "elements": [
+        "licenciement",
+        "dettes"
+      ],
+      "causes": []
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-08",
+      "event": "Dispute violente avec la victime",
+      "location": "Appartement",
+      "elements": [
+        "jalousie"
+      ],
+      "causes": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-04",
+      "event": "Achat d'une arme",
+      "location": "Entrepôt",
+      "elements": [
+        "munition"
+      ],
+      "causes": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-02",
+      "event": "Agression mortelle",
+      "location": "Bar",
+      "elements": [
+        "hémorragie",
+        "plaie"
+      ],
+      "causes": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-02",
+      "event": "Retour au domicile",
+      "location": "Bar",
+      "elements": [
+        "nettoyage",
+        "vêtements tachés"
+      ],
+      "causes": [
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-09",
+      "event": "Voisin alerte la police",
+      "location": "Bar",
+      "elements": [
+        "cris"
+      ],
+      "causes": [
+        0
+      ]
+    }
+  ]
+}

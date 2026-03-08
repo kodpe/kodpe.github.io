@@ -1,0 +1,66 @@
+.personal-goal-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.personal-goal-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.personal-goal-main-value {
+    font-weight: 600;
+    color: white;
+}
+
+.personal-goal-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.personal-goal-line {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.2;
+}
+
+.personal-goal-progress-line {
+    margin-top: 4px;
+}
+
+.nbrev-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.nbrev-controls button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nbrev-controls button:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.personal-goal-progress-line {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.personal-goal-progress-line .pb-progressbar-widget {
+    width: 100%;
+    max-width: none;
+}

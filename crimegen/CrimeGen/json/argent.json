@@ -1,0 +1,123 @@
+[
+  {
+    "id": 4001,
+    "type": "Pression financière",
+    "contexte": "Les difficultés économiques prolongées maintiennent l’auteur dans un état de tension constante.",
+    "interaction": "Appel d’un créancier agressif qui humilie l’auteur, transformant l’angoisse financière en pulsion violente contre un représentant perçu du système.",
+    "mobile": "L’humiliation et la menace directe renforcent la peur et la colère, déclenchant un désir de riposte violente contre celui qui incarne la pression financière.",
+    "cible": "Créancier ou agent de recouvrement"
+  },
+  {
+    "id": 4002,
+    "type": "Pression financière",
+    "contexte": "La dépendance financière à autrui érode progressivement l’estime personnelle.",
+    "interaction": "Discussion tendue avec un proche refusant une aide financière, vécue comme une trahison déclenchant une réaction meurtrière.",
+    "mobile": "La perception d’une trahison dans un moment critique transforme l’injustice ressentie en agression ciblée.",
+    "cible": "Proche refusant l’aide"
+  },
+  {
+    "id": 4003,
+    "type": "Pression financière",
+    "contexte": "Les retards de paiement répétés entraînent des conséquences tangibles sur le quotidien de l’auteur.",
+    "interaction": "Découverte d’une facture impayée ou d’une saisie, vécue comme une attaque directe contre sa survie.",
+    "mobile": "La peur de perdre l’accès aux besoins fondamentaux génère une violence préventive contre la personne responsable.",
+    "cible": "Agent administratif ou employé responsable du suivi financier"
+  },
+  {
+    "id": 4004,
+    "type": "Pression financière",
+    "contexte": "Les dettes accumulées et l’angoisse financière créent une pression psychologique constante.",
+    "interaction": "Observation d’un tiers perçu comme privilégié financièrement, déclenchant un ressentiment transformé en violence.",
+    "mobile": "La comparaison et le sentiment d’injustice sociale motivent une attaque contre un symbole de sécurité économique.",
+    "cible": "Personne perçue comme financièrement privilégiée ou responsable indirecte"
+  },
+  {
+    "id": 4005,
+    "type": "Pression financière",
+    "contexte": "La vulnérabilité économique rend chaque interaction sociale potentiellement menaçante.",
+    "interaction": "Réprimande publique ou humiliation liée à une situation financière devant des témoins.",
+    "mobile": "L’humiliation visible et la perte de dignité déclenchent une réaction de violence contre celui qui incarne cette humiliation.",
+    "cible": "Personne qui humilie publiquement pour motif financier"
+  },
+  {
+    "id": 5001,
+    "type": "Dettes",
+    "contexte": "L’endettement prolongé génère honte, peur et anticipation permanente de sanctions.",
+    "interaction": "Menace explicite liée à une dette impayée, déclenchant une peur panique et une attaque préventive.",
+    "mobile": "La peur d’une sanction imminente transforme l’anxiété en violence dirigée contre celui qui menace.",
+    "cible": "Créancier ou personne en charge du recouvrement"
+  },
+  {
+    "id": 5002,
+    "type": "Dettes",
+    "contexte": "La crainte d’une exposition publique fragilise l’équilibre émotionnel de l’auteur.",
+    "interaction": "Découverte que quelqu’un parle publiquement de ses dettes, transformant la honte en violence ciblée.",
+    "mobile": "L’humiliation publique engendre une rage ciblée pour restaurer son honneur perçu comme bafoué.",
+    "cible": "Personne ayant divulgué l’information"
+  },
+  {
+    "id": 5003,
+    "type": "Dettes",
+    "contexte": "Les dettes accumulées aggravent l’insécurité personnelle et la pression psychologique.",
+    "interaction": "Requête pressante d’un tiers pour rembourser immédiatement, interprétée comme une attaque personnelle.",
+    "mobile": "La sensation d’oppression et de perte de contrôle déclenche un comportement violent préventif.",
+    "cible": "Créancier ou intermédiaire financier"
+  },
+  {
+    "id": 5004,
+    "type": "Dettes",
+    "contexte": "La peur de ruine ou de saisie persiste malgré les tentatives de résolution.",
+    "interaction": "Notification officielle de saisie ou menace légale, perçue comme une agression directe.",
+    "mobile": "La menace concrète sur les biens essentiels transforme la panique en violence ciblée contre le responsable.",
+    "cible": "Agent administratif ou représentant légal"
+  },
+  {
+    "id": 5005,
+    "type": "Dettes",
+    "contexte": "Le suivi constant par des créanciers crée un stress permanent et un sentiment d’harcèlement.",
+    "interaction": "Appel répété ou visite intrusive d’un créancier, déclenchant une réaction violente pour se libérer de la pression.",
+    "mobile": "L’acharnement perçu intensifie la peur et la colère, conduisant à une attaque contre l’agresseur financier.",
+    "cible": "Créancier ou collecteur de dettes"
+  },
+  {
+    "id": 6001,
+    "type": "Précarité",
+    "contexte": "L’auteur vit dans une insécurité matérielle durable affectant ses besoins fondamentaux.",
+    "interaction": "Refus d’un logement ou d’un service essentiel, vécu comme une négation de son droit d’exister, déclenchant une rage désespérée.",
+    "mobile": "La privation de ressources vitales transforme la frustration en violence dirigée contre le responsable.",
+    "cible": "Agent de service ou représentant de l’institution refusant le logement/service"
+  },
+  {
+    "id": 6002,
+    "type": "Précarité",
+    "contexte": "La survie quotidienne est marquée par des tensions répétées et une perte de contrôle.",
+    "interaction": "Altercation dans un lieu public liée à une situation de survie (repas, abri), transformant la frustration en violence immédiate.",
+    "mobile": "Le stress constant lié à la précarité déclenche une réaction violente pour affirmer un contrôle sur l’environnement.",
+    "cible": "Personne impliquée dans l’altercation ou perçue comme obstacle"
+  },
+  {
+    "id": 6003,
+    "type": "Précarité",
+    "contexte": "L’absence de ressources stables exacerbe l’anxiété et le sentiment d’impuissance.",
+    "interaction": "Refus répété d’aide alimentaire ou médicale, interprété comme une agression personnelle.",
+    "mobile": "Le sentiment de menace pour sa survie déclenche une attaque contre celui qui empêche l’accès aux besoins essentiels.",
+    "cible": "Bénévole ou agent de service bloquant l’accès"
+  },
+  {
+    "id": 6004,
+    "type": "Précarité",
+    "contexte": "Les besoins élémentaires non satisfaits engendrent une tension chronique et un stress extrême.",
+    "interaction": "Conflit dans une file d’attente pour des ressources rares, déclenchant une explosion de violence.",
+    "mobile": "La compétition pour la survie transforme la colère en acte violent contre un obstacle immédiat.",
+    "cible": "Autre personne présente dans le conflit"
+  },
+  {
+    "id": 6005,
+    "type": "Précarité",
+    "contexte": "L’incapacité à subvenir à ses besoins fondamentaux crée un sentiment d’injustice et de rage.",
+    "interaction": "Refus d’un employeur de fournir un travail ou une aide ponctuelle, perçu comme une attaque personnelle.",
+    "mobile": "La frustration face à l’injustice perçue conduit à une action violente pour rétablir le contrôle.",
+    "cible": "Employeur ou représentant de l’institution"
+  }
+]
+

@@ -1,0 +1,205 @@
+[
+  {
+    "id": 9001,
+    "type": "Quartier tendu",
+    "contexte": "L’environnement quotidien est marqué par des tensions constantes.",
+    "interaction": "Altercation territoriale mineure déclenchant une escalade violente immédiate.",
+    "mobile": "Le sentiment de menace permanente déclenche une réaction brutale pour défendre son territoire.",
+    "cible": "Voisin ou passant perçu comme intrus"
+  },
+  {
+    "id": 9002,
+    "type": "Quartier tendu",
+    "contexte": "La vigilance permanente transforme chaque interaction en menace potentielle.",
+    "interaction": "Regard interprété comme défi, justifiant une réponse brutale.",
+    "mobile": "L’interprétation d’un affront déclenche une attaque défensive ou préventive.",
+    "cible": "Voisin ou inconnu perçu comme provocateur"
+  },
+  {
+    "id": 9003,
+    "type": "Quartier tendu",
+    "contexte": "Les tensions entre groupes sont latentes et omniprésentes.",
+    "interaction": "Conflit verbal qui dégénère rapidement, transformé en agression physique.",
+    "mobile": "L’accumulation de petites provocations provoque une réaction violente pour s’imposer.",
+    "cible": "Membre d’un groupe rival"
+  },
+  {
+    "id": 9004,
+    "type": "Quartier tendu",
+    "contexte": "Les comportements antisociaux sont fréquents et banalisés.",
+    "interaction": "Dispute sur un espace commun perçue comme attaque personnelle, déclenchant une agression.",
+    "mobile": "La volonté de défendre sa place ou son honneur déclenche un passage à l’acte violent.",
+    "cible": "Passant ou voisin impliqué"
+  },
+  {
+    "id": 9005,
+    "type": "Quartier tendu",
+    "contexte": "L’hostilité latente entre résidents crée un climat de suspicion.",
+    "interaction": "Observation répétée d’un comportement jugé provocateur, entraînant une confrontation violente.",
+    "mobile": "La perception de provocation constante justifie une attaque défensive ou punitive.",
+    "cible": "Résident perçu comme provocateur"
+  },
+
+  {
+    "id": 9101,
+    "type": "Normalisation du conflit",
+    "contexte": "Le conflit est intégré comme mode de communication ordinaire.",
+    "interaction": "Dispute ordinaire dépassant soudain le seuil de tolérance.",
+    "mobile": "L’habitude des affrontements rend l’agression spontanée et légitime à ses yeux.",
+    "cible": "Partenaire ou voisin impliqué dans la dispute"
+  },
+  {
+    "id": 9102,
+    "type": "Normalisation du conflit",
+    "contexte": "La répétition des provocations a banalisé l’escalade.",
+    "interaction": "Provocation répétée considérée comme acceptable jusqu’au passage à l’acte.",
+    "mobile": "La tolérance au conflit crée un déclencheur rapide pour la violence.",
+    "cible": "Individu provoquant régulièrement"
+  },
+  {
+    "id": 9103,
+    "type": "Normalisation du conflit",
+    "contexte": "Les tensions sont présentes mais non sanctionnées par l’entourage.",
+    "interaction": "Échange verbal intense qui dégénère, déclenchant un passage à l’acte.",
+    "mobile": "L’absence de régulation sociale incite à répondre par la force.",
+    "cible": "Connaissance ou voisin impliqué"
+  },
+  {
+    "id": 9104,
+    "type": "Normalisation du conflit",
+    "contexte": "La violence est perçue comme un outil de résolution acceptable.",
+    "interaction": "Désaccord mineur transformé en confrontation physique.",
+    "mobile": "Le sentiment que la violence est normale déclenche une réaction immédiate.",
+    "cible": "Personne directement impliquée dans le désaccord"
+  },
+  {
+    "id": 9105,
+    "type": "Normalisation du conflit",
+    "contexte": "Les micro-agressions sont fréquentes et non traitées.",
+    "interaction": "Accumulation de micro-provocations menant à une explosion de violence.",
+    "mobile": "L’accumulation de tensions mineures entraîne un acte violent contre le provocateur.",
+    "cible": "Auteur des micro-agressions"
+  },
+
+  {
+    "id": 9201,
+    "type": "Surveillance",
+    "contexte": "L’auteur se sent observé et jugé en permanence.",
+    "interaction": "Contrôle ou remarque perçue comme intrusion insupportable, déclenchant une attaque.",
+    "mobile": "La perception d’une violation de sa sphère privée déclenche une agression défensive.",
+    "cible": "Personne perçue comme surveillante"
+  },
+  {
+    "id": 9202,
+    "type": "Surveillance",
+    "contexte": "La méfiance structure les interactions quotidiennes.",
+    "interaction": "Impression d’être constamment observé, menant à une réaction violente de défense.",
+    "mobile": "Le sentiment d’être espionné déclenche une attaque préventive contre l’observateur.",
+    "cible": "Individu suspecté de surveillance"
+  },
+  {
+    "id": 9203,
+    "type": "Surveillance",
+    "contexte": "Chaque regard ou geste est interprété comme potentiellement hostile.",
+    "interaction": "Observation prolongée d’un comportement jugé suspect, entraînant un acte violent.",
+    "mobile": "La paranoïa déclenche une réponse physique contre la personne surveillée.",
+    "cible": "Personne jugée suspecte"
+  },
+  {
+    "id": 9204,
+    "type": "Surveillance",
+    "contexte": "L’accumulation de petites intrusions génère une tension constante.",
+    "interaction": "Remarque insistante ou commentaire perçu comme critique déclenche une agression.",
+    "mobile": "La frustration accumulée par la surveillance déclenche un passage à l’acte.",
+    "cible": "Auteur de l’intrusion ou remarque"
+  },
+  {
+    "id": 9205,
+    "type": "Surveillance",
+    "contexte": "L’absence de confidentialité renforce le sentiment de menace.",
+    "interaction": "Confrontation avec un observateur jugé envahissant déclenche une réaction violente.",
+    "mobile": "Le besoin de protéger son espace personnel conduit à une attaque ciblée.",
+    "cible": "Individu envahissant"
+  },
+  {
+    "id": 9301,
+    "type": "Sentiment d’être sacrifié par le système",
+    "contexte": "L’auteur perçoit les institutions comme fondamentalement injustes.",
+    "interaction": "Décision administrative vécue comme arbitraire, déclenchant une violence dirigée contre un représentant.",
+    "mobile": "La perception d’injustice institutionnelle déclenche un passage à l’acte pour punir un responsable identifié.",
+    "cible": "Agent ou représentant du système"
+  },
+  {
+    "id": 9302,
+    "type": "Sentiment d’être sacrifié par le système",
+    "contexte": "La frustration idéologique s’est accumulée sans débouché.",
+    "interaction": "Interaction avec une figure d’autorité incarnant cette injustice, justifiant une vengeance.",
+    "mobile": "L’accumulation de ressentiment contre l’autorité déclenche une agression ciblée.",
+    "cible": "Figure d’autorité ou responsable symbolique"
+  },
+  {
+    "id": 9303,
+    "type": "Sentiment d’être sacrifié par le système",
+    "contexte": "Les décisions administratives répétées semblent écraser les droits individuels.",
+    "interaction": "Blocage ou sanction perçue comme arbitraire déclenche une confrontation violente.",
+    "mobile": "L’impression de victimisation institutionnelle transforme la frustration en violence ciblée.",
+    "cible": "Fonctionnaire ou bureaucrate impliqué"
+  },
+  {
+    "id": 9304,
+    "type": "Sentiment d’être sacrifié par le système",
+    "contexte": "Les procédures sont incompréhensibles et oppressives pour l’auteur.",
+    "interaction": "Demande ignorée ou refus administratif déclenche une réaction violente.",
+    "mobile": "Le sentiment de négligence ou d’humiliation administrative provoque une agression contre un représentant.",
+    "cible": "Agent de l’administration"
+  },
+  {
+    "id": 9305,
+    "type": "Sentiment d’être sacrifié par le système",
+    "contexte": "L’accumulation de décisions perçues comme injustes nourrit un ressentiment permanent.",
+    "interaction": "Confrontation verbale avec une autorité perçue comme oppressante déclenche un acte violent.",
+    "mobile": "La colère dirigée contre le système se matérialise contre un représentant identifiable.",
+    "cible": "Représentant du système"
+  },
+
+  {
+    "id": 9401,
+    "type": "Colère idéologique diffuse",
+    "contexte": "L’auteur nourrit une hostilité idéologique générale sans cible précise.",
+    "interaction": "Discussion politique dégénérant en personnalisation de la haine, menant à une agression.",
+    "mobile": "La colère idéologique devient dirigée contre une personne incarnant des idées opposées.",
+    "cible": "Individu représentant idéologiquement l’opposition"
+  },
+  {
+    "id": 9402,
+    "type": "Colère idéologique diffuse",
+    "contexte": "Les symboles idéologiques sont perçus comme oppressifs.",
+    "interaction": "Acte symbolique perçu comme une oppression, déclenchant une violence exemplaire.",
+    "mobile": "La perception d’injustice symbolique provoque un passage à l’acte contre ceux associés au symbole.",
+    "cible": "Personne ou groupe associé au symbole"
+  },
+  {
+    "id": 9403,
+    "type": "Colère idéologique diffuse",
+    "contexte": "L’accumulation de frustrations sociopolitiques génère une hostilité générale.",
+    "interaction": "Confrontation avec un militant ou représentant idéologique déclenche une agression physique.",
+    "mobile": "Le ressentiment diffus se matérialise en violence contre une personne identifiée à l’idéologie opposée.",
+    "cible": "Militant ou partisan de l’idéologie opposée"
+  },
+  {
+    "id": 9404,
+    "type": "Colère idéologique diffuse",
+    "contexte": "La perception d’injustice systémique renforce la colère idéologique.",
+    "interaction": "Observation d’un symbole institutionnel ou politique déclenche une attaque ciblée.",
+    "mobile": "La colère idéologique conduit à un passage à l’acte contre un acteur représentant l’institution ou le symbole.",
+    "cible": "Représentant institutionnel ou militant politique"
+  },
+  {
+    "id": 9405,
+    "type": "Colère idéologique diffuse",
+    "contexte": "L’absence de solutions légales ou pacifiques alimente un désir d’action directe.",
+    "interaction": "Provocation ou confrontation idéologique perçue comme ultime déclenchement de violence.",
+    "mobile": "Le besoin d’exprimer la colère idéologique se concrétise par une attaque ciblée.",
+    "cible": "Personne associée à l’idéologie adverse"
+  }
+]

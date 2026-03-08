@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1001,
+    "type": "Licenciement",
+    "contexte": "Après plusieurs mois de dégradation professionnelle et de perte de confiance, l’auteur vit une instabilité identitaire liée à son travail.",
+    "interaction": "Entretien de licenciement brutal où l’auteur se sent publiquement humilié par un supérieur identifié comme responsable direct de sa chute.",
+    "mobile": "L’humiliation publique est vécue comme une destruction volontaire de sa dignité et de son identité professionnelle, générant une colère focalisée sur la personne perçue comme l’initiateur de cette chute.",
+    "cible": "Supérieur hiérarchique ayant annoncé le licenciement"
+  },
+  {
+    "id": 1002,
+    "type": "Licenciement",
+    "contexte": "Depuis son licenciement, l’auteur rumine sa perte de statut et se sent observé et jugé socialement.",
+    "interaction": "Rencontre fortuite avec un ancien collègue après le licenciement, vécue comme une provocation rappelant sa déchéance sociale.",
+    "mobile": "La confrontation ravive la honte et transforme le sentiment d’infériorité en rage dirigée contre une personne incarnant la réussite et le jugement social.",
+    "cible": "Ancien collègue toujours en poste"
+  },
+  {
+    "id": 1003,
+    "type": "Licenciement",
+    "contexte": "Le licenciement a plongé l’auteur dans une perte de repères quotidiens et une dévalorisation persistante.",
+    "interaction": "Réception d’un courrier administratif impersonnel confirmant la fin de contrat sans reconnaissance du travail accompli.",
+    "mobile": "La froideur institutionnelle est interprétée comme une négation totale de son existence professionnelle, déclenchant un désir de représailles contre une figure associée à cette décision.",
+    "cible": "Responsable des ressources humaines ou représentant de l’employeur"
+  },
+  {
+    "id": 1004,
+    "type": "Licenciement",
+    "contexte": "Privé de travail, l’auteur voit son autorité et son rôle social s’effondrer au sein de son entourage.",
+    "interaction": "Remarque méprisante d’un proche ou d’un tiers sur sa situation de chômeur.",
+    "mobile": "La remarque agit comme une confirmation de sa déchéance sociale, transformant le sentiment d’humiliation intime en violence dirigée contre celui qui verbalise ce jugement.",
+    "cible": "Personne ayant formulé la remarque dévalorisante"
+  },
+  {
+    "id": 1005,
+    "type": "Licenciement",
+    "contexte": "Le licenciement a entraîné une dépendance financière accrue et une perte de contrôle sur sa vie quotidienne.",
+    "interaction": "Conflit lors d’une démarche liée au chômage ou aux aides sociales, perçu comme un traitement injuste ou soupçonneux.",
+    "mobile": "L’auteur perçoit l’échange comme une accusation implicite d’inutilité ou de fraude, déclenchant une colère violente contre un individu représentant l’injustice du système.",
+    "cible": "Agent ou interlocuteur institutionnel"
+  },
+  {
+    "id": 2001,
+    "type": "Mise au placard",
+    "contexte": "L’auteur subit depuis longtemps une marginalisation professionnelle progressive sans confrontation directe.",
+    "interaction": "Réunion où l’auteur est ignoré ou ridiculisé par un supérieur, cristallisant un sentiment d’effacement et un besoin de rétablir une autorité par la violence.",
+    "mobile": "La marginalisation répétée est vécue comme un déni de sa valeur, déclenchant un désir de représailles contre la personne qui symbolise cette injustice.",
+    "cible": "Supérieur hiérarchique responsable de l’ignorance ou du ridicule"
+  },
+  {
+    "id": 2002,
+    "type": "Mise au placard",
+    "contexte": "La stagnation forcée au travail nourrit une comparaison constante avec les autres.",
+    "interaction": "Observation répétée d’autres collègues promus pendant qu’il est marginalisé, menant à un ressentiment dirigé contre une figure incarnant cette injustice.",
+    "mobile": "Le contraste entre sa situation et celle des autres alimente la jalousie et le ressentiment, transformant cette frustration en violence dirigée.",
+    "cible": "Collègue promu ou figure symbolisant la réussite professionnelle"
+  },
+  {
+    "id": 2003,
+    "type": "Mise au placard",
+    "contexte": "L’auteur voit son travail systématiquement ignoré ou réattribué à d’autres.",
+    "interaction": "Découverte que ses projets ou contributions sont attribués à un autre, déclenchant un sentiment d’injustice intense.",
+    "mobile": "La privation de reconnaissance personnelle transforme la frustration professionnelle en désir de vengeance ciblée.",
+    "cible": "Collègue ou supérieur ayant bénéficié de ses efforts"
+  },
+  {
+    "id": 2004,
+    "type": "Mise au placard",
+    "contexte": "L’absence de missions valorisantes crée un sentiment d’inutilité et d’effacement.",
+    "interaction": "Discussion avec un supérieur qui minimise ses compétences ou son rôle, perçue comme un affront direct.",
+    "mobile": "La minimisation répétée de sa valeur personnelle déclenche une colère dirigée vers le responsable de cette marginalisation.",
+    "cible": "Supérieur hiérarchique minimisant ses compétences"
+  },
+  {
+    "id": 2005,
+    "type": "Mise au placard",
+    "contexte": "Le quotidien professionnel devient une source de frustration constante et silencieuse.",
+    "interaction": "Participation forcée à des tâches subalternes alors qu’il a l’expérience pour des responsabilités importantes, renforçant le sentiment d’injustice.",
+    "mobile": "La répétition de ce traitement perçu comme arbitraire provoque un désir de se venger contre la personne incarnant cette marginalisation.",
+    "cible": "Supérieur ou responsable de l’attribution des tâches"
+  },
+  {
+    "id": 3001,
+    "type": "Rétrogradation",
+    "contexte": "L’auteur vit une perte de reconnaissance et d’identité liée à sa position professionnelle.",
+    "interaction": "Annonce officielle de rétrogradation devant des pairs, déclenchant un sentiment de déclassement insupportable transformé en haine personnelle.",
+    "mobile": "L’humiliation publique et la perte brutale de statut détruisent son image sociale, déclenchant un besoin de faire payer celui qui a pris ou incarné la décision.",
+    "cible": "Supérieur hiérarchique ayant annoncé ou validé la rétrogradation"
+  },
+  {
+    "id": 3002,
+    "type": "Rétrogradation",
+    "contexte": "La rétrogradation alimente un sentiment d’usurpation et d’injustice durable.",
+    "interaction": "Interaction avec un remplaçant plus jeune ou moins expérimenté, vécue comme une usurpation qui justifie une vengeance physique.",
+    "mobile": "La conviction d’avoir été remplacé injustement transforme la colère en désir d’éliminer celui qui incarne la dépossession.",
+    "cible": "Remplaçant occupant désormais le poste perdu"
+  },
+  {
+    "id": 3003,
+    "type": "Rétrogradation",
+    "contexte": "La décision de rétrogradation n’a jamais été clairement expliquée, laissant place aux interprétations.",
+    "interaction": "Entretien vague où la hiérarchie refuse de justifier la rétrogradation, renforçant un sentiment d’arbitraire.",
+    "mobile": "L’absence d’explication est vécue comme un mépris délibéré, déclenchant une colère dirigée contre l’autorité décisionnaire.",
+    "cible": "Responsable hiérarchique direct ou décideur RH"
+  },
+  {
+    "id": 3004,
+    "type": "Rétrogradation",
+    "contexte": "La rétrogradation entraîne une modification visible du regard des collègues.",
+    "interaction": "Remarque condescendante ou moqueuse d’un collègue suite à la rétrogradation, vécue comme une humiliation supplémentaire.",
+    "mobile": "La dégradation du regard social transforme la honte en violence dirigée contre celui qui matérialise cette perte de respect.",
+    "cible": "Collègue ayant exprimé le mépris ou la moquerie"
+  },
+  {
+    "id": 3005,
+    "type": "Rétrogradation",
+    "contexte": "La rétrogradation a des conséquences matérielles et symboliques sur le quotidien professionnel.",
+    "interaction": "Retrait de responsabilités ou d’avantages visibles (bureau, équipe, autonomie), perçu comme une volonté d’écrasement.",
+    "mobile": "La répétition des signes de déclassement alimente une colère froide visant la personne qui organise ou applique ces pertes.",
+    "cible": "Supérieur ou responsable de l’organisation du travail"
+  },
+  {
+    "id": 7001,
+    "type": "Peur de perte d'emploi",
+    "contexte": "L’auteur vit dans l’anticipation constante d’un effondrement professionnel.",
+    "interaction": "Remarque ambiguë d’un supérieur laissant planer une menace, déclenchant une obsession paranoïaque conduisant à une agression.",
+    "mobile": "La crainte intense de perdre son emploi déclenche une attaque préventive contre la personne perçue comme responsable.",
+    "cible": "Supérieur direct ou responsable hiérarchique"
+  },
+  {
+    "id": 7002,
+    "type": "Peur de perte d'emploi",
+    "contexte": "La compétition perçue au travail renforce l’angoisse et la méfiance.",
+    "interaction": "Observation d’un collègue perçu comme concurrent direct, transformant l’angoisse en élimination violente.",
+    "mobile": "La peur de déclassement et de substitution professionnelle déclenche une violence ciblée contre le concurrent.",
+    "cible": "Collègue ou concurrent perçu"
+  },
+  {
+    "id": 7003,
+    "type": "Peur de perte d'emploi",
+    "contexte": "Les rumeurs persistantes sur des licenciements futurs amplifient l’inquiétude.",
+    "interaction": "Entendre des commentaires sur un prochain licenciement dirigé contre lui, déclenchant une réaction violente impulsive.",
+    "mobile": "La peur d’être la prochaine victime d’un licenciement entraîne une agression contre ceux diffusant la rumeur.",
+    "cible": "Collègue ou responsable évoquant la rumeur"
+  },
+  {
+    "id": 7004,
+    "type": "Peur de perte d'emploi",
+    "contexte": "L’isolement au sein de l’équipe accentue la paranoïa et la méfiance.",
+    "interaction": "Exclusion répétée de réunions importantes, interprétée comme une menace directe, déclenchant une action violente.",
+    "mobile": "Le sentiment d’être marginalisé et menacé déclenche une attaque contre l’auteur de l’exclusion.",
+    "cible": "Supérieur ou collègue initiant l’exclusion"
+  },
+  {
+    "id": 7005,
+    "type": "Peur de perte d'emploi",
+    "contexte": "Les signes de désapprobation professionnelle sont interprétés comme une sanction imminente.",
+    "interaction": "Remarques sarcastiques ou critiques publiques intensifient la peur, transformant l’angoisse en passage à l’acte violent.",
+    "mobile": "La crainte de perdre le contrôle de sa position entraîne une violence dirigée vers celui perçu comme provocateur.",
+    "cible": "Supérieur ou collègue critique"
+  },
+  {
+    "id": 9501,
+    "type": "Emploi difficile",
+    "contexte": "L’auteur subit des exigences professionnelles irréalistes qui épuisent sa patience et sa résistance mentale.",
+    "interaction": "Réprimande publique pour un retard mineur devant toute l’équipe, déclenchant un ressentiment violent.",
+    "mobile": "Le sentiment d’injustice et d’humiliation transforme la frustration en agression contre le supérieur direct.",
+    "cible": "Supérieur hiérarchique"
+  },
+  {
+    "id": 9502,
+    "type": "Emploi difficile",
+    "contexte": "L’auteur doit constamment compenser les erreurs d’un collègue incompétent, augmentant son stress et sa frustration.",
+    "interaction": "Accrochage verbal avec le collègue jugé responsable de l’échec collectif, menant à un désir de vengeance.",
+    "mobile": "La colère accumulée contre la personne perçue comme responsable de la surcharge déclenche une violence ciblée.",
+    "cible": "Collègue perçu comme fautif"
+  },
+  {
+    "id": 9503,
+    "type": "Emploi difficile",
+    "contexte": "L’auteur est tenu à des objectifs irréalistes sous la pression constante de délais serrés.",
+    "interaction": "Échec de dernière minute sur un projet important, avec blâme injustifié de la part du supérieur.",
+    "mobile": "La frustration liée à la pression et à l’injustice provoque un passage à l’acte contre le responsable du blâme.",
+    "cible": "Supérieur ou responsable de projet"
+  },
+  {
+    "id": 9504,
+    "type": "Emploi difficile",
+    "contexte": "L’environnement professionnel est hostile et compétitif, avec favoritisme et exclusions répétées.",
+    "interaction": "Découverte qu’un poste convoité est attribué à un autre sans justification, déclenchant une rage jalouse.",
+    "mobile": "Le sentiment d’injustice et de trahison provoque une attaque ciblée contre le bénéficiaire ou l’autorité décisionnelle.",
+    "cible": "Collègue favorisé ou décideur"
+  },
+  {
+    "id": 9505,
+    "type": "Emploi difficile",
+    "contexte": "L’auteur est exposé à des humiliations répétées et des critiques incessantes sans possibilité de défense.",
+    "interaction": "Commentaires dégradants devant des clients ou collègues, déclenchant une colère explosive.",
+    "mobile": "La dévalorisation constante entraîne une violence dirigée contre l’auteur des humiliations.",
+    "cible": "Supérieur ou responsable direct"
+  }
+]

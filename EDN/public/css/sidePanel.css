@@ -123,7 +123,7 @@
 .side-panel nav {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 14px;
 }
 
 .side-btn {
@@ -132,7 +132,7 @@
 	font-family: 'JetBrains Mono', monospace;
 	/* font-weight: 600; */
 	letter-spacing: 1px;
-	padding-block: 24px;
+	padding-block: 16px;
 	padding-left: 8px;
     box-sizing: border-box;
     /* border: 1px solid #0f0; */

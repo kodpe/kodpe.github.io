@@ -1,0 +1,13 @@
+/* style.css dans assets/ */
+body {
+    background-color: #212121;
+    color: white;               /* texte par défaut blanc */
+    margin: 0;                  /* supprime les marges par défaut */
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* si tu veux forcer les div Dash aussi */
+div {
+    background-color: transparent; /* laisse le fond du body visible */
+}

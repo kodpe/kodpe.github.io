@@ -1,0 +1,157 @@
+{
+  "seed": 725063721,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P4",
+      "label": "Voisin",
+      "type": "person"
+    },
+    {
+      "id": "P2",
+      "label": "Suspect",
+      "type": "person"
+    },
+    {
+      "id": "O3",
+      "label": "Téléphone",
+      "type": "object"
+    },
+    {
+      "id": "O2",
+      "label": "Arme à feu",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P1",
+      "target": "O2",
+      "type": 0
+    },
+    {
+      "source": "O2",
+      "target": "P2",
+      "type": 0
+    },
+    {
+      "source": "O2",
+      "target": "P2",
+      "type": 0
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-05 14:11",
+      "event": "Accumulation de frustrations sans événement déclencheur clair",
+      "location": "Rue",
+      "elements": [
+        "licenciement",
+        "humiliation professionnelle"
+      ],
+      "causes": [],
+      "text": "Licenciement après plusieurs avertissements disciplinaires",
+      "prep_bias": 0.7
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-06 20:02",
+      "event": "Observation répétée de la victime sans interaction",
+      "location": "Bar",
+      "elements": [
+        "filature",
+        "obsession"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "unilateral",
+      "text": "Observation répétée de la victime sans interaction"
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-09 05:20",
+      "event": "Achat légal d'une arme quelques jours avant les faits",
+      "location": "Bar",
+      "elements": [
+        "arme",
+        "munition"
+      ],
+      "causes": [
+        1
+      ],
+      "text": "Achat légal d'une arme quelques jours avant les faits",
+      "requires_time": true
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-09 13:24",
+      "event": "Agression mortelle par surprise",
+      "location": "Maison",
+      "elements": [
+        "violence",
+        "mort"
+      ],
+      "causes": [
+        2
+      ],
+      "style": "impulsif",
+      "text": "Altercation dégénérant en homicide"
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-09 22:37",
+      "event": "Errance prolongée avant de rentrer",
+      "location": "Entrepôt",
+      "elements": [
+        "confusion",
+        "stress"
+      ],
+      "causes": [
+        3
+      ],
+      "coherence": "moyenne",
+      "text": "Errance prolongée avant de rentrer"
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-10 06:53",
+      "event": "Découverte fortuite lors d'un passage imprévu",
+      "location": "Rue",
+      "elements": [
+        "porte ouverte",
+        "corps visible"
+      ],
+      "causes": [
+        3
+      ],
+      "text": "Découverte fortuite lors d'un passage imprévu",
+      "delay_minutes": [
+        30,
+        720
+      ]
+    },
+    {
+      "id": 6,
+      "type": "enquete",
+      "time": "2026-01-10 09:08",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Rue",
+      "elements": [],
+      "causes": [
+        5
+      ]
+    }
+  ]
+}

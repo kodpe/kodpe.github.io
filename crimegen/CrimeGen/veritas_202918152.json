@@ -1,0 +1,147 @@
+{
+  "seed": 202918152,
+  "nodes": [
+    {
+      "id": "P3",
+      "label": "Conjoint",
+      "type": "person"
+    },
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P2",
+      "label": "Suspect",
+      "type": "person"
+    },
+    {
+      "id": "O4",
+      "label": "Clé",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P2",
+      "target": "P3",
+      "type": 3
+    },
+    {
+      "source": "P2",
+      "target": "P1",
+      "type": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-08 17:01",
+      "event": "Accumulation de frustrations sans événement déclencheur clair",
+      "location": "Appartement",
+      "elements": [
+        "rupture",
+        "conflit émotionnel"
+      ],
+      "causes": [],
+      "text": "Séparation conflictuelle avec sentiment d'injustice",
+      "prep_bias": 0.3
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-10 09:36",
+      "event": "Observation répétée de la victime sans interaction",
+      "location": "Maison",
+      "elements": [
+        "menaces",
+        "hausse du ton"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "direct",
+      "text": "Dispute verbale violente avec la victime"
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-10 19:54",
+      "event": "Récupération d'un objet potentiellement dangereux",
+      "location": "Bar",
+      "elements": [
+        "arme",
+        "munition"
+      ],
+      "causes": [
+        1
+      ],
+      "text": "Achat légal d'une arme quelques jours avant les faits",
+      "requires_time": true
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-11 01:28",
+      "event": "Agression mortelle par surprise",
+      "location": "Appartement",
+      "elements": [
+        "violence",
+        "mort"
+      ],
+      "causes": [
+        2
+      ],
+      "style": "impulsif",
+      "text": "Altercation dégénérant en homicide"
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-11 07:20",
+      "event": "Errance prolongée avant de rentrer",
+      "location": "Maison",
+      "elements": [
+        "déplacement",
+        "panique"
+      ],
+      "causes": [
+        3
+      ],
+      "coherence": "très faible",
+      "text": "Tentative de fuite immédiate"
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-11 16:54",
+      "event": "Découverte fortuite lors d'un passage imprévu",
+      "location": "Entrepôt",
+      "elements": [
+        "porte ouverte",
+        "corps visible"
+      ],
+      "causes": [
+        3
+      ],
+      "text": "Découverte fortuite lors d'un passage imprévu",
+      "delay_minutes": [
+        30,
+        720
+      ]
+    },
+    {
+      "id": 6,
+      "type": "enquete",
+      "time": "2026-01-11 19:36",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Entrepôt",
+      "elements": [],
+      "causes": [
+        5
+      ]
+    }
+  ]
+}

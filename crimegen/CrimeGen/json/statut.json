@@ -1,0 +1,122 @@
+[
+  {
+    "id": 10501,
+    "type": "Perte de statut",
+    "contexte": "L’auteur perd progressivement des droits sociaux et privilèges liés à sa position administrative, fragilisant son sentiment de légitimité.",
+    "interaction": "Découverte que ses accès à certaines aides ou documents officiels lui sont refusés, déclenchant un sentiment d’injustice insupportable.",
+    "mobile": "La frustration face à la perte de droits et de reconnaissance sociale motive une réaction violente.",
+    "cible": "Agent administratif"
+  },
+  {
+    "id": 10502,
+    "type": "Perte de statut",
+    "contexte": "L’auteur voit sa réputation professionnelle entachée par des rumeurs ou décisions publiques injustes.",
+    "interaction": "Un supérieur ou collègue le critique publiquement, perçu comme une humiliation majeure.",
+    "mobile": "Le désir de restaurer sa dignité et de punir l’offenseur déclenche une attaque ciblée.",
+    "cible": "Collègue ou supérieur"
+  },
+  {
+    "id": 10503,
+    "type": "Perte de statut",
+    "contexte": "L’auteur est exclu de cercles sociaux ou professionnels qui autrefois confirmaient son prestige.",
+    "interaction": "Invitation refusée à un événement clé, perçue comme une négation directe de son importance.",
+    "mobile": "La colère face à cette marginalisation sociale peut conduire à une action violente pour rétablir son pouvoir.",
+    "cible": "Organisateur de l’événement"
+  },
+  {
+    "id": 10504,
+    "type": "Perte de statut",
+    "contexte": "L’auteur subit un traitement condescendant lors d’interactions avec des personnes qu’il respectait.",
+    "interaction": "Un interlocuteur le rabaisse publiquement lors d’une réunion ou d’un échange formel.",
+    "mobile": "Le besoin de rétablir son image et de punir le responsable déclenche un passage à l’acte violent.",
+    "cible": "Interlocuteur respecté"
+  },
+  {
+    "id": 10505,
+    "type": "Perte de statut",
+    "contexte": "Les décisions administratives ou sociales diminuent progressivement son prestige, sans dialogue possible.",
+    "interaction": "Refus d’un droit ou privilège perçu comme essentiel à son statut, provoquant un ressentiment intense.",
+    "mobile": "Le sentiment de dépossession et d’injustice motive une agression dirigée vers le représentant du système.",
+    "cible": "Représentant administratif"
+  },
+  {
+    "id": 10506,
+    "type": "Peur de perte de statut",
+    "contexte": "L’auteur craint la dégradation de son image sociale ou professionnelle, ce qui alimente une anxiété permanente.",
+    "interaction": "Interaction publique où un pair ou supérieur le contredit, déclenchant un stress aigu lié à la réputation.",
+    "mobile": "La peur de perdre la reconnaissance sociale pousse à une réaction violente pour restaurer son autorité.",
+    "cible": "Pair ou supérieur"
+  },
+  {
+    "id": 10507,
+    "type": "Peur de perte de statut",
+    "contexte": "L’auteur surveille activement sa réputation, craignant que de petits incidents ternissent son image.",
+    "interaction": "Découverte d’une rumeur ou d’une critique sur les réseaux ou dans son cercle social.",
+    "mobile": "Le désir de corriger et punir la source de cette atteinte à la réputation déclenche une attaque ciblée.",
+    "cible": "Auteur de la rumeur"
+  },
+  {
+    "id": 10508,
+    "type": "Peur de perte de statut",
+    "contexte": "L’auteur craint de perdre un droit ou un privilège qui garantit sa position sociale.",
+    "interaction": "Observation qu’un collègue ou voisin bénéficie d’avantages similaires, déclenchant une jalousie exacerbée.",
+    "mobile": "L’angoisse de déclassement et la peur d’être supplanté provoquent une réaction violente.",
+    "cible": "Concurrents ou bénéficiaires du privilège"
+  },
+  {
+    "id": 10509,
+    "type": "Peur de perte de statut",
+    "contexte": "La réputation professionnelle de l’auteur est instable et dépendante de l’opinion d’autrui.",
+    "interaction": "Critique implicite lors d’une réunion ou d’une rencontre publique, interprétée comme une menace directe pour son statut.",
+    "mobile": "Le besoin de se protéger et d’affirmer son autorité déclenche une action violente.",
+    "cible": "Critiqueur ou supérieur"
+  },
+  {
+    "id": 10510,
+    "type": "Peur de perte de statut",
+    "contexte": "L’auteur anticipe constamment la perte de prestige social, ce qui le rend hyper-vigilant aux moindres interactions.",
+    "interaction": "Interaction sociale où un regard ou un mot est interprété comme une remise en question de son rang.",
+    "mobile": "La réaction impulsive est motivée par la peur de déclassement et la défense de l’image personnelle.",
+    "cible": "Interlocuteur social"
+  },
+  {
+    "id": 10806,
+    "type": "Stagnation existentielle",
+    "contexte": "L’auteur perçoit sa vie comme bloquée sans perspective d’évolution.",
+    "interaction": "Interaction soulignant l’échec personnel, déclenchant une rage nihiliste.",
+    "mobile": "Le besoin de réagir à un sentiment d’impuissance conduit à un passage à l’acte.",
+    "cible": "Personne ou situation représentant l’échec ou le blocage"
+  },
+  {
+    "id": 10807,
+    "type": "Stagnation existentielle",
+    "contexte": "L’avenir est perçu comme vide ou inutile.",
+    "interaction": "Remarque sur l’avenir perçue comme vaine, justifiant une violence sans projection future.",
+    "mobile": "La frustration existentielle déclenche une agression contre un symbole de la vie normale.",
+    "cible": "Individu ou institution représentant un futur normatif"
+  },
+  {
+    "id": 10808,
+    "type": "Stagnation existentielle",
+    "contexte": "Les projets personnels ont échoué ou ont été sabotés.",
+    "interaction": "Observation ou rappel de ces échecs déclenche une réaction violente.",
+    "mobile": "La vengeance contre ce qui bloque l’évolution personnelle motive l’action.",
+    "cible": "Personne ayant participé ou symbolisant l’échec"
+  },
+  {
+    "id": 10809,
+    "type": "Stagnation existentielle",
+    "contexte": "L’auteur ressent que ses choix n’ont aucune conséquence réelle.",
+    "interaction": "Situation mettant en évidence l’inefficacité de ses actions déclenche une explosion de violence.",
+    "mobile": "Le désir de réaffirmer un contrôle personnel mène à un acte agressif.",
+    "cible": "Individu ou situation illustrant le manque de contrôle"
+  },
+  {
+    "id": 10810,
+    "type": "Stagnation existentielle",
+    "contexte": "La monotonie et la routine de la vie quotidienne sont accablantes.",
+    "interaction": "Événement banal mais répétitif déclenche une réaction violente imprévisible.",
+    "mobile": "La frustration liée à l’ennui existentiel déclenche un acte agressif contre le contexte ou une personne associée.",
+    "cible": "Individu ou environnement associé à la routine"
+  }
+]

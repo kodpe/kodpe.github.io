@@ -1,0 +1,151 @@
+{
+  "seed": 429483236,
+  "nodes": [
+    {
+      "id": "P4",
+      "label": "Voisin",
+      "type": "person"
+    },
+    {
+      "id": "P2",
+      "label": "Suspect",
+      "type": "person"
+    },
+    {
+      "id": "O2",
+      "label": "Arme à feu",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P2",
+      "target": "P4",
+      "type": 3
+    },
+    {
+      "source": "P2",
+      "target": "P4",
+      "type": 3
+    },
+    {
+      "source": "O2",
+      "target": "P4",
+      "type": 3
+    },
+    {
+      "source": "O2",
+      "target": "P2",
+      "type": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-06 08:26",
+      "event": "Perte importante d'argent liée à des dettes personnelles",
+      "location": "Rue",
+      "elements": [
+        "licenciement",
+        "humiliation professionnelle"
+      ],
+      "causes": [],
+      "text": "Licenciement après plusieurs avertissements disciplinaires",
+      "prep_bias": 0.7
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-09 03:35",
+      "event": "Échange téléphonique conflictuel avec la victime",
+      "location": "Rue",
+      "elements": [
+        "filature",
+        "obsession"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "unilateral",
+      "text": "Observation répétée de la victime sans interaction"
+    },
+    {
+      "id": 2,
+      "type": "preparation",
+      "time": "2026-01-09 04:53",
+      "event": "Achat légal d'une arme quelques jours avant les faits",
+      "location": "Bar",
+      "elements": [
+        "objet contondant"
+      ],
+      "causes": [
+        1
+      ],
+      "text": "Récupération d'un objet potentiellement dangereux",
+      "requires_time": false
+    },
+    {
+      "id": 3,
+      "type": "crime",
+      "time": "2026-01-09 20:58",
+      "event": "Altercation dégénérant en homicide",
+      "location": "Bar",
+      "elements": [
+        "attaque",
+        "lésions mortelles"
+      ],
+      "causes": [
+        2
+      ],
+      "style": "soudain",
+      "text": "Agression mortelle par surprise"
+    },
+    {
+      "id": 4,
+      "type": "post_crime",
+      "time": "2026-01-10 08:04",
+      "event": "Errance prolongée avant de rentrer",
+      "location": "Maison",
+      "elements": [
+        "confusion",
+        "stress"
+      ],
+      "causes": [
+        3
+      ],
+      "coherence": "moyenne",
+      "text": "Errance prolongée avant de rentrer"
+    },
+    {
+      "id": 5,
+      "type": "discovery",
+      "time": "2026-01-10 08:35",
+      "event": "Un voisin alerte la police après avoir entendu des cris",
+      "location": "Rue",
+      "elements": [
+        "cris",
+        "tapage"
+      ],
+      "causes": [
+        3
+      ],
+      "text": "Un voisin alerte la police après avoir entendu des cris",
+      "delay_minutes": [
+        5,
+        60
+      ]
+    },
+    {
+      "id": 6,
+      "type": "enquete",
+      "time": "2026-01-10 08:59",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Rue",
+      "elements": [],
+      "causes": [
+        5
+      ]
+    }
+  ]
+}

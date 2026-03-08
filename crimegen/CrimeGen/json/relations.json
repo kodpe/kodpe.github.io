@@ -1,0 +1,162 @@
+[
+  {
+    "id": 10101,
+    "type": "Conflits familiaux",
+    "contexte": "Les tensions familiales anciennes n’ont jamais été résolues, créant un climat permanent de ressentiment.",
+    "interaction": "Dispute familiale ravivant des rancœurs anciennes, transformant une colère latente en passage à l’acte.",
+    "mobile": "La colère accumulée contre des proches jugés responsables des tensions déclenche une violence dirigée contre eux.",
+    "cible": "Membre de la famille impliqué dans le conflit"
+  },
+  {
+    "id": 10102,
+    "type": "Conflits familiaux",
+    "contexte": "L’auteur perçoit sa place familiale comme menacée par les alliances et conflits internes.",
+    "interaction": "Prise de position d’un proche contre l’auteur, vécue comme une rupture définitive justifiant la violence.",
+    "mobile": "Le sentiment de dépossession et d’humiliation pousse l’auteur à agresser le proche concerné.",
+    "cible": "Membre de la famille prenant position"
+  },
+  {
+    "id": 10103,
+    "type": "Conflits familiaux",
+    "contexte": "Les disputes répétées ont érodé toute tolérance et patience au sein du foyer.",
+    "interaction": "Conflit mineur déclenche une explosion violente, remettant en cause l’autorité familiale.",
+    "mobile": "La frustration accumulée et le ressentiment envers la dynamique familiale déclenchent l’agression.",
+    "cible": "Membre de la famille"
+  },
+  {
+    "id": 10104,
+    "type": "Conflits familiaux",
+    "contexte": "Les alliances et jalousies au sein de la famille créent un climat de suspicion permanent.",
+    "interaction": "Provocation perçue comme un affront personnel déclenche une violence immédiate.",
+    "mobile": "Le sentiment de menace et d’humiliation pousse à attaquer la personne considérée comme responsable.",
+    "cible": "Membre de la famille"
+  },
+  {
+    "id": 10105,
+    "type": "Conflits familiaux",
+    "contexte": "Les conflits anciens se combinent avec de nouvelles tensions, rendant la situation explosive.",
+    "interaction": "Injustice perçue dans la répartition des ressources familiales déclenche une réaction violente.",
+    "mobile": "La frustration cumulée contre les proches provoque l’agression.",
+    "cible": "Membre de la famille"
+  },
+  {
+    "id": 10201,
+    "type": "Séparation",
+    "contexte": "La relation s’est dégradée sur une longue période de frustrations et de non-dits.",
+    "interaction": "Discussion de séparation où l’auteur se sent remplacé ou nié, déclenchant une jalousie meurtrière.",
+    "mobile": "La peur de perdre l’affection et le contrôle pousse à une violence dirigée contre l’ex-partenaire.",
+    "cible": "Ex-partenaire"
+  },
+  {
+    "id": 10202,
+    "type": "Séparation",
+    "contexte": "La perte affective est vécue comme une perte identitaire profonde.",
+    "interaction": "Découverte d’un nouveau partenaire, transformant la perte affective en désir de destruction.",
+    "mobile": "Le sentiment d’humiliation et de remplacement déclenche une réaction violente envers le nouvel acteur de la relation.",
+    "cible": "Nouvel partenaire ou ex-partenaire"
+  },
+  {
+    "id": 10203,
+    "type": "Séparation",
+    "contexte": "Les non-dits et rancunes accumulées rendent la séparation imminente explosive.",
+    "interaction": "Dispute sur le partage des biens ou responsabilités, transformée en violence directe.",
+    "mobile": "La sensation de trahison et de perte de contrôle déclenche une attaque ciblée.",
+    "cible": "Ex-partenaire"
+  },
+  {
+    "id": 10204,
+    "type": "Séparation",
+    "contexte": "Les disputes prolongées et la perte de communication intensifient le ressentiment.",
+    "interaction": "Révélation d’un contact affectif avec un tiers déclenche une réaction violente.",
+    "mobile": "La jalousie et le sentiment d’injustice amènent l’auteur à la violence contre le tiers ou ex-partenaire.",
+    "cible": "Ex-partenaire ou tiers impliqué"
+  },
+  {
+    "id": 10205,
+    "type": "Séparation",
+    "contexte": "Le sentiment d’échec relationnel et de trahison nourrit la rancune et la colère.",
+    "interaction": "Accusations et reproches lors de la séparation déclenchent un passage à l’acte.",
+    "mobile": "Le ressentiment envers l’ex-partenaire motive une violence ciblée.",
+    "cible": "Ex-partenaire"
+  },
+  {
+    "id": 10301,
+    "type": "Peur de séparation",
+    "contexte": "L’auteur anticipe constamment une rupture affective, générant une tension émotionnelle continue.",
+    "interaction": "Silence prolongé interprété comme un abandon imminent, déclenchant une réaction préventive violente.",
+    "mobile": "L’angoisse anticipative pousse à agresser celui perçu comme responsable de la séparation imminente.",
+    "cible": "Partenaire ou proche intimement lié"
+  },
+  {
+    "id": 10302,
+    "type": "Peur de séparation",
+    "contexte": "La méfiance émotionnelle s’est installée durablement, créant une hypersensibilité à tout signe de rejet.",
+    "interaction": "Observation d’un comportement ambigu, transformant l’angoisse en agression.",
+    "mobile": "La paranoïa affective et le sentiment de trahison conduisent à une violence dirigée contre la personne suspectée.",
+    "cible": "Partenaire ou proche intimement lié"
+  },
+  {
+    "id": 10303,
+    "type": "Peur de séparation",
+    "contexte": "Chaque absence ou retard est interprété comme un signe de rejet imminent.",
+    "interaction": "Comportement distant d’un proche interprété comme abandon, menant à une réaction physique violente.",
+    "mobile": "La peur de solitude et l’angoisse de rejet déclenchent une agression ciblée.",
+    "cible": "Partenaire ou proche"
+  },
+  {
+    "id": 10304,
+    "type": "Peur de séparation",
+    "contexte": "La crainte de perdre un lien vital engendre une vigilance obsessionnelle.",
+    "interaction": "Suspicion d’infidélité ou d’éloignement déclenche une confrontation agressive.",
+    "mobile": "La peur du rejet imminent déclenche une attaque ciblée contre la personne perçue comme distante.",
+    "cible": "Partenaire ou proche"
+  },
+  {
+    "id": 10305,
+    "type": "Peur de séparation",
+    "contexte": "La peur de perdre un lien affectif vital s’intensifie avec l’isolement social.",
+    "interaction": "Absence prolongée de nouvelles du partenaire interprétée comme abandon, déclenchant une réaction violente.",
+    "mobile": "L’angoisse et la panique provoquent une agression dirigée contre le partenaire ou proche.",
+    "cible": "Partenaire ou proche"
+  },
+  {
+    "id": 10401,
+    "type": "Conflit de couple",
+    "contexte": "Les désaccords répétés et les rancunes non exprimées ont érodé la relation, créant un climat de tension permanente.",
+    "interaction": "Remarque banale mais perçue comme humiliante par l’auteur, déclenchant une explosion de colère dirigée contre le partenaire.",
+    "mobile": "L’accumulation de ressentiment et le sentiment d’injustice personnelle provoquent une réaction violente.",
+    "cible": "Partenaire"
+  },
+  {
+    "id": 10402,
+    "type": "Conflit de couple",
+    "contexte": "Chaque conflit non résolu amplifie la frustration et l’irritabilité de l’auteur.",
+    "interaction": "Geste de mépris du partenaire interprété comme une humiliation ultime, déclenchant une attaque impulsive.",
+    "mobile": "Le sentiment de dépossession émotionnelle et d’atteinte à l’estime personnelle déclenche la violence.",
+    "cible": "Partenaire"
+  },
+  {
+    "id": 10403,
+    "type": "Conflit de couple",
+    "contexte": "Les disputes répétées sur des sujets mineurs dégénèrent en conflit constant.",
+    "interaction": "Accusation perçue comme infondée provoquant un accès de rage incontrôlée.",
+    "mobile": "L’auteur réagit à la frustration accumulée en cherchant à imposer son pouvoir par la force.",
+    "cible": "Partenaire"
+  },
+  {
+    "id": 10404,
+    "type": "Conflit de couple",
+    "contexte": "La communication déficiente et les non-dits ont créé une incompréhension permanente entre les partenaires.",
+    "interaction": "Ignorance prolongée ou refus de dialogue par le partenaire déclenche une réaction violente pour se faire entendre.",
+    "mobile": "Le sentiment d’être négligé ou effacé amplifie la colère et motive l’agression.",
+    "cible": "Partenaire"
+  },
+  {
+    "id": 10405,
+    "type": "Conflit de couple",
+    "contexte": "Les disputes passées et les rancunes s’accumulent sans résolution, rendant la relation explosive.",
+    "interaction": "Révélation ou rappel d’un événement ancien utilisé comme accusation, provoquant une réaction violente.",
+    "mobile": "Le mélange de rancune ancienne et de frustration actuelle déclenche une attaque contre le partenaire.",
+    "cible": "Partenaire"
+  }
+]

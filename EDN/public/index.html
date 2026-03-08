@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="css/v2-form-item.css">
     <link rel="stylesheet" href="css/specs-list.css">
     <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/personal-goal.css">
+    <link rel="stylesheet" href="css/manual-add.css">
 </head>
 
 <body>
@@ -53,6 +56,7 @@
                 </div>
                 <div id="btn-planning" class="side-btn">Planning</div>
                 <div id="btn-progress" class="side-btn">Progression</div>
+                <div id="btn-manual-add" class="side-btn">Ajout manuel</div>
                 <div id="btn-segments" class="side-btn">Segments</div>
                 <div id="btn-items" class="side-btn">Items</div>
                 <div id="btn-specs" class="side-btn">Spécialités</div>
@@ -80,25 +84,12 @@
                                     <div class="item-tag">tag1</div>
                                     <div class="item-tag">tag1</div>
                                     <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
-                                    <div class="item-tag">tag1</div>
                                 </div>
                             </div>
                         </label>
                         <div class="v2-form-drag">⣿</div>
                     </div>
 
-                    <div class="static">mer. 17/12</div>
-                    <div class="static">mer. 17/12</div>
-                    <div class="static">mer. 17/12</div>
-                    <div class="static">mer. 17/12</div>
-                    <div class="static">mer. 17/12</div>
                     <div class="static">mer. 17/12</div>
                     <div class="static">mer. 17/12</div>
                     <div class="static">mer. 17/12</div>
@@ -137,6 +128,7 @@
                         <div class="v2-form-drag">⣿</div>
                     </div>
 
+                    <div class="static">mer. 17/12</div>
 
                 </div>
 
@@ -149,6 +141,7 @@
                 <div class="dark-box">
                     Progression globale
                 </div>
+
                 <div class="chart-container">
                     <canvas id="revisionsChart"></canvas>
                 </div>
@@ -158,11 +151,8 @@
                     <div id="habit-grid" class="habit-grid"></div>
                 </div>
 
-                <div class="dark-box">
-                    <div class="progress-title">Progression par spécialité</div>
-
-                    <div id="specs-progress-list"></div>
-
+                <!-- <div class="dark-box">
+                    Objectif personnel de révision
                     <div class="progress-nbrev-bar">
                         <div id="nbrev-value">3 révisions par item</div>
                         <div style="display: flex;">
@@ -170,6 +160,42 @@
                             <button>+</button>
                         </div>
                     </div>
+                </div> -->
+
+                <div class="dark-box">
+                    <div class="setting-title">Objectif de révision</div>
+
+                    <div class="personal-goal-box" id="personal-goal-box">
+                        <div class="personal-goal-top">
+                            <div class="nbrev-controls">
+                                <button id="nbrev-decrement" type="button" aria-label="Diminuer l'objectif">-</button>
+                                <button id="nbrev-increment" type="button" aria-label="Augmenter l'objectif">+</button>
+                            </div>
+
+                            <div id="nbrev-value" class="personal-goal-main-value">Chargement...</div>
+                        </div>
+
+                        <div class="personal-goal-lines" id="personal-goal-lines">
+                            <div id="pg-total-progress" class="personal-goal-progress-line"></div>
+
+                            <div id="pg-daily-rate" class="personal-goal-line"></div>
+                            <div id="pg-weekly-rate" class="personal-goal-line"></div>
+
+                            <div id="pg-next-exam" class="personal-goal-line"></div>
+                            <div id="pg-mock-exam" class="personal-goal-line"></div>
+                            <div id="pg-edn-date" class="personal-goal-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dark-box">
+                    <div class="progress-title">Progression par spécialité</div>
+                    <div id="specs-progress-list"></div>
+                </div>
+
+                <div class="dark-box">
+                    <div class="progress-title">Progression par item</div>
+                    <div id="items-progress-list"></div>
                 </div>
 
 
@@ -229,10 +255,78 @@
 
             </div>
             <div id="cnt-items" class="cnt">
-                <div>Items</div>
+                <!-- <div>Items</div> -->
+                <div id="cnt-items-list" class="specs-list"></div>
             </div>
             <div id="cnt-specs" class="cnt">
                 <div id="domains-list" class="specs-list"></div>
+            </div>
+            <!--  -->
+            <div id="cnt-manual-add" class="cnt">
+                <div class="page">
+
+                    <div class="dark-box activity-box">
+                        <h1 class="page-title">Ajout manuel</h1>
+
+                        <div class="activity-grid">
+
+                            <section class="activity-section">
+                                <h2 class="section-title">Ajouter un item</h2>
+
+                                <form id="item-form" class="activity-form">
+                                    <div class="form-group">
+                                        <label for="item-date">Date</label>
+                                        <input id="item-date" type="date" required />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="item-edn-id">EDN item ID</label>
+                                        <input id="item-edn-id" type="number" min="1" step="1" placeholder="ex: 42"
+                                            required />
+                                    </div>
+
+                                    <button id="item-submit-btn" type="submit">Ajouter l’item</button>
+                                    <div id="item-feedback" class="feedback" aria-live="polite"></div>
+                                </form>
+                            </section>
+
+                            <section class="activity-section">
+                                <h2 class="section-title">Ajouter une pratique</h2>
+
+                                <form id="practice-form" class="activity-form">
+                                    <div class="form-group">
+                                        <label for="practice-date">Date</label>
+                                        <input id="practice-date" type="date" required />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="practice-type">Type</label>
+                                        <select id="practice-type" required>
+                                            <option value="LCA">LCA</option>
+                                            <option value="QCM">QCM</option>
+                                            <option value="DP">DP</option>
+                                            <option value="MASTERCLASS">MASTERCLASS</option>
+                                            <option value="OTHER">OTHER</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="practice-matiere">Matière (facultative)</label>
+                                        <select id="practice-matiere">
+                                            <option value="">Aucune</option>
+                                        </select>
+                                    </div>
+
+                                    <button id="practice-submit-btn" type="submit">Ajouter la pratique</button>
+                                    <div id="practice-feedback" class="feedback" aria-live="polite"></div>
+                                </form>
+                            </section>
+
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>
@@ -250,14 +344,18 @@
     <script src="js/colors.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/drag.js"></script>
+    <script src="js/progressbar.js"></script>
     <script src="js/datepicker.js"></script>
     <script src="js/weekpattern.js"></script>
-    <script src="js/domainslist.js"></script>
+    <script src="js/matiereslist.js"></script>
+    <script src="js/itemslist.js"></script>
     <script src="js/dragzone.js"></script>
     <script src="js/logoBtn.js"></script>
     <script src="js/backtotop.js"></script>
     <script src="js/graph-bar.js"></script>
     <script src="js/habitTracker.js"></script>
+    <script src="js/revisionGoal.js"></script>
+    <script src="js/manual-add.js"></script>
     <!-- ENGINE -->
 </body>
 

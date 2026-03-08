@@ -14,7 +14,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
     color: white;
     /*  */
-    background-image: url('/public/images/673df7fbe95a8e90a7571751_D-bg.png');
+    background-image: url('images/back.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--main-background);
@@ -50,6 +50,7 @@ body {
     height: calc(100vh - var(--hz-top-bar-height));
     height: fit-content;
     flex-direction: column;
+    padding-bottom: 40px;
 }
 
 #top-cnt {
@@ -77,4 +78,22 @@ body {
     width: 110vw;
     z-index: -1;
     object-fit: cover;
+}
+
+/* TMP TODO */
+.item-matieres {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nbrev-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.nbrev-controls button {
+    min-width: 32px;
+    min-height: 32px;
+    cursor: pointer;
 }

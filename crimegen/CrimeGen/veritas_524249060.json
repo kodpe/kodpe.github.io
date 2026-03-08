@@ -1,0 +1,131 @@
+{
+  "seed": 524249060,
+  "nodes": [
+    {
+      "id": "P1",
+      "label": "Victime",
+      "type": "person"
+    },
+    {
+      "id": "P4",
+      "label": "Voisin",
+      "type": "person"
+    },
+    {
+      "id": "O3",
+      "label": "Téléphone",
+      "type": "object"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P1",
+      "target": "O3",
+      "type": 1
+    },
+    {
+      "source": "O3",
+      "target": "P4",
+      "type": 1
+    },
+    {
+      "source": "P4",
+      "target": "O3",
+      "type": 0
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "type": "context",
+      "time": "2026-01-01 12:33",
+      "event": "Accumulation de frustrations sans événement déclencheur clair",
+      "location": "Appartement",
+      "elements": [
+        "licenciement",
+        "humiliation professionnelle"
+      ],
+      "causes": [],
+      "text": "Licenciement après plusieurs avertissements disciplinaires",
+      "prep_bias": 0.7
+    },
+    {
+      "id": 1,
+      "type": "relation",
+      "time": "2026-01-03 00:50",
+      "event": "Observation répétée de la victime sans interaction",
+      "location": "Entrepôt",
+      "elements": [
+        "filature",
+        "obsession"
+      ],
+      "causes": [
+        0
+      ],
+      "mode": "unilateral",
+      "text": "Observation répétée de la victime sans interaction"
+    },
+    {
+      "id": 2,
+      "type": "crime",
+      "time": "2026-01-03 14:31",
+      "event": "Altercation dégénérant en homicide",
+      "location": "Rue",
+      "elements": [
+        "attaque",
+        "lésions mortelles"
+      ],
+      "causes": [
+        1
+      ],
+      "style": "soudain",
+      "text": "Agression mortelle par surprise"
+    },
+    {
+      "id": 3,
+      "type": "post_crime",
+      "time": "2026-01-03 19:32",
+      "event": "Retour au domicile et tentative de dissimulation",
+      "location": "Bar",
+      "elements": [
+        "vêtements tachés",
+        "nettoyage"
+      ],
+      "causes": [
+        2
+      ],
+      "coherence": "faible",
+      "text": "Retour au domicile et tentative de dissimulation"
+    },
+    {
+      "id": 4,
+      "type": "discovery",
+      "time": "2026-01-04 09:46",
+      "event": "Un voisin alerte la police après avoir entendu des cris",
+      "location": "Entrepôt",
+      "elements": [
+        "absence de réponse",
+        "découverte"
+      ],
+      "causes": [
+        2
+      ],
+      "text": "Un proche inquiet découvre le corps",
+      "delay_minutes": [
+        120,
+        1440
+      ]
+    },
+    {
+      "id": 5,
+      "type": "enquete",
+      "time": "2026-01-04 10:06",
+      "event": "Ouverture officielle de l'enquête",
+      "location": "Entrepôt",
+      "elements": [],
+      "causes": [
+        4
+      ]
+    }
+  ]
+}

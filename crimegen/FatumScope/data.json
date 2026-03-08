@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    { "id": "A", "label": "Alice", "type": "person" },
+    { "id": "B", "label": "Bob", "type": "person" },
+    { "id": "C", "label": "Clé du coffre", "type": "object" },
+    { "id": "D", "label": "Machine X", "type": "other" }
+  ],
+  "edges": [
+    { "source": "A", "target": "B", "type": 0 },
+    { "source": "B", "target": "C", "type": 1 },
+    { "source": "C", "target": "D", "type": 2 },
+    { "source": "A", "target": "D", "type": 1 }
+  ],
+  "events": [
+    {
+      "time": "2026-01-01",
+      "event": "Alice rencontre Bob",
+      "location": "Paris",
+      "causes": []
+    },
+    {
+      "time": "2026-01-02",
+      "event": "Bob avertit Charlie",
+      "location": "Lyon",
+      "causes": [0]
+    },
+    {
+      "time": "2026-01-03",
+      "event": "Charlie agit",
+      "location": "Marseille",
+      "causes": [1]
+    },
+    {
+      "time": "2026-01-04",
+      "event": "David intervient",
+      "location": "Nice",
+      "causes": [0, 2]
+    }
+  ]
+}

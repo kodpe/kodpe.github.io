@@ -32,17 +32,20 @@ const btnProgress = document.getElementById('btn-progress');
 const btnSegments = document.getElementById('btn-segments');
 const btnItems = document.getElementById('btn-items');
 const btnSpecs = document.getElementById('btn-specs');
+const btnManualAdd = document.getElementById('btn-manual-add');
 
 const cntPlanning = document.getElementById('cnt-planning');
 const cntProgress = document.getElementById('cnt-progress');
 const cntSegments = document.getElementById('cnt-segments');
 const cntItems = document.getElementById('cnt-items');
 const cntSpecs = document.getElementById('cnt-specs');
+const cntManualAdd = document.getElementById('cnt-manual-add');
 
 cntPlanning.classList.add('disabled'); // TMP
 cntSegments.classList.add('disabled');
 cntItems.classList.add('disabled');
 cntSpecs.classList.add('disabled');
+cntManualAdd.classList.add('disabled');
 
 function disableAllCnt() {
     cntPlanning.classList.add('disabled');
@@ -50,6 +53,7 @@ function disableAllCnt() {
     cntSegments.classList.add('disabled');
     cntItems.classList.add('disabled');
     cntSpecs.classList.add('disabled');
+    cntManualAdd.classList.add('disabled');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -86,6 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
         disableAllCnt();
         toogleSidePanel();
         cntSpecs.classList.remove('disabled');
+    });
+
+    btnManualAdd.addEventListener("click", () => {
+        disableAllCnt();
+        toogleSidePanel();
+        cntManualAdd.classList.remove('disabled');
     });
 
 });

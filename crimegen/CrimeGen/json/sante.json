@@ -1,0 +1,82 @@
+[
+  {
+    "id": 9601,
+    "type": "Trouble psychiatrique",
+    "contexte": "La perception de la réalité est fragilisée depuis longtemps, rendant l’auteur hypervigilant aux menaces imaginaires.",
+    "interaction": "Interaction vécue comme persécution ou complot, déclenchant une violence perçue comme légitime.",
+    "mobile": "La peur de complot et le sentiment d’être attaqué provoquent une réaction violente contre la personne perçue comme persécutrice.",
+    "cible": "Personne perçue comme persécutrice"
+  },
+  {
+    "id": 9602,
+    "type": "Trouble psychiatrique",
+    "contexte": "L’auteur est sujet à des délires paranoïaques récurrents qui amplifient toute tension sociale.",
+    "interaction": "Perte de repère lors d’un échange conflictuel menant à une désorganisation violente.",
+    "mobile": "La confusion et l’incapacité à différencier menace réelle et imaginaire déclenchent une violence impulsive.",
+    "cible": "Individu présent lors de l’échange"
+  },
+  {
+    "id": 9603,
+    "type": "Trouble psychiatrique",
+    "contexte": "L’instabilité mentale est accentuée par l’isolement et l’absence de soutien social.",
+    "interaction": "Confrontation verbale interprétée comme une attaque personnelle, déclenchant un passage à l’acte.",
+    "mobile": "L’auteur réagit par violence à ce qu’il perçoit comme un danger immédiat pour sa sécurité.",
+    "cible": "Interlocuteur immédiat"
+  },
+  {
+    "id": 9604,
+    "type": "Trouble psychiatrique",
+    "contexte": "L’anxiété et la désorganisation cognitive rendent toute interaction ambiguë extrêmement stressante.",
+    "interaction": "Remarque innocente perçue comme accusation grave, déclenchant une réaction disproportionnée.",
+    "mobile": "La peur de perdre le contrôle déclenche un acte violent contre l’émetteur de la remarque.",
+    "cible": "Personne ayant fait la remarque"
+  },
+  {
+    "id": 9605,
+    "type": "Trouble psychiatrique",
+    "contexte": "Les crises psychotiques surviennent dans un contexte social tendu, rendant l’auteur imprévisible.",
+    "interaction": "Suspicion d’un complot lors d’un échange de groupe, entraînant une attaque impulsive.",
+    "mobile": "Le sentiment d’être menacé pousse à neutraliser violemment la personne jugée responsable.",
+    "cible": "Individu perçu comme responsable"
+  },
+  {
+    "id": 9606,
+    "type": "Dégradation de la santé",
+    "contexte": "La santé déclinante affecte l’humeur et la tolérance au stress, augmentant l’irritabilité chronique.",
+    "interaction": "Annonce médicale vécue comme une condamnation, transformant le désespoir en agressivité.",
+    "mobile": "La peur de la souffrance ou de la mort déclenche une violence dirigée contre le messager ou la source perçue de menace.",
+    "cible": "Professionnel médical ou proche"
+  },
+  {
+    "id": 9607,
+    "type": "Dégradation de la santé",
+    "contexte": "La douleur chronique rend l’auteur sensible à tout affront ou frustration supplémentaire.",
+    "interaction": "Douleur chronique exacerbée par un conflit, menant à une perte de contrôle.",
+    "mobile": "L’irritation accumulée provoque un passage à l’acte violent contre la personne qui intensifie la douleur ou le conflit.",
+    "cible": "Personne impliquée dans le conflit"
+  },
+  {
+    "id": 9608,
+    "type": "Dégradation de la santé",
+    "contexte": "Les traitements lourds et les contraintes médicales alimentent la frustration et la colère.",
+    "interaction": "Discussion sur les restrictions médicales interprétée comme oppression, déclenchant une attaque.",
+    "mobile": "La restriction de liberté perçue déclenche une réaction violente contre l’interlocuteur.",
+    "cible": "Professionnel médical ou proche"
+  },
+  {
+    "id": 9609,
+    "type": "Dégradation de la santé",
+    "contexte": "La fatigue chronique et la douleur constante fragilisent le jugement et la patience.",
+    "interaction": "Accrochage mineur interprété comme insupportable, déclenchant une agression.",
+    "mobile": "La frustration accumulée provoque un passage à l’acte contre l’élément déclencheur.",
+    "cible": "Individu impliqué dans l’accrochage"
+  },
+  {
+    "id": 9610,
+    "type": "Dégradation de la santé",
+    "contexte": "Les alertes de santé répétées accentuent le sentiment d’urgence et de danger personnel.",
+    "interaction": "Réaction violente lors d’une confrontation sur l’état de santé, perçue comme menace directe.",
+    "mobile": "Le stress lié à la santé déclenche une attaque contre la personne jugée responsable.",
+    "cible": "Interlocuteur immédiat"
+  }
+]
