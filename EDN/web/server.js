@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const routes = require("./routes");
+const routesApiDaylogs = require("./api-daylogs");
 const { PORT } = require("../config/env");
 
 function startServer() {
@@ -15,6 +16,7 @@ function startServer() {
   app.use("/images", express.static(path.join(__dirname, "..", "public/images")));
 
   routes(app);
+  routesApiDaylogs(app);
 
   app.listen(PORT, () =>
     console.log(`🌐 Web server actif sur ${PORT}`)

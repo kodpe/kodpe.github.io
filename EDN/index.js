@@ -12,7 +12,7 @@ const { DISCORD_BOT_TOKEN } = require("./config/env");
   }
   else {
     console.log("PRODUCTION MODE")
-    // client.login(DISCORD_BOT_TOKEN);
+    client.login(DISCORD_BOT_TOKEN);
   }
 })();
 

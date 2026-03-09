@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/progressbar.css">
     <link rel="stylesheet" href="css/personal-goal.css">
     <link rel="stylesheet" href="css/manual-add.css">
+    <link rel="stylesheet" href="css/items-sources.css">
 </head>
 
 <body>
@@ -54,12 +55,12 @@
                     <img src="images/doctor.png">
                     <div>EDN PLAN</div>
                 </div>
-                <div id="btn-planning" class="side-btn">Planning</div>
-                <div id="btn-progress" class="side-btn">Progression</div>
+                <div id="btn-planning" class="side-btn">Mon planning</div>
+                <div id="btn-progress" class="side-btn">Ma progression</div>
                 <div id="btn-manual-add" class="side-btn">Ajout manuel</div>
                 <div id="btn-segments" class="side-btn">Segments</div>
-                <div id="btn-items" class="side-btn">Items</div>
-                <div id="btn-specs" class="side-btn">Spécialités</div>
+                <div id="btn-items" class="side-btn">Liste des items</div>
+                <div id="btn-specs" class="side-btn">Liste des spécialités</div>
             </nav>
         </aside>
     </div>
@@ -134,7 +135,6 @@
 
             </div>
             <div id="cnt-progress" class="cnt">
-                <div>Progression</div>
                 <div class="dark-box">
                     Progression du segment actuel
                 </div>
@@ -151,19 +151,8 @@
                     <div id="habit-grid" class="habit-grid"></div>
                 </div>
 
-                <!-- <div class="dark-box">
-                    Objectif personnel de révision
-                    <div class="progress-nbrev-bar">
-                        <div id="nbrev-value">3 révisions par item</div>
-                        <div style="display: flex;">
-                            <button>-</button>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="dark-box">
-                    <div class="setting-title">Objectif de révision</div>
+                <div class="dark-box no-marge-top">
+                    <div class="progress-title">Objectif de révision</div>
 
                     <div class="personal-goal-box" id="personal-goal-box">
                         <div class="personal-goal-top">
@@ -188,12 +177,12 @@
                     </div>
                 </div>
 
-                <div class="dark-box">
+                <div class="dark-box no-marge-top">
                     <div class="progress-title">Progression par spécialité</div>
                     <div id="specs-progress-list"></div>
                 </div>
 
-                <div class="dark-box">
+                <div class="dark-box no-marge-top">
                     <div class="progress-title">Progression par item</div>
                     <div id="items-progress-list"></div>
                 </div>
@@ -255,7 +244,29 @@
 
             </div>
             <div id="cnt-items" class="cnt">
-                <!-- <div>Items</div> -->
+                <div class="dark-box">
+
+
+                    <div id="verification-date" data-date="2026-01-28">
+                        <div>Liste en vigueur pour les EDN 2026</div>
+                        <div id="item-source-check-date"></div>
+                    </div>
+
+                    <div class="sources">
+                        <div>
+                            <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045796495" target="_blank">
+                                https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000045796495
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://cncem.org/textes-officiels/" target="_blank">
+                                https://cncem.org/textes-officiels/
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
                 <div id="cnt-items-list" class="specs-list"></div>
             </div>
             <div id="cnt-specs" class="cnt">
@@ -267,6 +278,10 @@
 
                     <div class="dark-box activity-box">
                         <h1 class="page-title">Ajout manuel</h1>
+
+                        <div>Les ajouts sur une date passée ou du jour sont marqués comme faits.</div>
+                        <div>Les ajouts sur une date future sont marqués comme à faire.</div>
+                        <br>
 
                         <div class="activity-grid">
 
@@ -291,7 +306,8 @@
                             </section>
 
                             <section class="activity-section">
-                                <h2 class="section-title">Ajouter une pratique</h2>
+                                <h2 class="section-title">Ajouter une activité</h2>
+
 
                                 <form id="practice-form" class="activity-form">
                                     <div class="form-group">
@@ -302,18 +318,28 @@
                                     <div class="form-group">
                                         <label for="practice-type">Type</label>
                                         <select id="practice-type" required>
+                                            <option value="MASTERCLASS">Masterclass</option>
+                                            <option value="CONFERENCE">Conférence</option>
                                             <option value="LCA">LCA</option>
                                             <option value="QCM">QCM</option>
+                                            <option value="QROC">QROC</option>
                                             <option value="DP">DP</option>
-                                            <option value="MASTERCLASS">MASTERCLASS</option>
-                                            <option value="OTHER">OTHER</option>
+                                            <option value="BU">BU</option>
+                                            <option value="QUIZ">Quiz</option>
+                                            <option value="ANNALE">Annale</option>
+                                            <option value="STAGE">Stage</option>
+                                            <option value="PARTIEL">Partiel</option>
+                                            <option value="ECOS">ECOS</option>
+                                            <option value="EXAM_BLANC">Exam blanc</option>
+                                            <option value="ANCRAGE">Ancrage</option>
+                                            <option value="AUTRE">Autre</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="practice-matiere">Matière (facultative)</label>
+                                        <label for="practice-matiere">Spécialité</label>
                                         <select id="practice-matiere">
-                                            <option value="">Aucune</option>
+                                            <option value="">N/A</option>
                                         </select>
                                     </div>
 
@@ -342,6 +368,7 @@
     <script src="data/domains.js"></script>
     <!-- UI -->
     <script src="js/colors.js"></script>
+    <script src="js/expired-date-checker.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/drag.js"></script>
     <script src="js/progressbar.js"></script>

@@ -1,0 +1,23 @@
+.sources{
+    margin-top:8px;
+    font-size:14px;
+}
+
+.sources a{
+    color:#888;
+    text-decoration:none;
+    word-break:break-all;
+}
+
+.sources a:hover{
+    color:#aaa;
+    text-decoration:underline;
+}
+
+.valid{
+    color:#00ff88;
+}
+
+.expired{
+    color:#ff5555;
+}

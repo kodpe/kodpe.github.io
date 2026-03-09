@@ -20,6 +20,10 @@
     /* gap: 10px; */
 }
 
+.no-marge-top {
+    margin-top: 0;
+}
+
 .chart-container {
     width: 100%;
     height: 200px;

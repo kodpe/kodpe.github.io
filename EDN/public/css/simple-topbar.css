@@ -15,7 +15,7 @@
 @media (max-width: 600px) {
     .simple-topbar {
         position: fixed;
-        background-image: url('/public/images/back.png');
+        background-image: url('../images/back.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-color: var(--main-background);

@@ -14,12 +14,6 @@ const {
 	setUserRevisionGoal
 } = require("../db/db-users");
 
-const {
-	setUserDayWorkedHours,
-	addUserDayLogItem,
-	addUserDayLogPractice,
-	getUserMonthlyActivityChart,
-} = require("../db/db-daylogs")
 
 module.exports = function (app) {
 
@@ -111,7 +105,7 @@ module.exports = function (app) {
 	});
 
 	// ----- api daylogs -----
-
+	/*
 	// bar chart 3 data set
 	app.get("/api/user/monthly-activity-chart", checkToken, (req, res) => {
 		const data = getUserMonthlyActivityChart(req.user.id);
@@ -157,20 +151,10 @@ module.exports = function (app) {
 		const { workDate, practiceType, matiereId } = req.body;
 
 		const allowedPracticeTypes = new Set([
-			"LCA", "QCM", "DP", "ANCRAGE", "MASTERCLASS",
-			"PARTIEL", "STAGE", "EXAM BLANC", "OTHER"
+			"MASTERCLASS", "CONFERENCE", "LCA", "QCM", "QROC",
+			"DP", "BU", "QUIZ", "ANNALE", "STAGE",
+			"PARTIEL", "ECOS", "EXAM_BLANC", "ANCRAGE", "AUTRE",
 		]);
-		// LCA matiere ok
-		// QCM matiere ok
-		// DP matiere ok
-		// MASTERCLASS matiere ok
-		// OTHER matiere ok
-
-		// STAGE matiere ok
-		// PARTIEL
-		// EXAMEN BLANC
-		// ANCRAGE
-
 
 		if (!workDate) {
 			return res.status(400).json({ error: "workDate manquant" });
@@ -200,4 +184,39 @@ module.exports = function (app) {
 		res.json(row);
 	});
 
+	app.post("/api/user/day-log/item/set-done", checkToken, (req, res) => {
+		const { itemLogId, isDone } = req.body;
+
+		const parsedItemLogId = Number(itemLogId);
+		if (!Number.isInteger(parsedItemLogId) || parsedItemLogId <= 0) {
+			return res.status(400).json({ error: "itemLogId invalide" });
+		}
+
+		const parsedIsDone = isDone === true || isDone === 1 ? 1 : 0;
+
+		const row = setUserDayLogItemDone(parsedItemLogId, parsedIsDone);
+		res.json(row);
+	});
+
+	app.post("/api/user/day-log/practice/set-done", checkToken, (req, res) => {
+		const { practiceLogId, isDone } = req.body;
+
+		const parsedPracticeLogId = Number(practiceLogId);
+		if (!Number.isInteger(parsedPracticeLogId) || parsedPracticeLogId <= 0) {
+			return res.status(400).json({ error: "practiceLogId invalide" });
+		}
+
+		const parsedIsDone = isDone === true || isDone === 1 ? 1 : 0;
+
+		const row = setUserDayLogPracticeDone(parsedPracticeLogId, parsedIsDone);
+		res.json(row);
+	});
+	*/
+
 };
+
+/*
+"MASTERCLASS", "CONFERENCE", "LCA", "QCM", "QROC",
+"DP", "BU", "QUIZ", "ANNALE", "STAGE",
+"PARTIEL", "ECOS", "EXAM_BLANC", "ANCRAGE", "AUTRE"
+*/

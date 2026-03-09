@@ -11,6 +11,10 @@ function getTodayIsoDate() {
     return `${y}-${m}-${d}`;
 }
 
+function getIsDoneFromWorkDate(workDate) {
+    return workDate <= getTodayIsoDate() ? 1 : 0;
+}
+
 const practiceFormEl = document.getElementById("practice-form");
 const practiceDateEl = document.getElementById("practice-date");
 const practiceTypeEl = document.getElementById("practice-type");
@@ -62,6 +66,7 @@ async function populateMatieres() {
 
 async function addPractice(workDate, practiceType, matiereId) {
     const token = getToken();
+    const isDone = getIsDoneFromWorkDate(workDate);
 
     const res = await fetch(`/api/user/day-log/add-practice?token=${encodeURIComponent(token)}`, {
         method: "POST",
@@ -71,14 +76,15 @@ async function addPractice(workDate, practiceType, matiereId) {
         body: JSON.stringify({
             workDate,
             practiceType,
-            matiereId
+            matiereId,
+            isDone
         })
     });
 
     const data = await res.json().catch(() => ({}));
 
     if (!res.ok) {
-        throw new Error(data?.error || "Impossible d'ajouter la pratique");
+        throw new Error(data?.error || "Impossible d'ajouter l'activité");
     }
 
     return data;
@@ -111,6 +117,7 @@ async function addItemByEdnId(workDate, ednId) {
     }
 
     const token = getToken();
+    const isDone = getIsDoneFromWorkDate(workDate);
 
     const res = await fetch(`/api/user/day-log/add-item?token=${encodeURIComponent(token)}`, {
         method: "POST",
@@ -119,7 +126,8 @@ async function addItemByEdnId(workDate, ednId) {
         },
         body: JSON.stringify({
             workDate,
-            itemId: item.id
+            itemId: item.id,
+            isDone
         })
     });
 
@@ -151,7 +159,7 @@ practiceFormEl.addEventListener("submit", async (event) => {
     }
 
     if (!practiceType) {
-        setFeedback(practiceFeedbackEl, "Type de pratique manquant.", "error");
+        setFeedback(practiceFeedbackEl, "Type d'activité manquant.", "error");
         return;
     }
 
@@ -160,15 +168,17 @@ practiceFormEl.addEventListener("submit", async (event) => {
     setFeedback(practiceFeedbackEl, "Enregistrement...");
 
     try {
-        await addPractice(workDate, practiceType, matiereId);
+        const row = await addPractice(workDate, practiceType, matiereId);
 
         const matiereText = practiceMatiereEl.value
             ? ` — matière : ${practiceMatiereEl.options[practiceMatiereEl.selectedIndex].textContent}`
             : "";
 
+        const statusText = row.is_done ? "faite" : "à faire";
+
         setFeedback(
             practiceFeedbackEl,
-            `Pratique ajoutée : ${practiceType} le ${workDate}${matiereText}.`,
+            `Activité ajoutée : ${practiceType} le ${workDate}${matiereText} (${statusText}).`,
             "success"
         );
     } catch (err) {
@@ -204,10 +214,11 @@ itemFormEl.addEventListener("submit", async (event) => {
 
     try {
         const row = await addItemByEdnId(workDate, ednId);
+        const statusText = row.is_done ? "fait" : "à faire";
 
         setFeedback(
             itemFeedbackEl,
-            `Item ajouté : ${row.edn_id}${row.label ? ` — ${row.label}` : ""} le ${workDate}.`,
+            `Item ajouté : ${row.edn_id}${row.label ? ` — ${row.label}` : ""} le ${workDate} (${statusText}).`,
             "success"
         );
 

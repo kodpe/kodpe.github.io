@@ -164,10 +164,32 @@ function renderTotalProgressBar(done, goal) {
     totalProgressBar.setProgress(done, goal);
 }
 
+function getDaysRemaining(targetDateStr) {
+    const today = new Date();
+    const target = new Date(targetDateStr);
+
+    today.setHours(0,0,0,0);
+    target.setHours(0,0,0,0);
+
+    const diffMs = target - today;
+    return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+}
+
 function renderPersonalGoalDetails() {
-    pgEls.nextExam.textContent = `Prochain partiel : ${formatDateFr(personalGoalState.nextExamDate)}`;
-    pgEls.mockExam.textContent = `Concours blanc : ${formatDateFr(personalGoalState.mockExamDate)}`;
-    pgEls.ednDate.textContent = `Date des EDN : ${formatDateFr(personalGoalState.ednDate)}`;
+
+    const nextExamDays = getDaysRemaining(personalGoalState.nextExamDate);
+    const mockExamDays = getDaysRemaining(personalGoalState.mockExamDate);
+    const ednDays = getDaysRemaining(personalGoalState.ednDate);
+
+    pgEls.nextExam.textContent =
+        `Prochain partiel : ${formatDateFr(personalGoalState.nextExamDate)} (${nextExamDays} jours)`;
+
+    pgEls.mockExam.textContent =
+        `Concours blanc : ${formatDateFr(personalGoalState.mockExamDate)} (${mockExamDays} jours)`;
+
+    pgEls.ednDate.textContent =
+        `Date des EDN : ${formatDateFr(personalGoalState.ednDate)} (${ednDays} jours)`;
+
 
     const stats = computePersonalGoalStats();
 
@@ -250,7 +272,7 @@ async function saveRevisionGoal(newGoal) {
         const data = await res.json();
         personalGoalState.revisionGoal = Math.max(1, Number(data.revision_goal_per_item) || 1);
 
-        console.log("API: set revisionGoal", personalGoalState.revisionGoal);
+        // console.log("API: set revisionGoal", personalGoalState.revisionGoal);
         rerenderPersonalGoalBlock();
         notifyRevisionGoalChanged();
     } catch (err) {

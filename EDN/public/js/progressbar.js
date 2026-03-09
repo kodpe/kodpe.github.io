@@ -9,6 +9,7 @@ class ProgressBar {
             showBar: options.showBar ?? true,
             showPercent: options.showPercent ?? true,
             showValues: options.showValues ?? false,
+            replacePercentByDiv: options.replacePercentByDiv ?? false,
         };
 
         this.colors = {
@@ -102,6 +103,11 @@ class ProgressBar {
 
         this.labelEl.style.left = percent + "%";
         this.labelEl.textContent = Math.round(percent) + "%";
+        if (this.flags.replacePercentByDiv) {
+            this.labelEl.textContent = this.done;
+            if (this.done === 0)
+                this.labelEl.textContent = "";
+        }
     }
 
     updateValues() {

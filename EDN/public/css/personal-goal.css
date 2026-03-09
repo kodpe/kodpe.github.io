@@ -12,7 +12,8 @@
 }
 
 .personal-goal-main-value {
-    font-weight: 600;
+    /* font-weight: bold; */
+    font-size: 14px;
     color: white;
 }
 
@@ -23,8 +24,8 @@
 }
 
 .personal-goal-line {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.2;
 }
 
@@ -34,17 +35,20 @@
 
 .nbrev-controls {
     display: flex;
-    gap: 6px;
+    gap: 8px;
 }
 
 .nbrev-controls button {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border: 1px solid rgba(255, 255, 255, 0.16);
     background: rgba(255, 255, 255, 0.06);
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 17px;
+    text-align: center;
 }
 
 .nbrev-controls button:hover {

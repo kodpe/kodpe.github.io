@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS user_day_log_items (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     day_log_id INTEGER NOT NULL,
     item_id INTEGER NOT NULL,
+    is_done INTEGER NOT NULL DEFAULT 1 CHECK (is_done IN (0, 1)),
     FOREIGN KEY (day_log_id) REFERENCES user_day_logs(id) ON DELETE CASCADE,
     FOREIGN KEY (item_id) REFERENCES edn_items(id) ON DELETE CASCADE
 );
@@ -90,6 +91,7 @@ CREATE TABLE IF NOT EXISTS user_day_log_practices (
     day_log_id INTEGER NOT NULL,
     practice_type TEXT NOT NULL,
     matiere_id INTEGER,
+    is_done INTEGER NOT NULL DEFAULT 1 CHECK (is_done IN (0, 1)),
     FOREIGN KEY (day_log_id) REFERENCES user_day_logs(id) ON DELETE CASCADE,
     FOREIGN KEY (matiere_id) REFERENCES edn_matieres(id) ON DELETE SET NULL
 );

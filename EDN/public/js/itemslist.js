@@ -102,6 +102,7 @@ function renderItems(containerId, items, options = {}) {
                 showBar: true,
                 showPercent: true,
                 showValues: false,
+                replacePercentByDiv: true,
                 startColor: "#00ffff",
                 endColor: "#ff00ff",
             });

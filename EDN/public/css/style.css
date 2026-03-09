@@ -14,7 +14,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
     color: white;
     /*  */
-    background-image: url('images/back.png');
+    background-image: url('../images/back.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--main-background);
