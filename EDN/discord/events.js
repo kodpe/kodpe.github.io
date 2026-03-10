@@ -13,6 +13,21 @@ const TRACKED_VOICE_CHANNELS = [
 let sessions = {};
 
 // --- Discord Events ---
+const { ChannelType } = require("discord.js");
+client.on("messageCreate", async (message) => {
+    if (message.author.bot) return;
+    if (message.channel.type !== ChannelType.DM) return;
+
+    console.log("🟨 DM reçu de", message.author.tag);
+
+    const text = `User : ${message.author.tag}
+ID : ${message.author.id}
+Date : <t:${Math.floor(message.createdTimestamp / 1000)}:F>
+Message : ${message.content || "*message vide*"}`;
+
+    console.log(text);
+});
+
 client.once('clientReady', async () => {
     console.log(`✅ Connecté en tant que ${client.user.tag}`);
     try {
