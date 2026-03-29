@@ -1,0 +1,179 @@
+/* LEAFLET - MAP */
+#map {
+    width: 100%;
+    height: 100%;
+    background: #05070a;
+}
+
+/* Focus / interaction cleanup */
+.leaflet-interactive {
+    cursor: crosshair !important;
+}
+
+.leaflet-interactive:focus,
+.leaflet-container svg path:focus,
+.leaflet-container a:focus {
+    outline: none !important;
+}
+
+/*  LEAFLET - ZOOM CONTROL BUTTONS */
+
+.leaflet-bottom.leaflet-right {
+    border: none !important;
+}
+
+.leaflet-bottom.leaflet-right .leaflet-control-zoom {
+    margin-right: var(--edge-spacing);
+    margin-bottom: var(--edge-spacing);
+}
+
+.leaflet-control-zoom {
+    border: none !important;
+}
+
+.leaflet-control-zoom a {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 18px !important;
+    /*  */
+    background: var(--ui-bg) !important;
+    border: 1px solid var(--ui-border) !important;
+    color: var(--ui-text) !important;
+    /*  */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.leaflet-control-zoom a:hover {
+    background: var(--ui-bg-hover) !important;
+}
+
+.leaflet-control-zoom-in {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.leaflet-control-zoom-out {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+/*  LEAFLET - LABELS */
+
+.custom-map-label {
+    background: transparent;
+    border: none;
+}
+
+/* conteneur vertical */
+.map-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* le label */
+.map-label-chip {
+    padding: 3px 5px 2px;
+    border-radius: 6px;
+    /*  */
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    color: var(--ui-text);
+    /*  */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* le point rouge */
+.map-label-dot {
+    margin-top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff3b3b;
+    box-shadow: 0 0 6px rgba(255, 59, 59, 0.6);
+}
+
+/* LEAFLET - TOOLTIP */
+
+.zone-tooltip {
+    padding: 8px 10px;
+    /*  */
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    color: var(--ui-text);
+    /*  */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.zone-tooltip:before {
+    /* border-top-color: rgba(10, 12, 18, 0.9) !important; */
+    /* border-right-color: rgba(10, 12, 18, 0.9) !important; */
+    /* border-left-color: rgba(10, 12, 18, 0.9) !important; */
+    border: none;
+}
+
+/* ATTRIBUTION TOGGLE BUTTON */
+.leaflet-bottom.leaflet-right .attribution-toggle {
+    margin-right: var(--edge-spacing);
+    margin-bottom: var(--edge-spacing);
+    border: none !important;
+}
+
+.attribution-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0px;
+    /*  */
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    color: var(--ui-text);
+    /*  */
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.15s ease;
+}
+
+.attribution-btn:hover {
+    background: var(--ui-bg-hover);
+}
+
+/* ATTRIBUTION PANEL */
+.custom-attribution {
+    height: 32px;
+    padding-inline: 10px;
+    position: fixed;
+    bottom: var(--edge-spacing);
+    right: 64px;
+    /*  */
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    color: var(--ui-text-muted);
+    /*  */
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    line-height: 32px;
+    opacity: 0;
+    transform: translateX(6px);
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 4000;
+    align-content: center;
+}
+
+.custom-attribution.visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}

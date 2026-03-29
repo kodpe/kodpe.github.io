@@ -1,0 +1,58 @@
+.legend {
+    left: calc(var(--comp-width-col-cm) + var(--edge-spacing) * 3);
+    pointer-events: none;
+    font-size: 12px;
+    min-width: 180px;
+    width: fit-content;
+    padding: 10px 12px;
+    opacity: 0;
+}
+
+.legend.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* LEGEND TITLE */
+.legend-title {
+    margin-bottom: 5px;
+}
+
+/* LEGEND LABELS */
+.legend-labels {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    margin-top: 6px;
+    font-size: 9px;
+    color: var(--muted);
+}
+
+.legend-labels span:first-child {
+    text-align: left;
+}
+
+.legend-labels span:not(:first-child):not(:last-child) {
+    text-align: center;
+}
+
+.legend-labels span:last-child {
+    text-align: right;
+}
+
+/* LEGEND STEP BAR */
+.legend-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    width: 100%;
+    height: 8px;
+    background: none !important;
+    box-shadow: none;
+}
+
+.legend-step {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

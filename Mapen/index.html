@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carte bureaux de vote - Petit-Quevilly</title>
+
+    <link rel="stylesheet" href="css/style.css" /> <!-- TMP DEPRECATED -->
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/legend.css" />
+    <link rel="stylesheet" href="css/title.css" />
+    <link rel="stylesheet" href="css/viewer-page.css" />
+
+    <!-- LEAFLET - MAP / ZOOM / LABELS / TOOLTIP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet-custom.css" />
+
+</head>
+
+<body>
+    <header id="topbar" class="composer-base composer-top-bar">
+        <h1>MAPEN</h1>
+    </header>
+
+    <aside id="left-panel" class="composer-base composer-top-left">
+        <div class="panel-title">Dataset</div>
+
+        <div class="panel-section">
+            <label for="fileInput" class="file-label panel-button">Charger un CSV</label>
+            <input type="file" id="fileInput" accept=".csv" />
+
+            <div class="panel-meta">
+                <div class="meta-label">Fichier</div>
+                <div id="file" class="meta-value">
+                    Aucun fichier
+                </div>
+            </div>
+
+            <div class="panel-meta">
+                <div class="meta-label">Statut</div>
+                <div id="status" class="meta-value">
+                    Aucun fichier
+                </div>
+            </div>
+
+        </div>
+
+        <div class="panel-separator"></div>
+
+        <div class="panel-section">
+            <button id="populationBtn" class="dataset-button">
+                Population Insee 2022
+            </button>
+            <button id="elections2020Btn" class="dataset-button">
+                Exemple Élections 2020
+            </button>
+        </div>
+    </aside>
+
+    <div id="rawdata-viewer" class="blur-layout">
+        <div class="composer-base composer-center-center viewer-page">
+            <div class="panel-meta">
+                <div class="meta-label">Données</div>
+                <div id="loadedCount" class="meta-value scrollable"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <aside id="options-panel" class="composer-base composer-top-right">
+        <div class="panel-section">
+            <div class="panel-title">Map options</div>
+
+            <label class="option-row">
+                <span>Theme</span>
+                <select id="mapThemeSelect">
+                    <option value="dark" selected>Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </label>
+
+            <label class="option-row">
+                <span>Names</span>
+                <input type="checkbox" id="togglePlaceLabels" />
+            </label>
+
+            <label class="option-row">
+                <span>Title</span>
+                <input type="checkbox" id="toggleTitle" />
+            </label>
+
+            <label class="option-row">
+                <span>Legend</span>
+                <input type="checkbox" id="toggleLegend" checked />
+            </label>
+
+            <label class="option-row">
+                <span>BV labels</span>
+                <input type="checkbox" id="toggleBvPoints" checked />
+            </label>
+
+            <div class="panel-separator"></div>
+
+            <label class="option-row">
+                <span>BV zones</span>
+                <input type="checkbox" id="toggleZones" checked />
+            </label>
+
+            <div class="option-group">
+                <label>Couleur</label>
+                <input type="color" id="colorPicker" value="#4000ff">
+            </div>
+
+            <div class="option-group">
+                <label for="zoneOpacitySlider">Opacité</label>
+                <input type="range" id="zoneOpacitySlider" min="0" max="100" step="1" value="60" />
+                <div id="zoneOpacityValue">60%</div>
+            </div>
+
+            <div class="option-group">
+                <label for="colorSpreadSlider">Contraste</label>
+                <input type="range" id="colorSpreadSlider" min="0" max="100" step="1" value="90" />
+                <div id="colorSpreadValue">90%</div>
+            </div>
+        </div>
+    </aside>
+
+    <aside id="legend" class="composer-base composer-bottom-left legend">
+        <div class="legend-title">scale</div>
+        <div class="legend-bar"></div>
+        <div class="legend-labels">
+            <span>0</span>
+            <span>1</span>
+        </div>
+    </aside>
+
+    <aside id="map-title" class="composer-base composer-top-left map-title">
+        <input id="customTextInput" class="field-text-input" type="text" placeholder="TITRE" />
+    </aside>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/field-input-autosize.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/*  BASE  */
+
+:root {
+    --bg: #07090d;
+    --panel: #191e25;
+    --panel-2: #11161d;
+    --panel-border: rgba(255, 255, 255, 0.12);
+    --text: #f5f7fb;
+    --muted: #aab3c2;
+    --accent: #f71e2c;
+    --accent-2: #ff7a84;
+    --shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    --radius: 6px;
+    --sidebar-width: 170px;
+    /*  */
+    --edge-spacing: 16px;
+    --comp-padding: 12px;
+    --comp-z-index: 2000;
+    --comp-topbar-height: 48px;
+    --comp-width-col-cm: 140px;
+    --comp-border-radius: 6px;
+    --comp-backdrop-filter: blur(10px);
+    --ui-bg: rgba(10, 12, 18, 0.85);
+    --ui-bg-hover: rgba(30, 36, 54, 0.85);
+    --ui-border: rgba(255, 255, 255, 0.12);
+    --ui-text: #ddd;
+    --ui-text-high: #fff;
+    --ui-text-muted: #aaa;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.composer-base {
+    padding: var(--comp-padding);
+    margin: 16px;
+    z-index: var(--comp-z-index);
+    width: var(--comp-width-col-cm);
+    /*  */
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    border-radius: var(--comp-border-radius);
+    /*  */
+    backdrop-filter: var(--comp-backdrop-filter);
+    -webkit-backdrop-filter: var(--comp-backdrop-filter);
+    box-shadow: var(--shadow);
+    /*  */
+    color: var(--ui-text);
+    font-size: 12px;
+}
+
+.composer-top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0px;
+    border: none;
+    border-bottom: 1px solid var(--ui-border);
+    border-radius: 0px;
+    height: var(--comp-topbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 12px;
+}
+
+.composer-top-bar h1 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--ui-text-high);
+    margin: 0;
+}
+
+.composer-top-left {
+    position: fixed;
+    top: var(--comp-topbar-height);
+    left: 0;
+}
+
+.composer-top-right {
+    position: fixed;
+    top: var(--comp-topbar-height);
+    right: 0;
+}
+
+.composer-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.composer-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.composer-bottom-center {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.composer-center-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) !important;
+    transform: translateX(-50%) !important;
+}
